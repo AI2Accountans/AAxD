@@ -3,3 +3,19 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# External projects
+EDMCouncil/
+dprod/
+ekg-catalog/
+gl/
+
+# Subtitle and video files
+vimeo.json
+vimeo_info.json
+vimeo.vtt
+vimeo2.vtt
+final.vtt
+subs.json
+fetch_vimeo_subs.py
+scratch_extract_blogs.py
