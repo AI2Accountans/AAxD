@@ -1,0 +1,413 @@
+[ {
+  "@id" : "_:b0",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/DatesAndTimes/Date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b1",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/DatesAndTimes/Date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b10",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/DatesAndTimes/CombinedDateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b11",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/RolesAndCompositions/Role"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b12",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Identifiers/Identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b13",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/BusinessCalendar"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b14",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Identifiers/Identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b15",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b16",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/DatesAndTimes/Date"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b17",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryAmount"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b18",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/ForeignExchange/QuotedExchangeRate"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b2",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/BusinessDates/BusinessDayConvention"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b3",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b4",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b5",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/DatesAndTimes/Duration"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b6",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b7",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryAmount"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b8",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "_:b9",
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSTaxonomy/ACTUSContractType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/denotes"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-BDC",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b2"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CDD",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-fnd-agr-agr:hasEffectiveDate cmns-dt:Date; cmns-dt:hasDateValue xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b0"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CID",
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote" : [ {
+    "@value" : "Financial instrument identifier is the range of the property cmns-id;isIdentifiedBy in the case of any financial instrument, including most loans. In order to map this to ACTUS data, the property, 'is identified by' should be used together with the identifier, where the identifier for the contract may be a CUSIP, SEDOL code, FIGI, or something else, including a bespoke identifier for a contract traded over the counter, non-tradable contract such as many credit agreements, and the like. Typically, CID would denote a financial instrument identifier."
+  } ],
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, cmns-id:isIdentifiedBy cmns-id:Identifier; cmns-txt;hasTextValue xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b12"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CLDR",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b13"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CNTRL",
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote" : [ {
+    "@value" : "This should really map to a union of roles that themselves map to the controlled vocabulary from the ACTUS specification for such roles (valid values). The roles may include buyer, seller, obligor, obligee, etc., or to a union of roles played by a financial asset or liability on the balance sheet of the legal entity playing the role."
+  } ],
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, this concept maps to (1) fibo-fnd-agr-ctr:hasContractParty fibo-fnd-agr-ctr:ContractParty; cmns-rlcmp:isPlayedBy cmns-org:LegalPerson; cmns-id:isIdentifiedBy cmns-id:Identifier; cmns-txt:hasTextValue xsd:string or (2) fibo-fnd-agr-ctr:hasContractParty fibo-fnd-agr-ctr:ContractParty; cmns-pts:actsOn (fibo-fnd-oac-own:Asset union fibo-fbc-dae-dbt:Collateral union) or (3) fibo-fnd-agr-ctr:hasContractParty fibo-fnd-agr-ctr:ContractParty; fibo-fnd-oac-own:isOwningParty fibo-fbc-pas-fpas:Position. Note that liability is not defined in FIBO which is a gap and should be added in parallel with asset."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b11"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CRID",
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote" : [ {
+    "@value" : "This is called the creator identifier in the ACTUS applicability rules."
+  } ],
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract principal, originator, or issuer, cmns-rlcmp:isPlayedBy cmns-pts:Party; cmns-id:isIdentifiedBy cmns-id:Identifier; cmns-txt;hasTextValue xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b14"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CT",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b9"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CTS",
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote" : [ {
+    "@value" : "This should really map to a collection of contracts or a single contract, but to map it properly requires input from the ACTUS experts. Depends on what ACTUS means by contract structure."
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b3"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CUR",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, (1) fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-cur:Currency; cmns-dsg:isSignifiedBy fibo-fnd-acc-cur:CurrencyIdentifier; fibo-fnd-rel-rel;hasTag xsd:string, or (2) starting specifically from a currency instrument, fibo-fnd-acc-cur:hasBaseCurrency fibo-fnd-acc-cur:Currency; cmns-dsg:isSignifiedBy fibo-fnd-acc-cur:CurrencyIdentifier; fibo-fnd-rel-rel;hasTag xsd:string, where the base currency denotes the selling currency"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b6"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CUR2",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, (1) fibo-fnd-acc-cur:hasCurrency fibo-fnd-acc-cur:Currency; cmns-dsg:isSignifiedBy fibo-fnd-acc-cur:CurrencyIdentifier; fibo-fnd-rel-rel;hasTag xsd:string, or (2) starting specifically from a currency instrument, fibo-fnd-acc-cur:hasDealtCurrency fibo-fnd-acc-cur:Currency; cmns-dsg:isSignifiedBy fibo-fnd-acc-cur:CurrencyIdentifier; fibo-fnd-rel-rel;hasTag xsd:string, where the base currency denotes the buying currency"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b15"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-CURS",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, (1) fibo-fbc-fi-stl:hasPreferredSettlementCurrency fibo-fnd-acc-cur:Currency; cmns-dsg:isSignifiedBy fibo-fnd-acc-cur:CurrencyIdentifier; fibo-fnd-rel-rel;hasTag xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b8"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-MOC",
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote" : [ {
+    "@value" : "Need to investigate what to map to represent the market value for a contract ..."
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-NT",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract or leg 1 of a swap, fibo-fnd-acc-cur:hasNotionalAmount fibo-fnd-acc-cur:MonetaryAmount; fibo-fnd-acc-cur:hasAmount xsd:decimal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b7"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-NT2",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from leg 2 of a swap, fibo-fnd-acc-cur:hasNotionalAmount fibo-fnd-acc-cur:MonetaryAmount; fibo-fnd-acc-cur:hasAmount xsd:decimal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b17"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-PPRD",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-sec-sec-ast:hasAcquisitionPrice fibo-fnd-acc-cur:MonetaryPrice; fibo-fnd-acc-cur:hasAmount xsd:decimal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b4"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-PRD",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-fnd-dt-fd:hasAcquisitionDate cmns-dt:CombinedDateTime"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b10"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-PTD",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-ind-fx-fx:hasQuotedExchangeRate fibo-ind-fx-fx:QuotedExchangeRate; fibo-fnd-acc-cur:hasRateValue xsd:decimal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b18"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-SD",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-fnd-dt-oc:hasEventDate cmns-dt:Date; cmns-dt:hasDateValue xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b16"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-STP",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-ind-fx-fx:hasQuotationSettlementBasis cmns-dt:Duration; cmns-dt:hasDurationValue xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b5"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/ACTUSContractTerm-TD",
+  "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/hasParameterMapping" : [ {
+    "@value" : "Starting from the contract, fibo-fnd-arr-doc:hasTerminationDate cmns-dt:Date; cmns-dt:hasDateValue xsd:string"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "_:b1"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSTermApplicabilityMapping/",
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://www.omg.org/spec/Commons/RolesAndCompositions/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/ACTUS/ACTUSTaxonomy/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/Accounting/CurrencyAmount/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/DatesAndTimes/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/TextDatatype/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/Designators/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/Utilities/AnnotationVocabulary/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/PartiesAndSituations/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/Agreements/Contracts/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/ACTUS/ACTUSContractTerms/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/Agreements/Agreements/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/IND/ForeignExchange/ForeignExchange/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/Classifiers/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/DatesAndTimes/BusinessDates/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/Identifiers/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/DatesAndTimes/FinancialDates/"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "https://www.actusfrf.org",
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright" : [ {
+    "@value" : "Copyright (c) 2026 EDM Council, Inc."
+  }, {
+    "@value" : "Copyright (c) 2026 Object Management Group, Inc."
+  }, {
+    "@value" : "Copyright (c) 2026 ACTUS Financial Research Foundation"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "This ontology represents a mapping from ACTUS contract terms to the relevant contract type(s) that comprise the ACTUS data dictionary as a controlled vocabulary and maps it to FIBO, providing the corresponding semantics and enabling integration of knowledge graphs based on FIBO with the ACTUS system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ACTUS Contract Terms"
+  } ],
+  "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/hasMaturityLevel" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "Copyright (c) 2026 ACTUS Financial Research Foundation\nCopyright (c) 2026 EDM Council, Inc.\nCopyright (c) 2026 Object Management Group, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\t\t\nSee https://opensource.org/licenses/MIT."
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/ACTUS/ACTUSTermApplicabilityMapping/"
+  } ]
+} ]

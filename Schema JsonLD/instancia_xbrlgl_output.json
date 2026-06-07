@@ -1,0 +1,73 @@
+{
+  "@context": "https://dfrnt.tu-dominio.com/Schema_JsonLD/xbrlgl_context.jsonld",
+  "id": "xbrlgl-instance:FECA-1073",
+  "type": "AccountingEntries",
+  "documentInfo": {
+    "id": "doc:FECA-1073",
+    "type": "DocumentInfo",
+    "dcat:keyword": [
+      "factura",
+      "servicio",
+      "consultoria",
+      "momento_cero"
+    ],
+    "prov:wasDerivedFrom": "file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Schema JsonLD/factura_dian_c4.xml",
+    "dcterms:creator": {
+      "type": "foaf:Person",
+      "foaf:name": "MapForce Automatic Pipeline Agent"
+    }
+  },
+  "sourceDocument": {
+    "id": "SourceDocument/FECA-1073",
+    "type": "srcd:SummaryReportingData",
+    "document_type": "Factura Electronica UBL 2.1",
+    "engaged_agents": [
+      {
+        "@id": "Supplier/900824516",
+        "@type": "Supplier",
+        "artifact_name": "DFRNT Consulting Ltd"
+      },
+      {
+        "@id": "Customer/800192837",
+        "@type": "Customer",
+        "artifact_name": "XYZ Enterprises S.A.S."
+      }
+    ]
+  },
+  "entryHeader": {
+    "id": "journal:JRN-FECA-1073",
+    "type": "EntryHeader",
+    "dcterms:issued": "2026-05-29",
+    "dcterms:description": "Registro de factura por Implementación de Ontología Contable Semántica - Hito 1",
+    "entryDetail": [
+      {
+        "id": "detail:FECA-1073-line1",
+        "type": "EntryDetail",
+        "account": "510506",
+        "amount": 5000000.0,
+        "sign": "debit",
+        "agent_identifier": "Supplier/900824516",
+        "linksToSummary": {
+          "type": "srcd:SummaryReportingData",
+          "summaryConcept": "GRI-201-1-Economic-Value-Distributed",
+          "contextRef": "PeriodoActual"
+        }
+      },
+      {
+        "id": "detail:FECA-1073-line2",
+        "type": "EntryDetail",
+        "account": "240805",
+        "amount": 950000.0,
+        "sign": "debit"
+      },
+      {
+        "id": "detail:FECA-1073-line3",
+        "type": "EntryDetail",
+        "account": "220505",
+        "amount": 5950000.0,
+        "sign": "credit",
+        "agent_identifier": "Supplier/900824516"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "id": "@id",
+    "type": "@type",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rea": "https://schema.dfrnt.com/ontology/rea#",
+    "zachman": "https://schema.dfrnt.com/ontology/zachman#",
+    "xbrlgl": "https://schema.dfrnt.com/ontology/xbrlgl/cor#",
+
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "isClassifiedBy": {
+      "@id": "zachman:isClassifiedBy",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "id": "rea:Resource",
+      "type": "rdfs:Class",
+      "rdfs:comment": "An economic resource of value."
+    },
+    {
+      "id": "rea:EconomicEvent",
+      "type": "rdfs:Class",
+      "rdfs:comment": "An event that increments or decrements resources."
+    },
+    {
+      "id": "rea:Agent",
+      "type": "rdfs:Class",
+      "rdfs:comment": "An individual or organization capable of acting in an economic event."
+    },
+
+    {
+      "id": "zachman:Data_What",
+      "type": "rdfs:Class"
+    },
+    {
+      "id": "zachman:Process_How",
+      "type": "rdfs:Class"
+    },
+    {
+      "id": "zachman:People_Who",
+      "type": "rdfs:Class"
+    },
+
+    {
+      "id": "xbrlgl:entryDetail",
+      "type": "rdfs:Class",
+      "subClassOf": "rea:EconomicEvent",
+      "isClassifiedBy": "zachman:Process_How",
+      "rdfs:comment": "Atomic accounting entry. Acts as an EconomicEvent in REA and fits into Zachman How/Process."
+    },
+    {
+      "id": "xbrlgl:account",
+      "type": "rdfs:Class",
+      "subClassOf": "rea:Resource",
+      "isClassifiedBy": "zachman:Data_What",
+      "rdfs:comment": "General ledger account. Acts as a Resource in REA and fits into Zachman What/Data."
+    },
+    {
+      "id": "xbrlgl:identifierReference",
+      "type": "rdfs:Class",
+      "subClassOf": "rea:Agent",
+      "isClassifiedBy": "zachman:People_Who",
+      "rdfs:comment": "Entity or person reference in XBRL GL. Acts as an Agent in REA and fits into Zachman Who/People."
+    }
+  ]
+}

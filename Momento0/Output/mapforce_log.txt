@@ -1,0 +1,15 @@
+GS2XBRLGL2JSONLD.mfd: Document loaded. - 0 error(s), 0 warning(s)
+    Error: GoogleSheets: Text file components are not supported for XSLT 2.0.
+    Error: gl-plt-all-2015-03-25: XBRL components are not supported for XSLT 2.0.
+    Warning: The component gl-plt-all-2015-03-25 has missing items.
+    Error: xbrl.xbrl-measure-currency: The function is not available for XSLT 2.0.
+    Warning: Connections are not used because of missing items.
+        Warning: The connection "Shares" => unitRef between the items "Shares" and unitRef is not used in the mapping because the item(s) unitRef are missing.
+        Warning: The connection "0" => decimals between the items "0" and decimals is not used in the mapping because the item(s) decimals are missing.
+        Warning: The connection "http://www.xbrl.org/..." => {http://www.altova.com/mapforce}namespace between the items "http://www.xbrl.org/..." and {http://www.altova.com/mapforce}namespace is not used in the mapping because the item(s) {http://www.altova.com/mapforce}namespace are missing.
+        Warning: The connection "http://www.xbrl.org/..." => {http://www.altova.com/mapforce}prefix (2) between the items "http://www.xbrl.org/..." and {http://www.altova.com/mapforce}prefix (2) is not used in the mapping because the item(s) {http://www.altova.com/mapforce}prefix (2) are missing.
+        Warning: The connection "iso4217" => {http://www.altova.com/mapforce}prefix (3) between the items "iso4217" and {http://www.altova.com/mapforce}prefix (3) is not used in the mapping because the item(s) {http://www.altova.com/mapforce}prefix (3) are missing.
+        Warning: The connection "iso639" => {http://www.altova.com/mapforce}prefix between the items "iso639" and {http://www.altova.com/mapforce}prefix is not used in the mapping because the item(s) {http://www.altova.com/mapforce}prefix are missing.
+GS2XBRLGL2JSONLD.mfd: Mapping validation failed. - 3 error(s), 2 warning(s)
+Unable to generate mapping...
+

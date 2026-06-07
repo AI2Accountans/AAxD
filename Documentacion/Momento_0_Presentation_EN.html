@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momento 0: The End of Pacioli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg-dark: #0a0a1f;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            overflow: hidden;
+            height: 100vh;
+            background: radial-gradient(circle at top right, #1a1a3a, #0a0a1f);
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            object-fit: cover;
+            filter: blur(5px);
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .slide {
+            width: 85%;
+            height: 80%;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 60px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px) rotateX(-5deg); }
+            to { opacity: 1; transform: translateY(0) rotateX(0); }
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .content {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 40px;
+            display: flex;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        button {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px var(--primary);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            width: 0%;
+            transition: width 0.3s ease;
+            z-index: 1000;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            padding: 8px 16px;
+            background: rgba(0, 242, 255, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 100px;
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        th {
+            color: var(--primary);
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .footer-logo {
+            position: fixed;
+            bottom: 40px;
+            right: 60px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress"></div>
+    <img src="momento_zero_background.png" class="background-image" alt="Background">
+    
+    <div class="presentation-container">
+        <!-- SLIDE 1: INTRO -->
+        <div class="slide active" id="slide-1">
+            <div class="status-badge">Architecture 2024</div>
+            <h1>The End of Pacioli:<br>The "Momento 0" Architecture</h1>
+            <div class="content">
+                <p>Evolving from 500-year-old double-entry bookkeeping to <span class="highlight">Semantic Knowledge Graphs</span> powered by TerminusDB.</p>
+                <p style="margin-top: 20px; opacity: 0.6;">A native implementation of the REA + XBRL GL Synergies.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: THE PROBLEM -->
+        <div class="slide" id="slide-2">
+            <h2>The "Seam Problem"</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 style="color: #ff4d4d; margin-bottom: 15px;">Structural Disconnect</h3>
+                    <p>Traditional accounting acts as an "abyss" between business events and financial reports. Information is flattened, lost, and disconnected.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">The Solution</h3>
+                    <p>Maintaining unbreakable semantic links from the <span class="highlight">Momento 0</span> (the raw transaction) directly to the Knowledge Graph.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: REA + XBRL GL -->
+        <div class="slide" id="slide-3">
+            <h2>The Semantic Match</h2>
+            <div class="content">
+                <p>Based on Guithues Amrhein (2011), we fuse the two most powerful frameworks in accounting:</p>
+                <table style="margin-top: 30px;">
+                    <tr>
+                        <th>Framework</th>
+                        <th>Role in "Momento 0"</th>
+                    </tr>
+                    <tr>
+                        <td class="highlight">REA Model</td>
+                        <td>The <b>What, How, Who, When</b> (Resource, Event, Agent).</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">XBRL GL</td>
+                        <td>The <b>Standardized Syntax</b> to communicate internal data externally.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: THE GRAPH -->
+        <div class="slide" id="slide-4">
+            <h2>The Nexus of Contracts</h2>
+            <div class="content">
+                <p>Inspired by <b>Shyam Sunder</b> and the <b>Zachman Framework</b>:</p>
+                <div class="grid">
+                    <div class="card">
+                        <h4 class="highlight">TerminusDB Storage</h4>
+                        <p>No more isolated rows. Transactions are nodes in a native Semantic Graph database.</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Causal Duality</h4>
+                        <p>A Sale is linked to its Payment via a Duality Arc. No cash flow exists without operational justification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: AUDIT BUNDLE -->
+        <div class="slide" id="slide-5">
+            <h2>The Smart Audit Bundle</h2>
+            <div class="grid">
+                <div class="card" style="grid-column: span 2;">
+                    <h3 style="color: var(--primary);">Unbreakable Provenance (PROV-O)</h3>
+                    <p style="margin-top: 15px;">Every fact uses <code>prov:wasDerivedFrom</code> to point back to the raw UBL/XML document. This provides AI agents with <span class="highlight">Absolute Trust</span> and a self-describing audit trail.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: CONCLUSION -->
+        <div class="slide" id="slide-6">
+            <h2>The Future is Semantic</h2>
+            <div class="content">
+                <p style="font-size: 1.8rem; line-height: 1.4;">"Accounting must stop being a static record of the past and become a <span class="highlight">living, multi-dimensional semantic fabric</span> for autonomous decisions."</p>
+                <div style="margin-top: 50px; display: flex; gap: 20px;">
+                    <div class="card"><b>TerminusDB Core</b><br>2024 Tech</div>
+                    <div class="card"><b>REA Systems</b><br>Timeless Model</div>
+                    <div class="card"><b>Audit Ready</b><br>Zero Tolerance</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next Slide</button>
+        </div>
+
+        <div class="footer-logo">MOMENTO 0</div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 6;
+        const progress = document.getElementById('progress');
+
+        function updateSlide() {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById(`slide-${currentSlide}`).classList.add('active');
+            progress.style.width = `${(currentSlide / totalSlides) * 100}%`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        updateSlide();
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+GS2XBRLGL2JSONLD.mfd: Document loaded. - 0 error(s), 0 warning(s)
+GS2XBRLGL2JSONLD.mfd: Mapping validation successful. - 0 error(s), 0 warning(s)
+GS2XBRLGL2JSONLD.mfd: Code generation completed successfully. - 0 error(s), 0 warning(s)
+OK

@@ -1,0 +1,309 @@
+WEBVTT
+
+1
+00:00:00.305 --> 00:00:02.125
+In this video, I will walk you through on how
+
+2
+00:00:02.125 --> 00:00:03.565
+to create a data product from scratch.
+
+3
+00:00:03.755 --> 00:00:05.125
+Also using templates.
+
+4
+00:00:05.895 --> 00:00:08.115
+For this, we will go to your settings,
+
+5
+00:00:08.335 --> 00:00:10.595
+to your personal instance, which is also my storage.
+
+6
+00:00:10.945 --> 00:00:12.995
+Here you can see the team instance,
+
+7
+00:00:13.335 --> 00:00:15.795
+but we will want to create one locally,
+
+8
+00:00:16.505 --> 00:00:18.115
+therefore we create one.
+
+9
+00:00:18.235 --> 00:00:19.395
+I will call this Lego legal
+
+10
+00:00:21.415 --> 00:00:23.515
+and I added locally here.
+
+11
+00:00:24.945 --> 00:00:26.755
+Then we can see the data product,
+
+12
+00:00:26.885 --> 00:00:28.515
+which has been newly created.
+
+13
+00:00:29.475 --> 00:00:32.145
+First I wanna create a new branch,
+
+14
+00:00:35.175 --> 00:00:37.325
+which I do here.
+
+15
+00:00:37.645 --> 00:00:40.445
+I will just do it with a current date.
+
+16
+00:00:41.365 --> 00:00:45.095
+I create one, as you can see here, it has been created
+
+17
+00:00:45.435 --> 00:00:46.775
+and it's visible in here.
+
+18
+00:00:47.195 --> 00:00:51.255
+The first thing I will do is add a work graph, workspace,
+
+19
+00:00:51.255 --> 00:00:53.215
+pointer, so it's easier to work with
+
+20
+00:00:54.795 --> 00:00:58.155
+and then it should be visible up here.
+
+21
+00:00:58.905 --> 00:01:03.875
+Lego. I will
+
+22
+00:01:03.885 --> 00:01:08.365
+first create a trait called
+
+23
+00:01:09.375 --> 00:01:13.755
+inventory Inventory set.
+
+24
+00:01:15.045 --> 00:01:19.055
+I will add a property, which is called quantity.
+
+25
+00:01:21.645 --> 00:01:24.535
+It's mandatory that is there
+
+26
+00:01:24.915 --> 00:01:26.975
+and it is numeric one,
+
+27
+00:01:27.465 --> 00:01:30.595
+which is greater equal two zero.
+
+28
+00:01:33.455 --> 00:01:38.155
+I'll add this one and it does appear up here.
+
+29
+00:01:38.885 --> 00:01:42.465
+Now I want to create a type, A type
+
+30
+00:01:42.695 --> 00:01:45.185
+that is called inventory itself.
+
+31
+00:01:46.325 --> 00:01:51.205
+The inventory should link to the inventory set,
+
+32
+00:01:56.075 --> 00:01:57.095
+The inventory set.
+
+33
+00:01:57.275 --> 00:02:01.175
+It is a set which is linking
+
+34
+00:02:02.235 --> 00:02:04.215
+to a trait and has in touch trait,
+
+35
+00:02:04.715 --> 00:02:06.015
+and you can see here
+
+36
+00:02:06.285 --> 00:02:10.045
+that it appears the inventory set I added.
+
+37
+00:02:10.705 --> 00:02:12.605
+And if I click here, I can see
+
+38
+00:02:12.605 --> 00:02:15.045
+that these two two are connected.
+
+39
+00:02:15.505 --> 00:02:19.755
+An inventory could maybe also point to itself
+
+40
+00:02:20.585 --> 00:02:24.445
+to inventory itself, so I wanna edit the schema here
+
+41
+00:02:26.755 --> 00:02:29.575
+And I wanna add the inventory
+
+42
+00:02:30.515 --> 00:02:32.695
+that's referencing itself.
+
+43
+00:02:36.325 --> 00:02:40.675
+So this linking to a type to inventory itself.
+
+44
+00:02:41.705 --> 00:02:44.845
+And I updated, and as you can see here in the definition,
+
+45
+00:02:44.995 --> 00:02:46.085
+it's linking to itself.
+
+46
+00:02:47.665 --> 00:02:49.555
+This is the first to go.
+
+47
+00:02:49.815 --> 00:02:51.955
+Now I want to use a template,
+
+48
+00:02:53.495 --> 00:02:57.555
+which I can access over here, the template schema library.
+
+49
+00:02:58.195 --> 00:03:03.055
+I can also exodus over the schema
+
+50
+00:03:03.575 --> 00:03:04.655
+template library over here.
+
+51
+00:03:05.435 --> 00:03:09.505
+First, I want to add an entity, which is subtype
+
+52
+00:03:11.655 --> 00:03:12.675
+inside the entity.
+
+53
+00:03:13.035 --> 00:03:16.675
+I want to add a type to then be able to add a person
+
+54
+00:03:16.675 --> 00:03:20.875
+because a person can have a certain inventory.
+
+55
+00:03:23.545 --> 00:03:27.835
+After I edit all of these templates. I can also have a look.
+
+56
+00:03:27.835 --> 00:03:30.715
+After adding each one, I can go back to the model
+
+57
+00:03:30.775 --> 00:03:33.975
+and I can see entity here, which is nested
+
+58
+00:03:34.155 --> 00:03:36.055
+to an agent and then to a person.
+
+59
+00:03:37.235 --> 00:03:41.105
+If I have a look on the definition here, I can see
+
+60
+00:03:41.455 --> 00:03:44.745
+that a person has a manager also, which is linked to itself
+
+61
+00:03:45.325 --> 00:03:47.625
+and is part of an agent and an entity.
+
+62
+00:03:49.655 --> 00:03:53.565
+Since a person can have an inventory, I wanna
+
+63
+00:03:54.105 --> 00:03:56.005
+add a link to the inventory as well.
+
+64
+00:03:57.085 --> 00:03:59.225
+So I'm editing the schema
+
+65
+00:04:00.455 --> 00:04:04.275
+and I'm adding the property inventory.
+
+66
+00:04:05.875 --> 00:04:09.165
+I make it optional. I link to a type
+
+67
+00:04:10.755 --> 00:04:12.495
+and I link to the inventory.
+
+68
+00:04:17.225 --> 00:04:18.645
+And I can see here in the definition
+
+69
+00:04:18.645 --> 00:04:19.845
+that's now linked to the inventory.
+
+70
+00:04:20.545 --> 00:04:24.855
+If I want to have a look at the inventory set as well,
+
+71
+00:04:26.015 --> 00:04:28.735
+I can go and select these,
+
+72
+00:04:30.735 --> 00:04:32.275
+add them to the ontology view,
+
+73
+00:04:32.815 --> 00:04:34.355
+and here I can see the class diagram.
+
+74
+00:04:34.775 --> 00:04:36.795
+If you don't see the class diagram directly,
+
+75
+00:04:37.055 --> 00:04:39.515
+you can switch here from the ontology diagram
+
+76
+00:04:41.055 --> 00:04:42.315
+to the class diagram.
+
+77
+00:04:46.235 --> 00:04:50.605
+This is how you can add types traits, use templates.

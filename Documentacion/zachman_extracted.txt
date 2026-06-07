@@ -1,0 +1,763 @@
+The Zachman Framework 
+ENTERPRISE ARCHITECT
+User Guide Series
+Author: Sparx Systems
+Date:  10/11/2023
+Version: 16.1
+CREATED WITH
+Table of Contents
+The Zachman Framework 3
+Brief Introduction 4
+Support for the Zachman Framework 5
+Zachman Framework System Requirements 6
+Getting Started with Zachman 7
+Licencing Copyright and Trademarks 8
+Zachman Framework Copyright Notice 9
+MDG Technology for Zachman Framework Software Product License Agreement 10
+Acknowledgement of Trademarks 12
+Using the Zachman Framework 13
+The Zachman Framework Interface Diagram 14
+Zachman Framework Model Structure 15
+The Zachman Framework Model Template 17
+Zachman Framework Diagrams 18
+Zachman Framework Diagram Types 19
+The Zachman Framework Toolbox 20
+Business Data Page 22
+Business Process Pages 23
+Business Location Page 24
+Business Motivation Pages 25
+Organization Chart Pages 26
+Business Events Pages 28
+Data Map Pages 29
+Business Logistics Pages 30
+BPMN Pages 32
+Event Schedule Pages 34
+Strategy Map Pages 35
+Data Distribution Architecture Pages 36
+Business Rule Model Pages 37
+Rule Design Pages 39
+Network Architecture Pages 40
+Rule Specification Pages 41
+Tagged Values for Zachman Framework 42
+Data Map Analysis 43
+Cluster Report 45
+Process Map 47
+Business Scorecard Report Template 48
+Model Validation 49
+Validation Messages for Elements 50
+Validation Messages for Connectors 51
+Validation Messages for Diagrams 52The Zachman Framework 10 November, 2023
+The Zachman Framework
+The Zachman Framework is a widely used approach for engineering Enterprise Architecture. The Framework is a simple,
+logical structure that helps in organizing the information infrastructure of the Enterprise and provides many benefits in
+helping align technology with business needs.
+Discussion
+The topics described here provide an introduction to, and procedural explanation of, using the Zachman Framework in
+Enterprise Architect.
+Section Content
+Welcome
+ This section provides an introduction to the Zachman Framework, and contains the
+formal documentation defining its use with Enterprise Architect.
+Using the Zachman
+Framework
+Get started with the Zachman Framework, learning about the model structure,
+templates, diagram types and more.
+Model Validation
+ Learn how to develop and configure model validation for the Zachman Framework.
+(c) Sparx Systems 2023 Page  3 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Brief Introduction
+Welcome to the Zachman Framework in Enterprise Architect.
+Using this technology with Enterprise Architect, you can employ the Zachman Framework with the associated benefits
+of a multi-featured, open-standard modeling system. The Zachman Framework is already integrated with the Ultimate
+and Unified Editions; it can be purchased separately to be used with the Enterprise Architect Professional or Corporate
+Editions.
+About the Zachman Framework
+The Zachman Framework is a widely used approach for engineering Enterprise Architecture. The Framework is a simple,
+logical structure that helps in organizing the information infrastructure of the Enterprise.
+While conceptually simple, the Zachman Framework provides many benefits in helping align technology with business
+needs. It has become a popular approach in defining Enterprise Architecture because it:
+Is platform neutral ·
+Is a versatile planning device ·
+Is both comprehensive and readily understood by non-technical people ·
+Assists in problem solving ·
+Helps in documenting enterprise-wide information system architecture ·
+Under the Zachman Framework, an Enterprise is modeled by answering six questions: What? How? Where? Who?
+When? and Why? with respect to six role perspectives: the Planner, Owner, Designer, Builder, Subcontractor and
+Functioning Enterprise.
+For further information, visit the Zachman Framework website.
+Getting Started
+For instructions on how to use the Zachman Framework, see the topics:
+Getting Started with the Zachman Framework and ·
+Using the Zachman Framework ·
+(c) Sparx Systems 2023 Page  4 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Support for the Zachman Framework
+Technical support for the Zachman Framework is available to registered users of Enterprise Architect through the same
+channels as for Enterprise Architect itself.
+(c) Sparx Systems 2023 Page  5 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Zachman Framework System Requirements
+Zachman Framework version 1.1.4 runs under the environments identified here.
+Microsoft® Operating Systems Supported
+Windows 10 ·
+Windows 8 ·
+Windows 7 ·
+Windows 2008 Server ·
+Windows 2003 Server ·
+Windows XP Service Pack 2 ·
+Enterprise Architect Versions Supported
+Enterprise Architect Version 7.1 or later ·
+Notes
+32 bit and 64 bit operating systems supported ·
+(c) Sparx Systems 2023 Page  6 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Getting Started with Zachman
+When you install the Unified or Ultimate Edition of Enterprise Architect, the Zachman Framework is fully enabled and
+ready to use.
+If you have the Corporate or Professional Edition of Enterprise Architect, you can purchase and install the MDG
+Technology for Zachman Framework separately; once you have entered the registration key for the MDG Technology
+for Zachman Framework, it is automatically available in and integrated with Enterprise Architect, as for the Unified and
+Ultimate Editions.
+Access the MDG Technology For Zachman Framework
+Create a new Enterprise Architect project file, and click on the top-level Package. 1.
+Select the 'Design > Package > Model Wizard' option. 2.
+In the 'Create from Pattern' tab (Model Wizard), select the  'Enterprise Architecture > Zachman' Perspective and the 3.
+'Zachman Framework' Pattern.
+Click on the Create Model(s) button. 4.
+A new base Zachman model is created in the Browser window, containing the Zachman Framework diagram and the
+Planner, Owner, Designer, Builder, Subcontractor and Functioning Enterprise Packages.
+(c) Sparx Systems 2023 Page  7 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Licencing Copyright and Trademarks
+(c) Sparx Systems 2023 Page  8 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Zachman Framework Copyright Notice
+Copyright © 2007-2022 Sparx Systems Pty. Ltd. All rights reserved.
+The MDG Technology for Zachman Framework software contains proprietary information of Sparx Systems Pty Ltd. It
+is provided under a license agreement containing restrictions on use and disclosure and is also protected by copyright
+law. Reverse engineering of the software is prohibited. Please read the product license agreement for full details.
+Due to continued product development, this information may change without notice. The information and intellectual
+property contained herein is confidential between Sparx Systems and the client and remains the exclusive property of
+Sparx Systems. If you find any problems in the documentation, please report them to us in writing. Sparx Systems does
+not warrant that this document is error-free. No part of this publication may be reproduced, stored in a retrieval system,
+or transmitted in any form or by any means, electronic, mechanical, photocopying, recording or otherwise without the
+prior written permission of Sparx Systems. Licensed users are granted the right to print a single hardcopy of the user
+manual per licensed copy of the software, but may not sell, distribute or otherwise dispose of the hardcopy without
+written consent of Sparx Systems.
+Sparx Systems Pty. Ltd.
+99 Albert St,
+Creswick, Victoria 3363,
+AUSTRALIA
+Phone: +61 (3) 5345 1140
+Fax: +61 (3) 5345 1104
+Support Email: support@sparxsystems.com
+Sales Email: sales@sparxsystems.com
+Website: sparxsystems.com
+(c) Sparx Systems 2023 Page  9 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+MDG Technology for Zachman Framework Software
+Product License Agreement
+This Software Product License Agreement relates to the separately-purchased MDG Technology for Zachman
+Framework for use with the Professional and Corporate Editions of Sparx Systems Enterprise Architect. The MDG
+Technology integrated with the Unified and Ultimate Editions of Enterprise Architect is subject to the Sparx Systems 
+Enterprise Architect Modelling Tool.
+MDG Technology for Zachman Framework - Enterprise Architect MDG Add-In, Version 1.1
+Copyright © 2007-2022 Sparx Systems Pty Ltd. All Rights Reserved
+IMPORTANT-READ CAREFULLY: This End User License Agreement ("EULA") is a legal agreement between YOU
+as Licensee and SPARX for the SOFTWARE PRODUCT identified above. By installing, copying, or otherwise using the
+SOFTWARE PRODUCT, YOU agree to be bound by the terms of this EULA. If YOU do not agree to the terms of this
+EULA, promptly delete the unused SOFTWARE PRODUCT.
+The copyright in the SOFTWARE PRODUCT and its documentation is owned by Sparx Systems Pty Ltd, A.B.N 38 085
+034 546. Subject to the terms of this EULA, YOU are granted a non-exclusive right for the duration of the EULA to use
+the SOFTWARE PRODUCT. YOU do not acquire ownership of copyright or other intellectual property rights in any
+part of the SOFTWARE PRODUCT by virtue of this EULA.
+Your use of this software indicates your acceptance of this EULA and warranty.
+DEFINITIONS
+In this End User License Agreement, unless the contrary intention appears,
+"EULA" means this End User License Agreement ·
+"SPARX" means Sparx Systems Pty Ltd A.C.N 085 034 546 ·
+"Licensee" means YOU, or the organization (if any) on whose behalf YOU are taking the EULA ·
+"Registered Edition of MDG Technology for Zachman Framework" means the edition of the SOFTWARE ·
+PRODUCT which is available for purchase from the web site:
+https://sparxsystems.com/products/mdg/tech/zachman/purchase.html
+"SOFTWARE PRODUCT" or "SOFTWARE" means MDG Technology for Zachman Framework, which includes ·
+computer software and associated media and printed materials, and may include online or electronic documentation
+"Support Services" means email-based support provided by SPARX, including advice on usage of Enterprise ·
+Architect, investigation of bugs, fixes, repairs of models, if and when appropriate, and general product support
+"SPARX support engineers" means employees of SPARX who provide on-line support services ·
+GRANT OF LICENSE
+In accordance with the terms of this EULA YOU are granted the following rights:
+To install and use ONE copy of the SOFTWARE PRODUCT or, in its place, any prior version for the same ·
+operating system, on a single computer; as the primary user of the computer on which the SOFTWARE PRODUCT
+is installed, YOU may make a second copy for your exclusive use on either a home or portable computer
+To store or install a copy of the SOFTWARE PRODUCT on a storage device, such as a network server, used only to ·
+install or run the SOFTWARE PRODUCT over an internal network
+To make copies of the SOFTWARE PRODUCT for backup, archival and instructional purposes ·
+(c) Sparx Systems 2023 Page 10 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+EVALUATION LICENSE
+The Trial Edition of MDG Technology for Zachman Framework is not free software. Subject to the terms of this
+agreement, YOU are hereby licensed to use this software for evaluation purposes without charge for a period of thirty
+(30) days.
+Upon expiration of the thirty (30) days, the SOFTWARE PRODUCT must be removed from the computer. Unregistered
+use of MDG Technology for Zachman Framework after the 30-day evaluation period is in violation of Australian, U.S.
+and international copyright laws.
+SPARX may extend the evaluation period on request and at their discretion.
+If YOU choose to use this software after the 30 day evaluation period a license must be purchased (as described at
+https://sparxsystems.com/products/mdg/tech/zachman/purchase.html). Upon payment of the license fee, YOU will be
+sent details on where to download the registered edition of MDG Technology for Zachman Framework and will be
+provided with a suitable software 'key' by email.
+ADDITIONAL RIGHTS AND LIMITATIONS
+YOU hereby undertake not to sell or sub-licence the SOFTWARE PRODUCT other than as expressly authorized by this
+EULA.
+NO WARRANTY. The SOFTWARE PRODUCT is provided "AS IS", without warranty of any kind, and SPARX
+expressly disclaims all warranties and/or conditions with respect to the SOFTWARE PRODUCT, either express, implied
+or statutory, including, but not limited to, the implied warranties and/or conditions of merchantability, of satisfactory
+quality, of fitness for a particular purpose, of accuracy, of quiet enjoyment, and of non-infringement of third party rights.
+LIMITATION
+Under no circumstances shall SPARX be liable for any incidental, special, indirect or consequential damages arising out
+of or relating to this license or YOUR use, reproduction, modification, distribution of the SOFTWARE PRODUCT, or
+any portion thereof, whether under a theory of contract, warranty, strict liability or otherwise, even if the copyright
+holder has been advised of the possibility of such damages and notwithstanding the failure of essential purpose of any
+remedy.
+TRADEMARKS
+All names of products and companies used in this EULA, the SOFTWARE PRODUCT, or the enclosed documentation
+can be trademarks of their corresponding owners. Their use in this EULA is intended to be in compliance with the
+respective guidelines and licenses.
+The Zachman Framework for Enterprise ArchitectureTM is a trademark of John A. Zachman and Zachman International.
+GOVERNING LAW
+This agreement shall be construed in accordance with the laws of the Commonwealth of AUSTRALIA, in the state of
+Victoria.
+(c) Sparx Systems 2023 Page 11 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Acknowledgement of Trademarks
+Sparx Systems acknowledge these trademarks, which are used throughout the MDG for Zachman Framework
+documentation.
+Trademarks of Microsoft
+Microsoft Word ·
+Microsoft Office ·
+Windows® ·
+Trademarks of the Object Management Group
+Object Management Group TM ·
+OMG TM ·
+UML TM ·
+Unified Modeling Language TM ·
+Trademark of John A. Zachman and Zachman International
+The Zachman Framework For Enterprise Architecture TM ·
+(c) Sparx Systems 2023 Page 12 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Using the Zachman Framework
+The Zachman Framework provides a model-based framework for planning, designing and implementing the Architecture
+for an Enterprise. The starter model provided with the Technology acts as a base upon which you can build the
+Enterprise Architecture. You can create the appropriate diagrams from the extended Enterprise Architect UML diagram
+set, using Toolbox pages that support every cell of the Zachman classification framework.
+The Technology also provides model validation and reporting capabilities for strategic project plans.
+Within Enterprise Architect you can choose between Diagram View and Element List View. Element List View can be
+used in cells where you prefer to define only the model artifacts.
+You can also align cells across the framework (horizontally and vertically) through the Enterprise Architect Relationship
+Matrix.
+You can view a demonstration video of the MDG Technology For Zachman Framework in use, on the Sparx Systems
+website.
+The Zachman Framework Help topics provide a detailed exploration of the Zachman Framework tools and features, such
+as.
+The example Enterprise Architect model for the Zachman Framework ·
+UML profiles (Toolbox pages) for use within specific Zachman Framework cells ·
+A diagram interface for the Zachman Framework ·
+New diagram types specific to the Zachman Framework ·
+A flexible model starter-structure ·
+Report generation capabilities for strategic project plans ·
+The MDG Technology For Zachman Framework is integrated with the features of Enterprise Architect.
+(c) Sparx Systems 2023 Page 13 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+The Zachman Framework Interface Diagram
+The Zachman Framework is a predefined model in Enterprise Architect. The model-level diagram of the model structure
+is the Zachman Framework Interface diagram, which serves as a template for the development of Enterprise Architecture
+based on the Zachman classification framework.
+Each cell links to the relevant Zachman Framework diagram in the child Packages in the base model.
+(c) Sparx Systems 2023 Page 14 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Zachman Framework Model Structure
+The Zachman Framework provides a Framework model template, in which each Zachman Perspective (or row) is
+modeled as the highest-level Package inside the model. Cells belonging to the Perspectives are modeled as child
+Packages of the appropriate row Package.
+(c) Sparx Systems 2023 Page 15 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+(c) Sparx Systems 2023 Page 16 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+The Zachman Framework Model Template
+The Zachman Framework Model Template provides the model skeleton from which you can develop your Enterprise
+definition.
+Add a new Zachman Framework model to the project
+Right-click on the root node and select 'Add a Model using Wizard'. The 'Create from Pattern' tab (Model Wizard) 1.
+displays.
+On the 'Create from Pattern' tab, click on the <name> Perspective button and select 'Enterprise Architecture > 2.
+Zachman' from the list.
+Select the 'Zachman Framework' pattern. 3.
+Click on the Create Model(s) button. 4.
+(c) Sparx Systems 2023 Page 17 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Zachman Framework Diagrams
+The Zachman Framework introduces new diagram types that support modeling of the Zachman Classification
+Framework. A Zachman Framework diagram is created in the same way as any other diagram in Enterprise Architect.
+The Technology provides access to these categories of diagram through the 'New Diagram' dialog:
+Planner·
+Owner·
+Designer ·
+Builder·
+Subcontractor ·
+Zachman Framework Interface ·
+(c) Sparx Systems 2023 Page 18 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Zachman Framework Diagram Types
+The Zachman Framework further extends the Enterprise Architect diagram set to support the Framework, with diagram
+types appropriate to each cell of the Zachman Framework.
+(c) Sparx Systems 2023 Page 19 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+The Zachman Framework Toolbox
+The Zachman Framework pages of the Diagram Toolbox provide elements and relationships for all the Zachman
+Framework diagrams that the MDG Technology supports. The Zachman Framework Toolbox pages can be accessed by
+clicking on 
+  and specifying 'Zachman' in the 'Find Toolbox Item' dialog. The Diagram Toolbox can be docked on
+either side of the diagram, or free floated on top of the diagram to expose more surface for editing.
+Diagrams for Toolboxes
+This table shows, for each Zachman Framework cell, the diagram that could be used.
+Zachman Cell Diagram
+Planner - Data Business Data
+Planner - Function Business Process
+Planner - Location Business Locations
+Planner - People Organization Chart
+Planner - Timing Business Events
+Planner - Motivation Business Motivation
+Owner - Data Data Map and
+Process Map (Generated by Add-In)
+Owner - Function Process Analysis
+Owner - Location Business Logistics
+Owner - People BPMN
+Owner - Timing Event Schedule
+Owner - Motivation Enterprise Architect Mind Mapping diagram and
+Strategy Map
+Designer - Data Class
+Designer – Function Activity
+Designer - Location Data Distribution Architecture
+Designer - People Use Case
+Designer - Timing State Transition
+(c) Sparx Systems 2023 Page 20 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Designer - Motivation Business Rule Model
+Builder - Data Physical Data Model
+Builder - Function Class and
+Component
+Builder - Location Deployment
+Builder - People User Interface
+Builder - Timing Communication and
+Interaction
+Builder - Motivation Rule Design
+Subcontractor - Data Data Definition; default toolbox for the diagram is Custom.
+Subcontractor – Function No diagram defined – Code generation is done in this cell.
+Subcontractor - Location Network Architecture
+Subcontractor - People Security Architecture
+Subcontractor - Timing Timing
+Subcontractor - Motivation Rule Specification
+(c) Sparx Systems 2023 Page 21 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Data Page
+Business Data Toolbox
+Item Description
+Actor Models a stakeholder or any other human resource of the enterprise.
+Asset Represents the enterprise resources that could be estimated for value.
+Business Entity Represents generic enterprise resources.
+Document Asset A subtype of Asset that captures the important documents of the enterprise.
+Equipment Asset A subtype of Asset that captures the equipment resources of the enterprise.
+Assumption Captures the assumptions made in information manipulation.
+Applies the Tagged Value Type = Enterprise / Business / System / Application /
+Technology / Data.
+Principle Defines the Principles framed and followed in the enterprise.
+Applies the Tagged Value Type = Enterprise / Business / System / Application /
+Technology / Data.
+Standard Defines the standards followed in the Enterprise.
+Applies the Tagged Value Type = Enterprise / Business / System / Application /
+Technology / Data.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 22 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Process Pages
+Business Process Toolbox
+Item Description
+Actor Models a stakeholder or any other human resource of the Enterprise.
+Decision Indicates the point of conditional progression where a business decision is taken.
+Business Function Represents a major function performed by the enterprise or a part of the enterprise.
+Business Process Represents a function or behavior of the enterprise or part of the enterprise.
+Business Entity Represents generic enterprise resources.
+Invokes A relationship that defines the invocation of a business process.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 23 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Location Page
+Business Location Toolbox
+Item Description
+Branch Office Models a Business Location as a Branch Office.
+Client Place Models a Business Location as a Client Place.
+Head Quarters Models a Business Location as a Head Quarters.
+Business Location Models the location from which the business operates.
+Office Block Models a Business Location as an Office Block.
+Sales Agent Models a Business Location as a Sales Agent.
+Supplier Models a Business Location as a Supplier.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 24 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Motivation Pages
+Business Motivation Toolbox
+Item Description
+Goal Models what is to be achieved by the enterprise, with specifications defined by the
+Tagged Values.
+Mission Models the mission statement, policies and values of the enterprise.
+Strategy Models the strategy statements for the business plan.
+Assumption Models the assumptions made in information manipulation.
+Tagged Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Principle Defines the Principles framed and followed in the enterprise.
+Tagged Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Standard Defines the standards followed in the enterprise.
+Tagged Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 25 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Organization Chart Pages
+Organization Chart Toolbox
+Item Description
+Board of Directors Captures the details of the board of directors.
+StakeHolder Defines a stakeholder of the enterprise.
+External Organization Defines any external business unit that is not under direct control of the enterprise,
+but has a relationship with the enterprise.
+Organization Unit Defines any business unit that is under direct control of the enterprise.
+Personnel Captures the details of personnel in an enterprise.
+In Contract A connector that represents the contract-based relationships between business units.
+Works For A connector that captures the details of team links; for example, Stakeholder 1
+works for Organization Unit 1.
+Supervise A connector that captures process supervision details.
+Control A connector that captures Unit in charge or Person in charge information.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 26 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+(c) Sparx Systems 2023 Page 27 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Events Pages
+Business Event Toolbox
+Item Description
+Business Event Captures major business events of the enterprise.
+Trigger Indicates that a Business Event triggers another event or a business process.
+(c) Sparx Systems 2023 Page 28 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Data Map Pages
+Data Map Toolbox
+Item Description
+Principal Entity Represents a business entity that forms a resource of the enterprise.
+Intersecting Entity Normalizes the many-to-many relationship between principal entities.
+Structure Entity Captures potential knowledge-based entities.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 29 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Logistics Pages
+Business Logistics Items and Relations
+Item Description
+Branch Office Models a Business Location as a Branch Office.
+Client Place Models a Business Location as a Client location
+Head Quarters Models a Business Location as Head Quarters.
+Business Location Models the location from which the business operates.
+Office Block Models a Business Location as an Office Block.
+Sales Agent Models a Business Location as a Sales Agent.
+Supplier Models a Business Location as a Supplier.
+Communicate Indicates that a business location communicates directly with another business
+location.
+Internet Indicates that the means of communication is the World Wide Web.
+Snail Mail Indicates that the means of communication is the postal system or courier services.
+Phone Indicates that the means of communication is the telephone.
+(c) Sparx Systems 2023 Page 30 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+In Person Indicates that the means of communication is direct person-to-person.
+Intranet Indicates that the means of communication is the local intranet or WAN.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 31 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+BPMN Pages
+The BPMN Toolbox pages provide the graphical (Core) and non-graphical (Types) Business Process Model and
+Notation (BPMN) elements for use on Business Process diagrams through the Zachman Framework Technology.
+Specifications of these elements and relationships are defined by Tagged Values.
+BPMN Toolbox
+Item Description
+Business Process Defines a business process; an extension of a composite Activity.
+Activity Defines an activity within a business process.
+Start Event Defines the initiating event in a process.
+Intermediate Event Defines an intermediate event in a process.
+End Event Defines the terminating event in a process.
+Gateway Defines a decision point in a business process. If a condition is true, then processing
+continues one way; if not, then another.
+(c) Sparx Systems 2023 Page 32 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Pool Logically organizes an Activity; an extension of a Partition element.
+Lane Subdivides a Pool; an extension of a Partition element.
+Data Object Defines a physical piece of information used or produced by a system; an extension
+of an Artifact element.
+Group Groups a number of other elements; an extension of a Boundary element.
+Text Annotation A comment.
+Sequence Flow Defines the flow of an activity; an extension of a Control Flow relationship.
+Message Flow Defines the flow of communications in a process; an extension of a Control Flow
+relationship.
+Association Associates information and artifacts with flow objects.
+Message Defines a message; an extension of a Class element.
+Participant Defines a participant in an activity; an extension of a Class element.
+Rule Defines business rule statements; an extension of a Class element.
+Transaction Defines a transaction in an activity; an extension of a Class element.
+Web Service Defines a web service; an extension of a Class element.
+Property Assigns a property to an element; an extension of an attribute.
+Notes
+Enterprise Architect is delivered with the BPMN Technologies (for BPMN 1.0. 1.1 and 2.0) automatically installed, ·
+providing BPMN profiles and Toolboxes separate from this Zachman version; to make even further use of BPMN
+facilities, download the BPMN Add-In from:
+https://sparxsystems.com/products/mdg_bpmn.html
+(c) Sparx Systems 2023 Page 33 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Event Schedule Pages
+Event Schedule Toolbox
+Item Description
+Business Event Captures major business events of the enterprise.
+Business Cycle Captures major business cycles of the enterprise.
+Event Node Captures the event points in a business cycle.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 34 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Strategy Map Pages
+Strategy Map Toolbox
+Item Description
+Strategy Captures the strategy statements for the business plan.
+Goal Captures what is to be achieved by the enterprise, with specifications defined by the
+Tagged Values.
+Business Perspective Relates the strategies to a specific category.
+Strategy Link Indicates that a strategy is linked to another strategy or goal.
+(c) Sparx Systems 2023 Page 35 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Data Distribution Architecture Pages
+Data Distribution Architecture Toolbox
+Item Description
+File Represents a file.
+Desktop Represents a desktop.
+Processor Represents a processor.
+Registry Represents a registry.
+Storage Device Represents a storage device.
+Web Service Represents a web service.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 36 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Rule Model Pages
+Business Rule Model Toolbox
+Item Description
+Business Rule Captures the Business Rule statements.
+Principle Defines the Principles framed and followed in the Enterprise.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Standard Defines the standards followed in the Enterprise.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Assumption Captures the assumptions made in information manipulation.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Based On Indicates that a rule is based on another model element, which forms the rationale
+for the rule.
+Replaces Indicates that a new rule replaces another rule.
+Conflict Indicates that a rule conflicts with another defined rule.
+Equivalent To Indicates that a rule is equivalent to another rule.
+Exception To Indicates exceptions for a rule.
+(c) Sparx Systems 2023 Page 37 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 38 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Rule Design Pages
+Rule Design Toolbox
+Item Description
+Formal Rule Represents a business rule transformed to a technology-specific logical rule or
+constraint statement.
+Principle Defines the Principles framed and followed in the Enterprise.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Standard Used to define the Standards followed in the Enterprise.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Assumption Used to capture the assumptions made in information manipulation.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Applied To Indicates that a Formal Rule is applied to other model artifacts such as Scenarios or
+Activities.
+Validates Indicates that a model artifact validates a Formal Rule.
+Notes
+Elements and connectors common to Enterprise Architect UML and Extended diagrams are documented in the ·
+Object Toolbox section
+(c) Sparx Systems 2023 Page 39 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Network Architecture Pages
+Network Architecture Toolbox
+Item Description
+Artifact Generic graphical element used to capture information.
+Document Artifact Generic graphical element used to capture detailed information such as network
+configuration details.
+Notes
+For a full description of Artifact elements, see the Artifact topic ·
+(c) Sparx Systems 2023 Page 40 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Rule Specification Pages
+Rule Specification Toolbox
+Item Description
+Rule Impl Component Captures the component implementing a rule.
+Principle Defines the Principles framed and followed in the enterprise.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Standard Defines the Standards followed in the enterprise.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Assumption Captures the assumptions made in information manipulation.
+Tag Value Type = Enterprise / Business / System / Application / Technology /
+Data.
+Implements Indicates that a Rule Impl Component implements a rule.
+Violates Indicates that the rule is violated by the connecting model element.
+(c) Sparx Systems 2023 Page 41 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Tagged Values for Zachman Framework
+The Zachman Framework makes extensive use of Tagged Values to assign custom properties to the various Zachman
+Framework elements.  When creating or viewing a Zachman Framework model, it is recommended that you keep the
+Properties window docked and visible at all times, with the 'ZF' section expanded.
+Access
+Ribbon Start > All Windows > Properties > General > Tagged Values
+Explore > Portals > Windows > Properties > Tagged Values
+Keyboard Shortcuts Ctrl+2
+Synchronize Tagged Values
+From time to time you might need to add missing Tagged Values to all elements in the model that require them, such as:
+Whenever you create a new element by any means other than directly dropping the element from the Zachman ·
+Framework Toolbox pages
+Before using a new version of the Technology, to update the Tagged Values of elements in existing models to the ·
+latest version of the Zachman Framework profile
+You can do this using the 'Synchronize Stereotype' option on the icons in the Zachman Framework pages of the Diagram
+Toolbox.
+(c) Sparx Systems 2023 Page 42 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Data Map Analysis
+A valid Data Map diagram is basically an Entity Relationship diagram constructed using Principal Entity, Structure
+Entity and Intersecting Entity elements. The relationships between them are defined by the business rules.
+Principal Entities are identified from the Business Entities in scope ·
+Intersecting Entities are used to break a many-to-many association between Principal Entities, which form potential ·
+business processes
+Structure Entities represent the existence of a potential knowledge base ·
+This is an example of a valid Data Map diagram:
+Cluster Reports and Process Maps are deliverables of a valid Data Map diagram analysis.
+Perform a Data Map diagram analysis
+With the Data Map diagram to be analyzed open and active, either:
+Select the 'Specialize > Add-Ins > Zachman Framework > Do Data-Map Analysis' ribbon option, or ·
+Right-click on the Data Map diagram in the Browser window, and select the 'Specialize | Zachman Framework | Do ·
+Data-Map Analysis' context menu option
+The 'Data Map Analysis' dialog displays.
+(c) Sparx Systems 2023 Page 43 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Click on the checkbox against each deliverable required. If you have selected 'Generate Cluster Report', also enter the
+file pathname under which to save the report.
+Click on the Generate button.
+(c) Sparx Systems 2023 Page 44 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Cluster Report
+A cluster is a logically related group of processes arranged in a sequence, this being the plan of the order of the execution
+of processes.
+This Cluster Report was generated for the sample Data Map diagram, in .rtf format.
+The report shows how each cluster is a logical group of processes or tasks forming a major business process.
+The number preceding each entity name is the phase number for the entity. Phase 1 against an entity means that the entity
+forms a potential resource/element that must be procured/framed before proceeding with the business process.
+Entities with phase numbers greater than 1 are potential processes, with their sequence of execution set after
+procuring/framing the phase 1 entities in the cluster.
+After successful completion of Data Map analysis, the phase property of each entity in the Data Map diagram is set
+accordingly.
+Acknowledgement
+(c) Sparx Systems 2023 Page 45 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+The algorithm for Cluster Report generation is derived from the book Enterprise Architecture for Integration: Rapid
+Delivery Methods and Technologies (Clive Finkelstein; April 2006).
+(c) Sparx Systems 2023 Page 46 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Process Map
+A Process Map is the visual model of the Cluster Report; however, the Phase 1 entities in the Cluster Report are not
+shown. The Process Map groups the identified Business Processes into the stages of the project, arranged as a guide for
+the project.
+This is the Process Map generated for the sample Data Map diagram.
+(c) Sparx Systems 2023 Page 47 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Business Scorecard Report Template
+To aid your strategic management methods, the Zachman Framework provides a report template for creating Business
+Scorecards.
+Generate a Business Scorecard
+Step Action
+1 In the Browser window, click on the Package containing your Business Perspectives and Strategies (an
+Owner | Business Plan | Strategic Plan Package).
+The Business Perspectives must own the respective strategies.
+2 Either:
+Press F8, or ·
+Select the 'Publish > Model Reports > Report Builder > Generate Documentation' menu option ·
+The 'Generate Documentation' dialog displays.
+3 In the 'Use Template' field, click on the drop-down arrow and select 'Balanced Score Card'.
+4 Click on the Generate button.
+(c) Sparx Systems 2023 Page 48 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Model Validation
+The Zachman Framework registers with Enterprise Architect to receive model validation requests from users.
+Configure Model Validation
+To configure Enterprise Architect to perform Zachman Framework model validation, select:
+'Design > Package > Manage > Validate > Configure Validation Rules' ·
+The 'Model Validation Configuration' dialog displays.
+To perform validation on Zachman Framework models only, click on the Select None button and then click on the
+checkbox for 'Zachman Framework (ZF) Rules'. Click on the OK button.
+Validate Zachman Framework Model
+You can validate, against the Zachman Framework rules:
+An element and any connectors attached to it ·
+A diagram and all its elements, or ·
+A Package and all its diagrams and elements ·
+To do this, click on the element, diagram or Package and then select:
+'Design > Package > Manage > Validate > Validate Current Package' ·
+The 'Model Validation status' dialog displays, showing the progress of the validation.
+(c) Sparx Systems 2023 Page 49 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Validation Messages for Elements
+These error messages can be output by the validation of a Zachman Framework element.
+Messages
+Element Diagram and Message
+Event Node Event Schedule
+Message: Event Nodes must be used only with Business Cycles
+Meaning: An Event Node has been used with elements other than Business Cycle.
+Event Node Event Schedule
+Message: Message triggered Event Node must have a message defined
+Meaning: An Event Node with the 'Trigger' Tagged Value set to 'Message' does not
+have the 'MessageDetail' Tagged Value set.
+Event Node Event Schedule
+Message: Rule triggered Event Node must have Rule defined
+Meaning: An Event Node with the 'Trigger' Tagged Value set to 'Rule' does not
+have the 'Rule' Tagged Value set.
+Event Node Event Schedule
+Message: Error triggered Event Node must have the Error defined
+Meaning: An Event Node with the 'Trigger' Tagged Value set to 'ErrorDetail' does
+not have the 'Error' Tagged Value set.
+Event Node Event Schedule
+Message: Multiple triggered Event Node must have a defined list of Triggers
+Meaning: An Event Node with the 'Trigger' Tagged Value set to 'Multiple' does not
+have the 'Trigger' Tagged Value set.
+Business Cycle Event Schedule
+Message: Business Cycles must have Event Nodes defined
+Meaning: A Business Cycle element does not have any Event Nodes defined.
+Goal Business Motivation/ Strategy Map
+Message: Goal not realized
+Meaning: A Goal has no relationship defined with other model artifacts.
+Strategy Business Motivation/ Strategy Map
+Message: Strategy not realized
+Meaning: A Strategy has no relationship defined with other model artifacts.
+(c) Sparx Systems 2023 Page 50 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Validation Messages for Connectors
+These error messages can be output by the validation of a Zachman Framework connector.
+Messages
+Connector Diagram and Message
+Association Data Map
+Message: DataMap Association must have a valid source element
+Meaning: An Association has a source element other than Principal Entity,
+Structure Entity or Intersecting Entity.
+Association Data Map
+Message: DataMap Association must have a valid target element
+Meaning: An Association has a target element other than Principal Entity, Structure
+Entity or Intersecting Entity.
+Association Data Map
+Message: Possibility of an Intersecting entity < name> which might represent a
+Potential Business Process exists – This is a warning message.
+Meaning: An Association has a many-to-many relationship, informing that the
+relationship could be normalized.
+Strategy Link Strategy Map
+Message: Strategy Map Association must have a valid source element
+Meaning: A Strategy Link has a source element other than Strategy and Goal.
+Strategy Link Strategy Map
+Message: StrategyMap Association must have a valid target element
+Meaning: A Strategy Link has a target element other than Strategy and Goal.
+(c) Sparx Systems 2023 Page 51 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+Validation Messages for Diagrams
+These error message can be output by the validation of a Zachman Framework diagram.
+Messages
+Diagram Message
+Data Map Entities must have relations in DataMap
+Meaning: In the Data Map diagram there are entities with no relationships defined.
+(c) Sparx Systems 2023 Page 52 of 53 Created with Enterprise ArchitectThe Zachman Framework 10 November, 2023
+(c) Sparx Systems 2023 Page 53 of 53 Created with Enterprise Architect

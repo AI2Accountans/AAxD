@@ -1,0 +1,35 @@
+Este es un resumen técnico y conceptual de tu enfoque "Momento 0" diseñado específicamente para que un modelo como NotebookLM pueda cruzarlo con el paper de REA + XBRL GL.
+
+Este documento sintetiza tu arquitectura, tu ontología y tu visión estratégica.
+
+Technical Brief: The "Momento 0" Semantic Accounting Stack
+1. Core Philosophy: Beyond Pacioli
+The "Momento 0" (Moment Zero) framework is a reimagining of accounting for the AI era. It moves away from the 500-year-old double-entry model (Pacioli) which treats transactions as isolated debits/credits. Instead, it adopts:
+
+Shyam Sunder’s Theory: The firm as a "Nexus of Contracts" between stakeholders.
+Zachman Framework: A multidimensional Enterprise Architecture (6x6 matrix) to ensure every transaction answers: What, How, Where, Who, When, and Why.
+The Seam Problem: Solving the disconnect between business events (raw data) and financial reporting (aggregated totals) by maintaining unbreakable semantic links.
+2. The Implementation Stack (The Engine)
+Source Ingestion: Raw business events (UBL Invoices, XML documents) stored in BaseX (XML Database).
+Semantic Mapping (The Bridge): Utilizing Altova MapForce to perform ETL (Extract, Transform, Load). Instead of flat tables, it maps data into a rich JSON-LD (JSON for Linked Data) structure.
+Knowledge Graph: The JSON-LD is ingested into TerminusDB (a Graph Database) via the DFRNT platform.
+Standardization: Every node in the graph is tagged using the XBRL Global Ledger (XBRL GL) vocabulary, specifically leveraging the SRCD (Summary Reporting Contextual Data) module.
+3. The Semantic Ontology (REA Alignment)
+The system is physically modeled using a custom JSON-LD ontology that integrates the Resource-Event-Agent (REA) pattern:
+
+Agents (WHO): Counterparties (Investors, Customers, Suppliers) modeled as nodes.
+Resources (WHAT): Cash flows, inventory, and ledger accounts.
+Events (WHEN/HOW): The actual economic exchanges (Sales, Receipts, Trades).
+Contracts (WHY): The legal anchor (Source Documents) that justifies the transaction.
+Duality: Causal links (Edges) between events (e.g., a "Sale" event is linked to a "Payment" event via a duality arc).
+4. Key Architectural Features
+Provenance (PROV-O): Every node uses the prov:wasDerivedFrom property to link back to the original UBL/XML source, ensuring a cryptographically verifiable audit trail for AI agents.
+Bidirectionality: The system is not a silo. It can query the complex graph (WOQL/GraphQL) and "flatten" it into traditional CSV files for legacy ERPs or tax compliance, while keeping the Graph as the Single Source of Truth (SSOT).
+ESG/Sustainability Fusion: Financial transactions are linked to GRI (Global Reporting Initiative) metrics within the same graph, preventing "Greenwashing" by providing proof of expenditure for sustainability claims.
+5. Strategic Goal: AI Auditability
+The goal is to provide a Self-Describing Audit Trail. When an AI makes a financial decision or an auditor reviews a transaction, the system provides the full semantic context (The Zachman Interrogatives) and the legal provenance (The Momento 0 Contract), solving the audit crisis in automated financial systems.
+
+Cómo usar este documento en NotebookLM:
+Sube el PDF "REA XBRL GL.pdf".
+Sube este archivo .md (o pega el texto en una nota).
+Prompt sugerido: "Analiza cómo mi stack técnico (Momento 0) soluciona los problemas de extensibilidad y adaptabilidad que Denise Guithues Amrhein describe en el paper de 2011, especialmente usando el motor de grafos de TerminusDB para implementar los 'Timeless REA Systems'."

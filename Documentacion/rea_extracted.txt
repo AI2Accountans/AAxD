@@ -1,0 +1,603 @@
+International Journal of Business and Social Science                               Vol. 2 No. 24 [Special Issue – December 2011]  
+1  
+Integrating REA and XBRL GL to Facilitate Modern Business Reporting  
+ 
+Denise Guithues Amrhein, Ph.D., CPA  
+Department of Accounting  
+John Cook School of Business  
+Saint Louis University  
+USA  
+ 
+Abstract  
+ 
+Debreceny and Gray (2003) examined the ontological underpinnings of the eXtensible Business Reporting 
+Language (XBRL) while Geerts and McCarthy (2004) and Buder and Koschtial (2009) examined the ontological 
+underpinnings of the Resource -Event -Agent (REA) model. What has been lacking is an assessment of the 
+complementary nature of these two ontologies. We propose that synergistic benefits can be achieved by 
+combining eXtensible Business Reporting Language Global Ledger (XBRL GL) and the timeless RE A-Enterprise 
+Ontology (REA -EO) model. The timeless REA -EO semantic model is the means to articulate the organization’s 
+information needs while XBRL GL is the information standard for instantiating an organization’s information 
+needs with tagging that provi des agreed -upon meta descriptions of data elements/attributes, business rules, and 
+references. This paper examines how the combination of XBRL GL and REA can facilitate increased adaptability 
+and re -usability of business information which is needed to serv e today’s dynamic business environment.  
+ 
+Keywords: Ontologies, REA, REA -EO, XBRL GL   
+ 
+1. Introduction  
+ 
+In today‘s complex interconnected global business environment, ―spatial, temporal, geographical, jurisdictional, 
+risk and organizational dimensions of transactions need to be captured and processed in a more integrative fashion 
+than traditional double -entry bookkeeping allows‖ (Cheh 2005, 25). McCarthy (1982) proposed the Resource -
+Event -Agent (REA) model as a means to overcome the deficiencies of double -entry bookkeeping. Once the 
+information concerning these business transactions has been captured and proc essed, the next step is to 
+disseminate that information to decision makers and other interested parties for their use. ―To support the sharing 
+and reuse of formally represented knowledge among AI systems, it is useful to define the common vocabulary in 
+which shared knowledge is represented‖ (Gruber 1993, 199). The eXtensible Business Reporting Language 
+Global Ledger (XBRL GL) provides such a vocabulary. XBRL GL is a specialized taxonomy for the tagging of 
+financial and non -financial information at the granu lar level so that it may be shared across disparate systems.  
+ 
+The XBRL GL taxonomy represents an ontology in that it represents agreed upon definitions and relationships 
+between the XBRL GL taxonomy elements. While the generalized XBRL GL taxonomy is quit e comprehensive it 
+is likely that company and industry specific extensions 1 will be required to fully satisfy reporting needs. In fact, 
+the need for additions such as more powerful templates (e.g., within the measurable structure or audit/workflow) 
+and que ries to XBRL GL has been recognized (XBRL Intl. 2007). Because taxonomies will be used for a 
+significant period of time, it is important to apply a consistent thought process to the development of extensions 
+so that they follow a consistent and logical pat tern and do not become absent of fundamental ontological and 
+design principles. The goal of any extensions to the XBRL GL taxonomy should be consistent with the GL 
+philosophy whereby elements and structures are holistic and reusable. Further, extensions sh ould make use of 
+established standards (i.e., the International Standards Organization (ISO)) and formal modeling approaches when 
+they exist. We build on the suggestion of Debreceny and Gray (2003, 8) who suggest REA as an appropriate 
+modeling grammar for the XBRL ontology.  
+ 
+The challenging transition from a traditional double -entry system to a multifaceted contemporary system can be 
+facilitated by combining the timeless REA -EO and the XBRL -GL ontologies. As with ontologies in other areas 
+that are being de signed ―for the purpose of enabling knowledge sharing and reuse‖ ( Gruber 1992 ), both REA and 
+XBRL GL are intended to facilitate the sharing of information.  
+                                                             
+1 We use the term extensions to include both the addition of new elements and modifications to enumerations contained in 
+the XBRL GL taxonomy modules.  The Special Issue on Business, Humanities and Social Science                                  © Centre for Promoting Ideas, USA  
+2  
+The REA -EO model can provide valuable guidance in developing a strong common vocabulary based on sound 
+ontological principles and extensions consistent with that vocabulary. We suggest the timeless REA -EO as an 
+appropriate choice for the modeling and devel opment of XBRL GL taxonomy extensions. In addition to providing 
+a comprehensive conceptual model to follow for enterprise system design, it is consistent with the existing XBRL 
+GL taxonomy. An instance document mapped to a REA -EO extended XBRL GL taxonomy provides synergistic 
+benefits with XBRL GL contributing more transparent and timely business reporting across information systems 
+and the REA -EO providing more comprehensive reporting. Moving from a paper centric model of tagging 
+financial statement data a fter the fact to a data centric view where data is tagged at the source would increase the 
+reusability of data for both internal and external use. This reusability is necessary to efficiently meet the 
+information requirements of modern organizations.  
+ 
+In the next section we provide a discussion of ontologies followed by a discussion of the fundamental ontological 
+underpinnings of XBRL in general, XBRL GL specifically, and the REA -EO model. In the third section we 
+discuss how to model an organization‘s busi ness processes using the REA -EO model and then tag those elements 
+with existing XBRL GL elements, through reference to existing external standards, modifications to the existing 
+XBRL GL enumerated values, and extensions to the XBRL GL taxonomy when necessa ry. The final section 
+includes conclusions and recommendations for future research.  
+ 
+II. BACKGROUND  
+ 
+Ontologies    
+The analysis of ontologies has received little attention within the accounting research domain. The limited 
+attention that ontologies have re ceived has been within the accounting information systems field. Although there 
+is some disagreement as to what an ontology is within the artificial intelligence (AI) realm, Gruber (1992) 
+provides a succinct definition --―An ontology is a specification of a  conceptualization.‖ Gruber (1995, 908) 
+expanded the definition to a ―formal, explicit specification of a shared conceptualization.‖  The study of 
+ontologies in accounting is important  because using an explicit specification facilitates the reuse and shar ing of 
+knowledge across multiple platforms. This ability to share knowledge across platforms is critical to success in 
+today's global dynamic operating environment where multinational corporations and international trading partners 
+must consolidate and/or share information maintained on disparate systems.       
+Although there is some disagreement as to what constitutes a good ontology those attributes identified by Gruber 
+(1995, 910) have appeal. Clarity, the first of Gruber‘s criteria, implies clear defini tions that are context 
+independent. Coherence, the second criteria, requires consistency in the application of the definitions within the 
+domain. Extensibility, the third criteria, implies the ability to meet the needs of changing foundations and best 
+practices. Fourth, there should be minimal encoding biases so that coding is neither constrained nor are coders 
+forced to exhibit biases in the coding of knowledge. Lastly, there should be minimal ontological commitment so 
+that it makes few pre -conceived requi rements about the modeled environment.  
+ 
+Extensible Business Reporting Language (XBRL)  
+ 
+―XBRL  is a language for the electronic communication of business and financial data which is revolutionising 
+business reporting around the world. It provides major benefits in the preparation, analysis and communication of 
+business information. It offers cost s avings, greater efficiency and improved accuracy and reliability to all those 
+involved in supplying or using financial data‖ (XBRL Intl. 2009a). Extensible Business Reporting Language 
+(XBRL) is a derivative of Extensible Markup Language (XML) that uses dat a tags to contain meta -data. 
+Debreceny and Gray (2003) reverse engineered the draft US GAAP and International Accounting Standards 
+(IFRS) taxonomies to examine the underlying ontological structure and suggested REA as an appropriate 
+modeling grammar for th e XBRL ontology.  .  Most applications of XBRL have been in government and external 
+financial reporting applications (e.g., Dutch Water Boards, FFEIC Call Reports, KOSDAQ, and SEC). This has 
+occurred because governments have the ability to require use rath er than waiting for adoption to be driven by 
+market demand. The government agencies can achieve significant cost reductions in data re -entry by requiring the 
+organization furnishing the information to provide the data in a non -proprietary tagged format tha t allows sharing 
+among multiple application platforms.  Currently, companies typically follow a paper -centric process for capturing 
+and reporting financial information tagging the data after the fact using either internal software or external service 
+provid ers to map the data to the existing GAAP taxonomy extensions.  
+ International Journal of Business and Social Science                               Vol. 2 No. 24 [Special Issue – December 2011]  
+3  
+If companies continue their current process they may see no immediate measurable internal benefits for their 
+efforts other than ensuring statutory compliance and perhaps, as it has been theor ized, a benefit from increased 
+analyst coverage and reduced regulatory reporting costs. 2 To achieve the maximum benefits offered by XBRL, 
+movement toward a data centric view of information is critical. By tagging data earlier in the process, at the point 
+of data capture, the data can be re -purposed for a greater number of possibilities. To move to this data centric 
+model we move from XBRL for Financial Reporting (XBRL FR) to XBRL Global Ledger (XBRL GL).  
+ 
+Extensible Business Reporting Language Global Ledger  (XBRL GL)  
+ 
+Extensible Business Reporting Global Ledger (XBRL GL) provides the means for organizations to move away 
+from an after -the-fact paper -centric model to a data -centric model of tagging information at the point of data 
+capture. However, there appears to be a w ide-spread misperception that XBRL GL is a general ledger system 
+which reports debits, credits, and accounts. This narrow definition ignores the potential for XBRL GL to capture 
+more comprehensive information. ―XBRL GL, the standardized Global Ledger, is a  standard format to represent 
+financial and non -financial data at the detail level, move the data between different systems and applications, and 
+provide context for drilling down from summary reporting (XBRL FR) to the detail data that flows to it,‖ 
+(Garb ellotto 2006, 59).   
+ 
+XBRL GL is not intended to take the place of an ERP system, nor is it intended to be a transaction exchange 
+standard in the vein of EDI. It allows users to tag the items in the data warehouse so that those items can be used, 
+reused, a nd combined with data from other sources. Modules allow ― the representation of anything that is found 
+in a chart of accounts, journal entries or historical transactions, financial and non -financial. It does not require a 
+standardised chart of accounts to g ather information, but it can be used to tie legacy charts of accounts and 
+accounting detail to a standardised chart of accounts to improve communications within a business ‖ (XBRL Intl. 
+2009b). 3  Moreover, XBRL GL does not require assigning the information  to an account. In fact, the information 
+can be associated with end -user financial reporting without being assigned to an intermediary account. Further 
+flexibility exists in that XBRL GL is not tied to any particular set of accounting standards or methods.  As such, 
+the information can be simultaneously (or alternatively) reported in accordance with multiple accounting 
+standards (e.g. IFRS and US GAAP) or utilizing different accounting methods (e.g. cash and accrual basis). These 
+characteristics are consiste nt with those identified by Ushold and Gruninger (1996) as underlying qualities of 
+ontologies.  
+ 
+The GL taxonomy contains elements to capture information such as who entered the purchase order, when the 
+purchase order was entered, the terms, whether the purchase order is chargeable or reimbursable, and the date 
+received. Thus, non -financial information  can be captured in addition to the financial facts. XBRL GL is a global 
+ledger  system that uses approximately 400 elements to represent thousands of elements that depending on the 
+context can represent a broad range of qualitative and quantitative informa tion. The majority of the elements are 
+for operational and reporting details. In fact, there is only one field for the debit or credit and a dozen more for 
+account structure details. The data tags are designed with reuse in mind. For example, the element 
+―identifierContactFirstName‖ can be re -used with meaning conveyed by the ―identifierType‖ whereby the first 
+name might be that of a supplier contact, a customer or an employee thereby eliminating redundancy of having 
+separate first name elements for supplie r, customer and employee.  
+ 
+Further, information about the company reporting the transactions would not typically be captured by the 
+reporting system. By embedding the reporting company‘s name into the instance document, it continues to be 
+associated with the transactions when the information is consolidated or shared among information supply chain 
+partners. The measurable structure can carry details about services, machine cycles, benchmarking, key 
+performance indicators, fixed assets and other details sel dom associated with accounting per se. XBRL GL 
+enhances communication between disparate systems and applications by enabling knowledge sharing and reuse 
+which is the purpose of ontologies as stated by Gruber ( 1992 ). Like all XBRL taxonomies, XBRL GL is 
+extensible to meet the diverse needs of internal reporting.  
+                                                             
+2 Regulatory reporting costs are reduc ed when government agencies converge their reporting requirements as was achieved 
+when the Bank Call Report process was modernized (XBRL Intl. 2006).  
+3 The modular taxonomies that comprise XBRL GL are: Core, Advanced Business Concepts, MultiCurrency, conce pts for 
+Saxonic jurisdictions and the tax audit file. While the use of all modules is not required, it is helpful to view each module  as 
+part of the whole.  The Special Issue on Business, Humanities and Social Science                                  © Centre for Promoting Ideas, USA  
+4  
+This is particularly important in the area of internal reporting and sharing information across the supply chain as 
+there is greater diversity at the internal and supply chain levels because they a re not governed by external 
+reporting requirements. Because the internally -generated taxonomy extensions will need to be maintained 
+indefinitely in the same manner as external taxonomies to provide a stable reference, it is important to plan 
+carefully to r educe the number of changes needed. 4 With sufficient forethought the extended taxonomy will 
+likely require minimal periodic changes.  Corporations will need to look to the IASC and XBRL International for 
+best practices regarding both taxonomy and schema ver sioning.  XBRL GL has the potential to change how 
+information is consolidated and shared within an organization, and along the financial information supply chain 
+and not just for financial reporting; it may include tax, sustainability, statistics, and manag ement reporting. 
+Consequently, it has the potential to provide support for both financial reporting and the audit process, acting as a 
+catalyst for change in these areas as well. Organizations (e.g., Wacoal, Inc., Housing and Urban Development 
+(HUD) and Fu jitsu Limited) that embrace XBRL GL are likely to gain strategic benefits by leveraging their 
+business rules.  
+ 
+A significant benefit offered by XBRL (both FR and GL) is that it provides a method to express semantic 
+meaning and a means to validate the conte nt of an instance document against that semantic meaning based upon 
+taxonomy defined relationships. XBRL GL provides the ability to validate business rules and formulas at various 
+levels within the organization. The use of built -in validations can be achie ved through the use of type tags, 
+linkbase validations (i.e., calculation and formula linkbases), XML Schema restrictions, and Schematron. 5 
+Additional benefits of XBRL GL are that it (1) supports consolidations across disparate accounting systems 
+within an organization, (2) supports financial reporting by linking the financial statement elements to the 
+underlying details, and (3) provides a f lexible ―language‖ of data interchange through extensibility. XBRL GL 
+will ―help make even the most integrated system more interoperable, and data more reusable, in a cost -effective 
+way‖ (Garbellotto 2006, 60).  
+ 
+Like other XBRL taxonomies, XBRL GL was cons tructed from a brute -force approach designed to fit current 
+accounting systems rather than built from a fundamental ontological perspective that could be encoded into a 
+taxonomy. However, the nature of its construction does not hinder XBRL GL‘s ability to satisfy Gruber‘s (1995, 
+910) criteria of a ―good‖ ontology ( clarity, coherence, extensibility, minimal encoding bias and minimal 
+ontological commitments) . In fact, the GL taxonomy achieves (1) clarity through agreed upon definitions, (2) 
+coherence through consistent use across time, (3) extensibility by design, (4) the elimination of encoding bias 
+through agreed upon definitions and the ability to tag data unbounded by the conveniences of notation, and (5) the 
+minimization of ontological commitments by allo wing individuals to instantiate the taxonomy as needed.  
+ 
+Resources Events Agents Enterprise Ontology (REA -EO) 
+ 
+Although double -entry bookkeeping has been used for over 500 years, modern day business transactions are 
+increasingly more complex than those of even 50 years ago. As Buder and Koschtial (2009) point out, ―double 
+entry bookkeeping cannot store data application neutral‖ due to implied limitations in storing the financial data. 
+This can limit the ability of the modern ERP system to provide the necess ary data for decision making. The REA 
+model (McCarthy 1982) was initially suggested as a means to overcome the limitations of double entry 
+bookkeeping, provide guidance on ―what phenomena should be captured in an enterprise system‖ and offer 
+―structuring g uidelines about the way economic phenomena should be assembled into business processes and 
+value chain specifications‖ (Geerts and McCarthy 2001). Over time it has evolved from an accounting process 
+model to a business process model that can be used by an enterprise to capture all business processes and events.  
+ 
+Partridge (2002) noted that t he REA ontology adds two important aspects to traditional double -entry 
+bookkeeping. One important benefit is that it explicitly records both monetary and non -monetary e vents. ―A 
+known inadequacy of double -entry bookkeeping is that the ledger is restricted to monetary entries. … In the REA 
+model, there is no requirement that economic events record the monetary values of economic resources, and the 
+REA model can therefore express exchanges where money is not involved, such as barter trade‖ (Hruby and 
+Scheller 2008, 2).  
+                                                             
+4 The term ―extension‖ refers to providing tags to information not currently contained in the releva nt XBRL 
+taxonomy and to overriding any labels, presentation links, or calculations in the existing taxonomy.  
+5 A ―schematron is a rule -based validation language for making assertions about the presence or absence of patterns in XML 
+trees‖ (Wikipedia 2009).  International Journal of Business and Social Science                               Vol. 2 No. 24 [Special Issue – December 2011]  
+5  
+Another important benefit is that it explicitly identifies both parties to an economic exchange. ―In double -entry 
+bookkeeping, the proprietor – the owner o f the books – is implicit; the trading partners are referred to indirectly as 
+owners of the accounts across which the entries are posted, such as creditor and debtor. Making the parties to the 
+transaction explicit becomes essential in many situations: in t he supply chain, where a producer or a dominant 
+trading partner is interested in monitoring the transactions of other partners in the chain; in internal trading in 
+which trading partners are both parts of one entity; and in modeling cooperatives, where a g roup of peers is 
+interested in modeling the cooperative as a whole, as well as each member‘s individual contribution to the 
+cooperative‖ (Hruby and Scheller 2008).  
+ 
+REA modeling has been discussed as a method for organizational information systems to capture all business 
+processes and events including ―any strategically significant business activity management wants to plan, control, 
+and/or evaluate‖ (Denna et al. 1998, 365). The REA model‘s comprehensiveness moves it beyond merely 
+capturing and report ing on business transactions (economic events) to capturing and reporting on other non -
+transactional business events. Typification, which can be related to resources, events or agents, is a conceptual 
+abstraction that defines the identifying characteristic s or essence of a concrete set of objects (i.e., an event type 
+could be a raw materials purchase). It focuses on the recurring components of business events and shares the 
+object -oriented adage of reuse.  Therefore,  typification allows for increased interna l controls through validation 
+checks to determine if the components of a particular business event are of an appropriate type.  
+ 
+The REA model is popular in teaching and modeling accounting systems. However, Geerts (1997, 2) noted that 
+the traditional ―REA  pattern lacks reusability and extendibility.‖ Geerts and Wang (2007) illustrate this problem 
+using the example of a car dealer changing its business practice from not accepting trade -ins to accepting trade -
+ins. This change in business practice necessitate s adapting the existing enterprise schema to the new practice. ―As 
+a result, the underlying enterprise system must also be recompiled and redeployed, which is often costly and 
+inefficient. … timeless REA systems are able to absorb such changes and make ent erprise systems more adaptive‖ 
+(Geerts and Wang 2007, 165). The designation of a timeless REA system refers to the extensibility of the system, 
+not a system without time. The ability of the system to adapt to changes in the operating environment is consist ent 
+with the state -tracking model  of Weber (1997, 135) thereby eliminating an ontological deficit.  
+ 
+The objective of timeless REA systems is to increase the adaptability of enterprise systems by increasing the 
+reusability and extendibility of the system. ― Information systems have a data component or information base and 
+a data structure or conceptual schema that defines the semantics of the data and the constraints that apply to them 
+(ISO 1982). Data structures are typically hardwired into the information s ystem, and changes to them are costly 
+and time -consuming, often requiring the creation or modification of table or object class definitions and additional 
+programming. On the other hand, data manipulation such as adding a new customer is easy to do and the  cost is 
+minimal. The objective of timeless enterprise systems is to enable the accommodation of normal changes in the 
+economic activities and business rules of an organization without affecting the underlying data structure and 
+programs. … this can be acc omplished by defining semantics and business rules as part of the data component 
+and thus allows users, especially nonprogrammers, to change them at runtime‖ (Geerts and Wang 2007,  166).   
+ 
+In order to accomplish this, timeless REA systems first analyze th e ―core concepts underlying the economic 
+activities.‖ Once commonalities have been identified, ―specific exchanges‖ are replaced by a ―generic ‗exchange‘ 
+association‖ in the timeless REA enterprise schema. ―As a result, the user can record any current or f uture 
+exchange between two economic events without making any change to the data structure. However, the increased 
+flexibility comes at a price: reduced semantics‖ (Geerts and Wang 2007, 168). In addition, ―business rules …are 
+no longer defined as part of the enterprise schema. … The ideal situation would be where the specification of the 
+semantics is preserved or even extended while the increased flexibility is maintained. One approach is the use of a 
+reflective architecture where the descriptions of the e nterprise schema are integrated as part of the conceptual 
+schema‖ (Geerts and Wang 2007, 168 -169). Figure 1 illustrates this approach where the enterprise schema 
+description provides a framework for describing the semantics of the enterprise schema instead  of defining them 
+directly. This allows semantic descriptions to be updated at run time to accommodate changes in business 
+operations without a change to the data structure. Figure 1 also illustrates how extending the conceptual schema 
+with ontological spe cifications provides a framework to describe the semantics of the REA -EO as part of the 
+information base. Geerts and Wang (2007, 170) note that extending the conceptual schema with ontological 
+specification adds value in the following ways:  
+ The Special Issue on Business, Humanities and Social Science                                  © Centre for Promoting Ideas, USA  
+6  
+1. Ontological s pecifications can be used for validation purposes.  
+2. Adherence to the REA -EO results in interoperability.  
+3. Changes in the ontology itself can easily be accommodated by the architecture.  
+4. The explicit definition of the ontology provides additional knowledge that can be  
+ used as part of applications.  
+ 
+With the increased attention to internal control resulting from Section 404 of the Sarbanes -Oxley Act of 2002 
+(SOX), the enhanced internal control through typification can provide significant benefit to the orga nization.  
+ 
+Figure 1:  
+ 
+Conceptual Schema for Timeless REA Enterprise Systems (Geerts and Wang 2007, 169)  
+ 
+Association
+DomainObject
+PropertyBusiness 
+Rule 
+Pattern
+Association 
+Type
+DomainObject
+Type
+Property 
+TypeOntological
+Association 
+Type
+Ontological 
+Type
+RoleEnterprise SchemaOntological 
+Specifications
+Enterprise 
+Schema Description
+Operational Level Knowledge Level (Metadata)
+Conceptual Schema0_*
+1_*
+2_2
+1_*
+1_*0_*
+0_*0_*
+0_*
+0_*
+0_*
+0_*0_*0_*1_1
+1_1
+1_1
+1_11_11_10_1
+0_11_*
+2_21_*
+1_*
+1_*2_2
+ International Journal of Business and Social Science                               Vol. 2 No. 24 [Special Issue – December 2011]  
+7  
+While a timeless REA enterprise system built using a reflective architecture offers significant benefits in terms of 
+adaptability, ―applications built with reflective systems need to access metadata at runtime and are more complex 
+to write and need more pr ocessing resources and time‖ (Geerts and Wang 2007). In addition, this type of REA 
+system still uses a proprietary approach that does not facilitate the sharing of information since it is not typically 
+shared across organizations and can even vary between different systems within the same organization. Efficient 
+business operations require timely information sharing between subsidiaries and among trading partners. Using 
+the timeless REA -EO model to guide the extension of the XBRL -GL taxonomy is one way of a ddressing this 
+need by allowing the sharing of tagged information.  
+ 
+III. EXTENDING THE XBRL GL TAXONOMY WITH THE REA MODEL  
+ 
+REA is focused on business processes ; it does  not have an explicit and comprehensive set of data items 
+representing the content of trade documents. XBRL GL provides such a vocabulary; key  benefits of XBRL GL 
+include the use of agreed upon definitions for tagged items and extensibility to meet the individualized needs of 
+industries and individual organizations. REA provides theoretical  guidance on how to expand that vocabulary in a 
+consistent manner when needed. This is where integration of REA and XBRL GL is beneficial.  Garbelloto (2006) 
+gives recognition to the need for extensions for jurisdiction, company, and functional add -ons. Fi gure 2 illustrates 
+how the different modules of the GL taxonomy can be combined with company specific extensions. The need to 
+extend the XBRL GL taxonomy to meet the specific requirements of the enterprise necessitates a determination of 
+how to accomplish this task. Further any extensions should be designed to maintain the objectives of XBRL GL. 
+Using fundamental ontological and design principles to guide these extensions will maintain the GL objectives, 
+prolong the usability of the extensions, and likely r educe not only the time but the costs of implementation and 
+maintenance.  
+ 
+Figure 2:  
+XBRL GL, The Journal Taxonomy Framework (XBRL Intl. 2005)  
+ 
+ 
+In order to maximize the potential benefits of XBRL GL, the organization must  determine which financial and 
+non-financial information to capture. We propose using the timeless REA -EO model to guide the taxonomy 
+extension process. By using the timeless REA -EO model it is possible to develop a more complete set of data tags 
+that will  allow better leverage of organizational business rules than would likely be possible with an ad hoc 
+extension process.  XBRL GL Core  XBRL GL Advanced 
+US/UK Accounting  XBRL GL Advanced 
+Business Facts  XBRL GL 
+Multicurrency  XBRL GL  
+Other Modules  
+XBRL GL Palette  
+(Company Extension)  
+XBRL Instance 
+Documents  The Special Issue on Business, Humanities and Social Science                                  © Centre for Promoting Ideas, USA  
+8  
+The timeless REA -EO model is appropriate for several reasons. First, like REA -EO the underlying XBRL GL 
+taxonomy is based on Resources , Events, and Agents. XBRL GL captures the Resources within the ‗measurable‘ 
+structure, the participation relationship (i.e., Agents) within the ‗identifierReference‘ structure, and the duality 
+relationship (i.e., Events) at the ‗entryDetail‘ level then it  ties the structures together through the value -chain. For 
+example, both the company and the external agent are tagged in a purchase transaction. Second, XBRL GL is 
+designed to tag both economic and non -economic data which is consistent with the REA model.  For example, we 
+can capture and record information about sales and successful sales calls. Third, both build internal controls into 
+the system.  Fourth, both leverage reusability.  Fifth, both believe that the information from calculated fields 
+should not  be stored.  Sixth, neither requires the use of accounts. Therefore, it is only logical that REA be used to 
+guide the extension process so that the extensions are consistent with the existing GL taxonomy. REA provides a 
+process for modeling the information  and XBRL GL provides a means to capture and share the information. By 
+addressing the question of what common information to represent across organizations and what nuances to 
+represent within the organization, REA  can help to guide extensions, modifications, and implementations of the 
+XBRL GL taxonomy.  
+ To illustrate the process we will build on the Geerts and Wang (2007) Exhibit 7 ―Conceptual Schema for 
+Timeless REA Enterprise Systems‖ (illustrated in our Figure 1) using the domain objects from the Geerts and 
+Wang (2007) Exhibit 4 as modified in our Figure 3 to include the internal agent salesperson. It should be noted 
+that it is also possible to include the Ontological Specification in the taxonomy extension. 6  
+ 
+Figure 3:  
+ 
+REA Enterprise Schema: Economic Activities of a Car Dealer accepting Trade -Ins (adapted from Geerts 
+and Wang (2007, 166) Exhibit 4)  
+ 
+Car
+CashTrade
+Sale
+Cash ReceiptCustomer
+(Outside Agent)
+Salesperson
+(Inside Agent)duality
+duality
+Stock-flow
+(inflow)
+Customer
+(Outside Agent)
+Repeated to make it easier 
+to read cardinalities.Stock-flow
+(inflow)
+Stock-flow
+(outflow)(1,1)(0,1)
+(0,1)
+(1,1)(1,*)
+(0,1)
+(0,1)
+(0,*)
+(1,*)
+(1,*)(0,*)
+Participation Participation ParticipationParticipationParticipation  Participation
+(0,*)
+(0,*)(0,*)
+(0,*)
+(0,*)(1,1)
+(1,1)(1,1)(1,1)
+(1,1)
+(1,1)
+ 
+                                                             
+6 We left Ontological Specifications out of the taxonomy extension for simplicity purposes.  International Journal of Business and Social Science                               Vol. 2 No. 24 [Special Issue – December 2011]  
+9  
+It is necessary to identify structures already present in the XBRL GL taxonomy before be ginning the extension 
+process. The GL type tags use drop -downs to limit the choices to valid types. For example, the XBRL GL Core 
+Taxonomy contains the ‗documentType‘ element which includes choices such as ‗order -customer,‘ ‗order -
+vendor,‘ and ‗invoice.‘ T he use of ‗documentType‘ allows us to define the ‗Association Types‘ from the 
+Enterprise Schema. We would need to modify the enumerated choices to include trades, which is industry 
+specific. Section 2.5.3 of the General Ledger Taxonomy Framework Technical Architecture  (XBRL Intl. 2007a) 
+describes how to modify the enumerated values in the relevant content taxonomy file (i.e., gl-xxx-content -2005 -
+11-07.xsd where xxx refers to cor, bus, muc, usk, or taf).  The existing XBRL GL taxonomy makes use of tuples 
+to bind information together. For example, all of the information about a customer, such as customer number, 
+name, address, and phone number would be bound together. The use of tuples will allow us to bind the ‗property 
+type‘ data to the ‗domain object type.‘  
+ 
+It is important that taxonomy extensions are consistent with the existing XBRL GL taxonomy. Extensions should 
+be created that look beyond creating elements that are quick -fix and limited use. One way to accomplish this is 
+the use of existing standards. ISO/PRF 3779 specifies the structure for vehicle identification numbers. For 
+example, the elements ‗make,‘ ‗model,‘ and ‗year‘ are captured in ISO/PRF 3779 ―Road Vehicles --Vehicle 
+Identification Number ( VIN) ‖  (ISO 2009).  Relying on an existing standard increases the consistency of data 
+tagging by not having individual companies create unique extensions.  
+ 
+‗Property type‘ defines the name, role, and data type. We can define the data type (e.g., integer,  string, or date) for 
+an element in the taxonomy. The GL Core Taxonomy already defines the element ‗amount.‘ The meaning for 
+‗amount‘ is determined by the source journal; therefore, ‗amount‘ from the sales journal would be the amount of 
+the sale and from t he cash receipts journal would be the amount of the receipt. Therefore it would not be 
+necessary to extend the taxonomy for the trade amount. While not necessary, if desired, the ‗Description‘ tag 
+could be used to provide additional information about the a mount which like ‗amount‘ takes on meaning based on 
+where it appears in the instance document. The GL ‗identifierType‘ element allows an automated system to 
+understand who is being described within the context of this entry. For example, by knowing the ide ntifier type 
+‗v,‘ ‗c,‘ or ‗e‘ we know the information that follows, such as, number, name, and address, correspond to 
+information about a vendor, customer, or an employee, respectively.  
+ 
+XBRL GL has the potential to overcome the complexity and performance decreases inherent with the reflective 
+architecture of the timeless REA -EO schema through the use of data tags that maintain the metadata. The 
+resulting extension should be reusable, consistent, and developed in a logical manner that will withstand the tes t 
+of time. The REA infused taxonomy extension will capture a more complete set of business information (e.g., 
+type of salesperson, type of trade) and XBRL will allow us to use that information across disparate reporting 
+systems. By capturing additional inf ormation such as salesperson or trade type we can perform additional 
+business rule validations. By using XBRL GL , if the owners of the car dealership had multiple dealerships they 
+would be able to consolidate the data across platforms that likely vary by t he dealership make (e.g., Ford, GM, or 
+Honda). In addition, they could share information with the auto manufacturer and lenders. The business rules can 
+be changed in the information base allowing increased flexibility to capture the ever changing business 
+environment. Internal controls are improved through instantiations being validated against the type tags.  
+ 
+To summarize, our proposal addresses some of the problems that have been encountered in trying to implement 
+the use of XBRL GL (e.g., XML‘s lack of s emantics) by guiding the development of taxonomies and customized 
+extensions in a rational and systematic manner in accordance with the REA -EO. The result of combining the 
+XBRL GL and the REA -EO allows organizations to develop taxonomy extensions that main tain the essential 
+characteristics of ―good‖ ontologies as discussed in Gruber (1993) --clarity, coherence, extensibility, minimal 
+encoding bias and minimal ontological commitments. Current technology is sufficient to implement our proposal 
+For example, Alt ova MapForce and Fujitsu‘s Taxonomy Editor and Instance Creator with the available XBRL GL 
+add-in can be used to map the information from the company database to the XBRL GL taxonomy.  
+ 
+IV. CONCLUSIONS  
+ 
+Given the rapid growth and implementation of XBRL it is important to consider all aspects, from taxonomy 
+development through taxonomy use, reporting and consumption. Because of the fundamental impact of taxonomy 
+development on subsequent use and consumptio n we undertake the process of examining how REA -EO can be 
+used to serve as the modeling grammar for XBRL GL taxonomy extensions.   The Special Issue on Business, Humanities and Social Science                                  © Centre for Promoting Ideas, USA  
+10  
+The syner gies available from the combination of REA and XBRL (i.e., reusability, extensibility, and 
+interoperability) can be nefit organizations worldwide. Our paper examines how using the REA -EO as a structured 
+framework to guide XBRL GL taxonomy extensions, such as company specific extensions, will maintain 
+consistency and inherent benefits such as gains in adaptability, reusa bility, extensibility, and interoperability. This 
+approach acknowledges the importance of having a business reporting system capable of efficiently capturing and 
+communicating key financial and non -financial business information and performance measures wi thin a firm and 
+across the business supply chain. Recognizing the weaknesses of traditional business reporting systems in 
+performing this task while adhering to the needs of the organization, we propose using REA to extend the XBRL 
+GL taxonomy to address t hose needs.  
+ 
+REA provides a model for determining what information should be captured and how it should be tied together 
+while XBRL GL provides the technology to share that information among disparate systems. This is true both in 
+the case of a fully deve loped timeless REA system tagged in XBRL GL and in the case of legacy systems tagged 
+in XBRL GL with extensions guided by REA. Further investigation and development are needed in order to fully 
+realize the potential complimentary benefits of REA and XBRL G L. During the interim, incremental benefits can 
+still be achieved.  Utilizing REA to guide the XBRL GL taxonomy extension process within the organization 
+could also have the added benefit of advancing management‘s understanding of their organization and id entifying 
+opportunities for improvements in operations. Information is the key to success in today‘s fast -paced global 
+marketplace. Being able to use information to act and react quickly allows an organization to gain a strategic 
+advantage over its competi tors. A primary benefit to be derived from combining REA and XBRL GL lies in 
+tagging and sharing information at the economic event level and using that information to make smarter, faster 
+decisions.  
+ 
+References  
+ 
+Buder, J. and C. Koschtial. 2009. Formaliza tion of REA Ontology. Proceedings of the Fifteenth  Americas 
+Conference on Information Systems, San Francisco, California, August 6 - 9, 2009.  
+Cheh, J. J. 2005. A Conceptual Model for Accounting Education: An Accounting  
+Curriculum based on a Scientific App roach. The Accounting Educator  14(3): 25 -27.  
+Debreceny, R. and G. Gray. 2003. Building XBRL Taxonomies: An Ontological Analysis. Working Paper.  
+Denna, E. L., L. T. Perry, and J. Jasperson. 1998. Reengineering and REAL business process modeling. In 
+Busines s Process Change: Reengineering Concepts, Methods and Technologies , edited by M. Khosrowpour 
+and J. Travers, 350 -375. Hershey, PA: Idea Group Publishing.  
+Garbellotto, G. 2006. Exposing enterprise data: XBRL GL, web services, and Google, part 1. Strategic F inance  
+(August): 59 -61. 
+Geerts, G. L. 1997. The timeless way of building accounting information systems: The ‗activity‘ pattern. In 
+OOPSLA Workshop on Business Object Design and Implementation.  
+——— . and ——— . 2001. Using object templates from the REA accounting model to engineer business 
+processes and tasks. The Review of Business Information Systems 5 (4): 89 –108.  
+——— . and ——— . 2004. The ontological foundation of REA enterprise information syste ms. Working paper, 
+Michigan State University. Available at: http://www.msu.edu/user/mccarth4/ Last accessed June 19, 2009.  
+——— , and H. J. Wang. 2007. The timeless way of building REA enterprise systems. Journal of Emerging 
+Technologies in Accounting  4:161 -182.  
+Gruber, T. R. 1992. What is an ontology?  Available from: http://www -ksl.stanford.edu/kst/what -is-an-
+ontology .html. Last Accessed June 14, 2009.  
+——— . 1993. A Translation Approach to Portable Ontology Specifications. Knowledge Acquisition  5(2):199 -
+220.  
+——— . 1995. Toward Principles for the Design of Ontologies Used for Knowledge Sharing. International 
+Journal Human -Computer Studies 43 (5 -6) (November): 907 -928. 
+Hruby, P. J. and C.V. Scheller. 2008. Understanding accounting from the REA per spective. Position paper. 
+Available at: http://www.managementinformation.ugent.be/ REAworkshop2008/Montpellier.pdf, last 
+accessed June 2, 2008.  
+Ijiri, Y. 1975. Theory of Accounting Measurement . American Accounting Association.  International Journal of Business and Social Science                               Vol. 2 No. 24 [Special Issue – December 2011]  
+11  
+International Standards Orga nization. April 7, 2009. ISO/PRF 3779 Road Vehicles -Vehicle identification 
+number .Available from:  http://iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?csnumber=52200. 
+Last accessed June 19, 2009.  
+McCarthy, W. E. 1982. The REA accounting  model: A generalized framework for accounting systems in a shared 
+data environment. The Accounting Review  57 (3): 554 -578. 
+Partridge, C. 2002. A new foundation for accounting: Steps towards the development of a reference ontology for 
+accounting, Technical  Report 23/02, LADSEB -CNR , Padova, Italy.  
+Scheller, C. V. and P. Hruby. 2009. IS POA (Possession, Ownership, Availability) the Precise Semantics of REA? 
+Proceedings of the VMBO Workshop , February 8 -9, Stockholm, Sweden.  
+SEC. 2009. Interactive Data to Improve Financial Reporting . Securities and Exchange  
+Commission, April 1, 2009. Available from  
+http://www.sec.gov/rules/final/2009/339002a.pdf . Last Accessed May 15, 2009.  
+Ushold, M. and M. Gruninger. 1996. Ontologies: Principles, Methods and Applications,  The Knowledge 
+Engineering Review  11(2): 93 -136. 
+Weber, R. A. 1997. Ontological Foundations of Information Systems . Melbourne: Coopers and Lybrand.  
+——— . 2002. Ontological Issues in Accounting Information Systems. In Research Accounting as an Information 
+Systems Discipline . Arnold, V. and S. Sutton editors. Sarasota, FL: American Accounting Association.  
+Wikipedia. 2009. Schematron. Available from:  http://en.wikipedia.org/wiki/Schematron. Last accessed June 19, 
+2009.  
+XBRL International, Inc. 2005. GL Tutori al. Available from:  http://xbrl.org/us/nmpxbrl.aspx?id=45. Last 
+accessed June 19, 2009.  
+——— . 2006. Improved Business Process through XBRL: A use case for business reporting . 
+http://xbrl.org/Business/Regulators/FFIEC -White -Paper -31Jan06.pdf. Last accessed June 20, 2009.  
+——— . 2007a. GL Taxonomy Framework Technical Architecture . (April 17). Fedor, J. and H. Wallis editors. 
+Available from: http://www.xbrl.org/int/gl/2007 -04-17/GLFramework -REC -2007 -04-17.htm. Last accessed 
+June 19, 2009.  
+——— . 2007b. XBRL Global  Ledger Framework – SRCD Module – Public Working Draft Overview (May 23). 
+Garbellotto G. and E. Cohen Editors. Available from: http://www.xbrl.org/int/gl/2007 -05-23/XBRL -Global -
+Ledger -Framework -SRCD -PWD -2007 -05-23.rtf.  
+——— . 2009a. An Introduction to XBRL. Available from: http://xbrl.org/frontend.aspx?clk=LK&val=20 . Last 
+accessed June 19, 2009.  
+——— . 2009b. Global Ledger Taxonomy -An Introduction. Available from: http://xbrl.org/GLTaxonomy. Last 
+accessed June 19, 2009.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
+ 

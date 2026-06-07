@@ -1,0 +1,25 @@
+[
+  {
+    "@type": "CourtOrder",
+    "@id": "CourtOrder/Oficio_Juzgado_15_Medellin_2026_458",
+    "artifact_name": "Oficio_Juzgado_15_Medellin_2026_458",
+    "documentType": "Oficio de Embargo de Acciones",
+    "documentNumber": "J-15-2026-458",
+    "documentDate": "2026-06-05",
+    "digital_twin_ipfs": "ipfs://bafybeicourtofficeipfslinkdummysocioDsharesembargo12345",
+    "issuing_court": "Juzgado 15 Civil Municipal de Medellin",
+    "engaged_agents": [
+      "GistPerson/Socio_D"
+    ]
+  },
+  {
+    "@type": "ShareEmbargo",
+    "@id": "ShareEmbargo/Embargo_Socio_D_2026",
+    "artifact_name": "Embargo_Socio_D_2026",
+    "source_document": "CourtOrder/Oficio_Juzgado_15_Medellin_2026_458",
+    "affected_agent": "GistPerson/Socio_D",
+    "affected_account": "Account/311505",
+    "embargoed_quantity": 2500.0,
+    "active": true
+  }
+]

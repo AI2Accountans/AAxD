@@ -1,0 +1,183 @@
+[
+  {
+    "@type": "Entity",
+    "@id": "Entity/SOCIEDAD_GENESIS_LTDA",
+    "artifact_name": "SOCIEDAD_GENESIS_LTDA",
+    "nexus": [
+      "SourceDocument/Escritura_Publica_25_2005"
+    ]
+  },
+  {
+    "@type": "SourceDocument",
+    "@id": "SourceDocument/Escritura_Publica_25_2005",
+    "artifact_name": "Escritura_Publica_25_2005",
+    "documentType": "Escritura Publica de Constitucion",
+    "documentNumber": "Notaria 25 - 2005",
+    "documentDate": "2005-06-01",
+    "engaged_agents": [
+      "GistPerson/Socio_A",
+      "GistPerson/Socio_B",
+      "GistPerson/Socio_C",
+      "GistPerson/Socio_D"
+    ]
+  },
+  {
+    "@type": "GistPerson",
+    "@id": "GistPerson/Socio_A",
+    "identifierCode": "Socio_A",
+    "identifierDescription": "Socio Fundador A",
+    "identifierType": "O",
+    "artifact_name": "Socio Fundador A"
+  },
+  {
+    "@type": "GistPerson",
+    "@id": "GistPerson/Socio_B",
+    "identifierCode": "Socio_B",
+    "identifierDescription": "Socio Fundador B",
+    "identifierType": "O",
+    "artifact_name": "Socio Fundador B"
+  },
+  {
+    "@type": "GistPerson",
+    "@id": "GistPerson/Socio_C",
+    "identifierCode": "Socio_C",
+    "identifierDescription": "Socio Fundador C",
+    "identifierType": "O",
+    "artifact_name": "Socio Fundador C"
+  },
+  {
+    "@type": "GistPerson",
+    "@id": "GistPerson/Socio_D",
+    "identifierCode": "Socio_D",
+    "identifierDescription": "Socio Fundador D",
+    "identifierType": "O",
+    "artifact_name": "Socio Fundador D"
+  },
+  {
+    "@type": "Account",
+    "@id": "Account/110505",
+    "accountMainID": "110505",
+    "accountMainDescription": "Caja General / Efectivo",
+    "mainAccountType": "Asset",
+    "artifact_name": "Caja General / Efectivo"
+  },
+  {
+    "@type": "Account",
+    "@id": "Account/311505",
+    "accountMainID": "311505",
+    "accountMainDescription": "Capital Social - Cuotas",
+    "mainAccountType": "Equity",
+    "artifact_name": "Capital Social - Cuotas"
+  },
+  {
+    "@type": "EntryHeader",
+    "@id": "EntryHeader/Header_Genesis_1",
+    "artifact_name": "Asiento de Constitución de la Sociedad",
+    "posting_date": "2005-06-01",
+    "source_document": "SourceDocument/Escritura_Publica_25_2005"
+  },
+  {
+    "@type": "EntryDetail",
+    "@id": "EntryDetail/Line_1",
+    "artifact_name": "Linea Asiento 1 - Debito Account 110505",
+    "header": "EntryHeader/Header_Genesis_1",
+    "lineNumberCounter": 1,
+    "account": "Account/110505",
+    "amount": 10000000.0,
+    "debitCreditCode": "D",
+    "postingDate": "2005-06-01",
+    "resource": "Account/110505"
+  },
+  {
+    "@type": "EntryDetail",
+    "@id": "EntryDetail/Line_2",
+    "artifact_name": "Linea Asiento 2 - Credito Account 311505",
+    "header": "EntryHeader/Header_Genesis_1",
+    "lineNumberCounter": 2,
+    "account": "Account/311505",
+    "amount": 2500000.0,
+    "debitCreditCode": "C",
+    "postingDate": "2005-06-01",
+    "resource": "Account/311505",
+    "agent_identifier": "GistPerson/Socio_A",
+    "agent": "GistPerson/Socio_A",
+    "duality": "EntryDetail/Line_1",
+    "measurable": {
+      "measurableCode": "SP",
+      "measurableID": "Acciones Ordinarias",
+      "measurableDescription": "Cuotas de interes social ordinarias",
+      "measurableQuantity": 2500.0,
+      "measurableUnitOfMeasure": "Cuotas",
+      "measurableCostPerUnit": 1000.0
+    }
+  },
+  {
+    "@type": "EntryDetail",
+    "@id": "EntryDetail/Line_3",
+    "artifact_name": "Linea Asiento 3 - Credito Account 311505",
+    "header": "EntryHeader/Header_Genesis_1",
+    "lineNumberCounter": 3,
+    "account": "Account/311505",
+    "amount": 2500000.0,
+    "debitCreditCode": "C",
+    "postingDate": "2005-06-01",
+    "resource": "Account/311505",
+    "agent_identifier": "GistPerson/Socio_B",
+    "agent": "GistPerson/Socio_B",
+    "duality": "EntryDetail/Line_1",
+    "measurable": {
+      "measurableCode": "SP",
+      "measurableID": "Acciones Ordinarias",
+      "measurableDescription": "Cuotas de interes social ordinarias",
+      "measurableQuantity": 2500.0,
+      "measurableUnitOfMeasure": "Cuotas",
+      "measurableCostPerUnit": 1000.0
+    }
+  },
+  {
+    "@type": "EntryDetail",
+    "@id": "EntryDetail/Line_4",
+    "artifact_name": "Linea Asiento 4 - Credito Account 311505",
+    "header": "EntryHeader/Header_Genesis_1",
+    "lineNumberCounter": 4,
+    "account": "Account/311505",
+    "amount": 2500000.0,
+    "debitCreditCode": "C",
+    "postingDate": "2005-06-01",
+    "resource": "Account/311505",
+    "agent_identifier": "GistPerson/Socio_C",
+    "agent": "GistPerson/Socio_C",
+    "duality": "EntryDetail/Line_1",
+    "measurable": {
+      "measurableCode": "SP",
+      "measurableID": "Acciones Ordinarias",
+      "measurableDescription": "Cuotas de interes social ordinarias",
+      "measurableQuantity": 2500.0,
+      "measurableUnitOfMeasure": "Cuotas",
+      "measurableCostPerUnit": 1000.0
+    }
+  },
+  {
+    "@type": "EntryDetail",
+    "@id": "EntryDetail/Line_5",
+    "artifact_name": "Linea Asiento 5 - Credito Account 311505",
+    "header": "EntryHeader/Header_Genesis_1",
+    "lineNumberCounter": 5,
+    "account": "Account/311505",
+    "amount": 2500000.0,
+    "debitCreditCode": "C",
+    "postingDate": "2005-06-01",
+    "resource": "Account/311505",
+    "agent_identifier": "GistPerson/Socio_D",
+    "agent": "GistPerson/Socio_D",
+    "duality": "EntryDetail/Line_1",
+    "measurable": {
+      "measurableCode": "SP",
+      "measurableID": "Acciones Ordinarias",
+      "measurableDescription": "Cuotas de interes social ordinarias",
+      "measurableQuantity": 2500.0,
+      "measurableUnitOfMeasure": "Cuotas",
+      "measurableCostPerUnit": 1000.0
+    }
+  }
+]

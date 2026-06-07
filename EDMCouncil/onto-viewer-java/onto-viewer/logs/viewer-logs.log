@@ -1,0 +1,78 @@
+2026-04-30 12:03:11,897 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application v0.4.0 using Java 23.0.1 on GSKM with PID 34748 (C:\Users\IPHIX\Documents\Projects\DFRNT\EDMCouncil\onto-viewer-java\onto-viewer\onto-viewer-web-app.war started by IPHIX in C:\Users\IPHIX\Documents\Projects\DFRNT\EDMCouncil\onto-viewer-java\onto-viewer)
+2026-04-30 12:03:11,908 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2026-04-30 12:03:16,809 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2026-04-30 12:03:16,834 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-30 12:03:16,835 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2026-04-30 12:03:16,836 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2026-04-30 12:03:19,900 INFO org.apache.juli.logging.DirectJDKLog [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-04-30 12:03:20,279 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-04-30 12:03:20,281 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8183 ms
+2026-04-30 12:03:21,130 WARN org.edmcouncil.spec.ontoviewer.configloader.configuration.service.YamlFileBasedConfigurationService [main] Config URL is not set. Using default value: `config`
+2026-04-30 12:03:21,141 WARN org.edmcouncil.spec.ontoviewer.configloader.configuration.service.YamlFileBasedConfigurationService [main] Missing config file(s): `[ontology_config.yaml]`. Reading for them default files.
+2026-04-30 12:03:23,551 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-04-30 12:03:23,693 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2026-04-30 12:03:24,336 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2026-04-30 12:03:24,421 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-30 12:03:24,423 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2026-04-30 12:03:24,460 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2026-04-30 12:03:24,566 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2026-04-30 12:03:24,818 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: getEntityByIriUsingGET_1
+2026-04-30 12:03:24,872 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: getUpdateStatusUsingGET_1
+2026-04-30 12:03:24,882 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: handleUsingGET_1
+2026-04-30 12:03:24,885 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: handleUsingGET_2
+2026-04-30 12:03:24,888 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: getAllModulesDataAsJsonUsingGET_1
+2026-04-30 12:03:24,964 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 14.41 seconds (JVM running for 15.565)
+2026-04-30 12:03:25,091 INFO org.edmcouncil.spec.ontoviewer.webapp.boot.UpdaterThread [UpdateThread-0] File system manager created ? : true
+2026-04-30 12:03:25,096 WARN org.edmcouncil.spec.ontoviewer.core.ontology.loader.zip.ViewerZipFilesOperations [UpdateThread-0] use default 'download' directory
+2026-04-30 12:03:25,181 INFO org.edmcouncil.spec.ontoviewer.core.ontology.loader.AutoOntologyLoader [UpdateThread-0] Using the following list of ontology mappings: []
+2026-04-30 12:03:25,183 INFO org.edmcouncil.spec.ontoviewer.core.ontology.loader.AutoOntologyLoader [UpdateThread-0] Found the following sources of ontologies: []
+2026-04-30 12:03:25,225 INFO org.edmcouncil.spec.ontoviewer.core.ontology.loader.AutoOntologyLoader [UpdateThread-0] Ontology loading problems that occurred: []
+2026-04-30 12:03:25,226 INFO org.edmcouncil.spec.ontoviewer.webapp.boot.UpdaterThread [UpdateThread-0] Missing imports: []
+2026-04-30 12:03:25,238 INFO org.edmcouncil.spec.ontoviewer.webapp.search.LuceneSearcher [UpdateThread-0] Starting to populate the Lucene index located on path 'lucene_index'...
+2026-04-30 12:03:25,247 INFO org.edmcouncil.spec.ontoviewer.webapp.search.LuceneSearcher [UpdateThread-0] Search configuration property 'reindexOnStart' is on. Deleting the old index directory.
+2026-04-30 12:03:25,437 INFO org.edmcouncil.spec.ontoviewer.webapp.search.LuceneSearcher [UpdateThread-0] Successfully indexed 0 documents.
+2026-04-30 12:03:25,441 INFO org.edmcouncil.spec.ontoviewer.core.ontology.data.handler.ResourcesPopulate [UpdateThread-0] Start populating ontology mapping of entity IRIs to ontology IRIs...
+2026-04-30 12:03:25,442 INFO org.edmcouncil.spec.ontoviewer.core.ontology.data.handler.ResourcesPopulate [UpdateThread-0] Finished populating mapping entity IRIs to ontology IRIs in 0 seconds.
+2026-04-30 12:03:25,448 INFO org.edmcouncil.spec.ontoviewer.webapp.boot.UpdaterThread [UpdateThread-0] Application has started successfully.
+2026-04-30 12:05:04,538 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-30 12:05:04,539 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2026-04-30 12:05:04,541 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2026-04-30 12:15:00,750 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application v0.4.0 using Java 23.0.1 on GSKM with PID 31520 (C:\Users\IPHIX\Documents\Projects\DFRNT\EDMCouncil\onto-viewer-java\onto-viewer\onto-viewer-web-app.war started by IPHIX in C:\Users\IPHIX\Documents\Projects\DFRNT\EDMCouncil\onto-viewer-java\onto-viewer)
+2026-04-30 12:15:00,753 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2026-04-30 12:15:05,128 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2026-04-30 12:15:05,151 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-30 12:15:05,151 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2026-04-30 12:15:05,152 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.48]
+2026-04-30 12:15:08,242 INFO org.apache.juli.logging.DirectJDKLog [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-04-30 12:15:08,616 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-04-30 12:15:08,618 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7715 ms
+2026-04-30 12:15:09,431 WARN org.edmcouncil.spec.ontoviewer.configloader.configuration.service.YamlFileBasedConfigurationService [main] Config URL is not set. Using default value: `config`
+2026-04-30 12:15:09,444 WARN org.edmcouncil.spec.ontoviewer.configloader.configuration.service.YamlFileBasedConfigurationService [main] Missing config file(s): `[ontology_config.yaml]`. Reading for them default files.
+2026-04-30 12:15:11,934 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-04-30 12:15:12,098 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2026-04-30 12:15:12,816 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2026-04-30 12:15:12,896 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2026-04-30 12:15:12,898 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2026-04-30 12:15:12,952 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2026-04-30 12:15:13,065 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2026-04-30 12:15:13,304 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: getEntityByIriUsingGET_1
+2026-04-30 12:15:13,363 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: getUpdateStatusUsingGET_1
+2026-04-30 12:15:13,374 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: handleUsingGET_1
+2026-04-30 12:15:13,376 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: handleUsingGET_2
+2026-04-30 12:15:13,378 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: getAllModulesDataAsJsonUsingGET_1
+2026-04-30 12:15:13,457 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 13.851 seconds (JVM running for 14.838)
+2026-04-30 12:15:13,560 INFO org.edmcouncil.spec.ontoviewer.webapp.boot.UpdaterThread [UpdateThread-0] File system manager created ? : true
+2026-04-30 12:15:13,565 WARN org.edmcouncil.spec.ontoviewer.core.ontology.loader.zip.ViewerZipFilesOperations [UpdateThread-0] use default 'download' directory
+2026-04-30 12:15:13,699 INFO org.edmcouncil.spec.ontoviewer.core.ontology.loader.AutoOntologyLoader [UpdateThread-0] Using the following list of ontology mappings: []
+2026-04-30 12:15:13,702 INFO org.edmcouncil.spec.ontoviewer.core.ontology.loader.AutoOntologyLoader [UpdateThread-0] Found the following sources of ontologies: [OntologySource[location='ontologies\Contracts.rdf', originalLocation='ontologies', sourceType=FILE, ontologyIri=null]]
+2026-04-30 12:15:23,759 INFO org.edmcouncil.spec.ontoviewer.core.ontology.loader.AutoOntologyLoader [UpdateThread-0] Ontology loading problems that occurred: []
+2026-04-30 12:15:23,761 INFO org.edmcouncil.spec.ontoviewer.webapp.boot.UpdaterThread [UpdateThread-0] Missing imports: []
+2026-04-30 12:15:23,798 INFO org.edmcouncil.spec.ontoviewer.webapp.search.LuceneSearcher [UpdateThread-0] Starting to populate the Lucene index located on path 'lucene_index'...
+2026-04-30 12:15:23,815 INFO org.edmcouncil.spec.ontoviewer.webapp.search.LuceneSearcher [UpdateThread-0] Search configuration property 'reindexOnStart' is on. Deleting the old index directory.
+2026-04-30 12:15:24,913 INFO org.edmcouncil.spec.ontoviewer.webapp.search.LuceneSearcher [UpdateThread-0] Successfully indexed 798 documents.
+2026-04-30 12:15:24,917 INFO org.edmcouncil.spec.ontoviewer.core.ontology.data.handler.ResourcesPopulate [UpdateThread-0] Start populating ontology mapping of entity IRIs to ontology IRIs...
+2026-04-30 12:15:24,922 INFO org.edmcouncil.spec.ontoviewer.core.ontology.data.handler.ResourcesPopulate [UpdateThread-0] Finished populating mapping entity IRIs to ontology IRIs in 0 seconds.
+2026-04-30 12:15:24,930 INFO org.edmcouncil.spec.ontoviewer.webapp.boot.UpdaterThread [UpdateThread-0] Application has started successfully.
+2026-04-30 12:17:06,033 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-30 12:17:06,033 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2026-04-30 12:17:06,036 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms

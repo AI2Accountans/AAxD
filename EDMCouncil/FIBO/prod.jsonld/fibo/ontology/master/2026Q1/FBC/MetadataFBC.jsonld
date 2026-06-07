@@ -1,0 +1,137 @@
+[ {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/MetadataFBC/",
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FBC/FinancialInstruments/MetadataFBCFinancialInstruments/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FBC/ProductsAndServices/MetadataFBCProductsAndServices/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FBC/FunctionalEntities/MetadataFBCFunctionalEntities/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FBC/DebtAndEquities/MetadataFBCDebtAndEquities/"
+  }, {
+    "@id" : "https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FND/Utilities/AnnotationVocabulary/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2026-04-15T18:00:00",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright" : [ {
+    "@value" : "Copyright (c) 2015-2026 Object Management Group"
+  }, {
+    "@value" : "Copyright (c) 2015-2026 EDM Association dba EDM Council, Inc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metadata about the FIBO Financial Business and Commerce (FBC) Domain"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/master/2026Q1/FBC/MetadataFBC/"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2015-08-13T18:00:00",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "This ontology provides metadata about the FIBO Financial Business and Commerce (FBC) Domain, which covers business concepts that are common to common to a number of finance domain areas, such as loans, securities, and corporate actions, including products and services, financial intermediaries, registrars and regulators, and financial instruments and products."
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "Copyright (c) 2018-2026 EDM Association dba EDM Council, Inc.\nCopyright (c) 2018-2026 Object Management Group\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\t\t\nSee https://opensource.org/licenses/MIT."
+  } ]
+}, {
+  "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/MetadataFBC/FBCDomain",
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "John F. Gemski"
+  }, {
+    "@value" : "Credit Suisse"
+  }, {
+    "@value" : "Bloomberg LP"
+  }, {
+    "@value" : "Intuitive Technology Partners, Inc."
+  }, {
+    "@value" : "Statistics Canada"
+  }, {
+    "@value" : "Thematix Partners, LLC"
+  }, {
+    "@value" : "Citigroup"
+  }, {
+    "@value" : "Pinnacle Bank (Morgan Hill, California)"
+  }, {
+    "@value" : "Office of Financial Research (US Dept of the Treasury)"
+  }, {
+    "@value" : "Quarule"
+  }, {
+    "@value" : "Deutsche Bank"
+  }, {
+    "@value" : "agnos.ai UK Ltd."
+  }, {
+    "@value" : "Federated Knowledge, LLC"
+  }, {
+    "@value" : "Nordea Bank AB"
+  }, {
+    "@value" : "Dassault Systemes / No Magic"
+  }, {
+    "@value" : "Exprentis"
+  }, {
+    "@value" : "State Street Bank and Trust"
+  }, {
+    "@value" : "Adaptive Analytics, Inc."
+  }, {
+    "@value" : "Tahoe Blue Ltd"
+  }, {
+    "@value" : "Wells Fargo"
+  }, {
+    "@value" : "Capacity Post, Inc."
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2026-04-15T18:00:00",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "FIBO FBC Domain"
+  }, {
+    "@value" : "EDMC Financial Industry Business Ontology (FIBO) Financial Business and Commerce (FBC) Domain"
+  } ],
+  "http://purl.org/dc/terms/hasPart" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/MetadataFBCFunctionalEntities/FunctionalEntitiesModule"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/MetadataFBCFinancialInstruments/FinancialInstrumentsModule"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/MetadataFBCProductsAndServices/FBCProductsAndServicesModule"
+  }, {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/MetadataFBCDebtAndEquities/DebtAndEquitiesModule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "financial business and commerce domain"
+  } ],
+  "https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright" : [ {
+    "@value" : "Copyright (c) 2015-2026 EDM Association dba EDM Council, Inc."
+  }, {
+    "@value" : "Copyright (c) 2015-2026 Object Management Group"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Financial Business and Commerce (FBC)"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2015-08-13T18:00:00",
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Module" ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "Copyright (c) 2018-2026 EDM Association dba EDM Council, Inc.\nCopyright (c) 2018-2026 Object Management Group\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\t\t\nSee https://opensource.org/licenses/MIT."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/"
+  } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "The financial business and commerce domain covers business concepts that are common to common to a number of finance areas, such as loans, securities, and corporate actions, including products and services, financial intermediaries, registrars and regulators, and financial instruments and products."
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "https://wiki.edmcouncil.org/pages/viewpage.action?pageId=786677",
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://spec.edmcouncil.org/fibo/ontology/FBC/MetadataFBC/"
+  } ]
+} ]

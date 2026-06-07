@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "id": "@id",
+    "type": "@type",
+    
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    
+    "xbrlgl": "https://schema.dfrnt.com/ontology/xbrlgl/cor#",
+    "srcd": "https://schema.dfrnt.com/ontology/xbrlgl/srcd#",
+    
+    "rea": "https://schema.dfrnt.com/ontology/rea#",
+    "zachman": "https://schema.dfrnt.com/ontology/zachman#",
+    
+    "AccountingEntries": "xbrlgl:accountingEntries",
+    "DocumentInfo": "xbrlgl:documentInfo",
+    "EntryHeader": "xbrlgl:entryHeader",
+    "EntryDetail": "xbrlgl:entryDetail",
+    
+    "SummaryReportingData": "srcd:summaryReportingData",
+    
+    "documentInfo": {
+      "@id": "xbrlgl:hasDocumentInfo",
+      "@type": "@id"
+    },
+    "entryHeader": {
+      "@id": "xbrlgl:hasEntryHeader",
+      "@type": "@id"
+    },
+    "entryDetail": {
+      "@id": "xbrlgl:hasEntryDetail",
+      "@type": "@id"
+    },
+    
+    "EconomicEvent": "rea:EconomicEvent",
+    "Resource": "rea:Resource",
+    "Agent": "rea:Agent",
+    
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    
+    "linksToSummary": {
+      "@id": "srcd:linksToSummary",
+      "@type": "@id",
+      "@context": {
+        "summaryConcept": "srcd:summaryConcept",
+        "contextRef": "srcd:contextRef"
+      }
+    },
+    
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    }
+  }
+}
