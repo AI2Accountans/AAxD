@@ -19,3 +19,8 @@ final.vtt
 subs.json
 fetch_vimeo_subs.py
 scratch_extract_blogs.py
+Momento0/Mapping/
+*.tmp
+~*
+
+

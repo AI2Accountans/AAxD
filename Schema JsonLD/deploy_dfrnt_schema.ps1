@@ -6,14 +6,17 @@ param(
     [string]$DataProductPath, # Formato: username/data_product_name (ej: iphix/atlas_empresarial)
 
     [Parameter(Mandatory=$false)]
-    [string]$SchemaFile = ".\ontology_zachman_sunder_bernerslee.json"
+    [string]$SchemaFile = ".\merged_schema_zachman_dfrnt.json"
 )
 
-# Endpoint de DFRNT para TerminusDB
-$Endpoint = "https://studio.dfrnt.com/api/terminusdb/$DataProductPath/api/document/$DataProductPath"
+# Endpoint de DFRNT para TerminusDB (para esquemas/datos alojados)
+$PathParts = $DataProductPath -split '/'
+$Team = $PathParts[0]
+$Db = $PathParts[1]
+$Endpoint = "https://studio.dfrnt.com/api/hosted/${Team}/api/document/${Team}/${Db}"
 
 $Headers = @{
-    "Authorization" = "Bearer $DfrntToken"
+    "Authorization" = "Token $DfrntToken"
     "Content-Type" = "application/json"
 }
 
@@ -30,7 +33,8 @@ $JsonContent = Get-Content -Path $SchemaFile -Raw
 
 try {
     # Hacemos un POST/PUT para actualizar el esquema (graph_type=schema)
-    $Response = Invoke-RestMethod -Uri "$Endpoint?graph_type=schema&author=agent&message=Actualizando%20esquema%20Sunder%20Zachman" `
+    $Uri = $Endpoint + "?graph_type=schema&author=agent&message=Actualizando%20esquema%20Sunder%20Zachman"
+    $Response = Invoke-RestMethod -Uri $Uri `
                                   -Method Post `
                                   -Headers $Headers `
                                   -Body $JsonContent

@@ -1,0 +1,648 @@
+[
+  {
+    "@base": "terminusdb:///data/",
+    "@schema": "terminusdb:///schema#",
+    "@type": "@context",
+    "dfrnt": "https://dfrnt.com/ns/2023-11/schema#"
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Agent",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Entity"
+    ],
+    "@abstract": []
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Blogpost",
+    "@inherits": [
+      "MarkdownWebTemplate"
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "CanvasSaved",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "DFRNT.MD"
+    ],
+    "@documentation": [
+      {
+        "@properties": {
+          "filteredEdges": "Edges that are filtered from the canvas",
+          "includedRecords": "Records displayed on the canvas",
+          "label": "Saved canvas name"
+        },
+        "@comment": ""
+      }
+    ],
+    "ungroupedTypes": {
+      "@class": "xsd:string",
+      "@type": "Set"
+    },
+    "label": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    },
+    "includedRecords": {
+      "@class": "Entity",
+      "@type": "Set"
+    },
+    "filteredEdges": {
+      "@class": "FilteredCanvasEdgeSpecification",
+      "@type": "Set"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Category",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Entity"
+    ],
+    "@abstract": []
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "DFRNT.Beta",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Metadata"
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "DFRNT.DS",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.1"
+      }
+    },
+    "@inherits": [
+      "DataStructures"
+    ],
+    "@subdocument": []
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "DFRNT.MD",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Metadata"
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "DataStructures",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@subdocument": []
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Entity",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@documentation": [
+      {
+        "@properties": {
+          "label": "Record label"
+        },
+        "@comment": ""
+      }
+    ],
+    "label": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "FilteredCanvasEdgeSpecification",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "propertyNames": "Selected property name(s)",
+          "selectedRecords": "Records with hidden specific property edges",
+          "selectedTypes": "Type names with hidden specific property edges"
+        },
+        "@comment": "A trait attached to canvases to enable edge hiding."
+      }
+    ],
+    "selectedTypes": {
+      "@class": "xsd:string",
+      "@type": "Set"
+    },
+    "selectedRecords": {
+      "@class": "Entity",
+      "@type": "Set"
+    },
+    "propertyNames": {
+      "@class": "xsd:string",
+      "@type": "Set"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Frontmatter",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.1"
+      }
+    },
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "author": "Author",
+          "excerpt": "Excerpt, a short page summary (<160chars)",
+          "imageList": "List of images for the post",
+          "og": "Open Graph Metadata",
+          "publishDate": "Publish date (YYYY-MM-DD)",
+          "slug": "Slug (no spaces)",
+          "title": "Title",
+          "updateDate": "Last updated date (YYYY-MM-DD)"
+        },
+        "@comment": ""
+      }
+    ],
+    "updateDate": {
+      "@class": "xsd:date",
+      "@type": "Optional"
+    },
+    "title": "xsd:string",
+    "slug": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    },
+    "publishDate": {
+      "@class": "xsd:date",
+      "@type": "Optional"
+    },
+    "og": {
+      "@class": "OpenGraphMetadata",
+      "@type": "Optional"
+    },
+    "imageList": {
+      "@class": "xsd:anyURI",
+      "@type": "List"
+    },
+    "excerpt": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    },
+    "category": {
+      "@class": "WebCategory",
+      "@type": "Optional"
+    },
+    "author": {
+      "@class": "Person",
+      "@type": "Optional"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "KnowledgeCanvas",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.1"
+      }
+    },
+    "@inherits": [
+      "DFRNT.Beta"
+    ],
+    "@documentation": [
+      {
+        "@properties": {
+          "includedRecords": "Records displayed on the canvas",
+          "label": "Knowledge canvas name",
+          "pan": "Panning location that goes together with the zoom",
+          "zoomLevel": "Last saved zoom level"
+        },
+        "@comment": ""
+      }
+    ],
+    "zoomLevel": {
+      "@class": "xsd:decimal",
+      "@type": "Optional"
+    },
+    "pan": {
+      "@class": "zCoordinateBottomLeftOrigoRelative",
+      "@type": "Optional"
+    },
+    "label": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    },
+    "includedRecords": {
+      "@class": "zNodeSocket",
+      "@type": "Set"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "LabelledWebLink",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "url": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    },
+    "label": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Markdown",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "markdown": "Markdown document"
+        },
+        "@comment": ""
+      }
+    ],
+    "markdown": {
+      "@class": "xsd:string",
+      "@type": "Optional"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "MarkdownWebPage",
+    "@inherits": [
+      "MarkdownWebTemplate"
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "MarkdownWebTemplate",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.1"
+      }
+    },
+    "@inherits": [
+      "Statement"
+    ],
+    "@abstract": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "relatedPages": "List of related pages",
+          "frontmatter": "Page metadata (frontmatter)"
+        },
+        "@comment": ""
+      }
+    ],
+    "relatedPages": {
+      "@class": "MarkdownWebTemplate",
+      "@type": "List"
+    },
+    "frontmatter": "Frontmatter"
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Metadata",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Note",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Statement"
+    ],
+    "@documentation": [
+      {
+        "@properties": {
+          "about": "Linked record(s):"
+        },
+        "@comment": ""
+      }
+    ],
+    "about": {
+      "@class": "Entity",
+      "@type": "Set"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "OpenGraphMetadata",
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "image": "Image URL",
+          "title": "Title",
+          "type": "Resource Type",
+          "url": "Canonical URL of this resource"
+        },
+        "@comment": ""
+      }
+    ],
+    "url": "xsd:string",
+    "type": "OpenGraphType",
+    "title": "xsd:string",
+    "image": "xsd:string"
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Person",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Agent"
+    ],
+    "@documentation": [
+      {
+        "@properties": {
+          "href": "Person's homepage",
+          "imageUrl": "Url to image of person"
+        },
+        "@comment": ""
+      }
+    ],
+    "manager": {
+      "@class": "Person",
+      "@type": "Optional"
+    },
+    "imageUrl": {
+      "@class": "xsd:anyURI",
+      "@type": "Optional"
+    },
+    "href": {
+      "@class": "xsd:anyURI",
+      "@type": "Optional"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Statement",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Entity"
+    ],
+    "statement": {
+      "@class": "Markdown",
+      "@type": "Optional"
+    }
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Thing",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@documentation": [
+      {
+        "@comment": "Thing is the default root of the Semantic Knowledge Graph. If using a different root, such as for Entity, add or modify the dfrnt:NodeReferences accordingly to allow references to other top-level types."
+      }
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "WebCategory",
+    "@metadata": {
+      "DFRNT": {
+        "version": "1.0.0"
+      }
+    },
+    "@inherits": [
+      "Entity"
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "zCoordinateBottomLeftOrigoRelative",
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "x": "x (decimal 0..1)",
+          "y": "y (decimal 0..1)"
+        },
+        "@comment": "This kind of coordinate is relative to its parent canvas dimensions and aspect ratio, and reference points are intended to align to a new canvas shape, without cropping or canvas overflow. Any points outside of 0..1 (decimal) will not be shown on the canvas."
+      }
+    ],
+    "y": "xsd:double",
+    "x": "xsd:double"
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "zNodeSocket",
+    "@inherits": [
+      "DFRNT.DS"
+    ],
+    "@subdocument": [],
+    "@documentation": [
+      {
+        "@properties": {
+          "canvasCoordinate": "coordinate relative to a bottom-left origo of the canvas",
+          "referencedEntityRecord": "The referenced record (that implements Entity)"
+        },
+        "@comment": ""
+      }
+    ],
+    "referencedEntityRecord": {
+      "@class": "Entity",
+      "@type": "Optional"
+    },
+    "canvasCoordinate": "zCoordinateBottomLeftOrigoRelative"
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Agreement",
+    "@documentation": [
+      {
+        "@label": "Acuerdo Semántico (Agreement)",
+        "@comment": "Acuerdo formal o informal entre partes, alineado conceptualmente con FIBO Agreements (https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Agreement)"
+      }
+    ]
+  },
+  {
+    "@type": "Class",
+    "@key": {
+      "@type": "Random"
+    },
+    "@id": "Contract",
+    "@inherits": [
+      "Agreement"
+    ],
+    "@documentation": [
+      {
+        "@label": "Contrato Semántico (Contract)",
+        "@comment": "Contrato formal vinculante que gobierna hechos económicos, alineado con FIBO Contracts (https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract)"
+      }
+    ]
+  },
+  {
+    "@type": "Enum",
+    "@id": "OpenGraphType",
+    "@value": [
+      "website",
+      "article",
+      "book",
+      "profile"
+    ]
+  }
+]

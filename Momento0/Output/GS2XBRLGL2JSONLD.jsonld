@@ -1,8 +1,11 @@
 [
   {
-    "@type": "Entity",
-    "@id": "Entity/SOCIEDAD_GENESIS_LTDA",
+    "@type": "FIBO_StockCorporation",
+    "@id": "FIBO_StockCorporation/SOCIEDAD_GENESIS_LTDA",
     "artifact_name": "SOCIEDAD_GENESIS_LTDA",
+    "identifierCode": "SOCIEDAD_GENESIS_LTDA",
+    "identifierDescription": "Sociedad Génesis Ltda.",
+    "identifierType": "NIT",
     "nexus": [
       "SourceDocument/Escritura_Publica_25_2005"
     ]
