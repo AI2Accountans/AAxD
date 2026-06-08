@@ -11,6 +11,7 @@ ekg-catalog/
 gl/
 
 # Subtitle and video files
+*.mp4
 vimeo.json
 vimeo_info.json
 vimeo.vtt
