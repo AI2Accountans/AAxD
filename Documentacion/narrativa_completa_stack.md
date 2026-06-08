@@ -95,7 +95,7 @@ El **Seattle Method** es el marco definitivo para la consistencia y verificació
 *   **La Sinergia:** **SHACL** garantiza que el grafo contable interno sea estructural y matemáticamente perfecto "por diseño" a nivel transaccional. Esto alimenta de forma ideal al **Seattle Method**, el cual aplica sus *guardrails* lógicos, dimensiones y estructuras de slots en la fase de exportación final en **xBRL-CSV/xBRL-JSON (OIM)**, garantizando que el *Audit Bundle* externo sea 100% consistente y libre de errores para los reguladores.
 
 ### 2.4. Consultas al Grafo y Salidas al Mundo Real (Conectando el Gemelo Digital)
-Para que el Gemelo Digital Semántico tenga validez jurídica y operativa plena, no puede comportarse como un silo cerrado o una "caja negra". Debe comunicarse de forma bidireccional y fluida con el entorno legal, societario y de reporte en el mundo real:
+Para que el Gemelo Digital Semántico tenga validez jurídica y operativa plena, no puede comportarse como un silo cerrado o una "caja negra". Debe comunicarse de forma fluida y directa con el entorno legal, societario y de reporte en el mundo real:
 *   **Lenguajes de Consulta del Grafo (WOQL y GraphQL):**
     *   **WOQL (Web Object Query Language):** Es el lenguaje nativo, declarativo y altamente expresivo de TerminusDB. Permite realizar consultas de lógica relacional compleja y travesías profundas de caminos sobre el grafo, ideal para reconstruir la procedencia del dato (`PROV-O`), rastrear el ciclo de vida de contratos y consolidar transacciones atómicas.
     *   **GraphQL:** Expuesto como interfaz API estándar de la industria, facilitando el desarrollo rápido de componentes visuales en **DFRNT**, tableros de control interactivos y la conexión con sistemas de software empresariales externos.

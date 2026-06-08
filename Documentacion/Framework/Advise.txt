@@ -1,0 +1,15 @@
+Are you going to make this open source?  I would assume so.  If so, I would suggest providing a document to explain this framework, like the document you sent me.  Also, I think you might want to provide some sort of license to give people “comfort” that it is OK to use the framework.
+
+You could model this after what the Zachman framework does:
+
+https://zachman-feac.com/zachman/about-the-zachman-framework/
+
+And/or the Kimball Method is another possible model:
+
+https://digitalfinancialreporting.blogspot.com/2026/03/kimball-method.html
+
+I could see that it might be beneficial for DFRNT to support your framework. Good for DFRNT, good for you and your framework.
+
+It would also be good to create a README.md file that provides a brief explanation and possibly references that document that explains things more.
+
+Lots of possibilities.

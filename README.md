@@ -1,59 +1,58 @@
-# Framework de Contabilidad y Auditoría por Diseño (Accounting & Audit by Design)
+# Framework de Contabilidad y Auditoría por Diseño (Accounting & Audit by Design - A&AD)
 
-Este repositorio contiene la arquitectura conceptual y el esquema ontológico para el framework de **Contabilidad y Auditoría por Diseño**. Nuestro enfoque busca transformar la contabilidad corporativa tradicional basada en registros relacionales planos en un modelo semántico descentralizado, inmutable y de alta fidelidad, alineando múltiples estándares internacionales.
-
----
-
-## 1. El Enfoque Conceptual
-
-La contabilidad moderna no debe ser una reconstrucción posterior a los hechos (*after-the-fact*), sino un proceso de **aseguramiento preventivo e inmediato en la fuente**.
-
-Vinculamos cinco niveles conceptuales y estándares de industria dentro de un **Enterprise Reference Atlas (Stack "Momento 0")**:
-1. **ISO/IEC 21838-2 (BFO - Basic Formal Ontology):** La raíz ontológica formal que define las entidades continuas (`BFO_Continuant` como agentes, recursos y acuerdos) y las entidades concurrentes (`BFO_Occurrent` como procesos y eventos contables).
-2. **REA (Resource-Event-Agent):** Para modelar la semántica conceptual de las operaciones del negocio, superando la ceguera dimensional de la partida doble relacional.
-3. **Semantic Arts Gist (14.1.0):** La ontología de alto nivel que sirve de puente conceptual. Redefine la cuenta contable (`gist:Account`) no como un simple código numérico, sino como un *acuerdo de negocio con saldo* (alineado con la visión de Shyam Sunder).
-4. **FIBO (Financial Industry Business Ontology):** Introduce clases financieras avanzadas (`FIBO_IncorporationAgreement`, `FIBO_StockCorporation`, `FIBO_Shareholder`) para modelar con precisión los agentes y derechos de propiedad en el Momento Cero del negocio.
-5. **ACTUS (Unified Financial Standards):** Modelado de contratos financieros algorítmicos (`ACTUS_Contract`) que permite proyectar flujos de caja y compromisos contractuales de manera determinista.
+Este repositorio contiene la especificación, arquitectura conceptual y el esquema ontológico para el framework de **Contabilidad y Auditoría por Diseño (A&AD)**. Nuestro enfoque busca transformar la contabilidad corporativa tradicional basada en registros relacionales planos en un modelo semántico descentralizado, inmutable y de alta fidelidad, alineando múltiples estándares internacionales en un Grafo de Conocimiento de negocio.
 
 ---
 
-## 2. Automatización desde XBRL GL (Global Ledger)
+## 1. El Enfoque Conceptual (A&AD Matrix)
 
-Para llevar la teoría a la práctica en tiempo de ejecución, el framework utiliza **XBRL GL (Global Ledger)** como el estándar universal de intercambio para capturar los diarios contables y transaccionales directamente desde los sistemas de información fuente.
+El framework A&AD organiza la completitud de la empresa mediante una matriz conceptual inspirada en la **Estructura del Zachman Framework**. Esta matriz cruza las dimensiones de negocio (**Aspectos**) con las capas tecnológicas de la Web Semántica (**Capas TBL**):
 
-Para comprender a fondo cómo funciona la recopilación de datos y la automatización mediante XBRL GL, recomendamos la lectura de los siguientes recursos:
-* **[Automating XBRL Data Collection and Processing (Altova Blog)](https://www.altova.com/blog/2012/05/new-case-study-automating-xbrl-data-collection-and-processing):** Un análisis detallado sobre cómo se automatizan los flujos de trabajo de auditoría e ingesta de datos a través de motores de mapeo y traducción XML.
-* **[Automating XBRL Data (MACPA Case Study)](https://www.altova.com/documents/macpa_casestudy.pdf):** Un caso de estudio real realizado en conjunto con la Asociación de CPAs de Maryland (MACPA), ilustrando la consolidación y el flujo continuo de datos contables en firmas de auditoría usando XBRL GL.
+| Capa / Aspecto | Why (Motivación) | How (Proceso) | What (Dato) | Who (Agente) | Where (Red) | When (Tiempo) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. Trust & UI** | Auditoría y Confianza | Workflows de Reporte | Inmutabilidad (Blockchain) | Socios y Firmas | Red de Distribución | Períodos Fiscales |
+| **2. Ontology (OWL)** | Reglas Ontológicas | MapForce Transforms | Catálogos (XBRL GL/GRI) | Competencias (1edtech) | Nodos Servidores | Secuencias de Logs |
+| **3. RDF (Graph)** | Integridad SHACL | Mapeo ETL JSON-LD | Modelos de Grafo | Identidades de Agentes | APIs GraphQL/WOQL | Enlaces Temporales |
+| **4. XML & Namespaces** | Esquemas XSD | Ingestores Locales | Documentos UBL (Invoices) | Clientes de Nodos | Rutas de Almacenamiento | Fechas de Emisión |
+| **5. URI / IRI** | Contexto e Idioma | Lógicas de Línea | Identificadores de Conceptos | Certificados y Badges | Direcciones IP | Marcas de Epoch |
+| **6. Linked Data Assets** | Retorno Económico | Contenedores en Ejecución | Instancias en DDBB | Sesiones Activas | Tráfico de Red | Logs Operacionales |
 
----
-
-## 3. Arquitectura del Grafo y Gobernanza Semántica
-
-* **Gemelo Digital y TerminusDB/DFRNT:** Los datos transaccionales se ingestan en forma de grafos semánticos **JSON-LD**. TerminusDB actúa como la base de datos de grafos maestra, permitiendo consultas rápidas (GraphQL/WOQL) y control de versiones de datos con ramificación (tipo Git).
-* **Validación en Tiempo Real (SHACL):** Las reglas de control interno y partida doble se codifican como restricciones **SHACL (Shapes Constraint Language)**. El motor opera bajo la asunción de mundo cerrado, rechazando de manera automática cualquier transacción sin linaje de datos (`prov:wasDerivedFrom`) o descuadrada.
-* **Almacenamiento Descentralizado (IPFS):** Los soportes documentales originales (XMLs de facturación electrónica, PDFs de escrituras de constitución) se almacenan en un **Private IPFS Swarm** seguro, vinculando sus identificadores inmutables (CIDs) directamente a las entidades del grafo.
-
----
-
-## 4. Protección de Propiedad Intelectual
-
-Para salvaguardar los derechos comerciales y la propiedad intelectual del framework:
-* Este repositorio público aloja las **definiciones ontológicas del esquema conceptual y de los datos de salida demostrativos**.
-* Los componentes mecánicos y la lógica interna de traducción (scripts ETL de traducción de QNames XML, archivos de mapeo `.mfd` de Altova MapForce, y flujos de automatización de compilación) son **estrictamente confidenciales y están excluidos del control de versiones**.
+*Para un desglose interactivo de esta matriz, visita nuestro [Enterprise Reference Atlas Visual](https://ai2accountans.github.io/Zachman_Framework_Model_Momento0/).*
 
 ---
 
-## 5. Agradecimientos
+## 2. Evolución del Método Kimball: Del Star Schema al Grafo Semántico
 
-Agradecemos las contribuciones intelectuales y la inspiración de:
-* **Charles Hoffman:** Por su liderazgo y trabajo fundacional como el "padre de XBRL", abriendo el camino para la estandarización y digitalización de la información financiera a nivel global.
-* **Timothy Thompson:** Por sus investigaciones y aportes en el ámbito de grafos de conocimiento, tecnologías semánticas web y operaciones de metadatos (JSON-LD).
-* **Consorcio XBRL Internacional (xbrl.org):** Por crear, mantener y promover el estándar global XBRL y la especificación XBRL GL (Global Ledger), cimientos fundamentales para la interoperabilidad y automatización de los datos financieros y contables a nivel mundial.
+Tradicionalmente, el **Método Kimball** (modelado dimensional con tablas de Hechos y Dimensiones) ha sido el estándar dorado para la estructuración analítica de datos en Business Intelligence. Sin embargo, en la era de la auditoría continua y la automatización por Inteligencia Artificial, el enfoque tradicional presenta límites severos:
+*   **Validación Posterior:** Las validaciones de calidad de datos en Kimball se realizan *a posteriori* en procesos ETL, permitiendo que datos inconsistentes entren al almacén transaccional.
+*   **Pérdida de Linaje:** Se pierde la relación directa de procedencia entre los hechos resumidos y el documento legal de origen.
 
+**A&AD evoluciona el enfoque de Kimball mediante las siguientes innovaciones:**
+1.  **Validación en el Origen (SHACL Guardrails):** En lugar de auditorías retrospectivas, las reglas de negocio y consistencia (como la partida doble o de atribución de contratos) se codifican mediante **SHACL (Shapes Constraint Language)** en el motor de base de datos. Si una transacción no cuadra o carece de linaje, el comando de escritura es rechazado de inmediato.
+2.  **Grafo de Procedencia Criptográfica (PROV-O + Blockchain):** Cada hecho financiero en el grafo (`gl-cor:entryDetail`) está enlazado inmutablemente con su documento físico originador (como la factura XML UBL) mediante la propiedad `prov:wasDerivedFrom`. Las transacciones críticas del negocio (como los aportes de socios en el Momento Cero) se anclan a Blockchain (Algorand) para asegurar verdad jurídica indiscutible.
+3.  **Flexibilidad Semántica Multiestándar:** A diferencia de las dimensiones rígidas de un Star Schema, el grafo de A&AD puede mapear e integrar de forma nativa múltiples ontologías internacionales (ISO 21838 BFO, REA, Gist, FIBO, y ACTUS) en un único modelo de datos sin necesidad de rediseñar tablas físicas.
 
 ---
 
-## 6. Licencia
+## 3. Prueba de Concepto (PoC): El "Momento 0" en DFRNT
 
-Este proyecto está bajo los términos de la licencia especificada en el archivo `LICENSE` de este repositorio.
+La viabilidad práctica de esta arquitectura se demuestra en la prueba de concepto **"Momento 0"** (el estado génesis societario y financiero de la firma):
+*   **Ingesta Flexible:** Documentos de facturación y escrituras en XML UBL son transformados mediante **Altova MapForce** a formato **JSON-LD** libre de dependencias de formato (resiliencia ante cambios de jurisdicción).
+*   **Grafo Activo (DFRNT / TerminusDB):** Los datos se inyectan en TerminusDB, estructurados bajo el esquema unificado `ontology_zachman_sunder_bernerslee.json`.
+*   **Downstream Export ("Cuerpo de Cumplimiento Pasivo"):** El grafo actúa como la única fuente de verdad (SSOT). Desde allí, mediante consultas WOQL/GraphQL, el sistema aplana el grafo para exportar y sincronizar diarios tradicionales con ERPs legados o sistemas fiscales. El ERP tradicional opera únicamente como un repositorio pasivo de cumplimiento, protegiendo la pureza del grafo operativo.
 
+---
+
+## 4. Estructura del Repositorio
+
+*   `/Schema JsonLD`: Contiene la definición ontológica consolidada del framework ([ontology_zachman_sunder_bernerslee.json](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Schema%20JsonLD/ontology_zachman_sunder_bernerslee.json)).
+*   `/Momento0`: Contiene las instancias de datos demostrativas en formato JSON-LD que representan la constitución de la firma y sus asientos iniciales.
+*   `/Documentacion`: Documentos conceptuales y técnicos detallados del framework.
+    *   [Especificación Completa de A&AD](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Framework/accounting_audit_by_design_specification.md) (Nueva guía técnica de implementación).
+    *   [Semantic Data Pipeline and Ingestion Architecture](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/dfrnt_semantic_accounting_architecture.md).
+
+---
+
+## 5. Licencia y Confort Legal
+
+Este framework es de código abierto y de libre adopción industrial. Todo el material ontológico, esquemas y conceptos contenidos en este repositorio se licencian bajo los términos de la **Licencia Apache 2.0** (ver el archivo `LICENSE` para los términos de uso y distribución). Esta licencia provee la confianza jurídica y el confort necesarios para que corporaciones y desarrolladores incorporen A&AD en sus infraestructuras empresariales comerciales sin regalías.

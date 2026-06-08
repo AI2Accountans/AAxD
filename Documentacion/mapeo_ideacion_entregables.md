@@ -26,7 +26,7 @@ Este documento actúa como el puente de diseño ontológico y estratégico que c
 
 ### Episodio 2: Traceability in the Semantic Graph
 *   **De la Ideación:** El desbloqueo físico del modelo conceptual **REA (Recurso, Evento, Agente)** mediante grafos y su alineación con el **Layer Cake del W3C**.
-*   **Enfoque del Entregable:** Demostrar cómo REA deja de ser una teoría académica para convertirse en la estructura física del grafo empresarial. Al usar JSON-LD, cada transacción financiera mantiene un hilo conductor inquebrantable hacia su evento económico de origen, garantizando una **Trazabilidad Bidireccional** que permite auditar el contexto completo de cualquier hecho financiero.
+*   **Enfoque del Entregable:** Demostrar cómo REA deja de ser una teoría académica para convertirse en la estructura física del grafo empresarial. Al usar JSON-LD, cada transacción financiera mantiene un hilo conductor inquebrantable hacia su evento económico de origen, garantizando una **Trazabilidad Completa** que permite auditar el contexto completo de cualquier hecho financiero.
 
 ### Episodio 3: Provenance: The Ultimate Legal Anchor
 *   **De la Ideación:** La integración de la capa **Blockchain** para la inmutabilidad de documentos que requieren verdad absoluta permanente (Actas de Asamblea General, Junta Directiva, Registro de Socios) y el uso de **PROV-O** (W3C Provenance Ontology).
