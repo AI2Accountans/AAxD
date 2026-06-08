@@ -48,6 +48,8 @@ Para salvaguardar los derechos comerciales y la propiedad intelectual del framew
 Agradecemos las contribuciones intelectuales y la inspiración de:
 * **Charles Hoffman:** Por su liderazgo y trabajo fundacional como el "padre de XBRL", abriendo el camino para la estandarización y digitalización de la información financiera a nivel global.
 * **Timothy Thompson:** Por sus investigaciones y aportes en el ámbito de grafos de conocimiento, tecnologías semánticas web y operaciones de metadatos (JSON-LD).
+* **Consorcio XBRL Internacional (xbrl.org):** Por crear, mantener y promover el estándar global XBRL y la especificación XBRL GL (Global Ledger), cimientos fundamentales para la interoperabilidad y automatización de los datos financieros y contables a nivel mundial.
+
 
 ---
 
