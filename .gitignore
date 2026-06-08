@@ -24,4 +24,11 @@ Momento0/Mapping/
 *.tmp
 ~*
 
+# Sensitive documents
+Documentacion/2026-03-20 Bidirectional NDA Richard Gasca_encrypted_-1.pdf
+Documentacion/257. InmobiliarioRenta Marzo 2026.docx
+Documentacion/360. Facturas 120 Marzo 2025.docx
+Documentacion/SubdocumentalPrimeraEdicion.docx
+
+
 
