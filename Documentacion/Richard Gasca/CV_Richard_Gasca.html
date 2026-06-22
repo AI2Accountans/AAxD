@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard G. Gasca Buelvas - Currículum Vitae</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS custom properties for Light/Dark themes */
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: #131a2c;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --primary-accent: #06b6d4; /* Cyan */
+      --primary-accent-rgb: 6, 182, 212;
+      --secondary-accent: #6366f1; /* Indigo */
+      --border-color: #1e293b;
+      --timeline-dot: #06b6d4;
+      --timeline-line: #1e293b;
+      --header-bg: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      --glow-opacity: 0.15;
+      --badge-bg: rgba(6, 182, 212, 0.1);
+      --badge-text: #22d3ee;
+      --sidebar-bg: #0f172a;
+    }
+
+    body.light-theme {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --primary-accent: #0891b2; /* Cyan dark */
+      --primary-accent-rgb: 8, 145, 178;
+      --secondary-accent: #4f46e5; /* Indigo dark */
+      --border-color: #e2e8f0;
+      --timeline-dot: #0891b2;
+      --timeline-line: #e2e8f0;
+      --header-bg: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+      --glow-opacity: 0.05;
+      --badge-bg: rgba(8, 145, 178, 0.1);
+      --badge-text: #0891b2;
+      --sidebar-bg: #f1f5f9;
+    }
+
+    /* Global reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 60px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    /* Utility classes */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .accent-text {
+      color: var(--primary-accent);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      border-radius: 9999px;
+      margin-bottom: 8px;
+    }
+
+    /* Navigation / Header Actions */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 0;
+    }
+    body.light-theme .top-bar {
+      background-color: rgba(248, 250, 252, 0.8);
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 550;
+      font-family: 'Outfit', sans-serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .btn:hover {
+      border-color: var(--primary-accent);
+      transform: translateY(-1px);
+    }
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    /* CV Layout Header */
+    header {
+      background: var(--header-bg);
+      padding: 50px 0;
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(var(--primary-accent-rgb), var(--glow-opacity)) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+    }
+    .header-info h1 {
+      font-size: 2.8rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 5px;
+      line-height: 1.1;
+    }
+    .header-info p.title {
+      font-size: 1.3rem;
+      font-weight: 550;
+      color: var(--primary-accent);
+      margin-bottom: 15px;
+      letter-spacing: -0.01em;
+    }
+    .header-info p.summary {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+    }
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px 25px;
+      margin-top: 20px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .contact-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary-accent);
+    }
+
+    /* Main Content Grid */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .sidebar-widget {
+      background-color: var(--sidebar-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sidebar-widget h3 {
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+      border-bottom: 1.5px solid var(--border-color);
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sidebar-widget h3 svg {
+      width: 18px;
+      height: 18px;
+      color: var(--primary-accent);
+    }
+
+    /* Personal info details */
+    .personal-details {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+    }
+    .detail-label {
+      color: var(--text-muted);
+      font-weight: 550;
+    }
+    .detail-val {
+      color: var(--text-primary);
+      text-align: right;
+    }
+
+    /* Skill tags */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      background: var(--card-bg);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .skill-tag:hover {
+      border-color: var(--primary-accent);
+      color: var(--primary-accent);
+    }
+
+    /* Certifications & Education */
+    .cert-item {
+      margin-bottom: 15px;
+    }
+    .cert-item:last-child {
+      margin-bottom: 0;
+    }
+    .cert-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.92rem;
+    }
+    .cert-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2px;
+    }
+
+    /* Right Main Area */
+    .content-area {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+    .section-title svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary-accent);
+    }
+
+    /* Timeline style */
+    .timeline {
+      position: relative;
+      padding-left: 24px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: var(--timeline-line);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--bg-color);
+      border: 3px solid var(--timeline-dot);
+      z-index: 10;
+      box-shadow: 0 0 0 4px var(--bg-color);
+    }
+    .timeline-item:hover .timeline-dot {
+      background: var(--primary-accent);
+      box-shadow: 0 0 8px var(--primary-accent);
+    }
+    .timeline-content {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    }
+    .timeline-content:hover {
+      border-color: rgba(var(--primary-accent-rgb), 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .job-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .job-company {
+      font-weight: 550;
+      color: var(--primary-accent);
+      font-size: 0.95rem;
+    }
+    .job-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      background: var(--border-color);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .timeline-body ul {
+      list-style-type: none;
+    }
+    .timeline-body li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+    .timeline-body li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary-accent);
+      font-weight: bold;
+    }
+    .timeline-body p {
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    /* Academy / Teaching Section Grid */
+    .academy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .academy-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .academy-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--secondary-accent);
+    }
+    .academy-card:hover {
+      border-color: var(--secondary-accent);
+      transform: translateY(-2px);
+    }
+    .academy-university {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .academy-role {
+      font-size: 0.9rem;
+      color: var(--primary-accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .academy-detail {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .academy-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    /* Interactive print view modifications */
+    @media print {
+      * {
+        --bg-color: #ffffff !important;
+        --card-bg: #ffffff !important;
+        --text-primary: #0f172a !important;
+        --text-secondary: #334155 !important;
+        --text-muted: #475569 !important;
+        --primary-accent: #0891b2 !important;
+        --secondary-accent: #4f46e5 !important;
+        --border-color: #cbd5e1 !important;
+        --timeline-dot: #0891b2 !important;
+        --timeline-line: #cbd5e1 !important;
+        --glow-opacity: 0 !important;
+        --badge-bg: #f1f5f9 !important;
+        --badge-text: #0891b2 !important;
+        --sidebar-bg: #f8fafc !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #334155 !important;
+        padding-bottom: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      header {
+        background: none !important;
+        border-bottom: 2px solid #cbd5e1 !important;
+        padding: 20px 0 !important;
+      }
+      header::after {
+        display: none !important;
+      }
+      h1, h2, h3, h4 {
+        color: #0f172a !important;
+      }
+      p.title {
+        color: #0891b2 !important;
+      }
+      p.summary {
+        color: #334155 !important;
+      }
+      .contact-item {
+        color: #334155 !important;
+      }
+      .contact-item svg {
+        color: #0891b2 !important;
+      }
+      .main-grid {
+        display: block !important;
+      }
+      .sidebar {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px !important;
+        margin-bottom: 30px !important;
+      }
+      .sidebar-widget {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        padding: 15px !important;
+        page-break-inside: avoid;
+      }
+      .personal-details .detail-label {
+        color: #475569 !important;
+      }
+      .personal-details .detail-val {
+        color: #0f172a !important;
+      }
+      .cert-title {
+        color: #0f172a !important;
+      }
+      .cert-meta {
+        color: #475569 !important;
+      }
+      .content-area {
+        gap: 30px !important;
+      }
+      .timeline::before {
+        background: #cbd5e1 !important;
+      }
+      .timeline-dot {
+        border-color: #0891b2 !important;
+        background: #ffffff !important;
+      }
+      .timeline-content {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        padding: 15px !important;
+        page-break-inside: avoid;
+      }
+      .job-title {
+        color: #0f172a !important;
+      }
+      .job-company {
+        color: #0891b2 !important;
+      }
+      .job-date {
+        background: #f1f5f9 !important;
+        color: #475569 !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      .timeline-body p {
+        color: #334155 !important;
+      }
+      .timeline-body li {
+        color: #334155 !important;
+      }
+      .timeline-body li::before {
+        color: #0891b2 !important;
+      }
+      .academy-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+      .academy-card::before {
+        background: #4f46e5 !important;
+      }
+      .academy-university {
+        color: #0f172a !important;
+      }
+      .academy-role {
+        color: #4f46e5 !important;
+      }
+      .academy-detail {
+        color: #334155 !important;
+      }
+      .academy-date {
+        color: #64748b !important;
+      }
+      .skill-tag {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #334155 !important;
+      }
+      .badge {
+        background: #f1f5f9 !important;
+        color: #0891b2 !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      h2, h3, .timeline-item, .academy-card {
+        page-break-inside: avoid;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 600px) {
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+      .header-grid {
+        grid-template-columns: 1fr;
+      }
+      .header-info h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Actions Bar -->
+  <div class="top-bar no-print">
+    <div class="container top-bar-inner">
+      <button class="btn" id="theme-toggle" title="Cambiar tema claro/oscuro">
+        <!-- Sun/Moon Icon -->
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.2 7.2 0 0 0 3.486-.882.77.77 0 0 1 .9.112.797.797 0 0 1 .08.858 7.2 7.2 0 0 1-7.22 5.178A7.2 7.2 0 0 1 .28 8.618 7.2 7.2 0 0 1 6 .278z"/>
+        </svg>
+        <span>Modo Claro</span>
+      </button>
+      <button class="btn" onclick="window.print()" title="Imprimir o guardar como PDF">
+        <!-- Printer Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+          <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+        </svg>
+        <span>Imprimir / PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-grid">
+      <div class="header-info">
+        <h1>Richard G. Gasca Buelvas</h1>
+        <p class="title">Contador Público &amp; Líder en Tecnología XBRL</p>
+        <p class="summary">
+          Especialista en Gerencia Internacional con más de 30 años de trayectoria. Pionero y referente nacional en el estándar <strong>XBRL</strong> para la estandarización y automatización de reportes corporativos y supervisión basada en riesgos. Ha dirigido auditorías de alta complejidad, implementaciones IFRS/NIIF y docencia de posgrado en múltiples universidades del país.
+        </p>
+        
+        <div class="contact-grid">
+          <div class="contact-item">
+            <!-- Mail -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>rgasca@javeriana.edu.co</span>
+          </div>
+          <div class="contact-item">
+            <!-- Phone -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span>+57 301 2716731 / +57 601 2975712</span>
+          </div>
+          <div class="contact-item">
+            <!-- Map -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>Bogotá, Colombia</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-photo">
+        <img src="Richard_Gasca_79055235.png" alt="Richard G. Gasca Buelvas" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-accent); box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="container main-grid">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      
+      <!-- Personal Info Widget -->
+      <div class="sidebar-widget">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          Información Personal
+        </h3>
+        <div class="personal-details">
+          <div class="detail-row">
+            <span class="detail-label">Nacionalidad:</span>
+            <span class="detail-val">Colombiano</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Nacimiento:</span>
+            <span class="detail-val">Bogotá, Sep 5, 1969</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Estado Civil:</span>
+            <span class="detail-val">Casado</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Edad:</span>
+            <span class="detail-val">56 años</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Widget -->
+      <div class="sidebar-widget">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          Especialidades
+        </h3>
+        <div class="skills-list">
+          <span class="skill-tag">Tecnología XBRL</span>
+          <span class="skill-tag">Web Semántica</span>
+          <span class="skill-tag">JSON-LD / XML</span>
+          <span class="skill-tag">IFRS / NIIF</span>
+          <span class="skill-tag">USGAAP</span>
+          <span class="skill-tag">NICSP (Sector Público)</span>
+          <span class="skill-tag">Auditoría Criptográfica</span>
+          <span class="skill-tag">Revisoría Fiscal</span>
+          <span class="skill-tag">Hyperion ERP</span>
+          <span class="skill-tag">Balanced Scorecard</span>
+          <span class="skill-tag">Control Presupuestal</span>
+        </div>
+      </div>
+
+      <!-- Certifications & Education -->
+      <div class="sidebar-widget">
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20" />
+          </svg>
+          Educación y Certs.
+        </h3>
+        <div class="cert-item">
+          <div class="cert-title">Especialización en Gerencia Internacional</div>
+          <div class="cert-meta">
+            <span>U. Javeriana</span>
+            <span>2002 - 2003</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-title">Contador Público (T.P. 64156-T)</div>
+          <div class="cert-meta">
+            <span>U. Central</span>
+            <span>1989 - 1994</span>
+          </div>
+        </div>
+        <div style="margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+          <div class="cert-title">Certificate of Achievement - Level 3 Detailed (XBRL)</div>
+          <div class="cert-meta">
+            <span>XBRL Canada</span>
+            <span>Ene 2015</span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="content-area">
+      
+      <!-- Professional Experience -->
+      <section>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Experiencia Profesional
+        </h2>
+        
+        <div class="timeline">
+          
+          <!-- IPHIX -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Director Ejecutivo &amp; Consultor Principal</div>
+                  <div class="job-company">IPHIX Colombia S.A.S.</div>
+                </div>
+                <span class="job-date">2015 - Presente</span>
+              </div>
+              <div class="timeline-body">
+                <span class="badge">Tecnología XBRL</span>
+                <p>Liderazgo de proyectos de estandarización de datos financieros y de negocio para la automatización de la generación de reportes externos e internos bajo esquemas Balanced Scorecard.</p>
+                <ul>
+                  <li>Implementación exitosa de reportes regulatorios IFRS en XBRL ante la Superintendencia Financiera para entidades del sector como <strong>Procafecol, Almacafé, Banco W, Baker Hughes, Comcel y Corredores Davivienda</strong>.</li>
+                  <li>Normalización y automatización de flujos contables para la liquidación de IVA, ICA y Conciliaciones Fiscales.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Supersolidaria -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Consultor de Extensión de Taxonomías</div>
+                  <div class="job-company">Superintendencia de la Economía Solidaria</div>
+                </div>
+                <span class="job-date">2016 - 2017</span>
+              </div>
+              <div class="timeline-body">
+                <span class="badge">Gobierno / Supervisión</span>
+                <p>Dirección técnica del proyecto de extensión de las taxonomías IFRS en XBRL.</p>
+                <ul>
+                  <li>Coordinación de pruebas de concepto para la parametrización de reportes unificados, facilitando la auditoría y supervisión basada en riesgos para el sector solidario en Colombia.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- EMPAS -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Asesor de Políticas Contables</div>
+                  <div class="job-company">Apoyo Gerencial – Auditores y Consultores</div>
+                </div>
+                <span class="job-date">2016</span>
+              </div>
+              <div class="timeline-body">
+                <p>Responsable de la redacción y alineación del marco de políticas contables según la Resolución 414 de 2014 para la Empresa de Servicios Públicos de Alcantarillado de Bucaramanga (EMPAS).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- U Rosario -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Responsable Financiero y de Control de Convenios Internacionales</div>
+                  <div class="job-company">Universidad del Rosario</div>
+                </div>
+                <span class="job-date">2007 - 2011</span>
+              </div>
+              <div class="timeline-body">
+                <span class="badge">Cooperación Internacional</span>
+                <p>Control integral de presupuesto y auditorías de rendición de cuentas para convenios con entidades internacionales:</p>
+                <ul>
+                  <li><strong>Comunidad de Madrid (2011)</strong>: Presupuesto del Centro de Atención Social CAS (salud y consultorio jurídico).</li>
+                  <li><strong>Comisión Europea - Equity L.A. (2010)</strong>: Cumplimiento de condiciones contables de subvenciones europeas en la Facultad de Medicina y auditorías de elegibilidad.</li>
+                  <li><strong>Embajada de Alemania (2009 - 2011)</strong>: Control financiero y tasas de conversión de divisas de programas de agricultura urbana y salud pública.</li>
+                  <li><strong>Comunidad Económica Europea (2007 - 2010)</strong>: Gestión de contrapartidas y verificación ante BDO Audit AGE para programas de desarrollo social.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alcaldia -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Miembro de Auditoría Interna</div>
+                  <div class="job-company">Secretaría de Gobierno de Bogotá - Control Interno</div>
+                </div>
+                <span class="job-date">2013</span>
+              </div>
+              <div class="timeline-body">
+                <p>Auditoría de cumplimiento legal, fiscal y de procesos institucionales del gobierno distrital.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Planeta -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Contralor de Área Andina</div>
+                  <div class="job-company">Editorial Planeta</div>
+                </div>
+                <span class="job-date">1996 - 2004</span>
+              </div>
+              <div class="timeline-body">
+                <span class="badge">Finanzas Corporativas</span>
+                <p>Dirección financiera y consolidación contable de las filiales andinas para la reportabilidad bajo USGAAP a la casa matriz en España.</p>
+                <ul>
+                  <li>Implementación de sistemas de control presupuestal y de gestión multinegocio usando <strong>Hyperion ERP</strong>.</li>
+                  <li>Supervisión tributaria de precios de transferencia y control de costos de producción.</li>
+                  <li>Preparación del Reporting Package corporativo auditado anualmente por <strong>Arthur Andersen &amp; Co</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Waterhouse -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="job-title">Auditor Senior / Junior</div>
+                  <div class="job-company">Price Waterhouse</div>
+                </div>
+                <span class="job-date">1994 - 1996</span>
+              </div>
+              <div class="timeline-body">
+                <span class="badge">Auditoría Externa</span>
+                <p>Responsable del examen de estados financieros y la elaboración de informes y cartas de control interno.</p>
+                <ul>
+                  <li>Auditoría de fondos y programas de cooperación internacional administrados por la agencia <strong>USAID</strong> (como el programa Fulbright).</li>
+                  <li>Encargado de la auditoría en multinacionales del sector tecnológico y de entretenimiento: <strong>Sony, Disney, Eveready e Ingersoll Rand</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Academic & Teaching Experience -->
+      <section>
+        <h2 class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          Trayectoria Académica y Docencia
+        </h2>
+        
+        <div class="academy-grid">
+          
+          <!-- Javeriana -->
+          <div class="academy-card">
+            <div class="academy-university">P. Universidad Javeriana</div>
+            <div class="academy-role">Docente de Especialización</div>
+            <div class="academy-detail">Módulo XBRL en la Especialización de Contabilidad Internacional. Representante designado ante el Comité Técnico del Sistema Documental Contable del CTCP (2013).</div>
+            <span class="academy-date">2013 - 2018</span>
+          </div>
+
+          <!-- U Libre -->
+          <div class="academy-card">
+            <div class="academy-university">Universidad Libre</div>
+            <div class="academy-role">Docente de Maestría</div>
+            <div class="academy-detail">Cátedra y seminarios de XBRL aplicados a la Maestría en Contabilidad.</div>
+            <span class="academy-date">2013 - 2016</span>
+          </div>
+
+          <!-- Tadeo -->
+          <div class="academy-card">
+            <div class="academy-university">U. Jorge Tadeo Lozano</div>
+            <div class="academy-role">Docente de Pregrado</div>
+            <div class="academy-detail">Docente de la Facultad de Contaduría Pública con enfoque en tecnologías emergentes e información estandarizada.</div>
+            <span class="academy-date">2024</span>
+          </div>
+
+          <!-- U Central -->
+          <div class="academy-card">
+            <div class="academy-university">Universidad Central</div>
+            <div class="academy-role">Docente de Diplomado</div>
+            <div class="academy-detail">Docente en el diplomado de Normas Internacionales de Información Financiera (NIIF/IFRS).</div>
+            <span class="academy-date">2025</span>
+          </div>
+
+          <!-- U Rosario -->
+          <div class="academy-card">
+            <div class="academy-university">Universidad del Rosario</div>
+            <div class="academy-role">Docente de Diplomado</div>
+            <div class="academy-detail">Docente en el diplomado de Estándares de Información Financiera del Sector Público (NICSP).</div>
+            <span class="academy-date">2015</span>
+          </div>
+
+          <!-- ICESI -->
+          <div class="academy-card">
+            <div class="academy-university">Universidad ICESI (Cali)</div>
+            <div class="academy-role">Docente de Especialización</div>
+            <div class="academy-detail">Módulo XBRL en la Especialización de Contabilidad Internacional.</div>
+            <span class="academy-date">2009</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="no-print" style="margin-top: 60px; padding: 25px 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.8rem; color: var(--text-muted);">
+    <div class="container">
+      Richard G. Gasca Buelvas © 2026. Diseñado en formato moderno de alta fidelidad.
+    </div>
+  </footer>
+
+  <script>
+    // Theme Switcher script
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const toggleText = toggleBtn.querySelector('span');
+
+    // Default: dark mode, check localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      enableLightTheme();
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if (document.body.classList.contains('light-theme')) {
+        enableDarkTheme();
+      } else {
+        enableLightTheme();
+      }
+    });
+
+    function enableLightTheme() {
+      document.body.classList.add('light-theme');
+      toggleText.textContent = 'Modo Oscuro';
+      // Change icon to Moon
+      themeIcon.innerHTML = `<path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.2 7.2 0 0 0 3.486-.882.77.77 0 0 1 .9.112.797.797 0 0 1 .08.858 7.2 7.2 0 0 1-7.22 5.178A7.2 7.2 0 0 1 .28 8.618 7.2 7.2 0 0 1 6 .278z"/>`;
+      localStorage.setItem('theme', 'light');
+    }
+
+    function enableDarkTheme() {
+      document.body.classList.remove('light-theme');
+      toggleText.textContent = 'Modo Claro';
+      // Change icon to Sun
+      themeIcon.innerHTML = `<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>`;
+      localStorage.setItem('theme', 'dark');
+    }
+  </script>
+</body>
+</html>
