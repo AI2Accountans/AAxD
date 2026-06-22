@@ -18,7 +18,7 @@ Cultivating trust within these AI-augmented corporate environments requires a co
 
 This paper addresses this issue by proposing a "Moment 0" Semantic Digital Twin developed through Design Science Research (DSR). We argue that by shifting validation "left"—validating data integrity at the exact moment of transaction genesis—we can systematically prevent reconciliation discrepancies. Our proposed architecture integrates the Resource-Event-Agent (REA) framework with Semantic Web standards, decoupling the semantic meaning of economic events (using JSON-LD and XBRL GL) from specific software applications.
 
-In addition, we introduce the use of hybrid "DataBooks" to serve as a standardized transport mechanism. By embedding structured SKOS taxonomies directly within the native training or system prompts of Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human managers and autonomous oversight agents. The rest of this article outlines our theoretical foundations, describes the system architecture of the A&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
+In addition, we introduce the use of hybrid "DataBooks" to serve as a standardized transport mechanism. By embedding structured Simple Knowledge Organization System (SKOS) taxonomies (W3C, 2009b) directly within the native training or system prompts of Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human managers and autonomous oversight agents. The rest of this article outlines our theoretical foundations, describes the system architecture of the A&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
 
 ---
 
@@ -99,4 +99,5 @@ This system provides the absolute correctness required to oversee both human tra
 * **Fischer-Pauzenberger, C., & Schwaiger, W. S.** (2017). OntoREA: A foundational ontology-based formalization of the REA accounting model. *Journal of Information Systems*, 31(3), 43–69.
 * **Hoffman, C.** (2020). *Model-Driven Enterprise Architecture and Digital Financial Reporting*. Technical Whitepaper.
 * **McCarthy, W. E.** (1982). The REA accounting model: A generalized framework for accounting systems in a shared data environment. *The Accounting Review*, 57(3), 554–578.
-* **W3C**. (2009). *XBRL and the Semantic Web*. W3C Interest Group Report. Retrieved from https://www.w3.org/2009/03/xbrl/old-report.html.
+* **W3C**. (2009a). *XBRL and the Semantic Web*. W3C Interest Group Report. Retrieved from https://www.w3.org/2009/03/xbrl/old-report.html.
+* **W3C**. (2009b). *SKOS Simple Knowledge Organization System Reference*. W3C Recommendation. Retrieved from https://www.w3.org/TR/skos-reference/.

@@ -28,7 +28,7 @@ Cultivating trust within these AI-augmented corporate environments requires a co
 
 This paper addresses this issue by proposing a "Moment 0" Semantic Digital Twin developed through Design Science Research (DSR). We argue that by shifting validation "left"---validating data integrity at the exact moment of transaction genesis---we can systematically prevent reconciliation discrepancies. Our proposed architecture integrates the Resource-Event-Agent (REA) framework with Semantic Web standards, decoupling the semantic meaning of economic events (using JSON-LD and XBRL GL) from specific software applications.
 
-In addition, we introduce the use of hybrid "DataBooks" to serve as a standardized transport mechanism. By embedding structured SKOS taxonomies directly within the native training or system prompts of Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human managers and autonomous oversight agents. The rest of this article outlines our theoretical foundations, describes the system architecture of the A\&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
+In addition, we introduce the use of hybrid "DataBooks" to serve as a standardized transport mechanism. By embedding structured Simple Knowledge Organization System (SKOS) taxonomies \cite{w3cskos2009} directly within the native training or system prompts of Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human managers and autonomous oversight agents. The rest of this article outlines our theoretical foundations, describes the system architecture of the A\&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
 
 \section{Related Work \& Theoretical Framework}
 
@@ -121,10 +121,16 @@ The REA accounting model: A generalized framework for accounting systems in a sh
 \emph{The Accounting Review}, 57(3), 554--578.
 
 \bibitem{w3c2009}
-W3C. (2009).
+W3C. (2009a).
 \emph{XBRL and the Semantic Web}.
 W3C Interest Group Report.
 Retrieved from \url{https://www.w3.org/2009/03/xbrl/old-report.html}.
+
+\bibitem{w3cskos2009}
+W3C. (2009b).
+\emph{SKOS Simple Knowledge Organization System Reference}.
+W3C Recommendation.
+Retrieved from \url{https://www.w3.org/TR/skos-reference/}.
 
 \end{thebibliography}
 
