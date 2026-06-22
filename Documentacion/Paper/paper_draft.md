@@ -56,7 +56,7 @@ At the bottom of the system stack, relational database engines are replaced by T
 ### 3.3. The Semantic Transmutation Layer (Altova XMLSpy & MapForce)
 Raw JSON data retrieved from the operational database frequently uses internal company terminology and lacks the standardized regulatory terminology required for audit verification. To address this difference without hardcoding translation rules, the architecture integrates the Altova product suite to handle semantic transmutation. First, Altova XMLSpy serves as the schema design workspace, used to define the JSON-LD schemas and enforce W3C SHACL (Shapes Constraint Language) constraints. This guarantees that the core ontology is logically valid prior to data processing.
 
-Following schema validation, Altova MapForce serves as a format-neutral data mapper. It parses the raw JSON payload and applies the W3C and XBRL GL ontologies designed in XMLSpy. This automated mapping transforms the internal operational logs into a standardized JSON-LD graph instance. This layered architecture ensures that double-entry balance and structural compliance are verified before the data is exposed for external review.
+Following schema validation, Altova MapForce serves as a format-neutral data mapper. It parses the raw JSON payload and applies the W3C and XBRL GL ontologies designed in XMLSpy. This automated mapping transforms the internal operational logs into a standardized JSON-LD graph instance. This layered architecture ensures that double-entry balance and structural compliance are verified before the data is exposed for external review. This configuration is empirically validated by historical industry precedents, such as the Maryland Association of CPAs (MACPA) case study, which proved the viability of using Altova's design suite (XMLSpy and MapForce) to translate heterogeneous ledger databases into standardized XBRL GL structures (Altova, 2010).
 
 ### 3.4. The Living Knowledge Wrapper (DataBooks)
 The final phase of the A&AD data pipeline handles the interaction between human users and automated systems. The structured JSON-LD output is packaged into a "DataBook"—a hybrid Markdown document. The DataBook combines a human-readable narrative (such as a corporate charter or partnership agreement) with hidden, machine-readable JSON-LD data segments. This document serves as a self-contained, unchangeable "holon." Human supervisors can review the business context in plain text, while autonomous AI agents can parse the embedded graph data using pre-trained SKOS taxonomies. This decoupled design provides high certainty without requiring the AI to process raw, unstructured language, completing the "Shift-Left" audit process.
@@ -65,7 +65,7 @@ The final phase of the A&AD data pipeline handles the interaction between human 
 
 ## 4. Demonstration: The Genesis Moment Case Study
 
-To demonstrate the practical validity of the A&AD architecture, we implemented a Proof of Concept (PoC) representing the "Moment 0" of a business entity: its official incorporation deed and the initial equity contributions from its founding shareholders.
+To validate the A&AD framework, a practical Proof of Concept (PoC) was executed modeling the "Moment 0" of a corporate entity: the formal incorporation deed and the initial assignment of capital by the founding partners.
 
 ### 4.1. Extraction of Genesis Event Data
 The initial equity allocation was recorded in the TerminusDB graph database. Using the DFRNT environment, we ran a GraphQL-over-OWL (QOWL) query to filter and extract all records linked to the corporate equity registry (such as Account `311505`). The query retrieved specific variables, including line-item identifiers, transaction amounts, investing agent IDs, and the corresponding ownership units. The resulting raw JSON file represented the initial ledger entry but lacked external ontological classification.
@@ -90,3 +90,13 @@ The program successfully computed the exact total capital amount, demonstrating 
 A reliance on retrospective reconciliation processes is an outdated habit of the relational database age. As shown by the Accounting and Audit by Design (A&AD) model, moving verification procedures "left" to the moment of data creation is both conceptually sound and technically achievable. By integrating the REA ontology, TerminusDB knowledge graphs, and hybrid DataBooks, organizations can package economic activities into self-contained, self-verifying semantic records.
 
 This system provides the absolute correctness required to oversee both human transactions and the choices of autonomous AI agents. Our future work will focus on extending this proof of concept to handle ongoing operational transactions and deploying real-time SHACL validation guards at the database level, laying the groundwork for automated, model-driven corporate governance.
+
+---
+
+## References
+
+* **Altova**. (2010). *Case Study: Maryland Association of CPAs (MACPA) Integrates Accounting Systems with XBRL GL and Altova MapForce*. Retrieved from https://www.altova.com/documents/macpa_casestudy.pdf.
+* **Fischer-Pauzenberger, C., & Schwaiger, W. S.** (2017). OntoREA: A foundational ontology-based formalization of the REA accounting model. *Journal of Information Systems*, 31(3), 43–69.
+* **Hoffman, C.** (2020). *Model-Driven Enterprise Architecture and Digital Financial Reporting*. Technical Whitepaper.
+* **McCarthy, W. E.** (1982). The REA accounting model: A generalized framework for accounting systems in a shared data environment. *The Accounting Review*, 57(3), 554–578.
+* **W3C**. (2009). *XBRL and the Semantic Web*. W3C Interest Group Report. Retrieved from https://www.w3.org/2009/03/xbrl/old-report.html.
