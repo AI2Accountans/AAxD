@@ -35,7 +35,7 @@ In addition, we introduce the use of hybrid "DataBooks" to serve as a standardiz
 The theoretical foundation of the A\&AD architecture lies at the intersection of semantic web technologies, ontological accounting frameworks, and the audit capabilities of modern generative artificial intelligence. This integration aims to heal the historic division that separates operational business logic from financial ledger records.
 
 \subsection{The REA Paradigm and Graph-Based Digital Twins}
-The Resource-Event-Agent (REA) accounting framework, introduced by McCarthy (1982), argued that accounting records must reflect the economic substance of transactions rather than just their accounting artifacts. The REA model focuses on the fundamental nature of economic events: the participants (Agents), the values traded (Resources), and the transactions themselves (Events). Subsequent researchers (e.g., Fischer-Pauzenberger \& Schwaiger, 2017) have formalized REA into a rigorous ontology (OntoREA) using foundational frameworks like the Unified Foundational Ontology (UFO). However, deploying this ontological design in a practical, scaleable environment requires transitioning away from traditional relational database engines toward Semantic Knowledge Graphs. Graph databases are uniquely suited to preserving complex, multi-dimensional connections without the constraints of rigid schemas.
+The Resource-Event-Agent (REA) accounting framework, introduced by McCarthy (1982), argued that accounting records must reflect the economic substance of transactions rather than just their accounting artifacts. The REA model focuses on the fundamental nature of economic events: the participants (Agents), the values traded (Resources), and the transactions themselves (Events). Subsequent researchers (e.g., Fischer-Pauzenberger \& Schwaiger, 2017) have formalized REA into a rigorous ontology (OntoREA) using foundational frameworks like the Unified Foundational Ontology (UFO). Furthermore, OntoREA has been extended to model dynamic hedge portfolios for financial derivatives \cite{fischer2018}. While these developments demonstrate REA's capability in representing complex financial instruments using custom ontologies, our A\&AD framework approaches the representation of legal entities and financial agreements by directly integrating industry-standard ontologies, such as the Financial Industry Business Ontology (FIBO) \cite{fibo2020} and the Algorithmic Contract Types Unified Standards (ACTUS) \cite{actus2018}, within the transactional graph. Regardless of the specific ontological approach, deploying these designs in a practical, scaleable environment requires transitioning away from traditional relational database engines toward Semantic Knowledge Graphs. Graph databases are uniquely suited to preserving complex, multi-dimensional connections without the constraints of rigid schemas.
 
 \subsection{Model-Driven Systems, XBRL GL, and Supply Chain Integration}
 The boundary between business operations and external reporting is directly addressed by Hoffman's "Model-Driven Enterprise Architecture." Hoffman argues for replacing disjointed, proprietary data silos with unified, standardized reporting pipelines. The Extensible Business Reporting Language Global Ledger (XBRL GL) plays a vital role in this design. While XBRL FR (Financial Reporting) is designed for end-of-period aggregations, XBRL GL captures and standardizes low-level transactional details. Implementing XBRL GL as a core data format allows companies to establish platform-independent interoperability. This ensures that audit trail data travels from operational genesis (Moment 0) to regulatory endpoints without loss of semantic meaning.
@@ -100,15 +100,32 @@ This system provides the absolute correctness required to oversee both human tra
 
 \begin{thebibliography}{99}
 
+\bibitem{actus2018}
+ACTUS Financial Research Foundation. (2018).
+\emph{Algorithmic Contract Types Unified Standards (ACTUS)}.
+Retrieved from \url{https://www.actusfrf.org/}.
+
 \bibitem{altova_macpa}
 Altova. (2010).
 \emph{Case Study: Maryland Association of CPAs (MACPA) Integrates Accounting Systems with XBRL GL and Altova MapForce}.
 Retrieved from \url{https://www.altova.com/documents/macpa_casestudy.pdf}.
 
+\bibitem{fibo2020}
+EDMC. (2020).
+\emph{Financial Industry Business Ontology (FIBO)}.
+Enterprise Data Management Council.
+Retrieved from \url{https://spec.edmcouncil.org/fibo/}.
+
 \bibitem{fischer2017}
 Fischer-Pauzenberger, C., \& Schwaiger, W. S. (2017).
 OntoREA: A foundational ontology-based formalization of the REA accounting model.
 \emph{Journal of Information Systems}, 31(3), 43--69.
+
+\bibitem{fischer2018}
+Fischer-Pauzenberger, C., \& Schwaiger, W. S. (2018).
+OntoREA© Accounting and Finance Model: Hedge Portfolio Representation of Derivatives.
+In \emph{IFIP Working Conference on The Practice of Enterprise Modeling} (pp. 372--382). Springer, Cham.
+\url{https://doi.org/10.1007/978-3-030-02302-7_24}.
 
 \bibitem{hoffman2020}
 Hoffman, C. (2020).
