@@ -65,13 +65,14 @@ The final phase of the A&AD data pipeline handles the interaction between human 
 
 ## 4. Demonstration: The Genesis Moment Case Study
 
-To validate the A&AD framework, a practical Proof of Concept (PoC) was executed modeling the "Moment 0" of a corporate entity: the formal incorporation deed and the initial assignment of capital by the founding partners.
+To validate the A&AD framework, a practical Proof of Concept (PoC) was executed modeling the "Moment 0" of a corporate entity. The origin of the entity is an agreement of wills among the founding partners, captured in an official document elevated to a public deed in a notary's office (represented by the file `SOCIEDAD_LIMITADA.pdf` located in the incorporation deed directory). From this legal document, the terms and data of the agreement are extracted and enriched with accounting semantics (manually, for illustrative purposes of this demonstration) to prepare the dataset to begin its journey through the semantic pipeline.
 
 ### 4.1. Extraction of Genesis Event Data
-The initial equity allocation was recorded in the TerminusDB graph database. Using the DFRNT environment, we ran a GraphQL-over-OWL (QOWL) query to filter and extract all records linked to the corporate equity registry (such as Account `311505`). The query retrieved specific variables, including line-item identifiers, transaction amounts, investing agent IDs, and the corresponding ownership units. The resulting raw JSON file represented the initial ledger entry but lacked external ontological classification.
+The terms and capital contributions of the corporate agreement (the partners, their equity shares, and tax identifiers) were structured in a tabular format within a Google Sheet (publicly available for audit at https://docs.google.com/spreadsheets/d/1SzBin5R74djTxuyLG_9AMUpOf_Uwwo9J5bE4HHykiAM/edit?usp=sharing) to serve as the operational starting point of the data pipeline. These raw data are exported in CSV format representing the initial ledger entry, prepared to begin their transmutation to the standard XBRL GL taxonomy without traversing a traditional relational Enterprise Resource Planning (ERP) database.
 
 ### 4.2. Data Transmutation and Alignment
-This raw JSON output was loaded into Altova MapForce. We created a visual data mapping structure to align the internal ledger structure with the XBRL GL taxonomy. During this process, local fields were mapped to standardized semantic elements, including `gl-cor:amount`, `gl-cor:measurableQuantity`, and `gl-cor:accountMainID`. Altova MapForce processed the input to generate a standardized JSON-LD graph instance of the transaction, successfully translating internal nomenclature into the universal XBRL GL taxonomy.
+This raw CSV source file was loaded into Altova MapForce. We created a visual data mapping structure to align the internal ledger structure with the XBRL GL taxonomy. During this process, local fields were mapped to standardized semantic elements, including `gl-cor:amount`, `gl-cor:measurableQuantity`, and `gl-cor:accountMainID`. Altova MapForce processed the input to generate a standardized JSON-LD graph instance of the transaction, successfully translating internal nomenclature into the universal XBRL GL taxonomy.
+
 
 ### 4.3. Automated Verification and Auditing
 The mapped JSON-LD payload was embedded directly into a Markdown DataBook document, establishing a dual-purpose record combining a human-readable corporate charter with the underlying transactional graph.
