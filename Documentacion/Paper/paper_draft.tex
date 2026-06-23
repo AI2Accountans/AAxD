@@ -28,7 +28,7 @@ Cultivating trust within these AI-augmented corporate environments requires a co
 
 This paper addresses this issue by proposing a "Moment 0" Semantic Digital Twin developed through Design Science Research (DSR). We argue that by shifting validation "left"---validating data integrity at the exact moment of transaction genesis---we can systematically prevent reconciliation discrepancies. Our proposed architecture integrates the Resource-Event-Agent (REA) framework with Semantic Web standards, decoupling the semantic meaning of economic events (using JSON-LD and XBRL GL) from specific software applications.
 
-In addition, we introduce the use of hybrid "DataBooks" to serve as a standardized transport mechanism. By embedding structured Simple Knowledge Organization System (SKOS) taxonomies \cite{w3cskos2009} directly within the native training or system prompts of Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human managers and autonomous oversight agents. The rest of this article outlines our theoretical foundations, describes the system architecture of the A\&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
+In addition, we introduce the use of hybrid "DataBooks" \cite{cagle2026} to serve as a standardized transport mechanism. By embedding structured Simple Knowledge Organization System (SKOS) taxonomies \cite{w3cskos2009} directly within the native training or system prompts of Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human managers and autonomous oversight agents. The rest of this article outlines our theoretical foundations, describes the system architecture of the A\&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
 
 \section{Related Work \& Theoretical Framework}
 
@@ -43,9 +43,9 @@ The boundary between business operations and external reporting is directly addr
 This integration expands upon the foundational vision of the W3C (2009) regarding the convergence of XBRL and the Semantic Web. By extending the transactional capabilities of XBRL Global Ledger (XBRL GL) to encompass the broader lifecycle of the supply chain (from event triggering to final invoice), A\&AD captures both quantitative financial information and operational non-financial data. This comprehensive consolidation within the semantic graph enables the direct generation of both traditional financial reports (such as the statement of financial position and performance reports) and corporate sustainability (ESG) and supply chain reports without requiring additional extraction and re-mapping processes. To govern this multi-dimensional flow, the framework incorporates the Zachman Enterprise Architecture Framework, utilizing its structured rows and columns to map operational actions directly onto the technical layers of the semantic stack.
 
 \subsection{Explainable AI, SKOS Structuring, and DataBooks}
-As machine learning models are tasked with financial auditing, mitigating the risk of artificial intelligence "hallucinations" becomes paramount. Cagle introduces "DataBooks" as a bridging format: hybrid Markdown files containing embedded, machine-readable JSON-LD payloads. DataBooks effectively connect narrative texts (such as legal agreements) with structured machine data (semantic graphs).
+As machine learning models are tasked with financial auditing, mitigating the risk of artificial intelligence "hallucinations" becomes paramount. Cagle and Shannon \cite{cagle2026} introduce "DataBooks" as a bridging format: hybrid Markdown files containing embedded, machine-readable JSON-LD payloads. DataBooks effectively connect narrative texts (such as legal agreements) with structured machine data (semantic graphs).
 
-Furthermore, embedding Simple Knowledge Organization System (SKOS) taxonomies directly into LLM architectures represents a major advance for "Explainable AI." As Cagle notes, standard ontologies perform significantly better when integrated directly into the LLM compilation phase. Instead of loading complex, multi-volume regulatory rules (e.g., IFRS or US GAAP) into an LLM's temporary context window---which is computationally inefficient and increases error rates---the AI auditor can leverage the model's pre-existing knowledge of standardized SKOS structures. The individual DataBook only needs to supply the specific, localized concepts relevant to the transaction. This combination allows AI auditing agents to evaluate complex graphs with high precision, bound by clear ontological boundaries, thereby facilitating continuous, independent monitoring.
+Furthermore, embedding Simple Knowledge Organization System (SKOS) taxonomies directly into LLM architectures represents a major advance for "Explainable AI." As Cagle and Shannon \cite{cagle2026} note, standard ontologies perform significantly better when integrated directly into the LLM compilation phase. Instead of loading complex, multi-volume regulatory rules (e.g., IFRS or US GAAP) into an LLM's temporary context window---which is computationally inefficient and increases error rates---the AI auditor can leverage the model's pre-existing knowledge of standardized SKOS structures. The individual DataBook only needs to supply the specific, localized concepts relevant to the transaction. This combination allows AI auditing agents to evaluate complex graphs with high precision, bound by clear ontological boundaries, thereby facilitating continuous, independent monitoring.
 
 \section{Artifact Design: The A\&AD Semantic Digital Twin}
 
@@ -179,6 +179,12 @@ Retrieved from \url{https://www.actusfrf.org/}.
 Berners-Lee, T., Hendler, J., \& Lassila, O. (2001).
 The Semantic Web.
 \emph{Scientific American}, 284(5), 34--43.
+
+\bibitem{cagle2026}
+Cagle, K., \& Shannon, C. (2026).
+\emph{DataBook Pipelines: From Raw Data to Living Knowledge}.
+The Ontologist.
+Retrieved from \url{https://ontologist.substack.com/p/databook-pipelines}.
 
 \bibitem{altova_macpa}
 Altova. (2010).
