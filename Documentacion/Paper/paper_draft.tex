@@ -5,7 +5,7 @@
 \usepackage{hyperref}
 
 \title{The End of Reactive Control: Algorithmic Certainty through Accounting and Audit by Design (A\&AD)}
-\author{Richard G. Gasca Buelvas \\ Pontificia Universidad Javeriana}
+\author{Richard G. Gasca Buelvas\thanks{Profesor de Cátedra de la Facultad de Ciencias Económicas y Administrativas, Pontificia Universidad Javeriana. Correo electrónico: co.auditoria@proton.me. Disclaimer: Las opiniones, análisis y conclusiones expresadas en este artículo son de exclusiva responsabilidad del autor y no comprometen ni representan la posición oficial de la Pontificia Universidad Javeriana. / The views, analyses, and conclusions expressed in this paper are solely those of the author and do not compromise, represent, or commit the Pontificia Universidad Javeriana.} \\ Pontificia Universidad Javeriana}
 \date{June 2026}
 
 \begin{document}
@@ -82,15 +82,76 @@ The terms and capital contributions of the corporate agreement (the partners, th
 This raw CSV source file was loaded into Altova MapForce. We created a visual data mapping structure to align the internal ledger structure with the XBRL GL taxonomy. During this process, local fields were mapped to standardized semantic elements, including \texttt{gl-cor:amount}, \texttt{gl-cor:measurableQuantity}, and \texttt{gl-cor:accountMainID}. Altova MapForce processed the input to generate a standardized JSON-LD graph instance of the transaction, successfully translating internal nomenclature into the universal XBRL GL taxonomy.
 
 
-\subsection{Autonomous Audit Execution}
-The output of the Altova MapForce mapping is consolidated into a hybrid Markdown file named \texttt{output.databook.md}, which constitutes the target DataBook. This file establishes a dual-purpose record combining the natural language incorporation deed with the underlying JSON-LD transactional graph.
-
-To test automated verification, auditing tests were executed on this file within a Google Colab environment using the notebook \texttt{MarkDown\_1.ipynb} (stored locally in \texttt{C:\textbackslash{}Users\textbackslash{}IPHIX\textbackslash{}Documents\textbackslash{}Projects\textbackslash{}DFRNT\textbackslash{}Momento0\textbackslash{}Google Colab\textbackslash{}}). The automated audit script, utilizing the \texttt{rdflib} semantic web library, performed the following operations without human intervention:
+\subsection{Ingestion and Querying in DFRNT / TerminusDB}
+The semantic integration and query phase represents the operational culmination of our pipeline, where the JSON-LD graph acquires logical meaning within the DFRNT ecosystem (which hosts the TerminusDB database). This process consists of five sequential steps:
 \begin{enumerate}
-    \item Parsed the \texttt{output.databook.md} document, stripping the human narrative and extracting only the invisible JSON-LD graph blocks.
-    \item Compiled the blocks into an in-memory Resource Description Framework (RDF) graph.
-    \item Executed a deterministic SPARQL query across the graph to sum the capital contributions and verify its alignment with the allocated equity.
+    \item \textbf{Class and Ontology Definition (Step 1):} First, semantic classes and schemas are structured within the DFRNT interface. Core accounting entities (such as \texttt{EntryDetail} and \texttt{GistPerson}) are defined, mapping them to industry-standard ontologies (FIBO, ACTUS, and gist) to ensure typological and legal consistency (see Fig.~\ref{fig:dfrnt-step1}).
+    \item \textbf{JSON-LD Payload Ingestion (Step 2):} Once the schema is defined, the transmutated JSON-LD instance is injected directly via DFRNT's ingestion console. This payload is stored immutably under TerminusDB's closed-world constraints (see Fig.~\ref{fig:dfrnt-step2}).
+    \item \textbf{Logical Digital Twin Visualization (Step 3):} With the data loaded, DFRNT's Graph Data Browser enables visual exploration of the resulting graph. This represents the "Logical Twin" of the enterprise at Moment 0, showing how each partner (\texttt{GistPerson}) is linked to their respective transactional line (\texttt{EntryDetail}) (see Fig.~\ref{fig:dfrnt-step3}).
+    \item \textbf{GraphQL/QOWL Query Construction and Execution (Step 4):} To verify that relations and balances remain intact, a GraphQL-over-OWL (QOWL) query named \texttt{AccionesYValorPorSocio} is executed in DFRNT, filtering the \texttt{EntryDetail} class to extract the amount, partner identifier, and share quantity (see Fig.~\ref{fig:dfrnt-step4}).
+    \item \textbf{Query Results Analysis (Step 5):} Finally, DFRNT displays the query results in a structured JSON response, confirming the exact contributions (e.g., Founding Partner A with 2,500,000 COP and 2,500 shares), proving data integrity across the transformations (see Fig.~\ref{fig:dfrnt-step5}).
 \end{enumerate}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{dfrnt-step1.png}
+    \caption{DFRNT Class and Ontology Definition.}
+    \label{fig:dfrnt-step1}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{dfrnt-step2.png}
+    \caption{JSON-LD Ingestion Console in DFRNT.}
+    \label{fig:dfrnt-step2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{dfrnt-step3.png}
+    \caption{DFRNT Graph Visualizer - Logical Twin at Moment 0.}
+    \label{fig:dfrnt-step3}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{dfrnt-step4.png}
+    \caption{GraphQL / QOWL Query Construction in DFRNT.}
+    \label{fig:dfrnt-step4}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{dfrnt-step5.png}
+    \caption{GraphQL Query Results in DFRNT.}
+    \label{fig:dfrnt-step5}
+\end{figure}
+
+\subsection{Autonomous Audit Execution}
+The output of the Altova MapForce mapping is consolidated into a hybrid Markdown file named \texttt{output.databook.md}, which constitutes the target DataBook. This file establishes a dual-purpose record combining the natural language incorporation deed with the underlying JSON-LD transactional graph. To test automated verification independently and externally to the operational database, auditing tests were executed on this file within a Google Colab environment using the notebook \texttt{MarkDown\_1.ipynb} (stored locally in \texttt{C:\textbackslash{}Users\textbackslash{}IPHIX\textbackslash{}Documents\textbackslash{}Projects\textbackslash{}DFRNT\textbackslash{}Momento0\textbackslash{}Google Colab\textbackslash{}}).
+
+The automated audit workflow, constructed in Jupyter Notebook cells and executed using Python's \texttt{rdflib} library, consists of the following detailed steps:
+\begin{enumerate}
+    \item \textbf{Environment Preparation (Step 0):} First, Google Colab is connected to Google Drive using \texttt{drive.mount('/content/drive')} to access the file path of \texttt{output.databook.md}. Next, the Python semantic web library \texttt{rdflib} is installed silently (\texttt{!pip install rdflib -q}), and the necessary \texttt{Graph} and \texttt{json} modules are imported (see Fig.~\ref{fig:colab-step1}).
+    \item \textbf{Reading the DataBook (Step 1):} The hybrid Markdown file is opened and its entire contents are read from the specified Google Drive path (see Fig.~\ref{fig:colab-step1}).
+    \item \textbf{JSON-LD Blocks Extraction (Step 2):} Using straightforward string parsing techniques, the script splits the file using the code block delimiter \texttt{```json-ld} to isolate and extract the embeddable JSON-LD graph segments (see Fig.~\ref{fig:colab-step1}).
+    \item \textbf{Semantic Graph Loading and Compilation (Step 3):} An RDFLib \texttt{Graph()} object is initialized in memory, and the extracted JSON-LD data blocks are iterated over. Using the function \texttt{g.parse(data=b, format='json-ld')}, the data is parsed to locally compile the semantic accounting graph (see Fig.~\ref{fig:colab-step2}).
+    \item \textbf{SPARQL Mathematical Auditing and Verification (Step 4):} A declarative SPARQL query is executed over the graph, which defines the XBRL GL taxonomy prefix (\texttt{PREFIX gl-cor: <http://www.xbrl.org/int/gl/cor/2015-03-25\#>}) and sums all atomic transactional amounts associated with the \texttt{gl-cor:amount} property. As shown in the console printout results, the audit script successfully computes and prints a verified total capital amount of \texttt{\$10,000,000 COP} (see Fig.~\ref{fig:colab-step2}).
+\end{enumerate}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{colab-step1.png}
+    \caption{Jupyter Notebook Environment Setup and DataBook Parsing.}
+    \label{fig:colab-step1}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{colab-step2.png}
+    \caption{In-memory Semantic Graph Ingestion and SPARQL Query execution.}
+    \label{fig:colab-step2}
+\end{figure}
 
 The script successfully computed the exact sum of the founding capital, demonstrating that a machine---independent of the original operational database and reading only the \texttt{output.databook.md} file---could parse a text document, extract the foundational taxonomy, and mathematically prove the financial position with absolute certainty.
 
@@ -98,7 +159,14 @@ The script successfully computed the exact sum of the founding capital, demonstr
 
 A reliance on retrospective reconciliation processes is an outdated habit of the relational database age. As shown by the Accounting and Audit by Design (A\&AD) model, moving verification procedures "left" to the moment of data creation is both conceptually sound and technically achievable. By integrating the REA ontology, TerminusDB knowledge graphs, and hybrid DataBooks, organizations can package economic activities into self-contained, self-verifying semantic records.
 
-This system provides the absolute correctness required to oversee both human transactions and the choices of autonomous AI agents. Our future work will focus on extending this proof of concept to handle ongoing operational transactions and deploying real-time SHACL validation guards at the database level, laying the groundwork for automated, model-driven corporate governance.
+From the analysis and implementation of this architecture, three key conclusions emerge regarding the benefits of the A\&AD framework:
+\begin{enumerate}
+    \item \textbf{Definitive Eradication of Reconciliation Debt through "Accounting Shift-Left":} By capturing and validating the transactional semantics and context at "Moment 0" (the origin of the economic event), A\&AD eliminates the need for complex, retrospective reconciliations. Resolving data inconsistency at the point of ingestion removes the reliance on manual spreadsheets for late-stage adjustments, enabling a real-time, friction-free business view.
+    \item \textbf{Internal Control as a Topological Property of the Graph (SHACL):} Instead of relying on static policy manuals and regulatory limits verified forensically or manually, A\&AD moves governance and compliance rules into hard logical constraints at the database level using SHACL (Shapes Constraint Language). Double-entry balance, authorized signatures, and transaction thresholds become intrinsic, unbreakable properties of the data structure, preventing corrupt records from being written.
+    \item \textbf{Explainable Governance and Deterministic Auditing for the Agentic AI Era:} A\&AD provides the trust infrastructure required to oversee both human transactions and autonomous decisions executed by AI software agents. Through hybrid DataBooks (Markdown + JSON-LD) and deterministic SPARQL queries on in-memory knowledge graphs, the system enables immediate, high-fidelity, "zero-shot" auditing. This completely eliminates the risk of LLM hallucinations during compliance tasks by binding the AI to formal ontological boundaries.
+\end{enumerate}
+
+Our future work will focus on extending this proof of concept to handle ongoing operational transactions and deploying real-time SHACL validation guards at the database level, laying the groundwork for automated, model-driven corporate governance.
 
 \begin{thebibliography}{99}
 
