@@ -58,3 +58,25 @@ Una vez validado el esquema, Altova MapForce actúa como un motor de mapeo indep
 
 ### 3.4. El Contenedor de Conocimiento Vivo (DataBooks)
 La etapa final del canal de datos de A&AD articula la interacción entre usuarios humanos y sistemas automatizados. La salida estructurada en JSON-LD se organiza en un DataBook, concebido como un documento híbrido en formato Markdown. Este artefacto combina una narrativa comprensible para personas (similar a una escritura constitutiva o un acuerdo de sociedad) con fragmentos de JSON-LD integrados en su estructura y preparados para su procesamiento automático. De esta manera, el documento funciona como un holón autónomo e inmutable, capaz de preservar tanto el significado de negocio como su representación computable. En la práctica, los supervisores humanos pueden examinar el contexto en texto plano, mientras que los agentes de IA acceden al grafo incorporado y lo analizan mediante taxonomías SKOS previamente entrenadas. Esta separación entre la capa leída por personas y la capa procesable por máquinas reduce la dependencia del lenguaje libre no estructurado y aumenta la confiabilidad del análisis. Con ello, el diseño refuerza un enfoque de *shift-left auditing* al trasladar la verificación hacia las etapas más tempranas del flujo de datos.
+
+---
+
+## 4. Demostración: Caso de Estudio del Momento de la Génesis
+
+Para validar el framework A&AD, se ejecutó una Prueba de Concepto (PoC, por sus siglas en inglés) práctica que modela el "Momento 0" de una entidad corporativa: la escritura pública de constitución y la asignación inicial de capital por parte de los socios fundadores.
+
+### 4.1. Extracción de Datos del Evento de Génesis
+La asignación de capital inicial se registró en la base de datos de grafos TerminusDB. Utilizando el entorno DFRNT, ejecutamos una consulta GraphQL-over-OWL (QOWL) para filtrar y extraer todos los registros vinculados al libro de accionistas de la corporación (como la Cuenta `311505`). La consulta recuperó variables específicas, incluyendo identificadores de línea, montos de transacción, identificaciones de los agentes inversores y sus correspondientes cuotas de participación. El archivo JSON crudo resultante representaba el asiento contable inicial, pero carecía de clasificación ontológica externa.
+
+### 4.2. Transmutación y Alineación de Datos
+Esta salida JSON cruda se cargó en Altova MapForce. Creamos una estructura de mapeo de datos visual para alinear el esquema del libro diario interno con la taxonomía XBRL GL. Durante este proceso, los campos locales se mapearon a elementos semánticos estandarizados, tales como `gl-cor:amount`, `gl-cor:measurableQuantity` y `gl-cor:accountMainID`. Altova MapForce procesó la entrada para generar una instancia de grafo JSON-LD estandarizada de la transacción, traduciendo con éxito la nomenclatura interna a la taxonomía universal de XBRL GL.
+
+### 4.3. Verificación y Auditoría Automatizadas
+La carga útil de JSON-LD mapeada se incrustó directamente en un documento Markdown DataBook, estableciendo un registro de doble propósito que combina la escritura de constitución legible por humanos con el grafo transaccional subyacente.
+
+Para probar la verificación automatizada, este DataBook se analizó dentro de un entorno Python (Google Colab). Un script de auditoría automatizado construido con la librería `rdflib` realizó los siguientes pasos de forma automática:
+1. Escaneó el documento Markdown, separó el texto en lenguaje natural e aisló los bloques de grafos JSON-LD incrustados.
+2. Cargó estos bloques en un grafo activo en memoria basado en el Marco de Descripción de Recursos (RDF, por sus siglas en inglés).
+3. Ejecutó una consulta SPARQL determinista sobre el grafo para calcular la suma de las contribuciones de capital inicial.
+
+El programa calculó con éxito el monto exacto del capital total, demostrando que un script autónomo —sin conexión directa a la base de datos operativa de origen— podía leer un archivo de texto operativo narrativo, extraer su capa de datos semánticos y verificar matemáticamente el estado del libro contable con alta certeza.
