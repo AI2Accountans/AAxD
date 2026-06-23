@@ -83,16 +83,16 @@ This raw CSV source file was loaded into Altova MapForce. We created a visual da
 
 
 \subsection{Autonomous Audit Execution}
-The mapped JSON-LD was programmatically embedded into a Markdown DataBook, creating a human-readable narrative of the corporate incorporation explicitly tied to the underlying semantic graph.
+The output of the Altova MapForce mapping is consolidated into a hybrid Markdown file named \texttt{output.databook.md}, which constitutes the target DataBook. This file establishes a dual-purpose record combining the natural language incorporation deed with the underlying JSON-LD transactional graph.
 
-To demonstrate autonomous observability, this DataBook was loaded into a cloud-based Python environment (Google Colab). An automated audit script, utilizing the \texttt{rdflib} semantic web library, performed the following operations without human intervention:
+To test automated verification, auditing tests were executed on this file within a Google Colab environment using the notebook \texttt{MarkDown\_1.ipynb} (stored locally in \texttt{C:\textbackslash{}Users\textbackslash{}IPHIX\textbackslash{}Documents\textbackslash{}Projects\textbackslash{}DFRNT\textbackslash{}Momento0\textbackslash{}Google Colab\textbackslash{}}). The automated audit script, utilizing the \texttt{rdflib} semantic web library, performed the following operations without human intervention:
 \begin{enumerate}
-    \item Parsed the DataBook, stripping the human narrative and extracting only the invisible JSON-LD graph blocks.
+    \item Parsed the \texttt{output.databook.md} document, stripping the human narrative and extracting only the invisible JSON-LD graph blocks.
     \item Compiled the blocks into an in-memory Resource Description Framework (RDF) graph.
-    \item Executed a deterministic SPARQL query across the graph to sum the capital contributions.
+    \item Executed a deterministic SPARQL query across the graph to sum the capital contributions and verify its alignment with the allocated equity.
 \end{enumerate}
 
-The script successfully computed the exact sum of the founding capital, demonstrating that a machine---independent of the original operational database---could parse a text document, extract the foundational taxonomy, and mathematically prove the financial position with absolute certainty.
+The script successfully computed the exact sum of the founding capital, demonstrating that a machine---independent of the original operational database and reading only the \texttt{output.databook.md} file---could parse a text document, extract the foundational taxonomy, and mathematically prove the financial position with absolute certainty.
 
 \section{Conclusion}
 

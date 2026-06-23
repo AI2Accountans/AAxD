@@ -75,14 +75,14 @@ This raw CSV source file was loaded into Altova MapForce. We created a visual da
 
 
 ### 4.3. Automated Verification and Auditing
-The mapped JSON-LD payload was embedded directly into a Markdown DataBook document, establishing a dual-purpose record combining a human-readable corporate charter with the underlying transactional graph.
+The output of the Altova MapForce mapping is consolidated into a hybrid Markdown file named `output.databook.md`, which constitutes the target DataBook. This file establishes a dual-purpose record combining the natural language incorporation deed with the underlying JSON-LD transactional graph.
 
-To test automated verification, this DataBook was parsed within a Python environment (Google Colab). An automated audit script built with the `rdflib` library performed the following steps automatically:
-1. Scanned the Markdown document, separated the natural language text, and isolated the embedded JSON-LD graph blocks.
+To test automated verification, auditing tests were executed on this file within a Google Colab environment using the notebook `MarkDown_1.ipynb` (stored locally in `C:\Users\IPHIX\Documents\Projects\DFRNT\Momento0\Google Colab\`). The automated audit script, built with Python's `rdflib` library, performed the following steps automatically:
+1. Scanned the `output.databook.md` document, separated the natural language text, and isolated the embedded JSON-LD graph blocks.
 2. Loaded these blocks into an active, in-memory Resource Description Framework (RDF) graph.
-3. Ran a deterministic SPARQL query across the graph to calculate the sum of the initial capital contributions.
+3. Ran a deterministic SPARQL query across the graph to calculate the sum of the initial capital contributions and verify its alignment with the allocated equity.
 
-The program successfully computed the exact total capital amount, demonstrating that an autonomous script—without direct connection to the originating operational database—could read a narrative text file, extract its semantic data layer, and mathematically verify the financial ledger state with high certainty.
+The program successfully computed the exact total capital amount, demonstrating that an autonomous script—without a direct connection to the originating operational database and reading only the `output.databook.md` file—could parse the document, extract its semantic data layer, and mathematically verify the financial ledger state with absolute certainty.
 
 ---
 

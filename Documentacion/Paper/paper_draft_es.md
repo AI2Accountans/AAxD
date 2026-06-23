@@ -73,11 +73,11 @@ Este archivo CSV crudo de origen se cargó en Altova MapForce. Creamos una estru
 
 
 ### 4.3. Verificación y Auditoría Automatizadas
-La carga útil de JSON-LD mapeada se incrustó directamente en un documento Markdown DataBook, estableciendo un registro de doble propósito que combina la escritura de constitución legible por humanos con el grafo transaccional subyacente.
+La salida del mapeo de Altova MapForce se consolida en un archivo Markdown híbrido denominado `output.databook.md`, el cual constituye el DataBook objetivo. Este archivo establece un registro de doble propósito que combina la escritura de constitución en lenguaje natural con el grafo transaccional en JSON-LD subyacente.
 
-Para probar la verificación automatizada, este DataBook se analizó dentro de un entorno Python (Google Colab). Un script de auditoría automatizado construido con la librería `rdflib` realizó los siguientes pasos de forma automática:
-1. Escaneó el documento Markdown, separó el texto en lenguaje natural e aisló los bloques de grafos JSON-LD incrustados.
+Para probar la verificación automatizada, se ejecutaron pruebas de auditoría sobre este archivo dentro de un entorno de Google Colab utilizando el cuaderno de notas `MarkDown_1.ipynb` (almacenado localmente en `C:\Users\IPHIX\Documents\Projects\DFRNT\Momento0\Google Colab\`). El script de auditoría automatizado, construido con la librería `rdflib` de Python, realizó de forma automática los siguientes pasos:
+1. Escaneó el documento `output.databook.md`, separó el texto en lenguaje natural e aisló los bloques de grafos JSON-LD incrustados.
 2. Cargó estos bloques en un grafo activo en memoria basado en el Marco de Descripción de Recursos (RDF, por sus siglas en inglés).
-3. Ejecutó una consulta SPARQL determinista sobre el grafo para calcular la suma de las contribuciones de capital inicial.
+3. Ejecutó una consulta SPARQL determinista sobre el grafo para calcular la suma de las contribuciones de capital inicial y verificar su concordancia con las cuotas asignadas.
 
-El programa calculó con éxito el monto exacto del capital total, demostrando que un script autónomo —sin conexión directa a la base de datos operativa de origen— podía leer un archivo de texto operativo narrativo, extraer su capa de datos semánticos y verificar matemáticamente el estado del libro contable con alta certeza.
+El programa calculó con éxito el monto exacto del capital total, demostrando que un script autónomo —sin conexión directa a la base de datos operativa de origen y leyendo únicamente el archivo `output.databook.md`— podía analizar el documento, extraer su capa de datos semánticos y verificar matemáticamente el estado del libro contable con absoluta certeza.
