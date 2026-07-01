@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&AD Going Concern Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#0f766e',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#0d9488',
+                lineColor: '#9ca3af',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#2563eb'
+            }
+        });
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8 flex flex-col items-center">
+
+    <header class="text-center mb-12 w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+            A&AD: Going Concern Onboarding Pipeline
+        </h1>
+        <p class="text-lg text-slate-400 max-w-3xl mx-auto">
+            Metodología visual para inicializar un Gemelo Digital Semántico en una entidad en marcha, anclando la confianza desde el Momento 0 hasta el Grafo Operativo.
+        </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 w-full max-w-7xl mb-16">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">1</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Momento 0</h3>
+            <p class="text-sm text-slate-300">Balance de Apertura estructurado en XBRL GL como el holón inmutable fundacional.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">2</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Contexto Legal</h3>
+            <p class="text-sm text-slate-300">DataBooks con contratos activos y Políticas Contables (Ontologías/SKOS) que dictan las reglas.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">3</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Anclaje de Confianza</h3>
+            <p class="text-sm text-slate-300">El Dictamen del Auditor sella criptográficamente el balance de apertura, evitando revisiones pasadas.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-orange-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #f59e0b, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Hidratación Histórica</h3>
+            <p class="text-sm text-slate-300">Ingesta y transmutación masiva de asientos contables del ERP legado desde el Momento 0 a la fecha.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-blue-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Estado Destino</h3>
+            <p class="text-sm text-slate-300">TerminusDB/DFRNT instanciado, listo para QOWL Queries multidimensionales y AI Zero-shot audits.</p>
+        </div>
+
+    </div>
+
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-8 text-teal-300 border-b border-teal-800 pb-2 w-full text-center">Architecture Flow</h2>
+        <div class="mermaid w-full flex justify-center">
+            graph TD
+                %% Nodos de Origen
+                A[Balance de Apertura] -->|XBRL GL| E
+                B[Contratos Activos] -->|DataBooks JSON-LD| E
+                C[Políticas Contables] -->|Ontología / SKOS| E
+                D[Reporte del Auditor] -->|Firma de Confianza| E
+                
+                %% Nodo Central: El Momento 0
+                E((Establecimiento del<br>Nuevo Momento 0))
+                
+                %% Ingesta Histórica
+                F[Sistemas ERP Legados] -->|Asientos de Diario CSV| G[Altova MapForce<br>Transmutación Semántica]
+                G -->|Eventos JSON-LD| H{Validación SHACL}
+                
+                %% Flujo al Grafo
+                E --> H
+                H -->|Aprobado| I[(TerminusDB / DFRNT<br>Semantic Knowledge Graph)]
+                
+                %% Salidas
+                I -->|QOWL Queries| J[Reportes Multidimensionales<br>NIIF / Fiscal / ESG]
+                I -->|Zero-shot Audit| K[Agentes Autónomos IA]
+                
+                %% Estilos
+                classDef genesis fill:#0d9488,stroke:#0f766e,stroke-width:2px,color:white;
+                classDef process fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:white;
+                classDef database fill:#2563eb,stroke:#1d4ed8,stroke-width:2px,color:white;
+                classDef output fill:#7c3aed,stroke:#5b21b6,stroke-width:2px,color:white;
+                
+                class A,B,C,D,E genesis;
+                class F,G,H process;
+                class I database;
+                class J,K output;
+        </div>
+    </div>
+
+</body>
+</html>

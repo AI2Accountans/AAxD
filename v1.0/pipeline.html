@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&AD Going Concern Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#0f766e',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#0d9488',
+                lineColor: '#9ca3af',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#2563eb'
+            }
+        });
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8 pb-32 flex flex-col items-center relative">
+
+    <header class="text-center mb-8 w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+            A&AD: Going Concern Onboarding Pipeline
+        </h1>
+        <p class="text-lg text-slate-300 max-w-4xl mx-auto mb-4">
+            Visual methodology for initializing a Semantic Digital Twin in an active enterprise (Going Concern), anchoring deterministic trust from Moment 0 through to the Operational Knowledge Graph.
+        </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 w-full max-w-7xl mb-12">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">1</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Moment 0</h3>
+            <p class="text-sm text-slate-300">Opening Balance Sheet structured in XBRL GL as the foundational immutable holon.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">2</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Legal Context</h3>
+            <p class="text-sm text-slate-300">DataBooks containing active contracts and Accounting Policies (Ontologies/SKOS) dictating the rules.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">3</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Assurance Anchor</h3>
+            <p class="text-sm text-slate-300">The Independent Auditor's Report cryptographically seals the opening balance, securing the baseline.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-orange-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #f59e0b, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Historical Hydration</h3>
+            <p class="text-sm text-slate-300">Massive ingestion and semantic transmutation of legacy ERP journal entries from Moment 0 to present.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-blue-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Target State</h3>
+            <p class="text-sm text-slate-300">TerminusDB/DFRNT instance deployed, enabling multidimensional QOWL queries and AI Zero-shot auditing.</p>
+        </div>
+
+    </div>
+
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-8 text-teal-300 border-b border-teal-800 pb-2 w-full text-center">Architecture Flow</h2>
+        <div class="mermaid w-full flex justify-center">
+            graph TD
+                %% Nodos de Origen
+                A[Opening Balance Sheet] -->|XBRL GL| E
+                B[Active Contracts] -->|JSON-LD DataBooks| E
+                C[Accounting Policies] -->|Ontology / SKOS| E
+                D[Auditor's Report] -->|Cryptographic Trust Seal| E
+                
+                %% Nodo Central: El Momento 0
+                E((Establishment of<br>New Moment 0))
+                
+                %% Ingesta Histórica
+                F[Legacy ERP Systems] -->|CSV Journal Entries| G[Altova MapForce<br>Semantic Transmutation]
+                G -->|JSON-LD Events| H{SHACL Validation}
+                
+                %% Flujo al Grafo
+                E --> H
+                H -->|Approved| I[(TerminusDB / DFRNT<br>Semantic Knowledge Graph)]
+                
+                %% Salidas
+                I -->|QOWL Queries| J[Multidimensional Reporting<br>IFRS / US GAAP / ESG]
+                I -->|Zero-shot Audit| K[AI Autonomous Agents]
+                
+                %% Estilos
+                classDef genesis fill:#0d9488,stroke:#0f766e,stroke-width:2px,color:white;
+                classDef process fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:white;
+                classDef database fill:#2563eb,stroke:#1d4ed8,stroke-width:2px,color:white;
+                classDef output fill:#7c3aed,stroke:#5b21b6,stroke-width:2px,color:white;
+                
+                class A,B,C,D,E genesis;
+                class F,G,H process;
+                class I database;
+                class J,K output;
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="fixed bottom-0 left-0 w-full bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-4 flex justify-center z-50">
+        <div class="bg-slate-800/80 border border-slate-600 rounded-lg py-3 px-6 text-center w-full max-w-4xl shadow-2xl">
+            <p class="text-sm text-slate-400">
+                <span class="text-teal-400 font-semibold text-xs uppercase tracking-wider block mb-1">Academic Foundation</span>
+                Based on the architecture proposed in: 
+                <i class="text-white">"The End of Reactive Control: Algorithmic Certainty through Accounting and Audit by Design (A&AD)"</i>
+                by Richard G. Gasca Buelvas
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
