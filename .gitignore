@@ -1,0 +1,39 @@
+# Ignorar ABSOLUTAMENTE TODO por defecto en esta carpeta
+*
+
+# Permitir a Git entrar en las subcarpetas (necesario para la regla anterior)
+!*/
+
+# ----------------------------------------------------
+# LISTA BLANCA (Archivos que SÍ se subirán a GitHub)
+# ----------------------------------------------------
+
+# Archivos de configuración y repositorio
+!.gitignore
+!LICENSE
+!README.md
+!certify_authorship.py
+
+# Archivos PDF finales y prueba criptográfica
+!AA_D_en.pdf
+!AA_D_es.pdf
+!authorship_qr.png
+
+# Código fuente del paper
+!paper_draft.tex
+!paper_draft_es.tex
+!paper_draft.md
+!paper_draft_es.md
+
+# Imágenes que pertenecen al paper
+!aad-zachman-atlas.png
+!aad-zachman-atlas.svg
+!aad_chain_evolved.png
+!aad_chain_evolved.svg
+!colab-step1.png
+!colab-step2.png
+!dfrnt-step1.png
+!dfrnt-step2.png
+!dfrnt-step3.png
+!dfrnt-step4.png
+!dfrnt-step5.png

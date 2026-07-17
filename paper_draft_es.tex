@@ -1,0 +1,323 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{abstract}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Framework A\&AD}
+\lhead{\small Gasca Buelvas, R.G.}
+\cfoot{\thepage}
+
+\begin{document}
+
+% -----------------------------------------------------------------------
+% TITLE
+% -----------------------------------------------------------------------
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE\bfseries El Fin del Control Posterior: Certeza Algorítmica mediante la Contabilidad y Auditoría por Diseño (A\&AD)\par}
+\vspace{1.5cm}
+{\large \textbf{Richard G. Gasca Buelvas}\par}
+\vspace{0.3cm}
+{\normalsize \textit{profesor de c\'atedra del Departamento de Ciencias Contables de la Facultad de Ciencias Econ\'omicas y Administrativas de la Pontificia Universidad Javeriana}\par}
+\vspace{0.2cm}
+{\normalsize E-mail: \href{mailto:rgasca@javeriana.edu.co}{rgasca@javeriana.edu.co}\par}
+\vspace{1cm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=3cm]{authorship_qr.png}
+    
+    \vspace{0.2cm}
+    {\scriptsize Escanee para verificar la autoría en la blockchain de Algorand\par}
+\end{figure}
+
+\begin{quote}
+\small\textbf{Nota de exención de responsabilidad (Disclaimer):} Las opiniones, an\'alisis y conclusiones expresadas en este art\'iculo son de exclusiva responsabilidad del autor y no comprometen ni representan la posici\'on oficial de la Pontificia Universidad Javeriana.
+\end{quote}
+\end{titlepage}
+
+% -----------------------------------------------------------------------
+% ABSTRACT
+% -----------------------------------------------------------------------
+\renewcommand{\abstractname}{Resumen}
+\begin{abstract}
+La profesión contable navega actualmente por un páramo de software caracterizado por una ``jungla de aplicaciones'' en constante expansión y una ``maraña de integración'' profundamente arraigada. A través del síndrome de la normalidad progresiva (\textit{creeping normalcy}), los marcos de gobierno corporativo han tolerado una realidad fragmentada donde los registros financieros están desconectados de los eventos de negocio que los originaron. Esta fragmentación obliga a las organizaciones a depender de procesos de conciliación retroactivos y artesanales que son costosos, propensos a errores y limitan severamente la visibilidad disponible para las juntas directivas. Para escapar de este paradigma, la profesión debe industrializar sus procesos, pasando de una mentalidad artesanal ---análoga a cocinar de memoria--- a un enfoque industrializado que garantice resultados verificables.
+
+Para resolver estas ineficiencias, este artículo introduce el marco de Contabilidad y Auditoría por Diseño (A\&AD). El modelo A\&AD reemplaza la verificación retrospectiva por un aseguramiento determinista en tiempo real, logrando un ``Cumplimiento Defendible'' (\textit{Defensible Compliance}) en el momento exacto en que ocurren los eventos. Al extender el paradigma de desplazamiento hacia la izquierda (\textit{shift-left}) al control organizacional, A\&AD hace cumplir las restricciones fiscales y normativas directamente en el momento del origen económico: el contrato inicial o evento de negocio. Al representar las transacciones como holones autónomos e inmutables dentro de grafos de conocimiento semántico, aprovechando estándares W3C como JSON-LD y SHACL, el control interno deja de ser una intervención humana manual para convertirse en una propiedad topológica intrínseca de la arquitectura de datos. Este enfoque elimina sistemáticamente las conciliaciones posteriores, valida el cumplimiento regulatorio en el punto exacto de ingesta de datos y permite una auditoría continua sobre la totalidad de los eventos comerciales.
+\end{abstract}
+
+\hrule
+\vspace{1em}
+
+% -----------------------------------------------------------------------
+% SECTION 1: INTRODUCTION
+% -----------------------------------------------------------------------
+\section{Introducción y la Deuda de Conciliación}
+
+Desde que se inventó la partida doble hace muchos siglos, la contabilidad siempre ha mirado por el espejo retrovisor. La tecnología moderna y los sistemas ERP a gran escala digitalizaron el proceso, pero simultáneamente crearon una ``jungla de aplicaciones'' de módulos desconectados. Hoy en día, los datos empresariales sufren de una fragmentación severa. Los registros financieros siguen siendo planos: fotos estáticas completamente desconectadas de los contratos legales y las operaciones reales que los generaron. A través de un proceso de ``normalidad progresiva'', la industria ha aceptado esta ``maraña de integración'' como práctica estándar, gastando fortunas y miles de horas en protocolos de conciliación artesanales solo para intentar unir un rompecabezas roto.
+
+Para recuperar el control, las organizaciones deben alcanzar el \textbf{Cumplimiento Defendible} a través de la \textbf{Trazabilidad Epistémica}: una cadena inquebrantable y verificable de evidencia, lógica y estructura de datos que demuestre matemáticamente cómo una organización conoce su estado financiero. La justificación económica de esto se fundamenta en la \textbf{Regla 1-10-100 de Gestión de Calidad} (un principio central de Lean Six Sigma): invertir \$1 en prevención en el punto de origen evita gastar \$10 en remediación durante el cierre de mes, o \$100 en fallas catastróficas de reporte \cite{defeo2017}.
+
+Kendall Tieck (2014), en su presentación ante ISACA, conceptualizó esta necesidad como ``Auditoría por Diseño: Más allá de la Auditoría Continua'' \cite{tieck2014}. Tieck argumentaba que el verdadero aseguramiento debe estar construido en el tejido del sistema en lugar de aplicarse retroactivamente. Sin embargo, la actual era de la inteligencia artificial agudiza los viejos problemas. Cuando agentes de software autónomos ejecutan procesos clave de negocio, los sistemas tradicionales registran el número final pero borran el contexto semántico, creando una caja negra.
+
+¿Cómo recuperamos entonces el control? ¿Cómo volvemos a confiar en nuestros propios sistemas? La respuesta implica un cambio radical de metodología: en lugar de auditar al final del mes, vamos a validar los datos en el segundo exacto en el que se origina la transacción. A esto lo denominamos un gemelo digital semántico de Momento~0, desarrollado a través de la Investigación en Ciencia del Diseño (DSR). La arquitectura propuesta integra el framework de Recurso-Evento-Agente (REA) con los estándares de la Web Semántica, desacoplando el significado semántico de los eventos económicos (utilizando JSON-LD y XBRL GL) de las aplicaciones de software específicas.
+
+Además, introducimos el uso de DataBooks híbridos \cite{cagle2026} como mecanismo de transporte estandarizado. Al incrustar taxonomías SKOS \cite{w3cskos} directamente en los modelos de lenguaje grande (LLM), estos DataBooks permiten la auditoría inmediata y \textit{zero-shot} de eventos de negocio, tanto por parte de supervisores humanos como de agentes de IA autónomos. La arquitectura resultante es la de una caja de cristal: toda la actividad económica es rastreable, verificable y auditable en tiempo real. El resto de este artículo describe los fundamentos teóricos de este modelo, detalla sus componentes de diseño y demuestra su aplicación práctica en la auditoría del Momento~0 de una entidad corporativa.
+
+\hrule
+\vspace{1em}
+
+% -----------------------------------------------------------------------
+% SECTION 2: RELATED WORK
+% -----------------------------------------------------------------------
+\section{Trabajo Relacionado y Marco Teórico}
+
+La base teórica de la arquitectura A\&AD se encuentra en la intersección de la Arquitectura Empresarial de Zachman, la pila de la Web Semántica de Tim Berners-Lee \cite{bernerslee2001}, los marcos contables ontológicos y las capacidades de auditoría de la inteligencia artificial generativa moderna. Esta integración aprovecha la clasificación estructurada de Zachman para mapear las interrogantes organizacionales (qué, cómo, dónde, quién, cuándo y por qué) directamente sobre las capas técnicas de la pila de la Web Semántica de Berners-Lee ---la cual abarca desde la representación en RDF/OWL hasta las capas de reglas, pruebas criptográficas y confianza del sistema---, con el objetivo de sanar la división histórica que separa la lógica de negocio operativa de los registros de libros contables financieros.
+
+\subsection{El Paradigma REA y los Gemelos Digitales Basados en Grafos}
+La base conceptual de esta arquitectura se alinea con \textbf{Audit 4.0}, específicamente con el concepto de gemelo digital tipo \textbf{``Mundo Espejo''} (\textit{Mirror World}) concebido por Dai \& Vasarhelyi \cite{dai2016}. Un Mundo Espejo no es meramente un repositorio de datos, sino un reflejo activo y semántico de las interacciones económicas del mundo real. Cuando los analistas de Gartner comenzaron a describir los Gemelos Digitales de Organizaciones (DTOs) \cite{gartner2023}, la misma lógica se traspuso a la gestión y las operaciones, posicionando a los DTOs como el tejido conectivo entre la actividad cotidiana y los reportes ejecutivos. Eso es útil. Pero no es suficiente. Un Gemelo Digital Semántico financiero no puede limitarse a reflejar flujos de trabajo o saldos contables ---debe cargar el peso semántico completo de los eventos de negocio que produjeron esas cifras. Esa carga semántica es precisamente lo que habilita la Preparación para la IA (\textit{AI Readiness}): sin ella, cualquier agente de IA que razone sobre datos financieros está, dicho sin rodeos, razonando sobre sombras. Este desplazamiento ---de dato-como-resultado a dato-como-contexto--- es lo que pioneros de la arquitectura empresarial como Dave McComb \cite{mccomb2019} y Cheryl Dunn \cite{dunn2004} han descrito desde hace tiempo bajo la bandera de la arquitectura centrada en datos: un mundo donde el modelo de datos de la empresa sobrevive a todas las aplicaciones construidas sobre él. Para entender cómo construimos este gemelo, es necesario viajar en el tiempo, específicamente al año 1969. En ese año, George H. Sorter propuso algo revolucionario: un enfoque de eventos para la teoría contable \cite{sorter1969}. Sorter argumentaba que, en lugar de depender únicamente de resúmenes financieros tradicionales y superagregados, los sistemas debían registrar y recuperar datos detallados cada vez que ocurriera un evento económico individual. La idea era tan simple como poderosa: dar a los usuarios la información detallada para que ellos mismos tomaran las decisiones.
+
+Años más tarde, en 1997, Shyam Sunder reforzó esta visión con su teoría de la contabilidad y el control, definiendo a la empresa como un nexo de contratos \cite{sunder1997}. Imagínelo así: una compañía no es más que una suma de acuerdos entre proveedores de recursos y personas que deciden darle origen a una entidad ---nuestro Momento~0---, y el sistema contable debe estar ahí para medir y vigilar que estos acuerdos se cumplan. El framework A\&AD operacionaliza este concepto llevando la idea de Sunder a la práctica: representamos cada contrato de forma independiente dentro de un grafo de conocimiento semántico. Cada contrato es un holón: un nodo autónomo con todos sus atributos. El resultado es la capacidad de rastrear en tiempo real cualquier transacción, evento o condición, así como la fuente y el uso de los recursos correspondientes.
+
+¿Cómo estructuramos todo esto? Nos basamos en la teoría que William E. McCarthy (1982) formalizó: el modelo REA (Recurso-Evento-Agente) \cite{mccarthy1982}. McCarthy sostenía que los registros contables deben reflejar la sustancia económica real de las transacciones, centrándose en la naturaleza del evento, las personas que participan y los recursos que se intercambian. Sin embargo, en aquellos tiempos y con la evolución de los sistemas ERP tradicionales, el concepto REA quedó atrapado dentro de las tablas relacionales. Con el tiempo, investigadores modernos han llevado el modelo a otro nivel, formalizándolo en ontologías rigurosas como OntoREA \cite{fischerpauzenberger2017} para representar incluso los portafolios de derivados financieros más complejos \cite{fischerpauzenberger2018}.
+
+Nuestro enfoque va un paso más allá: integramos directamente los estándares de la industria como FIBO \cite{edmc2020} y ACTUS \cite{actus2018} en el grafo transaccional. Y aquí está la verdadera innovación topológica: no enrutamos las transacciones a través de un sistema relacional (ERP) para luego convertirlas en un grafo. Hacemos que el contrato nazca directamente en formato XBRL GL y, simultáneamente, que esa instancia sea transmutada en un payload JSON-LD para ser inyectado en el grafo semántico. El grafo es la fuente original de la verdad, y nuestra misión consiste en mantener hidratada esta ontología para que sea fuente de verdad para todos los propósitos ---financieros y no financieros--- de la entidad. Los sistemas tradicionales pueden ejecutarse en paralelo o sincronizarse en una segunda etapa, pero para manejar la complejidad multidimensional de los negocios de hoy, la dirección es clara: debemos evolucionar de los rígidos motores relacionales hacia la flexibilidad absoluta de los grafos semánticos.
+
+\subsection{El Método Seattle, Reglas Legibles por Máquina e Integración de la Cadena de Suministro}
+Históricamente ha existido un nudo entre las operaciones del día a día y los reportes externos. Este límite es precisamente lo que ataca el \textbf{Método Seattle} \cite{hoffman2025}. Hoffman propone reemplazar los silos de datos cerrados por una Arquitectura Empresarial Impulsada por Modelos, en una transición de la contabilidad artesanal hacia la industrialización. El núcleo de este método reside en los \textbf{Organismos de Información Digital (DIO)} y en la generación de \textbf{Papeles de Trabajo Contables Canónicos (CAWP)}, transformando datos crudos de entrada en resultados estandarizados y comprobables.
+
+De forma crucial, la autoverificación de estos registros no es una magia inherente del grafo en sí, sino el resultado de ejecutar \textbf{reglas legibles por máquina} ---específicamente reglas de mecánica de revelación, reglas de eventos de negocio y mapeos transaccionales--- aplicadas de manera determinista en el momento de la ingesta.
+
+Y es aquí donde entra la estrella de este segmento: el lenguaje XBRL Global Ledger (XBRL GL). Para entender su valor, hagamos una distinción. Mientras el XBRL FR (Reportes Financieros) está diseñado para los reportes agregados al final del período, el XBRL GL captura y estandariza los datos transaccionales de la manera más granular posible. Dentro de este estándar, el elemento \texttt{accountingPurposeCode} resulta crucial: nos permite clasificar y etiquetar el propósito de cada registro contable desde el momento exacto en que nace el dato ---si es para propósitos IFRS, US GAAP o fiscales, por ejemplo---. Al mapear esta etiqueta directamente al grafo semántico, resolvemos de un plumazo el clásico problema de tener múltiples libros contables paralelos. Un mismo evento transaccional puede ahora ser consultado y filtrado dinámicamente según el propósito requerido, asegurando granularidad total y eliminando la duplicidad. Es más, los registros resultantes son capaces de autoreconciliarse.
+
+Implementar XBRL GL como corazón de nuestros datos permite una interoperabilidad total, independiente de la plataforma. El marco A\&AD va más allá: extiende ese poder a través de toda la cadena de suministro, capturando tanto datos financieros cuantitativos como datos operativos no financieros. Al preservar estas ricas referencias contextuales a lo largo de toda la cadena de suministro de información ---desde el evento de negocio original directamente hasta el libro mayor de reportes--- el Gemelo Digital Semántico elimina inherentemente el esfuerzo tradicional y laborioso de reensamblar la traza de auditoría bajo demanda. Gracias a esta consolidación en el grafo semántico, podemos generar directamente un estado de situación financiera y, al mismo tiempo, un reporte de sostenibilidad corporativa ---los conocidos reportes ESG--- todo desde la misma fuente de verdad, sin extracciones engorrosas o remapeos adicionales. Para gobernar este flujo multidimensional, el framework se apoya en la Arquitectura Empresarial de Zachman, utilizando sus filas y columnas para mapear cada acción operativa directamente sobre las capas técnicas de la pila semántica.
+
+\subsection{IA Explicable, Estructuración SKOS y DataBooks}
+A medida que los modelos de aprendizaje automático asumen más responsabilidades en la auditoría financiera, surge el elefante en la habitación: el riesgo de las alucinaciones de la inteligencia artificial. Mitigar este riesgo no es solo importante, es primordial; necesitamos inteligencia artificial explicable.
+
+Para lograrlo, el framework articula dos herramientas complementarias: los DataBooks \cite{cagle2026} y los SKOS. Los DataBooks son archivos Markdown híbridos que contienen cargas útiles JSON-LD incrustadas, perfectamente legibles por máquina. Lo que hacen estos DataBooks es la magia técnica del framework: conectan de manera efectiva los textos narrativos puros ---los acuerdos legales, las escrituras de constitución--- directamente con los datos estructurados en los grafos semánticos.
+
+Los SKOS actúan como una capa auxiliar que complementa el esquema JSON-LD: organizan conceptos, etiquetas y relaciones semánticas en un vocabulario controlado, más claro e interoperable. Esta capa es especialmente valiosa cuando se desea enlazar la ontología con estándares externos, como FIBO o los estándares de 1EdTech para la certificación de competencias del personal. Con esto, logramos incorporar las taxonomías SKOS del W3C \cite{w3cskos} directamente en la arquitectura de los grandes modelos de lenguaje (LLM): la base definitiva para una IA explicable.
+
+¿Qué se hace hoy sin esta arquitectura? Se intenta cargar reglas regulatorias supercomplejas y de múltiples volúmenes ---como las NIIF o los US GAAP--- directamente en la ventana de contexto temporal del LLM. Esto es computacionalmente ineficiente y, francamente, dispara las tasas de error. En cambio, con nuestra arquitectura, el agente auditor de IA aprovecha el conocimiento preexistente del modelo sobre estas estructuras SKOS estandarizadas. El DataBook individual solo necesita exponerle los conceptos específicos y localizados relevantes para esa transacción en particular. Esta combinación permite a los agentes de auditoría evaluar grafos complejos con precisión milimétrica, siempre delimitados por fronteras ontológicas claras, facilitando así un monitoreo continuo, independiente y en el que se puede confiar plenamente.
+
+\hrule
+\vspace{1em}
+
+% -----------------------------------------------------------------------
+% SECTION 3: ARTIFACT DESIGN
+% -----------------------------------------------------------------------
+\section{Diseño del Artefacto: El Gemelo Digital Semántico A\&AD}
+
+Siguiendo el enfoque de la investigación en ciencia del diseño (DSR), esta propuesta se materializa en un artefacto orientado a integrar, estructurar y hacer trazable la información a lo largo de todo el proceso, desde su captura hasta su reporte. Su finalidad es conectar de manera consistente el entorno operativo con las exigencias normativas mediante una arquitectura que combina una base y cuatro componentes funcionales: la matriz de navegación conceptual, el motor de grafo operativo, la capa de transmutación semántica y el contenedor de conocimiento vivo.
+
+\subsection{El Plano Conceptual: La Matriz de Navegación A\&AD}
+Antes de describir la implementación física, el framework A\&AD propone un plano conceptual denominado Atlas de Referencia A\&AD. Este recurso integra las columnas del Marco de Zachman (Por qué, Cómo, Qué, Quién, Dónde y Cuándo) con las capas de la pila de la Web Semántica definidas por el W3C. El resultado es una matriz de orientación que conecta objetivos de negocio y sucesos operativos con los activos del grafo y sus mecanismos de validación criptográfica. El esquema interactivo disponible en \url{https://ai2accountans.github.io/Zachman_Framework_Model/} articula las capas de ingeniería y ayuda a conservar el significado operativo y regulatorio de cada activo de datos durante su recorrido por la pila.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{aad-zachman-atlas.png}
+\caption{Atlas de Referencia A\&AD --- Fusión Semántica del Marco de Zachman y la Pila de la Web Semántica TBL (Elaboración Propia). Versión interactiva disponible en \url{https://ai2accountans.github.io/Zachman_Framework_Model/}}
+\label{fig:atlas}
+\end{figure}
+
+\subsection{El Motor de Grafo Operativo (TerminusDB y DFRNT)}
+En el nivel inferior de la pila de sistemas se encuentra TerminusDB ---no un motor relacional convencional, sino algo cualitativamente diferente: una base de datos de grafos de documentos que opera bajo semántica de mundo cerrado. ¿Qué significa eso en la práctica? En contabilidad financiera, un asiento de débito existe o no existe. No hay término medio, no hay ``probablemente'' ni ``tal vez''. La mayoría de las bases de datos de grafos están construidas bajo el supuesto opuesto: si un hecho está ausente, simplemente se desconoce. El razonador datalog CWA de TerminusDB invierte esa lógica ---cualquier hecho no registrado se trata como falso, que es exactamente la garantía determinista que exige un libro mayor confiable. En la construcción de este PoC, encontramos que esta propiedad por sí sola elimina toda una clase de errores de integridad de datos que acosan las implementaciones convencionales. Más allá de la integridad, la arquitectura inmutable de solo adición desbloquea algo a lo que los auditores raramente tienen acceso: razonamiento bitemporal genuino. En cualquier momento, podemos reconstruir no solo lo que dice el libro mayor ahora, sino lo que decía ---y lo que se sabía--- en cualquier instante anterior. Cada documento JSON-LD lleva su propia cadena de procedencia, incluyendo quién lo escribió, cuándo y bajo qué estado del sistema. Para navegar y consultar este grafo en producción, recurrimos a la plataforma de datos semánticos DFRNT, que procesa el grafo de documentos y lo expone a través de QOWL (GraphQL sobre OWL). Nuestras consultas apuntan directamente al evento génesis del ``Momento~0'', extrayendo no solo las cifras monetarias sino el linaje relacional completo de cada agente y activo involucrado.
+
+\subsection{La Capa de Transmutación Semántica (Altova XMLSpy y MapForce)}
+A lo largo del ejercicio profesional, se ha constatado la dependencia permanente de las hojas de cálculo para construir reportes financieros. Con el conocimiento de la tecnología XBRL, es posible trasladar esa filosofía de etiquetado semántico a la hoja de cálculo, logrando el enriquecimiento de los datos para hacer agregaciones mediante etiquetas similares a las NIIF, de manera altamente eficiente y económica. Esta observación práctica ilustra el problema central: los datos en formato CSV, TXT o Excel que se obtienen directamente de la base operativa de cualquier sistema suelen emplear un vocabulario completamente interno, sin incluir la taxonomía regulatoria normalizada que es indispensable para la auditoría y la verificación. ¿Cómo cerramos esa brecha sin caer en la trampa de depender de reglas de traducción rígidamente codificadas que se romperían con cualquier cambio normativo?
+
+La respuesta está en nuestra arquitectura, que incorpora la potente suite Altova como motor principal de la transmutación semántica. El proceso funciona en dos grandes etapas:
+
+En la primera etapa, Altova XMLSpy actúa como el entorno de diseño de esquemas, donde se definen las estructuras JSON-LD y se aplican las restricciones SHACL del W3C. Esto garantiza que la ontología central cumpla con todos los criterios de coherencia lógica antes de siquiera tocar un dato real.
+
+Una vez validado el esquema, Altova MapForce entra en escena como motor de mapeo independiente del formato. A partir de la carga JSON de origen, MapForce aplica las ontologías W3C y el XBRL Global Ledger previamente modelado en XMLSpy. El resultado es pura automatización: una transformación automática de los contratos, primero hacia XBRL GL y luego hacia una instancia JSON-LD estandarizada, 100\% compatible con el grafo semántico.
+
+Y aquí es donde rompemos con el pasado. En el enfoque tradicional de XBRL, las validaciones y reglas de negocio suelen implementarse mediante \textit{XBRL Formula Linkbase}. En el framework A\&AD, en cambio, esa lógica de control se traslada directamente al grafo semántico y se ejecuta mediante SHACL. Este estándar nos permite definir restricciones estructurales y matemáticas directamente sobre los nodos y sus relaciones ---por ejemplo, verificar matemáticamente que los débitos y créditos mantengan el equilibrio perfecto en una transacción, o que no se excedan determinados límites en la emisión de acciones---. Gracias a esta arquitectura por capas, la validación del cumplimiento contable ocurre en el momento exacto de la ingesta, antes de que los datos sean expuestos a cualquier revisión externa: pasamos de una auditoría forense posterior a una verificación preventiva en tiempo real.
+
+La evolución de este modelo de transmutación, extendido hacia la integración completa de la cadena de suministro bajo los estándares W3C, se ilustra en la Figura \ref{fig:chain}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{aad_chain_evolved.png}
+\caption{Evolución de la Cadena de Suministro A\&AD --- Pila W3C (Elaboración Propia). Basado en W3C XBRL Business Reporting Chain (2009): \url{https://www.w3.org/2009/03/xbrl/old-report.html}}
+\label{fig:chain}
+\end{figure}
+
+Y no estamos especulando: esta aproximación tiene precedentes sólidos en la industria, como el caso documentado por la Asociación de CPAs de Maryland (MACPA), que demostró ya desde 2010 la viabilidad absoluta de utilizar XMLSpy y MapForce para convertir bases contables heterogéneas en estructuras XBRL GL perfectamente estandarizadas \cite{altova2010}.
+
+\subsection{El Contenedor de Conocimiento Vivo (DataBooks)}
+La etapa final del canal de datos de A\&AD articula la interacción entre usuarios humanos y sistemas automatizados. La salida estructurada en JSON-LD se organiza en un DataBook, concebido como un documento híbrido en formato Markdown. Este artefacto combina una narrativa comprensible para personas (similar a una escritura constitutiva o un acuerdo de sociedad) con fragmentos de JSON-LD integrados en su estructura y preparados para su procesamiento automático. De esta manera, el documento funciona como un holón autónomo e inmutable, capaz de preservar tanto el significado de negocio como su representación computable. En la práctica, los supervisores humanos pueden examinar el contexto en texto plano, mientras que los agentes de IA acceden al grafo incorporado y lo analizan mediante taxonomías SKOS previamente entrenadas. Esta separación entre la capa leída por personas y la capa procesable por máquinas reduce la dependencia del lenguaje libre no estructurado y aumenta la confiabilidad del análisis. Con ello, el diseño refuerza un enfoque de \textit{shift-left auditing} al trasladar la verificación hacia las etapas más tempranas del flujo de datos.
+
+\subsection{Ocultando la Complejidad: El Diseño Atómico de los Metadatos Financieros}
+Para escalar esta arquitectura, el marco A\&AD adopta un enfoque de Diseño Atómico (\textit{Atomic Design}) para los metadatos financieros. Los datos del grafo se mapean estructuralmente desde \textbf{Átomos} (propiedades semánticas y valores individuales) hacia \textbf{Moléculas} (agrupaciones como un valor monetario junto a su moneda), \textbf{Organismos} (Organismos de Información Digital que representan una transacción completa), \textbf{Plantillas} (estructuras de reporte regulatorio), y finalmente \textbf{Páginas} (los estados financieros finales renderizados). Esto permite al sistema ocultar la complejidad subyacente al usuario final manteniendo una absoluta integridad estructural.
+
+\subsection{Computación Operativa en Grafos vs. Datos en Reposo}
+Tal como lo articula el manifiesto del Grupo Comunitario de Holones del W3C escrito por Kurt Cagle \cite{cagle2025}, la pila actual de la Web Semántica es excelente para modelar ``datos en reposo'', pero presenta dificultades para la computación operativa en grafos. El RDF tradicional carece de capacidades de Map/Reduce, restricciones procedimentales y consultas con nombre (\textit{named queries}). A\&AD soluciona operativamente estas brechas utilizando XQuery (actuando como el ``XQuery para Grafos'' faltante) y el motor TerminusDB para ejecutar recorridos de grafo complejos y funcionales, así como manipulación programática de datos que SHACL por sí solo no puede realizar.
+
+\hrule
+\vspace{1em}
+
+% -----------------------------------------------------------------------
+% SECTION 4: DEMONSTRATION
+% -----------------------------------------------------------------------
+\section{Demostración: Caso de Estudio del Momento de la Génesis}
+
+Para validar el framework A\&AD, se ejecutó una Prueba de Concepto (PoC) práctica que modela el ``Momento~0'' de una entidad corporativa. El origen de la entidad es un acuerdo de voluntades entre los socios fundadores, plasmado en un documento oficial elevado a escritura pública en una notaría (en este caso, el archivo \texttt{SOCIEDAD\_LIMITADA.pdf} ubicado en la carpeta de la escritura de constitución). Este caso de estudio recorre todo el canal desde la extracción inicial hasta la verificación en el grafo y la posterior auditoría automatizada.
+
+\subsection{Extracción de Datos y Preparación Operativa}
+Los términos y aportes de capital del acuerdo de voluntades (los socios, sus cuotas de capital y sus identificaciones fiscales) se extrajeron del PDF y se les agregó la semántica contable correspondiente (para fines ilustrativos de esta demostración, este proceso se realizó de forma manual) con el objetivo de alistar el conjunto de datos. Estos datos se estructuraron de forma tabular en una hoja de cálculo de Google Sheets (disponible públicamente para auditoría en \url{https://bit.ly/AAYD-Genesis}) para servir como el origen operativo del pipeline de datos. Estos datos crudos se exportaron en formato CSV representando el asiento de constitución inicial del libro diario, listos para iniciar su transmutación sin pasar por un sistema ERP tradicional.
+
+\subsection{Transmutación Semántica con la Suite Altova}
+Este archivo CSV crudo de origen se cargó en Altova MapForce. Creamos una estructura de mapeo de datos visual para alinear el esquema del libro diario de origen con los elementos de la taxonomía XBRL GL, tales como \texttt{gl-cor:amount}, \texttt{gl-cor:measurableQuantity} y \texttt{gl-cor:accountMainID}. Altova MapForce procesó la entrada para generar una instancia de grafo JSON-LD estandarizada de la transacción, traduciendo con éxito la nomenclatura interna local a la taxonomía universal de XBRL GL.
+
+\subsection{Ingesta, Modelado y Consulta en DFRNT / TerminusDB}
+La fase de integración y consulta semántica representa la culminación operativa de nuestro pipeline, donde el grafo JSON-LD adquiere significado lógico dentro del ecosistema DFRNT (el cual aloja la base de datos TerminusDB). La configuración del entorno ontológico, la ingesta de los datos transmutados, la visualización del gemelo lógico, y la ejecución de consultas QOWL permiten una verificación transparente e inmutable de la estructura de la empresa en su creación, asegurando que la integridad relacional del capital fundacional y las acciones de los participantes se conserve dentro de la arquitectura del grafo semántico.
+
+\subsection{Verificación y Auditoría Automatizadas}
+La salida estructurada extraída del grafo se consolidó, junto con la narrativa de la escritura pública en lenguaje natural, en el archivo Markdown híbrido denominado \texttt{output.databook.md} (el DataBook objetivo). Para probar la verificación automatizada de forma independiente y externa a la base de datos operativa, se ejecutaron pruebas de auditoría en un entorno de Google Colab.
+
+El flujo de auditoría automatizado, construido en celdas de Jupyter Notebook y ejecutado con la librería \texttt{rdflib} de Python, se compone de cuatro pasos detallados. Primero, se carga el archivo DataBook en el entorno aislado. Segundo, el documento Markdown híbrido es analizado para extraer los bloques de código JSON-LD ocultos. Tercero, los segmentos JSON-LD extraídos se compilan en un grafo RDF en memoria utilizando la librería de web semántica, reconstruyendo el grafo de conocimiento transaccional completo únicamente a partir del DataBook (Figura \ref{fig:colab1}). Finalmente, se ejecuta una consulta SPARQL declarativa contra este grafo en memoria para sumar todos los aportes de capital, produciendo un total verificado de \$10,000,000 COP (Figura \ref{fig:colab2}).
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{colab-step1.png}
+\caption{Parseo del DataBook y compilación del grafo RDF en memoria (Elaboración Propia)}
+\label{fig:colab1}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{colab-step2.png}
+\caption{Resultado de la verificación matemática mediante SPARQL: \$10,000,000 COP (Elaboración Propia)}
+\label{fig:colab2}
+\end{figure}
+
+¿Qué demuestra ese resultado, más allá de la aritmética? Demuestra que la auditoría no necesita vivir donde nació el dato. Un script autónomo ---que no lee nada más que un único archivo Markdown, sin conexión a base de datos, sin credenciales privilegiadas--- puede reconstruir el grafo transaccional completo y verificar su consistencia interna. Así es como se ve en la práctica una auditoría continua y descentralizada.
+
+Hay un matiz que vale la pena aclarar aquí ---y que importa operativamente--- : TerminusDB expone dos lenguajes distintos para propósitos diferentes. QOWL (GraphQL sobre RDF) es al que la mayoría de los profesionales recurrirán primero: intuitivo, declarativo y muy adecuado para consultas de reporte. WOQL, el Web Object Query Language, es una bestia diferente. Aplica lógica datalog directamente sobre el grafo, lo que lo convierte en la herramienta adecuada para hacer cumplir las reglas transaccionales REA que describimos antes. Una restricción WOQL no simplemente verifica una condición ---impide que se escriba un estado inconsistente. Las actualizaciones son atómicas, sujetas a reglas y verificables. En la arquitectura A\&AD, WOQL no es una opción; es la capa de cumplimiento.
+
+\hrule
+\vspace{1em}
+\clearpage
+
+% -----------------------------------------------------------------------
+% SECTION 5: CONCLUSION
+% -----------------------------------------------------------------------
+\section{Conclusión}
+
+La dependencia de procesos de conciliación retrospectivos es un hábito artesanal obsoleto de la era de las bases de datos relacionales. Como lo demuestra el modelo de Contabilidad y Auditoría por Diseño (A\&AD), desplazar los procedimientos de verificación hacia la izquierda (``\textit{shift-left}''), al momento exacto de la creación del dato, es el único camino hacia la industrialización. Al integrar la ontología REA, grafos de conocimiento en TerminusDB, y DataBooks híbridos, las organizaciones pueden empaquetar actividades económicas en registros semánticos autocontenidos y autoverificables. Aplicando la \textbf{Regla 1-10-100}, este desplazamiento representa una inversión de \$1 en prevención que elimina el costo de \$10 en remediación y el riesgo de \$100 por fallas operacionales.
+
+A partir de la implementación de esta arquitectura, se deducen tres conclusiones fundamentales:
+
+\begin{enumerate}
+\item \textbf{Erradicación Definitiva de la Deuda de Conciliación mediante el ``Shift-Left Contable'':} Al capturar y validar la semántica transaccional en el ``Momento~0'' (origen del hecho económico), A\&AD logra un Cumplimiento Defendible. Al resolver la inconsistencia de datos en el punto de ingesta se elimina la necesidad de conciliaciones retroactivas complejas y hojas de cálculo manuales, permitiendo una visión de negocio en tiempo real y libre de fricciones.
+
+\item \textbf{El Control Interno como una Propiedad Topológica del Grafo (SHACL):} En lugar de depender de manuales de políticas corporativas y límites regulativos en texto plano verificados de forma forense o manual, A\&AD traslada las reglas de control y cumplimiento a restricciones lógicas duras en el motor de base de datos utilizando SHACL (Shapes Constraint Language). La partida doble, las firmas autorizadas y los límites de emisión se convierten en condiciones intrínsecas e inviolables de la estructura de datos, bloqueando la entrada de registros inconsistentes desde el origen.
+
+\item \textbf{Gobernanza Explicable y Auditoría Determinista para la Era de la IA Agéntica:} A\&AD proporciona la infraestructura de confianza necesaria para supervisar tanto las transacciones humanas como las decisiones autónomas tomadas por agentes de software de inteligencia artificial. Mediante el uso de DataBooks híbridos (Markdown + JSON-LD) y consultas SPARQL deterministas sobre grafos de conocimiento en memoria, el sistema permite realizar auditorías inmediatas y ``zero-shot'' de alta fidelidad, erradicando por completo el riesgo de alucinación de los modelos de lenguaje (LLM) al delegarles tareas de cumplimiento vinculando la IA a fronteras ontológicas formales.
+\end{enumerate}
+
+El trabajo futuro se centrará en extender esta prueba de concepto para manejar flujos continuos de transacciones operativas y desplegar guardas de validación SHACL en tiempo real a nivel de base de datos transaccional, sentando las bases para un gobierno corporativo automatizado e impulsado por modelos.
+
+\hrule
+\vspace{1em}
+
+% -----------------------------------------------------------------------
+% ACKNOWLEDGEMENTS
+% -----------------------------------------------------------------------
+\section*{Agradecimientos}
+
+El autor desea expresar su sincera gratitud a \href{https://www.linkedin.com/in/charleshoffmancpa/}{Charles Hoffman} (CPA, Father of XBRL) por sus detalladas revisiones, valioso \textit{feedback}, y su respaldo público al posicionar a A\&AD como la ``Versión Moderna de Ricordanze'' (ver \href{https://digitalfinancialreporting.blogspot.com/2026/07/modern-version-of-ricordanze.html}{Hoffman, 2026}). La gratitud se hace extensiva a \href{https://www.linkedin.com/in/timathompson/}{Timothy Thompson}, y \href{https://www.linkedin.com/in/deanritz/}{Dean Ritz} (Chief Strategy Officer, DFRNT) por sus meticulosas revisiones sobre versiones anteriores de este manuscrito. Su experiencia colectiva fortaleció sustancialmente las contribuciones teóricas y técnicas de este trabajo. Un reconocimiento especial merece \href{https://www.linkedin.com/in/hoijnet/}{Philippe Höij} (Cofounder \& CEO, \href{https://dfrnt.com}{DFRNT}) por sus observaciones precisas y técnicamente rigurosas sobre el razonamiento bitemporal de TerminusDB, el razonador datalog CWA, y la distinción operativa entre WOQL y QOWL ---contribuciones que elevaron materialmente la profundidad técnica de la Sección 3. El autor también extiende su aprecio al \href{https://www.xbrl.org}{Consorcio XBRL} por mantener los estándares abiertos que hacen posible este framework, y a \href{https://dfrnt.com}{DFRNT} por proveer la plataforma de datos semánticos utilizada en la prueba de concepto.
+
+% -----------------------------------------------------------------------
+% BIBLIOGRAPHY
+% -----------------------------------------------------------------------
+\begin{thebibliography}{99}
+
+\bibitem{actus2018}
+ACTUS Financial Research Foundation. (2018). \textit{Algorithmic Contract Types Unified Standards (ACTUS)}. Obtenido de \url{https://www.actusfrf.org/}
+
+\bibitem{altova2010}
+Altova. (2010). \textit{Case Study: Maryland Association of CPAs (MACPA) Integrates Accounting Systems with XBRL GL and Altova MapForce}. Obtenido de \url{https://www.altova.com/documents/macpa_casestudy.pdf}
+
+\bibitem{bernerslee2001}
+Berners-Lee, T., Hendler, J., \& Lassila, O. (2001). The Semantic Web. \textit{Scientific American}, 284(5), 34--43.
+
+\bibitem{cagle2025}
+Cagle, K. (2025). \textit{What the RDF Stack Still Owes Us}. W3C Holon Community Group. The Ontologist.
+
+\bibitem{cagle2026}
+Cagle, K., \& Shannon, C. (2026). \textit{DataBook Pipelines: From Raw Data to Living Knowledge}. The Ontologist. Obtenido de \url{https://ontologist.substack.com/p/databook-pipelines}
+
+\bibitem{dai2016}
+Dai, J., \& Vasarhelyi, M. A. (2016). Imagineering Audit 4.0. \textit{Journal of Emerging Technologies in Accounting}, 13(1), 1--15.
+
+\bibitem{defeo2017}
+Defeo, J. A. (2017). \textit{Juran's Quality Handbook: The Complete Guide to Performance Excellence} (7ma ed.). McGraw-Hill Education.
+
+\bibitem{edmc2020}
+EDMC. (2020). \textit{Financial Industry Business Ontology (FIBO)}. Enterprise Data Management Council. Obtenido de \url{https://spec.edmcouncil.org/fibo/}
+
+\bibitem{fischerpauzenberger2017}
+Fischer-Pauzenberger, C., \& Schwaiger, W. S. (2017). OntoREA: A foundational ontology-based formalization of the REA accounting model. \textit{Journal of Information Systems}, 31(3), 43--69.
+
+\bibitem{fischerpauzenberger2018}
+Fischer-Pauzenberger, C., \& Schwaiger, W. S. (2018). OntoREA\copyright{} Accounting and Finance Model: Hedge Portfolio Representation of Derivatives. En \textit{IFIP Working Conference on The Practice of Enterprise Modeling} (pp. 372--382). Springer, Cham. \url{https://doi.org/10.1007/978-3-030-02302-7_24}
+
+\bibitem{gartner2023}
+Gartner. (2023). \textit{Digital Twin of an Organization (DTO): How CIOs Can Use Organizational Digital Twins to Enable AI Readiness}. Gartner Research. Obtenido de \url{https://www.gartner.com/en/documents/4228699}
+
+\bibitem{hoffman2025}
+Hoffman, C. (2025). \textit{Rethinking Financial Reporting: the Model-driven Financial Statement}. Seattle Method. Obtenido de \url{https://seattlemethod.blogspot.com/}
+
+\bibitem{mccomb2019}
+McComb, D. (2019). \textit{The Data-Centric Revolution: Restoring Sanity to Enterprise Information Systems}. Technics Publications.
+
+\bibitem{dunn2004}
+Dunn, C. L., Cherrington, J. O., \& Hollander, A. S. (2004). \textit{Enterprise Information Systems: A Pattern-Based Approach} (3ra ed.). McGraw-Hill.
+
+\bibitem{mccarthy1982}
+McCarthy, W. E. (1982). The REA accounting model: A generalized framework for accounting systems in a shared data environment. \textit{The Accounting Review}, 57(3), 554--578.
+
+\bibitem{sorter1969}
+Sorter, G. H. (1969). An ``events'' approach to basic accounting theory. \textit{The Accounting Review}, 44(1), 12--19.
+
+\bibitem{sunder1997}
+Sunder, S. (1997). \textit{Theory of Accounting and Control}. South-Western College Publishing.
+
+\bibitem{tieck2014}
+Tieck, K. (2014). \textit{Audit by Design: Moving Beyond Continuous Auditing}. Presentación en ISACA CACS.
+
+\bibitem{w3cxbrl}
+W3C. (2009a). \textit{XBRL and the Semantic Web}. W3C Interest Group Report. Obtenido de \url{https://www.w3.org/2009/03/xbrl/old-report.html}
+
+\bibitem{w3cskos}
+W3C. (2009b). \textit{SKOS Simple Knowledge Organization System Reference}. W3C Recommendation. Obtenido de \url{https://www.w3.org/TR/skos-reference/}
+
+\end{thebibliography}
+
+\end{document}
