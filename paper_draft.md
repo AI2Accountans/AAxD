@@ -24,7 +24,7 @@ Kendall Tieck (2014), in his address to ISACA, conceptualized this necessity as 
 
 How do we then recover control? How do we rebuild trust in our own systems? The answer requires a radical methodological shift: instead of auditing at month-end, we validate data at the exact second a transaction originates. We call this a Moment 0 Semantic Digital Twin, developed through Design Science Research (DSR). The proposed architecture integrates the Resource-Event-Agent (REA) framework with Semantic Web standards, decoupling the semantic meaning of economic events (using JSON-LD and XBRL GL) from specific software applications.
 
-In addition, we introduce the use of hybrid DataBooks (Cagle & Shannon, 2026) as a standardized transport mechanism. By embedding SKOS taxonomies (W3C, 2009b) directly into Large Language Models (LLMs), these DataBooks enable immediate, zero-shot auditing of business events by both human supervisors and autonomous AI oversight agents. The resulting architecture is that of a glass box: all economic activity is traceable, verifiable, and auditable in real time. The rest of this article outlines our theoretical foundations, describes the system architecture of the A&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
+In addition, we introduce the use of hybrid DataBooks (Cagle & Shannon, 2026) as a standardized transport mechanism. Drawing from the concept of zero-shot learning via "semantic output codes" (Palatucci et al., 2009), we embed SKOS taxonomies (W3C, 2009b) directly into Large Language Models (LLMs) to act as these strict semantic boundaries. This enables immediate, zero-shot auditing of business events by both human supervisors and autonomous AI oversight agents. The resulting architecture is that of a glass box: all economic activity is traceable, verifiable, and auditable in real time. The rest of this article outlines our theoretical foundations, describes the system architecture of the A&AD Semantic Twin, and demonstrates an automated, real-time audit of an initial equity distribution.
 
 ---
 
@@ -168,6 +168,7 @@ Our future work will focus on extending this proof of concept to handle ongoing 
 * **McComb, D.** (2019). *The Data-Centric Revolution: Restoring Sanity to Enterprise Information Systems*. Technics Publications.
 * **Dunn, C. L., Cherrington, J. O., & Hollander, A. S.** (2004). *Enterprise Information Systems: A Pattern-Based Approach* (3rd ed.). McGraw-Hill.
 * **McCarthy, W. E.** (1982). The REA accounting model: A generalized framework for accounting systems in a shared data environment. *The Accounting Review*, 57(3), 554–578.
+* **Palatucci, M., Pomerleau, D., Hinton, G., & Mitchell, T. M.** (2009). *Zero-shot learning with semantic output codes*. Advances in neural information processing systems, 22.
 * **Sorter, G. H.** (1969). An "events" approach to basic accounting theory. *The Accounting Review*, 44(1), 12–19.
 * **Sunder, S.** (1997). *Theory of Accounting and Control*. South-Western College Publishing.
 * **Tieck, K.** (2014). *Audit by Design: Moving Beyond Continuous Auditing*. Presentation at ISACA CACS.

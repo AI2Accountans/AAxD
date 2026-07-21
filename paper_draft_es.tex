@@ -85,7 +85,7 @@ Kendall Tieck (2014), en su presentación ante ISACA, conceptualizó esta necesi
 
 ¿Cómo recuperamos entonces el control? ¿Cómo volvemos a confiar en nuestros propios sistemas? La respuesta implica un cambio radical de metodología: en lugar de auditar al final del mes, vamos a validar los datos en el segundo exacto en el que se origina la transacción. A esto lo denominamos un gemelo digital semántico de Momento~0, desarrollado a través de la Investigación en Ciencia del Diseño (DSR). La arquitectura propuesta integra el framework de Recurso-Evento-Agente (REA) con los estándares de la Web Semántica, desacoplando el significado semántico de los eventos económicos (utilizando JSON-LD y XBRL GL) de las aplicaciones de software específicas.
 
-Además, introducimos el uso de DataBooks híbridos \cite{cagle2026} como mecanismo de transporte estandarizado. Al incrustar taxonomías SKOS \cite{w3cskos} directamente en los modelos de lenguaje grande (LLM), estos DataBooks permiten la auditoría inmediata y \textit{zero-shot} de eventos de negocio, tanto por parte de supervisores humanos como de agentes de IA autónomos. La arquitectura resultante es la de una caja de cristal: toda la actividad económica es rastreable, verificable y auditable en tiempo real. El resto de este artículo describe los fundamentos teóricos de este modelo, detalla sus componentes de diseño y demuestra su aplicación práctica en la auditoría del Momento~0 de una entidad corporativa.
+Además, introducimos el uso de DataBooks híbridos \cite{cagle2026} como mecanismo de transporte estandarizado. Basándonos en el concepto de aprendizaje zero-shot mediante ``códigos de salida semánticos'' \cite{palatucci2009}, incrustamos las taxonomías SKOS \cite{w3cskos} directamente en los modelos de lenguaje grande (LLM) para que actúen como estos límites semánticos estrictos. Esto permite la auditoría inmediata y \textit{zero-shot} de eventos de negocio, tanto por parte de supervisores humanos como de agentes de IA autónomos. La arquitectura resultante es la de una caja de cristal: toda la actividad económica es rastreable, verificable y auditable en tiempo real. El resto de este artículo describe los fundamentos teóricos de este modelo, detalla sus componentes de diseño y demuestra su aplicación práctica en la auditoría del Momento~0 de una entidad corporativa.
 
 \hrule
 \vspace{1em}
@@ -302,6 +302,9 @@ Dunn, C. L., Cherrington, J. O., \& Hollander, A. S. (2004). \textit{Enterprise 
 
 \bibitem{mccarthy1982}
 McCarthy, W. E. (1982). The REA accounting model: A generalized framework for accounting systems in a shared data environment. \textit{The Accounting Review}, 57(3), 554--578.
+
+\bibitem{palatucci2009}
+Palatucci, M., Pomerleau, D., Hinton, G., \& Mitchell, T. M. (2009). \textit{Zero-shot learning with semantic output codes}. Advances in neural information processing systems, 22.
 
 \bibitem{sorter1969}
 Sorter, G. H. (1969). An ``events'' approach to basic accounting theory. \textit{The Accounting Review}, 44(1), 12--19.
