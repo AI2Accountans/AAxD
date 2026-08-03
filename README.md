@@ -4,6 +4,17 @@ Este repositorio contiene la especificación, arquitectura conceptual y el esque
 
 ---
 
+## 🎨 Arquitectura Visual & Infografías / Visual Architecture
+
+| 🇪🇸 Español | 🇬🇧 English |
+| :---: | :---: |
+| **De la Fragmentación a la Precisión** | **From Fragile Reporting to Financial Integrity** |
+| [![Infografía en Español](Documentacion/infografia_es.png)](Documentacion/INFOGRAFIA.md) | [![Infographic in English](Documentacion/infografia_en.png)](Documentacion/INFOGRAFIA.md) |
+
+*Consulta el desglose explicativo completo de la arquitectura visual en [Documentacion/INFOGRAFIA.md](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/INFOGRAFIA.md).*
+
+---
+
 ## 1. El Enfoque Conceptual (A&AD Matrix)
 
 El framework A&AD organiza la completitud de la empresa mediante una matriz conceptual inspirada en la **Estructura del Zachman Framework**. Esta matriz cruza las dimensiones de negocio (**Aspectos**) con las capas tecnológicas de la Web Semántica (**Capas TBL**):
@@ -48,6 +59,7 @@ La viabilidad práctica de esta arquitectura se demuestra en la prueba de concep
 *   `/Schema JsonLD`: Contiene la definición ontológica consolidada del framework ([ontology_zachman_sunder_bernerslee.json](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Schema%20JsonLD/ontology_zachman_sunder_bernerslee.json)).
 *   `/Momento0`: Contiene las instancias de datos demostrativas en formato JSON-LD que representan la constitución de la firma y sus asientos iniciales.
 *   `/Documentacion`: Documentos conceptuales y técnicos detallados del framework.
+    *   [Infografía Arquitectónica A&AD (ES/EN)](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/INFOGRAFIA.md) (Diagrama visual y desglose conceptual).
     *   [Especificación Completa de A&AD](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Framework/accounting_audit_by_design_specification.md) (Nueva guía técnica de implementación).
     *   [Semantic Data Pipeline and Ingestion Architecture](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/dfrnt_semantic_accounting_architecture.md).
 
