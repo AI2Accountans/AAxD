@@ -4,6 +4,19 @@ Welcome to the official repository for the **Accounting and Audit by Design (A&A
 
 This repository contains the source code, Markdown documentation, and the final PDF versions (in English and Spanish) of the proposed framework, which aims to resolve enterprise reconciliation debt by enforcing deterministic assurance at the moment of economic origin (Moment 0).
 
+---
+
+## 🎨 Visual Architecture & Infographics / Arquitectura Visual
+
+| 🇪🇸 Español | 🇬🇧 English |
+| :---: | :---: |
+| **De la Fragmentación a la Precisión** | **From Fragile Reporting to Financial Integrity** |
+| [![Infografía en Español](infografia_es.png)](INFOGRAFIA.md) | [![Infographic in English](infografia_en.png)](INFOGRAFIA.md) |
+
+*Full explanation and breakdown available in [INFOGRAFIA.md](INFOGRAFIA.md).*
+
+---
+
 ## Authorship and Cryptographic Proof
 
 As part of the transparent and open-source nature of this project, the authorship of the core documents has been mathematically sealed on the **Algorand MainNet Blockchain**.
