@@ -65,8 +65,12 @@
 \begin{abstract}
 Frameworks for corporate governance and internal control have always tolerated the existence of errors that must be identified after the fact, accepting data desynchronization as an unavoidable transactional friction. The information stored in relational databases must undergo an extensive debugging process to identify the originating event, and this typically occurs long after the fact---when there is no longer any capacity to react. Under this paradigm, financial teams are permanently tasked with reconciling figures across different modules. This process frequently generates multiple spreadsheets outside of core information systems, creating a permanent operational burden that relies heavily on manual, craft-based interventions rather than systemic controls. As a consequence, the visibility available to boards of directors and management is dramatically reduced, both by the timeliness of information and the cost of obtaining it.
 
-To resolve these inefficiencies, this article introduces the Accounting and Audit by Design (A\&AD) framework, designed to industrialize the assurance process into a scalable, repeatable pipeline. The A\&AD model replaces retroactive verification with real-time deterministic assurance at the very moment events occur. By extending the shift-left paradigm to organizational control, A\&AD enforces compliance and fiscal constraints directly at the moment of economic origin---the initial contract or business event. By representing transactions as autonomous and immutable holons within semantic knowledge graphs, leveraging a convergence of global open standards (including ISO/IEC, W3C JSON-LD/SHACL, XBRL, ACTUS, and OMG), internal control ceases to be a manual human intervention to become an intrinsic topological property of the data architecture itself. This approach systematically eliminates subsequent reconciliations, validates regulatory compliance at the exact point of data ingestion, and enables continuous auditing over the entirety of business events.
+To resolve these inefficiencies, this article introduces the Accounting and Audit by Design (A\&AD) framework, designed to industrialize the assurance process into a scalable, repeatable pipeline. The A\&AD model replaces retroactive verification with real-time deterministic assurance at the very moment events occur. By extending the shift-left paradigm to organizational control, A\&AD enforces compliance and fiscal constraints directly at the moment of economic origin---the initial contract or business event. By representing transactions as autonomous and immutable holons within semantic knowledge graphs, leveraging a convergence of global open standards (including ISO/IEC, W3C JSON-LD/SHACL \cite{w3crdfval2013}, XBRL, ACTUS, and OMG), internal control ceases to be a manual human intervention to become an intrinsic topological property of the data architecture itself. This approach systematically eliminates subsequent reconciliations, validates regulatory compliance at the exact point of data ingestion, and enables continuous auditing over the entirety of business events.
 \end{abstract}
+
+\vspace{1em}
+\noindent \textbf{Declaration of Generative AI and AI-Assisted Technologies in the Writing Process}\\
+During the preparation of this work, the author used generative AI models exclusively for structuring and translating original ideas into English. All the conceptualization, intellectual development, and theoretical framework are the sole creation of the author. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the publication.
 
 \hrule
 \vspace{1em}
@@ -327,6 +331,9 @@ W3C. (2009a). \textit{XBRL and the Semantic Web}. W3C Interest Group Report. Ret
 
 \bibitem{w3cskos}
 W3C. (2009b). \textit{SKOS Simple Knowledge Organization System Reference}. W3C Recommendation. Retrieved from \url{https://www.w3.org/TR/skos-reference/}.
+
+\bibitem{w3crdfval2013}
+W3C. (2013). \textit{RDF Validation Workshop: Practical Assurances for Quality RDF Data}. Cambridge, MA, September 10-11, 2013. Retrieved from \url{https://www.w3.org/2012/12/rdf-val/Overview}.
 
 \bibitem{mccomb2019}
 McComb, D. (2019). \textit{The Data-Centric Revolution: Restoring Sanity to Enterprise Information Systems}. Technics Publications.
