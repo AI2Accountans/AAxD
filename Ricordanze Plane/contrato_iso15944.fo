@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:vf="https://w3id.org/valueflows/ont/vf#">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="A4-Portrait" page-height="29.7cm" page-width="21.0cm" margin-top="2.0cm" margin-bottom="2.0cm" margin-left="2.0cm" margin-right="2.0cm">
+      <fo:region-body margin-top="1.5cm" margin-bottom="1.5cm"/>
+      <fo:region-before extent="1.2cm"/>
+      <fo:region-after extent="1.0cm"/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="A4-Portrait">
+    <fo:static-content flow-name="xsl-region-before">
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="8pt" color="#64748B" text-align="right" border-bottom="0.5pt solid #CBD5E1" padding-bottom="4pt">
+        ISO/IEC 15944-4: Accounting &amp; Economic Ontology — Smart Contract Ledger
+      </fo:block>
+    </fo:static-content>
+    <fo:static-content flow-name="xsl-region-after">
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="8pt" color="#94A3B8" text-align="center">
+        Página <fo:page-number/> | Documento Validado bajo Esquema XSD REA / Valueflows
+      </fo:block>
+    </fo:static-content>
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="18pt" font-weight="bold" color="#1E3A8A" space-after="6pt">
+        Acuerdo Comercial ISO/IEC 15944-4
+      </fo:block>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="10pt" color="#475569" space-after="15pt" border-bottom="2pt solid #1E3A8A" padding-bottom="6pt">
+        Transacción ID: <fo:inline font-weight="bold" color="#0F172A">TX-2026-0803-001</fo:inline> | Emisión: <fo:inline font-weight="bold">2026-08-03T16:30:00Z</fo:inline>
+      </fo:block>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="9pt" background-color="#F1F5F9" padding="8pt" border-left="3pt solid #3B82F6" space-after="15pt">
+        <fo:inline font-weight="bold" color="#1E293B">Jurisdicción Aplicable: </fo:inline>UNCITRAL CISG / Colombia
+      </fo:block>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="11pt" font-weight="bold" color="#0F172A" space-after="4pt">
+        Contrato: Contrato de Suministro de Licencias y Auditoría de Grafo
+      </fo:block>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="9pt" color="#64748B" space-after="10pt">
+        ID Contrato: AGR-2026-DFRNT-01 | Fecha Creación: 2026-08-03T10:00:00Z
+      </fo:block>
+      <fo:table table-layout="fixed" width="100%" space-after="15pt">
+        <fo:table-column column-width="50%"/>
+        <fo:table-column column-width="50%"/>
+        <fo:table-body font-family="Helvetica, Arial, sans-serif" font-size="9pt">
+          <fo:table-row>
+            <fo:table-cell padding="8pt" background-color="#F8FAFC" border="0.5pt solid #E2E8F0">
+              <fo:block font-weight="bold" color="#1E3A8A" space-after="4pt">AGENTE COMPRADOR (BUYER)</fo:block>
+              <fo:block font-weight="bold" color="#0F172A">Empresa Auditora de Colombia S.A.S.</fo:block>
+              <fo:block color="#64748B">ID: AGT-BUYER-001</fo:block>
+              <fo:block color="#64748B">Ubicación: Bogotá, Colombia</fo:block>
+              <fo:block color="#92400E" font-weight="bold">Parte Relacionada (NIC 24): Subsidiary</fo:block>
+            </fo:table-cell>
+            <fo:table-cell padding="8pt" background-color="#F8FAFC" border="0.5pt solid #E2E8F0">
+              <fo:block font-weight="bold" color="#1E3A8A" space-after="4pt">AGENTE VENDEDOR (SELLER)</fo:block>
+              <fo:block font-weight="bold" color="#0F172A">DFRNT Systems Corp</fo:block>
+              <fo:block color="#64748B">ID: AGT-SELLER-001</fo:block>
+              <fo:block color="#64748B">Ubicación: Stockholm, Sweden</fo:block>
+              <fo:block color="#92400E" font-weight="bold">Parte Relacionada (NIC 24): ParentCompany</fo:block>
+            </fo:table-cell>
+          </fo:table-row>
+        </fo:table-body>
+      </fo:table>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="12pt" font-weight="bold" color="#1E3A8A" space-before="15pt" space-after="8pt">
+        Compromisos Económicos (REA Commitments Layer)
+      </fo:block>
+      <fo:table table-layout="fixed" width="100%" border-collapse="collapse" space-after="15pt">
+        <fo:table-column column-width="20%"/>
+        <fo:table-column column-width="15%"/>
+        <fo:table-column column-width="20%"/>
+        <fo:table-column column-width="20%"/>
+        <fo:table-column column-width="10%"/>
+        <fo:table-column column-width="15%"/>
+        <fo:table-header background-color="#1E3A8A" color="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-size="9pt" font-weight="bold">
+          <fo:table-row text-align="center">
+            <fo:table-cell padding="5pt" border="0.5pt solid #1E3A8A"><fo:block>ID Compromiso</fo:block></fo:table-cell>
+            <fo:table-cell padding="5pt" border="0.5pt solid #1E3A8A"><fo:block>Acción REA</fo:block></fo:table-cell>
+            <fo:table-cell padding="5pt" border="0.5pt solid #1E3A8A"><fo:block>Proveedor</fo:block></fo:table-cell>
+            <fo:table-cell padding="5pt" border="0.5pt solid #1E3A8A"><fo:block>Receptor</fo:block></fo:table-cell>
+            <fo:table-cell padding="5pt" border="0.5pt solid #1E3A8A"><fo:block>Cantidad</fo:block></fo:table-cell>
+            <fo:table-cell padding="5pt" border="0.5pt solid #1E3A8A"><fo:block>Vencimiento</fo:block></fo:table-cell>
+          </fo:table-row>
+        </fo:table-header>
+        <fo:table-body font-family="Helvetica, Arial, sans-serif" font-size="8.5pt">
+          <fo:table-row background-color="#FFFFFF">
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1"><fo:block font-weight="bold">COM-001-DELIVERY</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1" text-align="center"><fo:block color="#0284C7" font-weight="bold">deliver-service</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1"><fo:block>AGT-SELLER-001</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1"><fo:block>AGT-BUYER-001</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1" text-align="right"><fo:block font-weight="bold">1 UN</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1" text-align="center"><fo:block color="#475569">2026-08-15T23:59:59Z</fo:block></fo:table-cell>
+          </fo:table-row>
+          <fo:table-row background-color="#F8FAFC">
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1"><fo:block font-weight="bold">COM-002-PAYMENT</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1" text-align="center"><fo:block color="#0284C7" font-weight="bold">pay</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1"><fo:block>AGT-BUYER-001</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1"><fo:block>AGT-SELLER-001</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1" text-align="right"><fo:block font-weight="bold">15000.00 USD</fo:block></fo:table-cell>
+            <fo:table-cell padding="4pt" border="0.5pt solid #CBD5E1" text-align="center"><fo:block color="#475569">2026-08-30T23:59:59Z</fo:block></fo:table-cell>
+          </fo:table-row>
+        </fo:table-body>
+      </fo:table>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="11pt" font-weight="bold" color="#0F172A" space-before="10pt" space-after="6pt">
+        Dualidad Ontológica REA (Reciprocidad Give &amp; Take)
+      </fo:block>
+      <fo:block font-family="Helvetica, Arial, sans-serif" font-size="8.5pt" background-color="#EFF6FF" padding="6pt" border-left="3pt solid #2563EB" space-after="6pt">
+        <fo:inline font-weight="bold">Vínculo de Dualidad: </fo:inline>
+        Incremento [<fo:inline color="#16A34A" font-weight="bold">COM-001-DELIVERY</fo:inline>] &#160;⇄&#160; Decremento [<fo:inline color="#DC2626" font-weight="bold">COM-002-PAYMENT</fo:inline>] | Dualidad ontológica REA: Entrega de Licencia &lt;-&gt; Pago USD
+      </fo:block>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>
