@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Framework de Contabilidad y Auditoría por Diseño (Accounting & Audit by Design - A&AD)
 
 Este repositorio contiene la especificación, arquitectura conceptual y el esquema ontológico para el framework de **Contabilidad y Auditoría por Diseño (A&AD)**. Nuestro enfoque busca transformar la contabilidad corporativa tradicional basada en registros relacionales planos en un modelo semántico descentralizado, inmutable y de alta fidelidad, alineando múltiples estándares internacionales en un Grafo de Conocimiento de negocio.
@@ -5,10 +6,22 @@ Este repositorio contiene la especificación, arquitectura conceptual y el esque
 ---
 
 ## 🎨 Arquitectura Visual & Infografías / Visual Architecture
+=======
+# Accounting and Audit by Design (A&AD) Framework
+
+Welcome to the official repository for the **Accounting and Audit by Design (A&AD)** framework paper. 
+
+This repository contains the source code, Markdown documentation, and the final PDF versions (in English and Spanish) of the proposed framework, which aims to resolve enterprise reconciliation debt by enforcing deterministic assurance at the moment of economic origin (Moment 0).
+
+---
+
+## 🎨 Visual Architecture & Infographics / Arquitectura Visual
+>>>>>>> origin/main
 
 | 🇪🇸 Español | 🇬🇧 English |
 | :---: | :---: |
 | **De la Fragmentación a la Precisión** | **From Fragile Reporting to Financial Integrity** |
+<<<<<<< HEAD
 | [![Infografía en Español](Documentacion/infografia_es.png)](Documentacion/INFOGRAFIA.md) | [![Infographic in English](Documentacion/infografia_en.png)](Documentacion/INFOGRAFIA.md) |
 
 *Consulta el desglose explicativo completo de la arquitectura visual en [Documentacion/INFOGRAFIA.md](file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/INFOGRAFIA.md).*
@@ -68,3 +81,28 @@ La viabilidad práctica de esta arquitectura se demuestra en la prueba de concep
 ## 5. Licencia y Confort Legal
 
 Este framework es de código abierto y de libre adopción industrial. Todo el material ontológico, esquemas y conceptos contenidos en este repositorio se licencian bajo los términos de la **Licencia Apache 2.0** (ver el archivo `LICENSE` para los términos de uso y distribución). Esta licencia provee la confianza jurídica y el confort necesarios para que corporaciones y desarrolladores incorporen A&AD en sus infraestructuras empresariales comerciales sin regalías.
+=======
+| [![Infografía en Español](infografia_es.png)](INFOGRAFIA.md) | [![Infographic in English](infografia_en.png)](INFOGRAFIA.md) |
+
+*Full explanation and breakdown available in [INFOGRAFIA.md](INFOGRAFIA.md).*
+
+---
+
+## Authorship and Cryptographic Proof
+
+As part of the transparent and open-source nature of this project, the authorship of the core documents has been mathematically sealed on the **Algorand MainNet Blockchain**.
+
+The SHA-256 hashes of both the English (`AA_D_en.pdf`) and Spanish (`AA_D_es.pdf`) versions are anchored to the blockchain, serving as an immutable, timestamped notary seal. 
+
+Anyone can verify this claim by computing the SHA-256 hash of the PDFs in this repository and comparing them against the Algorand blockchain transaction linked via the QR code printed on the cover of the documents.
+
+## License
+
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for more details.
+
+## Author
+
+**Richard G. Gasca Buelvas**  
+*profesor de cátedra del Departamento de Ciencias Contables de la Facultad de Ciencias Económicas y Administrativas de la Pontificia Universidad Javeriana*  
+Email: rgasca@javeriana.edu.co
+>>>>>>> origin/main
