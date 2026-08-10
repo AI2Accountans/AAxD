@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&AD Going Concern Pipeline v1.4 — Gobernanza SBVR & Symbio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#0f766e',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#0d9488',
+                lineColor: '#38bdf8',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#8b5cf6'
+            }
+        });
+    </script>
+    <style>
+        body { background-color: #0b1329; color: #e2e8f0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1rem;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge-sbvr {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(234, 88, 12, 0.2));
+            border: 1px solid rgba(245, 158, 11, 0.5);
+            color: #fbbf24;
+        }
+        .badge-symbio {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            color: #c084fc;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <header class="text-center mb-10 w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 via-sky-400 to-indigo-400">
+            A&AD: Going Concern Onboarding Pipeline
+        </h1>
+        <div class="flex flex-wrap justify-center gap-3 mb-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-sm">
+                Version 1.4 — SBVR Deontic Governance & Symbio Paradigm
+            </span>
+            <span class="inline-block px-4 py-1.5 rounded-full badge-sbvr font-mono text-sm">
+                OMG SBVR 1.5 + REA Bridge
+            </span>
+            <span class="inline-block px-4 py-1.5 rounded-full badge-symbio font-mono text-sm">
+                SHACL 1.2 Poka-Yoke + David Wood Symbio
+            </span>
+        </div>
+        
+        <p class="text-base md:text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed">
+            Arquitectura visual completa para el encuadre e inmunización algorítmica de entidades en marcha. Integra la captura Shift-Left (ISO 15944), el Gobernador Deóntico Transversal (OMG SBVR), el transporte canónico XBRL GL (SRCD), los vasos comunicantes REA, y la validación SHACL 1.2 en el Grafo Bitemporal de TerminusDB con colaboración simbiótica IA-Humano (Symbio).
+        </p>
+        
+        <!-- Architectural Highlights v1.4 -->
+        <div class="glass-card p-6 mx-auto max-w-5xl text-left border-l-4 border-l-sky-400 shadow-2xl mb-4">
+            <h4 class="text-sky-300 font-bold text-lg mb-3 flex items-center gap-2">
+                <span>🚀</span> Novedades Principales de la Versión 1.4:
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-slate-300">
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-amber-400 block mb-1">1. Gobernador Deóntico SBVR (OMG 1.5)</strong>
+                    Captura en origen de reglas de negocio (<code class="text-amber-300">obligation</code>, <code class="text-amber-300">prohibition</code>) transmutadas mediante tuplas <code class="text-slate-200">gl-cor:qualifierEntry</code> y <code class="text-slate-200">gl-cor:detailComment</code> hacia el nodo <code class="text-slate-200">sbvr:BusinessRule</code> en JSON-LD V2.
+                </div>
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-sky-400 block mb-1">2. Vasos Comunicantes Canónicos REA</strong>
+                    Mapeo sin colisión de <code class="text-sky-300">reconciliationEquivalentClass</code> a <code class="text-slate-200">gl-cor:identifierCategory</code>, unificando Agentes y Recursos de ISO 15944-4 / UBL para evitar la reconciliación N-a-N al final del tubo.
+                </div>
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-indigo-400 block mb-1">3. Inmunización Poka-Yoke con SHACL 1.2</strong>
+                    Ejecución determinista en **TerminusDB**. El motor compila la regla SBVR en un escudo SHACL 1.2 que hace **Rollback automático** si se intenta registrar una cuenta por cobrar (PUC 1305) violando una obligación de pago efectivo en la constitución.
+                </div>
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-purple-400 block mb-1">4. Paradigma Symbio (David A. Wood - BYU / AICPA) & GRC (COSO / OCEG)</strong>
+                    Coordinación simbiótica entre auditores humanos y Agentes de IA sobre Vault-LD (Markdown/YAML-LD). Volcado completo del marco COSO y el modelo de capacidad GRC de OCEG (Learn, Align, Perform, Review).
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Step Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-7xl mb-12">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">1</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Momento 0</h3>
+            <p class="text-sm text-slate-300">Balance de Apertura estructurado en XBRL GL como el holón inmutable fundacional.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-amber-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #f59e0b, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Shift Left & SBVR</h3>
+            <p class="text-sm text-slate-300">Captura XForms con ontología <strong>ISO 15944 (REA)</strong> y reglas deónticas <strong>OMG SBVR</strong> en la capa contractual.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-sky-400">
+            <span class="text-5xl font-bold step-number mb-4">3</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Transmutación Canónica</h3>
+            <p class="text-sm text-slate-300">Mapeo en <strong>Altova MapForce</strong> hacia XBRL GL (SRCD) y serialización a <strong>JSON-LD V2</strong> con vasos comunicantes REA.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-indigo-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #818cf8, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Escudo SHACL 1.2</h3>
+            <p class="text-sm text-slate-300">Inmunización Poka-Yoke en <strong>TerminusDB</strong>. Validación estricta del CWA (Mundo Cerrado) y Rollback si viola reglas SBVR.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-purple-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #c084fc, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Auditoría Symbio</h3>
+            <p class="text-sm text-slate-300">Colaboración Humano-Agente (David Wood) con papeles de trabajo en <strong>Vault-LD</strong> y consultas bitemporales DFRNT.</p>
+        </div>
+
+    </div>
+
+    <!-- Mermaid Flow Card -->
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center mb-12 border border-slate-700">
+        <h2 class="text-2xl font-bold mb-8 text-sky-300 border-b border-sky-800 pb-3 w-full text-center">
+            A&AD Going Concern Pipeline Architecture v1.4
+        </h2>
+        <div class="mermaid w-full flex justify-center">
+            graph TD
+                %% Shift Left Flow & SBVR Governance
+                B1[Captura Upstream XForms<br>ISO 15944 REA] -->|HTTP POST XML| B2[Base de Datos NoSQL<br>Instancia XML]
+                SBVR1[Gobernador SBVR 1.5<br>Structured English & Rules] -->|Reglas Deónticas| B1
+                
+                B2 -->|Encuadra Captura| B[Contratos Activos<br>ACTUS Framework]
+                B2 -->|Proyección Documental| B3[Plano Ricordanze<br>HTML5 / PDF Legado]
+                
+                %% Nodos de Origen (Génesis / Momento 0)
+                A[Balance de Apertura] -->|XBRL GL| E
+                B -->|Metadata Financiera y Operacional| E
+                C[Políticas Contables & SKOS] -->|Ontología| E
+                D[Reporte del Auditor] -->|Firma Criptográfica| E
+                
+                %% Nodo Central: El Momento 0
+                E((Establecimiento del<br>Nuevo Momento 0))
+                
+                %% Transmutación Semántica MapForce
+                F[Sistemas ERP Legados] -->|Asientos CSV / Google Sheets| G[Altova MapForce v2<br>Transmutación XBRL GL + SBVR]
+                G -->|JSON-LD V2 Payload<br>FIBO + REA + SBVR| H{Escudo Poka-Yoke<br>SHACL 1.2}
+                
+                %% Inmunización y Grafo TerminusDB
+                E --> H
+                H -->|Aprobado CWA| I[(TerminusDB / DFRNT<br>Semantic Knowledge Graph)]
+                H -.->|Rechazado Violación SBVR| ROLLBACK[Rollback Inmediato<br>$1 Shift-Left]
+                
+                %% Paradigma Symbio & Salidas
+                I -->|Vault-LD / PROV-O| K[Agentes IA Symbio<br>David Wood Paradigm]
+                I -->|QOWL Queries| J[Reportes Multidimensionales<br>COSO / OCEG / NIIF / ESG]
+                
+                %% Estilos
+                classDef genesis fill:#0d9488,stroke:#0f766e,stroke-width:2px,color:white;
+                classDef process_legacy fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:white;
+                classDef process_aad fill:#10b981,stroke:#047857,stroke-width:2px,color:white;
+                classDef database fill:#2563eb,stroke:#1d4ed8,stroke-width:2px,color:white;
+                classDef output fill:#7c3aed,stroke:#5b21b6,stroke-width:2px,color:white;
+                classDef shiftleft fill:#0ea5e9,stroke:#0284c7,stroke-width:2px,color:white;
+                classDef ricordanze fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:white;
+                classDef sbvr fill:#d97706,stroke:#b45309,stroke-width:2px,color:white;
+                classDef shacl fill:#dc2626,stroke:#991b1b,stroke-width:2px,color:white;
+                
+                class A,B,C,D,E genesis;
+                class F,G process_legacy;
+                class H process_aad;
+                class I database;
+                class J,K output;
+                class B1 shiftleft;
+                class B2 process_legacy;
+                class B3 ricordanze;
+                class SBVR1 sbvr;
+                class ROLLBACK shacl;
+        </div>
+    </div>
+
+    <!-- Navigation / Links Footer -->
+    <footer class="text-center text-xs text-slate-400 py-6 border-t border-slate-800 w-full max-w-6xl">
+        <p class="mb-2">A&AD (Accounting & Audit by Design) — DFRNT Methodology Stack v1.4</p>
+        <p class="text-slate-500">Diseñado por Richard Gasca | Integrando ISO 15944, OMG SBVR 1.5, XBRL GL, TerminusDB, COSO, GRC OCEG y David A. Wood Symbio Framework.</p>
+    </footer>
+
+</body>
+</html>
