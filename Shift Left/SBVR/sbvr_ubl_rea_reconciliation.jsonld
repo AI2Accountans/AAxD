@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "@vocab": "http://dfrnt.com/schema/aad/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sbvr": "http://www.omg.org/spec/SBVR/20190901/sbvr#",
+    "rea": "http://iso.org/15944-4/rea#",
+    "ubl": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2#",
+    "xbrlgl": "http://www.xbrl.org/2006/gl#",
+    "sh": "http://www.w3.org/ns/shacl#"
+  },
+  "@graph": [
+    {
+      "@id": "http://dfrnt.com/schema/aad/core#Agent",
+      "@type": "owl:Class",
+      "rdfs:label": "Agente de Negocio Canónico (A&AD Core)",
+      "owl:equivalentClass": [
+        "sbvr:NounConcept",
+        "rea:Agent",
+        "ubl:Party"
+      ]
+    },
+    {
+      "@id": "http://dfrnt.com/schema/aad/core#EconomicResource",
+      "@type": "owl:Class",
+      "rdfs:label": "Recurso Económico / Físico Canónico",
+      "owl:equivalentClass": [
+        "sbvr:NounConcept",
+        "rea:EconomicResource",
+        "ubl:Item"
+      ]
+    },
+    {
+      "@id": "http://dfrnt.com/schema/aad/core#EconomicEvent",
+      "@type": "owl:Class",
+      "rdfs:label": "Hecho Económico / Transacción Canónica",
+      "owl:equivalentClass": [
+        "sbvr:FactType",
+        "rea:EconomicEvent",
+        "ubl:Invoice"
+      ]
+    },
+    {
+      "@id": "http://dfrnt.com/schema/aad/core#BusinessRuleConstraint",
+      "@type": "owl:Class",
+      "rdfs:label": "Regla de Negocio / Restricción Deóntica Canónica",
+      "owl:equivalentClass": [
+        "sbvr:BusinessRule",
+        "sbvr:DeonticFormulation",
+        "sh:NodeShape"
+      ]
+    }
+  ]
+}

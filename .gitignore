@@ -37,14 +37,6 @@ Documentacion/Zachman what.pdf
 
 
 
-
-=======
-# Ignorar ABSOLUTAMENTE TODO por defecto en esta carpeta
-*
-
-# Permitir a Git entrar en las subcarpetas (necesario para la regla anterior)
-!*/
-
 # ----------------------------------------------------
 # LISTA BLANCA (Archivos que SÍ se subirán a GitHub)
 # ----------------------------------------------------
@@ -54,6 +46,10 @@ Documentacion/Zachman what.pdf
 !LICENSE
 !README.md
 !certify_authorship.py
+
+# Modulo Shift Left completo (ISO 15944, SBVR, Ricordanze Plane, etc.)
+!Shift Left/**
+!Shift Left/*
 
 # Archivos PDF finales y prueba criptográfica
 !AA_D_en.pdf
@@ -83,4 +79,3 @@ Documentacion/Zachman what.pdf
 !INFOGRAFIA.md
 !infografia_en.png
 !infografia_es.png
->>>>>>> origin/main

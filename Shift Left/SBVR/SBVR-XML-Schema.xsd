@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="unqualified" attributeFormDefault="unqualified"    
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:xmi="http://www.omg.org/spec/XMI/20110701"    
+           xmlns:sbvr="https://www.omg.org/spec/SBVR/20190601"    
+           targetNamespace="https://www.omg.org/spec/SBVR/20190601">
+  
+  <xs:import namespace="http://www.omg.org/spec/XMI/20110701" schemaLocation="https://www.omg.org/spec/XMI/20110701/XMI.xsd"/>
+  
+  <!-- ====== Normative OMG SBVR 1.5 Package Metamodel (dtc/19-05-32) ======= -->
+  
+  <xs:element name="adoptedDefinition" type="sbvr:adoptedDefinition"/>
+  <xs:complexType name="adoptedDefinition">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="expression" type="xmi:Any"/>
+      <xs:element name="meaning" type="xmi:Any"/>
+      <xs:element name="name" type="xmi:Any"/>
+      <xs:element name="servesAsDesignation" type="xs:boolean"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="name" type="xs:IDREFS" use="optional"/>
+    <xs:attribute name="servesAsDesignation" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+
+  <xs:element name="businessRule" type="sbvr:businessRule"/>
+  <xs:complexType name="businessRule">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="isPracticable" type="xs:boolean"/>
+      <xs:element name="name" type="xmi:Any"/>
+      <xs:element name="representation" type="xmi:Any"/>
+      <xs:element name="statement" type="xmi:Any"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="isPracticable" type="xs:boolean" use="optional"/>
+    <xs:attribute name="name" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+
+  <xs:element name="deonticFormulation" type="sbvr:deonticFormulation"/>
+  <xs:complexType name="deonticFormulation">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="isObligatory" type="xs:boolean"/>
+      <xs:element name="isProhibited" type="xs:boolean"/>
+      <xs:element name="isPermitted" type="xs:boolean"/>
+      <xs:element name="formulation" type="xmi:Any"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+
+  <xs:element name="nounConcept" type="sbvr:nounConcept"/>
+  <xs:complexType name="nounConcept">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="name" type="xmi:Any"/>
+      <xs:element name="definition" type="xmi:Any"/>
+      <xs:element name="designation" type="xmi:Any"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+
+  <xs:element name="factType" type="sbvr:factType"/>
+  <xs:complexType name="factType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="role" type="xmi:Any"/>
+      <xs:element name="name" type="xmi:Any"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+
+  <xs:element name="SBVRModel" type="sbvr:SBVRModel"/>
+  <xs:complexType name="SBVRModel">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="sbvr:nounConcept"/>
+      <xs:element ref="sbvr:factType"/>
+      <xs:element ref="sbvr:businessRule"/>
+      <xs:element ref="sbvr:deonticFormulation"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+  </xs:complexType>
+
+</xs:schema>
