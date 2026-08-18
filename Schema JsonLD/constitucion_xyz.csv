@@ -1,0 +1,15 @@
+Date,SourceDocumentType,SourceDocumentID,PartnerName,JournalEntryID,AccountID,AccountName,DebitCreditCode,Amount
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 1,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 1,JE-001,3105,Capital Emitido,C,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 2,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 2,JE-001,3105,Capital Emitido,C,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 3,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 3,JE-001,3105,Capital Emitido,C,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 4,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 4,JE-001,3105,Capital Emitido,C,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 5,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 5,JE-001,3105,Capital Emitido,C,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 6,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 6,JE-001,3105,Capital Emitido,C,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 7,JE-001,1105,Caja y Bancos,D,250000
+2026-02-14,Acta Constitucion,DOC-CONST-XYZ,Socio 7,JE-001,3105,Capital Emitido,C,250000

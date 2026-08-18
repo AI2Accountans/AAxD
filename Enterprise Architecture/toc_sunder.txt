@@ -1,0 +1,571 @@
+--- Page 0 ---
+TTTTTeoríaeoríaeoríaeoríaeoría
+de la contabilidadde la contabilidadde la contabilidadde la contabilidadde la contabilidad
+y el controly el controly el controly el controly el control
+--- Page 1 ---
+
+--- Page 2 ---
+SHYAM SUNDER
+Profesor James L. Frank
+en Contabilidad, Economía y Finanzas
+Escuela de Administración - Yale University
+TTTTTeoríaeoríaeoríaeoríaeoría
+de la contabilidadde la contabilidadde la contabilidadde la contabilidadde la contabilidad
+y el controly el controly el controly el controly el control
+Traducción y revisión técnica
+Nohora García, Claudia Niño, Diego Hernández,
+Manuel Muñoz y Pedro Nel Páez
+del Doctorado en Ciencias Económicas
+ y de la Facultad de Ciencias Económicas
+de la Universidad Nacional de Colombia,
+con la coordinación de Andrés Montaña S.
+--- Page 3 ---
+Diseño y diagramación
+Clara Forero Murillo
+Copyright ©1997
+Por South Western Publishing.
+Cincinnati, Ohio,
+ITP
+International Thomson Publishing.
+South Western Publishing es una compañía de ITP .
+La marca de fábrica de ITP se usa bajo la licencia respectiva.
+Catálogo para publicación de datos
+Shyam Sunder, 1944 -
+Theory of Accounting and Control / Shyam Sunder
+p. cm.
+Incluye referencia bibliográfica e índice.
+ISBN 0-538-86686-1
+1. Contabilidad administrativa. I. Título.
+1997
+Todos los derechos reservados.
+
+--- Page 4 ---
+A Yuji Ijiri y Robert S. Kaplan
+--- Page 5 ---
+“¿Dónde encontraremos una forma de asociación que
+con la fuerza común defienda y proteja a la persona
+y la propiedad de cada asociado,
+y por medio de la cual cada uno,
+mientras que se une a todos,
+obedezca únicamente a sí mismo
+y permanezca tan libre como lo era antes?”
+J. J. Rousseau, El Contrato Social
+--- Page 6 ---
+PRESENTPRESENTPRESENTPRESENTPRESENT ACIÓNACIÓNACIÓNACIÓNACIÓN
+de la edición en españolde la edición en españolde la edición en españolde la edición en españolde la edición en español
+Este libro del Profesor Sunder se desarrolla en torno a una tesis estratégica
+para las ciencias económicas: el conocimiento compartido de los avances en las
+tres disciplinas constituye un requisito para el adecuado desempeño de los admi-
+nistradores, contadores y economistas en el mundo contemporáneo. Y la forma
+como se analiza en esta obra la operación de las sociedades anónimas parece un
+argumento contundente al respecto. Por lo tanto, como visión integral de la empre-
+sa, de su contabilidad y de los mercados, es decir, como exposición actualizada
+del problema, esta traducción viene a suplir un vacío crítico de la bibliografía en
+castellano y de la formación en las tres profesiones.
+A través del análisis del Profesor Sunder los administradores y contadores
+podrán apreciar la utilidad operacional de algunos desarrollos recientes en los cam-
+pos de 
+public choice, los costos de transacción, la información, los contratos, los
+juegos y la implementación. Como una consecuencia pedagógica, el entrenamien-
+to en teoría económica podrá ser percibido de una manera más positiva, en com-
+paración con la perplejidad y el escepticismo estimulados por el tratamiento de la
+firma en algunos modelos ancestrales de la microeconomía.
+Por otra parte, el problema empresarial puede calificarse como uno de los más
+agudos de la teoría económica contemporánea, pues su modelaje convencional suele
+reducir la firma a una función de producción, con el objetivo de establecer vínculos
+predecibles entre los comportamientos de los precios y algunos propósitos de los
+agentes. Como señala la crítica de Coase, ahora también convencional, este procedi-
+miento ignora los costos de transacción o los presupone iguales a cero. Así, los mer-
+cados quedarían analizados en un vacío institucional y el funcionamiento interno de las
+empresas parecería borrado con respecto al nivel específico de sus propios costos y
+beneficios. Pues bien, el profesor Sunder parte de esta crítica y adopta los costos de
+transacción positivos como uno de sus principales instrumentos analíticos. Tal enfo-
+que teórico había desarrollado su dinámica con los trabajos de Coase, Williamson y
+otros. No obstante, Sunder lo combina con un modelo del vívido realismo de los
+procesos dentro de las corporaciones contemporáneas, involucrando la problemáti-
+ca entrelazada entre sus actores relevantes, como accionistas, ejecutivos de diver-
+sos niveles, empleados, auditores, clientes y reguladores. Y, claro está, algunas
+consecuencias de esta interdisciplinariedad pueden resultar inspiradoras. Por ejemplo,
+la crítica de Sunder a reconocidos teóricos de la economía como Hirschleifer o
+Demsetz, sobre los precios óptimos de transferencia o el comportamiento empresarial.
+--- Page 7 ---
+Los economistas, entonces, podrán apreciar en esta obra avances en administra-
+ción y contabilidad que resultan indispensables para su propio desempeño en una
+economía contemporánea.
+En particular, Sunder muestra cómo resultan indisociables las relaciones
+entre procedimientos contables, estructuras de la empresa, incentivos para los
+diversos agentes, ingresos resultantes, funcionamiento de los mercados y eficien-
+cia. Y este tratamiento integral es respaldado por una revisión sistemática de la
+bibliografía y los trabajos econométricos disponibles sobre cada tema.
+Podría concluirse que esta perspectiva de Sunder eleva la contabilidad a máxi-
+mos niveles. De un lado, con el continuo crecimiento de las gigantescas sociedades
+anónimas, algunos costeos realizados de manera espontánea por los mercados se
+convierten en tarea de los procedimientos contables. Y, de otro lado, esta informa-
+ción arrojada por la contabilidad corporativa se convierte en un sistema de señales
+para asignar los recursos y para juzgar la eficiencia, no sólo desde la óptica financie-
+ra y empresarial, sino también desde el punto de vista social. En este momento, por
+consiguiente, la información contable, sus procedimientos y su auditoría se aproxi-
+man en naturaleza a bienes públicos. Y ninguna evaluación sobre los resultados
+económicos podrá escapar de este proceso. En tal sentido, la relevancia de este
+libro se extiende más allá de los límites de las ciencias económicas, con un interés
+indudable para los estudiosos de otras disciplinas, tarea en la cual resulta de gran
+ayuda su estilo literario, directo y accesible para el lector general.
+La Facultad de Ciencias Económicas de la Universidad Nacional de Colombia
+tuvo la fortuna de contar con una visita del Profesor Sunder en 2003, en el oportuno
+momento en que el programa de doctorado buscaba reforzar su carácter
+interdisciplinario, con una mayor ponderación en términos de administradores y
+contadores. Sin duda la presencia del Profesor Sunder, sus opiniones, su trabajo y
+su inspiración fueron cruciales en este momento. Y, como si lo anterior le parecie-
+se poco, ante el encarecido interés expresado por la Facultad para la divulgación
+de su obra, le ha concedido los derechos para esta primera edición en castellano.
+Generaciones de estudiantes, profesores e investigadores le estarán permanente-
+mente agradecidos por estos actos de generosidad y estímulo.
+Homero Cuevas
+Bogotá, Colombia
+Noviembre de 2004.
+--- Page 8 ---
+PRÓLOGO
+a la edición en español
+La estructura de la contabilidad es compartida por muchas economías hoy
+en el mundo. Este conocimiento compartido podría ser el resultado de una evolu-
+ción independiente pero convergente de la contabilidad en las diferentes socieda-
+des, a la vez que una transferencia directa de los conceptos y prácticas a través
+del comercio y la educación, que han desempeñado igualmente un importante
+papel. Los sistemas contables evolucionan con las formas organizacionales para
+cumplir los diferentes requerimientos de estas últimas. En la medida en que con-
+vergen las formas organizacionales, lo hacen igualmente sus sistemas contables.
+Este libro es un esfuerzo por entender los eslabones entre las organizaciones y sus
+sistemas de contabilidad y control.
+Las observaciones inspiran a las teorías y las teorías dirigen y organizan las
+observaciones. Entre mayor es el alcance de las observaciones en las que una
+teoría pueda basarse, más generalizable será esa teoría. Gran parte de mi expe-
+riencia personal la he realizado en la India y Estados Unidos. Confrontar esta teoría
+de la contabilidad y el control con las observaciones provenientes de un amplio
+rango de ambientes de negocios y culturas ayudará a hacerla más robusta. Por
+consiguiente, yo estoy muy complacido de que los profesores de la Facultad de
+Ciencias Económicas y los alumnos del Doctorado en Ciencias Económicas de la
+Universidad Nacional de Colombia hayan dedicado un gran esfuerzo en preparar y
+publicar esta edición en español y deseen presentárselo a los lectores de habla
+hispana.
+En el verano de 2003, tuve el privilegio de visitar la Universidad Nacional de
+Colombia por primera vez por invitación del Decano Homero Cuevas. Mis conversa-
+ciones con los profesores y los estudiantes, los funcionarios del Banco de la Repúbli-
+ca de Colombia, y Yogesh B. Sharma de la Indian Railways, quien es asesor en
+Colombia, me enseñaron acerca de las tradiciones contables de los países de habla
+hispana, así como de los problemas de la contabilidad y el control en el ambiente
+comercial de Colombia. Las características únicas de los entornos socioeconómicos
+requieren una adaptación tanto de las formas organizacionales, así como de los
+métodos contables. En diversas condiciones alrededor del mundo, los sistemas
+contables pueden combinar tal adaptación útilmente con una estructura que se ajus-
+te para reflexionar acerca de las diversas formas de contabilidad.
+Mis visitas al extranjero me sensibilizaron acerca de la dificultad de la labor de
+traducción. No es fácil de aislar el pensamiento del idioma. En ausencia de una exacta
+correspondencia entre los idiomas naturales, tomar las ideas y los pensamientos de
+--- Page 9 ---
+un idioma y una sociedad y expresarlos en otro idioma a otra sociedad es una tarea
+exigente. Tengo una deuda de gratitud con Nohora García y Andrés Montaña y sus
+colegas por emprender este desafío con meticuloso cuidado.
+También agradezco a los Decanos de la Facultad Homero Cuevas y Luis
+Ignacio Aguilar y a los Coordinadores del Doctorado Iván Hernández y Jorge Iván
+Bula, por facilitar la  publicación de este trabajo. Espero que esta publicación ayude
+a otros a utilizar su conocimiento acerca de las organizaciones y las prácticas
+comerciales para mejorar y refinar aún más la teoría universal de la contabilidad y
+el control.
+Shyam Sunder
+New Haven, CT, U.S.A.
+Mayo 5 de 2004.
+--- Page 10 ---
+PRÓLOGO
+a la edición en inglés
+Este libro se originó a mediados de los años setenta debido a mi curiosidad
+acerca de las funciones de la contabilidad y el control en las organizaciones y en
+la sociedad en general. Aunque estas funciones podrían ser obvias para algunos,
+para un joven ingeniero que trabajaba dentro de los límites de la cultura de las
+ciencias sociales, que predominaba en las escuelas de negocios de los años
+setenta, era difícil entender el cuadro completo. A través de los años, me esforcé
+en organizar lo que sabía, veía, leía y pensaba en un todo coherente. Llegué a
+creer que el interés económico individual era el principio organizador que yo había
+estado buscando. La teoría contractual de la contabilidad se basa en la idea de
+que gran parte de la práctica contable está determinada por las diferentes fuerzas
+económicas.
+Mi introducción a la contabilidad fue bastante elemental. Cuando mi hermana
+dejó la casa para ir a la universidad, mi padre me pidió a mí, un alumno de sexto
+grado, que lo asistiera en la contabilidad de la granja y el hogar. Una o más veces a
+la semana hacía los asientos de diario (débitos a la derecha, créditos a la izquierda,
+como es la convención en la India) tal como mi padre me lo indicaba, dictándome
+los datos de su libreta de bolsillo. La mayoría de los asientos eran gastos en efectivo
+y la acumulación* de la nómina de los trabajadores del cultivo. Las ventas de los
+productos de la granja eran a granel y poco frecuentes. La tierra, los edificios y el
+equipo eran totalmente propios y no aparecían en el balance. La depreciación no se
+cargaba contra el ingreso para calcular nuestro beneficio anual de la granja.
+Las clases de administración en la escuela de ingeniería y el trabajo posterior
+en algunas fábricas me mostraron la necesidad de seguir el rastro de lo que cuesta
+hacer un vagón de tren, a través de las cuentas de la industria, el costo de las
+órdenes de trabajo, la asignación de los costos y los gastos generales. La naturaleza
+impersonal de las grandes fábricas y la división de la responsabilidad entre los admi-
+nistradores creó la necesidad de elaborar presupuestos, evaluaciones de desempe-
+ño y análisis de varianza. Cada lote de motores era escoltado en su recorrido por la
+fábrica por un contador invisible en la forma de una orden de trabajo roja. En cada
+parada, se registraban los datos de los recursos gastados.
+Mientras hacía una maestría en administración industrial en Carnegie Mellon
+University,  aprendí otra forma de contabilidad,  llamada controles cuantitativos por
+buenas razones. La complejidad de la contabilidad en su forma extensa y madura se
+puede verificar en las grandes corporaciones dirigidas por profesionales, que cuentan
+* En inglés accrual. En algunos textos se traduce como causación. [T.]
+--- Page 11 ---
+con una propiedad accionaria dispersa, usan ampliamente el crédito de corto y
+largo plazo y tienen procesos de producción e instrumentos financieros complejos
+y auditoría independiente. Aunque la contabilidad era usualmente mencionada en
+los cursos de comportamiento organizacional, tuve la fortuna de recibir las explica-
+ciones de Yuji Ijiri acerca de las motivaciones humanas que orientan la necesidad y
+la forma de los sistemas de control. En este punto, me sentía bastante a gusto con
+lo que había aprendido acerca de los negocios, las organizaciones y los controles. Yo
+tenía una idea razonablemente coherente de las funciones de la contabilidad en las
+organizaciones simples y en las organizaciones complejas. Y entonces me inicié en
+la investigación contable.
+La naturaleza especializada de gran parte de la investigación contable obliga
+a un enfoque restringido de las funciones específicas de la contabilidad en entornos
+poco definidos. Algunas han recibido más atención que otras. El papel de la conta-
+bilidad en la valoración de títulos valores, en la provisión de información para la
+evaluación del desempeño y en la motivación de los miembros de una organiza-
+ción, son tres de esas funciones. Aunque es importante realizar un estudio detalla-
+do de esas funciones específicas, a menudo los árboles no dejan ver el bosque. Mi
+desorientación en el bosque de la investigación contable surgió de mi incapacidad
+para sintetizar diferentes funciones de la contabilidad en un cuadro coherente. Este
+libro es un paso en esa dirección.
+¿Quién más podría estar interesado en estos pensamientos? Originalmen-
+te, este material se desarrolló en  forma de notas para una clase electiva de segun-
+do año de una maestría y fue utilizado de manera conjunta con casos que yo
+desarrollé. Después usé las notas para un seminario avanzado en teoría contable,
+de nuevo complementadas con los casos y los artículos de la prensa financiera.
+Estas notas, complementadas por libros seleccionados y artículos de revistas,
+han servido para despertar la curiosidad de los estudiantes de primer año de Doc-
+torado en Contabilidad, acerca de los desafíos de la investigación y la enseñanza
+de la contabilidad. Los administradores y otros científicos sociales a menudo mi-
+ran con curiosidad cómo la contabilidad y el control, aparentemente rígidos y aisla-
+dos de otras disciplinas, están vinculados con su propia visión de cómo funcionan
+las organizaciones. Este libro sugiere algunos de estos vínculos. Finalmente, y
+más ambiciosamente, los hombres y las mujeres de negocios pueden encontrar
+en este libro una manera para organizar aquello que ya saben.
+--- Page 12 ---
+Aunque este libro lleva mi nombre, incluye ideas de innumerables fuentes.
+Soy consciente sólo de algunas de estas fuentes. Mi gratitud es mayor a la que
+puedo expresar. No obstante,  permítanme intentarlo.
+Mi padre me enseñó la disciplina de la contabilidad. Mi hermano mayor
+también me instó a retirarme de un trabajo de ingeniería en la India e ingresar a
+Carnegie Mellon University para ampliar mis horizontes.
+En 1970, la Graduate School of Industry Administration de Carnegie Mellon
+(GSIA)*  era quizás la única escuela de negocios que enviaba por correo una lista
+de los documentos de trabajo y reimpresiones de la facultad a los estudiantes
+admitidos al programa de maestría, animándolos a solicitar copias de los docu-
+mentos. Yo había leído los trabajos de Taylor, Gilbreth y sus contemporáneos en
+nuestras clases de administración en la escuela de ingeniería en la India. La lista
+de los documentos de trabajo me hizo comprender que el mundo de la administra-
+ción había avanzado más allá del taylorismo.
+Tuve la buena fortuna de aprender de profesores que me inspiraron como
+Kalman Cohen, Claude Colantoni, Yuji Ijiri, Robert Kaplan, Thomas Morton y Gerald
+Thompson. El entorno del GSIA, dentro y fuera de los salones de clase estaba
+embebido de un espíritu de aprendizaje y experimentación. Poco después de que
+yo ingresara al programa de maestría, Claude Colantoni me sugirió que considera-
+ra el ingreso al programa de Doctorado. Yo lo hice.
+El GSIA tenía un taller para la presentación de todo el trabajo académico.
+Estos talleres brillaban por el entusiasmo por el aprendizaje, la erudición y la discu-
+sión abierta de todos los temas entre los participantes, entre quienes estaban
+incluidos Egon Balas, Martin Bronfenbrenner, David Cass, Richard Cyert, William
+Cooper, Lester Lave, Robert Lucas, Timothy McGuire, Allan Meltzer, Allan Neweil,
+Edward Prescott, Richard Roll y Herbert Simon. Para nosotros los estudiantes gra-
+duados, fue una experiencia estimulante, especialmente porque en este mundo de
+ideas no había ningún rango. Como en la mayoría de los otros programas de doc-
+torado exitosos, tuvimos animados debates para defender nuestras ideas. Tuve la
+suerte al coincidir con un grupo especialmente talentoso que incluía a Costas
+Azariadis, B. Balachandran, Bob Forsythe, Charlie Holt, Hiroyuki Itami, Finn Kydland,
+Ram Rao y V. Srinivasan.
+RECONOCIMIENTOS
+* Escuela de Administración Industrial para Graduados. En adelante citado como GSIA. [T.]
+--- Page 13 ---
+A través de los años, tuve la buena fortuna de tener a Amin Amershi, Rick
+Antle, Andrew Bailey, Srikant Datar, Sidney Davidson, Joel Demski, John Dickhaut,
+Nick Dopuch, Jerry Feltham, George Foster, Nick Gonedes, David Green, Chandra
+Kanodia, Baruch Lev, Bob Magee, Ramon Marimon, Charlie Plott, Prem Prakash, Al
+Rappaport y Dan Simunic como mis amigos y colegas.  Ellos ayudaron a formar mi
+pensamiento de muchas maneras.
+Este libro incluye una gran parte de aquello que yo aprendí de mis estudian-
+tes de pregrado, maestría y doctorado, especialmente de Gary Biddie, Jim Donegan,
+Rong-Ruey Duh, Suk Sig Lim, Karim Jamal, Dhananjay Gode, Anish Shah y Carolyn
+Levine.
+Empecé escribiendo este libro como notas de clase de la maestría que el
+decano Peter Lusztig me pidió que impartiera durante mi estadía entre 1982 y 1983
+en la British Columbia University. La secretaria del Departamento de Contabilidad,
+Bárbara Strouts, hizo un excelente trabajo transcribiendo las notas en muy corto
+tiempo. Daniel Coloumbe, Masko Darrough y Karim Jamal participaron en la clase
+y comentaron mi primer borrador. A través de los años, Andrew Bailey, Stan Baiman,
+Ron Dye, Yoshi Fukui, Jon Glover, Dhananjay Gode, Michael Hechter, Sok-Hyon
+Kang, Baruch Lev, Bob Magee, Richard Mattessich, Jim Ohlson, Katherine Schipper,
+Shiva Sivaramakrishnan, Gordon Walter, Hidetoshi Yamaji, Steve Zeff y Jerry
+Zimmerman han dedicado horas a leer el manuscrito y han compartido sus cons-
+tructivos comentarios conmigo.
+La responsabilidad principal de la preparación del manuscrito y el ajuste de
+mi uso del inglés fue llevada a cabo por Gerry Hoag, Betty Cosnek, Traci Radzniak
+y Ann Nelson. Debra Hovland y Li Zhang laboriosamente transcribieron centenares
+de referencias y muchas citas con exactitud.
+Dave Shaut del South-Western College Publishing ha sido una fuente constante
+de apoyo para este proyecto. El editor de desarrollo Ken Martin y el editor de producción
+Jason Fisher de la South-Western hicieron mi tarea más fácil y menos penosa.
+Trabajé en este libro en cuatro grandes universidades: University of British
+Columbia, University of Minnesota, Carnegie Mellon University y Kobe University.
+Estoy agradecido por su apoyo financiero, secretarial y académico, sin el cual no
+habría sido posible este trabajo. El apoyo financiero de la Honeywell Foundation de
+la University of Minnesota, de los Fondos Familiares de Richard M. y Margaret
+Cyert de la Carnegie Mellon University y del Ministerio Japonés de Educación en la
+Kobe University fueron especialmente valiosos.
+--- Page 14 ---
+Manjula, mi esposa, ha leído el manuscrito casi tantas veces como yo, y pa-
+cientemente guió varias revisiones durante los catorce años que han transcurrido des-
+de que yo escribí el primer borrador. Ella y nuestros niños, Richa y Neal, me han
+dado su amor y apoyo para completar este proyecto.
+De Yuji Ijiri y Robert Kaplan recibí dos cursos de contabilidad de medio se-
+mestre. A ellos dedico este libro.
+--- Page 15 ---
+Parte UNO
+TEORÍA CONTRACTUAL  DE LA EMPRESA
+1. Introducción a la Teoría de la Contabilidad y el Control 23
+Las organizaciones como un conjunto de contratos 23
+Hechos compartidos para la resolución de conflictos 24
+El control en las organizaciones como balance y equilibrio 26
+Microteoría de la contabilidad y el control 28
+Macroteoría de la contabilidad y el control 31
+Resumen 34
+Ejercicios y problemas 34
+2. La contabilidad y el modelo contractual de la empresa 37
+La empresa como un conjunto de contratos 40
+La contabilidad y la empresa 46
+La correspondencia entre formas organizacionales y contables 57
+Resumen 60
+Lecturas adicionales 61
+Ejercicios y problemas 61
+Parte DOS
+MICROTEORÍA DE LA CONTABILIDAD Y EL CONTROL
+3. La contratación de habilidades administrativas 67
+Las características de los administradores 67
+Las formas de los contratos para los administradores 72
+Resumen 83
+Lecturas adicionales 83
+Ejercicios y problemas 85
+4. Los administradores  y las decisiones contables 89
+La jerarquía de las decisiones contables 90
+Ciertas características de los sistemas de control 96
+Las consecuencias administrativas de las decisiones contables 100
+CONTENIDO
+--- Page 16 ---
+El comportamiento observable de los administradores 105
+Resumen 106
+Lecturas adicionales 106
+Ejercicios y problemas 109
+5. El ingreso y su administración 113
+La Ley de la Conservación del Ingreso 115
+Funciones del ingreso en una empresa 116
+Las actitudes de los agentes hacia el ingreso 118
+La administración del ingreso 124
+Resumen de los hallazgos empíricos 130
+Resumen 133
+Lecturas adicionales 134
+Ejercicios y problemas 135
+6. Los inversionistas y la contabilidad 139
+Descripción del tipo de inversionista 139
+Las actitudes y preferencias del inversionista 146
+Los mecanismos de elección contable para los inversionistas 148
+Consecuencias de la política contable para los inversionistas 151
+Resumen 155
+Lecturas adicionales 155
+Ejercicios y problemas 157
+7. La contabilidad y el mercado accionario 161
+El papel limitado de las reglas de valoración 161
+El papel de los intermediarios de la información 162
+Preguntas acerca de la contabilidad y el mercado accionario 163
+Los problemas de inferencia 174
+Resumen 178
+Lecturas adicionales 179
+Ejercicios y problemas 180
+8. Los auditores y la empresa 185
+La función de la auditoría en la empresa 186
+--- Page 17 ---
+Las decisiones del auditor 189
+La estructura institucional de la profesión de auditoría 196
+Resumen 207
+Lecturas adicionales 207
+Ejercicios y problemas 210
+Parte TRES
+MACROTEORÍA DE LA CONTABILIDAD Y EL CONTROL
+9. Las convenciones y la clasificación 219
+Las convenciones 220
+Las convenciones contables 221
+Las características económicas de la contabilidad 223
+La estabilidad temporal de las características económicas 228
+Uniformidad y clasificación 230
+Resumen 234
+Lecturas adicionales 234
+Ejercicios y problemas 234
+10. Mecanismos y criterios de decisión 239
+Criterios para la elección social 239
+El análisis de costo-beneficio social 245
+Los mecanismos de elección social 248
+Resumen 255
+Lecturas adicionales 255
+Ejercicios y problemas 255
+11. La normalización contable 259
+Las reglas y las decisiones económicas 259
+La economía de las reglas y las normas 263
+Las teorías económicas de las normas 265
+Las normas contables 267
+Las instituciones para el establecimiento de normas contables 271
+Los efectos de las normas 274
+--- Page 18 ---
+Resumen 276
+Lecturas adicionales 277
+Ejercicios y problemas 277
+12. Gobierno, ley y contabilidad 281
+El gobierno como agente contratante 282
+El gobierno como una superempresa 288
+Resumen 293
+Lecturas adicionales 293
+Ejercicios y problemas 294
+13. Contabilidad para organizaciones de bienes públicos 297
+Nomenclatura y clasificación 297
+Las características económicas de las NRIOs 299
+Las características de la contabilidad en organizaciones
+de bienes públicos 304
+La NRIO y la interacción con la contabilidad comercial 314
+Resumen 315
+Lecturas adicionales 316
+Ejercicios y problemas 316
+EPILOGO 319
+INDICE 321
+--- Page 19 ---
+20
+--- Page 20 ---
+TEORÍA DE LA CONTABILIDAD Y EL CONTROL 21
+Teoría
+contractual
+de la empresa
+PARTE UNO
+--- Page 21 ---
+22
+--- Page 22 ---
+Introducción
+a la T eoría de la Contabilidad
+y el Control
+1
+Para entender la contabilidad y el control en las organizaciones es
+necesario tener en cuenta tres ideas primordiales. Primera, todas las organi-
+zaciones son conjuntos de contratos entre individuos o grupos de individuos.
+Segunda, el suministro de información común entre las partes contratan-
+tes ayuda al diseño y ejecución de estos contratos. Finalmente, el control
+en las organizaciones es un balance sostenido o un equilibrio entre los
+intereses de sus participantes. Debe distinguirse del control de las orga-
+nizaciones, lo cual sugiere manipulación o explotación de algunos de los
+participantes de la organización por otros. Empezaremos esta aprecia-
+ción general exponiendo estas ideas brevemente, dejando la mayoría de
+las definiciones y detalles para los capítulos siguientes. Concluiremos con
+un resumen de las ideas acerca de los aspectos micro y macro de la
+contabilidad y el control presentados en el libro.
+Las organizaciones como un conjunto de contratosLas organizaciones como un conjunto de contratosLas organizaciones como un conjunto de contratosLas organizaciones como un conjunto de contratosLas organizaciones como un conjunto de contratos
+Las organizaciones tienen un significado diferente para cada agente.
+Las empresas comerciales, por ejemplo, son empleadores para aquellos
+que trabajan en ellas; clientes para los proveedores de bienes y servicios;
+proveedores para sus clientes; benefactores para aquellos que reciben
+su caridad; inversiones para aquellos que invierten en ellas; contribuyen-
+tes para el gobierno; una amenaza para la supervivencia de sus competi-
+dores; burocracias impersonales para los más pobres y pilares de la libre
+empresa para los doctrinarios. Las organizaciones son vistas de manera
+diversa como redes complejas de relaciones humanas, funciones de pro-
+ducción, jerarquías e incluso como cestos de basura. Estas, por su parte,
+se precian de ser depósitos de cultura y civilización y, a la vez, motores
+de cambio. Estas son también ridiculizadas como fuentes de indecencia y
+como obstáculos para el progreso de la sociedad.
+--- Page 23 ---
+24
+Nosotros no tenemos ningún problema con estas y otras maneras
+de mirar las organizaciones. Sin embargo, para nuestro propósito limitado
+de tratar de explicar la naturaleza de la contabilidad y el control en las
+organizaciones, haremos uso de una vieja e interesante idea, apoyada por
+estudiosos como Cyert y March, Simon, Barnard y Rousseau: una organi-
+zación es simplemente un conjunto de contratos entre los agentes.
+1  Los
+contratos son acuerdos mutuos, formales o informales. Tanto el alquiler de
+un apartamento como una cita para almorzar con un amigo son contratos.
+Los agentes son indistintamente individuos u organizaciones. Damos por
+sentado que los agentes son racionales: no eligen conscientemente aque-
+llo que no les gusta.
+Hechos compartidos para la resolución de conflictosHechos compartidos para la resolución de conflictosHechos compartidos para la resolución de conflictosHechos compartidos para la resolución de conflictosHechos compartidos para la resolución de conflictos
+Las disputas desperdician recursos: la provisión de conocimiento
+compartido ayuda a prevenir y resolver las disputas. Los conflictos no
+resueltos entre agentes debilitan, e incluso hacen naufragar, el complejo
+tejido de intercambios socioeconómicos del cual se deriva gran parte de
+nuestra prosperidad. Las huelgas y los cierres de empresas son un ejem-
+plo. La práctica de cuidadosamente recoger y compartir información se
+origina para suplir esta demanda fundamental como un medio para preservar
+nuestro sistema socioeconómico. Compartir el conocimiento y las ex-
+pectativas es una gran parte de la culturización y la socialización.
+Muchos conflictos que tienen lugar dentro de las familias, en los
+vecindarios, en el sitio de trabajo y en el comercio, se pueden prevenir o
+resolver con la ayuda de información común. El sistema judicial se basa
+en los documentos escritos y en los testimonios de testigos –dos formas
+de información compartida–. Sin embargo, sólo una proporción minúscula
+de los conflictos llega a los despachos judiciales. Gran parte de los conflictos
+se resuelven rápidamente y a bajo costo gracias a la provisión sistemáti-
+ca de información compartida fuera de cualquier sistema formal de reso-
+lución de conflictos.
+La definición de contratos ejecutables entre agentes requiere 
+co-
+nocimiento común . La información de X es conocimiento común entre
+los agentes A y B, si A conoce X y B conoce X, y A sabe que B conoce
+X, y B sabe que A conoce X, y A sabe que B sabe que A conoce X, y así
+1 Richard M. Cyert y James March,  Behavioral Theory of the Firm  (Englewood Cliffs, N.J.:
+Prentice-Hall. 1963); Herbert A. Simon, Administrative Behavior , (New York: Macmillan,
+1947); Chester I. Barnard, The Functions of the Executive, 30th anniversary ed. (Cambridge.
+Mass.: Harvard University Press, 1968); J. J. Rousseau, The Social Contract , (New York:
+Hafner Publishing Co., 1947).
+INTRODUCCIÓN A LA T EORÍA DE LA CONTABILIDAD Y EL CONTROL
+--- Page 24 ---
+TEORÍA DE LA CONTABILIDAD Y EL CONTROL 25
+sucesivamente.2  En el cuento del traje nuevo del emperador,*  cuando el
+joven advierte mediante un grito que el emperador está desnudo, todos sa-
+bían que el emperador no tenía ropa; él sólo lo hizo de conocimiento común.
+Cuando en los contratos se usan variables que no son de conoci-
+miento común, pueden surgir disputas o engaños. El conocimiento común
+es más que la observación de un evento por las partes, también requiere
+que cada parte sea consciente de su observación de los otros. Cuando
+todos están enterados del evento, pero no de lo que saben los otros, algu-
+nos pueden estar tentados a usar tal información para tomar ventaja, creando
+conflictos que se podrían evitar. El conocimiento común ayuda a reducir tal
+conflicto y las pérdidas concomitantes.
+La contabilidad y el control en las organizaciones generan conoci-
+miento común para ayudar a definir los contratos entre los agentes. Sin
+embargo, el conocimiento común es una abstracción teórica. Traducirlo a
+la práctica es tan difícil como hacer un punto matemático visible en un
+tablero. Ninguna representación física de un punto puede carecer de di-
+mensión, aunque la carencia de dimensiones es la esencia de la definición
+matemática de punto. Sin embargo, nosotros podemos enseñar geome-
+tría, diseñar y construir puentes y lograr otra miríada de ventajas que
+fluyen de las abstracciones sin insistir en que las analogías físicas y prác-
+ticas sean ciertas con relación a todo aquello que está asociado con los
+conceptos fundamentales. El concepto de conocimiento común, de igual
+manera, no tiene ninguna representación exacta en el mundo práctico.
+Al decidir qué hacer, es posible afrontar dos tipos de incertidum-
+bre. Se decide bajo información 
+imperfecta si las reglas o la estructura
+son conocimiento común, más no se sabe nada sobre los eventos y
+acciones de los otros. El juego de la ruleta, por ejemplo, es de informa-
+ción imperfecta porque los jugadores no saben dónde se detendrá la
+bola en la rueda. Todos los jugadores conocen las reglas del juego y las
+oportunidades de los diferentes resultados. De igual forma, cuando pen-
+samos en la contabilidad como un sistema de información para la toma
+de decisiones, suponemos que todas las partes conocen las reglas del
+juego, y la contabilidad únicamente proporciona información sobre va-
+rios eventos y sobre las acciones de los otros.
+Si no conocemos las reglas o la estructura de la situación, toma-
+mos decisiones bajo circunstancias más difíciles, llamadas 
+información
+2 Robert J. Aumann, “Agreeing to Disagree,” The Annals of Statistics,  Vol. 4, No. 6
+(1976), pp. 1236-39.
+* Hans Christian Andersen. “Las ropas nuevas del Emperador”. [T.]

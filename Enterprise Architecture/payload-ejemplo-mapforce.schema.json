@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/array_01",
+  "definitions": {
+    "object_01": {
+      "type": "object",
+      "required": [
+        "@id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "resource_type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "number"
+        }
+      }
+    },
+    "object_02": {
+      "type": "object",
+      "required": [
+        "@type",
+        "@id",
+        "event_date",
+        "description",
+        "financial_impact_amount",
+        "involved_agent",
+        "affected_resource"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "event_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "financial_impact_amount": {
+          "type": "number"
+        },
+        "involved_agent": {
+          "$ref": "#/definitions/object_01"
+        },
+        "affected_resource": {
+          "$ref": "#/definitions/object_01"
+        }
+      }
+    },
+    "object_03": {
+      "type": "object",
+      "required": [
+        "@type",
+        "@id",
+        "status",
+        "performance_condition",
+        "engaged_agents",
+        "regulated_resources"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "@id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "performance_condition": {
+          "type": "string"
+        },
+        "engaged_agents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/object_01"
+          }
+        },
+        "regulated_resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/object_01"
+          }
+        }
+      }
+    },
+    "array_01": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/object_01"
+          },
+          {
+            "$ref": "#/definitions/object_02"
+          },
+          {
+            "$ref": "#/definitions/object_03"
+          }
+        ]
+      }
+    }
+  }
+}

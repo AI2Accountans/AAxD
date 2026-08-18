@@ -1,0 +1,9 @@
+{
+  "@type": "Class",
+  "@key": {
+    "@type": "Random"
+  },
+  "@id": "Employee",
+  "@inherits": [],
+  "name": "xsd:string"
+}

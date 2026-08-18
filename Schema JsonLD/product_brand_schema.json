@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@base": "terminusdb:///data/",
+    "@schema": "terminusdb:///schema#",
+    "@type": "Context"
+  },
+  "@graph": [
+    {
+      "@type": "Class",
+      "@id": "Brand",
+      "@label": "Brand",
+      "@description": "The brand or manufacturer of a product.",
+      "@key": { "@type": "Lexical", "@fields": ["name"] },
+      "name": "xsd:string",
+      "description": { "@type": "Optional", "@class": "xsd:string" },
+      "website": { "@type": "Optional", "@class": "xsd:string" }
+    },
+    {
+      "@type": "Enum",
+      "@id": "ProductCategory",
+      "@label": "Product Category",
+      "@value": ["Beauty", "Electronics", "Home", "Apparel"]
+    },
+    {
+      "@type": "Class",
+      "@id": "ProductTrait",
+      "@subdocument": [],
+      "@label": "Product Trait",
+      "@description": "Specific trait attributes associated with a product as a subdocument.",
+      "color": { "@type": "Optional", "@class": "xsd:string" },
+      "size": { "@type": "Optional", "@class": "xsd:string" },
+      "material": { "@type": "Optional", "@class": "xsd:string" }
+    },
+    {
+      "@type": "Class",
+      "@id": "Product",
+      "@label": "Product Information",
+      "@description": "A sophisticated product definition linking to Brand, Categories (Enum), and Traits (Subdocument).",
+      "@key": { "@type": "Lexical", "@fields": ["sku"] },
+      "sku": "xsd:string",
+      "name": "xsd:string",
+      "description": { "@type": "Optional", "@class": "xsd:string" },
+      "brand": {
+        "@type": "Optional",
+        "@class": "Brand"
+      },
+      "category": {
+        "@type": "Set",
+        "@class": "ProductCategory"
+      },
+      "traits": {
+        "@type": "Set",
+        "@class": "ProductTrait"
+      },
+      "price": { "@type": "Optional", "@class": "xsd:decimal" }
+    }
+  ]
+}

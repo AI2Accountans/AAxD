@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cell C4: UBL Document (XML Invoice) -->
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <cbc:ID>FECA-1073</cbc:ID>
+    <cbc:IssueDate>2026-05-29</cbc:IssueDate>
+    <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode>COP</cbc:DocumentCurrencyCode>
+    
+    <!-- Supplier (Who) -->
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>DFRNT Consulting Ltd</cbc:Name>
+            </cac:PartyName>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID schemeID="4">900824516</cbc:CompanyID>
+                <cac:TaxScheme>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    
+    <!-- Customer (Who) -->
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>XYZ Enterprises S.A.S.</cbc:Name>
+            </cac:PartyName>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID schemeID="3">800192837</cbc:CompanyID>
+                <cac:TaxScheme>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    
+    <!-- Invoice Line (What/How) -->
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="94">1.00</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="COP">5000000.00</cbc:LineExtensionAmount> <!-- Net Price: 5,000,000 COP -->
+        <cac:Item>
+            <cbc:Name>Implementación de Ontología Contable Semántica - Hito 1</cbc:Name>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="COP">5000000.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    
+    <!-- Tax Representative -->
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="COP">950000.00</cbc:TaxAmount> <!-- VAT 19% = 950,000 COP -->
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="COP">5000000.00</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="COP">950000.00</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:Percent>19.00</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>01</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    
+    <!-- Legal Monetary Total -->
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="COP">5000000.00</cbc:LineExtensionAmount> <!-- Subtotal -->
+        <cbc:TaxExclusiveAmount currencyID="COP">5000000.00</cbc:TaxExclusiveAmount>  <!-- Tax base -->
+        <cbc:TaxInclusiveAmount currencyID="COP">5950000.00</cbc:TaxInclusiveAmount>  <!-- Grand Total: 5,950,000 COP -->
+        <cbc:PayableAmount currencyID="COP">5950000.00</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+</Invoice>

@@ -1,0 +1,912 @@
+{
+  "@context": {
+    "@base": "terminusdb:///data/",
+    "@schema": "terminusdb:///schema#",
+    "@type": "Context"
+  },
+  "@graph": [
+    {
+      "@type": "Class",
+      "@id": "BFO_Entity",
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "BFO: Entity (ISO/IEC 21838-2)",
+          "@comment": "Root class representing any entity in Basic Formal Ontology."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "BFO_Continuant",
+      "@inherits": [
+        "BFO_Entity"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "BFO: Continuant (ISO/IEC 21838-2)",
+          "@comment": "An entity that exists as a whole at any time it exists."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "BFO_Occurrent",
+      "@inherits": [
+        "BFO_Entity"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "BFO: Occurrent (ISO/IEC 21838-2)",
+          "@comment": "An entity that unfolds in time, having temporal parts or phases."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "BFO_MaterialEntity",
+      "@inherits": [
+        "BFO_Continuant"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "BFO: Material Entity (ISO/IEC 21838-2)",
+          "@comment": "An independent continuant that has some matter as part."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "BFO_Process",
+      "@inherits": [
+        "BFO_Occurrent"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "BFO: Process (ISO/IEC 21838-2)",
+          "@comment": "An occurrent that has temporal parts and is a processual entity."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "FIBO_FinancialContract",
+      "@inherits": [
+        "GistContract"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "FIBO: Financial Contract",
+          "@comment": "A contract that governs a transaction or relationship in the financial services industry."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "FIBO_IncorporationAgreement",
+      "@inherits": [
+        "FIBO_FinancialContract"
+      ],
+      "@documentation": [
+        {
+          "@label": "FIBO: Incorporation Agreement",
+          "@comment": "A contract or agreement that establishes a corporation (Momento Cero)."
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "FIBO_StockCorporation",
+      "@inherits": [
+        "GistOrganization"
+      ],
+      "@documentation": [
+        {
+          "@label": "FIBO: Stock Corporation",
+          "@comment": "A business entity that issues shares of stock representing ownership."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "FIBO_Shareholder",
+      "@inherits": [
+        "Agent"
+      ],
+      "@documentation": [
+        {
+          "@label": "FIBO: Shareholder",
+          "@comment": "An agent that holds share ownership in a corporation."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "FIBO_ShareOfCommonStock",
+      "@inherits": [
+        "EconomicResource"
+      ],
+      "@documentation": [
+        {
+          "@label": "FIBO: Share of Common Stock",
+          "@comment": "An economic resource representing part-ownership of a corporation."
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "ACTUS_Contract",
+      "@inherits": [
+        "BFO_Continuant"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "ACTUS: Financial Contract Type",
+          "@comment": "Abstract base class representing ACTUS algorithmic contracts."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "ACTUS_StockContract",
+      "@inherits": [
+        "FIBO_FinancialContract",
+        "ACTUS_Contract"
+      ],
+      "@documentation": [
+        {
+          "@label": "ACTUS: Stock Contract (STK)",
+          "@comment": "An equity contract representing share holdings and associated cash flows."
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "SemanticGraphNode",
+      "@abstract": [],
+      "@inherits": [
+        "BFO_Entity"
+      ],
+      "@documentation": [
+        {
+          "@label": "1. Capa Berners-Lee (Semantic Web)"
+        }
+      ]
+    },
+    {
+      "@type": "Enum",
+      "@id": "ZachmanPerspective",
+      "@value": [
+        "Planner",
+        "Owner",
+        "Designer",
+        "Builder",
+        "Subcontractor",
+        "FunctioningEnterprise"
+      ]
+    },
+    {
+      "@type": "Enum",
+      "@id": "ZachmanInterrogative",
+      "@value": [
+        "What",
+        "How",
+        "Where",
+        "Who",
+        "When",
+        "Why"
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "ZachmanClassification",
+      "@subdocument": [],
+      "perspective": "ZachmanPerspective",
+      "interrogative": "ZachmanInterrogative",
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "EnterpriseArtifact",
+      "@inherits": [
+        "SemanticGraphNode",
+        "Entity"
+      ],
+      "@abstract": [],
+      "zachman_classification": {
+        "@type": "Optional",
+        "@class": "ZachmanClassification"
+      },
+      "matriz_fila": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "matriz_columna": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "artifact_name": "xsd:string",
+      "academic_reference": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@documentation": [
+        {
+          "@label": "2. Capa Zachman (Artefacto)"
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "EconomicResource",
+      "@inherits": [
+        "EnterpriseArtifact",
+        "BFO_MaterialEntity"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "REA: Economic Resource",
+          "@comment": "Recurso económico abstracto del modelo REA."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "EconomicAgent",
+      "@inherits": [
+        "EnterpriseArtifact",
+        "BFO_MaterialEntity"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "REA: Economic Agent",
+          "@comment": "Agente económico abstracto del modelo REA."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "EconomicEvent",
+      "@inherits": [
+        "EnterpriseArtifact",
+        "BFO_Process"
+      ],
+      "@abstract": [],
+      "resource": {
+        "@type": "Optional",
+        "@class": "EconomicResource"
+      },
+      "agent": {
+        "@type": "Optional",
+        "@class": "EconomicAgent"
+      },
+      "duality": {
+        "@type": "Optional",
+        "@class": "EconomicEvent"
+      },
+      "@documentation": [
+        {
+          "@label": "REA: Economic Event",
+          "@comment": "Evento económico del modelo REA que conecta recursos, agentes y dualidad."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "EconomicCommitment",
+      "@inherits": [
+        "EnterpriseArtifact",
+        "BFO_Continuant"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "REA: Economic Commitment",
+          "@comment": "Compromiso o contrato económico del modelo REA."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "GistAccount",
+      "@inherits": [
+        "EnterpriseArtifact"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "gist:Account",
+          "@comment": "Upper ontology class representing an agreement with a balance (bank account, accounts receivable, etc.)."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "GistContract",
+      "@inherits": [
+        "EnterpriseArtifact"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "gist:Contract",
+          "@comment": "Upper ontology class representing legally enforceable agreements."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "GistTransaction",
+      "@inherits": [
+        "EnterpriseArtifact"
+      ],
+      "@abstract": [],
+      "@documentation": [
+        {
+          "@label": "gist:Transaction",
+          "@comment": "Upper ontology class representing exchanges of resources (goods, services, funds)."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "Agent",
+      "@inherits": [
+        "EconomicAgent"
+      ],
+      "@key": {
+        "@type": "Lexical",
+        "@fields": [
+          "identifierCode"
+        ]
+      },
+      "identifierCode": "xsd:string",
+      "identifierDescription": "xsd:string",
+      "identifierType": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@documentation": [
+        {
+          "@label": "Sunder: Agente (QUIÉN) [REA: Economic Agent]"
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "GistPerson",
+      "@inherits": [
+        "Agent",
+        "FIBO_Shareholder"
+      ],
+      "@documentation": [
+        {
+          "@label": "gist:Person",
+          "@comment": "Upper ontology class representing living human beings."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "GistOrganization",
+      "@inherits": [
+        "Agent"
+      ],
+      "@documentation": [
+        {
+          "@label": "gist:Organization",
+          "@comment": "Upper ontology class representing structured entities formed to achieve specific goals."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "XBRLTaxonomyConcept",
+      "@inherits": [
+        "SemanticGraphNode"
+      ],
+      "@key": {
+        "@type": "Lexical",
+        "@fields": [
+          "concept_qname"
+        ]
+      },
+      "concept_qname": "xsd:string",
+      "concept_label": "xsd:string",
+      "parent_concept": {
+        "@type": "Optional",
+        "@class": "XBRLTaxonomyConcept"
+      },
+      "@documentation": [
+        {
+          "@label": "Concepto XBRL (IFRS/SFC)",
+          "@comment": "Maestro jerárquico de etiquetas contables."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "Account",
+      "@inherits": [
+        "EconomicResource",
+        "GistAccount",
+        "FIBO_ShareOfCommonStock"
+      ],
+      "@key": {
+        "@type": "Lexical",
+        "@fields": [
+          "accountMainID"
+        ]
+      },
+      "accountMainID": "xsd:string",
+      "accountMainDescription": "xsd:string",
+      "mainAccountType": {
+        "@type": "Optional",
+        "@class": "MainAccountType"
+      },
+      "parentAccountMainID": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "accountPurposeCode": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "accountType": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "shares_type": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "xbrl_taxonomy_link": {
+        "@type": "Optional",
+        "@class": "XBRLTaxonomyConcept"
+      },
+      "iso_bas_module": {
+        "@type": "Optional",
+        "@class": "ISO21378_BAS_Account_Trait"
+      },
+      "@documentation": [
+        {
+          "@label": "Sunder: Recurso (QUÉ) [REA: Economic Resource] / XBRL GL: gl-cor:account",
+          "@comment": "Catálogo de cuentas alineado con gl-cor:account."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "XBRLGLSourceDocumentTrait",
+      "@subdocument": [],
+      "sourceDocumentId": "xsd:string",
+      "sourceDocumentType": "xsd:string",
+      "sourceDocumentDate": {
+        "@type": "Optional",
+        "@class": "xsd:dateTime"
+      },
+      "engaged_agents": {
+        "@type": "Set",
+        "@class": "Agent"
+      },
+      "@documentation": [
+        {
+          "@label": "Sunder: Contrato / XBRL GL 2015: gl-srcd",
+          "@comment": "Módulo SRCD para representar el documento fuente o contrato."
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "SourceDocument",
+      "@inherits": [
+        "EconomicCommitment",
+        "GistContract",
+        "FIBO_IncorporationAgreement"
+      ],
+      "academic_reference": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@key": {
+        "@type": "Lexical",
+        "@fields": [
+          "artifact_name"
+        ]
+      },
+      "documentType": "xsd:string",
+      "documentNumber": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "documentDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "digital_twin_ipfs": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "prov:wasDerivedFrom": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "engaged_agents": {
+        "@type": "Set",
+        "@class": "Agent"
+      },
+      "srcd_module": {
+        "@type": "Optional",
+        "@class": "XBRLGLSourceDocumentTrait"
+      },
+      "@documentation": [
+        {
+          "@label": "Sunder: Contrato (POR QUÉ) [REA: Contract] / XBRL GL: gl-srcd:sourceDocument",
+          "@comment": "El documento fuente que ampara la transacción (Ej. Contrato de Constitución).\n\n[Referencia Académica]: Rutgers CAR Lab: Smart Contracts and Blockchain in Accounting. Validates the genesis of the transaction (Momento Cero)."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "EntryHeader",
+      "@inherits": [
+        "EnterpriseArtifact"
+      ],
+      "academic_reference": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@key": {
+        "@type": "Random"
+      },
+      "posting_date": "xsd:date",
+      "source_document": {
+        "@type": "Optional",
+        "@class": "SourceDocument"
+      },
+      "iso_gl_module": {
+        "@type": "Optional",
+        "@class": "ISO21378_GL_Journal_Trait"
+      },
+      "@documentation": [
+        {
+          "@label": "XBRL GL: gl-cor:entryHeader",
+          "@comment": "La cabecera del asiento contable (Asiento Diario).\n\n[Referencia Académica]: WCARS / Vasarhelyi et al.: Continuous Auditing Web Services Model. Enables real-time extraction and examination of journal entries."
+        }
+      ]
+    },
+    {
+      "@type": "Enum",
+      "@id": "DebitCreditCode",
+      "@value": [
+        "D",
+        "C"
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "XBRLGLExchangeTrait",
+      "@subdocument": [],
+      "accountMainID": {
+        "@type": "Optional",
+        "@class": "Account"
+      },
+      "amount": "xsd:decimal",
+      "signOfAmount": "DebitCreditCode",
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "XBRLGLMeasurableTrait",
+      "@subdocument": [],
+      "measurableCode": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "measurableID": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "measurableDescription": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "measurableQuantity": {
+        "@type": "Optional",
+        "@class": "xsd:decimal"
+      },
+      "measurableUnitOfMeasure": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "measurableCostPerUnit": {
+        "@type": "Optional",
+        "@class": "xsd:decimal"
+      },
+      "@documentation": [
+        {
+          "@label": "XBRL GL: gl-bus:measurable"
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "EntryDetail",
+      "@inherits": [
+        "EconomicEvent",
+        "GistTransaction"
+      ],
+      "academic_reference": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@key": {
+        "@type": "Random"
+      },
+      "header": {
+        "@type": "Optional",
+        "@class": "EntryHeader"
+      },
+      "lineNumberCounter": {
+        "@type": "Optional",
+        "@class": "xsd:integer"
+      },
+      "account": {
+        "@type": "Optional",
+        "@class": "Account"
+      },
+      "amount": {
+        "@type": "Optional",
+        "@class": "xsd:decimal"
+      },
+      "debitCreditCode": {
+        "@type": "Optional",
+        "@class": "DebitCreditCode"
+      },
+      "postingDate": {
+        "@type": "Optional",
+        "@class": "xsd:date"
+      },
+      "shares_type": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "exchange_module": {
+        "@type": "Optional",
+        "@class": "XBRLGLExchangeTrait"
+      },
+      "measurable": {
+        "@type": "Optional",
+        "@class": "XBRLGLMeasurableTrait"
+      },
+      "agent_identifier": {
+        "@type": "Optional",
+        "@class": "Agent"
+      },
+      "detailed_content_filters": {
+        "@type": "Set",
+        "@class": "xsd:string"
+      },
+      "iso_gld_module": {
+        "@type": "Optional",
+        "@class": "ISO21378_GL_Journal_Details_Trait"
+      },
+      "@documentation": [
+        {
+          "@label": "Sunder: Evento (CUÁNDO) [REA: Economic Event] / XBRL GL: gl-cor:entryDetail",
+          "@comment": "Detalle del asiento (partida doble) alineado con gl-cor:entryDetail.\n\n[Referencia Académica]: M. Vasarhelyi: XBRL GL - The Standardization of the General Ledger. Vital for granular, continuous control monitoring and auditing."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "Entity",
+      "@inherits": [
+        "BFO_Entity"
+      ],
+      "@key": {
+        "@type": "Random"
+      },
+      "nexus": {
+        "@type": "Set",
+        "@class": "SourceDocument"
+      },
+      "@documentation": [
+        {
+          "@label": "Sunder: Entidad (CÓMO)"
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "ISO21378_BAS_Account_Trait",
+      "@subdocument": [],
+      "Account_Number": "xsd:string",
+      "Account_Description": "xsd:string",
+      "Account_Type": "xsd:string",
+      "@documentation": [
+        {
+          "@label": "ISO 21378: BAS_Account"
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "ISO21378_GL_Journal_Trait",
+      "@subdocument": [],
+      "Journal_ID": "xsd:string",
+      "Journal_Description": "xsd:string",
+      "Entered_Date": "xsd:date",
+      "Approved_By": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@documentation": [
+        {
+          "@label": "ISO 21378: GL_Journal"
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "ISO21378_GL_Journal_Details_Trait",
+      "@subdocument": [],
+      "Journal_Line_Number": "xsd:integer",
+      "Amount": "xsd:decimal",
+      "Debit_Credit_Indicator": "DebitCreditCode",
+      "@documentation": [
+        {
+          "@label": "ISO 21378: GL_Journal_Details"
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "Customer",
+      "@inherits": [
+        "Agent"
+      ],
+      "@documentation": [
+        {
+          "@label": "ISO 21378: BAS_Customer",
+          "@comment": "Agente con rol de Cliente."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "Supplier",
+      "@inherits": [
+        "Agent"
+      ],
+      "@documentation": [
+        {
+          "@label": "ISO 21378: BAS_Supplier",
+          "@comment": "Agente con rol de Proveedor."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "GistRestriction",
+      "@inherits": [
+        "EnterpriseArtifact",
+        "BFO_Continuant"
+      ],
+      "@documentation": [
+        {
+          "@label": "gist:Restriction",
+          "@comment": "Clase de la ontologia superior Gist Core que representa una restriccion, prohibicion o regla limitante."
+        }
+      ],
+      "@key": {
+        "@type": "Random"
+      }
+    },
+    {
+      "@type": "Class",
+      "@id": "CourtOrder",
+      "@inherits": [
+        "SourceDocument"
+      ],
+      "issuing_court": {
+        "@type": "Optional",
+        "@class": "xsd:string"
+      },
+      "@documentation": [
+        {
+          "@label": "Oficio Judicial",
+          "@comment": "Documento legal o mandato emitido por un juzgado que ordena una medida cautelar o restriccion."
+        }
+      ]
+    },
+    {
+      "@type": "Class",
+      "@id": "ShareEmbargo",
+      "@inherits": [
+        "GistRestriction"
+      ],
+      "@key": {
+        "@type": "Lexical",
+        "@fields": [
+          "artifact_name"
+        ]
+      },
+      "source_document": {
+        "@type": "Optional",
+        "@class": "SourceDocument"
+      },
+      "affected_agent": {
+        "@type": "Optional",
+        "@class": "Agent"
+      },
+      "affected_account": {
+        "@type": "Optional",
+        "@class": "Account"
+      },
+      "embargoed_quantity": {
+        "@type": "Optional",
+        "@class": "xsd:decimal"
+      },
+      "active": {
+        "@type": "Optional",
+        "@class": "xsd:boolean"
+      },
+      "@documentation": [
+        {
+          "@label": "Embargo de Acciones",
+          "@comment": "Restriccion de embargo dictada judicialmente sobre la participacion accionaria de un socio."
+        }
+      ]
+    },
+    {
+      "@type": "Enum",
+      "@id": "MainAccountType",
+      "@value": [
+        "Asset",
+        "Liability",
+        "Equity",
+        "Revenue",
+        "Expense",
+        "Equity and Liability",
+        "Other"
+      ]
+    }
+  ]
+}

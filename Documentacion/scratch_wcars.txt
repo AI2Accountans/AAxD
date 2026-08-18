@@ -1,0 +1,145 @@
+70th World 
+Continuous 
+Auditing and 
+Reporting 
+Symposium 
+Program
+Universidad Pablo de Olavide  
+Sevilla  •  May 21-22, 2026Agentic AI
+Artificial Intelligence
+Audit Analytics and Business Intelligence
+Big Data
+Blockchain and Smart Contracts
+Continuous Assurance
+ESG Reporting
+Corporate Digital Responsibility
+Data Management Technologies
+Internet of Things
+Generative AI
+Social Media
+Text and Voice Mining
+XBRL
+Asociación Española de Contabilidad  
+y Administración de Empresas
+Comisión de Nuevas Tecnologíasaeca
+
+
+ProgramThursday, May 21, 2026  
+09:00  OPENING:  Michael Alles, Rutgers University;  Michaela Bednárová,  Universidad Pablo 
+de Olavide;  Enrique Bonsón,  Universidad de Huelva.
+09:10  SESSION 1
+CHAIR: Michaela Bednárová, Universidad Pablo de Olavide.
+«From Generative AI to agentic audit: the rapid evolution of tooling for continuous 
+auditing and reporting».  Eric Cohen, Computer CPA.
+«Friend or foe? the effects of humanizing AI on auditor reliance».  Jennifer Joe, Virginia 
+Tech University.
+«Extensional reasoning and the evaluation of internal controls».  Graham Gal, University of  
+Massachusetts.
+«Governing agentic generative AI as strategic actors: extending information governance 
+theory for agentic information systems».  Hussein Issa,  Rutgers University
+11:15  Coffee break
+11:45  SESSION 2
+CHAIR:  Isabel Martínez Conesa, Universidad de Murcia.
+«eIDAS2. Redefining trust in a digital Europe».  Carlos Fernández, Logalty.
+«Reporting on artificial intelligence governance in Europe: an empirical analysis of IBEX-35 
+and DAX-40 companies using agentic AI».  Enrique Bonsón,  Universidad de Huelva; Michaela 
+Bednárová, Universidad Pablo de Olavide;  David Perea-Khalifi, Universidad de Málaga.
+«VIME: a new experimental statistic for visualizing business multilocalization in Spain».  
+Eva Esteban Bragado, Banco de España.
+«Artificial intelligence in auditing: mapping the evolution of a research field».  Pedro 
+Antonio Marín Cervantes, Universidad de Castilla-La Mancha; José Carlos Madrid, Aunna; José 
+Luis Pérez Suso, One Firm; Isabel Martínez Conesa, Universidad de Murcia.
+13:30 Lunch
+14:30  SESSION 3
+CHAIR: Miloˇ s Tumpach, Bratislava University of Economics and Business.
+«Integrating technological risk into audit reporting: evidence from key audit matters». 
+Natália Macová, Bratislava University of Economics and Business; Michaela Bednárová, 
+Universidad Pablo de Olavide; Domenica Lavorato, Università degli Studi di Napoli Parthenope.
+«Strategic adoption of AI chatbots in fashion: the role of luxury positioning and 
+operational scale». Rocio Bonsón, Universidad CEU Fernando III; Michaela Bednárová, 
+Universidad Pablo de Olavide; Natália Macová, Bratislava University of Economics and Business.
+>>>
+
+Program«Digital payment communication on X: an analysis of user engagement in Spanish 
+financial institutions» . Gema Albort, Universidad de Sevilla; Emma Berenguer, Universidad 
+Pablo de Olavide; David Perea-Khalifi, Universidad de Málaga.
+«Automated invoice analysis for auditing and accounting: a QR-code-driven approach». 
+Guilherme Fernandes/Rui Francisco da Cruz, ISCTE Business School.
+«Mobile number portability: predictive analytics». Patrícia Rodeia/Raul Laureano, ISCTE 
+Business School.
+«A framework for predictive analytics in auditing: one click audit».  Mellissa Dardani/
+Miklos Vasarhelyi, Rutgers University.
+Friday, May 22, 2026
+09:00  KEYNOTE: «Beyond Legacy ERP: revolutionizing accounting and reporting with AI and the 
+cloud».  Juraj Tobák, TPA Slovakia, Baker Tilly.
+09:30  SESSION 4
+CHAIR: Emma Berenguer, Universidad Pablo de Olavide.
+«ESG audit in the age of AI: application of transformers for double materiality 
+compliance» . Javier Parra-Domínguez/Laura Sanz-Martín/Lorena Sánchez-Pravos, 
+Universidad de Salamanca.
+«The impact of AI on enterprise resources planning systems: market insights from 
+accounting and financial solutions». Gustavo Juan Porporato Daher, Universidad 
+Autónoma de Madrid.
+«The cyclical reinforcement patterns in paytech adoption».  Manuela Prieto-Rodríguez/
+Ana Irimia-Diéguez/Gema Albort-Morant, Universidad de Sevilla.
+«Digital procurement analytics: a data-driven platform for supplier evaluation, 
+transparency and continuous assurance». Mafalda Santorum/Ricardo Pires,  
+ISCTE Business School.
+11:30 Coffee break
+12:00  SESSION 5
+CHAIR: Enrique Bonsón,  Universidad de Huelva.
+«The role and contribution of AIS research into generative AI: a critical review of all recent 
+IJAIS publications».  Michael Alles, Rutgers University.
+«Auditor judgment as a behavioral control mechanism in AI-driven audits».  Helen 
+Brown-Liburd, Rutgers University.
+«AI-driven risk assessment for continuous auditing of internal control reports in the 
+andalusian local public sector».  Samuel Gómez Vidal/David Velasco Ayuso, Universidad 
+Pablo de Olavide.
+13:15  KEYNOTE:  «Continuous audit & monitoring (CA/CM) intelligent agentic system: a use case 
+in a state government procurement function».  Miklos Vasarhelyi, Rutgers University.
+13:45 CLOSING.   Manuel A. Cardenete, Presidente de la Cámara de Cuentas de Andalucía.
+
+70th World 
+Continuous 
+Auditing and 
+Reporting 
+Symposium Co-Chaired  by:
+Michaela Bednárová. Universidad Pablo de Olavide. Spain 
+Enrique Bonsón.  Universidad de Huelva. Spain
+Miloš Tumpach. Bratislava University of Economics and Business. Slovakia 
+Miklos Vasarhelyi.  Rutgers University. USA
+organizing  Committee :
+Emma Berenguer. Universidad Pablo de Olavide. Spain 
+Rocio Bonsón.  Universidad CEU Fernando III. Spain 
+Cleber Custodio. Deloitte. Spain
+Natália Macová. Bratislava University of Economics and Business. Slovakia
+Marta Miranda. Universidad Pablo de Olavide. Spain
+David Perea El-Khalifi. Universidad de Málaga. Spain
+Zuzana Užíková. Bratislava University of Economics and Business. Slovakia
+Program  Committee :
+Michael Alles. Rutgers University. USA
+Hilal Attasoy. Rutgers University. USA
+Javier de Andrés. Universidad de Oviedo. Spain
+Tomás Escobar. Universidad de Huelva. Spain
+Juan Luis Gandía. Universidad de Valencia. Spain
+Hussein Issa. Rutgers University. USA
+Zuzana Juhászová. Bratislava University of Economics and Business. Slovakia
+Roman Klimko. Bratislava University of Economics and Business. Slovakia
+Daniela Mancini. Universitá di Teramo. Italy
+Isabel Martínez. Universidad de Murcia. Spain
+Kevin Moffit. Rutgers University. USA
+Manuel Ortega. Banco de España. Spain
+Isabel Pedrosa. Coimbra Business School. Portugal
+Natividad Pérez. Banco de España. Spain
+Sonia Royo. Universidad de Zaragoza. Spain
+Alan Sangster. University of Aberdeen. UK
+Hermann Siebdrat. Cologne University of Applied Sciences. GermanyUniversidad  
+Pablo de Olavide
+Carretera  
+de Utrera, km 1
+Sevilla  
+May 21-22, 2026
+Asociación Española de Contabilidad  
+y Administración de Empresas
+Comisión de Nuevas Tecnologíasaeca
+https://bit.ly/41JBOHH Registration here

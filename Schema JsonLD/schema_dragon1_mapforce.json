@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "@graph": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group5": {
+            "type": "string"
+          },
+          "groupstrokecolor": {
+            "type": "string"
+          },
+          "subgroup": {
+            "type": "string"
+          },
+          "groupborderradius": {
+            "type": "string"
+          },
+          "groupstrokewidth": {
+            "type": "string"
+          },
+          "group4": {
+            "type": "string"
+          },
+          "valuecolors": {
+            "type": "string"
+          },
+          "group1": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "grouplabelweight": {
+            "type": "string"
+          },
+          "keydata": {
+            "type": "string"
+          },
+          "subgroup1": {
+            "type": "string"
+          },
+          "matriz_fila": {
+            "type": "string"
+          },
+          "info": {
+            "type": "string"
+          },
+          "group2": {
+            "type": "string"
+          },
+          "subgroup2": {
+            "type": "string"
+          },
+          "group6": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "groupalignment": {
+            "type": "string"
+          },
+          "startdate": {
+            "type": "string"
+          },
+          "folderid": {
+            "type": "string"
+          },
+          "grouplabelcolor": {
+            "type": "string"
+          },
+          "enddate": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "string"
+          },
+          "copyright": {
+            "type": "string"
+          },
+          "card": {
+            "type": "string"
+          },
+          "template": {
+            "type": "string"
+          },
+          "subgroup3": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          },
+          "modelid": {
+            "type": "string"
+          },
+          "pagesize": {
+            "type": "string"
+          },
+          "artifact_name": {
+            "type": "string"
+          },
+          "actionscript": {
+            "type": "string"
+          },
+          "layoutext": {
+            "type": "string"
+          },
+          "iconsize": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          },
+          "zoom": {
+            "type": "string"
+          },
+          "matriz_columna": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "grouplabelfontsize1": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "relationships": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "importance": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          },
+          "subgroup4": {
+            "type": "string"
+          },
+          "dateperiod": {
+            "type": "string"
+          },
+          "doc": {
+            "type": "string"
+          },
+          "valuelabels": {
+            "type": "string"
+          },
+          "layout": {
+            "type": "string"
+          },
+          "count": {
+            "type": "string"
+          },
+          "grouplabelalign": {
+            "type": "string"
+          },
+          "group3": {
+            "type": "string"
+          },
+          "grouppadding": {
+            "type": "string"
+          },
+          "total": {
+            "type": "string"
+          },
+          "display": {
+            "type": "string"
+          },
+          "grouplabelfontsize": {
+            "type": "string"
+          },
+          "@id": {
+            "type": "string"
+          },
+          "group7": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "@type": "Agent",
+    "@id": "Agent/A001",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 1"
+  },
+  {
+    "@type": "Agent",
+    "@id": "Agent/A002",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 2"
+  },
+  {
+    "@type": "Agent",
+    "@id": "Agent/A003",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 3"
+  },
+  {
+    "@type": "Agent",
+    "@id": "Agent/A004",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 4"
+  },
+  {
+    "@type": "Agent",
+    "@id": "Agent/A005",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 5"
+  },
+  {
+    "@type": "Agent",
+    "@id": "Agent/A006",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 6"
+  },
+  {
+    "@type": "Agent",
+    "@id": "Agent/A007",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Who",
+    "artifact_name": "Socio 7"
+  },
+  {
+    "@type": "Account",
+    "@id": "Account/1105",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "What",
+    "artifact_name": "Caja y Bancos",
+    "account_id": "1105",
+    "account_description": "Efectivo aportado por los socios"
+  },
+  {
+    "@type": "Account",
+    "@id": "Account/3105",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "What",
+    "artifact_name": "Capital Emitido",
+    "account_id": "3105",
+    "account_description": "Capital Social de la Entidad",
+    "shares_type": "Ordinarias"
+  },
+  {
+    "@type": "SourceDocument",
+    "@id": "SourceDocument/DOC-CONST-XYZ",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "Why",
+    "artifact_name": "Contrato de Constitución",
+    "document_type": "Acta de Asamblea Momento Cero",
+    "engaged_agents": [
+      "Agent/A001", "Agent/A002", "Agent/A003", "Agent/A004", 
+      "Agent/A005", "Agent/A006", "Agent/A007"
+    ],
+    "digital_twin_ipfs": "ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y2vedxjQkDDP1mXWo6uco",
+    "prov:wasDerivedFrom": "file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Momento0/Escritura Constitucion/SOCIEDAD_LIMITADA.pdf"
+  },
+  {
+    "@type": "EntryHeader",
+    "@id": "EntryHeader/JE-001",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "When",
+    "artifact_name": "Asiento de Apertura",
+    "posting_date": "2026-02-14",
+    "source_document": "SourceDocument/DOC-CONST-XYZ"
+  },
+
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-001-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A001", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-001-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A001", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+  
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-002-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A002", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-002-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A002", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-003-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A003", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-003-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A003", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-004-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A004", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-004-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A004", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-005-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A005", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-005-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A005", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-006-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A006", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-006-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A006", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-007-D", "header": "EntryHeader/JE-001", "account": "Account/1105", "agent_identifier": "Agent/A007", "amount": 250000, "debit_credit_code": "D" },
+  { "@type": "EntryDetail", "@id": "EntryDetail/ED-007-C", "header": "EntryHeader/JE-001", "account": "Account/3105", "agent_identifier": "Agent/A007", "amount": 250000, "debit_credit_code": "C", "shares_type": "Ordinarias" },
+
+  {
+    "@type": "Entity",
+    "@id": "Entity/ENT-XYZ",
+    "matriz_fila": "FunctioningEnterprise",
+    "matriz_columna": "How",
+    "artifact_name": "XYZ Corp",
+    "nexus": [
+      "SourceDocument/DOC-CONST-XYZ"
+    ]
+  }
+]

@@ -1,0 +1,178 @@
+@prefix sbvr: <http://www.omg.org/spec/SBVR/20190901/sbvr#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<http://www.omg.org/spec/SBVR/20190901/sbvr#> a owl:Ontology ;
+    dc:title "OMG Semantics of Business Vocabulary and Business Rules (SBVR) Metamodel Ontology" ;
+    dc:description "Formal OWL 2 / RDF Turtle representation of the OMG SBVR 1.5 Metamodel for enterprise governance, business vocabularies, and deontic rules." ;
+    dct:publisher "Object Management Group (OMG)" ;
+    owl:versionInfo "1.5" .
+
+# =================================================================
+# 1. CORE METAMODEL CLASSES
+# =================================================================
+
+sbvr:Representation a owl:Class ;
+    rdfs:label "Representation" ;
+    rdfs:comment "A sign or expression that communicates a Meaning." .
+
+sbvr:Designation a owl:Class ;
+    rdfs:subClassOf sbvr:Representation ;
+    rdfs:label "Designation" ;
+    rdfs:comment "A representation of a Concept by a sign (term, name, or symbol)." .
+
+sbvr:Meaning a owl:Class ;
+    rdfs:label "Meaning" ;
+    rdfs:comment "The conceptual content or sense expressed by a Representation." .
+
+sbvr:Concept a owl:Class ;
+    rdfs:subClassOf sbvr:Meaning ;
+    rdfs:label "Concept" ;
+    rdfs:comment "A unit of knowledge created by a unique combination of characteristics." .
+
+sbvr:NounConcept a owl:Class ;
+    rdfs:subClassOf sbvr:Concept ;
+    rdfs:label "Noun Concept" ;
+    rdfs:comment "A concept that is the meaning of a noun or noun phrase (Object, Resource, Agent)." .
+
+sbvr:GeneralConcept a owl:Class ;
+    rdfs:subClassOf sbvr:NounConcept ;
+    rdfs:label "General Concept" ;
+    rdfs:comment "A noun concept that applies to a class of instances (e.g., Party, Invoice, Resource)." .
+
+sbvr:IndividualConcept a owl:Class ;
+    rdfs:subClassOf sbvr:NounConcept ;
+    rdfs:label "Individual Concept" ;
+    rdfs:comment "A noun concept that applies to exactly one instance." .
+
+sbvr:FactType a owl:Class ;
+    rdfs:subClassOf sbvr:Concept ;
+    rdfs:label "Fact Type" ;
+    rdfs:comment "A concept that is the meaning of a verb phrase or predicate relating one or more noun concepts." .
+
+sbvr:BinaryFactType a owl:Class ;
+    rdfs:subClassOf sbvr:FactType ;
+    rdfs:label "Binary Fact Type" ;
+    rdfs:comment "A fact type relating exactly two noun concepts." .
+
+# =================================================================
+# 2. BUSINESS RULES & STATEMENTS
+# =================================================================
+
+sbvr:Statement a owl:Class ;
+    rdfs:subClassOf sbvr:Representation ;
+    rdfs:label "Statement" ;
+    rdfs:comment "A sentence expressing a Proposition or Business Rule." .
+
+sbvr:Proposition a owl:Class ;
+    rdfs:subClassOf sbvr:Meaning ;
+    rdfs:label "Proposition" ;
+    rdfs:comment "A meaning that can be true or false." .
+
+sbvr:Rule a owl:Class ;
+    rdfs:subClassOf sbvr:Proposition ;
+    rdfs:label "Rule" ;
+    rdfs:comment "A proposition that is a claim of obligation, necessity, or permission." .
+
+sbvr:BusinessRule a owl:Class ;
+    rdfs:subClassOf sbvr:Rule ;
+    rdfs:label "Business Rule" ;
+    rdfs:comment "A rule that is under operational or regulatory control of the enterprise." .
+
+sbvr:StructuralRule a owl:Class ;
+    rdfs:subClassOf sbvr:BusinessRule ;
+    rdfs:label "Structural Rule" ;
+    rdfs:comment "A business rule that defines how the business constructs or categorizes its domain (Definitional Rule)." .
+
+sbvr:OperatingRule a owl:Class ;
+    rdfs:subClassOf sbvr:BusinessRule ;
+    rdfs:label "Operating Rule" ;
+    rdfs:comment "A business rule that governs operational conduct (Behavioral Rule)." .
+
+# =================================================================
+# 3. DEONTIC & LOGICAL FORMULATIONS
+# =================================================================
+
+sbvr:LogicalFormulation a owl:Class ;
+    rdfs:label "Logical Formulation" ;
+    rdfs:comment "A formal structure expressing the logical structure of a statement." .
+
+sbvr:DeonticFormulation a owl:Class ;
+    rdfs:subClassOf sbvr:LogicalFormulation ;
+    rdfs:label "Deontic Formulation" ;
+    rdfs:comment "A logical formulation expressing obligation, permission, or prohibition." .
+
+sbvr:ObligationFormulation a owl:Class ;
+    rdfs:subClassOf sbvr:DeonticFormulation ;
+    rdfs:label "Obligation Formulation" ;
+    rdfs:comment "Expressed by 'It is obligatory that...'" .
+
+sbvr:ProhibitionFormulation a owl:Class ;
+    rdfs:subClassOf sbvr:DeonticFormulation ;
+    rdfs:label "Prohibition Formulation" ;
+    rdfs:comment "Expressed by 'It is prohibited that...'" .
+
+sbvr:PermissibilityFormulation a owl:Class ;
+    rdfs:subClassOf sbvr:DeonticFormulation ;
+    rdfs:label "Permissibility Formulation" ;
+    rdfs:comment "Expressed by 'It is permitted that...'" .
+
+sbvr:NecessityFormulation a owl:Class ;
+    rdfs:subClassOf sbvr:LogicalFormulation ;
+    rdfs:label "Necessity Formulation" ;
+    rdfs:comment "Expressed by 'It is necessary that...'" .
+
+# =================================================================
+# 4. QUANTIFICATION & EXPRESSIONS
+# =================================================================
+
+sbvr:Quantification a owl:Class ;
+    rdfs:subClassOf sbvr:LogicalFormulation ;
+    rdfs:label "Quantification" ;
+    rdfs:comment "Specifies the scope of instances bound to a variable." .
+
+sbvr:UniversalQuantification a owl:Class ;
+    rdfs:subClassOf sbvr:Quantification ;
+    rdfs:label "Universal Quantification" ;
+    rdfs:comment "Expressed by 'each', 'every', 'all'." .
+
+sbvr:ExistentialQuantification a owl:Class ;
+    rdfs:subClassOf sbvr:Quantification ;
+    rdfs:label "Existential Quantification" ;
+    rdfs:comment "Expressed by 'at least one', 'some'." .
+
+sbvr:AtLeastNQuantification a owl:Class ;
+    rdfs:subClassOf sbvr:Quantification .
+
+sbvr:AtMostNQuantification a owl:Class ;
+    rdfs:subClassOf sbvr:Quantification .
+
+sbvr:ExactlyNQuantification a owl:Class ;
+    rdfs:subClassOf sbvr:Quantification .
+
+# =================================================================
+# 5. CORE OBJECT & DATA PROPERTIES
+# =================================================================
+
+sbvr:signifies a owl:ObjectProperty ;
+    rdfs:domain sbvr:Representation ;
+    rdfs:range sbvr:Meaning ;
+    rdfs:label "signifies" .
+
+sbvr:expresses a owl:ObjectProperty ;
+    rdfs:domain sbvr:Statement ;
+    rdfs:range sbvr:Proposition ;
+    rdfs:label "expresses" .
+
+sbvr:isGovernedBy a owl:ObjectProperty ;
+    rdfs:domain sbvr:Concept ;
+    rdfs:range sbvr:BusinessRule ;
+    rdfs:label "is governed by" .
+
+sbvr:constrainedBy a owl:ObjectProperty ;
+    rdfs:domain sbvr:FactType ;
+    rdfs:range sbvr:BusinessRule ;
+    rdfs:label "is constrained by" .

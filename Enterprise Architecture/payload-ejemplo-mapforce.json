@@ -1,0 +1,36 @@
+[
+  {
+    "@type": "Agent",
+    "@id": "Agent/Cliente_001",
+    "name": "Sponsor B2B",
+    "role": "Inversionista_y_Cliente"
+  },
+  {
+    "@type": "Resource",
+    "@id": "Resource/Cash_USD",
+    "resource_type": "Flujo de Efectivo",
+    "balance": 50000.00
+  },
+  {
+    "@type": "Event",
+    "@id": "Event/Transaccion_Venta_101",
+    "event_date": "2026-04-07T10:00:00Z",
+    "description": "Venta de servicios de capacitación impactando flujo de efectivo",
+    "financial_impact_amount": 5000.00,
+    "involved_agent": { "@id": "Agent/Cliente_001" },
+    "affected_resource": { "@id": "Resource/Cash_USD" }
+  },
+  {
+    "@type": "Contract",
+    "@id": "Contract/Suscripcion_001",
+    "status": "Activo",
+    "performance_condition": "Entregar 10 cursos a la semana",
+    "engaged_agents": [
+      { "@id": "Agent/Cliente_001" },
+      { "@id": "Agent/Academia_Interna" }
+    ],
+    "regulated_resources": [
+      { "@id": "Resource/Cash_USD" }
+    ]
+  }
+]

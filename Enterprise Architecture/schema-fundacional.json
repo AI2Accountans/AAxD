@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "@base": "terminusdb:///data/",
+    "@schema": "terminusdb:///schema#",
+    "@type": "Context"
+  },
+  "@graph": [
+    {
+      "@type": "Class",
+      "@id": "Agent",
+      "@label": "Agente (QUIÉN)",
+      "@description": "Cualquier persona, equipo o actor (inversionista, administrador, estudiante) que participe en la entidad.",
+      "@key": {"@type": "Random"}
+    },
+    {
+      "@type": "Class",
+      "@id": "Resource",
+      "@label": "Recurso (QUÉ)",
+      "@description": "Activos tangibles, intangibles o información compartida en la firma.",
+      "@key": {"@type": "Random"}
+    },
+    {
+      "@type": "Class",
+      "@id": "Location",
+      "@label": "Ubicación (DÓNDE)",
+      "@description": "Nodo físico o lógico, plataformas digitales, o fronteras jurisdiccionales.",
+      "@key": {"@type": "Random"}
+    },
+    {
+      "@type": "Class",
+      "@id": "Event",
+      "@label": "Evento Económico (CUÁNDO)",
+      "@description": "Punto en el tiempo, intercambio, transacción contable o hito temporal.",
+      "@key": {"@type": "Random"}
+    },
+    {
+      "@type": "Class",
+      "@id": "Contract",
+      "@label": "Contrato (POR QUÉ y CÓMO)",
+      "@description": "Políticas y acuerdos (formales o informales) que mantienen el equilibrio entre agentes.",
+      "@key": {"@type": "Random"},
+      "engaged_agents": {
+        "@type": "Set",
+        "@class": "Agent",
+        "@label": "Partes Involucradas"
+      },
+      "regulated_resources": {
+        "@type": "Set",
+        "@class": "Resource",
+        "@label": "Recursos / Hechos Compartidos"
+      }
+    },
+    {
+       "@type": "Class",
+       "@id": "Entity",
+       "@label": "La Entidad",
+       "@description": "La firma en sí misma, entendida macroscópicamente como un conjunto o nexo de contratos.",
+       "@key": {"@type": "Random"},
+       "nexus": {
+           "@type": "Set",
+           "@class": "Contract",
+           "@label": "El Nexo de Contratos"
+       }
+    }
+  ]
+}

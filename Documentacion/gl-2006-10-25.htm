@@ -1,0 +1,1471 @@
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Generator" content="Microsoft Word 11 (filtered)"><title>XBRL GL 2006 Proposed Recommendation - 2006-10-25</title>
+
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+h1
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:39.6pt;
+	text-indent:-21.6pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Verdana;
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:13.0pt;
+	font-family:Verdana;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:Arial;}
+p.MsoIndex1, li.MsoIndex1, div.MsoIndex1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:10.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex2, li.MsoIndex2, div.MsoIndex2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:20.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex3, li.MsoIndex3, div.MsoIndex3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:30.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex4, li.MsoIndex4, div.MsoIndex4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:40.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex5, li.MsoIndex5, div.MsoIndex5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:50.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex6, li.MsoIndex6, div.MsoIndex6
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:60.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex7, li.MsoIndex7, div.MsoIndex7
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:70.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex8, li.MsoIndex8, div.MsoIndex8
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:80.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndex9, li.MsoIndex9, div.MsoIndex9
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:90.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Arial;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-variant:small-caps;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:30.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:50.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:70.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:80.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoIndexHeading, li.MsoIndexHeading, div.MsoIndexHeading
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold;}
+p.MsoTof, li.MsoTof, div.MsoTof
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:20.0pt;
+	text-indent:-20.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoEnvelopeAddress, li.MsoEnvelopeAddress, div.MsoEnvelopeAddress
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:144.0pt;
+	font-size:12.0pt;
+	font-family:Arial;}
+p.MsoEnvelopeReturn, li.MsoEnvelopeReturn, div.MsoEnvelopeReturn
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Arial;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoToa, li.MsoToa, div.MsoToa
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:10.0pt;
+	text-indent:-10.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoMaPRoText, li.MsoMacroText, div.MsoMacroText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoToaHeading, li.MsoToaHeading, div.MsoToaHeading
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.MsoList, li.MsoList, div.MsoList
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoList3, li.MsoList3, div.MsoList3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoList4, li.MsoList4, div.MsoList4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoList5, li.MsoList5, div.MsoList5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListBullet3, li.MsoListBullet3, div.MsoListBullet3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListBullet4, li.MsoListBullet4, div.MsoListBullet4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListBullet5, li.MsoListBullet5, div.MsoListBullet5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListNumber2, li.MsoListNumber2, div.MsoListNumber2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListNumber3, li.MsoListNumber3, div.MsoListNumber3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListNumber4, li.MsoListNumber4, div.MsoListNumber4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListNumber5, li.MsoListNumber5, div.MsoListNumber5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.MsoClosing, li.MsoClosing, div.MsoClosing
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:216.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoSignature, li.MsoSignature, div.MsoSignature
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:216.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListContinue, li.MsoListContinue, div.MsoListContinue
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListContinue2, li.MsoListContinue2, div.MsoListContinue2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:36.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListContinue3, li.MsoListContinue3, div.MsoListContinue3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:54.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListContinue4, li.MsoListContinue4, div.MsoListContinue4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:72.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoListContinue5, li.MsoListContinue5, div.MsoListContinue5
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:90.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoMessageHeader, li.MsoMessageHeader, div.MsoMessageHeader
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:54.0pt;
+	text-indent:-54.0pt;
+	background:#CCCCCC;
+	font-size:12.0pt;
+	font-family:Arial;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:Arial;}
+p.MsoSalutation, li.MsoSalutation, div.MsoSalutation
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-indent:10.5pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-indent:10.5pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoNoteHeading, li.MsoNoteHeading, div.MsoNoteHeading
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	line-height:200%;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:8.0pt;
+	font-family:Verdana;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	line-height:200%;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	font-size:8.0pt;
+	font-family:Verdana;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0cm;
+	margin-right:72.0pt;
+	margin-bottom:6.0pt;
+	margin-left:72.0pt;
+	font-size:10.0pt;
+	font-family:Verdana;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	background:navy;
+	font-size:10.0pt;
+	font-family:Tahoma;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAutoSig, li.MsoAutoSig, div.MsoAutoSig
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+address
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-style:italic;}
+pre
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+tt
+	{font-family:"Arial Unicode MS";}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:8.0pt;
+	font-family:Tahoma;}
+p.heading1-notoc, li.heading1-notoc, div.heading1-notoc
+	{margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.code, li.code, div.code
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Courier New";}
+p.p-normal, li.p-normal, div.p-normal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.table-l1, li.table-l1, div.table-l1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.table-verdana, li.table-verdana, div.table-verdana
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.table-l2, li.table-l2, div.table-l2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.table-l3, li.table-l3, div.table-l3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.table-bold, li.table-bold, div.table-bold
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.table-normal, li.table-normal, div.table-normal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.h2-iastitle, li.h2-iastitle, div.h2-iastitle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.preformatted, li.preformatted, div.preformatted
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.h2, li.h2, div.h2
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.blockquote, li.blockquote, div.blockquote
+	{margin-top:5.0pt;
+	margin-right:18.0pt;
+	margin-bottom:5.0pt;
+	margin-left:18.0pt;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.numbered, li.numbered, div.numbered
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.bullets, li.bullets, div.bullets
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:90.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.tabletitle, li.tabletitle, div.tabletitle
+	{margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold;}
+p.table, li.table, div.table
+	{margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:1.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Verdana;}
+p.table-normal1, li.table-normal1, div.table-normal1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+p.normalbullet, li.normalbullet, div.normalbullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.head1, li.head1, div.head1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+span.codechar
+	{font-family:"Courier New";}
+span.m1
+	{color:blue;}
+span.ver8pt1line1
+	{font-family:Verdana;
+	color:black;
+	text-decoration:none none;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:62.65pt 79.2pt 72.0pt 79.2pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style></head><body lang="EN-GB" link="blue" vlink="purple">
+
+<div class="Section1">
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center;" align="center"><b><span style="font-size: 22pt; font-family: Arial;">XBRL GL
+2006 (Proposed Recommendation – 2006-10-25)</span></b></p>
+
+<p class="MsoNormal" style="margin: 0cm 28.45pt 6pt 36pt; text-align: center;" align="center"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="margin: 0cm 28.45pt 0.0001pt 36pt; text-align: center;" align="center"><span lang="EN-US">Copyright © XBRL International 2006. All Rights Reserved. </span></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;"><span lang="EN-US">&nbsp;</span></p>
+
+<div style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0cm 0cm 1pt;">
+
+<p class="MsoNormal"><b>&nbsp;</b></p>
+
+</div>
+
+<h6>Summary Taxonomy Information:</h6>
+
+<table class="MsoNormalTable" style="width: 477pt; margin-left: -3.6pt; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0" width="636">
+ <tbody><tr>
+  <td style="border-style: solid; border-color: black; border-width: 1.5pt 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" valign="top" width="144">
+  <p class="MsoToc1" style="margin-top: 0cm;"><span style="font-family: Verdana; text-transform: none;">Purpose and Scope:</span></p>
+  </td>
+  <td style="border-style: solid solid solid none; border-color: black black black -moz-use-text-color; border-width: 1.5pt 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoHeader">This taxonomy (a modular set) is intended to provide a
+  standardized format for representing the data fields found in accounting and
+  operation systems and transactional reports that will allow organizations to
+  tag journal entries, accounting master files, and historical status reports
+  in XBRL. The modular set consists of the COR (Core), the BUS (Advanced
+  Business Concepts), MUC (MultiCurrency), USK (concepts for the US, UK, etc) and TAF (tax audit file) modules.</p>
+  <p class="MsoHeader">COR updates the Core 1.1 to comply with XBRL Specification
+  Version 2.1, dated 2003-12-31 plus errata corrections dated 2005-11-07. </p>
+  <p class="MsoHeader">BUS, an update to Advanced Business Concepts 1.1, augments
+  COR with data fields found in accounting and operation systems that will
+  allow organizations to track much more detail as part of every entry. This
+  taxonomy represents inventory and business metrics, organizational detail and
+  the Entity Information section, and other common items to supplement the
+  resources, agents and events that represent the customer, vendor and employee
+  related transactional detail.</p>
+  <p class="MsoHeader">MUC, the update to Multicurrency 1.1, adds data fields
+  found in accounting and operation systems that will allow organizations to
+  track much more detail as part of every entry. This includes detail for the
+  Entity Information section, additional sections necessary for other add-on
+  modules, and information for business metrics/inventory tracking.</p>
+  <p class="MsoHeader">USK, an update to Advanced US/UK Accounting 1.1, provides
+  data fields found in accounting and operation systems that will allow
+  organizations to tag journal entries, accounting master files, and historical
+  status reports with additional information necessary for more sophisticated
+  accounting needs common to Saxonic (US, UK, Australia, Canada, and other
+  jurisdictions) in XBRL.</p>
+  <p class="MsoHeader">TAF is a new module, not an update of a previous version.
+  It adds data fields, needed for tax, tax audit.&nbsp; The addition of these
+  fields enables XBRL GL to be used by the international tax agencies and was
+  developed with the input of groups such As the OECD SAF-T group and the OASIS
+  tax XML group. </p>
+  <p class="MsoHeader">Each module can be seen as taxonomy with the others as
+  extensions to the Core, but it is more worthwhile to look at the modules as
+  parts of a whole, even though it is not essential to use all of them.</p>
+  <p class="MsoHeader">The structure of the taxonomies is such that a complete
+  taxonomy is “compiled” by assembling a set of schemas via a “palette” schema
+  (which is always in the file named gl-plt-2005-11-07.xsd). Since the content
+  models of many elements vary depending on the combination of modules that are
+  being used in any one application, the taxonomy schemas are separated into
+  multiple physical files that are connected by means of &lt;include&gt; and
+  &lt;import&gt; statements. There is one “general” schema (gl&#8209;gen-2005-11-07.xsd)
+  that is &lt;import&gt;ed by the others. Each module’s own schema is divided
+  into two main parts – the element declarations (in gl-<i> xxx</i>-2005-11-07.xsd)
+  and the content model declarations (in gl-<i>xxx</i>-content-2005-11-07.xsd –
+  which &lt;include&gt;s gl-<i> xxx</i>-2005-11-07.xsd to form a complete
+  schema) where “<i>xxx</i>” is the lowercase 3 character code for the relevant
+  module. </p>
+  <p class="MsoHeader">The various combinations of modules that are delivered for
+  this taxonomy are listed below. They are each located in a sub-folder of the
+  “plt” folder that is a sibling folder of the various module folders (named “<i>cor</i>”,
+  “<i>bus</i>” etc.). The names of the pertinent subfolders are shown below.</p>
+  <p class="MsoHeader">COR (subfolder <i>case-c</i>)</p>
+  <p class="MsoHeader">COR and BUS (subfolder <i>case-c-b</i>)</p>
+  <p class="MsoHeader">COR and BUS and MUC (subfolder <i>case-c-b-m</i>)</p>
+  <p class="MsoHeader">COR and BUS and MUC and USK (subfolder <i>case-c-b-m-u</i>)</p>
+  <p class="MsoHeader">COR and BUS and MUC and USK and TAF (subfolder <i>case-c-b-m-u-t</i>)</p>
+  <p class="MsoHeader">COR and BUS and TAF (subfolder <i>case-c-b-t</i>)</p>
+  <p class="MsoHeader">COR and TAF (subfolder <i>case-c-t</i>)</p>
+  <p class="MsoHeader">For more detailed information see the accompanying
+  document GLTFTA-PR-2006-10-25.rtf</p>
+  <p class="MsoHeader">Also included is the IDS subfolder which contains sample instance documents to illustrate the use of XBRL GL to represent common business documents.</p>
+  
+  
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" valign="top" width="144">
+  <p class="MsoToc1" style="margin-top: 0cm;"><span style="font-family: Verdana; text-transform: none;">Relationship to Prior releases</span></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoHeader">This release is compliant with XBRL 2.1, Specification
+  dated 2003-12-31 plus errata corrections dated 2005-11-07. </p>
+  <p class="MsoHeader">XBRL GL Version 1.1 is compliant with XBRL Specification
+  2.0a; XBRL GL Version 1.0 is compliant with XBRL Specification 2.0; there is
+  no intention for further development work on either of these prior taxonomy
+  releases.<span style="font-size: 8pt; color: black;"> </span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Owner(s)</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoNormal">XBRL International Inc</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Date</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoNormal">2006-10-25</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Status</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoNormal">XBRL International Proposed Recommendation</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Approval Level</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoCommentText">XBRL International Proposed Recommendation</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid; height: 37.5pt;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt; height: 37.5pt;" width="144">
+  <p class="MsoNormal"><b>Specification version</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt; height: 37.5pt;" width="492">
+  <p class="MsoNormal">XBRL Specification Version 2.1, dated 2003-12-31 plus
+  errata corrections dated 2005-11-07 </p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Contacts</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoNormal">Jeff Fedor (<a href="mailto:jeff.fedor@gmail.com">jeff.fedor@gmail.com</a>)</p>
+  <p class="MsoNormal">Hugh Wallis (<u><span style="color: blue;"><a href="mailto:hughwallis@xbrl.org">hughwallis@xbrl.org</a></span></u><span style="font-family: Arial;">)</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Comments</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoNormal">This taxonomy was approved by the XBRL GL Working Group of XBRL International for consideration by the XBRL Standards Board to become a Proposed Recommendation on
+  2006-10-25. Comments are to be sent to the XBRL GL working group (<a href="mailto:xbrlgl@xbrl.org">xbrlgl@xbrl.org</a>) or its
+  Chair, Jeff Fedor.</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid; height: 21.05pt;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt; height: 21.05pt;" width="144">
+  <p class="MsoNormal"><b>Namespaces</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt; height: 21.05pt;" valign="top" width="492">
+  <p class="MsoNormal">http://www.xbrl.org/int/gl/gen/2006-10-25</p>
+  <p class="MsoNormal">http://www.xbrl.org/int/gl/cor/2006-10-25</p>
+  <p class="MsoNormal">http://www.xbrl.org/int/gl/bus/2006-10-25</p>
+  <p class="MsoNormal">http://www.xbrl.org/int/gl/muc/2006-10-25</p>
+  <p class="MsoNormal">http://www.xbrl.org/int/gl/usk/2006-10-25</p>
+  <p class="MsoNormal">http://www.xbrl.org/int/gl/taf/2006-10-25</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Namespace prefixes</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal">gl-gen</p>
+  <p class="MsoNormal">gl-cor</p>
+  <p class="MsoNormal">gl-bus</p>
+  <p class="MsoNormal">gl-muc</p>
+  <p class="MsoNormal">gl-usk</p>
+  <p class="MsoNormal">gl-taf</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Linkbases</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal">The modules of XBRL-GL, the Journal taxonomy include
+  schema (xsd) files, label linkbases and presentation linkbases. They do not
+  include reference, definition or calculation linkbases. This is a result of
+  XBRL GL being a completely international taxonomy not tied to any
+  jurisdiction or any standards committee. </p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of taxonomy files</b></p>
+  <p class="MsoNormal"><b>(Palette and content model declarations)</b></p>
+  <p class="MsoNormal"><b>Note: When referencing the taxonomy from an instance,
+  the gl-plt-2006-10-25.xsd is the schema to be referenced</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><b>COR module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><b>COR and BUS module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b/gl-bus-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b/gl-bus-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><b>COR and BUS and MUC module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-bus-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-bus-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-muc-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m/gl-muc-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><b>COR and BUS and MUC and USK module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-bus-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-bus-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-muc-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-muc-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-usk-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u/gl-usk-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><b>COR and BUS and MUC and USK and TAF module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-bus-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-bus-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-muc-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-muc-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-usk-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-usk-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-taf-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-m-u-t/gl-taf-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><b>COR and BUS and TAF module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-bus-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-bus-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-taf-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-b-t/gl-taf-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><b>COR and TAF module:</b></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-t/gl-plt-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-t/gl-plt-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-t/gl-cor-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-t/gl-cor-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-t/gl-taf-content-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/plt/case-c-t/gl-taf-content-2006-10-25.xsd</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/gen/gl-gen-2006-10-25.xsd</a></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of taxonomy files (element
+  declarations and linkbases)</b></p>
+  <p class="MsoNormal"><b>(COR)</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/cor/gl-cor-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/cor/gl-cor-2006-10-25.xsd</a>
+  <span style="font-size: 8pt;">(Schemas)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/cor/gl-cor-2006-10-25-label.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/cor/gl-cor-2006-10-25-label.xml</a>
+  <span style="font-size: 8pt;">(Labels linkbase)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/cor/gl-cor-2006-10-25-presentation.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/cor/gl-cor-2006-10-25-presentation.xml</a>
+  <span style="font-size: 8pt;">(Presentation linkbase)</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of taxonomy files (element
+  declarations and linkbases) </b></p>
+  <p class="MsoNormal"><b>(BUS)</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/bus/gl-bus-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/bus/gl-bus-2006-10-25.xsd</a>&nbsp;
+  <span style="font-size: 8pt;">(Schemas)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/bus/gl-bus-2006-10-25-label.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/bus/gl-bus-2006-10-25-label.xml</a>
+  <span style="font-size: 8pt;">(Labels linkbase)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/bus/gl-bus-2006-10-25-presentation.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/bus/gl-bus-2006-10-25-presentation.xml</a>
+  <span style="font-size: 8pt;">(Presentation linkbase)</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of taxonomy files (element
+  declarations and linkbases) </b></p>
+  <p class="MsoNormal"><b>(MUC)</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/muc/gl-muc-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/muc/gl-muc-2006-10-25.xsd</a>&nbsp;
+  <span style="font-size: 8pt;">(Schemas)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/muc/gl-muc-2006-10-25-label.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/muc/gl-muc-2006-10-25-label.xml</a>
+  <span style="font-size: 8pt;">(Labels linkbase)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/muc/gl-muc-2006-10-25-presentation.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/muc/gl-muc-2006-10-25-presentation.xml</a>
+  <span style="font-size: 8pt;">(Presentation linkbase)</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of taxonomy files (element
+  declarations and linkbases) </b></p>
+  <p class="MsoNormal"><b>(USK)</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/usk/gl-usk-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/usk/gl-usk-2006-10-25.xsd</a>&nbsp;
+  <span style="font-size: 8pt;">(Schemas)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/usk/gl-usk-2006-10-25-label.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/usk/gl-usk-2006-10-25-label.xml</a>
+  <span style="font-size: 8pt;">(Labels linkbase)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/usk/gl-usk-2006-10-25-presentation.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/usk/gl-usk-2006-10-25-presentation.xml</a>
+  <span style="font-size: 8pt;">(Presentation linkbase)</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of taxonomy files (element
+  declarations and linkbases) </b></p>
+  <p class="MsoNormal"><b>(TAF)</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/taf/gl-taf-2006-10-25.xsd">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/taf/gl-taf-2006-10-25.xsd</a>&nbsp;
+  <span style="font-size: 8pt;">(Schemas)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/taf/gl-taf-2006-10-25-label.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/taf/gl-taf-2006-10-25-label.xml</a>
+  <span style="font-size: 8pt;">(Labels linkbase)</span></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/taf/gl-taf-2006-10-25-presentation.xml">http://www.xbrl.org/taxonomy/int/gl/2006-10-25/taf/gl-taf-2006-10-25-presentation.xml</a>
+  <span style="font-size: 8pt;">(Presentation linkbase)</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Physical location of sample instance documents </b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/BP_FixedAssetList.xml">Fixed Asset List</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/BP_TrialBalance.xml">Trial Balance</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/Customer_Invoices.xml">Customer Invoices</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/Employee_Timesheets.xml">Employee Timesheets</a></p> 
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/Job-budget-v-actual.xml">Job Costing Actual vs. Budget</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/JournalEntry_Annotated_Book-Tax.xml">Book to Tax Reconciliation</a></p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/taxonomy/int/gl/2006-10-25/ids/JournalEntry_Annotated_Instance.xml">Journal Entries</a></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><b>Summary documents</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/int/gl/2006-10-25/gl-2006-10-25.htm">http://www.xbrl.org/int/gl/2006-10-25/gl-2006-10-25.htm</a>
+  (this document)</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><span class="ver8pt1line1"><b><span style="color: windowtext;">Taxonomy
+  Technical Architecture document</span></b></span></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/int/gl/2006-10-25/GLTFTA-PR-2006-10-25.rtf">http://www.xbrl.org/int/gl/2006-10-25/GLTFTA-PR-2006-10-25.rtf</a>
+  (normative)</p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/int/gl/2006-10-25/GLTFTA-PR-2006-10-25.htm">http://www.xbrl.org/int/gl/2006-10-25/GLTFTA-PR-2006-10-25.htm</a>
+  (non-normative)</p>
+  <p class="MsoNormal"><span style="font-family: &quot;Times New Roman&quot;;">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><a name="_Toc89366248"><span class="ver8pt1line1"><b><span style="color: windowtext;">GL Instance Standards document</span></b></span></a></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/int/gl/2006-10-25/GLIS-PR-2006-10-25.rtf">http://www.xbrl.org/int/gl/2006-10-25/GLIS-PR-2006-10-25.rtf</a>
+  (normative)</p>
+  <p class="MsoNormal"><a href="http://www.xbrl.org/int/gl/2006-10-25/GLIS-PR-2006-10-25.htm">http://www.xbrl.org/int/gl/2006-10-25/GLIS-PR-2006-10-25.htm</a>
+  (non-normative)</p>
+  <p class="MsoNormal"><span style="font-family: &quot;Times New Roman&quot;;">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="MsoNormal"><a name="_Toc89366249"><span class="ver8pt1line1"><b><span style="color: windowtext;">Zip files</span></b></span></a></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal"><a href="http://www.xbrl.org/int/gl/2006-10-25/gl-2006-10-25.zip">http://www.xbrl.org/int/gl/2006-10-25/gl-2006-10-25.zip</a>&nbsp;&nbsp;&nbsp;
+  </p>
+  <p class="MsoNormal">&nbsp;(zip file containing taxonomy and documentation)</p>
+  <p class="preformatted" style="margin-bottom: 6pt;"><span style="font-family: Verdana;">&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside: avoid;">
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" valign="top" width="144">
+  <p class="MsoNormal"><b>Relation to Other XBRL Taxonomies:</b></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1pt medium; padding: 0cm 5.4pt; width: 369pt;" valign="top" width="492">
+  <p class="MsoNormal">This modular taxonomy consists of a series of modules that
+  extend the basic identifiers for entries, agents, and resources to meet the
+  needs of specific jurisdictions, industries and need. It enables data from
+  the general ledger and transaction journals of an organisation to be
+  transported to XBRL financial reports.</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style: none solid solid; border-color: -moz-use-text-color black black; border-width: medium 1pt 1.5pt 1.5pt; padding: 0cm 5.4pt; width: 108pt;" width="144">
+  <p class="head1"><a name="_Toc89366257">Copyright and Licence</a></p>
+  </td>
+  <td style="border-style: none solid solid none; border-color: -moz-use-text-color black black -moz-use-text-color; border-width: medium 1.5pt 1.5pt medium; padding: 0cm 5.4pt; width: 369pt;" width="492">
+  <p class="MsoBodyText"><i><span style="">Copyright © 2006,
+  XBRL International</span></i></p>
+  <p class="MsoBodyText"><i><span style="">This taxonomy and
+  translations of it may be copied and furnished to others, and derivative
+  works that comment on or otherwise explain it or assist in its implementation
+  may be prepared, copied, published and distributed, in whole or in part,
+  without restriction of any kind, provided that:</span></i></p>
+  <p class="MsoBodyText" style="margin-left: 21pt; text-align: justify; text-indent: -18pt;"><i><span style="">1.</span></i><i><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><span style="">The above copyright notice and
+  this paragraph are included on all such copies and derivative works. </span></i></p>
+  <p class="MsoBodyText" style="margin-left: 21pt; text-align: justify; text-indent: -18pt;"><i><span style="">2.</span></i><i><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><span style="">A link or URL to the original
+  taxonomy is included in all such copies and derivative works.</span></i></p>
+  <p class="MsoBodyText"><i><span style="">However, this
+  taxonomy itself may not be modified in any way, such as by removing the
+  copyright notice or references to XBRL International or other organizations,
+  except as required to translate it into languages other than English. Members
+  of XBRL International and the taxonomy owners agree to grant certain licenses
+  under the XBRL International Intellectual Property Policy (<a href="http://www.xbrl.org/legal"><span style="font-style: normal;">www.xbrl.org/legal</span></a>). </span></i></p>
+  <p class="MsoBodyText"><i><span style="">The name and
+  trademarks of XBRL International may NOT be used in advertising or publicity
+  pertaining to this document or its contents without specific, written prior
+  permission. Title to copyright in this document will at all times remain with
+  copyright holders.</span></i></p>
+  <p class="MsoBodyText"><i><span style="">By using and/or
+  copying this taxonomy, you (the licensee) agree that you have read,
+  understood, and will comply with the terms and conditions set out in this
+  document and in the Copyright, Intellectual Property and Trademarks documents
+  on <a href="http://www.xbrl.org/legal"><span style="font-style: normal;">www.xbrl.org/legal</span></a></span></i></p>
+  <p class="MsoBodyText"><i><span style="">This taxonomy and
+  its associated files are provided on an "AS IS" basis and XBRL
+  INTERNATIONAL AND THE OWNERS OF THE TAXONOMY DISCLAIM ALL WARRANTIES, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE
+  INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+  MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</span></i></p>
+  <p class="MsoBodyText"><i><span style="">Recipients of
+  this taxonomy are invited to submit, with their comments, notification of any
+  relevant patent rights and copyrights of which they are aware and to provide
+  supporting documentation.</span></i></p>
+  <p class="MsoBodyText"><i><span style="">The attention of
+  users of this taxonomy is directed to the possibility that its use may
+  require use of an invention covered by patent rights. XBRL International and
+  the owners of the taxonomy shall not be responsible for identifying patents
+  for which a license may be required by this taxonomy, or for conducting legal
+  inquiries into the legal validity or scope of those patents that are brought
+  to its attention. This taxonomy is prospective and advisory only. Prospective
+  users are responsible for protecting themselves against liability for
+  infringement of patents. XBRL International and the owners of this taxonomy
+  takes no position regarding the validity or scope of any intellectual
+  property or other rights that might be claimed to pertain to the
+  implementation or use of the technology defined by implied by the taxonomy or
+  the extent to which any license under such rights might or might not be
+  available; neither do they represent that they has made any effort to
+  identify any such rights. Members of XBRL International agree to grant
+  certain licenses under the XBRL International Intellectual Property Policy (<a href="http://www.xbrl.org/legal"><span style="font-style: normal;">www.xbrl.org/legal</span></a>).</span></i></p>
+  <h2><a name="_Toc89366258">1.1.</a><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Warranty</h2>
+  <p class="MsoBodyText"><i><span style="">ALL PARTIES
+  ACKNOWLEDGE THAT ALL INFORMATION PROVIDED AS PART OF THIS TAXONOMY OR ITS
+  ASSOCIATED FILES IS PROVIDED “AS IS” WITH NO WARRANTIES WHATSOEVER, WHETHER
+  EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, AND THE PARTIES EXPRESSLY DISCLAIM
+  ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR ANY PARTICULAR PURPOSE,
+  NONINFRINGEMENT, OR TITLE, OR ANY WARRANTY OTHERWISE ARISING OUT OF ANY
+  PROPOSAL, RECOMMENDATION, OR SAMPLE; OR ANY WARRANTY THAT THE USE OF THE
+  CONTENTS OF THE TAXONOMY OR ITS ASSOCIATED FILES WILL NOT INFRINGE ANY THIRD
+  PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS. </span></i></p>
+  <h2><a name="_Toc89366259">1.2.</a><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>Limitation of Liability</h2>
+  <p class="MsoNormal"><i><span style="">IN NO EVENT WILL
+  XBRL INTERNATIONAL OR THE OWNERS OR AUTHORS OF THE TAXONOMY BE LIABLE TO ANY
+  USER OR ANY THIRD PARTY FOR THE COST OF PROCURING SUBSTITUTE GOODS OR
+  SERVICES, LOST PROFITS, LOSS OF USE, LOSS OF DATA OR ANY DIRECT, INDIRECT,
+  CONSEQUENTIAL, INCIDENTAL, PUNITIVE OR SPECIAL DAMAGES, WHETHER UNDER
+  CONTRACT, TORT, WARRANTY OR OTHERWISE, ARISING IN ANY WAY OUT OF THE USE OF
+  THIS TAXONOMY OR ITS ASSOCIATED FILES, OR THE PERFORMANCE OR IMPLEMENTATION
+  OF THE CONTENTS THEREOF OF ANY TYPE WHATSOEVER, WHETHER OR NOT SUCH PARTY HAD
+  ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.</span></i><br style="page-break-before: always;" clear="all">
+  </p>
+  </td>
+ </tr>
+</tbody></table>
+
+<div style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0cm 0cm 1pt;">
+
+<p class="MsoNormal"><b>&nbsp;</b></p>
+
+</div>
+
+<h6>Editors of this Document:</h6>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Jeff Fedor, InDimensions Systems, Inc</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Hugh Wallis,
+XBRL International Inc.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Based on
+previous documentation by </p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Eric E.
+Cohen CPA, PricewaterhouseCoopers</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Nobuyuki
+Sambuichi, Hitachi Systems &amp; Services, Ltd.</p>
+
+<h6>Technical Editors of the Taxonomy:</h6>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Eric E.
+Cohen CPA, PricewaterhouseCoopers</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Jeff Fedor,
+InDimensions Systems Inc.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Gianluca
+Garbellotto, Iphix</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Masatomo
+Goto, Fujitsu Laboratories of America, Inc.&nbsp;&nbsp;</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Nobuyuki
+Sambuichi, Hitachi Systems &amp; Services, Ltd.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Hugh Wallis,
+XBRL International Inc.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">&nbsp;</p>
+
+<h6>XBRL GL Working Group </h6>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Jeff Fedor,
+Chair, Indimensions Systems Inc.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Sonia Antypas, DynAccSys</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Eric E. Cohen CPA, PricewaterhouseCoopers</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">George
+Farkas, XBI Software Inc.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Gianluca
+Garbellotto, Iphix</p>
+
+<p class="MsoHeader" style="margin-bottom: 0.0001pt;">Mark
+O’Connor, Multi Access Systems</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Masatomo
+Goto, Fujitsu Laboratories of America, Inc.&nbsp;&nbsp;</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Walter
+Hamscher, Standard Advantage</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Rob Nehmer, Oakland University&nbsp;&nbsp;</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Yossef
+Newman, Deloitte and Touche</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Prasanna Perera, DynAccSys</p> 
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Daniel
+Roberts, Grant Thornton</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Nobuyuki
+Sambuichi, Hitachi Systems &amp; Services, Ltd.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">Hugh Wallis,
+XBRL International Inc.</p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;">&nbsp;</p>
+
+</div>
+
+</body></html>
