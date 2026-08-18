@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<!--
+  BusinessEventLedger.mfd — Taller 1 (Hoffman Collaboration)
+  MAPPING: CSV (Google Sheets) → XBRL GL 2015 + JSON-LD (OntologiaXBRLGL2JSONLD)
+  Author: Richard Gasca / AI2Accountans — 2026
+  
+  ARCHITECTURE:
+    Source:  CSV "Business Event Ledger" (Google Sheets / local file)
+    Output1: XBRL GL 2015 (gl-plt-all-2015-03-25.xml)  — Capa Taxonómica
+    Output2: OntologiaXBRLGL2JSONLD.json               — Capa Ontológica
+    
+  KEY CONNECTIONS (outkey→inpkey):
+    CSV.Rows          → XBRL GL entryDetail (16→16)
+    CSV.Rows          → JSON-LD ISO15944_EconomicEvent item (17→ISO15944)
+    CSV.rea_EventDate → XBRL GL postingDate  (11→10)
+    CSV.local_Account → XBRL GL accountMainID(12→8)
+    CSV.xbrl_Amount   → XBRL GL amount       (22→9)
+    CSV.local_Balance → XBRL GL debitCredit  (15→14)
+    CSV.mini_BEC      → XBRL GL documentType (31→30)
+    CSV.local_Comment → XBRL GL detailComment(35→34)
+    CSV.local_EntryID → XBRL GL entryNumber  (33→28)
+    CSV.dca_AuditRisk → XBRL GL qualifierEnt (32→29)
+    CSV.rea_EntityID  → XBRL GL orgDesc      (21→27)
+    CSV.xbrl_Decimals → XBRL GL decimals     (23→6)
+    CSV.xbrl_Units    → XBRL currency unit   (via xbrl-measure-currency)
+    
+  JSON-LD CONNECTIONS:
+    CSV.Rows (item iteration) drives all JSON-LD node generation
+    Constant values injected for @type, @context, and URI construction
+-->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+
+				<!-- ============================================================
+				     COMPONENT 2: OUTPUT — JSON-LD (Ontological Layer)
+				     Schema: OntologiaXBRLGL2JSONLD.json (elevated Taller1 schema)
+				============================================================ -->
+				<component name="OntologiaXBRLGL2JSONLD" library="json" uid="2" kind="31">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1371" lty="13" rbx="1780" rby="900"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="array" expanded="1">
+											<entry name="item" type="json-item" expanded="1" inpkey="100">
+												<entry name="object" expanded="1">
+
+													<!-- ISO15944_EconomicEvent — The HOLON root (Hoffman requirement) -->
+													<entry name="anyOf_ISO15944_EconomicEvent" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="101"/>
+														<entry name="@id" type="json-property" inpkey="102"/>
+														<entry name="eventDescription" type="json-property" inpkey="103"/>
+														<entry name="eventDate" type="json-property" inpkey="104"/>
+														<entry name="dca_EventType" type="json-property" inpkey="105"/>
+														<entry name="dca_Party" type="json-property" inpkey="106"/>
+														<entry name="dca_Counterparty" type="json-property" inpkey="107"/>
+														<entry name="dca_Involves" type="json-property" inpkey="108"/>
+														<entry name="dca_RightOrObligation" type="json-property" inpkey="109"/>
+														<entry name="mini_BusinessEventCode" type="json-property" inpkey="110"/>
+														<entry name="source_document" type="json-property" inpkey="111"/>
+														<entry name="entry_header" type="json-property" inpkey="112"/>
+													</entry>
+
+													<!-- FIBO_StockCorporation — Reporting entity -->
+													<entry name="anyOf_FIBO_StockCorporation" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="201"/>
+														<entry name="@id" type="json-property" inpkey="202"/>
+														<entry name="artifact_name" type="json-property" inpkey="203"/>
+														<entry name="identifierCode" type="json-property" inpkey="204"/>
+														<entry name="identifierDescription" type="json-property" inpkey="205"/>
+														<entry name="identifierType" type="json-property" inpkey="206"/>
+													</entry>
+
+													<!-- GistPerson — Economic Agent -->
+													<entry name="anyOf_GistPerson" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="301"/>
+														<entry name="@id" type="json-property" inpkey="302"/>
+														<entry name="identifierCode" type="json-property" inpkey="303"/>
+														<entry name="identifierDescription" type="json-property" inpkey="304"/>
+														<entry name="identifierType" type="json-property" inpkey="305"/>
+													</entry>
+
+													<!-- Account — Chart of Accounts with MINI bridge -->
+													<entry name="anyOf_Account" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="401"/>
+														<entry name="@id" type="json-property" inpkey="402"/>
+														<entry name="accountMainID" type="json-property" inpkey="403"/>
+														<entry name="accountMainDescription" type="json-property" inpkey="404"/>
+														<entry name="mainAccountType" type="json-property" inpkey="405"/>
+														<entry name="mini_lineItem" type="json-property" inpkey="406"/>
+													</entry>
+
+													<!-- EntryHeader — XBRL GL entryHeader equivalent -->
+													<entry name="anyOf_EntryHeader" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="501"/>
+														<entry name="@id" type="json-property" inpkey="502"/>
+														<entry name="posting_date" type="json-property" inpkey="503"/>
+														<entry name="source_document" type="json-property" inpkey="504"/>
+														<entry name="economic_event" type="json-property" inpkey="505"/>
+													</entry>
+
+													<!-- EntryDetail — XBRL GL entryDetail + PROV-O (Momento1 elevation) -->
+													<entry name="anyOf_EntryDetail" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="601"/>
+														<entry name="@id" type="json-property" inpkey="602"/>
+														<entry name="header" type="json-property" inpkey="603"/>
+														<entry name="lineNumberCounter" type="json-property" inpkey="604"/>
+														<entry name="account" type="json-property" inpkey="605"/>
+														<entry name="amount" type="json-property" inpkey="606"/>
+														<entry name="debitCreditCode" type="json-property" inpkey="607"/>
+														<entry name="postingDate" type="json-property" inpkey="608"/>
+														<entry name="accountingPurposeCode" type="json-property" inpkey="609"/>
+														<entry name="prov_generatedAtTime" type="json-property" inpkey="610"/>
+														<entry name="agent" type="json-property" inpkey="611"/>
+														<entry name="agent_identifier" type="json-property" inpkey="612"/>
+														<entry name="duality" type="json-property" inpkey="613"/>
+														<entry name="mini_lineItem" type="json-property" inpkey="614"/>
+													</entry>
+
+													<!-- ISO15944_Duality — REA Duality -->
+													<entry name="anyOf_ISO15944_Duality" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" inpkey="701"/>
+														<entry name="@id" type="json-property" inpkey="702"/>
+														<entry name="triggerEvent" type="json-property" inpkey="703"/>
+														<entry name="resultingEvent" type="json-property" inpkey="704"/>
+													</entry>
+
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<json schema="..\SchemaJsonLD\OntologiaXBRLGL2JSONLD.json" outputinstance="..\POC_Data_Example\BusinessEventLedger_JSONLD.jsonld"/>
+					</data>
+				</component>
+
+				<!-- ============================================================
+				     COMPONENT 5: OUTPUT — XBRL GL 2015 (Taxonomic Layer)
+				============================================================ -->
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="5" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="573" lty="13" rbx="942" rby="900"/>
+					<data>
+						<root scrollposition="1020">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.xbrl.org/int/gl/bus/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25"/>
+									<namespace uid="view"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="2" expanded="1" showdefaultsnode="1">
+										<entry name="//www.xbrl.org/2003/role/link" ns="5" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="2"/>
+													<qname name="period" ns="2"/>
+												</dimensions>
+												<entry name="identifier" ns="2" expanded="1" showdefaultsnode="1">
+													<entry name="defaults" ns="1" expanded="1">
+														<entry name="monetaryItemType" ns="1" expanded="1">
+															<entry name="unitRef" type="attribute" inpkey="5"/>
+															<entry name="decimals" type="attribute" inpkey="6"/>
+														</entry>
+													</entry>
+													<entry name="identifier" ns="2" inpkey="18" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="19"/>
+													</entry>
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" inpkey="25" expanded="1">
+															<entry name="instant" ns="2" inpkey="26"/>
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="4" expanded="1">
+																<entry name="entityInformation" ns="4" expanded="1">
+																	<entry name="organizationIdentifiers" ns="3" expanded="1">
+																		<entry name="organizationDescription" ns="3" inpkey="27"/>
+																	</entry>
+																</entry>
+																<entry name="entryHeader" ns="4" expanded="1">
+																	<entry name="entryNumber" ns="4" inpkey="28"/>
+																	<entry name="qualifierEntry" ns="4" inpkey="29"/>
+																	<entry name="entryDetail" ns="4" inpkey="16" expanded="1">
+																		<entry name="account" ns="4" expanded="1">
+																			<entry name="accountMainID" ns="4" inpkey="8"/>
+																		</entry>
+																		<entry name="amount" ns="4" inpkey="9"/>
+																		<entry name="debitCreditCode" ns="4" inpkey="14"/>
+																		<entry name="postingDate" ns="4" inpkey="10"/>
+																		<entry name="documentType" ns="4" inpkey="30"/>
+																		<entry name="detailComment" ns="4" inpkey="34"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="unit" ns="2" expanded="1">
+											<entry name="divide" ns="2" inpkey="7"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd" outputinstance="..\POC_Data_Example\BusinessEventLedger_XBRLGL.xml"/>
+					</data>
+				</component>
+
+				<!-- ============================================================
+				     COMPONENT 3: SOURCE — CSV Business Event Ledger
+				     Source: Google Sheets (live) or local CSV file
+				============================================================ -->
+				<component name="Business Event Ledger" library="text" uid="3" kind="16">
+					<properties/>
+					<view ltx="69" lty="13" rbx="371" rby="600"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="17" expanded="1">
+										<entry name="rea_BusinessEventUUID" outkey="50"/>
+										<entry name="rea_EventDate" outkey="11"/>
+										<entry name="rea_EconomicEntityIdentifier" outkey="21"/>
+										<entry name="mini_BusinessEventCode" outkey="31"/>
+										<entry name="local_BusinessEventLiteralDescription" outkey="51"/>
+										<entry name="dca_Party" outkey="52"/>
+										<entry name="dca_Counterparty" outkey="53"/>
+										<entry name="local_CounterpartyLiteralValue" outkey="54"/>
+										<entry name="dca_EventType" outkey="55"/>
+										<entry name="dca_Involves" outkey="56"/>
+										<entry name="dca_RightOrObligation" outkey="57"/>
+										<entry name="StandardReportingFrameworkLineItem" outkey="58"/>
+										<entry name="xbrl_BalanceType" outkey="59"/>
+										<entry name="local_CommentLiteral" outkey="35"/>
+										<entry name="dca_AuditRisk" outkey="32"/>
+										<entry name="local_KeyLiteral" outkey="60"/>
+										<entry name="local_EntryIDLiteral" outkey="33"/>
+										<entry name="local_SequenceLiteral" outkey="61"/>
+										<entry name="local_AccountLiteral" outkey="12"/>
+										<entry name="GeneralLedgerAccountCode" outkey="62"/>
+										<entry name="BusinessEventCode" outkey="63"/>
+										<entry name="xbrl_FactAmount" outkey="22"/>
+										<entry name="xbrl_Units" outkey="64"/>
+										<entry name="xbrl_Decimals" outkey="23"/>
+										<entry name="local_Balance" outkey="15"/>
+										<entry name="local_EffectiveValue" outkey="65"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\POC_Data_Example\BusinessEventLedger.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Business Event Ledger" block="Rows">
+									<field0  name="rea_BusinessEventUUID"              realname="rea:BusinessEventUUID"             type="string"/>
+									<field1  name="rea_EventDate"                       realname="rea:EventDate"                     type="string"/>
+									<field2  name="rea_EconomicEntityIdentifier"        realname="rea:EconomicEntityIdentifier"      type="string"/>
+									<field3  name="mini_BusinessEventCode"              realname="mini:BusinessEventCode"            type="string"/>
+									<field4  name="local_BusinessEventLiteralDescription" realname="local:BusinessEventLiteralDescription" type="string"/>
+									<field5  name="dca_Party"                           realname="dca:Party"                         type="string"/>
+									<field6  name="dca_Counterparty"                    realname="dca:Counterparty"                  type="string"/>
+									<field7  name="local_CounterpartyLiteralValue"      realname="local:CounterpartyLiteralValue"    type="string"/>
+									<field8  name="dca_EventType"                       realname="dca:EventType"                     type="string"/>
+									<field9  name="dca_Involves"                        realname="dca:Involves"                      type="string"/>
+									<field10 name="dca_RightOrObligation"               realname="dca:RightOrObligation"             type="string"/>
+									<field11 name="StandardReportingFrameworkLineItem"  type="string"/>
+									<field12 name="xbrl_BalanceType"                    realname="xbrl:BalanceType"                  type="string"/>
+									<field13 name="local_CommentLiteral"                realname="local:CommentLiteral"              type="string"/>
+									<field14 name="dca_AuditRisk"                       realname="dca:AuditRisk"                     type="string"/>
+									<field15 name="local_KeyLiteral"                    realname="local:KeyLiteral"                  type="string"/>
+									<field16 name="local_EntryIDLiteral"                realname="local:EntryIDLiteral"              type="string"/>
+									<field17 name="local_SequenceLiteral"               realname="local:SequenceLiteral"             type="string"/>
+									<field18 name="local_AccountLiteral"                realname="local:AccountLiteral"              type="string"/>
+									<field19 name="GeneralLedgerAccountCode"            type="string"/>
+									<field20 name="BusinessEventCode"                   type="string"/>
+									<field21 name="xbrl_FactAmount"                     realname="xbrl:FactAmount"                   type="string"/>
+									<field22 name="xbrl_Units"                          realname="xbrl:Units"                        type="string"/>
+									<field23 name="xbrl_Decimals"                       realname="xbrl:Decimals"                     type="string"/>
+									<field24 name="local_Balance"                       realname="local:Balance"                     type="string"/>
+									<field25 name="local_EffectiveValue"                realname="local:EffectiveValue"              type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+
+				<!-- CONSTANT: Currency USD -->
+				<component name="constant" library="core" uid="6" kind="2">
+					<targets><datapoint pos="0" key="1"/></targets>
+					<view ltx="415" lty="199" rbx="479" rby="216"/>
+					<data><constant value="USD" datatype="string"/></data>
+				</component>
+
+				<!-- CONSTANT: artifact_name -->
+				<component name="constant" library="core" uid="9" kind="2">
+					<targets><datapoint pos="0" key="203"/></targets>
+					<view ltx="415" lty="55" rbx="579" rby="72"/>
+					<data><constant value="Taller1 — Business Events Ledger" datatype="string"/></data>
+				</component>
+
+				<!-- CONSTANT: JSON-LD @type for ISO15944_EconomicEvent -->
+				<component name="constant" library="core" uid="70" kind="2">
+					<targets><datapoint pos="0" key="101"/></targets>
+					<view ltx="415" lty="110" rbx="620" rby="127"/>
+					<data><constant value="ISO15944_EconomicEvent" datatype="string"/></data>
+				</component>
+
+				<!-- CONSTANT: JSON-LD @type for FIBO_StockCorporation -->
+				<component name="constant" library="core" uid="71" kind="2">
+					<targets><datapoint pos="0" key="201"/></targets>
+					<view ltx="415" lty="140" rbx="620" rby="157"/>
+					<data><constant value="FIBO_StockCorporation" datatype="string"/></data>
+				</component>
+
+				<!-- CONSTANT: JSON-LD @type for EntryDetail (array) -->
+				<component name="constant" library="core" uid="72" kind="2">
+					<targets><datapoint pos="0" key="601"/></targets>
+					<view ltx="415" lty="170" rbx="620" rby="187"/>
+					<data><constant value="EntryDetail" datatype="string"/></data>
+				</component>
+
+				<!-- CONSTANT: identifierType FIBO -->
+				<component name="constant" library="core" uid="73" kind="2">
+					<targets><datapoint pos="0" key="206"/></targets>
+					<view ltx="415" lty="230" rbx="499" rby="247"/>
+					<data><constant value="NIT" datatype="string"/></data>
+				</component>
+
+				<!-- CONSTANT: accountingPurposeCode -->
+				<component name="constant" library="core" uid="74" kind="2">
+					<targets><datapoint pos="0" key="609"/></targets>
+					<view ltx="415" lty="260" rbx="499" rby="277"/>
+					<data><constant value="US-GAAP" datatype="string"/></data>
+				</component>
+
+				<!-- XBRL currency measure function -->
+				<component name="xbrl-measure-currency" library="xbrl" uid="8" kind="5">
+					<sources><datapoint pos="0" key="3"/></sources>
+					<targets><datapoint pos="0" key="4"/></targets>
+					<view ltx="315" lty="1840" rbx="455" rby="1878"/>
+				</component>
+
+			</children>
+
+			<!-- ============================================================
+			     GRAPH: Active connections CSV → XBRL GL + JSON-LD
+			     Format: outkey (source CSV field) → inpkey (destination field)
+			============================================================ -->
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<!-- XBRL GL connections (preserved from original) -->
+					<vertex vertexkey="1"><edges><edge vertexkey="3"/><edge vertexkey="5"/></edges></vertex>
+					<vertex vertexkey="23"><edges><edge vertexkey="6"/></edges></vertex>
+					<vertex vertexkey="4"><edges><edge vertexkey="7"/></edges></vertex>
+					<vertex vertexkey="12"><edges><edge vertexkey="8"/></edges></vertex>
+					<vertex vertexkey="22"><edges><edge vertexkey="9"/></edges></vertex>
+					<vertex vertexkey="11"><edges><edge vertexkey="10"/></edges></vertex>
+					<vertex vertexkey="15"><edges><edge vertexkey="14"/></edges></vertex>
+					<vertex vertexkey="17"><edges><edge vertexkey="16"/></edges></vertex>
+					<vertex vertexkey="20"><edges><edge vertexkey="18"/></edges></vertex>
+					<vertex vertexkey="21"><edges><edge vertexkey="19"/><edge vertexkey="27"/><edge vertexkey="204"/></edges></vertex>
+					<vertex vertexkey="24"><edges><edge vertexkey="25"/><edge vertexkey="26"/></edges></vertex>
+					<vertex vertexkey="33"><edges><edge vertexkey="28"/></edges></vertex>
+					<vertex vertexkey="32"><edges><edge vertexkey="29"/></edges></vertex>
+					<vertex vertexkey="31"><edges><edge vertexkey="30"/></edges></vertex>
+					<vertex vertexkey="35"><edges><edge vertexkey="34"/></edges></vertex>
+
+					<!-- JSON-LD ISO15944_EconomicEvent connections -->
+					<!-- Rows iteration drives JSON-LD item generation -->
+					<vertex vertexkey="17"><edges><edge vertexkey="100"/></edges></vertex>
+					<!-- rea:BusinessEventUUID → @id (EconomicEvent/) -->
+					<vertex vertexkey="50"><edges><edge vertexkey="102"/></edges></vertex>
+					<!-- local:BusinessEventLiteralDescription → eventDescription -->
+					<vertex vertexkey="51"><edges><edge vertexkey="103"/></edges></vertex>
+					<!-- rea:EventDate → eventDate -->
+					<vertex vertexkey="11"><edges><edge vertexkey="104"/></edges></vertex>
+					<!-- dca:EventType → dca_EventType -->
+					<vertex vertexkey="55"><edges><edge vertexkey="105"/></edges></vertex>
+					<!-- dca:Party → dca_Party -->
+					<vertex vertexkey="52"><edges><edge vertexkey="106"/></edges></vertex>
+					<!-- dca:Counterparty → dca_Counterparty -->
+					<vertex vertexkey="53"><edges><edge vertexkey="107"/></edges></vertex>
+					<!-- dca:Involves → dca_Involves -->
+					<vertex vertexkey="56"><edges><edge vertexkey="108"/></edges></vertex>
+					<!-- dca:RightOrObligation → dca_RightOrObligation -->
+					<vertex vertexkey="57"><edges><edge vertexkey="109"/></edges></vertex>
+					<!-- mini:BusinessEventCode → mini_BusinessEventCode -->
+					<vertex vertexkey="31"><edges><edge vertexkey="110"/></edges></vertex>
+					<!-- local:EntryIDLiteral → source_document (SourceDocument/ prefix) -->
+					<vertex vertexkey="33"><edges><edge vertexkey="111"/><edge vertexkey="502"/><edge vertexkey="504"/></edges></vertex>
+					<!-- local:EntryIDLiteral → entry_header -->
+					<vertex vertexkey="33"><edges><edge vertexkey="112"/></edges></vertex>
+
+					<!-- JSON-LD FIBO_StockCorporation connections -->
+					<!-- rea:EconomicEntityIdentifier → identifierCode + @id -->
+					<vertex vertexkey="21"><edges><edge vertexkey="202"/><edge vertexkey="204"/><edge vertexkey="205"/></edges></vertex>
+
+					<!-- JSON-LD EntryDetail connections -->
+					<!-- local:AccountLiteral → account @id + accountMainID -->
+					<vertex vertexkey="12"><edges><edge vertexkey="403"/><edge vertexkey="605"/></edges></vertex>
+					<!-- local:EntryIDLiteral → header + EntryHeader @id -->
+					<vertex vertexkey="33"><edges><edge vertexkey="501"/><edge vertexkey="603"/></edges></vertex>
+					<!-- local:SequenceLiteral → lineNumberCounter -->
+					<vertex vertexkey="61"><edges><edge vertexkey="604"/></edges></vertex>
+					<!-- xbrl:FactAmount → amount -->
+					<vertex vertexkey="22"><edges><edge vertexkey="606"/></edges></vertex>
+					<!-- local:Balance (D/C) → debitCreditCode -->
+					<vertex vertexkey="15"><edges><edge vertexkey="607"/></edges></vertex>
+					<!-- rea:EventDate → postingDate -->
+					<vertex vertexkey="11"><edges><edge vertexkey="608"/><edge vertexkey="503"/></edges></vertex>
+					<!-- StandardReportingFrameworkLineItem → mini_lineItem (EntryDetail + Account) -->
+					<vertex vertexkey="58"><edges><edge vertexkey="406"/><edge vertexkey="614"/></edges></vertex>
+					<!-- rea:BusinessEventUUID → duality @id -->
+					<vertex vertexkey="50"><edges><edge vertexkey="702"/></edges></vertex>
+					<!-- local:CounterpartyLiteralValue → agent_identifier -->
+					<vertex vertexkey="54"><edges><edge vertexkey="612"/></edges></vertex>
+
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estados Financieros dav30.sps - Paladin Realty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-red: #c01823;
+      --dark-header: #111827;
+      --bg-gray: #f8fafc;
+      --border-gray: #e2e8f0;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #cbd5e1;
+      color: var(--text-dark);
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      background-color: var(--primary-red);
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #a0101a;
+    }
+
+    .page-container {
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      background: white;
+      padding: 40px 50px;
+      border-radius: 4px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: var(--primary-red);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--primary-red);
+      letter-spacing: -0.5px;
+    }
+
+    .doc-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .doc-title h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .doc-title h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 4px 0;
+      text-transform: uppercase;
+    }
+
+    .doc-title p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    table.financial-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    table.financial-table thead tr {
+      background-color: var(--primary-red);
+      color: white;
+    }
+
+    table.financial-table th {
+      padding: 8px 12px;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    table.financial-table th:first-child {
+      text-align: left;
+    }
+
+    table.financial-table td {
+      padding: 6px 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    table.financial-table td.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    tr.section-header td {
+      font-weight: 700;
+      color: #0f172a;
+      padding-top: 14px;
+    }
+
+    tr.sub-item td {
+      padding-left: 28px;
+      color: #475569;
+    }
+
+    tr.total-row td {
+      font-weight: 700;
+      background-color: #f8fafc;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      color: #0f172a;
+    }
+
+    .signature-block {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .signature-line {
+      width: 250px;
+      border-top: 1px solid #0f172a;
+      padding-top: 6px;
+    }
+
+    .signature-name {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .signature-title {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .stamp-vigilado {
+      border: 1px solid #94a3b8;
+      padding: 4px 8px;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .toolbar {
+        display: none;
+      }
+      .page-container {
+        box-shadow: none;
+        padding: 20px;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div>
+      <strong>Reporte de Estados Financieros (Reglas dav30.sps)</strong>
+      <span style="font-size:12px; color:#64748b; margin-left:10px;">(Paladin Realty Colombia - Compartimento B / Fondo 293)</span>
+    </div>
+    <button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar en PDF</button>
+  </div>
+
+  <!-- PÁGINA 1: ESTADO DE SITUACIÓN FINANCIERA -->
+  <div class="page-container">
+    <div class="brand-header">
+      <div class="brand-logo">D</div>
+      <div class="brand-name">DAVIVIENDA Corredores</div>
+    </div>
+
+    <div class="doc-title">
+      <h1>FONDO DE CAPITAL PRIVADO PALADIN REALTY COLOMBIA - COMPARTIMENTO B</h1>
+      <h2>ESTADO DE SITUACIÓN FINANCIERA (Reglas dav30.sps)</h2>
+      <p>Al 30 de junio de 2026 y al 31 de diciembre de 2025 (Valores en Pesos Colombianos)</p>
+    </div>
+
+    <table class="financial-table">
+      <thead>
+        <tr>
+          <th style="width: 46%;">Concepto (Etiqueta Ontológica SRCD)</th>
+          <th style="width: 18%;">junio 2026</th>
+          <th style="width: 18%;">diciembre 2025</th>
+          <th style="width: 18%;">Variación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ACTIVOS -->
+        <tr class="section-header">
+          <td>Efectivo y equivalentes al efectivo (gsk:CashAndCashEquivalents)</td>
+          <td class="num">1.130.056.037,67</td>
+          <td class="num">1.006.234.937,22</td>
+          <td class="num">123.821.100,45</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Bancos Nacionales</td>
+          <td class="num">1.130.056.037,67</td>
+          <td class="num">1.006.234.937,22</td>
+          <td class="num">123.821.100,45</td>
+        </tr>
+
+        <tr class="section-header">
+          <td>Cuentas por cobrar (gsk:TradeAndOtherReceivables)</td>
+          <td class="num">1.009.157,41</td>
+          <td class="num">244.453,89</td>
+          <td class="num">764.703,52</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Deudores</td>
+          <td class="num">1.009.157,41</td>
+          <td class="num">244.453,89</td>
+          <td class="num">764.703,52</td>
+        </tr>
+
+        <tr class="section-header">
+          <td>Inversiones (gsk:Inversiones)</td>
+          <td class="num">70.034.291.817,10</td>
+          <td class="num">75.941.343.444,80</td>
+          <td class="num">-5.907.051.627,70</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Instrumentos de Deuda</td>
+          <td class="num">550.748.030,10</td>
+          <td class="num">550.748.030,14</td>
+          <td class="num">-0,04</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Instrumentos de patrimonio</td>
+          <td class="num">6.947.003.953,00</td>
+          <td class="num">8.692.992.918,16</td>
+          <td class="num">-1.745.988.965,16</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Inversiones derechos fiduciarios</td>
+          <td class="num">62.536.539.834,00</td>
+          <td class="num">66.697.602.496,50</td>
+          <td class="num">-4.161.062.662,50</td>
+        </tr>
+
+        <tr class="total-row">
+          <td>Total activos (gsk:Assets)</td>
+          <td class="num">71.165.357.012,18</td>
+          <td class="num">76.947.822.835,91</td>
+          <td class="num">-5.782.465.823,73</td>
+        </tr>
+
+        <!-- PASIVOS -->
+        <tr class="section-header">
+          <td>Cuentas por pagar (gsk:TradeAndOtherPayables)</td>
+          <td class="num">10.929.947.429,15</td>
+          <td class="num">12.648.259.547,81</td>
+          <td class="num">-1.718.312.118,66</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Acreedores varios</td>
+          <td class="num">10.343.289.663,54</td>
+          <td class="num">10.799.058.809,09</td>
+          <td class="num">-455.769.145,55</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Comisión de administración</td>
+          <td class="num">586.657.765,61</td>
+          <td class="num">1.849.200.738,72</td>
+          <td class="num">-1.262.542.973,11</td>
+        </tr>
+
+        <tr class="total-row">
+          <td>Total pasivos</td>
+          <td class="num">10.929.947.429,15</td>
+          <td class="num">12.648.259.547,81</td>
+          <td class="num">-1.718.312.118,66</td>
+        </tr>
+
+        <!-- PATRIMONIO -->
+        <tr class="section-header">
+          <td>Patrimonios especiales (gsk:OtherEquityInterest)</td>
+          <td class="num">60.235.409.583,03</td>
+          <td class="num">64.299.563.288,10</td>
+          <td class="num">-4.064.153.705,07</td>
+        </tr>
+        <tr class="sub-item">
+          <td>Participaciones en fondos de inversión colectiva</td>
+          <td class="num">60.235.409.583,03</td>
+          <td class="num">64.299.563.288,10</td>
+          <td class="num">-4.064.153.705,07</td>
+        </tr>
+
+        <tr class="total-row">
+          <td>Total patrimonio</td>
+          <td class="num">60.235.409.583,03</td>
+          <td class="num">64.299.563.288,10</td>
+          <td class="num">-4.064.153.705,07</td>
+        </tr>
+
+        <tr class="total-row" style="background-color:#f1f5f9; border-top:3px double #0f172a;">
+          <td>Total pasivos y patrimonio (gsk:EquityAndLiabilities)</td>
+          <td class="num">71.165.357.012,18</td>
+          <td class="num">76.947.822.835,91</td>
+          <td class="num">-5.782.465.823,73</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="signature-block">
+      <div class="signature-line">
+        <div class="signature-name">Aura Milena Ruiz García</div>
+        <div class="signature-title">Contadora Pública</div>
+        <div class="signature-title">T.P 107475-T</div>
+      </div>
+      <div class="stamp-vigilado">
+        Vigilado Superintendencia Financiera de Colombia
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

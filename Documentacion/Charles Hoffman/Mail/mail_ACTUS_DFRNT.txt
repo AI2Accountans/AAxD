@@ -1,0 +1,43 @@
+I don’t know if Philippe and Dean remember this, but I said ACTUS was important to what we were doing.  I did not explicitly understand why, but intuitively I knew.  Now, partly because of what Richard Gasca is doing and partly from  some other things; I am putting the pieces together and understanding them relative to one another.  This is not yet complete, but it is progressing nicely.
+
+REA (Resources, Events, Agents; see https://en.wikipedia.org/wiki/Resources%2C_Events%2C_Agents) is a framework for talking about and working with business events.  REA has become an ISO/IEC standard and is instantiated as the ISO/IEC Accounting and Economic Ontology, see https://www.iso.org/standard/67199.html.  That is FREE TO DOWNLOAD.  I have represented the ISO/IEC standard somewhat in XBRL,  https://xbrlsite.azurewebsites.net/2026/prototypes/isoiec15955/isoiec15944_ModelStructure.html
+
+REA is broad but shallow, it has little depth. It provides a framework for business events but it does not actually define all the necessary business events.  Business events tend to be consistent across reporting frameworks.
+
+ACTUS (see https://www.actusfrf.org/taxonomy) focuses on a narrow set of business events related to financial contracts and explains those business events very deeply.   ACTUS is now part of FIBO, the Financial Institutions Business Ontology, see https://spec.edmcouncil.org/fibo/.  FIBO is a standard published by the EDM Council which absorbed OMG.  Note that Willi Brammertz told me that ACTUS is on track to becoming an ISO/IEC standard.
+
+ACTUS is narrow but deep.  ACTUS provides all the business events for financial institutions (98% or more as I understand it);  these are referred to as “financial contracts” which is a TYPE OF business event.  Financial contracts always have CASH as the “resource”.
+
+The other type of business event that is also financial in that it runs through an accounting system is “operational contracts”.  An operational contract MAY have CASH as a resource; but it can also have other resources (e.g.  assets in accounting) as resources like receivables, inventories, property and equipment, etc.
+
+Data Centric Accounting (DCA) which is published in the book by Dave McComb and Cheryl Dunn, The Future of Accounting, see https://digitalfinancialreporting.blogspot.com/2025/11/the-future-of-accounting.html, does not actually define business events; but it does defines what it calls the CORE EVENTS or better called the FACETS of a business event.  They only provide the DCA metadata in the form of a narrative in the book; I represented that in XBRL, see https://xbrlsite.azurewebsites.net/seattlemethod/dca/dca_ModelStructure.html
+
+DCA's "core events" is an approach to building the necessary "depth" within REA.  But again, DCA DOES NOT provide all the permutations/combinations of business events; it only provides the metadata that is then used to represent the characteristics of a business event.
+
+A reporting framework such as US GAAP or IFRS or any other reporting framework, see this set of reporting frameworks https://seattlemethod.blogspot.com/2026/01/reference-reporting-frameworks.html, specifies the LINE ITEMS into which business event information flows.  Business events (which are FLOWS) change the STATE (or STOCKS) of the resources and obligations (i.e. the BALANCE SHEET).
+
+This reference reporting framework, MINI, has business events specified in the form of XBRL definition relations, https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/base-taxonomy/mini_ModelStructure.html, specifically here are the events,  https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/events/events.xsd.  What I did  was actually provide NAMED IDENTIFIERS of business events which are mapped to the DCA core events.  You MUST have those named identifiers in order to create a financial statement.  Why?  BECAUSE they are the actual report line items for the aggregate business event information that MUST be reported per a financial statement.
+
+OIM and SBRM provide the necessary structures to work with business event information.  You an SEE those structures in the MINI reference report.
+
+https://luca.pacioli.ai/luca/view/0f24fd35e961e167a727b663c75a4c5ec9fb7eb86730d6292f46e6e180fc201843c277da/index
+
+(this is the full set of files)
+
+https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/ref-lemonade/index2.html
+
+The Seattle Method framework, theories, and processes pull everything together and enable all this information to be VERIFIED using machine based processes.
+
+C:\Users\IPHIX\Documents\Projects\DFRNT\Documentacion\Charles Hoffman\Mail\Reporte1.png
+
+
+
+IMPORTANT NOTE.  A financial statement communicates the financial status (e.g. state; made  up of resources and obligations) and financial performance (e.g. changes in state, business events and how those events change the state of resources and obligations) of the reporting economic entity.  A financial statement IS NOT the reporting economic entity, it is only certain important aspects of the reporting economic entity.  Therefore, it is NOT A DIGITAL TWIN of the reporting economic entity.  It is a subset of a digital twin.  There are business events that DO NOT IMPACT FINANCIAL INFORMATION.  For example, onboarding a new customer is a business event; but it does not generate a financial transaction.  And so, there is more information in a “business events ledger” (or could be) that just the business events that spawn financial transactions.  In addition, there are other business events that have NOTHING TO DO with financial transactions.  Meaning, adding a customer DOES have something to do with financial transactions as a CUSTOMER is metadata related to a financial transaction.
+
+A business events ledger, see https://digitalfinancialreporting.blogspot.com/2026/06/business-events-ledger.html, will be a POWERFUL source of information for enterprises.  The opportunities provided by artificial intelligence will MOTIVATE enterprises to create and maintain a business events ledger.  The efficiencies and effectiveness that result FROM this business events ledger will CAUSE A TRANSFORMATION in enterprise information systems.  This transformation is described in Richard’s paper Accounting & Audit by Design (A&AD) Framework.  Accounting information systems will be DELIBERATLY configured to not be fragmented and enable complete traceability, trackability, and provenance BY DESIGN.
+
+These ideas can be leveraged by other types of general business reporting.  HOWEVER, because of the nature of accounting as a deterministic system BY DESIGN; see https://seattlemethod.blogspot.com/2026/02/essence-of-accounting.html; it really is child’s play (a.k.a. a cake walk) to build industrial strength systems once fragmentation and other causes  of “friction” are removed from accounting information systems; see Mind the Gap,  https://digitalfinancialreporting.blogspot.com/2026/06/mind-gap.html and Fragmentation and Defensible Conformance, https://digitalfinancialreporting.blogspot.com/2026/06/fragmentation-and-defensible-compliance.html
+
+And because of all this, the Office of the CFO can, and will, be REFACTORED. But NOT how PWC and Anthropic are trying to do it, that will not work.
+
+Cheers,

@@ -1,0 +1,25 @@
+Auditchain has made some very significant enhancements to its “digital information organism” PIVOT capability. This is absolutely worth checking out and understanding.  The link is to a simple report you can fiddle with.  All the examples here work, use the “Basic Viewer”, https://seattlemethod.blogspot.com/2026/01/reference-reporting-frameworks.html). 
+
+BUT, don’t focus on what you are SEEING; focus more on the REAL POSSIBILITIES.  Imagine digital information organisms as being “typed”.  Each type works differently.  Software that UNDERSTANDS the different types.  A “journal” type, a “ledger” type, a “reconciliation” type, a “roll forward” type, a “lead schedule” type, a “statement” type, a “segment breakdown” type, an “actual/budget” comparison type, a “proof of cash” type, and so forth.  The POINT IS, you do not work with “atomic” level syntax, you done have to work  with “molecular level” stuff either (although, this is not that bad).  You work with HIGH LEVEL ACCOUNTING ARTIFACTS and the PIVOT!!! (e.g. they are reconfigurable).
+
+All these high level accounting artifacts embrace Andrew Noble’s notion of the “manifold” and Kurt Cagle’s notion of the “holon” and Atomic Design Methodology.  Start with the HIGH LEVEL ACCOUNTING ARTIFACT.  Then you “plug” a syntax to that at the ATOMIC level (XBRL, RDF, JSON-LD, MD, CSV, GSQL/LPG).  The logical conceptualization of a business report is good enough per XBRL, OIM, and SBRM.  They are missing a bunch of best practices rules; but there are enough XBRL-based SEC reports by public companies to arrive at “consensus through demonstrated convergence”. (Meaning, if 80% of reports create a specific disclosure in a specific way; then you cannot call that disclosure WRONG).  Consensus via Reductio ad Absurdum (reduced to absurdity, https://en.wikipedia.org/wiki/Reductio_ad_absurdum).  PROOF BY CONTRADICTION.  Imagine learning intermediate accounting using these high level digital accounting objects.
+
+https://luca.pacioli.ai/luca/view/0f24fd35e961e167a727b663c75a4c5ec9fb7eb86730d6292f46e6e180fc2018_8fwy8Ukyhpc/index
+
+1.jpg
+2.jpg
+3.jpg
+4.jpg
+
+
+Other really good examples to fiddle with:
+
+IFRS for SMEs Model: https://luca.pacioli.ai/luca/view/9175b4014583e9fb8113bc253bf24aa764caa86880eec558111ca1cb0f8b1f67c119db37/index
+
+AASB 1060: https://luca.pacioli.ai/luca/view/9175b4014583e9fb8113bc253bf24aa764caa86880eec558111ca1cb0f8b1f67ecfe310c/index
+
+Closing book: https://luca.pacioli.ai/luca/view/0f24fd35e961e167a727b663c75a4c5ec9fb7eb86730d6292f46e6e180fc2018de263aaf/index
+
+Cheers,
+
+Charlie

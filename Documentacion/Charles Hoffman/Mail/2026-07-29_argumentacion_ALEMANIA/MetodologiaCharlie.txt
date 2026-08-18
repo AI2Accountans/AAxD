@@ -1,0 +1,7 @@
+Richard;
+
+Let me figure out a way to get you this information in a form where you can better understand and use it. Here is the raw material below. Also, you are perhaps not realizing that this information us used to create the journal entries CORRECTLY. It is not just about generating things from the general journal and general ledger; it is about GETTING THE ENTRIES RIGHT.
+
+https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/base-taxonomy/mini_ModelStructure.html
+
+tabla1.jpg

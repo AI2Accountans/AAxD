@@ -1,0 +1,15 @@
+Richard,
+
+Thanks for this - and congrats on getting the Taller 1 pipeline over the line. I read through it with real interest.
+
+On XBRL GL: I think we're aiming at the same destination - self-describing, self-reconciling transactional holons - from different roads, and I want to be straight with you about mine. I capture the ledger relationally at Moment 0 and materialize it into the LPG graph, so the holon is the native artifact; I don't round-trip through an intermediate serialization to get there. I can emit JSON-LD (or XBRL) at the report boundary, and I can include the events named graph linked to the facts it aggregates up to - but by default I don't, because most reports (a 10-K being the extreme case) are summaries, and the linkage from facts back to the ledger isn't meant to survive publication.
+
+So for my architecture, XBRL GL as a required internal bridge doesn't earn its place as the events ledger materializes into the graph.
+
+Where I'd love to compare notes is the mapping question. Your UBL to GL to JSON-LD flow is elegant, but the step where you inject the accounting semantics into the GL instance is the interesting one to me. A UBL invoice carries commercial semantics - who, what, amount, tax - but the accounting semantics (which accounts, the debit/credit treatment, the accrual timing) aren't in the source; they're a judgment applied on top. That mapping layer is exactly what I've tried to make structural rather than manual, so I'm curious where you anchor it in your flow.
+
+Where I actually see the durable collaboration isn't in the plumbing - our stacks won't merge, and they don't need to. It's one layer up: the frameworks themselves. I build reporting frameworks as versioned, semantically-enriched packages - the XBRL-classic layers (concepts, labels, references, presentation, calculation) plus the ones no ratified standard covers yet: type-subtype, traits, named disclosures, disclosure mechanics, the reporting checklist, rules, reporting styles - and much of that second group descends from Charlie's Seattle Method. It's all public, governed by a single ontology that inherits XBRL's vocabulary wherever XBRL has a term and mints new ones only where it genuinely lacks one; a published report comes out as one JSON-LD holon that validates against it. The idea I keep coming back to: if those frameworks are canonical and shareable, your stack and mine can each consume them their own way and still produce mutually legible holons. Shared publication model, sovereign consumption - neither of us concedes anything about engines. That's the layer I'd most want to build toward with you.
+
+There's frontier stuff I'd enjoy kicking around live too - the reciprocal-commitment layer above the event, where neither of us has a first-class contract yet - but the framework layer is the one with real staying power. Either way, I'd be glad to contribute one of my real-data holons to the A&AD repo as a concrete starting point. For a call, I'm open the next two weeks - send whatever date/times works on your end and I will shared a virtual meeting invite.
+
+Joey

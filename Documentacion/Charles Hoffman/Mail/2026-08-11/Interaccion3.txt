@@ -1,0 +1,15 @@
+Richard;
+
+I went through all your files. That is an excellent organization. However, there are some things missing. The biggest missing piece is the actual XBRL instance including XBRL taxonomy. And, as I said, you are not generating a complete set of primary financial statements and I suspect you CANNOT generate a full set which is ABSOLUTELY critically to be able to show.
+
+What I suggest that you do is repeat this process using my MINI based general journal entries and the MINI reporting framework. So, as I said, Joey French has already done this using RoboSystems.ai. All his software is freely downloadable. What I might suggest is to combine your process and Joey French’s process maybe. Or maybe; get Joey to put your process into his software.
+
+But the BOTTOM LINE is really this. You really cannot say A&AD work with a straight face until you generate a full set of primary financial statements. I KNOW it will work because I KNOW how to generate a full set of financial statements, and I have done that as has two others.
+
+Or, alternatively and even better but this will take way more time; get DFRNT to provide the INFRASTRUCTURE you need to achieve what Joey French can do. All this said, we are getting closer and closer. Again, I KNOW and can PROVE this works. That is why I know you are not providing the appropriate OUTPUT. Your output should be complete and in the global open industry standard XBRL output and be able to run though an XBRL processor that is certified to be fully compliant XBRL processor which shows everything is CORRECT (proves XBRL syntax); PLUS the Seattle Method verification proves that the MODEL semantics and REPORTING FRAMEWORK semantics are as expected. Right?
+
+To make this work in a PRODUCTION SYSTEM; that is what you need anyway. Is your target less than that? If so; why?
+
+Cheers,
+
+Charlie

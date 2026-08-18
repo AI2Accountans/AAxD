@@ -1,0 +1,13 @@
+Hello Richard
+
+Below you find two links which could help you to understand the legacy problem better and which show the way out.
+
+Regards, Willi
+
+Ariadne - Analysis of the Core Problem of IT Architecture in Finance:  https://www.ariadne.swiss/post/beyond-incremental-change-a-deep-rethink-of-it-architecture-in-finance
+
+Video: https://youtu.be/9un6X3iKDlU
+
+Ariadne – Safe Transition from Legacy:  https://www.ariadne.swiss/post/rethinking-bank-transformation-the-future-starts-with-a-digital-twin
+
+Video: https://youtu.be/XnM82m9EfQ

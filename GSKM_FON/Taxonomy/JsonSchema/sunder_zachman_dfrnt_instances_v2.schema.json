@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Sunder Zachman DFRNT Instances Schema V2 (with SBVR Governance & REA Reconciliation)",
+  "$ref": "#/definitions/instancesArray",
+  "definitions": {
+    "FIBO_StockCorporation": {
+      "type": "object",
+      "required": ["@type", "@id", "artifact_name", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "identifierCode": { "type": "string" },
+        "identifierDescription": { "type": "string" },
+        "identifierType": { "type": "string" },
+        "nexus": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "SourceDocument": {
+      "type": "object",
+      "required": ["@type", "@id", "artifact_name", "documentType"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "documentType": { "type": "string" },
+        "documentNumber": { "type": "string" },
+        "documentDate": { "type": "string" },
+        "engaged_agents": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "GistPerson": {
+      "type": "object",
+      "required": ["@type", "@id", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "identifierCode": { "type": "string" },
+        "identifierDescription": { "type": "string" },
+        "identifierType": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "reconciliationEquivalentClass": { "type": "string" }
+      }
+    },
+    "Account": {
+      "type": "object",
+      "required": ["@type", "@id", "accountMainID", "accountMainDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "accountMainID": { "type": "string" },
+        "accountMainDescription": { "type": "string" },
+        "mainAccountType": { "type": "string" },
+        "artifact_name": { "type": "string" }
+      }
+    },
+    "EntryHeader": {
+      "type": "object",
+      "required": ["@type", "@id", "posting_date"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "posting_date": { "type": "string" },
+        "source_document": { "type": "string" },
+        "entriesType": {
+          "type": "string",
+          "description": "Tipo de libro / entrada contable de XBRL GL (ej: trialbalance, journal, ledger)"
+        }
+      }
+    },
+    "EntryDetail": {
+      "type": "object",
+      "required": ["@type", "@id"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "entriesType": { "type": "string" },
+        "header": { "type": "string" },
+        "lineNumberCounter": { "type": "integer" },
+        "account": { "type": "string" },
+        "amount": { "type": "number" },
+        "initial_amount": { "type": "number" },
+        "debitCreditCode": { "type": "string" },
+        "postingDate": { "type": "string" },
+        "resource": { "type": "string" },
+        "agent_identifier": { "type": "string" },
+        "agent": { "type": "string" },
+        "duality": { "type": "string" },
+        "sbvrRuleID": { "type": "string" },
+        "sbvrRuleStatement": { "type": "string" },
+        "sbvrDeonticModality": { "type": "string" },
+        "sbvrRuleCategory": { "type": "string" },
+        "reconciliationEquivalentClass": { "type": "string" },
+        "gl-srcd:detailedContentFilter": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Etiquetas de taxonomía contable enriquecidas del módulo SRCD de XBRL GL"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Arreglo alternativo de etiquetas contables"
+        },
+        "measurable": {
+          "type": "object",
+          "required": ["measurableCode", "measurableID", "measurableDescription", "measurableQuantity", "measurableUnitOfMeasure", "measurableCostPerUnit"],
+          "properties": {
+            "measurableCode": { "type": "string" },
+            "measurableID": { "type": "string" },
+            "measurableDescription": { "type": "string" },
+            "measurableQuantity": { "type": "number" },
+            "measurableUnitOfMeasure": { "type": "string" },
+            "measurableCostPerUnit": { "type": "number" }
+          }
+        }
+      }
+    },
+    "BusinessRuleConstraint": {
+      "type": "object",
+      "required": ["@type", "@id", "ruleStatement", "deonticModality"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "ruleStatement": { "type": "string" },
+        "deonticModality": { "type": "string" },
+        "ruleCategory": { "type": "string" },
+        "targetXBRLGLEntry": { "type": "string" }
+      }
+    },
+    "instancesArray": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "$ref": "#/definitions/FIBO_StockCorporation" },
+          { "$ref": "#/definitions/SourceDocument" },
+          { "$ref": "#/definitions/GistPerson" },
+          { "$ref": "#/definitions/Account" },
+          { "$ref": "#/definitions/EntryHeader" },
+          { "$ref": "#/definitions/EntryDetail" },
+          { "$ref": "#/definitions/BusinessRuleConstraint" }
+        ]
+      }
+    }
+  }
+}

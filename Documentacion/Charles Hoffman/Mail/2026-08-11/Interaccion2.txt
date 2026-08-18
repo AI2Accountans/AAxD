@@ -1,0 +1,23 @@
+Richard;
+
+Everything you are saying I believe I understand and agree can all be automated.
+
+But what does not seem to be getting through to you is that there is NO WAY for you to generate a full set of financial statements (balance sheet, income statement, cash flow statement, statement of changes in equity) UNLESS you have the business event information provided by the MINI financial reporting framework.
+
+Saying this another way. Here is a trial balance for MINI: https://github.com/seattlemethod/prototypes/blob/main/lemonade-stand/journal-entries-csv/GeneralJournal_Fixed.csv
+
+Try your process on that; generate the FULL SET of primary financial statements. You do that, then you will understand WHY you need business event information.
+
+Alternatively, perhaps I am wrong. Perhaps you have, somehow, the business event information you need. Then please show me the FULL SET OF financial statements, preferably in XBRL so that I can CONFIRM using my XBRL processor that everything is valid in those four financial statements (balance sheet, income statement, cash flow statement, statement of changes in equity).
+
+My MINI reporting framework has EVERYTHING YOU NEED to generate that report, two others have already done this. One is Joey Frency, RoboSystems.ai;
+
+https://github.com/RoboFinSystems/robosystems/blob/main/examples/seattle_method_demo/sample_output/seattle-method-case-1.md
+
+(Joey discovered some mistakes in my data. This is what he used, https://github.com/seattlemethod/prototypes/tree/main/record-to-report. )
+
+Or, am I missing something?
+
+Cheers,
+
+Charlie

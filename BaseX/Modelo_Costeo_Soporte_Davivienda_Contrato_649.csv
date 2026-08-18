@@ -1,0 +1,6 @@
+Categoría,Módulos Impactados,Esfuerzo Estimado (Horas/Mes),Horas para Cálculo,Valor Hora COP (Editable),Subtotal Mensual COP
+Soporte Mensual,"GSKM_RETEFTE, GSKM_IVA, GSKM_RENTA, GSKM_FON_PERIODIC, GSKM_STEMMA",8 a 10 Horas,10,,=D2*E2
+Soporte Trimestral,"GSKM_FON, GSKM_SOC",3 Horas (Amortizadas),3,,=D3*E3
+Soporte Anual / Ocasional,"GSKM_2516, GSKM_CARTERA CLIENTES, GSKM_ASOBANCARIA_MULTICASH",2 Horas (Amortizadas),2,,=D4*E4
+Gestión Continua de IT,Mantenimiento entorno Google Drive y licencias ALTOVA,2 Horas,2,,=D5*E5
+TOTAL ESTIMADO,10 Módulos,~17 Horas / Mes,=SUM(D2:D5),,=SUM(F2:F5)

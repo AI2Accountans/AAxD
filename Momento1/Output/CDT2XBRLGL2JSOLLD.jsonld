@@ -1,0 +1,26 @@
+[
+	{
+		"@type": "ACTUS_Contract",
+		"@id": "CDT-SANT-001",
+		"actus_ContractType": "PAM",
+		"actus_NotionalPrincipal": 10000000,
+		"actus_NominalInterestRate": 0.11,
+		"actus_InitialExchangeDate": "2026-07-05",
+		"actus_MaturityDate": "2026-10-05"
+	},
+	{
+		"@type": "ACTUS_Contract"
+	},
+	{
+		"@type": "ACTUS_Contract"
+	},
+	{
+		"@type": "ACTUS_Contract",
+		"@id": "CDT-SANT-001",
+		"actus_ContractType": "PAM",
+		"actus_NotionalPrincipal": 10000000,
+		"actus_NominalInterestRate": 0.11,
+		"actus_InitialExchangeDate": "2026-07-05",
+		"actus_MaturityDate": "2026-10-05"
+	}
+]

@@ -1,0 +1,15 @@
+So here is a report pattern that is logically correct, but it is not in a format that one would expect.  It is understandable by a human.  Many documents follow this pattern.  HEADER information and DETAILED line items.  Sales invoices.  Purchase invoices.  Purchase orders.  Sales orders. Etc.  Theoretically, you should be able to READ all the details from within a document like this.  Here below is a simple invoice.  If you CAN read this and you CAN parse this; then theoretically it should be able to bypass any mappings or manual work to get information from a document into a business events journal.  The raw XBRL or the Inline XBRL could be the SOURCE of the business event journal entry and everything should be “figure outable” from all the metadata.
+
+What makes this stuff HARD is no standard semantics, a physical format that is hard or impossible to parse, the need to map things, other missing stuff.  All this can be considered “self induced”.  If one WANTED to do this right, it is possible…there is nothing technical that impedes this.
+
+True?
+
+Inline XBRL (Don’t know if it is valid): https://luca.pacioli.ai/storage/c5344192-b624-487d-8c22-11e42ba5963f/299729c6/inline.html
+
+Viewer: https://luca.pacioli.ai/luca/view/9175b4014583e9fb8113bc253bf24aa764caa86880eec558111ca1cb0f8b1f67ee70ea3e/index
+
+XBRL Instance: https://luca.pacioli.ai/storage/c5344192-b624-487d-8c22-11e42ba5963f/299729c6/instance.xml
+
+Verification result: https://validator.pacioli.ai/reportAnalysis/1d6bbe259461af6bffbb2723f0a0d0e727cc4e6b.report/index.html
+
+imagen1.jpg

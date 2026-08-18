@@ -1,0 +1,808 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created by Charles Hoffman, CPA -->
+<!-- Auto-generated from AccountingEngine prototype: 12/17/2024 3:12:25 PM -->
+<!-- General journal entries, XBRL Global Ledger style -->
+<xbrli:xbrl 
+  xmlns:xbrli='http://www.xbrl.org/2003/instance' 
+  xmlns:xbrll='http://www.xbrl.org/2003/linkbase' 
+  xmlns:xlink='http://www.w3.org/1999/xlink' 
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+ 
+  xmlns:gl-cor='http://www.xbrl.org/int/gl/cor/2015-03-25' 
+  xmlns:gl-muc='http://www.xbrl.org/int/gl/muc/2015-03-25' 
+  xmlns:gl-bus='http://www.xbrl.org/int/gl/bus/2015-03-25' 
+  xmlns:gl-plt='http://www.xbrl.org/int/gl/plt/2015-03-25' 
+  xmlns:gl-gen='http://www.xbrl.org/int/gl/gen/2015-03-25' 
+ 
+  xmlns:iso4217='http://www.xbrl.org/2003/iso4217' 
+  xmlns:iso639='http://www.xbrl.org/2005/iso639' 
+  xsi:schemaLocation='http://www.xbrl.org/int/gl/plt/2015-03-25 http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t/gl-plt-en-2015-03-25.xsd'>
+
+  <xbrll:schemaRef xlink:type='simple' xlink:arcrole='http://www.w3.org/1999/xlink/properties/linkbase' xlink:href='http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t/gl-plt-en-2015-03-25.xsd'/>
+ 
+  <xbrli:context id='now'>
+     <xbrli:entity>
+         <xbrli:identifier scheme='http://xbrlsite.com/id'>AAAAAAAAAA</xbrli:identifier>
+     </xbrli:entity>
+     <xbrli:period>
+         <xbrli:instant>2018-12-31</xbrli:instant>
+     </xbrli:period>
+  </xbrli:context>
+  <xbrli:unit id='usd'>
+     <xbrli:measure>iso4217:USD</xbrli:measure>
+  </xbrli:unit>
+  <xbrli:unit id='NotUsed'>
+     <xbrli:measure>pure</xbrli:measure>
+  </xbrli:unit>
+
+ <gl-cor:accountingEntries>
+     <gl-cor:documentInfo>
+         <gl-cor:entriesType contextRef='now'>journal</gl-cor:entriesType>
+         <gl-cor:uniqueID contextRef='now'>001</gl-cor:uniqueID>
+         <gl-cor:language contextRef='now'>iso639:en</gl-cor:language>
+         <gl-cor:creationDate contextRef='now'>2024-12-31</gl-cor:creationDate>
+         <gl-bus:creator contextRef='now'>Charles Hoffman, CPA</gl-bus:creator>
+         <gl-cor:entriesComment contextRef='now'>Journal entries for 2024; box audit example.</gl-cor:entriesComment>
+         <gl-cor:periodCoveredStart contextRef='now'>2024-01-01</gl-cor:periodCoveredStart>
+         <gl-cor:periodCoveredEnd contextRef='now'>2024-12-31</gl-cor:periodCoveredEnd>
+         <gl-muc:defaultCurrency contextRef='now'>iso4217:usd</gl-muc:defaultCurrency>
+     </gl-cor:documentInfo>
+     <gl-cor:entityInformation>
+         <gl-bus:organizationIdentifiers>
+             <gl-bus:organizationIdentifier contextRef='now'>http://xbrlsite.com/id#AAAAAAAAAA</gl-bus:organizationIdentifier>
+             <gl-bus:organizationDescription contextRef='now'>Company Name</gl-bus:organizationDescription>
+         </gl-bus:organizationIdentifiers>
+     </gl-cor:entityInformation>
+
+
+  <!-- Journal Entries -->
+      <!-- JE-201 - Investment by owner to open a lemonade stand. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-201</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Investment by owner to open a lemonade stand.</gl-cor:entryComment>
+  
+         <!-- JE-201 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:ProceedsFromInvestmentsByOwner</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>10000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-01</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-201 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-3100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:PaidInCapital</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:InvestmentsByOwner</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>10000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-01</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-202 - Long term borrowing to purchase refrigerator. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-202</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Long term borrowing to purchase refrigerator.</gl-cor:entryComment>
+  
+         <!-- JE-202 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:ProceedsFromAdditionalLongtermBorrowings</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>2000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-02</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-202 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2300-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:LongtermDebt</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:AdditionalLongtermBorrowings</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>2000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-02</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-203 - Purchase of refrigerator  using cash from additional borrowings. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-203</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Purchase of refrigerator  using cash from additional borrowings.</gl-cor:entryComment>
+  
+         <!-- JE-203 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1500-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:PropertyPlantAndEquipment</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:CapitalAdditionsPropertyPlantAndEquipment</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>1000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-05</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-203 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>1000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-05</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-203 - Purchase of refrigerator using cash from additional borrowings. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-203</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Purchase of refrigerator using cash from additional borrowings.</gl-cor:entryComment>
+  
+         <!-- JE-203 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1500-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:PropertyPlantAndEquipment</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:CapitalAdditionsPropertyPlantAndEquipment</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>1000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-05</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-203 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>1000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-05</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-204 - Purchase of lemons to put intoinventory on account. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-204</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Purchase of lemons to put intoinventory on account.</gl-cor:entryComment>
+  
+         <!-- JE-204 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1300-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Inventories</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PurchasesOfInventoryForSale</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>5000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-10</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-204 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2150-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:AccountsPayable</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PurchasesInventoryForSaleOnAccount</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>5000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-10</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-205 - Payment for  contractor to work the lemonade stand. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-205</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Payment for  contractor to work the lemonade stand.</gl-cor:entryComment>
+  
+         <!-- JE-205 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CostsOfSales</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>3000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-15</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-205 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2150-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:AccountsPayable</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PurchasesInventoryForSaleOnAccount</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>3000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-15</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-206 - Costs related to sales on account. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-206</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Costs related to sales on account.</gl-cor:entryComment>
+  
+         <!-- JE-206 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1200-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Receivables</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:IncreaseInReceivablesFromSalesOnAccount</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>8000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-206 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-4100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Sales</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>8000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-206 -->
+         <!-- Seq-3 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>3</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CostsOfSales</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>2000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-206 -->
+         <!-- Seq-4 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>4</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1300-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Inventories</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:DecreaseInInventoriesFromSales</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>2000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-206 - Sales on account. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-206</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Sales on account.</gl-cor:entryComment>
+  
+         <!-- JE-206 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1200-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Receivables</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:IncreaseInReceivablesFromSalesOnAccount</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>8000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-206 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-4100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Sales</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>8000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-206 -->
+         <!-- Seq-3 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>3</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CostsOfSales</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>2000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-206 -->
+         <!-- Seq-4 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>4</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1300-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Inventories</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:DecreaseInInventoriesFromSales</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>2000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-16</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-207 - Collection of accounts receivable. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-207</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Collection of accounts receivable.</gl-cor:entryComment>
+  
+         <!-- JE-207 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:ProceedsFromCollectionOfReceivables</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>8000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-20</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-207 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1200-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Receivables</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:CollectionOfReceivables</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>8000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-20</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-208 - Payment of accounts payable. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-208</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Payment of accounts payable.</gl-cor:entryComment>
+  
+         <!-- JE-208 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2150-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:AccountsPayable</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:DecreaseFromPaymentAccountsPayable</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>7000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-21</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-208 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PaymentOfAccountsPayable</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>7000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-21</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-209 - Payment of long term debt including accrued interest. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-209</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Payment of long term debt including accrued interest.</gl-cor:entryComment>
+  
+         <!-- JE-209 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2300-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:LongtermDebt</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:RepaymentLongtermBorrowings</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>1000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-25</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-209 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PaymentForReductionOfLongtermBorrowings</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>1000</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-25</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-209 -->
+         <!-- Seq-3 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>3</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PaymentOfInterest</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>150</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-25</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-209 -->
+         <!-- Seq-4 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>4</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2160-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:AccruedExpenses</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:DecreaseFromPaymentOfInterest</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>150</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-25</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-210 - Accrual of interest on debt. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-210</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Accrual of interest on debt.</gl-cor:entryComment>
+  
+         <!-- JE-210 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5400-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:InterestExpense</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>150</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-24</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-210 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2160-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:AccruedExpenses</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:InterestAccrued</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>150</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-24</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-223 - Closing entry. Inventory write offs, adjust to physical. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-223</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Closing entry. Inventory write offs, adjust to physical.</gl-cor:entryComment>
+  
+         <!-- JE-223 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:CostsOfSales</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>300</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-28</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-223 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1300-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:Inventories</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:InventoryWrittenOff</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>300</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-28</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-224 - Closing entry. Depreciation and amortization expensed. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-224</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Closing entry. Depreciation and amortization expensed.</gl-cor:entryComment>
+  
+         <!-- JE-224 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5200-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:DepreciationAndAmortization</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>100</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-28</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-224 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1500-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:PropertyPlantAndEquipment</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:DecreaseFromDepreciationAndAmortization</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>100</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-28</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-225 - Closing entry. Write of of PPE. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-225</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Closing entry. Write of of PPE.</gl-cor:entryComment>
+  
+         <!-- JE-225 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-1500-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:PropertyPlantAndEquipment</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:PropertyPlantAndEquipmentWrittenOff</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>0</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-28</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-225 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-5500-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:NonoperatingIncomeExpenses</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>0</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-28</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+      <!-- JE-226 - Closing entry.  Book taxes. -->
+     <gl-cor:entryHeader>
+        <gl-cor:enteredBy contextRef='now'>Charles Hoffman, CPA</gl-cor:enteredBy>
+        <gl-cor:enteredDate contextRef='now'>2024-01-31</gl-cor:enteredDate>
+        <gl-cor:sourceJournalID contextRef='now'>gj</gl-cor:sourceJournalID>
+        <gl-bus:sourceJournalDescription contextRef='now'>JE</gl-bus:sourceJournalDescription>
+        <gl-cor:entryType contextRef='now'>standard</gl-cor:entryType>
+        <gl-cor:entryNumber contextRef='now'>JE-226</gl-cor:entryNumber>
+        <gl-cor:entryComment contextRef='now'>Closing entry.  Book taxes.</gl-cor:entryComment>
+  
+         <!-- JE-226 -->
+         <!-- Seq-1 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>1</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-6100-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:IncomeTaxExpenseBenefit</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:NetIncomeLoss</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>400</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>D</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-29</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+         <!-- JE-226 -->
+         <!-- Seq-2 -->
+         <gl-cor:entryDetail>
+             <gl-cor:lineNumber contextRef='now'>2</gl-cor:lineNumber>
+             <gl-cor:account>
+                 <gl-cor:accountMainID contextRef='now'>000-2160-00</gl-cor:accountMainID>
+                 <gl-cor:accountMainDescription contextRef='now'>mini:AccruedExpenses</gl-cor:accountMainDescription>
+                 <gl-cor:accountTypeDescription contextRef='now'>mini:InterestAccrued</gl-cor:accountTypeDescription>
+             </gl-cor:account>
+             <gl-cor:amount contextRef='now' decimals='2' unitRef='usd'>400</gl-cor:amount>
+             <gl-cor:debitCreditCode contextRef='now'>C</gl-cor:debitCreditCode>
+             <gl-cor:postingDate contextRef='now'>2024-01-29</gl-cor:postingDate>
+             <gl-cor:documentType contextRef='now'>other</gl-cor:documentType>
+             <gl-cor:postingStatus contextRef='now'>posted</gl-cor:postingStatus>
+         </gl-cor:entryDetail>
+     </gl-cor:entryHeader>
+
+ </gl-cor:accountingEntries>
+
+</xbrli:xbrl>

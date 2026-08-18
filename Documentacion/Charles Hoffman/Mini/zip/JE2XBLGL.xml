@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrll="http://www.xbrl.org/2003/linkbase" xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25" xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25" xmlns:gl-gen="http://www.xbrl.org/int/gl/gen/2015-03-25" xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25" xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25" xmlns:gl-srcd="http://www.xbrl.org/int/gl/srcd/2015-03-25" xmlns:gl-taf="http://www.xbrl.org/int/gl/taf/2015-03-25" xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<xbrll:schemaRef xlink:type="simple" xlink:href="C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Charles Hoffman/Mini/Taxonomy/gl/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.mini.com">Mini</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2024-12-31</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:documentInfo>
+			<gl-cor:entriesType contextRef="ctx1">entries</gl-cor:entriesType>
+		</gl-cor:documentInfo>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-201</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Investment by owner to open a lemonade stand.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">10000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-01</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:ProceedsFromInvestmentsByOwner</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-201</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Investment by owner to open a lemonade stand.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-3100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Capital Pagado (Paid-in Capital)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-10000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-01</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaidInCapital</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:InvestmentsByOwner</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-202</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Long term borrowing to purchase refrigerator.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">2000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-02</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:ProceedsFromAdditionalLongtermBorrowings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-202</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Long term borrowing to purchase refrigerator.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2300-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Deuda a Largo Plazo (Long-term Debt)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-2000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-02</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NoncurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LongtermDebt</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AdditionalLongtermBorrowings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-203</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Purchase of refrigerator  using cash from additional borrowings.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1500-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Propiedades, Planta y Equipo (PPE)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">1000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-05</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NoncurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PropertyPlantAndEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CapitalAdditionsPropertyPlantAndEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-203</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Purchase of refrigerator  using cash from additional borrowings.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-1000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-05</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-203</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Purchase of refrigerator using cash from additional borrowings.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1500-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Propiedades, Planta y Equipo (PPE)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">1000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-05</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NoncurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PropertyPlantAndEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CapitalAdditionsPropertyPlantAndEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-203</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Purchase of refrigerator using cash from additional borrowings.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-1000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-05</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-204</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Purchase of lemons to put intoinventory on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1300-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Inventarios (Inventories)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">5000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-10</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Inventories</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PurchasesOfInventoryForSale</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-204</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Purchase of lemons to put intoinventory on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2150-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Cuentas por Pagar (Accounts Payable)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-5000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-10</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AccountsPayable</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PurchasesInventoryForSaleOnAccount</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-205</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment for  contractor to work the lemonade stand.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Costo de Ventas (Cost of Sales)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">3000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-15</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:GrossProfitLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CostsOfSales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-205</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment for  contractor to work the lemonade stand.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2150-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Cuentas por Pagar (Accounts Payable)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-3000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-15</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AccountsPayable</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PurchasesInventoryForSaleOnAccount</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Costs related to sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1200-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Cuentas por Cobrar (Receivables)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">8000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Receivables</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncreaseInReceivablesFromSalesOnAccount</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Costs related to sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-4100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Ingresos por Ventas (Sales)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-8000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:GrossProfitLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Sales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Costs related to sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Costo de Ventas (Cost of Sales)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">2000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:GrossProfitLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CostsOfSales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Costs related to sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1300-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Inventarios (Inventories)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-2000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Inventories</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:DecreaseInInventoriesFromSales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1200-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Cuentas por Cobrar (Receivables)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">8000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Receivables</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncreaseInReceivablesFromSalesOnAccount</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-4100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Ingresos por Ventas (Sales)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-8000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:GrossProfitLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Sales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Costo de Ventas (Cost of Sales)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">2000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:GrossProfitLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CostsOfSales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-206</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Sales on account.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1300-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Inventarios (Inventories)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-2000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-16</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Inventories</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:DecreaseInInventoriesFromSales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-207</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Collection of accounts receivable.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">8000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-20</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:ProceedsFromCollectionOfReceivables</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-207</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Collection of accounts receivable.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1200-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Cuentas por Cobrar (Receivables)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-8000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-20</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Receivables</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CollectionOfReceivables</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-208</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment of accounts payable.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2150-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Cuentas por Pagar (Accounts Payable)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">7000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-21</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AccountsPayable</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:DecreaseFromPaymentAccountsPayable</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-208</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment of accounts payable.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-7000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-21</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaymentOfAccountsPayable</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-209</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment of long term debt including accrued interest.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2300-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Deuda a Largo Plazo (Long-term Debt)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">1000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-25</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NoncurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LongtermDebt</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RepaymentLongtermBorrowings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-209</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment of long term debt including accrued interest.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-1000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-25</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaymentForReductionOfLongtermBorrowings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-209</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment of long term debt including accrued interest.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Efectivo y Equivalentes de Efectivo</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-150</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-25</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaymentOfInterest</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-209</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Payment of long term debt including accrued interest.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2160-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Gastos Acumulados por Pagar (Accrued Expenses)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">150</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-25</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AccruedExpenses</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:DecreaseFromPaymentOfInterest</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-210</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Accrual of interest on debt.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5400-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Gasto por Intereses (Interest Expense)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">150</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-24</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NonoperatingIncomeExpenses</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:InterestExpense</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-210</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Accrual of interest on debt.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2160-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Gastos Acumulados por Pagar (Accrued Expenses)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-150</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-24</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AccruedExpenses</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:InterestAccrued</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-223</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry. Inventory write offs, adjust to physical.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Costo de Ventas (Cost of Sales)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">300</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-28</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:GrossProfitLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CostsOfSales</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-223</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry. Inventory write offs, adjust to physical.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1300-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Inventarios (Inventories)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-300</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-28</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Inventories</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:InventoryWrittenOff</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-224</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry. Depreciation and amortization expensed.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5200-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Depreciacion y Amortizacion</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">100</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-28</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:OperatingExpenses</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:DepreciationAndAmortization</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-224</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry. Depreciation and amortization expensed.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1500-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Propiedades, Planta y Equipo (PPE)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-100</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-28</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NoncurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PropertyPlantAndEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:DecreaseFromDepreciationAndAmortization</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-225</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry. Write of of PPE.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-1500-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Propiedades, Planta y Equipo (PPE)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">0</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-28</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Assets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NoncurrentAssets</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PropertyPlantAndEquipment</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PropertyPlantAndEquipmentWrittenOff</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-225</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry. Write of of PPE.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-5500-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Ingresos/Gastos No Operacionales</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">0</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-28</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeLossFromContinuingOperationsBeforeTax</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NonoperatingIncomeExpenses</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-226</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry.  Book taxes.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-6100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Impuesto a la Renta</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">400</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-29</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Equity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:RetainedEarnings</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:IncomeTaxExpenseBenefit</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:NetIncomeLoss</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Charles Hoffman, CPA</gl-cor:enteredBy>
+			<gl-cor:enteredDate contextRef="ctx1">2024-01-31</gl-cor:enteredDate>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-cor:entryNumber contextRef="ctx1">JE-226</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Closing entry.  Book taxes.</gl-cor:entryComment>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-2160-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Gastos Acumulados por Pagar (Accrued Expenses)</gl-cor:accountMainDescription>
+					<gl-cor:accountPurposeCode contextRef="ctx1">other</gl-cor:accountPurposeCode>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="USD" decimals="0">-400</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-29</gl-cor:postingDate>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:LiabilitiesAndEquity</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:Liabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:CurrentLiabilities</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo/>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:AccruedExpenses</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:InterestAccrued</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:unit id="USD">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:USD</xbrli:measure>
+	</xbrli:unit>
+</xbrli:xbrl>

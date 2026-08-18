@@ -1,0 +1,408 @@
+{
+  "@context": {
+    "vf": "https://w3id.org/valueflows/ont/vf#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AccountableEffect": "vf:AccountableEffect",
+    "AccountingEffect": "vf:AccountingEffect",
+    "Action": "vf:Action",
+    "ActionDomain": "vf:ActionDomain",
+    "Agent": "vf:Agent",
+    "Agreement": "vf:Agreement",
+    "AgreementBundle": "vf:AgreementBundle",
+    "BatchLotRecord": "vf:BatchLotRecord",
+    "Claim": "vf:Claim",
+    "ClassifiedAsDomain": "vf:ClassifiedAsDomain",
+    "Commitment": "vf:Commitment",
+    "ContainedEffect": "vf:ContainedEffect",
+    "CreateResource": "vf:CreateResource",
+    "CreatedDomain": "vf:CreatedDomain",
+    "DueDomain": "vf:DueDomain",
+    "EcologicalAgent": "vf:EcologicalAgent",
+    "EconomicEvent": "vf:EconomicEvent",
+    "EconomicResource": "vf:EconomicResource",
+    "EffortQuantityDomain": "vf:EffortQuantityDomain",
+    "EventQuantity": "vf:EventQuantity",
+    "FinishedDomain": "vf:FinishedDomain",
+    "HasBeginningDomain": "vf:HasBeginningDomain",
+    "HasEndDomain": "vf:HasEndDomain",
+    "HasInputRange": "vf:HasInputRange",
+    "HasOutputRange": "vf:HasOutputRange",
+    "HasPointInTimeDomain": "vf:HasPointInTimeDomain",
+    "ImageDomain": "vf:ImageDomain",
+    "ImageListDomain": "vf:ImageListDomain",
+    "InputOfDomain": "vf:InputOfDomain",
+    "InputOutput": "vf:InputOutput",
+    "Intent": "vf:Intent",
+    "LabelDomain": "vf:LabelDomain",
+    "LocationEffect": "vf:LocationEffect",
+    "Measure": "vf:Measure",
+    "NameDomain": "vf:NameDomain",
+    "NoteDomain": "vf:NoteDomain",
+    "OnhandEffect": "vf:OnhandEffect",
+    "Organization": "vf:Organization",
+    "OutputOfDomain": "vf:OutputOfDomain",
+    "Person": "vf:Person",
+    "Plan": "vf:Plan",
+    "PlanIncludesRange": "vf:PlanIncludesRange",
+    "PlannedWithinDomain": "vf:PlannedWithinDomain",
+    "Process": "vf:Process",
+    "ProcessSpecification": "vf:ProcessSpecification",
+    "Proposal": "vf:Proposal",
+    "ProposalList": "vf:ProposalList",
+    "ProposalPurpose": "vf:ProposalPurpose",
+    "ProposedToDomain": "vf:ProposedToDomain",
+    "ProviderDomain": "vf:ProviderDomain",
+    "ReceiverDomain": "vf:ReceiverDomain",
+    "Recipe": "vf:Recipe",
+    "RecipeExchange": "vf:RecipeExchange",
+    "RecipeFlow": "vf:RecipeFlow",
+    "RecipeProcess": "vf:RecipeProcess",
+    "ResourceClassifiedAsDomain": "vf:ResourceClassifiedAsDomain",
+    "ResourceConformsToDomain": "vf:ResourceConformsToDomain",
+    "ResourceInventoriedAsDomain": "vf:ResourceInventoriedAsDomain",
+    "ResourceQuantityDomain": "vf:ResourceQuantityDomain",
+    "ResourceSpecification": "vf:ResourceSpecification",
+    "SatisfiesDomain": "vf:SatisfiesDomain",
+    "SpatialThing": "vf:SpatialThing",
+    "StageDomain": "vf:StageDomain",
+    "StageEffect": "vf:StageEffect",
+    "StateDomain": "vf:StateDomain",
+    "StateEffect": "vf:StateEffect",
+    "Unit": "vf:Unit",
+    "accountableEffect": {
+      "@id": "vf:accountableEffect"
+    },
+    "accountingEffect": {
+      "@id": "vf:accountingEffect"
+    },
+    "accountingQuantity": {
+      "@id": "vf:accountingQuantity"
+    },
+    "action": {
+      "@id": "vf:action"
+    },
+    "alt": {
+      "@id": "vf:alt"
+    },
+    "availableQuantity": {
+      "@id": "vf:availableQuantity"
+    },
+    "basedOn": {
+      "@id": "vf:basedOn"
+    },
+    "batchLotCode": {
+      "@id": "vf:batchLotCode"
+    },
+    "bundledIn": {
+      "@id": "vf:bundledIn"
+    },
+    "bundles": {
+      "@id": "vf:bundles"
+    },
+    "classifiedAs": {
+      "@id": "vf:classifiedAs"
+    },
+    "clauseOf": {
+      "@id": "vf:clauseOf"
+    },
+    "conformsTo": {
+      "@id": "vf:conformsTo"
+    },
+    "containedEffect": {
+      "@id": "vf:containedEffect"
+    },
+    "containedIn": {
+      "@id": "vf:containedIn"
+    },
+    "contains": {
+      "@id": "vf:contains"
+    },
+    "corrects": {
+      "@id": "vf:corrects"
+    },
+    "createResource": {
+      "@id": "vf:createResource"
+    },
+    "created": {
+      "@id": "vf:created"
+    },
+    "currentCurrencyLocation": {
+      "@id": "vf:currentCurrencyLocation"
+    },
+    "currentLocation": {
+      "@id": "vf:currentLocation"
+    },
+    "currentVirtualLocation": {
+      "@id": "vf:currentVirtualLocation"
+    },
+    "defaultUnitOfEffort": {
+      "@id": "vf:defaultUnitOfEffort"
+    },
+    "defaultUnitOfResource": {
+      "@id": "vf:defaultUnitOfResource"
+    },
+    "due": {
+      "@id": "vf:due"
+    },
+    "effortQuantity": {
+      "@id": "vf:effortQuantity"
+    },
+    "eligibleLocation": {
+      "@id": "vf:eligibleLocation"
+    },
+    "eventQuantity": {
+      "@id": "vf:eventQuantity"
+    },
+    "expirationDate": {
+      "@id": "vf:expirationDate"
+    },
+    "finished": {
+      "@id": "vf:finished"
+    },
+    "fulfills": {
+      "@id": "vf:fulfills"
+    },
+    "hasBeginning": {
+      "@id": "vf:hasBeginning"
+    },
+    "hasDetailedGeometry": {
+      "@id": "vf:hasDetailedGeometry"
+    },
+    "hasDuration": {
+      "@id": "vf:hasDuration"
+    },
+    "hasEnd": {
+      "@id": "vf:hasEnd"
+    },
+    "hasIndependentDemand": {
+      "@id": "vf:hasIndependentDemand"
+    },
+    "hasInput": {
+      "@id": "vf:hasInput"
+    },
+    "hasNumericalValue": {
+      "@id": "vf:hasNumericalValue"
+    },
+    "hasOutput": {
+      "@id": "vf:hasOutput"
+    },
+    "hasPointInTime": {
+      "@id": "vf:hasPointInTime"
+    },
+    "hasRecipeInput": {
+      "@id": "vf:hasRecipeInput"
+    },
+    "hasRecipeOutput": {
+      "@id": "vf:hasRecipeOutput"
+    },
+    "hasUnit": {
+      "@id": "vf:hasUnit"
+    },
+    "image": {
+      "@id": "vf:image"
+    },
+    "imageList": {
+      "@id": "vf:imageList"
+    },
+    "inScopeOf": {
+      "@id": "vf:inScopeOf"
+    },
+    "independentDemandOf": {
+      "@id": "vf:independentDemandOf"
+    },
+    "inputOf": {
+      "@id": "vf:inputOf"
+    },
+    "inputOutput": {
+      "@id": "vf:inputOutput"
+    },
+    "label": {
+      "@id": "vf:label"
+    },
+    "lat": {
+      "@id": "vf:lat"
+    },
+    "listedIn": {
+      "@id": "vf:listedIn"
+    },
+    "lists": {
+      "@id": "vf:lists"
+    },
+    "locationEffect": {
+      "@id": "vf:locationEffect"
+    },
+    "long": {
+      "@id": "vf:long"
+    },
+    "mappableAddress": {
+      "@id": "vf:mappableAddress"
+    },
+    "mediumOfExchange": {
+      "@id": "vf:mediumOfExchange"
+    },
+    "minimumQuantity": {
+      "@id": "vf:minimumQuantity"
+    },
+    "name": {
+      "@id": "vf:name"
+    },
+    "note": {
+      "@id": "vf:note"
+    },
+    "ofBatchLot": {
+      "@id": "vf:ofBatchLot"
+    },
+    "omUnitIdentifier": {
+      "@id": "vf:omUnitIdentifier"
+    },
+    "onhandEffect": {
+      "@id": "vf:onhandEffect"
+    },
+    "onhandQuantity": {
+      "@id": "vf:onhandQuantity"
+    },
+    "outputOf": {
+      "@id": "vf:outputOf"
+    },
+    "pairsWith": {
+      "@id": "vf:pairsWith"
+    },
+    "planIncludes": {
+      "@id": "vf:planIncludes"
+    },
+    "plannedWithin": {
+      "@id": "vf:plannedWithin"
+    },
+    "primaryAccountable": {
+      "@id": "vf:primaryAccountable"
+    },
+    "primaryLocation": {
+      "@id": "vf:primaryLocation"
+    },
+    "primaryOutput": {
+      "@id": "vf:primaryOutput"
+    },
+    "processClassifiedAs": {
+      "@id": "vf:processClassifiedAs"
+    },
+    "processConformsTo": {
+      "@id": "vf:processConformsTo"
+    },
+    "proposedTo": {
+      "@id": "vf:proposedTo"
+    },
+    "provider": {
+      "@id": "vf:provider"
+    },
+    "publishes": {
+      "@id": "vf:publishes"
+    },
+    "purpose": {
+      "@id": "vf:purpose"
+    },
+    "realizationOf": {
+      "@id": "vf:realizationOf"
+    },
+    "realizes": {
+      "@id": "vf:realizes"
+    },
+    "realizesReciprocal": {
+      "@id": "vf:realizesReciprocal"
+    },
+    "receiver": {
+      "@id": "vf:receiver"
+    },
+    "recipeClauseOf": {
+      "@id": "vf:recipeClauseOf"
+    },
+    "recipeIncludes": {
+      "@id": "vf:recipeIncludes"
+    },
+    "recipeInputOf": {
+      "@id": "vf:recipeInputOf"
+    },
+    "recipeOutputOf": {
+      "@id": "vf:recipeOutputOf"
+    },
+    "recipeReciprocalClauseOf": {
+      "@id": "vf:recipeReciprocalClauseOf"
+    },
+    "recipeStipulates": {
+      "@id": "vf:recipeStipulates"
+    },
+    "recipeStipulatesReciprocal": {
+      "@id": "vf:recipeStipulatesReciprocal"
+    },
+    "reciprocal": {
+      "@id": "vf:reciprocal"
+    },
+    "reciprocalClauseOf": {
+      "@id": "vf:reciprocalClauseOf"
+    },
+    "reciprocalRealizationOf": {
+      "@id": "vf:reciprocalRealizationOf"
+    },
+    "resourceClassifiedAs": {
+      "@id": "vf:resourceClassifiedAs"
+    },
+    "resourceConformsTo": {
+      "@id": "vf:resourceConformsTo"
+    },
+    "resourceInventoriedAs": {
+      "@id": "vf:resourceInventoriedAs"
+    },
+    "resourceQuantity": {
+      "@id": "vf:resourceQuantity"
+    },
+    "satisfies": {
+      "@id": "vf:satisfies"
+    },
+    "settles": {
+      "@id": "vf:settles"
+    },
+    "stage": {
+      "@id": "vf:stage"
+    },
+    "stageEffect": {
+      "@id": "vf:stageEffect"
+    },
+    "state": {
+      "@id": "vf:state"
+    },
+    "stateEffect": {
+      "@id": "vf:stateEffect"
+    },
+    "stipulates": {
+      "@id": "vf:stipulates"
+    },
+    "stipulatesReciprocal": {
+      "@id": "vf:stipulatesReciprocal"
+    },
+    "substitutable": {
+      "@id": "vf:substitutable"
+    },
+    "symbol": {
+      "@id": "vf:symbol"
+    },
+    "toLocation": {
+      "@id": "vf:toLocation"
+    },
+    "toResourceInventoriedAs": {
+      "@id": "vf:toResourceInventoriedAs"
+    },
+    "trackingIdentifier": {
+      "@id": "vf:trackingIdentifier"
+    },
+    "triggeredBy": {
+      "@id": "vf:triggeredBy"
+    },
+    "unitBased": {
+      "@id": "vf:unitBased"
+    },
+    "unitOfEffort": {
+      "@id": "vf:unitOfEffort"
+    }
+  }
+}

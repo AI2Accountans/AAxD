@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="6" kind="2">
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="300" lty="50" rbx="406" rby="67"/>
+					<data>
+						<constant value="iso4217:USD" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="84" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="300" lty="80" rbx="349" rby="97"/>
+					<data>
+						<constant value="o" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="85" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="300" lty="110" rbx="388" rby="127"/>
+					<data>
+						<constant value="US-GAAP" datatype="string"/>
+					</data>
+				</component>
+				<component name="xbrl-measure-currency" library="xbrl" uid="8" kind="5">
+					<sources>
+						<datapoint pos="0" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="300" lty="140" rbx="440" rby="178"/>
+				</component>
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="5" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="500" lty="13" rbx="900" rby="900"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.xbrl.org/int/gl/bus/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/srcd/2015-03-25"/>
+									<namespace uid="view"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="2" expanded="1" showdefaultsnode="1">
+										<entry name="//www.xbrl.org/2003/role/link" ns="6" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="2"/>
+													<qname name="period" ns="2"/>
+												</dimensions>
+												<entry name="identifier" ns="2" expanded="1" showdefaultsnode="1">
+													<entry name="defaults" ns="1" expanded="1">
+														<entry name="monetaryItemType" ns="1" expanded="1">
+															<entry name="unitRef" type="attribute" inpkey="5"/>
+															<entry name="decimals" type="attribute" inpkey="6"/>
+														</entry>
+													</entry>
+													<entry name="identifier" ns="2" inpkey="18" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="19"/>
+													</entry>
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" inpkey="25" expanded="1">
+															<entry name="instant" ns="2" inpkey="26"/>
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="4" expanded="1">
+																<entry name="entityInformation" ns="4" expanded="1">
+																	<entry name="organizationIdentifiers" ns="3" expanded="1">
+																		<entry name="organizationIdentifier" ns="3" inpkey="70"/>
+																		<entry name="organizationDescription" ns="3" inpkey="27"/>
+																	</entry>
+																</entry>
+																<entry name="entryHeader" ns="4" expanded="1">
+																	<entry name="entryNumber" ns="4" inpkey="28"/>
+																	<entry name="entryComment" ns="4" inpkey="80"/>
+																	<entry name="qualifierEntry" ns="4" inpkey="29"/>
+																	<entry name="entryDetail" ns="4" inpkey="16" expanded="1">
+																		<entry name="account" ns="4" expanded="1">
+																			<entry name="accountMainID" ns="4" inpkey="8"/>
+																			<entry name="accountMainDescription" ns="4" inpkey="81"/>
+																		</entry>
+																		<entry name="amount" ns="4" inpkey="9"/>
+																		<entry name="debitCreditCode" ns="4" inpkey="14"/>
+																		<entry name="postingDate" ns="4" inpkey="10"/>
+																		<entry name="identifierReference" ns="4" expanded="1">
+																			<entry name="identifierCode" ns="4" inpkey="82"/>
+																			<entry name="identifierDescription" ns="4" inpkey="83"/>
+																		</entry>
+																		<entry name="documentType" ns="4" inpkey="30"/>
+																		<entry name="xbrlInfo" ns="4" expanded="1">
+																			<entry name="detailedContentFilter" ns="5" inpkey="86"/>
+																		</entry>
+																		<entry name="detailComment" ns="4" inpkey="34"/>
+																		<entry name="measurable" ns="3" expanded="1">
+																			<entry name="measurableCode" ns="3" inpkey="87"/>
+																			<entry name="measurableID" ns="3" inpkey="88"/>
+																			<entry name="measurableDescription" ns="3" inpkey="89"/>
+																			<entry name="measurableQuantity" ns="3" inpkey="90"/>
+																			<entry name="measurableUnitOfMeasure" ns="3" inpkey="91"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="unit" ns="2" expanded="1">
+											<entry name="divide" ns="2" inpkey="7"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd" outputinstance="..\POC_Data_Example\BusinessEventLedger_XBRLGL.xml"/>
+					</data>
+				</component>
+				<component name="Business Event Ledger" library="text" uid="3" kind="16">
+					<properties/>
+					<view ltx="50" lty="13" rbx="350" rby="600"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="17" expanded="1">
+										<entry name="rea_BusinessEventUUID" outkey="50"/>
+										<entry name="rea_EventDate" outkey="11"/>
+										<entry name="rea_EconomicEntityIdentifier" outkey="21"/>
+										<entry name="mini_BusinessEventCode" outkey="31"/>
+										<entry name="local_BusinessEventLiteralDescription" outkey="51"/>
+										<entry name="dca_Counterparty" outkey="53"/>
+										<entry name="local_CounterpartyLiteralValue" outkey="54"/>
+										<entry name="StandardReportingFrameworkLineItem" outkey="58"/>
+										<entry name="local_CommentLiteral" outkey="35"/>
+										<entry name="dca_AuditRisk" outkey="32"/>
+										<entry name="local_EntryIDLiteral" outkey="33"/>
+										<entry name="local_AccountLiteral" outkey="12"/>
+										<entry name="GeneralLedgerAccountCode" outkey="62"/>
+										<entry name="xbrl_FactAmount" outkey="22"/>
+										<entry name="xbrl_Units" outkey="64"/>
+										<entry name="xbrl_Decimals" outkey="23"/>
+										<entry name="local_Balance" outkey="15"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\POC_Data_Example\BusinessEventLedger.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Business Event Ledger" block="Rows">
+									<field0 name="rea_BusinessEventUUID" realname="rea:BusinessEventUUID" type="string"/>
+									<field1 name="rea_EventDate" realname="rea:EventDate" type="string"/>
+									<field2 name="rea_EconomicEntityIdentifier" realname="rea:EconomicEntityIdentifier" type="string"/>
+									<field3 name="mini_BusinessEventCode" realname="mini:BusinessEventCode" type="string"/>
+									<field4 name="local_BusinessEventLiteralDescription" realname="local:BusinessEventLiteralDescription" type="string"/>
+									<field5 name="dca_Party" realname="dca:Party" type="string"/>
+									<field6 name="dca_Counterparty" realname="dca:Counterparty" type="string"/>
+									<field7 name="local_CounterpartyLiteralValue" realname="local:CounterpartyLiteralValue" type="string"/>
+									<field8 name="dca_EventType" realname="dca:EventType" type="string"/>
+									<field9 name="dca_Involves" realname="dca:Involves" type="string"/>
+									<field10 name="dca_RightOrObligation" realname="dca:RightOrObligation" type="string"/>
+									<field11 name="StandardReportingFrameworkLineItem" type="string"/>
+									<field12 name="xbrl_BalanceType" realname="xbrl:BalanceType" type="string"/>
+									<field13 name="local_CommentLiteral" realname="local:CommentLiteral" type="string"/>
+									<field14 name="dca_AuditRisk" realname="dca:AuditRisk" type="string"/>
+									<field15 name="local_KeyLiteral" realname="local:KeyLiteral" type="string"/>
+									<field16 name="local_EntryIDLiteral" realname="local:EntryIDLiteral" type="string"/>
+									<field17 name="local_SequenceLiteral" realname="local:SequenceLiteral" type="string"/>
+									<field18 name="local_AccountLiteral" realname="local:AccountLiteral" type="string"/>
+									<field19 name="GeneralLedgerAccountCode" type="string"/>
+									<field20 name="BusinessEventCode" type="string"/>
+									<field21 name="xbrl_FactAmount" realname="xbrl:FactAmount" type="string"/>
+									<field22 name="xbrl_Units" realname="xbrl:Units" type="string"/>
+									<field23 name="xbrl_Decimals" realname="xbrl:Decimals" type="string"/>
+									<field24 name="local_Balance" realname="local:Balance" type="string"/>
+									<field25 name="local_EffectiveValue" realname="local:EffectiveValue" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="86" kind="2">
+					<targets>
+						<datapoint pos="0" key="95"/>
+					</targets>
+					<view ltx="382" lty="213" rbx="466" rby="230"/>
+					<data>
+						<constant value="Example" datatype="string"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="3"/>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="8"/>
+							<edge vertexkey="87"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="9"/>
+							<edge vertexkey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="10"/>
+							<edge vertexkey="25"/>
+							<edge vertexkey="26"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="19"/>
+							<edge vertexkey="27"/>
+							<edge vertexkey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="29"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="34"/>
+							<edge vertexkey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="53">
+						<edges>
+							<edge vertexkey="82"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="54">
+						<edges>
+							<edge vertexkey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58">
+						<edges>
+							<edge vertexkey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="91"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

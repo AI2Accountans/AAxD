@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================================================================= -->
+<!-- CONTRATO PRIMARIO DE CONSTITUCIÓN DE ENTIDAD (MOMENTO CERO / SHIFT LEFT $1 PREVENCIÓN)    -->
+<!-- Framework: Accounting & Audit by Design (A&AD)                                            -->
+<!-- Estándares: ISO/IEC 15944-4 (REA), OMG SBVR 1.5, ACTUS Contract Standards, W3C Valueflows   -->
+<!-- ========================================================================================= -->
+<vf:BusinessTransaction xmlns:vf="https://w3id.org/valueflows/ont/vf#"
+                         xmlns:sbvr="http://www.omg.org/spec/SBVR/20190901/sbvr#"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:schemaLocation="https://w3id.org/valueflows/ont/vf# ../ISO%2015944/valueflows_schema.xsd">
+
+  <vf:transactionId>TX-MOMENTO0-CONSTITUCION-2026</vf:transactionId>
+  <vf:issueDate>2026-08-09T08:00:00Z</vf:issueDate>
+  <vf:governingJurisdiction>Cámara de Comercio de Bogotá / Código de Comercio de Colombia</vf:governingJurisdiction>
+  
+  <!-- ======================================================================================= -->
+  <!-- 1. EL ACUERDO FUNDACIONAL (ESCRITURA PÚBLICA DE CONSTITUCIÓN / HOLÓN JURÍDICO)           -->
+  <!-- ======================================================================================= -->
+  <vf:agreement>
+    <vf:id>AGR-CONSTITUCION-SOCIEDAD-001</vf:id>
+    <vf:name>Escritura Pública de Constitución de A&amp;AD CyberCPA Tech S.A.S.</vf:name>
+    <vf:created>2026-08-09T08:00:00Z</vf:created>
+    <vf:specifiedIn>file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Momento0/Escritura%20Constitucion/SOCIEDAD_LIMITADA.pdf</vf:specifiedIn>
+    <vf:note>Acto constitutivo primario que da nacimiento jurídico a la entidad y establece el Capital Social inicial.</vf:note>
+  </vf:agreement>
+
+  <!-- ======================================================================================= -->
+  <!-- 2. AGENTES INVOLUCRADOS (RECONCILIACIÓN SBVR NounConcept <-> REA Agent <-> UBL Party)  -->
+  <!-- ======================================================================================= -->
+  <vf:agents>
+    <!-- Socio Fundador 1 (Persona Natural) -->
+    <vf:agent>
+      <vf:id>AGT-SOCIO-A</vf:id>
+      <vf:name>Richard Gasca (Socio Fundador A)</vf:name>
+      <vf:agentType>Person</vf:agentType>
+      <vf:isRelatedParty>true</vf:isRelatedParty>
+      <vf:relatedPartyType>Shareholder</vf:relatedPartyType>
+      <vf:primaryLocation>Bogotá, Colombia</vf:primaryLocation>
+      <vf:classifiedAs>http://www.omg.org/spec/SBVR/20190901/sbvr#NounConcept</vf:classifiedAs>
+    </vf:agent>
+
+    <!-- Socio Fundador 2 (Persona Natural) -->
+    <vf:agent>
+      <vf:id>AGT-SOCIO-B</vf:id>
+      <vf:name>Socio Inversionista B</vf:name>
+      <vf:agentType>Person</vf:agentType>
+      <vf:isRelatedParty>true</vf:isRelatedParty>
+      <vf:relatedPartyType>Shareholder</vf:relatedPartyType>
+      <vf:primaryLocation>Bogotá, Colombia</vf:primaryLocation>
+      <vf:classifiedAs>http://www.omg.org/spec/SBVR/20190901/sbvr#NounConcept</vf:classifiedAs>
+    </vf:agent>
+
+    <!-- La Nueva Entidad Creada (Persona Jurídica Nace en el Grafo) -->
+    <vf:agent>
+      <vf:id>AGT-ENTIDAD-AAD</vf:id>
+      <vf:name>A&amp;AD CyberCPA Tech S.A.S.</vf:name>
+      <vf:agentType>Organization</vf:agentType>
+      <vf:isRelatedParty>false</vf:isRelatedParty>
+      <vf:primaryLocation>Bogotá, Colombia</vf:primaryLocation>
+      <vf:classifiedAs>https://schema.org/Corporation</vf:classifiedAs>
+    </vf:agent>
+  </vf:agents>
+
+  <!-- ======================================================================================= -->
+  <!-- 3. ESPECIFICACIÓN DE RECURSOS (CAPITAL SOCIAL & ACCIONES)                                -->
+  <!-- ======================================================================================= -->
+  <vf:resourceSpecifications>
+    <!-- Recurso 1: Efectivo / Aporte en Dinero -->
+    <vf:resourceSpecification>
+      <vf:id>RS-CURRENCY-COP</vf:id>
+      <vf:name>Capital Social Pagado en Moneda Legal (COP)</vf:name>
+      <vf:defaultUnit>COP</vf:defaultUnit>
+      <vf:classifiedAs>https://w3id.org/valueflows/ont/vf#Currency-COP</vf:classifiedAs>
+    </vf:resourceSpecification>
+
+    <!-- Recurso 2: Cuotas Sociales / Acciones Constitutivas -->
+    <vf:resourceSpecification>
+      <vf:id>RS-SHARES-AAD</vf:id>
+      <vf:name>Acciones Ordinarias de Capital Social A&amp;AD Tech S.A.S.</vf:name>
+      <vf:defaultUnit>SHARES</vf:defaultUnit>
+      <vf:classifiedAs>https://w3id.org/valueflows/ont/vf#EquityResource</vf:classifiedAs>
+    </vf:resourceSpecification>
+  </vf:resourceSpecifications>
+
+  <!-- ======================================================================================= -->
+  <!-- 4. COMPROMISOS CONTRACTUALES DE CONSTITUCIÓN (COMMITMENTS / ACTUS CLAUSES)              -->
+  <!-- ======================================================================================= -->
+  <vf:commitments>
+    <!-- Compromiso A1: Socio A aporta capital en efectivo a la Entidad -->
+    <vf:commitment>
+      <vf:id>COM-CONST-001-SOCIO-A-APORTE</vf:id>
+      <vf:action>transfer</vf:action>
+      <vf:provider>AGT-SOCIO-A</vf:provider>
+      <vf:receiver>AGT-ENTIDAD-AAD</vf:receiver>
+      <vf:resourceConformsTo>RS-CURRENCY-COP</vf:resourceConformsTo>
+      <vf:resourceQuantity>
+        <vf:value>50000000.00</vf:value>
+        <vf:unitSymbol>COP</vf:unitSymbol>
+      </vf:resourceQuantity>
+      <vf:due>2026-08-09T08:00:00Z</vf:due>
+      <vf:clauseOf>AGR-CONSTITUCION-SOCIEDAD-001</vf:clauseOf>
+      <vf:reciprocalWith>COM-CONST-002-ACCIONES-SOCIO-A</vf:reciprocalWith>
+      <vf:state>fulfilled</vf:state>
+      <vf:note>Aporte efectivo al 100% de 500 cuotas sociales por el Socio A</vf:note>
+    </vf:commitment>
+
+    <!-- Compromiso A2: La Entidad emite cuotas sociales a favor del Socio A -->
+    <vf:commitment>
+      <vf:id>COM-CONST-002-ACCIONES-SOCIO-A</vf:id>
+      <vf:action>transfer</vf:action>
+      <vf:provider>AGT-ENTIDAD-AAD</vf:provider>
+      <vf:receiver>AGT-SOCIO-A</vf:receiver>
+      <vf:resourceConformsTo>RS-SHARES-AAD</vf:resourceConformsTo>
+      <vf:resourceQuantity>
+        <vf:value>500</vf:value>
+        <vf:unitSymbol>SHARES</vf:unitSymbol>
+      </vf:resourceQuantity>
+      <vf:due>2026-08-09T08:00:00Z</vf:due>
+      <vf:clauseOf>AGR-CONSTITUCION-SOCIEDAD-001</vf:clauseOf>
+      <vf:reciprocalWith>COM-CONST-001-SOCIO-A-APORTE</vf:reciprocalWith>
+      <vf:state>fulfilled</vf:state>
+      <vf:note>Emisión de 50% de participación accionaria (500 acciones a $100,000 COP)</vf:note>
+    </vf:commitment>
+
+    <!-- Compromiso B1: Socio B aporta capital en efectivo a la Entidad -->
+    <vf:commitment>
+      <vf:id>COM-CONST-003-SOCIO-B-APORTE</vf:id>
+      <vf:action>transfer</vf:action>
+      <vf:provider>AGT-SOCIO-B</vf:provider>
+      <vf:receiver>AGT-ENTIDAD-AAD</vf:receiver>
+      <vf:resourceConformsTo>RS-CURRENCY-COP</vf:resourceConformsTo>
+      <vf:resourceQuantity>
+        <vf:value>50000000.00</vf:value>
+        <vf:unitSymbol>COP</vf:unitSymbol>
+      </vf:resourceQuantity>
+      <vf:due>2026-08-09T08:00:00Z</vf:due>
+      <vf:clauseOf>AGR-CONSTITUCION-SOCIEDAD-001</vf:clauseOf>
+      <vf:reciprocalWith>COM-CONST-004-ACCIONES-SOCIO-B</vf:reciprocalWith>
+      <vf:state>fulfilled</vf:state>
+      <vf:note>Aporte efectivo al 100% de 500 cuotas sociales por el Socio B</vf:note>
+    </vf:commitment>
+
+    <!-- Compromiso B2: La Entidad emite cuotas sociales a favor del Socio B -->
+    <vf:commitment>
+      <vf:id>COM-CONST-004-ACCIONES-SOCIO-B</vf:id>
+      <vf:action>transfer</vf:action>
+      <vf:provider>AGT-ENTIDAD-AAD</vf:provider>
+      <vf:receiver>AGT-SOCIO-B</vf:receiver>
+      <vf:resourceConformsTo>RS-SHARES-AAD</vf:resourceConformsTo>
+      <vf:resourceQuantity>
+        <vf:value>500</vf:value>
+        <vf:unitSymbol>SHARES</vf:unitSymbol>
+      </vf:resourceQuantity>
+      <vf:due>2026-08-09T08:00:00Z</vf:due>
+      <vf:clauseOf>AGR-CONSTITUCION-SOCIEDAD-001</vf:clauseOf>
+      <vf:reciprocalWith>COM-CONST-003-SOCIO-B-APORTE</vf:reciprocalWith>
+      <vf:state>fulfilled</vf:state>
+      <vf:note>Emisión de 50% de participación accionaria (500 acciones a $100,000 COP)</vf:note>
+    </vf:commitment>
+  </vf:commitments>
+
+  <!-- ======================================================================================= -->
+  <!-- 5. DUALIDAD ONTOLÓGICA REA (RECIPROCITIES)                                             -->
+  <!-- ======================================================================================= -->
+  <vf:reciprocities>
+    <vf:reciprocity>
+      <vf:id>REC-CONST-SOCIO-A</vf:id>
+      <vf:incrementCommitmentRef>COM-CONST-001-SOCIO-A-APORTE</vf:incrementCommitmentRef>
+      <vf:decrementCommitmentRef>COM-CONST-002-ACCIONES-SOCIO-A</vf:decrementCommitmentRef>
+      <vf:note>Dualidad REA Socio A: Aporte Capital COP &lt;-&gt; Emisión Acciones</vf:note>
+    </vf:reciprocity>
+    <vf:reciprocity>
+      <vf:id>REC-CONST-SOCIO-B</vf:id>
+      <vf:incrementCommitmentRef>COM-CONST-003-SOCIO-B-APORTE</vf:incrementCommitmentRef>
+      <vf:decrementCommitmentRef>COM-CONST-004-ACCIONES-SOCIO-B</vf:decrementCommitmentRef>
+      <vf:note>Dualidad REA Socio B: Aporte Capital COP &lt;-&gt; Emisión Acciones</vf:note>
+    </vf:reciprocity>
+  </vf:reciprocities>
+
+  <!-- ======================================================================================= -->
+  <!-- 6. GOBERNANZA DE REGLAS DE NEGOCIO SBVR (DEONTIC RULES AT MOMENT ZERO)                    -->
+  <!-- ======================================================================================= -->
+  <sbvr:businessRules>
+    <sbvr:businessRule>
+      <sbvr:ruleId>urn:dfrnt:rule:sbvr:const-01</sbvr:ruleId>
+      <sbvr:ruleStatement>It is obligatory that at least 50% of subscribed capital is paid at the moment of public deed execution.</sbvr:ruleStatement>
+      <sbvr:deonticModality>obligation</sbvr:deonticModality>
+      <sbvr:ruleCategory>structural-definitional</sbvr:ruleCategory>
+    </sbvr:businessRule>
+    <sbvr:businessRule>
+      <sbvr:ruleId>urn:dfrnt:rule:sbvr:const-02</sbvr:ruleId>
+      <sbvr:ruleStatement>It is prohibited to issue shares without equivalent registered economic resource commitment.</sbvr:ruleStatement>
+      <sbvr:deonticModality>prohibition</sbvr:deonticModality>
+      <sbvr:ruleCategory>operating-behavioral</sbvr:ruleCategory>
+    </sbvr:businessRule>
+  </sbvr:businessRules>
+
+</vf:BusinessTransaction>

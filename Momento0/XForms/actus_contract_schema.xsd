@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified">
+
+    <!-- Root Element -->
+    <xs:element name="ActusContract">
+        <xs:annotation>
+            <xs:documentation>Esquema Universal de Contrato ACTUS para Altova StyleVision e integración con BaseX</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Identificación y Contexto del Contrato -->
+                <xs:element name="ContractID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Identificador único del contrato (ej. UUID o Hash de IPFS)</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                
+                <xs:element name="ContractType" type="ActusContractTypeEnum">
+                    <xs:annotation>
+                        <xs:documentation>Clasificación del contrato según la taxonomía ACTUS</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                
+                <xs:element name="ContractRole" type="ActusContractRoleEnum">
+                    <xs:annotation>
+                        <xs:documentation>Rol de la entidad que registra el contrato (ej. RPA para receptor de pagos)</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                
+                <xs:element name="StatusDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Fecha de estado actual o análisis del contrato</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+
+                <!-- Partes del Contrato -->
+                <xs:element name="Counterparty" type="CounterpartyType"/>
+
+                <!-- Parámetros Financieros Base -->
+                <xs:element name="FinancialParameters" type="FinancialParametersType"/>
+                
+                <!-- Eventos Fechados Universales -->
+                <xs:element name="Schedule" type="ScheduleType"/>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Tipos de Contrato ACTUS (Lista parcial para el prototipo) -->
+    <xs:simpleType name="ActusContractTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PAM"/> <!-- Principal at Maturity -->
+            <xs:enumeration value="ANN"/> <!-- Annuity -->
+            <xs:enumeration value="NAM"/> <!-- Negative Amortizer -->
+            <xs:enumeration value="LAM"/> <!-- Linear Amortizer -->
+            <xs:enumeration value="STK"/> <!-- Stock / Equity -->
+            <xs:enumeration value="FXOUT"/> <!-- Foreign Exchange Outright -->
+            <xs:enumeration value="CLM"/> <!-- Call Money -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Roles de ACTUS -->
+    <xs:simpleType name="ActusContractRoleEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RPA"/> <!-- Real Principal Actor / Receive Pay -->
+            <xs:enumeration value="RPL"/> <!-- Real Principal Liability / Make Pay -->
+            <xs:enumeration value="BUY"/> <!-- Buyer -->
+            <xs:enumeration value="SEL"/> <!-- Seller -->
+            <xs:enumeration value="ISS"/> <!-- Issuer (for Equity) -->
+            <xs:enumeration value="OWN"/> <!-- Owner (for Equity) -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Estructura de Contraparte -->
+    <xs:complexType name="CounterpartyType">
+        <xs:sequence>
+            <xs:element name="CounterpartyID" type="xs:string"/>
+            <xs:element name="CounterpartyName" type="xs:string"/>
+            <xs:element name="CounterpartyType" type="xs:string" minOccurs="0"/> <!-- ej. LegalEntity, NaturalPerson -->
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Parámetros Financieros Universales -->
+    <xs:complexType name="FinancialParametersType">
+        <xs:sequence>
+            <xs:element name="Currency" type="xs:string" default="COP">
+                <xs:annotation>
+                    <xs:documentation>Moneda en ISO 4217, ej. COP, USD, EUR</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="NotionalPrincipal" type="xs:decimal">
+                <xs:annotation>
+                    <xs:documentation>Monto principal del contrato o Capital Nominal</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="NominalInterestRate" type="xs:decimal" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Tasa de interés nominal (si aplica)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="DayCountConvention" type="xs:string" minOccurs="0" default="30E/360">
+                <xs:annotation>
+                    <xs:documentation>Convención de conteo de días para cálculos de interés</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Programación de Eventos -->
+    <xs:complexType name="ScheduleType">
+        <xs:sequence>
+            <xs:element name="InitialExchangeDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Fecha de desembolso inicial o inicio real del flujo</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MaturityDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Fecha de vencimiento del contrato</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CycleAnchorDateOfInterestPayment" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Fecha base para iniciar el ciclo de pago de intereses</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CycleOfInterestPayment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ciclo de pago, ej. P1M (mensual), P1Y (anual)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

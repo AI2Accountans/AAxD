@@ -1,0 +1,40 @@
+Hi Richard, Charlie, Joseph & Dudley,
+
+I'm following with interest and it will be great to see convergence to some standards we all accept and move forward with.
+
+The architectural convergence of Peppol (UBL) and the newly defined XBRL Open Information Model (OIM) taxonomy requirements signals the end of the siloed, relational-database-driven accounting monolith. The accounting systems of the future will be decentralized, syntax-independent, and natively semantic.
+
+Taking an architectural perspective, the open standards that will dominate future accounting frameworks form a continuous, machine-readable pipeline from the point of transaction to the final statutory report.
+
+The Open Standards Stack of the Future
+The Transaction Standard: Peppol & UBL (Universal Business Language)
+
+Role: The natively semantic source document.
+
+Why it wins: As Peppol adoption accelerates globally, UBL becomes the de facto standard for B2B and B2G document exchange. Because a UBL invoice inherently carries a structured "Header-Detail" pattern, the document is the event. It completely eliminates the need for probabilistic AI data extraction or human-in-the-loop mapping.
+
+The Canonical Ledger: XBRL GL (Global Ledger)
+
+Role: The immutable bridge.
+
+Why it wins: XBRL GL serves as the structural holon that captures the raw UBL event and maps it into standard financial and agent ontologies (such as REA or ISO 15944), creating a flawless, deterministic audit trail.
+
+The Reporting & Semantic Layer: XBRL OIM (xBRL-JSON & xBRL-CSV) + JSON-LD
+
+Role: The decoupled, technology-agnostic data representation.
+
+Why it wins: The historical friction of XBRL was its reliance on verbose XML syntax. The XBRL Open Information Model (OIM) fundamentally decouples the semantics of a digital report from its underlying XML format. By standardizing formats like xBRL-JSON and xBRL-CSV, financial facts are instantly accessible to modern web APIs and Knowledge Graphs. This allows the semantic instance to be directly assimilated as JSON-LD.
+
+Validation from the OIM Taxonomy Requirements (December 2025)
+The XBRL Taxonomy Model Requirements 1.0 (published December 17, 2025) perfectly validates the neurosemantic trajectory of platforms like LodgeiT. The specification outlines high-level goals that directly support a declarative, deterministic architecture:
+
+Improved Declarative Constraints: The 2025 requirements emphasize the need for stronger declarative validation capabilities to reduce reliance on unstructured, rules-based validation manuals. This aligns flawlessly with utilizing declarative languages like SWI-Prolog to execute precise rule sets (such as Division 7A statutory balances) against the data structure.
+
+AI Enablement and Ease of Consumption: While strict financial calculations require deterministic math, the OIM explicitly targets "AI enablement" to ensure that the rich metadata within taxonomies is highly structured and readily consumable by Large Language Models and developers.
+
+Consistent Modelling: The OIM taxonomy seeks to enforce a single, well-designed approach to modeling reporting scenarios, cutting taxonomies free from niche XML formats to make them more intuitive and performant.
+
+The Result: File Over App
+When you ingest UBL via Peppol, funnel it through XBRL GL, and project it as xBRL-JSON/JSON-LD, the architecture achieves complete data sovereignty. The business logic and financial facts exist as independent, globally addressable files. The database is merely a projection, and the platform itself acts strictly as the execution engine traversing the graph.
+
+Regards

@@ -1,0 +1,333 @@
+WEBVTT
+
+1
+00:00:00.370 --> 00:00:01.095
+Hello everyone.
+
+2
+00:00:01.645 --> 00:00:04.095
+This is a getting started guide
+
+3
+00:00:04.195 --> 00:00:06.295
+and an overview of the Semantic Data Hub.
+
+4
+00:00:07.225 --> 00:00:09.885
+You should already passed the onboarding.
+
+5
+00:00:10.105 --> 00:00:11.685
+Be part of a team instance
+
+6
+00:00:11.875 --> 00:00:15.885
+because then we are able to first clone a data product
+
+7
+00:00:16.385 --> 00:00:19.485
+and explore the Star Wars data product together,
+
+8
+00:00:19.655 --> 00:00:21.485
+which will allow you to see the model
+
+9
+00:00:21.785 --> 00:00:23.645
+and to see the graph workspace,
+
+10
+00:00:23.985 --> 00:00:25.605
+how this is all working together.
+
+11
+00:00:25.895 --> 00:00:26.925
+Let's dive right in.
+
+12
+00:00:27.535 --> 00:00:29.685
+First, you're landing on the sand sandbox.
+
+13
+00:00:29.685 --> 00:00:33.085
+You're getting to your settings here to my storage.
+
+14
+00:00:33.915 --> 00:00:35.485
+Here is the team instance.
+
+15
+00:00:35.665 --> 00:00:38.205
+I'm in the different team instance as you can see here.
+
+16
+00:00:38.905 --> 00:00:42.165
+Here's the data products that was, I could go in here
+
+17
+00:00:42.165 --> 00:00:43.565
+as well and see everything,
+
+18
+00:00:44.065 --> 00:00:47.085
+but please clone this data product.
+
+19
+00:00:47.745 --> 00:00:50.085
+We will do this by going into the settings.
+
+20
+00:00:51.935 --> 00:00:55.315
+I'm going here to my storage and I clone the data product.
+
+21
+00:00:55.875 --> 00:00:58.955
+I clone the data product from Host different.
+
+22
+00:01:00.185 --> 00:01:02.845
+The data point I want to clone is Star Wars.
+
+23
+00:01:04.125 --> 00:01:06.245
+I will keep the name, I will
+
+24
+00:01:07.895 --> 00:01:12.455
+rename the description to local data product
+
+25
+00:01:14.595 --> 00:01:15.735
+and I clone it.
+
+26
+00:01:17.365 --> 00:01:21.055
+Then we will land here again,
+
+27
+00:01:21.115 --> 00:01:23.375
+but we will see that Star Wars has been added.
+
+28
+00:01:23.785 --> 00:01:26.815
+Let's dive here in, and it's the local data product.
+
+29
+00:01:28.235 --> 00:01:32.875
+First, we are having one main branch here.
+
+30
+00:01:33.285 --> 00:01:36.055
+Let's add this to our bookmark here.
+
+31
+00:01:36.545 --> 00:01:38.695
+We're managing the contract graph graph.
+
+32
+00:01:39.115 --> 00:01:41.615
+We are adding a workspace pointer, star Wars main,
+
+33
+00:01:41.765 --> 00:01:43.215
+this branch, we are adding it
+
+34
+00:01:43.595 --> 00:01:47.775
+and now you can also exitus exit it here over the bookmark,
+
+35
+00:01:47.785 --> 00:01:49.535
+which is, comes quite in handy.
+
+36
+00:01:50.945 --> 00:01:53.975
+Let's dive into the data product here itself.
+
+37
+00:01:54.195 --> 00:01:56.295
+We will focus today on the people.
+
+38
+00:01:56.905 --> 00:01:58.255
+These are the all the types.
+
+39
+00:01:58.475 --> 00:02:01.135
+We are focused today on the people in Star Wars
+
+40
+00:02:01.555 --> 00:02:04.095
+and the film and the films.
+
+41
+00:02:04.905 --> 00:02:07.415
+Let's add them to the ontology view.
+
+42
+00:02:08.595 --> 00:02:10.805
+Here we are switching to the class diagram
+
+43
+00:02:12.595 --> 00:02:14.455
+to see also all the attributes here.
+
+44
+00:02:14.835 --> 00:02:17.295
+As you can see, they are connected to you
+
+45
+00:02:17.295 --> 00:02:18.375
+through the character
+
+46
+00:02:19.435 --> 00:02:23.815
+as we are having multiple people playing in one movie,
+
+47
+00:02:24.685 --> 00:02:29.545
+and um, one person is also playing in the movie here itself,
+
+48
+00:02:30.685 --> 00:02:31.695
+this will be the focus,
+
+49
+00:02:32.275 --> 00:02:37.015
+but I will show you all of the types C as well.
+
+50
+00:02:37.275 --> 00:02:39.815
+So we are just adding everything to the ontology view
+
+51
+00:02:40.075 --> 00:02:41.895
+and here we can, can see everything
+
+52
+00:02:42.155 --> 00:02:43.215
+as you can see the planet.
+
+53
+00:02:43.675 --> 00:02:45.695
+So also here modeled the movie
+
+54
+00:02:46.355 --> 00:02:49.095
+and, uh, species, starships and vehicle.
+
+55
+00:02:50.995 --> 00:02:53.935
+All right, so if we are going to the people,
+
+56
+00:02:54.035 --> 00:02:55.335
+we can see all of them.
+
+57
+00:02:55.795 --> 00:02:58.855
+If we would have any inherent records, this
+
+58
+00:02:58.855 --> 00:03:00.765
+Would just join them Pretty quick.
+
+59
+00:03:01.795 --> 00:03:05.915
+I just wanna focus on Obi Van and Luke Skywalker here.
+
+60
+00:03:06.515 --> 00:03:07.955
+I add them to the graph workspace,
+
+61
+00:03:08.695 --> 00:03:13.085
+and as you can see here are both my of my persons.
+
+62
+00:03:13.745 --> 00:03:18.125
+Now I want to see all of the movies that they're playing in
+
+63
+00:03:18.625 --> 00:03:20.085
+and see the connections there.
+
+64
+00:03:20.705 --> 00:03:23.285
+So I go to the films
+
+65
+00:03:24.545 --> 00:03:28.145
+and I just wanna select all with the command a shortcut,
+
+66
+00:03:28.685 --> 00:03:30.905
+and I add them as well to the graph workspace.
+
+67
+00:03:31.295 --> 00:03:34.825
+This right now looks not as clean, so
+
+68
+00:03:36.075 --> 00:03:38.435
+I do the layout selection to sort it a bit.
+
+69
+00:03:39.845 --> 00:03:43.415
+Then I also wanna toggle the type visibility
+
+70
+00:03:43.795 --> 00:03:45.575
+to make it easier to work with.
+
+71
+00:03:46.715 --> 00:03:50.735
+As you can see here, I can just drag and drop the types
+
+72
+00:03:51.155 --> 00:03:55.695
+and I can see the connections where Obiwan is playing,
+
+73
+00:03:55.865 --> 00:03:59.175
+where both are playing in, in what movie.
+
+74
+00:04:00.115 --> 00:04:02.695
+And I can get a nice overview here.
+
+75
+00:04:04.705 --> 00:04:08.115
+If I want to edit, uh, one of them,
+
+76
+00:04:08.555 --> 00:04:09.915
+I can just click on them.
+
+77
+00:04:10.075 --> 00:04:13.245
+I can edit them, I can view them, have the menu that
+
+78
+00:04:13.965 --> 00:04:18.375
+dive in here so I can see all of the labels.
+
+79
+00:04:18.375 --> 00:04:19.655
+For example, the Skywalker.
+
+80
+00:04:19.915 --> 00:04:22.775
+And I could just update the record here.
+
+81
+00:04:24.315 --> 00:04:26.805
+This was the first quick overview
+
+82
+00:04:27.385 --> 00:04:31.945
+and we will see how to, how to work with this in later.
+
+83
+00:04:31.975 --> 00:04:32.265
+Once.

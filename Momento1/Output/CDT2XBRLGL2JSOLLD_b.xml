@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrll="http://www.xbrl.org/2003/linkbase" xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25" xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25" xmlns:gl-gen="http://www.xbrl.org/int/gl/gen/2015-03-25" xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25" xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25" xmlns:gl-srcd="http://www.xbrl.org/int/gl/srcd/2015-03-25" xmlns:gl-taf="http://www.xbrl.org/int/gl/taf/2015-03-25" xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<xbrll:schemaRef xlink:type="simple" xlink:href="C:/Users/IPHIX/Documents/Projects/DFRNT/Momento0/Taxonomy/gl/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.genesis.com">Banco Santander</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2026-07-05</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">122505</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Inversiones CDT Santander</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">10000000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-05</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierDescription contextRef="ctx1">Banco Santander</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx1">CDT-SANT-001</gl-bus:measurableCode>
+					<gl-bus:measurableCodeDescription contextRef="ctx1">2026-10-05</gl-bus:measurableCodeDescription>
+					<gl-bus:measurableID contextRef="ctx1">PAM</gl-bus:measurableID>
+					<gl-bus:measurableDescription contextRef="ctx1">2026-07-05</gl-bus:measurableDescription>
+					<gl-bus:measurableQuantity contextRef="ctx1" unitRef="COP" decimals="0">10000000</gl-bus:measurableQuantity>
+					<gl-bus:measurableCostPerUnit contextRef="ctx1" unitRef="xbrli:pure" decimals="2">0.11</gl-bus:measurableCostPerUnit>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-06T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-07T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-08T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-09T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-10T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-11T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-12T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-13T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-14T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-15T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-16T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-17T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-18T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-19T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-20T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-21T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-22T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-23T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-24T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-25T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-26T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-27T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-28T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-29T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-30T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">0</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-07-31T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-01T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-02T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-03T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-04T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-06T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-07T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-08T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-09T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-10T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-11T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-12T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-13T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-14T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-15T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-16T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-17T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-18T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-19T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-20T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-21T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-22T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-23T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-24T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-25T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-26T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-27T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-28T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-29T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-30T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">0</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-08-31T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-01T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-02T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-03T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-04T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-06T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-07T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-08T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-09T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-10T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-11T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-12T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-13T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-14T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-15T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-16T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-17T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-18T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-19T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-20T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-21T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-22T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-23T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-24T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-25T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-26T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-27T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-28T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-29T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-09-30T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-10-01T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-10-02T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-10-03T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-10-04T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-10-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx1">10000000</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx1">2026-10-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:context id="ctx2">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.genesis.com">Banco Santander</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2026-07-05</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx2">111005</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx2">Bancos Moneda Nacional</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx2" unitRef="COP" decimals="0">10000000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx2">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-05</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierDescription contextRef="ctx2">Banco Santander</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx2">CDT-SANT-001</gl-bus:measurableCode>
+					<gl-bus:measurableCodeDescription contextRef="ctx2">2026-10-05</gl-bus:measurableCodeDescription>
+					<gl-bus:measurableID contextRef="ctx2">PAM</gl-bus:measurableID>
+					<gl-bus:measurableDescription contextRef="ctx2">2026-07-05</gl-bus:measurableDescription>
+					<gl-bus:measurableQuantity contextRef="ctx2" unitRef="COP" decimals="0">10000000</gl-bus:measurableQuantity>
+					<gl-bus:measurableCostPerUnit contextRef="ctx2" unitRef="xbrli:pure" decimals="2">0.11</gl-bus:measurableCostPerUnit>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-06T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-07T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-08T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-09T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-10T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-11T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-12T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-13T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-14T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-15T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-16T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-17T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-18T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-19T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-20T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-21T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-22T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-23T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-24T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-25T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-26T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-27T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-28T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-29T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-30T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">0</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-07-31T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-01T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-02T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-03T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-04T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-06T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-07T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-08T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-09T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-10T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-11T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-12T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-13T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-14T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-15T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-16T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-17T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-18T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-19T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-20T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-21T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-22T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-23T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-24T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-25T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-26T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-27T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-28T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-29T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-30T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">0</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-08-31T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-01T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-02T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-03T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-04T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-06T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-07T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-08T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-09T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-10T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-11T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-12T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-13T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-14T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-15T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-16T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-17T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-18T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-19T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-20T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-21T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-22T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-23T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-24T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-25T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-26T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-27T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-28T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-29T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-09-30T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-10-01T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-10-02T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-10-03T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-10-04T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">3055.5556</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-10-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:amount contextRef="ctx2">10000000</gl-cor:amount>
+				<gl-cor:postingDate contextRef="ctx2">2026-10-05T00:00</gl-cor:postingDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:unit id="COP">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:COP</xbrli:measure>
+	</xbrli:unit>
+</xbrli:xbrl>

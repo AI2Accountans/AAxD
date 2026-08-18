@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Coyote Reporting XBRL Validation Report</title>
+   </head>
+   <body style="background: black; color: white;">
+      <p style="color: grey">Report generated using software from Coyote Reporting, LLC at 2026-08-18T06:39:43.826-0700</p>
+      <h1>XBRL Validation Report</h1>
+      <table width="25%" border="1px">
+         <tr style="background: #A0A0A0; font-weight:bold; color: black;">
+            <td>Severity</td>
+            <td>Count</td>
+         </tr>
+         <tr style="font-weight:bold; color: red; font-weight: bold;">
+            <td>Error</td>
+            <td style="text-align: right;">3</td>
+         </tr>
+         <tr style="font-weight:bold; color: orange; font-weight: bold;">
+            <td>Warning</td>
+            <td style="text-align: right;">0</td>
+         </tr>
+         <tr style="font-weight:bold; color: yellow; font-weight: bold;">
+            <td>Inconsistency</td>
+            <td style="text-align: right;">0</td>
+         </tr>
+         <tr style="font-weight:bold; color: blue; font-weight: bold;">
+            <td>Best Practice</td>
+            <td style="text-align: right;">0</td>
+         </tr>
+         <tr style="font-weight:bold; color: grey;">
+            <td>Information</td>
+            <td style="text-align: right;">0</td>
+         </tr>
+         <tr style="font-weight:bold">
+            <td style="padding-left: 25px;">Total</td>
+            <td style="text-align: right;">3</td>
+         </tr>
+      </table>
+      <h2>Basic XBRL Issues</h2>
+      <table width="100%" border="1px">
+         <tr style="background: #A0A0A0; font-weight:bold; color: black;">
+            <td>Severity</td>
+            <td>Issue</td>
+            <td>Message</td>
+         </tr>
+         <tr style="color: red; font-weight: bold;">
+            <td>ERROR</td>
+            <td>sche:XmlSchemaError</td>
+            <td>cvc-complex-type.2.4.a: Invalid content was found starting with element 'gl-cor:accountingEntries'. One of '[Unresolved:  "http://www.xbrl.org/2003/instance":item, "http://www.xbrl.org/2003/instance":tuple, "http://www.xbrl.org/2003/instance":context, "http://www.xbrl.org/2003/instance":unit, "http://www.xbrl.org/2003/linkbase":footnoteLink]' is expected.</td>
+         </tr>
+         <tr>
+            <td/>
+            <td colspan="2">
+               <table width="100%" border="1px">
+                  <tr style="background: #A0A0A0; font-weight:bold; color: black;">
+                     <td>URI</td>
+                     <td>Line Number</td>
+                     <td>Column Number</td>
+                  </tr>
+                  <tr>
+                     <td>file:/C:/Users/Charlie/Documents/CurrentVersions/2026/RichardGasca/Mini_v1/zip/JE2XBLGL.xml</td>
+                     <td>12</td>
+                     <td>28</td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr style="color: red; font-weight: bold;">
+            <td>ERROR</td>
+            <td>xbrl21e:SchemaRefNotSchema</td>
+            <td>Schema reference 'C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Charles Hoffman/Mini/Taxonomy/gl/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd' MUST refer to an XML Schema</td>
+         </tr>
+         <tr>
+            <td/>
+            <td colspan="2">
+               <table width="100%" border="1px">
+                  <tr style="background: #A0A0A0; font-weight:bold; color: black;">
+                     <td>Property</td>
+                     <td>Document</td>
+                     <td>Line Number</td>
+                     <td>Concept</td>
+                  </tr>
+                  <tr style="white-space:nowrap">
+                     <td>schemaRef</td>
+                     <td>file:/C:/Users/Charlie/Documents/CurrentVersions/2026/RichardGasca/Mini_v1/zip/JE2XBLGL.xml</td>
+                     <td>3</td>
+                     <td/>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr style="color: red; font-weight: bold;">
+            <td>ERROR</td>
+            <td>xbrl21e:UnableToLocateConceptForFact</td>
+            <td>Unable to locate concept for fact '{http://www.xbrl.org/int/gl/cor/2015-03-25}accountingEntries'.</td>
+         </tr>
+         <tr>
+            <td/>
+            <td colspan="2">
+               <table width="100%" border="1px">
+                  <tr style="background: #A0A0A0; font-weight:bold; color: black;">
+                     <td>Property</td>
+                     <td>Document</td>
+                     <td>Line Number</td>
+                     <td>Concept</td>
+                  </tr>
+                  <tr style="white-space:nowrap">
+                     <td>fact</td>
+                     <td>file:/C:/Users/Charlie/Documents/CurrentVersions/2026/RichardGasca/Mini_v1/zip/JE2XBLGL.xml</td>
+                     <td>12</td>
+                     <td/>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

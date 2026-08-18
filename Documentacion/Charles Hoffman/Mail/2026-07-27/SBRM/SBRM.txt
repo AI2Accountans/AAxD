@@ -1,0 +1,16 @@
+I find two things incredibly interesting. First, the Standard Business Report Model (SBRM, an OMG standard) specification (see, https://www.omg.org/spec/SBRM/1.0/Beta1/PDF) does not even reference or otherwise mention the Standard Business Vocabulary and Business Rules (SBVR, an OMG standard) once. Not quite as surprising, neither does XBRL International’s Open Information Model (OIM).
+
+Given that the stated objective of SBVR is to help business professionals describe things unambiguously in their terms this is rather interesting.
+
+Second, between OASIS, ISO/IEC, OMG, XBRL International, ACTUS, and the FASB and IFRS Foundation; pretty much everything that is necessary to represent transactions all the way through to financial compliance reports pretty much exists. That said, everything is pretty much separate silos because people don’t seem to like to talk to one another and so alignment is likely not as good as it could be; but pretty much everything is here. Have a look; I “reconciled” all these things on my blog post below; that is what us accountants do; we reconcile things.
+
+https://digitalfinancialreporting.blogspot.com/2026/07/standards-for-interconnecting.html
+
+
+Recorte.png
+
+And yet, it was possible to put all these pieces together effectively. Have a look at the Accounting & Audit by Design (A&AD) Framework. They created a working proof of concept. That working proof of concept will be presented at an auditing and artificial intelligence conference in September in Germany.
+
+https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html
+
+Cheers,

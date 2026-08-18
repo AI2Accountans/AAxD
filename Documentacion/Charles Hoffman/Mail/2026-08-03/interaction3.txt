@@ -1,0 +1,9 @@
+Richard;
+
+I am trying to explain these two paradigms and the difference between them. Give me a couple of days and I will have something for you. What I would encourage you to do is to “prototype” both the legacy approach and the new approach. This allows three things: (1) an understanding of the legacy approach, (2) an understanding of the new approach, (3) the ability to explain the “gap” between the two.
+
+It seems to me that two different “source” documents or document formats are possible. The first is the traditional “document” or PDF structured for presentation (i.e. not meaning). The second is a “graph” structured for meaning for which a presentation (i.e. document) can be generated from the graph.
+
+How well do you think people “get” what we are trying to communicate? This seems so obvious to me.
+
+Cheers,

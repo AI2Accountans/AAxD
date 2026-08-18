@@ -1,0 +1,15 @@
+Richard:
+
+I am getting closer and closer in terms of being able to explain all this stuff.  I don’t have the “business event journal” yet and I don’t have “accounting working papers” yet included.  What I am struggling with is understanding what is a set of FACTS and what is a PROJECTION.  It seems that a “report” is really what Dave McComb calls a “named graph”.  Do you know that term?  See https://digitalfinancialreporting.blogspot.com/2024/08/named-graphs.html
+
+This does not show the SOURCES (i.e. invoice) or the BUSINESS EVENTS JOURNAL.  And I don’t have a hand full of accounting schedules that I would want.  But, everything else is here in one “report” (which is really a named graph within the database with some set of information blocks).
+
+https://luca.pacioli.ai/luca/view/0f24fd35e961e167a727b663c75a4c5ec9fb7eb86730d6292f46e6e180fc2018de263aaf/index
+
+https://github.com/seattlemethod/prototypes/blob/main/system/system.md
+
+It seems that all this “stuff” would be in one database.  Every source,  every event, the reporting framework and then by creating the named graphs you want everything is “projected”.  Something like that.  Seems like global standard projection algorithms would be a good thing.
+
+Cheers,
+
+Charlie

@@ -1,0 +1,2889 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xbrli": "http://www.xbrl.org/2003/instance#",
+    "link": "http://www.xbrl.org/2003/linkbase#",
+    "xlink": "http://www.w3.org/1999/xlink#",
+    "xbrldt": "http://xbrl.org/2005/xbrldt#",
+    "xbrldi": "http://xbrl.org/2006/xbrldi#",
+    "iso4217": "http://www.xbrl.org/2003/iso4217#",
+    "fac": "http://www.xbrlsite.com/fac#",
+    "fac-luca": "http://luca.auditchain.finance/fac#",
+    "fac-seattlemethod": "http://xbrlsite.azurewebsites.net/seattlemethod/fac#",
+    "us-gaap-2017": "http://fasb.org/us-gaap/2017-01-31#",
+    "us-gaap-2020": "http://fasb.org/us-gaap/2020-01-31#",
+    "us-gaap-2022": "http://fasb.org/us-gaap/2022-01-31#",
+    "us-gaap-2024": "http://fasb.org/us-gaap/2024-01-31#",
+    "us-gaap": "http://fasb.org/us-gaap/",
+    "rs-gaap": "https://robosystems.ai/taxonomy/rs-gaap/v1/",
+    "disclosures": "https://robosystems.ai/taxonomy/rs-gaap/disclosures/v1/",
+    "checklist": "https://robosystems.ai/taxonomy/rs-gaap/reporting-checklist/v1/",
+    "styles": "https://robosystems.ai/taxonomy/rs-gaap/reporting-styles/v1/",
+    "ifrs": "http://xbrl.ifrs.org/taxonomy/",
+    "dei": "http://xbrl.sec.gov/dei/",
+    "cm-roles": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/",
+    "rs": "https://robosystems.ai/vocab/",
+    "classification": {
+      "@id": "https://robosystems.ai/vocab/classification"
+    },
+    "statementContext": {
+      "@id": "https://robosystems.ai/vocab/statementContext"
+    },
+    "derivationRole": {
+      "@id": "https://robosystems.ai/vocab/derivationRole"
+    },
+    "balance": {
+      "@id": "xbrli:balance"
+    },
+    "periodType": {
+      "@id": "xbrli:periodType"
+    },
+    "abstract": {
+      "@id": "https://robosystems.ai/vocab/abstract",
+      "@type": "xsd:boolean"
+    },
+    "monetary": {
+      "@id": "https://robosystems.ai/vocab/monetary",
+      "@type": "xsd:boolean"
+    },
+    "elementType": {
+      "@id": "https://robosystems.ai/vocab/elementType"
+    },
+    "substitutionGroup": {
+      "@id": "https://robosystems.ai/vocab/substitutionGroup",
+      "@type": "@id"
+    },
+    "source": {
+      "@id": "https://robosystems.ai/vocab/source"
+    },
+    "equivalent": {
+      "@id": "owl:equivalentClass",
+      "@type": "@id"
+    },
+    "from": {
+      "@id": "xlink:from",
+      "@type": "@id"
+    },
+    "to": {
+      "@id": "xlink:to",
+      "@type": "@id"
+    },
+    "arcrole": {
+      "@id": "xlink:arcrole",
+      "@type": "@id"
+    },
+    "role": {
+      "@id": "xlink:role",
+      "@type": "@id"
+    },
+    "order": {
+      "@id": "link:order",
+      "@type": "xsd:decimal"
+    },
+    "weight": {
+      "@id": "link:weight",
+      "@type": "xsd:decimal"
+    },
+    "associationType": {
+      "@id": "https://robosystems.ai/vocab/associationType"
+    },
+    "preferredLabel": {
+      "@id": "https://robosystems.ai/vocab/preferredLabel"
+    },
+    "label": "rdfs:label",
+    "altLabel": "skos:altLabel",
+    "prefLabel": "skos:prefLabel",
+    "documentation": "rdfs:comment",
+    "labelRole": {
+      "@id": "https://robosystems.ai/vocab/labelRole"
+    },
+    "labelLanguage": {
+      "@id": "https://robosystems.ai/vocab/labelLanguage"
+    },
+    "references": {
+      "@id": "dcterms:references"
+    },
+    "refType": {
+      "@id": "https://robosystems.ai/vocab/refType"
+    },
+    "citation": {
+      "@id": "https://robosystems.ai/vocab/citation"
+    },
+    "structureName": {
+      "@id": "https://robosystems.ai/vocab/structureName"
+    },
+    "blockType": {
+      "@id": "https://robosystems.ai/vocab/blockType"
+    },
+    "roleUri": {
+      "@id": "https://robosystems.ai/vocab/roleUri"
+    },
+    "conceptArrangementPattern": {
+      "@id": "https://robosystems.ai/vocab/conceptArrangementPattern"
+    },
+    "hasAssociation": {
+      "@id": "https://robosystems.ai/vocab/hasAssociation",
+      "@type": "@id"
+    },
+    "element": {
+      "@id": "https://robosystems.ai/vocab/element",
+      "@type": "@id"
+    },
+    "entity": {
+      "@id": "https://robosystems.ai/vocab/entity",
+      "@type": "@id"
+    },
+    "period": {
+      "@id": "https://robosystems.ai/vocab/period",
+      "@type": "@id"
+    },
+    "unit": {
+      "@id": "https://robosystems.ai/vocab/unit",
+      "@type": "@id"
+    },
+    "dimension": {
+      "@id": "https://robosystems.ai/vocab/dimension",
+      "@type": "@id"
+    },
+    "factSet": {
+      "@id": "https://robosystems.ai/vocab/factSet",
+      "@type": "@id"
+    },
+    "structure": {
+      "@id": "https://robosystems.ai/vocab/structure",
+      "@type": "@id"
+    },
+    "numericValue": {
+      "@id": "https://robosystems.ai/vocab/numericValue",
+      "@type": "xsd:decimal"
+    },
+    "decimals": {
+      "@id": "https://robosystems.ai/vocab/decimals"
+    },
+    "instant": {
+      "@id": "xbrli:instant",
+      "@type": "xsd:date"
+    },
+    "startDate": {
+      "@id": "xbrli:startDate",
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@id": "xbrli:endDate",
+      "@type": "xsd:date"
+    },
+    "calendarPeriodKey": {
+      "@id": "https://robosystems.ai/vocab/calendarPeriodKey"
+    },
+    "measure": {
+      "@id": "xbrli:measure",
+      "@type": "@id"
+    },
+    "axis": {
+      "@id": "https://robosystems.ai/vocab/axis"
+    },
+    "member": {
+      "@id": "https://robosystems.ai/vocab/member"
+    },
+    "scheme": {
+      "@id": "https://robosystems.ai/vocab/scheme",
+      "@type": "@id"
+    },
+    "legalName": {
+      "@id": "https://robosystems.ai/vocab/legalName"
+    },
+    "ein": {
+      "@id": "https://robosystems.ai/vocab/ein"
+    },
+    "country": {
+      "@id": "https://robosystems.ai/vocab/country"
+    },
+    "reportingStyle": {
+      "@id": "https://robosystems.ai/vocab/reportingStyle"
+    },
+    "serializationVersion": {
+      "@id": "https://robosystems.ai/vocab/serializationVersion"
+    },
+    "mode": {
+      "@id": "https://robosystems.ai/vocab/mode"
+    },
+    "internalId": {
+      "@id": "https://robosystems.ai/vocab/internalId"
+    },
+    "category": {
+      "@id": "https://robosystems.ai/vocab/category"
+    },
+    "classifiedAs": {
+      "@id": "https://robosystems.ai/vocab/classifiedAs",
+      "@type": "@id"
+    },
+    "deprecated": {
+      "@id": "https://robosystems.ai/vocab/deprecated",
+      "@type": "xsd:boolean"
+    },
+    "replacedBy": {
+      "@id": "https://robosystems.ai/vocab/replacedBy",
+      "@type": "@id"
+    },
+    "orphan2026": {
+      "@id": "https://robosystems.ai/vocab/orphan2026",
+      "@type": "xsd:boolean"
+    },
+    "identifier": {
+      "@id": "https://robosystems.ai/vocab/identifier"
+    },
+    "secType": {
+      "@id": "https://robosystems.ai/vocab/secType"
+    },
+    "hasTrait": {
+      "@id": "https://robosystems.ai/vocab/hasTrait",
+      "@type": "@id"
+    },
+    "trait": "https://robosystems.ai/taxonomy/fac-traits/v1/",
+    "sfac6": "http://xbrlsite.com/seattlemethod/sfac6#",
+    "reportedDisclosureRequiresDisclosure": {
+      "@id": "https://robosystems.ai/vocab/reportedDisclosureRequiresDisclosure",
+      "@type": "@id"
+    },
+    "conceptArrangementPatternRequiresConcept": {
+      "@id": "https://robosystems.ai/vocab/conceptArrangementPatternRequiresConcept",
+      "@type": "@id"
+    },
+    "disclosureRequiresHypercube": {
+      "@id": "https://robosystems.ai/vocab/disclosureRequiresHypercube",
+      "@type": "@id"
+    },
+    "disclosureRequiresConcept": {
+      "@id": "https://robosystems.ai/vocab/disclosureRequiresConcept",
+      "@type": "@id"
+    },
+    "disclosureEquivalentTextblock": {
+      "@id": "https://robosystems.ai/vocab/disclosureEquivalentTextblock",
+      "@type": "@id"
+    },
+    "financialReportRequiresDisclosure": {
+      "@id": "https://robosystems.ai/vocab/financialReportRequiresDisclosure",
+      "@type": "@id"
+    },
+    "financialReportPossibleDisclosure": {
+      "@id": "https://robosystems.ai/vocab/financialReportPossibleDisclosure",
+      "@type": "@id"
+    },
+    "disclosureAllowedAlternativeDisclosure": {
+      "@id": "https://robosystems.ai/vocab/disclosureAllowedAlternativeDisclosure",
+      "@type": "@id"
+    },
+    "reportingStyleComposesDisclosure": {
+      "@id": "https://robosystems.ai/vocab/reportingStyleComposesDisclosure",
+      "@type": "@id"
+    },
+    "reportingStyleCode": {
+      "@id": "https://robosystems.ai/vocab/reportingStyleCode"
+    },
+    "retainedEarningsConcept": {
+      "@id": "https://robosystems.ai/vocab/retainedEarningsConcept"
+    },
+    "reportingStyleNetworks": {
+      "@id": "https://robosystems.ai/vocab/reportingStyleNetworks"
+    },
+    "statementType": {
+      "@id": "https://robosystems.ai/vocab/statementType"
+    },
+    "networkRoleUri": {
+      "@id": "https://robosystems.ai/vocab/networkRoleUri"
+    },
+    "ruleTarget": {
+      "@id": "https://robosystems.ai/vocab/ruleTarget"
+    },
+    "ruleCategory": {
+      "@id": "https://robosystems.ai/vocab/ruleCategory"
+    },
+    "rulePattern": {
+      "@id": "https://robosystems.ai/vocab/rulePattern"
+    },
+    "ruleSeverity": {
+      "@id": "https://robosystems.ai/vocab/ruleSeverity"
+    },
+    "ruleExpression": {
+      "@id": "https://robosystems.ai/vocab/ruleExpression"
+    },
+    "ruleMessage": {
+      "@id": "https://robosystems.ai/vocab/ruleMessage"
+    },
+    "ruleOrigin": {
+      "@id": "https://robosystems.ai/vocab/ruleOrigin"
+    },
+    "ruleVariables": {
+      "@id": "https://robosystems.ai/vocab/ruleVariables",
+      "@container": "@list"
+    },
+    "variableName": {
+      "@id": "https://robosystems.ai/vocab/variableName"
+    },
+    "variableQname": {
+      "@id": "https://robosystems.ai/vocab/variableQname"
+    },
+    "targetKind": {
+      "@id": "https://robosystems.ai/vocab/targetKind"
+    },
+    "targetRef": {
+      "@id": "https://robosystems.ai/vocab/targetRef"
+    }
+  },
+  "standard": "fac-presentation",
+  "version": "v1",
+  "namespace_uri": "http://www.xbrlsite.com/fac/presentation/",
+  "taxonomy_type": "mapping",
+  "description": "FAC's presentation scaffold — Abstract → Table → LineItems → RollUp → primitives — materialized as reified XBRL presentation arcs. Each arc carries arcRoleUri (structure binding) + arcOrder (display position) so arcs shared between variants (e.g. BalanceSheetLineItems under both BS-classified and BS-unclassified) stay distinct per structure.",
+  "@graph": [
+    {
+      "@id": "_:fac-pres-bs-classified",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "structureName": "FAC — Balance Sheet — Classified",
+      "blockType": "balance_sheet"
+    },
+    {
+      "@id": "_:fac-pres-bs-unclassified",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-unclassified",
+      "structureName": "FAC — Balance Sheet — Unclassified",
+      "blockType": "balance_sheet"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "structureName": "FAC — Income Statement — Multi-step",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "structureName": "FAC — Income Statement — Single-step",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-is-insurance",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-insurance",
+      "structureName": "FAC — Income Statement — Insurance-based",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-is-interest",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "structureName": "FAC — Income Statement — Interest-based (Banking)",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-is-securities",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-securities",
+      "structureName": "FAC — Income Statement — Securities-based",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "structureName": "FAC — Statement of Comprehensive Income",
+      "blockType": "equity_statement"
+    },
+    {
+      "@id": "_:fac-pres-cashflow",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "structureName": "FAC — Cash Flow Statement",
+      "blockType": "cash_flow_statement"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "structureName": "FAC — Net Income Available to Common Stockholders — Breakdown",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "structureName": "FAC — Net Income — Parent/Noncontrolling Breakdown",
+      "blockType": "income_statement"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-breakdown",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome-breakdown",
+      "structureName": "FAC — Comprehensive Income — Parent/Noncontrolling Breakdown",
+      "blockType": "equity_statement"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-breakdown",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow-breakdown",
+      "structureName": "FAC — Cash Flow — Continuing/Discontinued Breakdown",
+      "blockType": "cash_flow_statement"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "structureName": "FAC — General Information Hierarchy",
+      "blockType": "custom"
+    },
+    {
+      "@id": "_:fac-pres-basicinformation",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BasicInformation",
+      "structureName": "FAC — Basic Information Hierarchy",
+      "blockType": "custom"
+    },
+    {
+      "@id": "_:fac-pres-keyratios",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "structureName": "FAC — Key Ratios Hierarchy",
+      "blockType": "custom"
+    },
+    {
+      "@id": "_:fac-pres-otherinformation",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/OtherInformation",
+      "structureName": "FAC — Other Information Hierarchy",
+      "blockType": "custom"
+    },
+    {
+      "@id": "_:fac-pres-validationresults",
+      "roleUri": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ValidationResults",
+      "structureName": "FAC — Validation Results Hierarchy",
+      "blockType": "custom"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-1",
+      "from": {
+        "@id": "fac:BalanceSheetAbstract"
+      },
+      "to": {
+        "@id": "fac:BalanceSheetClassifiedTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-2",
+      "from": {
+        "@id": "fac:BalanceSheetClassifiedTable"
+      },
+      "to": {
+        "@id": "fac:BalanceSheetLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-3",
+      "from": {
+        "@id": "fac:BalanceSheetLineItems"
+      },
+      "to": {
+        "@id": "fac:AssetsRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-4",
+      "from": {
+        "@id": "fac:BalanceSheetLineItems"
+      },
+      "to": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-5",
+      "from": {
+        "@id": "fac:AssetsRollUp"
+      },
+      "to": {
+        "@id": "fac:Assets"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-6",
+      "from": {
+        "@id": "fac:AssetsRollUp"
+      },
+      "to": {
+        "@id": "fac:CurrentAssets"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-7",
+      "from": {
+        "@id": "fac:AssetsRollUp"
+      },
+      "to": {
+        "@id": "fac:NoncurrentAssets"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-8",
+      "from": {
+        "@id": "fac:NoncurrentAssets"
+      },
+      "to": {
+        "@id": "fac:FixedAssets"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-9",
+      "from": {
+        "@id": "fac:NoncurrentAssets"
+      },
+      "to": {
+        "@id": "fac:OtherThanFixedNoncurrentAssets"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-10",
+      "from": {
+        "@id": "fac:NoncurrentAssets"
+      },
+      "to": {
+        "@id": "fac:PublicUtilitiesPropertyPlantAndEquipmentNet"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-11",
+      "from": {
+        "@id": "fac:NoncurrentAssets"
+      },
+      "to": {
+        "@id": "fac:OtherNoncurrentAssetsOfRegulatedEntity"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 11.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-12",
+      "from": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "to": {
+        "@id": "fac:LiabilitiesAndEquity"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 12.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-13",
+      "from": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "to": {
+        "@id": "fac:LiabilitiesRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 13.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-14",
+      "from": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "to": {
+        "@id": "fac:CommitmentsAndContingencies"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 14.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-15",
+      "from": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "to": {
+        "@id": "fac:TemporaryEquity"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 15.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-16",
+      "from": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "to": {
+        "@id": "fac:RedeemableNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 16.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-17",
+      "from": {
+        "@id": "fac:LiabilitiesEquityRollUp"
+      },
+      "to": {
+        "@id": "fac:EquityRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 17.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-18",
+      "from": {
+        "@id": "fac:LiabilitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:Liabilities"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 18.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-19",
+      "from": {
+        "@id": "fac:LiabilitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:CurrentLiabilities"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 19.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-20",
+      "from": {
+        "@id": "fac:LiabilitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NoncurrentLiabilities"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 20.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-21",
+      "from": {
+        "@id": "fac:NoncurrentLiabilities"
+      },
+      "to": {
+        "@id": "fac:LongTermDebt"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 21.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-22",
+      "from": {
+        "@id": "fac:NoncurrentLiabilities"
+      },
+      "to": {
+        "@id": "fac:OtherNoncurrentLiabilitiesOfRegulatedEntity"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 22.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-23",
+      "from": {
+        "@id": "fac:TemporaryEquity"
+      },
+      "to": {
+        "@id": "fac:TemporaryEquityAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 23.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-24",
+      "from": {
+        "@id": "fac:RedeemableNoncontrollingInterest"
+      },
+      "to": {
+        "@id": "fac:RedeemableNoncontrollingInterestCommon"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 24.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-25",
+      "from": {
+        "@id": "fac:RedeemableNoncontrollingInterest"
+      },
+      "to": {
+        "@id": "fac:RedeemableNoncontrollingInterestPreferred"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 25.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-26",
+      "from": {
+        "@id": "fac:RedeemableNoncontrollingInterest"
+      },
+      "to": {
+        "@id": "fac:RedeemableNoncontrollingInterestOther"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 26.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-27",
+      "from": {
+        "@id": "fac:EquityRollUp"
+      },
+      "to": {
+        "@id": "fac:Equity"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 27.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-28",
+      "from": {
+        "@id": "fac:EquityRollUp"
+      },
+      "to": {
+        "@id": "fac:EquityAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 28.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-29",
+      "from": {
+        "@id": "fac:EquityRollUp"
+      },
+      "to": {
+        "@id": "fac:EquityAttributableToNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 29.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-classified-arc-30",
+      "from": {
+        "@id": "fac:EquityRollUp"
+      },
+      "to": {
+        "@id": "fac:Capitalization"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-classified",
+      "order": 30.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-unclassified-arc-1",
+      "from": {
+        "@id": "fac:BalanceSheetAbstract"
+      },
+      "to": {
+        "@id": "fac:BalanceSheetUnclassifiedTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-unclassified",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-bs-unclassified-arc-2",
+      "from": {
+        "@id": "fac:BalanceSheetUnclassifiedTable"
+      },
+      "to": {
+        "@id": "fac:BalanceSheetLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BS-unclassified",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-1",
+      "from": {
+        "@id": "fac:IncomeStatementAbstract"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementMultiStepTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-2",
+      "from": {
+        "@id": "fac:IncomeStatementMultiStepTable"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-3",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:RevenuesRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-4",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:CostRevenueRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-5",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:GrossProfitRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-6",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:OperatingIncomeLossRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-7",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTaxRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-8",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromContinuingOperationsAfterTaxRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-9",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-10",
+      "from": {
+        "@id": "fac:RevenuesRollUp"
+      },
+      "to": {
+        "@id": "fac:Revenues"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-11",
+      "from": {
+        "@id": "fac:CostRevenueRollUp"
+      },
+      "to": {
+        "@id": "fac:CostOfRevenue"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 11.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-12",
+      "from": {
+        "@id": "fac:CostRevenueRollUp"
+      },
+      "to": {
+        "@id": "fac:CostOfRevenueGoods"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 12.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-13",
+      "from": {
+        "@id": "fac:CostRevenueRollUp"
+      },
+      "to": {
+        "@id": "fac:CostOfRevenueServices"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 13.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-14",
+      "from": {
+        "@id": "fac:GrossProfitRollUp"
+      },
+      "to": {
+        "@id": "fac:GrossProfit"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 14.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-15",
+      "from": {
+        "@id": "fac:GrossProfitRollUp"
+      },
+      "to": {
+        "@id": "fac:Revenues"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 15.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-16",
+      "from": {
+        "@id": "fac:GrossProfitRollUp"
+      },
+      "to": {
+        "@id": "fac:CostOfRevenue"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 16.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-17",
+      "from": {
+        "@id": "fac:OperatingIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:OperatingIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 17.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-18",
+      "from": {
+        "@id": "fac:OperatingIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:GrossProfit"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 18.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-19",
+      "from": {
+        "@id": "fac:OperatingIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:OperatingExpenses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 19.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-20",
+      "from": {
+        "@id": "fac:OperatingIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:OtherOperatingIncomeExpenses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 20.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-21",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTax"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 21.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-22",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossBeforeEquityMethodInvestments"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 22.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-23",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromEquityMethodInvestments"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 23.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-24",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:NonoperatingIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 24.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-25",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestAndDebtExpense"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 25.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-26",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsAfterTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromContinuingOperationsAfterTax"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 26.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-27",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsAfterTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromContinuingOperationsBeforeTax"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 27.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-28",
+      "from": {
+        "@id": "fac:IncomeLossFromContinuingOperationsAfterTaxRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeTaxExpenseBenefit"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 28.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-29",
+      "from": {
+        "@id": "fac:IncomeTaxExpenseBenefit"
+      },
+      "to": {
+        "@id": "fac:IncomeTaxExpenseBenefitCurrent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 29.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-30",
+      "from": {
+        "@id": "fac:IncomeTaxExpenseBenefit"
+      },
+      "to": {
+        "@id": "fac:IncomeTaxExpenseBenefitDeferred"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 30.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-31",
+      "from": {
+        "@id": "fac:NetIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 31.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-32",
+      "from": {
+        "@id": "fac:NetIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromContinuingOperationsAfterTax"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 32.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-33",
+      "from": {
+        "@id": "fac:NetIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTax"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 33.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-34",
+      "from": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTax"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTaxAdjustmentToPriorYearGainLossOnDisposal"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 34.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-35",
+      "from": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTax"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTaxDuringPhaseOut"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 35.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-36",
+      "from": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTax"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTaxGainLossOnDisposal"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 36.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-multistep-arc-37",
+      "from": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTax"
+      },
+      "to": {
+        "@id": "fac:IncomeLossFromDiscontinuedOperationsNetOfTaxProvisionForGainLossOnDisposal"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-multistep",
+      "order": 37.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-1",
+      "from": {
+        "@id": "fac:IncomeStatementAbstract"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementSingleStepTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-2",
+      "from": {
+        "@id": "fac:IncomeStatementSingleStepTable"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-3",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:Revenues"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-4",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:CostsExpensesRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-5",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:OtherOperatingIncomeExpenses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-6",
+      "from": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:OperatingIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-7",
+      "from": {
+        "@id": "fac:CostsExpensesRollUp"
+      },
+      "to": {
+        "@id": "fac:CostsAndExpenses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-8",
+      "from": {
+        "@id": "fac:CostsExpensesRollUp"
+      },
+      "to": {
+        "@id": "fac:CostOfRevenue"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-9",
+      "from": {
+        "@id": "fac:CostsExpensesRollUp"
+      },
+      "to": {
+        "@id": "fac:OperatingExpenses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-singlestep-arc-10",
+      "from": {
+        "@id": "fac:CostsExpensesRollUp"
+      },
+      "to": {
+        "@id": "fac:BenefitsCostsExpenses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-singlestep",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-insurance-arc-1",
+      "from": {
+        "@id": "fac:IncomeStatementAbstract"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementInsuranceBasedRevenuesTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-insurance",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-insurance-arc-2",
+      "from": {
+        "@id": "fac:IncomeStatementInsuranceBasedRevenuesTable"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-insurance",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-1",
+      "from": {
+        "@id": "fac:IncomeStatementAbstract"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementInterestBasedRevenuesTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-2",
+      "from": {
+        "@id": "fac:IncomeStatementInterestBasedRevenuesTable"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-3",
+      "from": {
+        "@id": "fac:InterestIncomeExpenseNetRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestIncomeExpenseOperatingNet"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-4",
+      "from": {
+        "@id": "fac:InterestIncomeExpenseNetRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestAndDividendIncomeOperating"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-5",
+      "from": {
+        "@id": "fac:InterestIncomeExpenseNetRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestExpenseOperating"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-6",
+      "from": {
+        "@id": "fac:InterestIncomeExpenseAfterProvisionForLossesRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestIncomeExpenseAfterProvisionForLosses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-7",
+      "from": {
+        "@id": "fac:InterestIncomeExpenseAfterProvisionForLossesRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestIncomeExpenseOperatingNet"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-8",
+      "from": {
+        "@id": "fac:InterestIncomeExpenseAfterProvisionForLossesRollUp"
+      },
+      "to": {
+        "@id": "fac:ProvisionForLoanLeaseAndOtherLosses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-9",
+      "from": {
+        "@id": "fac:RevenuesNetInterestExpenseRollUp"
+      },
+      "to": {
+        "@id": "fac:RevenuesNetInterestExpense"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-10",
+      "from": {
+        "@id": "fac:RevenuesNetInterestExpenseRollUp"
+      },
+      "to": {
+        "@id": "fac:NoninterestIncome"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-interest-arc-11",
+      "from": {
+        "@id": "fac:RevenuesNetInterestExpenseRollUp"
+      },
+      "to": {
+        "@id": "fac:InterestIncomeExpenseAfterProvisionForLosses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-interest",
+      "order": 11.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-securities-arc-1",
+      "from": {
+        "@id": "fac:IncomeStatementAbstract"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementSecuritiesBasedIncomeTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-securities",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-is-securities-arc-2",
+      "from": {
+        "@id": "fac:IncomeStatementSecuritiesBasedIncomeTable"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/IS-securities",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-1",
+      "from": {
+        "@id": "fac:StatementComprehensiveIncomeAbstract"
+      },
+      "to": {
+        "@id": "fac:StatementComprehensiveIncomeLossTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-2",
+      "from": {
+        "@id": "fac:StatementComprehensiveIncomeLossTable"
+      },
+      "to": {
+        "@id": "fac:StatementComprehensiveIncomeLossLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-3",
+      "from": {
+        "@id": "fac:StatementComprehensiveIncomeLossLineItems"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLossRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-4",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-5",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-6",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLossRollUp"
+      },
+      "to": {
+        "@id": "fac:OtherComprehensiveIncomeLoss"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-7",
+      "from": {
+        "@id": "fac:OtherComprehensiveIncomeLoss"
+      },
+      "to": {
+        "@id": "fac:OtherComprehensiveIncomeLossAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-8",
+      "from": {
+        "@id": "fac:OtherComprehensiveIncomeLoss"
+      },
+      "to": {
+        "@id": "fac:OtherComprehensiveIncomeLossAttributableToNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-9",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLoss"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLossAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-arc-10",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLoss"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLossAttributableToNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-1",
+      "from": {
+        "@id": "fac:CashFlowStatementAbstract"
+      },
+      "to": {
+        "@id": "fac:CashFlowStatementTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-2",
+      "from": {
+        "@id": "fac:CashFlowStatementTable"
+      },
+      "to": {
+        "@id": "fac:CashFlowStatementLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-3",
+      "from": {
+        "@id": "fac:CashFlowStatementLineItems"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-4",
+      "from": {
+        "@id": "fac:NetCashFlowRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlow"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-5",
+      "from": {
+        "@id": "fac:NetCashFlowRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-6",
+      "from": {
+        "@id": "fac:NetCashFlowRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-7",
+      "from": {
+        "@id": "fac:NetCashFlowRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-8",
+      "from": {
+        "@id": "fac:NetCashFlowRollUp"
+      },
+      "to": {
+        "@id": "fac:ExchangeGainsLosses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-9",
+      "from": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromOperatingActivities"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-10",
+      "from": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-11",
+      "from": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 11.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-12",
+      "from": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromInvestingActivities"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 12.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-13",
+      "from": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 13.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-14",
+      "from": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 14.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-15",
+      "from": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromFinancingActivities"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 15.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-16",
+      "from": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 16.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-17",
+      "from": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 17.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-18",
+      "from": {
+        "@id": "fac:NetCashFlowContinuingRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 18.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-19",
+      "from": {
+        "@id": "fac:NetCashFlowContinuingRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 19.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-20",
+      "from": {
+        "@id": "fac:NetCashFlowContinuingRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 20.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-21",
+      "from": {
+        "@id": "fac:NetCashFlowContinuingRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesContinuing"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 21.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-22",
+      "from": {
+        "@id": "fac:NetCashFlowDiscontinuedRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 22.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-23",
+      "from": {
+        "@id": "fac:NetCashFlowDiscontinuedRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromOperatingActivitiesDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 23.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-24",
+      "from": {
+        "@id": "fac:NetCashFlowDiscontinuedRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromInvestingActivitiesDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 24.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-arc-25",
+      "from": {
+        "@id": "fac:NetCashFlowDiscontinuedRollUp"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowFromFinancingActivitiesDiscontinued"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow",
+      "order": 25.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-1",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonBreakdownTable"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAvailableToCommonBreakdownLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-2",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAvailableToCommonStockholdersBasicRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-3",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:ParticipatingSecuritiesDistributedAndUndistributedEarningsLossBasic"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-4",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:UndistributedEarningsLossAllocatedToParticipatingSecuritiesBasic"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-5",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonStockholdersBasicRollUp"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAvailableToCommonStockholdersBasic"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-6",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonStockholdersBasicRollUp"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-niac-breakdown-arc-7",
+      "from": {
+        "@id": "fac:NetIncomeLossAvailableToCommonStockholdersBasicRollUp"
+      },
+      "to": {
+        "@id": "fac:PreferredStockDividendsAndOtherAdjustments"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NIAC-breakdown",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown-arc-1",
+      "from": {
+        "@id": "fac:NetIncomeLossBreakdownTable"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossBreakdownLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown-arc-2",
+      "from": {
+        "@id": "fac:NetIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown-arc-3",
+      "from": {
+        "@id": "fac:NetIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAttributableToNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown-arc-4",
+      "from": {
+        "@id": "fac:NetIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAttributableToNonredeemableNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown-arc-5",
+      "from": {
+        "@id": "fac:NetIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAttributableToRedeemableNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-netincome-breakdown-arc-6",
+      "from": {
+        "@id": "fac:NetIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetIncomeLossAttributableToNoncontrollingInterestPlusPreferredStockDividendsAndOtherAdjustments"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/NetIncome-breakdown",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-breakdown-arc-1",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLossBreakdownTable"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLossBreakdownLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome-breakdown",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-breakdown-arc-2",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLossAttributableToParent"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome-breakdown",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-comprehensiveincome-breakdown-arc-3",
+      "from": {
+        "@id": "fac:ComprehensiveIncomeLossBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:ComprehensiveIncomeLossAttributableToNoncontrollingInterest"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ComprehensiveIncome-breakdown",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-breakdown-arc-1",
+      "from": {
+        "@id": "fac:NetCashFlowBreakdownTable"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowBreakdownLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow-breakdown",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-breakdown-arc-2",
+      "from": {
+        "@id": "fac:NetCashFlowBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowContinuingRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow-breakdown",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-breakdown-arc-3",
+      "from": {
+        "@id": "fac:NetCashFlowBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:NetCashFlowDiscontinuedRollUp"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow-breakdown",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-cashflow-breakdown-arc-4",
+      "from": {
+        "@id": "fac:NetCashFlowBreakdownLineItems"
+      },
+      "to": {
+        "@id": "fac:ExchangeGainsLosses"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/CashFlow-breakdown",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-1",
+      "from": {
+        "@id": "fac:GeneralInformationHierarchy"
+      },
+      "to": {
+        "@id": "fac:GeneralInformationTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-2",
+      "from": {
+        "@id": "fac:GeneralInformationTable"
+      },
+      "to": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-3",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:EntityRegistrantName"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-4",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:EntityCentralIndexKey"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-5",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:EntityFilerCategory"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-6",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:TradingSymbol"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-7",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:DocumentType"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 7.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-8",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:FiscalYearEnd"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 8.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-9",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:FiscalPeriodFocus"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 9.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-10",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:FiscalYearFocus"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 10.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-11",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:BalanceSheetDate"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 11.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-12",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:BalanceSheetFormat"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 12.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-13",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementFormat"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 13.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-generalinformation-arc-14",
+      "from": {
+        "@id": "fac:GeneralInformationLineItems"
+      },
+      "to": {
+        "@id": "fac:IncomeStatementStartPeriodYearToDate"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/GeneralInformation",
+      "order": 14.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-basicinformation-arc-1",
+      "from": {
+        "@id": "fac:BasicInformationTable"
+      },
+      "to": {
+        "@id": "fac:BasicInformationLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/BasicInformation",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-keyratios-arc-1",
+      "from": {
+        "@id": "fac:KeyRatiosHierarchy"
+      },
+      "to": {
+        "@id": "fac:KeyRatiosTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-keyratios-arc-2",
+      "from": {
+        "@id": "fac:KeyRatiosTable"
+      },
+      "to": {
+        "@id": "fac:KeyRatiosLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-keyratios-arc-3",
+      "from": {
+        "@id": "fac:KeyRatiosLineItems"
+      },
+      "to": {
+        "@id": "fac:ReturnOnAssets"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "order": 3.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-keyratios-arc-4",
+      "from": {
+        "@id": "fac:KeyRatiosLineItems"
+      },
+      "to": {
+        "@id": "fac:ReturnOnEquity"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "order": 4.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-keyratios-arc-5",
+      "from": {
+        "@id": "fac:KeyRatiosLineItems"
+      },
+      "to": {
+        "@id": "fac:ReturnOnSales"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "order": 5.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-keyratios-arc-6",
+      "from": {
+        "@id": "fac:KeyRatiosLineItems"
+      },
+      "to": {
+        "@id": "fac:SustainableGrowthRate"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/KeyRatios",
+      "order": 6.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-otherinformation-arc-1",
+      "from": {
+        "@id": "fac:OtherInformationHierarchy"
+      },
+      "to": {
+        "@id": "fac:OtherInformationTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/OtherInformation",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-otherinformation-arc-2",
+      "from": {
+        "@id": "fac:OtherInformationTable"
+      },
+      "to": {
+        "@id": "fac:OtherInformationLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/OtherInformation",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-validationresults-arc-1",
+      "from": {
+        "@id": "fac:ValidationResultsHierarchy"
+      },
+      "to": {
+        "@id": "fac:ValidationResultsTable"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ValidationResults",
+      "order": 1.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    },
+    {
+      "@id": "_:fac-pres-validationresults-arc-2",
+      "from": {
+        "@id": "fac:ValidationResultsTable"
+      },
+      "to": {
+        "@id": "fac:ValidationResultsLineItems"
+      },
+      "associationType": "presentation",
+      "role": "http://www.xbrlsite.com/seattlemethod/conceptual-model/cm-roles/roles/fac-presentation/ValidationResults",
+      "order": 2.0,
+      "@type": "rs:Association",
+      "arcrole": "http://www.xbrl.org/2003/arcrole/parent-child"
+    }
+  ]
+}

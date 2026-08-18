@@ -1,0 +1,3 @@
+entryNumber,enteredDate,accountNumber,accountName,amount,sign,currency,actus_ContractID,actus_ContractType,actus_NotionalPrincipal,actus_NominalInterestRate,actus_InitialExchangeDate,actus_MaturityDate,rea_Agent
+M1-001,2026-07-05,122505,Inversiones CDT Santander,10000000,D,COP,CDT-SANT-001,PAM,10000000,0.11,2026-07-05,2026-10-05,Banco Santander
+M1-001,2026-07-05,111005,Bancos Moneda Nacional,10000000,C,COP,CDT-SANT-001,PAM,10000000,0.11,2026-07-05,2026-10-05,Banco Santander

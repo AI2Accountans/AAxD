@@ -1,0 +1,20 @@
+You're beginning to see this permeate the AI space - the acknowledgement that Neuro-symbolic (*cough* knowledge graphs *cough*) architectures are the wave of the future. The specifics vary, but not by as much as you'd think; there are only so many permutations of knowledge graph technology, and to be honest, it is not so much the ontology by itself as it is the layer around it that ultimately will end up shaping the next wave of innovation.
+
+The recipe for that is surprisingly simple - 
+* semi-permeable #closed_systems where the internal data is hidden, and access is managed through input and output methods (holons)
+* #named_queries, #named_constraints, #named_updates facilitate that layer.
+* #named_graphs provide holding pens for intermediate products
+* #fluent_variables, in which an entity's properties are bound to an event ledger.
+* #observables that can both calculate derivates from constant and fluent variables, and can also, if necessary, populate fluent ledgers directly.
+* #abstraction and #compaction of active holons into completed, invioable holons, which persist as archived content.
+* a #projection_layer for describing state (a map of the holon) for other holons to query.
+
+The grounding layer doesn't have to be graphs (though graphs are probably the most flexible alternatives), but you do have to have something that's deterministic and persistent. This is a pattern that I see emerging with variations from multiple sources at once, some very big players in the space. MCP is a big enabler of it. This context plane is what make graphs into powerhouses.
+
+
+ Neuro-Symbolic AI May Finally Deliver the Promise of Autonomous Networking
+Subramaniyam Pooni
+Subramaniyam Pooni
+Founder, CS²B Technologies | Agentic AI Architecture at Enterprise Scale | Ex-Broadcom/VMware, HP, IBM | Multi-patent inventor · 2 exits
+
+

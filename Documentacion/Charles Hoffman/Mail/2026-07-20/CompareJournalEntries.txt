@@ -1,0 +1,19 @@
+This gives you an idea of the difference between the information in a traditional general ledger and a business events ledger.
+
+This is traditional general journal entry, MINIMUM information required:
+
+1.png
+
+Traditional general journal ENHANCED to contain what is necessary for generating XBRL: (i.e. you need to add entity identifier is GL does not output one or if it only handles ONE entity; or if the GL is single currency rather than multicurrency)
+
+2.png
+
+This is what a business events ledger provides (can generate financial transactions from that; this is not perfect yet; note the namespace prefixes to explain where meaning comes from; note that most things are semantic, some literal values)
+
+3.jpg
+
+The POINT IS; look how much more information you have to work with.  And this is not even factoring in other metadata and data that this information is LINKED TO.
+
+Cheers,
+
+Charlie

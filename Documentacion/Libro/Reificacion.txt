@@ -1,0 +1,30 @@
+Here's the hard truth: Data modeling has been getting it backwards for decades.
+
+Data modeling starts with storage – how to organize records in systems. Conceptualization starts with meaning – how people actually understand the things of the business. One is an engineering concern; the other is the very foundation of what the business knows. Which do you think should come first?
+
+A concept model is not a conceptual data model. It's not any kind of data model. It operates in an entirely different domain – the domain of structured meaning, business vocabulary, and disambiguation of knowledge in textual form. 
+
+A data model is a design for storage. A concept model is a blueprint for meaning. Confusing the two is how organizations got into the data quality mess they're in today.
+
+Consider what data modeling routinely forfeits. It strips away verbs – the very chassis of meaning expressed as sentences! 
+
+Column headings like "customer, order, location" tell you nothing about the relationships. Does the customer place the order? Cancel it? Dispute it? Without verb concepts, you're flying blind. And unlabeled lines in data models are – let me be blunt – communicatively impotent.
+
+A properly designed concept model can stand the test of time – one client found theirs 90% accurate after twelve years. Why? Because concepts are more stable than any technology. They reflect how people think, not how machines store.
+
+You're simply never going to solve data integration using the same techniques that created the problem. And you’re never going to connect that effectively with GenAI either. You need a whole new foundation – and that foundation is conceptualization.
+
+Learn more about conceptualization vs. data modeling in my new book: Inside the Mind of an Organization: Concepts, Controls, Data and Reality. 
+Link in the comments.
+
+C:\Users\IPHIX\Documents\Projects\DFRNT\Documentacion\Libro/reificacion.jpg
+
+*****
+Giancarlo Guizzardi 
+
+
+Full Professor of Computer Science working in the areas of Conceptual Modeling, Formal Ontology, Enterprise Semantics, Advanced Information Systems Engineering, and Foundations of Data Science and AI.
+
+2 h
+
+Fully agree, Ron! Of course the same thing can be said about ontology engineering!

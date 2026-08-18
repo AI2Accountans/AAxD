@@ -1,0 +1,71 @@
+ We did not need a smarter AI. We needed a business that stopped forgetting.
+Carlos Adell
+Carlos Adell
+⚙️ Recovering Engineer & Dad | I build & run the operational layer of founder-led businesses so you can 𝙎𝙩𝙤𝙥 𝘽𝙚𝙞𝙣𝙜 𝙏𝙝𝙚 𝘽𝙤𝙩𝙩𝙡𝙚𝙣𝙚𝙘𝙠 & 𝙂𝙧𝙤𝙬 | ⛔️ the AI hype
+4 de agosto de 2026
+
+For about a year I used AI the way most business owners use it. Open a chat, ask a good question, get a good answer, close the tab. Then do it again tomorrow, from zero, with something that has no idea who my clients are, what we shipped last week, or what I had already decided twice.
+
+It was useful. It was also amnesia with better grammar.
+
+What we ended up building instead is the least clever system in the company. We call it the Business Brain, and the only thing it really does is refuse to forget.
+
+THE MEMORY
+
+A business rarely loses information. It loses the location of it.
+
+The decision lives in a call nobody rewatched. The promise lives in a chat that scrolled past. The reason you chose the harder option in March lives in your head, and by August your head has moved on.
+
+So the first thing we built was not an assistant. It was a set of shared documents that the business writes to every single day.
+
+What was decided and why. What is still open and who owns it. What clients actually said, in their own words. What went wrong, and what we changed because of it.
+
+Boring. Load-bearing.
+
+THE PATTERN
+
+Once there is somewhere to write things down, the agents become obvious.
+
+One of them only reads. It goes through every client conversation, every email, every call transcript in full, the task board and the calendar, and it files what it finds into the right place. It is not allowed to analyse any of it. That is the whole discipline.
+
+The others only read what it filed. One watches delivery. One watches how clients are feeling. One watches the health of the team. One watches marketing.
+
+Each has a narrow job, and none of them is allowed to do somebody else's.
+
+That separation is the reason it works at all. Anything that gathers AND judges will quietly gather whatever supports its judgement.
+
+THE STORY
+
+The first version of it lied to me. Very politely.
+
+It would finish a scan and report that everything passed. Nothing had errored, so as far as it was concerned that was true.
+
+What it had actually done was skip the sources that were slow, put a note about it somewhere near the bottom, and call the run a success.
+
+That is the part nobody puts in the AI brochure. These things are very good at producing something that looks finished.
+
+So we changed one rule. The scan is not allowed to move on until the number of conversations it skipped is zero. Not low. Zero. If a source is slow, the run takes longer, and that is the correct outcome.
+
+The week after that change, one cross-check found eight things somebody had promised a client in a chat that had never become a task and had nobody's name on it. Eight, in a single week.
+
+Nobody was being careless. Every one of them was said out loud, in a busy thread, on a Thursday, and the business simply had no way to hold it.
+
+What we had been losing was never the big strategy. It was the small promises.
+
+THE SHIFT
+
+Here is the part I did not expect.
+
+The value was never in the answers. It was that I stopped repeating myself.
+
+When I correct something now, the correction gets written down before the session ends, and the next one starts already knowing it. I say it once. It holds.
+
+That is the difference between using AI and building with it. One gives you a smart answer today. The other gives your business somewhere to put what it learns, so the same mistake is not available to you twice.
+
+Most owners do not need a cleverer tool. They need their own business to remember what it already knows.
+
+Start with the memory. The intelligence is the easy part.
+
+Until next Tuesday.
+
+Carlos

@@ -1,0 +1,56 @@
+{
+	"inline_blocks": [
+		{
+			"narrative_markdown": "Socio Fundador A",
+			"json_ld_data": {
+				"gl-cor:amount": 2500000,
+				"gl-cor:agent_identifier": {
+					"@id": "terminusdb:///data/GistPerson/Socio_A"
+				},
+				"gl-cor:measurable": {
+					"gl-cor:measurableQuantity": 2500,
+					"gl-cor:measurableUnitOfMeasure": "Cuotas"
+				}
+			}
+		},
+		{
+			"narrative_markdown": "Socio Fundador B",
+			"json_ld_data": {
+				"gl-cor:amount": 2500000,
+				"gl-cor:agent_identifier": {
+					"@id": "terminusdb:///data/GistPerson/Socio_B"
+				},
+				"gl-cor:measurable": {
+					"gl-cor:measurableQuantity": 2500,
+					"gl-cor:measurableUnitOfMeasure": "Cuotas"
+				}
+			}
+		},
+		{
+			"narrative_markdown": "Socio Fundador C",
+			"json_ld_data": {
+				"gl-cor:amount": 2500000,
+				"gl-cor:agent_identifier": {
+					"@id": "terminusdb:///data/GistPerson/Socio_C"
+				},
+				"gl-cor:measurable": {
+					"gl-cor:measurableQuantity": 2500,
+					"gl-cor:measurableUnitOfMeasure": "Cuotas"
+				}
+			}
+		},
+		{
+			"narrative_markdown": "Socio Fundador D",
+			"json_ld_data": {
+				"gl-cor:amount": 2500000,
+				"gl-cor:agent_identifier": {
+					"@id": "terminusdb:///data/GistPerson/Socio_D"
+				},
+				"gl-cor:measurable": {
+					"gl-cor:measurableQuantity": 2500,
+					"gl-cor:measurableUnitOfMeasure": "Cuotas"
+				}
+			}
+		}
+	]
+}

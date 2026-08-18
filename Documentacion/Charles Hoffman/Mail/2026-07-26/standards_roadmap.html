@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hoja de Ruta — Enterprise Stack Semántico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --surface2:  #1c2333;
+      --border:    #30363d;
+      --accent1:   #58a6ff;
+      --accent2:   #3fb950;
+      --accent3:   #d29922;
+      --accent4:   #f78166;
+      --accent5:   #bc8cff;
+      --accent6:   #39d353;
+      --text:      #e6edf3;
+      --text-muted:#8b949e;
+      --pill-bg:   rgba(88,166,255,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7; min-height: 100vh; }
+    header { background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2332 100%); border-bottom: 1px solid var(--border); padding: 40px 48px 32px; position: relative; overflow: hidden; }
+    header::before { content: ''; position: absolute; top: -80px; right: -80px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(88,166,255,0.08) 0%, transparent 70%); pointer-events: none; }
+    .header-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pill-bg); border: 1px solid rgba(88,166,255,0.3); border-radius: 20px; padding: 3px 12px; font-size: 11px; color: var(--accent1); letter-spacing: 0.5px; margin-bottom: 16px; }
+    header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; color: #fff; max-width: 760px; }
+    header h1 span { color: var(--accent1); }
+    .header-sub { margin-top: 8px; color: var(--text-muted); font-size: 13px; }
+    .header-sub a { color: var(--accent1); text-decoration: none; }
+    .header-meta { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 16px; }
+    .meta-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
+    .meta-item .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }
+    .layout { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 160px); }
+    nav.sidebar { background: var(--surface); border-right: 1px solid var(--border); padding: 24px 0; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+    .nav-group-label { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; padding: 4px 20px 6px; margin-top: 12px; }
+    .nav-group-label:first-child { margin-top: 0; }
+    nav.sidebar a { display: flex; align-items: center; gap: 8px; padding: 6px 20px; color: var(--text-muted); text-decoration: none; font-size: 12.5px; border-left: 2px solid transparent; transition: all 0.15s; }
+    nav.sidebar a:hover, nav.sidebar a.active { color: var(--text); background: rgba(88,166,255,0.06); border-left-color: var(--accent1); }
+    nav.sidebar a .nav-icon { font-size: 14px; width: 18px; text-align: center; }
+    main { padding: 32px 48px 64px; max-width: 960px; }
+    .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .section-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .icon-blue  { background: rgba(88,166,255,0.12); }
+    .icon-green { background: rgba(63,185,80,0.12);  }
+    .icon-yellow{ background: rgba(210,153,34,0.12); }
+    .icon-red   { background: rgba(247,129,102,0.12);}
+    .icon-purple{ background: rgba(188,140,255,0.12);}
+    .section-title { font-size: 18px; font-weight: 600; color: var(--text); }
+    .section-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    section { margin-bottom: 48px; scroll-margin-top: 24px; }
+    .question-card { background: linear-gradient(135deg, rgba(88,166,255,0.06), rgba(88,166,255,0.02)); border: 1px solid rgba(88,166,255,0.2); border-radius: 12px; padding: 24px 28px; position: relative; overflow: hidden; }
+    .question-card::before { content: '"'; position: absolute; top: -20px; left: 20px; font-size: 120px; color: rgba(88,166,255,0.06); font-family: Georgia, serif; line-height: 1; }
+    .question-card p { font-size: 15px; color: #c9d1d9; font-style: italic; position: relative; z-index: 1; margin-bottom: 12px; }
+    .question-card .answer { font-style: normal; color: var(--accent2); font-weight: 600; font-size: 14px; }
+    .pipeline { display: flex; align-items: center; gap: 0; background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 12px; overflow-x: auto; margin-bottom: 24px; }
+    .pipeline-step { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 90px; text-align: center; }
+    .pipeline-step .ps-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .pipeline-step .ps-label { font-size: 10px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .pipeline-step .ps-std { font-size: 11px; font-weight: 700; color: var(--text); }
+    .pipeline-arrow { font-size: 18px; color: var(--border); margin: 0 4px; flex-shrink: 0; padding-bottom: 20px; }
+    .layer-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 16px; }
+    .layer-conceptual { background: rgba(188,140,255,0.12); color: var(--accent5); }
+    .layer-operational { background: rgba(88,166,255,0.12);  color: var(--accent1); }
+    .layer-accounting  { background: rgba(63,185,80,0.12);   color: var(--accent2); }
+    .std-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .std-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.2s, transform 0.2s; cursor: default; }
+    .std-card:hover { border-color: var(--accent1); transform: translateY(-2px); }
+    .std-card-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .std-badge { padding: 2px 8px; border-radius: 6px; font-size: 10px; font-weight: 700; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+    .std-name { font-size: 13px; font-weight: 600; color: var(--text); }
+    .std-full { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .std-body p { font-size: 12.5px; color: #8b949e; line-height: 1.6; }
+    .std-body ul { list-style: none; margin-top: 10px; }
+    .std-body ul li { font-size: 12px; color: var(--text-muted); padding: 3px 0; padding-left: 16px; position: relative; }
+    .std-body ul li::before { content: '›'; position: absolute; left: 0; color: var(--accent1); font-weight: 700; }
+    .std-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 11px; color: var(--accent1); text-decoration: none; }
+    .std-link:hover { text-decoration: underline; }
+    .std-tag { display: inline-block; margin-top: 8px; background: rgba(63,185,80,0.1); border: 1px solid rgba(63,185,80,0.2); color: var(--accent2); font-size: 10px; border-radius: 4px; padding: 1px 6px; }
+    .c-sbvr   { background: rgba(188,140,255,0.15); color: #bc8cff; }
+    .c-bpmn   { background: rgba(188,140,255,0.10); color: #a78bfa; }
+    .c-ubl    { background: rgba(88,166,255,0.15);  color: #58a6ff; }
+    .c-actus  { background: rgba(210,153,34,0.15);  color: #d29922; }
+    .c-rea    { background: rgba(63,185,80,0.15);   color: #3fb950; }
+    .c-xbrlgl { background: rgba(57,211,83,0.12);   color: #39d353; }
+    .c-xbrl   { background: rgba(247,129,102,0.15); color: #f78166; }
+    .pipeline-table { width: 100%; border-collapse: collapse; margin-top: 4px; font-size: 13px; }
+    .pipeline-table th { text-align: left; padding: 10px 16px; background: var(--surface2); color: var(--text-muted); font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; border-bottom: 1px solid var(--border); }
+    .pipeline-table td { padding: 10px 16px; border-bottom: 1px solid rgba(48,54,61,0.5); vertical-align: top; }
+    .pipeline-table tr:last-child td { border-bottom: none; }
+    .pipeline-table tr:hover td { background: rgba(88,166,255,0.03); }
+    .pipeline-table .std-col { font-weight: 700; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    .pipeline-table .action-col { color: #c9d1d9; }
+    blockquote { border-left: 3px solid var(--accent1); margin: 20px 0; padding: 12px 20px; background: rgba(88,166,255,0.04); border-radius: 0 8px 8px 0; font-size: 13px; color: #c9d1d9; font-style: italic; }
+    .sins-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .sins-table th { text-align: left; padding: 10px 16px; background: rgba(247,129,102,0.06); color: var(--accent4); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid rgba(247,129,102,0.15); }
+    .sins-table td { padding: 10px 16px; border-bottom: 1px solid rgba(48,54,61,0.5); color: var(--text-muted); }
+    .sins-table tr:last-child td { border-bottom: none; }
+    .sins-table .bad { color: var(--accent4); font-weight: 600; }
+    .sins-table a { color: var(--accent1); font-size: 11px; }
+    .roadmap { position: relative; padding-left: 32px; }
+    .roadmap::before { content: ''; position: absolute; left: 11px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent1), var(--accent5), var(--accent2)); border-radius: 2px; }
+    .roadmap-step { position: relative; margin-bottom: 28px; }
+    .roadmap-step::before { content: ''; position: absolute; left: -26px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent1); }
+    .roadmap-step.done::before  { background: var(--accent2); border-color: var(--accent2); }
+    .roadmap-step.next::before  { background: var(--accent1); border-color: var(--accent1); box-shadow: 0 0 8px rgba(88,166,255,0.5); }
+    .roadmap-step.future::before{ background: var(--bg); border-color: var(--border); }
+    .step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .step-badge { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .badge-done   { background: rgba(63,185,80,0.12);  color: var(--accent2); }
+    .badge-next   { background: rgba(88,166,255,0.12); color: var(--accent1); }
+    .badge-future { background: rgba(48,54,61,0.5);    color: var(--text-muted); }
+    .step-title { font-size: 14px; font-weight: 600; }
+    .step-body  { font-size: 12.5px; color: var(--text-muted); }
+    .step-body ul { padding-left: 16px; margin-top: 6px; }
+    .step-body li { margin-bottom: 4px; }
+    .resource-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+    .resource-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; display: flex; align-items: flex-start; gap: 10px; text-decoration: none; transition: border-color 0.15s; }
+    .resource-item:hover { border-color: var(--accent1); }
+    .res-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .res-title { font-size: 12.5px; font-weight: 600; color: var(--text); }
+    .res-url   { font-size: 10.5px; color: var(--text-muted); margin-top: 2px; word-break: break-all; }
+    .notes-card { background: rgba(63,185,80,0.05); border: 1px solid rgba(63,185,80,0.2); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+    .notes-card h4 { color: var(--accent2); font-size: 13px; margin-bottom: 10px; }
+    .notes-card p, .notes-card li { font-size: 12.5px; color: var(--text-muted); }
+    .notes-card ul { padding-left: 16px; margin-top: 8px; }
+    .notes-card code { font-family: 'JetBrains Mono', monospace; background: rgba(48,54,61,0.6); padding: 1px 5px; border-radius: 3px; font-size: 11px; color: var(--accent1); }
+    .copper-card { background: linear-gradient(135deg, rgba(210,153,34,0.06), rgba(210,153,34,0.02)); border: 1px solid rgba(210,153,34,0.2); border-radius: 12px; padding: 20px 24px; }
+    .copper-card .film { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; font-style: italic; }
+    .copper-card blockquote { border-left-color: var(--accent3); background: rgba(210,153,34,0.04); }
+    .copper-card .conclusion { font-size: 13px; color: var(--accent3); font-weight: 600; margin-top: 12px; }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 20px 48px; font-size: 11.5px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center; }
+    footer a { color: var(--accent1); text-decoration: none; }
+    @media (max-width: 768px) { .layout { grid-template-columns: 1fr; } nav.sidebar { display: none; } main { padding: 20px; } header { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-badge">🔗 Charlie Hoffman · Digital Financial Reporting Blog</div>
+  <h1>Standards for <span>Interconnecting</span> the Enterprise Stack</h1>
+  <p class="header-sub">Análisis extraído de <a href="https://digitalfinancialreporting.blogspot.com/2026/07/standards-for-interconnecting.html" target="_blank">digitalfinancialreporting.blogspot.com</a> · Hoja de ruta para el proyecto AI2Accountans / DFRNT</p>
+  <div class="header-meta">
+    <div class="meta-item"><div class="dot"></div> Publicado: 26 julio 2026</div>
+    <div class="meta-item"><div class="dot" style="background:var(--accent3)"></div> Elaborado con: Copilot + Gemini</div>
+    <div class="meta-item"><div class="dot" style="background:var(--accent5)"></div> 9 estándares analizados</div>
+    <div class="meta-item"><div class="dot" style="background:var(--accent4)"></div> 1 cadena semántica unificada</div>
+  </div>
+</header>
+
+<div class="layout">
+<nav class="sidebar">
+  <div class="nav-group-label">Contexto</div>
+  <a href="#pregunta" class="active"><span class="nav-icon">❓</span> Pregunta central</a>
+  <a href="#pipeline-visual"><span class="nav-icon">🔗</span> Pipeline visual</a>
+  <div class="nav-group-label">Estándares</div>
+  <a href="#capa1"><span class="nav-icon">🧠</span> Capa Conceptual</a>
+  <a href="#capa2"><span class="nav-icon">⚙️</span> Capa Operacional</a>
+  <a href="#capa3"><span class="nav-icon">📊</span> Capa Contable</a>
+  <div class="nav-group-label">Síntesis</div>
+  <a href="#one-pipeline"><span class="nav-icon">🎯</span> One Semantic Pipeline</a>
+  <a href="#cobre"><span class="nav-icon">🪝</span> Metáfora del cobre</a>
+  <a href="#pecados"><span class="nav-icon">⚠️</span> Complejidad auto-infligida</a>
+  <div class="nav-group-label">Proyecto</div>
+  <a href="#roadmap"><span class="nav-icon">🗺️</span> Hoja de ruta</a>
+  <a href="#notas"><span class="nav-icon">💡</span> Notas DFRNT</a>
+  <a href="#recursos"><span class="nav-icon">📚</span> Recursos</a>
+</nav>
+
+<main>
+  <section id="pregunta">
+    <div class="section-header"><div class="section-icon icon-blue">❓</div><div><div class="section-title">Pregunta Central</div><div class="section-subtitle">El punto de partida del análisis de Charlie Hoffman</div></div></div>
+    <div class="question-card">
+      <p>¿Cuál es la relación entre UBL, REA (ISO/IEC), ACTUS, FASB/IFRS Taxonomies, SBVR, BPMN y XBRL?<br/>¿Cómo se relacionan todos estos estándares entre sí?</p>
+      <div class="answer">✅ No son competidores — son capas de una misma cadena semántica de significado empresarial.</div>
+    </div>
+    <blockquote style="margin-top:16px;">"All of these standards form a single semantic supply chain for business meaning; from the moment a business event occurs, through operational processing, into accounting recognition, and finally into regulated financial compliance reporting."</blockquote>
+  </section>
+
+  <section id="pipeline-visual">
+    <div class="section-header"><div class="section-icon icon-blue">🔗</div><div><div class="section-title">El Pipeline Semántico Completo</div><div class="section-subtitle">De la transacción al reporte, sin perder significado</div></div></div>
+    <div class="pipeline">
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(188,140,255,0.12)">📐</div><div class="ps-std">SBVR</div><div class="ps-label">Vocabulario</div></div>
+      <div class="pipeline-arrow">+</div>
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(188,140,255,0.10)">🔀</div><div class="ps-std">BPMN</div><div class="ps-label">Workflow</div></div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(88,166,255,0.12)">📄</div><div class="ps-std">UBL</div><div class="ps-label">Documento</div></div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(210,153,34,0.12)">📈</div><div class="ps-std">ACTUS</div><div class="ps-label">Contratos</div></div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(63,185,80,0.12)">🔬</div><div class="ps-std">REA</div><div class="ps-label">Evento Ec.</div></div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(57,211,83,0.12)">📒</div><div class="ps-std">XBRL GL</div><div class="ps-label">Ledger</div></div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step"><div class="ps-icon" style="background:rgba(247,129,102,0.12)">📊</div><div class="ps-std">XBRL+GAAP/IFRS</div><div class="ps-label">Reporte</div></div>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted);margin-top:-8px;">SBVR y BPMN actúan como infraestructura horizontal — definen el vocabulario y orquestan el flujo de todos los demás estándares.</p>
+  </section>
+
+  <section id="capa1">
+    <div class="section-header"><div class="section-icon icon-purple">🧠</div><div><div class="section-title">Capa 1 — Fundación Conceptual, Semántica y Lógica</div><div class="section-subtitle">Definir el significado, conceptos y reglas</div></div></div>
+    <div class="layer-label layer-conceptual">CONCEPTUAL</div>
+    <div class="std-grid">
+      <div class="std-card">
+        <div class="std-card-header"><span class="std-badge c-sbvr">SBVR</span><div><div class="std-name">Semantics of Business Vocabulary and Business Rules</div><div class="std-full">OMG Standard · v1.5 Ratificado</div></div></div>
+        <div class="std-body"><p><strong>El pegamento de todo el stack.</strong> Provee una forma formal e independiente del lenguaje para definir términos y reglas de negocio.</p><ul><li>Define el significado de elementos UBL</li><li>Describe conceptos contables REA y ACTUS</li><li>Formaliza contenidos de XBRL GL y XBRL Reporting</li><li>Soporta gobernanza y riesgo epistémico</li><li>Puente entre Business People ↔ Technical People</li></ul><span class="std-tag">Desde el año 2000</span></div>
+        <a href="https://www.omg.org/spec/SBVR/1.5/About-SBVR/" target="_blank" class="std-link">↗ omg.org/spec/SBVR</a>
+      </div>
+      <div class="std-card">
+        <div class="std-card-header"><span class="std-badge c-bpmn">BPMN</span><div><div class="std-name">Business Process Model and Notation</div><div class="std-full">OMG Standard · Ratificado</div></div></div>
+        <div class="std-body"><p><strong>La dimensión temporal.</strong> Representa workflows de negocio a través de los cuales viaja la información de los business events.</p><ul><li>Modela el <em>cuándo</em> y el <em>cómo</em> fluye la información</li><li>Complementa a SBVR (que define el <em>qué significa</em>)</li><li>Orquesta los procesos que generan y consumen los demás estándares</li></ul></div>
+        <a href="https://www.omg.org/bpmn/" target="_blank" class="std-link">↗ omg.org/bpmn</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="capa2">
+    <div class="section-header"><div class="section-icon icon-blue">⚙️</div><div><div class="section-title">Capa 2 — Workflow Operacional y Documentos</div><div class="section-subtitle">Describir acción, ejecución y payload</div></div></div>
+    <div class="layer-label layer-operational">OPERACIONAL</div>
+    <div class="std-grid">
+      <div class="std-card">
+        <div class="std-card-header"><span class="std-badge c-ubl">UBL</span><div><div class="std-name">Universal Business Language</div><div class="std-full">ISO/IEC 66370 · Ratificado</div></div></div>
+        <div class="std-body"><p><strong>El documento fuente nativo semántico.</strong> Documentos estructurados que describen interacciones comerciales reales.</p><ul><li>Lleva hechos granulares: <em>quién, qué, cuándo, por qué</em></li><li>El documento <strong>ES</strong> el evento — no necesita mapeo manual</li><li>Preserva el significado a través de todos los pasos operacionales</li><li>Patrón HEADER (quién, cuándo) + DETAIL (líneas, montos, impuestos)</li></ul><span class="std-tag">🔑 Shift Left — fuente de verdad</span></div>
+        <a href="https://www.iso.org/standard/66370.html" target="_blank" class="std-link">↗ iso.org/standard/66370</a>
+      </div>
+      <div class="std-card">
+        <div class="std-card-header"><span class="std-badge c-actus">ACTUS</span><div><div class="std-name">Algorithmic Contract Types Unified Standards</div><div class="std-full">En camino a ISO/IEC · ACTUS FRF</div></div></div>
+        <div class="std-body"><p><strong>La máquina de estados financiera.</strong> Modela contratos financieros como máquinas de estado deterministas.</p><ul><li>Cubre: préstamos, derivados, bonos</li><li>Genera eventos discretos de flujo de efectivo futuro</li><li>Institución financiera (lado 1) ↔ Empresa (lado 2)</li><li><strong>Capacidad única:</strong> proyecta business events hacia el futuro</li></ul><span class="std-tag">⏰ Proyección futura</span></div>
+        <a href="https://www.actusfrf.org/" target="_blank" class="std-link">↗ actusfrf.org</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="capa3">
+    <div class="section-header"><div class="section-icon icon-green">📊</div><div><div class="section-title">Capa 3 — Contabilidad, Agregación y Reporte</div><div class="section-subtitle">Transaccionar, registrar, agregar, reportar</div></div></div>
+    <div class="layer-label layer-accounting">CONTABLE / REPORTE</div>
+    <div class="std-grid">
+      <div class="std-card">
+        <div class="std-card-header"><span class="std-badge c-rea">REA</span><div><div class="std-name">Resources, Events, Agents</div><div class="std-full">ISO/IEC 67199 · Accounting &amp; Economic Ontology</div></div></div>
+        <div class="std-body"><p><strong>La semántica contable.</strong> Interpreta los documentos UBL como eventos económicos con significado ontológico.</p><ul><li>Transforma el documento comercial en evento contable</li><li>Responde: ¿qué cuenta? ¿débito/crédito? ¿timing de acumulación?</li><li>Provee el marco que da significado contable al payload UBL</li></ul><span class="std-tag">💡 Responde la pregunta de Joey</span></div>
+        <a href="https://www.iso.org/standard/67199.html" target="_blank" class="std-link">↗ iso.org/standard/67199</a>
+      </div>
+      <div class="std-card">
+        <div class="std-card-header"><span class="std-badge c-xbrlgl">XBRL GL</span><div><div class="std-name">XBRL Global Ledger</div><div class="std-full">XBRL International · Ratificado</div></div></div>
+        <div class="std-body"><p><strong>El puente inmutable.</strong> Rastro de auditoría universal y estándar de reporte interno.</p><ul><li>Ingiere: facturas UBL, flujos ACTUS, ERP</li><li>Provee proveniencia estructural completa</li><li>Vincula de regreso al evento operacional originante</li><li>Base para mapeo a reportes de cumplimiento</li></ul><span class="std-tag">🔒 Audit trail universal</span></div>
+        <a href="https://www.xbrl.org/the-standard/what/global-ledger/" target="_blank" class="std-link">↗ xbrl.org — Global Ledger</a>
+      </div>
+      <div class="std-card" style="grid-column: 1 / -1;">
+        <div class="std-card-header"><span class="std-badge c-xbrl">XBRL + Taxonomías</span><div><div class="std-name">XBRL Financial Reporting + FASB US GAAP / IFRS Taxonomies</div><div class="std-full">XBRL International + FASB + IFRS Foundation · Vigentes</div></div></div>
+        <div class="std-body"><p><strong>La cima del pipeline.</strong> Reporte externo de cumplimiento regulatorio estandarizado.</p><div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);line-height:2;">Documentos UBL<br/>&nbsp;&nbsp;→ Diarios XBRL GL<br/>&nbsp;&nbsp;&nbsp;&nbsp;→ Agregación según US GAAP / IFRS<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Mapeo a taxonomías XBRL oficiales<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ <span style="color:var(--accent2);">Estados financieros externos + presentaciones regulatorias</span></div><ul style="margin-top:10px;"><li>Reporta el "estado" y "cambios en estado" de la entidad económica</li><li>Organizado según el marco de reporte estándar (US GAAP / IFRS)</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="one-pipeline">
+    <div class="section-header"><div class="section-icon icon-blue">🎯</div><div><div class="section-title">One Semantic Pipeline — Tabla de Roles</div><div class="section-subtitle">Cada estándar, su función y su acción en la cadena</div></div></div>
+    <table class="pipeline-table">
+      <thead><tr><th>Estándar</th><th>Acción en el pipeline</th><th>Organismo</th><th>Capa</th></tr></thead>
+      <tbody>
+        <tr><td><span class="std-col" style="color:#bc8cff">SBVR</span></td><td class="action-col">Define el vocabulario compartido y las reglas — el pegamento</td><td style="color:var(--text-muted);font-size:12px;">OMG</td><td><span style="font-size:11px;color:#bc8cff;">Conceptual</span></td></tr>
+        <tr><td><span class="std-col" style="color:#a78bfa">BPMN</span></td><td class="action-col">Orquesta los procesos que generan y consumen todos los demás</td><td style="color:var(--text-muted);font-size:12px;">OMG</td><td><span style="font-size:11px;color:#a78bfa;">Conceptual</span></td></tr>
+        <tr><td><span class="std-col" style="color:#58a6ff">UBL</span></td><td class="action-col">Captura los documentos — el documento ES el evento</td><td style="color:var(--text-muted);font-size:12px;">ISO/IEC</td><td><span style="font-size:11px;color:#58a6ff;">Operacional</span></td></tr>
+        <tr><td><span class="std-col" style="color:#d29922">ACTUS</span></td><td class="action-col">Modela el comportamiento contractual de instrumentos financieros</td><td style="color:var(--text-muted);font-size:12px;">ACTUS FRF</td><td><span style="font-size:11px;color:#d29922;">Operacional</span></td></tr>
+        <tr><td><span class="std-col" style="color:#3fb950">REA</span></td><td class="action-col">Interpreta documentos como eventos económicos con semántica contable</td><td style="color:var(--text-muted);font-size:12px;">ISO/IEC</td><td><span style="font-size:11px;color:#3fb950;">Contable</span></td></tr>
+        <tr><td><span class="std-col" style="color:#39d353">XBRL GL</span></td><td class="action-col">Rastro de auditoría universal — puente inmutable</td><td style="color:var(--text-muted);font-size:12px;">XBRL Int.</td><td><span style="font-size:11px;color:#39d353;">Contable</span></td></tr>
+        <tr><td><span class="std-col" style="color:#f78166">XBRL + US GAAP / IFRS</span></td><td class="action-col">Reporta los resultados agregados a reguladores y mercados</td><td style="color:var(--text-muted);font-size:12px;">XBRL / FASB / IFRS</td><td><span style="font-size:11px;color:#f78166;">Reporte</span></td></tr>
+      </tbody>
+    </table>
+    <blockquote style="margin-top:16px;">"Together, they form a coherent, end-to-end semantic architecture for representing business activity; from operational transactions to regulated financial compliance reporting — <strong>without losing meaning along the way</strong>."</blockquote>
+  </section>
+
+  <section id="cobre">
+    <div class="section-header"><div class="section-icon icon-yellow">🪝</div><div><div class="section-title">La Metáfora de la Plomería de Cobre</div><div class="section-subtitle">El argumento económico de "hacerlo bien desde el principio"</div></div></div>
+    <div class="copper-card">
+      <div class="film">📽 Cosmo Castorini (plomero) en <em>Moonstruck</em>:</div>
+      <blockquote>"... Then there is copper. It costs money. It costs money. Because it saves money."</blockquote>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Charlie aplica la metáfora directamente a la arquitectura de sistemas contables:</p>
+      <blockquote style="margin-top:10px;">"When I build my accounting information systems, I use the equivalent of copper 'plumbing'. The initial investment to do it right is higher; but things work better, the quality is higher, and things last significantly longer."</blockquote>
+      <div class="conclusion">→ El valor real ya no es solo un buen sistema contable. Es maximizar el beneficio y la utilidad de la inteligencia artificial.</div>
+    </div>
+  </section>
+
+  <section id="pecados">
+    <div class="section-header"><div class="section-icon icon-red">⚠️</div><div><div class="section-title">Complejidad Auto-Infligida</div><div class="section-subtitle">Problemas que las organizaciones se crean a sí mismas — y son evitables</div></div></div>
+    <table class="sins-table">
+      <thead><tr><th>Problema</th><th>Diagnóstico</th><th>Referencia</th></tr></thead>
+      <tbody>
+        <tr><td class="bad">Complejidad accidental</td><td>Emerge de decisiones de diseño deficientes, no de la naturaleza del problema</td><td>—</td></tr>
+        <tr><td class="bad">Kludge</td><td>Parches y workarounds que se acumulan hasta hacer el sistema inmanejable</td><td><a href="https://digitalfinancialreporting.blogspot.com/2025/10/no-kludge.html" target="_blank">↗ No Kludge</a></td></tr>
+        <tr><td class="bad">Fragmentación física</td><td>Los mismos datos en múltiples sistemas sin interoperabilidad</td><td><a href="https://digitalfinancialreporting.blogspot.com/2026/06/fragmentation-and-defensible-compliance.html" target="_blank">↗ Fragmentation</a></td></tr>
+        <tr><td class="bad">Fragmentación semántica</td><td>Los mismos conceptos con diferentes significados en distintos sistemas</td><td><a href="https://digitalfinancialreporting.blogspot.com/2026/06/fragmentation-and-defensible-compliance.html" target="_blank">↗ Fragmentation</a></td></tr>
+        <tr><td class="bad">El "hairball"</td><td>Sistema enredado donde transformaciones dejan el problema igual o peor</td><td><a href="https://digitalfinancialreporting.blogspot.com/2024/03/creeping-normality-integration-hairball.html" target="_blank">↗ Creeping Normality</a></td></tr>
+      </tbody>
+    </table>
+    <blockquote style="margin-top:16px;border-left-color:var(--accent4);background:rgba(247,129,102,0.04);">"If your accounting information is a hairball and then you go through a transformation and things are not much better on the other end; the only thing you will have achieved is waste your hard earned money."</blockquote>
+  </section>
+
+  <section id="roadmap">
+    <div class="section-header"><div class="section-icon icon-green">🗺️</div><div><div class="section-title">Hoja de Ruta — Siguientes Pasos</div><div class="section-subtitle">Progreso del proyecto AI2Accountans / DFRNT hacia el pipeline completo</div></div></div>
+    <div class="roadmap">
+      <div class="roadmap-step done"><div class="step-header"><span class="step-badge badge-done">✓ Completado</span><div class="step-title">Taller 1 — Pipeline UBL → XBRL GL → JSON-LD</div></div><div class="step-body">Pipeline base funcionando y demostrado en <code style="font-family:'JetBrains Mono',monospace;background:rgba(48,54,61,0.6);padding:1px 5px;border-radius:3px;font-size:11px;color:var(--accent1);">UBL2XBRLGL_CSV.zip</code>. El invoice UBL se convierte en nodo <code style="font-family:'JetBrains Mono',monospace;background:rgba(48,54,61,0.6);padding:1px 5px;border-radius:3px;font-size:11px;color:var(--accent1);">SourceDocument</code> en el Knowledge Graph.</div></div>
+      <div class="roadmap-step done"><div class="step-header"><span class="step-badge badge-done">✓ Completado</span><div class="step-title">Validación conceptual del "Shift Left"</div></div><div class="step-body">Confirmado por Charlie (mail 24-Jul): si el documento fuente tiene semántica nativa (UBL / Inline XBRL), el mapeo manual es auto-infligido. "Nothing technical impedes this."</div></div>
+      <div class="roadmap-step next"><div class="step-header"><span class="step-badge badge-next">→ Siguiente</span><div class="step-title">Formalizar la inyección de semántica REA en el pipeline</div></div><div class="step-body">La pregunta de Joey (mail 24-Jul): ¿dónde anclas la semántica contable? La respuesta implícita de Charlie es <strong>REA (ISO/IEC 67199)</strong>. El siguiente paso es hacer explícita esta capa en el MapForce o XQuery.<ul><li>Mapear gl-cor a constructos REA (Recurso, Evento, Agente)</li><li>Documentar qué campos UBL → qué concepto REA → qué entrada XBRL GL</li><li>Esto responde formalmente la pregunta de Joey</li></ul></div></div>
+      <div class="roadmap-step next"><div class="step-header"><span class="step-badge badge-next">→ Siguiente</span><div class="step-title">Integrar SBVR como vocabulario de gobernanza</div></div><div class="step-body">SBVR es "el pegamento" de todo el stack. Para el proyecto:<ul><li>Expresar las reglas del Business Event Ledger en lenguaje SBVR</li><li>Crear el vocabulario de negocio del framework A&amp;AD en términos SBVR</li><li>Conectar con la visión de Charlie sobre gobernanza y riesgo epistémico</li></ul></div></div>
+      <div class="roadmap-step future"><div class="step-header"><span class="step-badge badge-future">◯ Futuro</span><div class="step-title">Frameworks compartidos — Propuesta de Joey</div></div><div class="step-body">Joey propuso colaborar en frameworks de reporte versionados y semánticamente enriquecidos que tanto su stack (LPG) como el nuestro (XBRL GL → JSON-LD) puedan consumir independientemente produciendo holons mutuamente legibles.<ul><li>Definir el modelo de publicación compartido</li><li>Contribuir un holon real al repo A&amp;AD</li><li>Call con Joey — próximas 2 semanas</li></ul></div></div>
+      <div class="roadmap-step future"><div class="step-header"><span class="step-badge badge-future">◯ Futuro</span><div class="step-title">ACTUS — Proyección de contratos financieros</div></div><div class="step-body">Incorporar ACTUS para modelar el lado de los contratos financieros (CDTs, créditos) como proyecciones deterministas hacia el futuro. Conectar con el caso de uso de Going Concern del Canvas.</div></div>
+      <div class="roadmap-step future"><div class="step-header"><span class="step-badge badge-future">◯ Futuro</span><div class="step-title">End-to-End: UBL → XBRL GL → JSON-LD → XBRL Reporting</div></div><div class="step-body">Cerrar el ciclo completo hasta el reporte regulatorio estándar (XBRL + US GAAP / IFRS Taxonomy). El "One Semantic Pipeline" completo funcionando de extremo a extremo.</div></div>
+    </div>
+  </section>
+
+  <section id="notas">
+    <div class="section-header"><div class="section-icon icon-green">💡</div><div><div class="section-title">Notas de Alineación — Proyecto DFRNT / AI2Accountans</div><div class="section-subtitle">Cómo el blog se conecta directamente con lo que ya tenemos construido</div></div></div>
+    <div class="notes-card"><h4>🔗 El Pipeline que ya construimos mapea sobre esta arquitectura</h4><p>El pipeline demostrado en <code>UBL2XBRLGL_CSV.zip</code> es exactamente la capa Operacional → Contable descrita por Charlie:</p><ul><li><code>UBL</code> (Capa Operacional) → documento fuente semántico</li><li><code>XBRL GL</code> (Capa Contable) → puente inmutable, audit trail</li><li><code>JSON-LD</code> (Proyección) → implementación del XBRL OIM que Noble describió</li></ul></div>
+    <div class="notes-card"><h4>🎯 REA responde la pregunta de Joey</h4><p>Joey preguntó: <em>"La semántica contable (qué cuentas, débito/crédito, timing) no está en el UBL — ¿dónde la anclas?"</em></p><p>Charlie responde implícitamente en este blog: es <strong>REA (ISO/IEC 67199)</strong> la que transforma el documento comercial en evento económico con semántica contable. Esta es la capa que falta por documentar explícitamente en nuestro pipeline.</p></div>
+    <div class="notes-card"><h4>🧠 SBVR conecta las dos tribus</h4><p>SBVR fue diseñado exactamente para el problema que Charlie describió en el mail del 26-Jul: el puente entre Business People y Technical People.</p><blockquote style="margin:10px 0;border-left-color:var(--accent5);background:rgba(188,140,255,0.04);">"La visión de SBVR siempre ha sido permitir que las personas que gestionan una organización puedan expresar sus políticas de negocio en el mismo lenguaje natural que usan cada día — en un formato estándar, legible por máquina, que tiene una interpretación en lógica formal."</blockquote><p>Esto es lo que el framework A&amp;AD necesita para ser adoptado: las reglas en lenguaje de negocio, formalmente interpretables por máquina.</p></div>
+  </section>
+
+  <section id="recursos">
+    <div class="section-header"><div class="section-icon icon-purple">📚</div><div><div class="section-title">Recursos Referenciados</div><div class="section-subtitle">Todos los links mencionados en el post y documentación relacionada</div></div></div>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;">Posts del Seattle Method Blog:</p>
+    <div class="resource-grid" style="margin-bottom:20px;">
+      <a href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html" target="_blank" class="resource-item"><div class="res-icon">📋</div><div><div class="res-title">A&amp;AD Framework</div><div class="res-url">seattlemethod.blogspot.com</div></div></a>
+      <a href="https://seattlemethod.blogspot.com/2026/07/knowledge-as-product.html" target="_blank" class="resource-item"><div class="res-icon">🧪</div><div><div class="res-title">Knowledge as a Product</div><div class="res-url">seattlemethod.blogspot.com</div></div></a>
+      <a href="https://seattlemethod.blogspot.com/2026/07/the-accounting-manifold.html" target="_blank" class="resource-item"><div class="res-icon">🌐</div><div><div class="res-title">The Accounting Manifold</div><div class="res-url">seattlemethod.blogspot.com</div></div></a>
+      <a href="https://seattlemethod.blogspot.com/2026/06/my-garden.html" target="_blank" class="resource-item"><div class="res-icon">🌿</div><div><div class="res-title">My Garden (Fenced Boundary)</div><div class="res-url">seattlemethod.blogspot.com</div></div></a>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;">Estándares y Recursos Académicos:</p>
+    <div class="resource-grid" style="margin-bottom:20px;">
+      <a href="https://www.omg.org/spec/SBVR/1.5/About-SBVR/" target="_blank" class="resource-item"><div class="res-icon">📐</div><div><div class="res-title">SBVR v1.5 — OMG</div><div class="res-url">omg.org/spec/SBVR</div></div></a>
+      <a href="https://www.actusfrf.org/" target="_blank" class="resource-item"><div class="res-icon">📈</div><div><div class="res-title">ACTUS FRF</div><div class="res-url">actusfrf.org</div></div></a>
+      <a href="https://www.xbrl.org/the-standard/what/global-ledger/" target="_blank" class="resource-item"><div class="res-icon">📒</div><div><div class="res-title">XBRL Global Ledger</div><div class="res-url">xbrl.org</div></div></a>
+      <a href="https://www.brcommunity.com/articles.php?id=b933" target="_blank" class="resource-item"><div class="res-icon">📰</div><div><div class="res-title">SBVR: Ten Years and Still Ahead of Its Time!</div><div class="res-url">brcommunity.com</div></div></a>
+      <a href="https://ieeexplore.ieee.org/document/9398685" target="_blank" class="resource-item"><div class="res-icon">🎓</div><div><div class="res-title">SBVR: Automatic Generation From Textual Statements</div><div class="res-url">ieeexplore.ieee.org</div></div></a>
+      <a href="https://digitalfinancialreporting.blogspot.com/2026/07/agentic-ai.html" target="_blank" class="resource-item"><div class="res-icon">🤖</div><div><div class="res-title">Agentic AI</div><div class="res-url">digitalfinancialreporting.blogspot.com</div></div></a>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:14px;">Repo y Paper del Proyecto:</p>
+    <div class="resource-grid">
+      <a href="https://github.com/AI2Accountans/AAxD" target="_blank" class="resource-item"><div class="res-icon">💾</div><div><div class="res-title">AI2Accountans/AAxD — GitHub</div><div class="res-url">github.com/AI2Accountans/AAxD</div></div></a>
+      <a href="https://github.com/AI2Accountans/AAxD/blob/main/AA_D_en.pdf" target="_blank" class="resource-item"><div class="res-icon">📄</div><div><div class="res-title">Paper — The End of Reactive Control</div><div class="res-url">github.com — AA_D_en.pdf</div></div></a>
+      <a href="https://ai2accountans.github.io/aad-methodology/v1.0/pipeline.html" target="_blank" class="resource-item"><div class="res-icon">🔗</div><div><div class="res-title">Pipeline A&amp;AD v1.0</div><div class="res-url">ai2accountans.github.io</div></div></a>
+    </div>
+  </section>
+</main>
+</div>
+
+<footer>
+  <span>Extraído de <a href="https://digitalfinancialreporting.blogspot.com/2026/07/standards-for-interconnecting.html" target="_blank">digitalfinancialreporting.blogspot.com</a> · Charles Hoffman · 26 julio 2026</span>
+  <span style="color:var(--border);">AI2Accountans / DFRNT · Hoja de Ruta</span>
+</footer>
+
+</body>
+</html>

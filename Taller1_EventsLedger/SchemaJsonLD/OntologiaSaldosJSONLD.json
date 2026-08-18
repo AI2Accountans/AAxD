@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "A&AD Trial Balance Ledger Schema",
+  "description": "Schema JSON-LD para Saldos Contables (Trial Balance) enriquecidos con taxonomias jerarquicas (modulo SRCD).",
+  "$ref": "#/definitions/instancesArray",
+  "definitions": {
+
+    "FIBO_StockCorporation": {
+      "description": "Entidad legal reportante.",
+      "type": "object",
+      "required": ["@type", "@id", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":                { "type": "string", "const": "FIBO_StockCorporation" },
+        "@id":                  { "type": "string" },
+        "identifierCode":       { "type": "string" },
+        "identifierDescription":{ "type": "string" },
+        "artifact_name":        { "type": "string" }
+      }
+    },
+
+    "AccountBalanceSnapshot": {
+      "description": "Instantanea del saldo de una cuenta (State) al cierre de un periodo. Enriquecido con taxonomias de reporte jerarquicas para automatizacion de EEFF.",
+      "type": "object",
+      "required": ["@type", "@id", "accountMainID", "amount", "postingDate"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "description": "Permite multi-tipado semantico. Ej: ['AccountBalanceSnapshot','dca:State']",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "@id":                         { "type": "string", "description": "URI unica. Patron: Balance/{Cuenta}-{Fecha}" },
+        "accountMainID":               { "type": "string" },
+        "accountMainDescription":      { "type": "string" },
+        "amount":                      { "type": "number" },
+        "debitCreditCode":             { "type": "string", "enum": ["D", "C"] },
+        "postingDate":                 { "type": "string", "format": "date-time" },
+        "agent_identifierCode":        { "type": "string", "description": "Codigo del tercero/fondo (XBRL GL identifierCode)" },
+        "agent_identifierDescription": { "type": "string", "description": "Nombre del tercero/fondo (XBRL GL identifierDescription)" },
+        
+        "gsk_nivel_1": { "type": "string", "description": "Nivel 1 de la taxonomia de reporte. Ej: gsk:Activo" },
+        "gsk_nivel_2": { "type": "string", "description": "Nivel 2 de la taxonomia de reporte" },
+        "gsk_nivel_3": { "type": "string", "description": "Nivel 3 de la taxonomia de reporte. Ej: gsk:ActivoCorriente" },
+        "gsk_nivel_4": { "type": "string", "description": "Nivel 4 de la taxonomia de reporte. Ej: gsk:Efectivoyequivalesdeefectivo" },
+        "gsk_nivel_5": { "type": "string", "description": "Nivel 5 de la taxonomia de reporte. Ej: gsk:Bancosnacionales" },
+        "gsk_nivel_6": { "type": "string", "description": "Nivel 6 de la taxonomia de reporte" },
+        "gsk_nivel_7": { "type": "string", "description": "Nivel 7 de la taxonomia de reporte" },
+        "gsk_nivel_8": { "type": "string", "description": "Nivel 8 de la taxonomia de reporte. Ej: gsk:Disponible" },
+        "gsk_nivel_9": { "type": "string", "description": "Nivel 9 de la taxonomia de reporte" },
+        "gsk_nivel_10":{ "type": "string", "description": "Nivel 10 de la taxonomia de reporte" }
+      }
+    },
+
+    "instancesArray": {
+      "description": "Array de instancias del Trial Balance Ledger.",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "$ref": "#/definitions/FIBO_StockCorporation",    "description": "Entidad reportante" },
+          { "$ref": "#/definitions/AccountBalanceSnapshot",   "description": "Saldos enriquecidos con taxonomias" }
+        ]
+      }
+    }
+
+  }
+}

@@ -1,0 +1,15 @@
+Richard;
+
+These will likely be helpful. This is Joey French’s implementation:
+
+https://github.com/RoboFinSystems/robosystems/blob/main/examples/seattle_method_demo/sample_output/seattle-method-case-1.md
+
+This does not explain the business event information; but it gets you from the general journal entries to the financial report:
+
+https://github.com/seattlemethod/prototypes/tree/main/record-to-report
+
+Let me figure this out.
+
+Cheers,
+
+Charlie

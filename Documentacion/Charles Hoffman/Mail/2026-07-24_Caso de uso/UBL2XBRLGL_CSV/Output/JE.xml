@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25" xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25" xmlns:gl-gen="http://www.xbrl.org/int/gl/gen/2015-03-25" xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25" xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25" xmlns:gl-srcd="http://www.xbrl.org/int/gl/srcd/2015-03-25" xmlns:gl-taf="http://www.xbrl.org/int/gl/taf/2015-03-25" xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef xlink:type="simple" xlink:href="C:/Users/IPHIX/Documents/Capacitacion XBRL/UBL2XBRLGL/Taxonomia/XBRL-GL-REC-2015-03-25/gl/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.acme.com">acme</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2024-01-01</xbrli:startDate>
+			<xbrli:endDate>2024-12-.31</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">85000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FECA1073</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">80000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FECA1073</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">201680.7</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901252812</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE3721</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-23</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">124445</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900843898</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">RAPPI S.A.S</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MP169113</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-04</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2323640</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900642559</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">AYCARDI INMOBILIARIA SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">AY1704</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">4122000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MD283721</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2249900</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MD283743</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2605042.02</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FEC23255</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">130000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FEC23255</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">26811505</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800132527</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">CAMBIOS NEW YORK MONEY SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">18U113717</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2025-12-01</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">121848.74</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">DCAO1677</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">29600</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">DCAO1677</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">330000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE1957</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">513095011</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">20000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE1957</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">0</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FECA1073</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">0</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FECA1073</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">38319.33</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901252812</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE3721</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-23</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">23644.55</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900843898</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">RAPPI S.A.S</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MP169113</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-04</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900642559</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">AYCARDI INMOBILIARIA SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">AY1704</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">783180</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MD283721</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">427481</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MD283743</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">494957.98</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FEC23255</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">494957.98</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FEC23255</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800132527</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">CAMBIOS NEW YORK MONEY SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">18U113717</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2025-12-01</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">23151.26</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">DCAO1677</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">23151.26</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">DCAO1677</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">66500</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE1957</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">163035112</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">66500</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE1957</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">12750</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FECA1073</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">12000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FECA1073</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">30252.105</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901252812</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE3721</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-23</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">18666.75</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900843898</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">RAPPI S.A.S</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MP169113</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-04</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">348546</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900642559</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">AYCARDI INMOBILIARIA SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">AY1704</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">618300</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MD283721</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">337485</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">MD283743</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">390756.303</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FEC23255</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">19500</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FEC23255</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">4021725.75</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800132527</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">CAMBIOS NEW YORK MONEY SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">18U113717</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2025-12-01</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">18277.311</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">DCAO1677</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">4440</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">DCAO1677</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">49500</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE1957</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">251905052</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">3000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">FE1957</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">72250</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-25</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">68000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901427439</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">NAVAS INVERSIONES SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-25</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-25</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">209747.925</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">901252812</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-23</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-23</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">129422.8</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900843898</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">RAPPI S.A.S</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-04</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-04</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">900642559</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">AYCARDI INMOBILIARIA SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-03</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">4286880</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-04-26</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2339896</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">890935922</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DOBLAMOS SA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-04-26</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-26</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2709243.697</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-04-30</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">605457.98</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">811018242</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">MATERIALES EL TITAN NUMERO TRES S.A.S.</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-04-30</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-30</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800132527</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">CAMBIOS NEW YORK MONEY SAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2025-12-01</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2025-12-01</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">126722.689</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-03</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">48311.26</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">800094923</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">DISTRILACTEOS LTDA</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-05-03</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-05-03</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">347000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-04-27</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<gl-cor:accountingEntries>
+		<gl-cor:entryHeader>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">250205010</gl-cor:accountMainID>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">83500</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierExternalReference>
+						<gl-cor:identifierAuthorityCode contextRef="ctx1">43474514</gl-cor:identifierAuthorityCode>
+					</gl-cor:identifierExternalReference>
+					<gl-cor:identifierDescription contextRef="ctx1">COMERCIALIZADORA DE TACOS Y MADERAS</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentNumber contextRef="ctx1">2022-04-27</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2022-04-27</gl-cor:documentDate>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:unit id="COP">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:COP</xbrli:measure>
+	</xbrli:unit>
+</xbrli:xbrl>

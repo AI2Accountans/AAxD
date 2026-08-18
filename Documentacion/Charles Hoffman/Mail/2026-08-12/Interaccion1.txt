@@ -1,0 +1,19 @@
+The Third Manifesto: Databases, Types, and the Relational Model
+
+
+This explains a lot. The Third Manifesto: Databases, Types, and the Relational Model.  This was published by database pioneers C. J. Date and Hugh Darwen and is a seminal proposal for the future foundation of Database Management Systems (DBMSs). It points out DESIGN DEFECTS in SQL.  SQL is not mathematically pure and that causes accidental complexity. It also causes problems with nesting and composition. In SQL the boundary between the logical and the physical are intermingled.
+
+It basically says that a database needs to follow the RULES OF MATH.   It also has the notion of “relational closure”.  Relational closure is the foundational mathematical property stating that the output of every relational operation is itself a relation.  This explains how “chaining” (subqueries) really should work.  This is EXACTLY HOW DIGITAL INFORMATION ORGANISMS WORK!
+
+It also explains how TYPES need to work and says strong formal typing is what relational databases need. Fundamentally, a type is a named set of values equipped with a set of valid operations. The primary purpose of a type system in a database is to ensure that operations are semantically meaningful before they are ever evaluated. These types need to be controlled by the DOMAIN (e.g. the people putting information into the database) and not the database administrators. Conflating TYPES and RELATIONS is one of the most common pitfalls in data modeling.
+
+https://www.dcs.warwick.ac.uk/~hugh/TTM/DTATRM.pdf
+
+DTATRM.pdf
+
+1.jpg
+
+
+Cheers,
+
+Charlie

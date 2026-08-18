@@ -1,0 +1,150 @@
+[
+	{
+		"@type": "FIBO_StockCorporation",
+		"@id": "https://example.gov/id#30810137d58f76b84afd",
+		"artifact_name": "Taller1 Business Events Ledger",
+		"identifierCode": "https://example.gov/id#30810137d58f76b84afd",
+		"identifierDescription": "https://example.gov/id#30810137d58f76b84afd",
+		"identifierType": "NIT"
+	},
+	{
+		"@type": "FIBO_StockCorporation",
+		"artifact_name": "Taller1 Business Events Ledger",
+		"identifierType": "NIT"
+	},
+	{
+		"@type": "FIBO_StockCorporation",
+		"artifact_name": "Taller1 Business Events Ledger",
+		"identifierType": "NIT"
+	},
+	{
+		"@type": "FIBO_StockCorporation",
+		"@id": "https://example.gov/id#30810137d58f76b84afd",
+		"artifact_name": "Taller1 Business Events Ledger",
+		"identifierCode": "https://example.gov/id#30810137d58f76b84afd",
+		"identifierDescription": "https://example.gov/id#30810137d58f76b84afd",
+		"identifierType": "NIT"
+	},
+	{
+		"@type": "EntryHeader",
+		"@id": "JE-201",
+		"posting_date": "2024-01-01T10:00:09Z",
+		"economic_event": "JE-201"
+	},
+	{
+		"@type": "EntryHeader"
+	},
+	{
+		"@type": "EntryHeader"
+	},
+	{
+		"@type": "EntryHeader",
+		"@id": "JE-201",
+		"posting_date": "2024-01-01T23:59:59Z",
+		"economic_event": "JE-201"
+	},
+	{
+		"@type": "ISO15944_EconomicEvent",
+		"@id": "3f8c2a41-9b77-4e3e-8c1d-2f6a9d4c12e8",
+		"eventDescription": "Ties to ledger of paid in capital",
+		"eventDate": "2024-01-01T10:00:09Z",
+		"mini_BusinessEventCode": "mini:PaidInCapital",
+		"entry_header": "JE-201"
+	},
+	{
+		"@type": "ISO15944_EconomicEvent"
+	},
+	{
+		"@type": "ISO15944_EconomicEvent"
+	},
+	{
+		"@type": "ISO15944_EconomicEvent",
+		"@id": "f0c3b9e2-7d11-46a8-9f0a-52c4e9d8b7aa",
+		"eventDescription": "Ties to spreadsheet of owner equity.",
+		"eventDate": "2024-01-01T23:59:59Z",
+		"mini_BusinessEventCode": "mini:CashAndCashEquivalents",
+		"entry_header": "JE-201"
+	},
+	{
+		"@type": "GistPerson",
+		"@id": "dca:Owner",
+		"identifierCode": "dca:Owner",
+		"identifierDescription": "John Doe"
+	},
+	{
+		"@type": "GistPerson"
+	},
+	{
+		"@type": "GistPerson"
+	},
+	{
+		"@type": "GistPerson",
+		"@id": "dca:Owner",
+		"identifierCode": "dca:Owner",
+		"identifierDescription": "John Doe"
+	},
+	{
+		"@type": "Account",
+		"@id": "000-3100-00",
+		"accountMainID": "000-3100-00",
+		"accountMainDescription": "mini:PaidInCapital",
+		"mini_lineItem": "mini:PaidInCapital"
+	},
+	{
+		"@type": "Account"
+	},
+	{
+		"@type": "Account"
+	},
+	{
+		"@type": "Account",
+		"@id": "000-1100-00",
+		"accountMainID": "000-1100-00",
+		"accountMainDescription": "mini:CashAndCashEquivalents",
+		"mini_lineItem": "mini:CashAndCashEquivalents"
+	},
+	{
+		"@type": "EntryDetail",
+		"header": "JE-201",
+		"account": "000-3100-00",
+		"amount": 10000,
+		"debitCreditCode": "C",
+		"postingDate": "2024-01-01T10:00:09Z",
+		"agent_identifier": "John Doe",
+		"mini_lineItem": "mini:PaidInCapital",
+		"measurable": {
+			"measurableCode": "000-3100-00",
+			"measurableID": "3f8c2a41-9b77-4e3e-8c1d-2f6a9d4c12e8",
+			"measurableDescription": "Investment by owner to open a lemonade stand.",
+			"measurableQuantity": 10000,
+			"measurableUnitOfMeasure": "iso4217:USD"
+		}
+	},
+	{
+		"@type": "EntryDetail",
+		"measurable": {
+		}
+	},
+	{
+		"@type": "EntryDetail",
+		"measurable": {
+		}
+	},
+	{
+		"@type": "EntryDetail",
+		"header": "JE-201",
+		"account": "000-1100-00",
+		"amount": 10000,
+		"debitCreditCode": "D",
+		"postingDate": "2024-01-01T23:59:59Z",
+		"agent_identifier": "John Doe",
+		"mini_lineItem": "mini:CashAndCashEquivalents",
+		"measurable": {
+			"measurableCode": "000-1100-00",
+			"measurableID": "f0c3b9e2-7d11-46a8-9f0a-52c4e9d8b7aa",
+			"measurableDescription": "Investment by owner to open a lemonade stand.",
+			"measurableQuantity": 10000,
+			"measurableUnitOfMeasure": "iso4217:USD"
+		}
+	}
+]

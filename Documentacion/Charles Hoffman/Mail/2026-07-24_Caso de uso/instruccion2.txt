@@ -1,0 +1,27 @@
+I really am not sure of what I am doing yet, but this seems like the “flow” of how this might go.  A “source” is received by some process.  That source could be a PDF which has to be parsed and probably requiring help or review from a human; or it could be from an API of structured information which is captured, or a GRAPH OF INFORMATION like an XBRL instance or some other technical format.  Lets go with the XBRL instance:
+
+https://luca.pacioli.ai/storage/c5344192-b624-487d-8c22-11e42ba5963f/299729c6/instance.xml
+
+You send the document to a validation process which checks everything that it can, here is a human readable result.  https://validator.pacioli.ai/reportAnalysis/1d6bbe259461af6bffbb2723f0a0d0e727cc4e6b.report/index.html  (of course, the verification would be richer than that, consider this just an example).
+
+Then, you READ the meaning of the document (i.e. machine tries to interpret) and it is able to grab all this information.  Below is a relational database table I created in Microsoft Access.  You can ABSOLUTELY SEE the problem of using a relational data base here.  If you only had one type of document, this might be easy.  But, given that you will have to deal with hundreds of possible document formats, this becomes very challenging; you might need hundreds of relational database tables if you were going to do this for an enterprise.  In another Microsoft Access database table I have that “Business Event Matrix” which shows the information you would READ FROM THE KNOWLEDGE GRAPH.  This helps you understand what is going on.  From this information, shown in this table but read from the knowledge graph; you can SEE how to FINANCIAL STATEMENT LINE ITEM (STATE) and BUSINESS EVENT CODE (changes in state) are  derived from the information in the document.
+
+flow2.png
+
+You put all this information into an RDF triple store or really a QUAD because it has TEMPORAL information.  You get something that looks like  this (I know this is wrong, not exactly sure what this would look like).  But,  something like this noting the namespace prefixes which  helps you understand that you are working with semantics and some literals that are explained by the semantics.  For example, you know the customer, the name of the customer, the identifier of the customer, etc.
+
+flow3.png
+
+Then, the business even journal does not really contain all the details which can be looked up from the enterprise knowledge graph.  Sure, you want to have some information because you don’t want  dynamically have to recalculate all this; you need just enough information to be able to look up other information that you need.  You also want all the general journal information you need to post the financial transaction.
+
+flow4.png
+
+The “projection” of future oriented information is handled separately, because it is NOT REQUIRED but if you have this information you can automate other future work.
+
+Something like that.  Walking someone through all this using VIEWS like this is way, way better than the ugly JSON-LD and technically oriented stuff that no account will ever be able to understand.
+
+Basically, what you have going on is some “ingestor” related stuff and “projector” related stuff and different “planes” of granularity (i.e. detailed plane,  aggregated plane at different levels).  Physical fragmentation of this or semantic fragmentation of this (usually self-induced) is what makes this hard or impossible.  But this really is not rocket science.
+
+If you can do this for 1 transaction; then you can do it for 2, or 20 or 20,000 or 200,000.  Exact same puzzle pieces, just more metadata/form types/event types.  But the essence of what is going on is the same for any number of events/transactions.
+
+Cheers,

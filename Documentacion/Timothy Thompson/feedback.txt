@@ -1,0 +1,34 @@
+“The End of Reactive Control”: retroalimentación
+Tim Thompson
+30 de junio de 2026
+
+Pude acceder al servicio Turnitin con mi cuenta de Yale y señaló solamente un caso de texto posiblemente no citado. Aparte de eso, tengo algunas observaciones propias que quizás te sean útiles.
+
+Formato
+Las comillas iniciales me parecen invertidas en el texto. Deberían estar así: “entre comillas”.
+
+Contenido
+Creo que tu reto principal es reunir técnicas, términos, estándares y herramientas de dominios diferentes de una manera coherente. Por ejemplo, términos como “holon” pueden no ser familiares para todos los lectores y carecen de una cita o definición. Además, no me quedó del todo claro a qué se refería la parte “by Design” de tu metodología. Sería útil explicarla brevemente.
+
+Página 2: 
+•	“operational-regulatory seam”: ¿Es una cita directa?
+•	Una cita o explicación de lo que es “Design Science Research” sería útil.
+•	El concepto de DataBooks me parece relevante, pero ten en cuenta que el trabajo de Cagle no llega a ser rigurosamente académico. De hecho, “Shannon”, su “coautora”, es un agente de IA, y puede resultar un poco extraño citar a una autora que no sea humana.
+
+Página 5:
+•	Creo que la afirmación de “high precision” carece de evidencia. Quizás convenga matizarla un poco.
+
+Página 7:
+•	TerminusDB no es propiamente una base de datos que implemente el estándar OWL. OWL opera bajo un régimen de “open world”, mientras que TerminusDB es de “closed world”.
+
+Página 8:
+•	Quizás sea bueno acortar el enlace de Google con un servicio como Bitly para que no quede muy grande. 
+
+Páginas 10-12:
+•	Las capturas de pantalla no parecen corresponder a lo descrito.
+
+Páginas 12-13:
+•	Creo que no es necesario entrar en tantos detalles técnicos (como la dirección del cuaderno de Colab, los comandos y funciones de Python, etc.). Sería mejor describir simplemente el proceso. En este punto, no me quedó del todo claro la relación entre Colab y el uso de rdflib, SPARQL y TerminusDB/DFRNT. ¿Hay un puente entre ellos?
+
+Página 15:
+•	Quitaría la palabra “completely” para no sonar muy categórico.

@@ -1,0 +1,187 @@
+[
+    {
+        "@type": "Account",
+        "@id": "Account/122505",
+        "accountMainID": "122505",
+        "accountMainDescription": "Inversiones CDT Santander",
+        "mainAccountType": "Asset",
+        "artifact_name": "CDT Mapping Momento 1"
+    },
+    {
+        "@type": "ACTUS_Contract",
+        "@id": "ACTUS_Contract/CDT-SANT-001",
+        "actus_ContractType": "PAM",
+        "actus_ContractRole": "RPA",
+        "actus_Currency": "COP",
+        "actus_NotionalPrincipal": 10000000.0,
+        "actus_NominalInterestRate": 0.11,
+        "actus_DayCountConvention": "30E360",
+        "actus_StatusDate": "2026-07-05T00:00:00",
+        "actus_InitialExchangeDate": "2026-07-05T00:00:00",
+        "actus_MaturityDate": "2026-10-05T00:00:00",
+        "actus_CycleAnchorDateOfInterestPayment": "2026-10-05T00:00:00",
+        "actus_CycleOfInterestPayment": "P3ML1",
+        "actus_ExpectedEvents": [
+            "ACTUS_Event/CDT-SANT-001-IP-20260731",
+            "ACTUS_Event/CDT-SANT-001-IP-20260831",
+            "ACTUS_Event/CDT-SANT-001-IP-20260930",
+            "ACTUS_Event/CDT-SANT-001-IP-20261005",
+            "ACTUS_Event/CDT-SANT-001-MD-20261005"
+        ],
+        "actus_CycleAnchorDateOfInterestPayment": "2026-07-31T00:00:00",
+        "prov:wasGeneratedBy": {
+            "@id": "Activity/ACTUS_Engine_PAM",
+            "@type": "prov:Activity",
+            "prov:used": "http://165.245.137.44:8083/events",
+            "actus_EngineVersion": "actus-service-1.0.2 / actus-core-1.1.0",
+            "actus_QueryParams": "cycleOfInterestPayment=P1ML1, cycleAnchorDateOfInterestPayment=2026-07-31"
+        }
+    },
+    {
+        "@type": ["ACTUS_Event", "prov:Entity"],
+        "@context": { "prov": "http://www.w3.org/ns/prov#" },
+        "@id": "ACTUS_Event/CDT-SANT-001-IP-20260731",
+        "actus_EventType": "IP",
+        "actus_EventTypeName": "Interest Payment (Causación julio)",
+        "actus_EventDate": "2026-07-31T00:00:00",
+        "actus_Payoff": 76388.89,
+        "actus_Currency": "COP",
+        "actus_NominalValue": 10000000.0,
+        "actus_NominalRate": 0.11,
+        "actus_DaysAccrued": 25,
+        "actus_ContractID": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasDerivedFrom": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasGeneratedBy": { "@id": "Activity/ACTUS_Engine_PAM", "@type": "prov:Activity" },
+        "xbrl_interpretation": "Causación de intereses julio 2026: 25 días × (11%/360) × $10.000.000. Débito cuenta de intereses por cobrar, Crédito ingreso por intereses."
+    },
+    {
+        "@type": ["ACTUS_Event", "prov:Entity"],
+        "@context": { "prov": "http://www.w3.org/ns/prov#" },
+        "@id": "ACTUS_Event/CDT-SANT-001-IP-20260831",
+        "actus_EventType": "IP",
+        "actus_EventTypeName": "Interest Payment (Causación agosto)",
+        "actus_EventDate": "2026-08-31T00:00:00",
+        "actus_Payoff": 91666.67,
+        "actus_Currency": "COP",
+        "actus_NominalValue": 10000000.0,
+        "actus_NominalRate": 0.11,
+        "actus_DaysAccrued": 30,
+        "actus_ContractID": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasDerivedFrom": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasGeneratedBy": { "@id": "Activity/ACTUS_Engine_PAM", "@type": "prov:Activity" },
+        "xbrl_interpretation": "Causación de intereses agosto 2026: 30 días × (11%/360) × $10.000.000. Débito cuenta de intereses por cobrar, Crédito ingreso por intereses."
+    },
+    {
+        "@type": ["ACTUS_Event", "prov:Entity"],
+        "@context": { "prov": "http://www.w3.org/ns/prov#" },
+        "@id": "ACTUS_Event/CDT-SANT-001-IP-20260930",
+        "actus_EventType": "IP",
+        "actus_EventTypeName": "Interest Payment (Causación septiembre)",
+        "actus_EventDate": "2026-09-30T00:00:00",
+        "actus_Payoff": 91666.67,
+        "actus_Currency": "COP",
+        "actus_NominalValue": 10000000.0,
+        "actus_NominalRate": 0.11,
+        "actus_DaysAccrued": 30,
+        "actus_ContractID": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasDerivedFrom": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasGeneratedBy": { "@id": "Activity/ACTUS_Engine_PAM", "@type": "prov:Activity" },
+        "xbrl_interpretation": "Causación de intereses septiembre 2026: 30 días × (11%/360) × $10.000.000. Débito cuenta de intereses por cobrar, Crédito ingreso por intereses."
+    },
+    {
+        "@type": ["ACTUS_Event", "prov:Entity"],
+        "@context": { "prov": "http://www.w3.org/ns/prov#" },
+        "@id": "ACTUS_Event/CDT-SANT-001-IP-20261005",
+        "actus_EventType": "IP",
+        "actus_EventTypeName": "Interest Payment (Causación octubre + cobro total)",
+        "actus_EventDate": "2026-10-05T00:00:00",
+        "actus_Payoff": 15277.78,
+        "actus_Currency": "COP",
+        "actus_NominalValue": 10000000.0,
+        "actus_NominalRate": 0.11,
+        "actus_DaysAccrued": 5,
+        "actus_TotalInterestCollected": 275000.0,
+        "actus_ContractID": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasDerivedFrom": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasGeneratedBy": { "@id": "Activity/ACTUS_Engine_PAM", "@type": "prov:Activity" },
+        "xbrl_interpretation": "Causación final octubre 1-5: 5 días × (11%/360) × $10.000.000. Total intereses recibidos del CDT: $275.000 COP."
+    },
+    {
+        "@type": ["ACTUS_Event", "prov:Entity"],
+        "@context": { "prov": "http://www.w3.org/ns/prov#" },
+        "@id": "ACTUS_Event/CDT-SANT-001-MD-20261005",
+        "actus_EventType": "MD",
+        "actus_EventTypeName": "Maturity Date",
+        "actus_EventDate": "2026-10-05T00:00:00",
+        "actus_Payoff": 10000000.0,
+        "actus_Currency": "COP",
+        "actus_NominalValue": 0.0,
+        "actus_NominalRate": 0.11,
+        "actus_ContractID": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasDerivedFrom": "ACTUS_Contract/CDT-SANT-001",
+        "prov:wasGeneratedBy": { "@id": "Activity/ACTUS_Engine_PAM", "@type": "prov:Activity" },
+        "xbrl_interpretation": "Devolución del capital al vencimiento: $10.000.000 COP. Baja del activo cuenta 122505 (Inversiones CDT Santander). Total flujo recibido: $10.275.000 COP."
+    },
+    {
+        "@type": ["EntryDetail", "prov:Entity"],
+        "@context": {
+            "prov": "http://www.w3.org/ns/prov#"
+        },
+        "@id": "EntryDetail/M1-001-1",
+        "artifact_name": "CDT Mapping Momento 1",
+        "lineNumberCounter": 1,
+        "account": "Account/122505",
+        "amount": 10000000.0,
+        "debitCreditCode": "D",
+        "postingDate": "2026-07-05",
+        "prov:generatedAtTime": "2026-07-05T08:00:00Z",
+        "agent_identifier": "Banco Santander",
+        "prov:wasAttributedTo": {
+            "@id": "Agent/Banco_Santander",
+            "@type": "prov:Agent"
+        },
+        "measurable": {
+            "measurableCode": "CDT-SANT-001",
+            "measurableID": "ACTUS_Contract/CDT-SANT-001",
+            "measurableDescription": "2026-10-05",
+            "measurableQuantity": 10000000.0,
+            "measurableUnitOfMeasure": "COP",
+            "measurableCostPerUnit": 0.11
+        }
+    },
+    {
+        "@type": "Account",
+        "@id": "Account/111005",
+        "accountMainID": "111005",
+        "accountMainDescription": "Bancos Moneda Nacional",
+        "mainAccountType": "Liability",
+        "artifact_name": "CDT Mapping Momento 1"
+    },
+    {
+        "@type": ["EntryDetail", "prov:Entity"],
+        "@context": {
+            "prov": "http://www.w3.org/ns/prov#"
+        },
+        "@id": "EntryDetail/M1-001-2",
+        "artifact_name": "CDT Mapping Momento 1",
+        "lineNumberCounter": 2,
+        "account": "Account/111005",
+        "amount": 10000000.0,
+        "debitCreditCode": "C",
+        "postingDate": "2026-07-05",
+        "prov:generatedAtTime": "2026-07-05T08:00:00Z",
+        "agent_identifier": "Banco Santander",
+        "prov:wasAttributedTo": {
+            "@id": "Agent/Banco_Santander",
+            "@type": "prov:Agent"
+        },
+        "measurable": {
+            "measurableCode": "CDT-SANT-001",
+            "measurableID": "ACTUS_Contract/CDT-SANT-001",
+            "measurableDescription": "2026-10-05",
+            "measurableQuantity": 10000000.0,
+            "measurableUnitOfMeasure": "COP",
+            "measurableCostPerUnit": 0.11
+        }
+    }
+]

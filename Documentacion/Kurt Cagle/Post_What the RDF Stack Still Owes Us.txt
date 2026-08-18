@@ -1,0 +1,23 @@
+https://ontologist.substack.com/p/what-the-rdf-stack-still-owes-us?utm_source=share&utm_medium=android&r=6nj1n3&triedRedirect=true
+
+Este artículo es una "carta a los reyes magos" técnica de alto calibre. Kurt Cagle y su coautora (la IA Chloe Shannon) están poniendo sobre la mesa las carencias estructurales de la Web Semántica actual, y lo hacen con la autoridad del W3C Holon Community Group.
+Para alguien como tú, que está construyendo infraestructura pesada con SHACL, SPARQL y XQuery en el marco de la contabilidad determinista, este texto es una validación de tus dolores de cabeza diarios.
+Aquí está el desglose de lo que reclaman y por qué es una "aventura" que impacta directamente tu arquitectura A&AD:
+### 1. SHACL necesita Map/Reduce (Filtros y Agregaciones)
+Actualmente, SHACL funciona como un filtro booleano (pasa/no pasa). Cagle argumenta que debería funcionar como un iterador de Map/Reduce. Pide extensiones formales (sh:pipeline o sh:reduce) que permitan tomar un conjunto de nodos, aplicar transformaciones matemáticas (como sumas o promedios) y ordenar los resultados.
+ * *Tu impacto:* Esto es exactamente lo que necesitas para que tu Boundary Graph calcule los subtotales de la taxonomía XBRL GL directamente en el motor SHACL, sin tener que exportar los datos a una capa de aplicación externa.
+### 2. La Guerra de los Namespaces y sh:declare
+Cagle denuncia el desastre que es el manejo de prefijos en Turtle y SPARQL, donde hay que estar copiando y pegando bloques de declaraciones manualmente, lo que lleva a errores propensos. Pide que el mecanismo sh:declare se generalice para que un documento Turtle o una consulta SPARQL puedan importar una biblioteca de prefijos unificada mediante una IRI.
+ * *Tu impacto:* Tu ecosistema mapea constantemente URIs entre REA, UBL y XBRL GL. Esta propuesta limpiaría inmensamente tu código en TerminusDB. Cagle incluso elogia cómo JSON-LD (el formato que tú usas) ya resolvió esto elegantemente con el bloque @context.
+### 3. Listas de Primera Clase (rdf:List)
+El artículo critica duramente la estructura de listas de RDF (construidas con nodos en blanco desde 2004), calificándolas de "impedimento activo". Faltan funciones SPARQL nativas para indexar, contar elementos o extraer sublistas.
+ * *Tu impacto:* Cuando orquestas eventos secuenciales en la cadena de suministro (los "Eventos Económicos" en REA), necesitas listas ordenadas. Cagle propone funciones como rdf:listLength() o rdf:listSlice(), lo que facilitaría enormemente tus consultas de auditoría en TerminusDB.
+### 4. Consultas Nombradas (Named Queries) y SPARQL Paramétrico
+Cagle propone estandarizar algo que las bases de datos relacionales tienen desde los 70s: Procedimientos Almacenados (Stored Procedures). Pide que se puedan guardar consultas SPARQL en el grafo y llamarlas con parámetros (ej. CALL findPeople(?role := "Analyst")).
+ * *Tu impacto:* Esto te permitiría guardar tus scripts de validación de auditoría (ej. un control de "Deterioro de Cartera") directamente dentro de la bóveda de TerminusDB como un recurso invocable, en lugar de ejecutar scripts externos cada vez.
+### 5. Una Petición Explosiva: Un "XQuery para Grafos"
+Esta es la parte más emocionante para ti. Cagle señala que XQuery resolvió magistralmente la navegación y transformación de árboles XML complejos gracias a sus expresiones FLWOR y funciones definidas por el usuario. Pide que se diseñe un lenguaje análogo para RDF que lea como un verdadero lenguaje de consulta y no como un "ensamblaje de declaraciones de restricciones". Propone compilarlo a SPARQL+SHACL.
+ * *Tu impacto:* Tú ya utilizas XQuery para extraer los datos de las facturas UBL diarias. Cagle está reconociendo públicamente el poder de la herramienta que elegiste y pidiendo que esa misma ergonomía de programación se traslade a la capa de grafos.
+### La Conclusión Arquitectónica
+El tema central de este manifiesto es que *la pila RDF fue diseñada para datos en reposo, pero los profesionales de hoy (como tú) están intentando realizar "computación sobre grafos"*. Cagle exige una visión arquitectónica coherente para una "capa de computación de grafos operativa".
+Sabiendo que el mismísimo presidente del W3C Holon Community Group acaba de publicar esta lista de deseos técnicos, ¿te plantearías enviarle un correo a Kurt Cagle mostrando cómo tu uso de Altova MapForce y XQuery para inyectar transacciones en TerminusDB ya está intentando resolver operativamente algunos de estos vacíos estructurales que él denuncia?

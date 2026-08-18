@@ -1,0 +1,11 @@
+The tools were always a proxy. Today is the last week of my Emerging Technologies in Accounting class at Lamar's Masters in Accounting program - and I think I taught it for the last time in its current form.
+
+The syllabus is built on a six-year-old no-code/low-code stack: UiPath StudioX, Alteryx, Tableau. Good tools for building a data mindset, a process mindset, an automation mindset. But this weekend's AAA DATA Workshop is still teaching Alteryx Designer, Power BI, UiPath, Excel, seemingly largely unchanged, while KPMG just ran a training session, per the WSJ, built entirely around critical thinking, fraud scavenger hunts, and what AI won't be doing soon. Not an app in sight.
+
+That gap is the story. The Big 4 told me years ago this stack mattered for hiring. PCAOB interviews confirmed it into the ChatGPT era. But GenAI tools now do much of what these platforms do, and the platforms themselves are racing to bolt on GenAI features just to stay relevant. Teaching the desktop version of a tool that won't exist in that form by graduation isn't preparation ... it's nostalgia. The web versions of those products may hold the AI enablement, but as of now still carry but a fraction of the power of the desktop versions. 
+
+So here's where I've landed: the tools were only ever proxies. The mindsets - data, process, automation - are the real curriculum, and they can be built just as well, maybe better, with the GenAI tools students will actually be using in three years.
+
+Sam Altman says we're near the singularity. I don't know about that. But I know what my students need next time around, and it isn't StudioX.
+
+Curious whether other accounting educators are seeing the same signal.

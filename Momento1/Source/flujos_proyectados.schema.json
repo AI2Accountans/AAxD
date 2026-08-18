@@ -1,0 +1,240 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/object_02",
+  "definitions": {
+    "object_01": {
+      "type": "object",
+      "required": [
+        "actus_ContractID",
+        "actus_ContractType",
+        "agent",
+        "inputContract",
+        "summary",
+        "events"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "actus_ContractID": {
+          "type": "string"
+        },
+        "actus_ContractType": {
+          "type": "string"
+        },
+        "agent": {
+          "type": "string"
+        },
+        "inputContract": {
+          "title": "inputContract",
+          "type": "object",
+          "required": [
+            "contractType",
+            "contractID",
+            "contractRole",
+            "currency",
+            "statusDate",
+            "notionalPrincipal",
+            "nominalInterestRate",
+            "dayCountConvention",
+            "maturityDate",
+            "initialExchangeDate",
+            "cycleAnchorDateOfInterestPayment",
+            "cycleOfInterestPayment"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "contractType": {
+              "type": "string"
+            },
+            "contractID": {
+              "type": "string"
+            },
+            "contractRole": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "statusDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "notionalPrincipal": {
+              "type": "number"
+            },
+            "nominalInterestRate": {
+              "type": "number"
+            },
+            "dayCountConvention": {
+              "type": "string"
+            },
+            "maturityDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "initialExchangeDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "cycleAnchorDateOfInterestPayment": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "cycleOfInterestPayment": {
+              "type": "string"
+            }
+          }
+        },
+        "summary": {
+          "title": "summary",
+          "type": "object",
+          "required": [
+            "totalInterest",
+            "totalPrincipal",
+            "totalCashflow",
+            "currency",
+            "totalDays",
+            "zeroCausationDays",
+            "dailyRate"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "totalInterest": {
+              "type": "number"
+            },
+            "totalPrincipal": {
+              "type": "number"
+            },
+            "totalCashflow": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "totalDays": {
+              "type": "number"
+            },
+            "zeroCausationDays": {
+              "type": "number"
+            },
+            "dailyRate": {
+              "type": "number"
+            }
+          }
+        },
+        "events": {
+          "type": "array",
+          "title": "events",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "time",
+              "payoff",
+              "currency",
+              "nominalValue",
+              "nominalRate",
+              "nominalAccrued",
+              "event_id",
+              "actus_ContractID",
+              "interestCumulative",
+              "negotiableValue"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "time": {
+                "type": "string"
+              },
+              "payoff": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "nominalValue": {
+                "type": "number"
+              },
+              "nominalRate": {
+                "type": "number"
+              },
+              "nominalAccrued": {
+                "type": "number"
+              },
+              "event_id": {
+                "type": "string"
+              },
+              "actus_ContractID": {
+                "type": "string"
+              },
+              "interestCumulative": {
+                "type": "number"
+              },
+              "negotiableValue": {
+                "type": "number"
+              },
+              "dayNumber": {
+                "type": "number"
+              },
+              "isZeroDay": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "object_02": {
+      "type": "object",
+      "required": [
+        "pipeline",
+        "projectionMode",
+        "generatedAt",
+        "actusServer",
+        "csvSource",
+        "dayCountConvention",
+        "cycleOfInterest",
+        "contractCount",
+        "contracts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "pipeline": {
+          "type": "string"
+        },
+        "projectionMode": {
+          "type": "string"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "actusServer": {
+          "type": "string",
+          "format": "uri"
+        },
+        "csvSource": {
+          "type": "string",
+          "format": "uri"
+        },
+        "dayCountConvention": {
+          "type": "string"
+        },
+        "cycleOfInterest": {
+          "type": "string"
+        },
+        "contractCount": {
+          "type": "number"
+        },
+        "contracts": {
+          "type": "array",
+          "title": "contracts",
+          "items": {
+            "$ref": "#/definitions/object_01"
+          }
+        }
+      }
+    }
+  }
+}

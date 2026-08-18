@@ -1,0 +1,25 @@
+I am getting a fuller and fuller appreciation for what Richard Gasca has done with his Accounting & Audit by Design Framework.  There are still a few things I don’t totally get like “zero-shot audit”; but I will eventually get there.  Two things you will very likely find useful.
+
+First, I “reconciled” all the standards used created by all these different standards setters: ISO/IEC, OMG, OASIS, ACTUS (which is on track to become an ISO/IEC standard), XBRL International, FASB, and IFRS Foundation; all of them.  I have explained each of these important standards and explained how they “fit together”.  Richard, in his working proof of concept, as put all these standards together effectively and has enabled information to flow trough a system effectively.  This is work reading through.
+
+https://digitalfinancialreporting.blogspot.com/2026/07/standards-for-interconnecting.html
+
+Second, what a freaking KLUDGE.  Pretty much all those things were created in isolations without knowledge of each other.  BUT EVERY PROBLEM IS  AN OPPORTUNITY!!!  All these standards setters, because of “turf wars” or “ignorance” or other situations do not really fit together as well as they should, or could.  But, with work, they can be MADE TO FIT TOGETHER and they SHOULD FIT TOGETHER.  And so, there is a BUSINESS OPPORTUNITY to overcome this problem or orchestration.
+
+Third, I mentioned before, that the PWC/Anthropic partnership is evaluated as being a “land-and-expand” consulting play. See, https://www.landandexpand.academy/blog/what-is-land-and-expand The BUSINESS MODEL behind the land-and-expand consulting is TRANSFORMATION.  As I mentioned before, if someone came to me and said they wanted to do a “transformation”; my first question would be, “Transformation into what?”  What would be incredibly interesting is to somehow ask  PWC/Anthropic to actually answer that question and see what they say.
+
+Regardless; forth, Richard’s Accounting & Audit by Design Framework answers that question.  That  is the “that” the transformation SHOULD BE.
+
+As I told Dean months ago, artificial intelligence is the “Y2K” of our era.  A BOATLOAD of money was made by Big 4 and other consulting firms in the 1990s to prepare for the Armageddon of 2000.   Now we have the Armageddon of AI.  There was no Armageddon then in 2000, and there will be no Armageddon with AI.  But, every enterprise will have problems actually making effective use of AI.  There WILL  BE a transformation.  These two blog posts explain what that transformation could be, and in my view, should be.
+
+Both of these say the same  thing using different approaches.  The first is more verbose; the second is more in the form of an outline. Both are worth reading.  This is incredibly important information; it will help make sure the right product(s) are built.  And, personally, this is what I believe DFRNT should be building.
+
+Coming Transformation of Accounting Information Systems: https://seattlemethod.blogspot.com/2026/07/coming-transformation-of-accounting.html
+
+Coming Transformation of Accounting Information Systems (Alternative): https://seattlemethod.blogspot.com/2026/07/coming-transformation-of-accounting_0858910251.html
+
+There is no real way an accountant, auditor, or analyst would object with the value that is conveyed.  Now, it the tools did not work correctly or were too hard to use; they could object, and would object, to that.  But what Accounting & Audit by Design Framework communicates, it hard to argue against.  It will be really interesting to see the reaction of people from that audit and artificial intelligence conference.  And/or, it might be a good thing to give this information to John Clements (Dean, you should do this) and see what he says. I have already done this.  I KNOW what he says.
+
+Cheers,
+
+Charlie

@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" font-family="Arial, sans-serif">
+  <defs>
+    <!-- Gradients for Chevrons -->
+    <linearGradient id="chevronGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#546e7a" />
+      <stop offset="100%" stop-color="#263238" />
+    </linearGradient>
+    <linearGradient id="chevronGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#37474f" />
+      <stop offset="100%" stop-color="#212121" />
+    </linearGradient>
+    <linearGradient id="chevronGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78909c" />
+      <stop offset="100%" stop-color="#455a64" />
+    </linearGradient>
+
+    <!-- Translucent Overlay for Grouping -->
+    <linearGradient id="overlayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b2ebf2" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#80deea" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- 3D Block Gradients -->
+    <linearGradient id="blockFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#80cbc4" />
+      <stop offset="100%" stop-color="#26a69a" />
+    </linearGradient>
+    <linearGradient id="blockTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b2dfdb" />
+      <stop offset="100%" stop-color="#80cbc4" />
+    </linearGradient>
+    <linearGradient id="blockRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00897b" />
+      <stop offset="100%" stop-color="#00695c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title Section -->
+  <text x="20" y="220" font-weight="bold" font-size="20" fill="#000">Processes</text>
+  <text x="20" y="470" font-weight="bold" font-size="20" fill="#000">Participants</text>
+
+  <!-- PROCESSES SECTION (CHEVRONS) -->
+  
+  <!-- Grouping Capsules (Background) -->
+  <!-- Capsule 1: Moment 0 -->
+  <rect x="180" y="50" width="220" height="250" rx="40" fill="url(#overlayGrad)" stroke="#4dd0e1" stroke-width="2"/>
+  <text x="290" y="80" text-anchor="middle" font-weight="bold" font-size="18" fill="#006064">Moment 0</text>
+  <text x="290" y="100" text-anchor="middle" font-size="14" fill="#00838f">Operational Layer</text>
+
+  <!-- Capsule 2: A&AD Control -->
+  <rect x="360" y="50" width="350" height="250" rx="40" fill="url(#overlayGrad)" stroke="#4dd0e1" stroke-width="2"/>
+  <text x="535" y="80" text-anchor="middle" font-weight="bold" font-size="18" fill="#006064">Accounting and Audit by Design</text>
+  <text x="535" y="100" text-anchor="middle" font-size="14" fill="#00838f">Semantic Transmutation</text>
+
+  <!-- Capsule 3: Zero-Shot Reporting -->
+  <rect x="670" y="50" width="280" height="250" rx="40" fill="url(#overlayGrad)" stroke="#4dd0e1" stroke-width="2"/>
+  <text x="810" y="80" text-anchor="middle" font-weight="bold" font-size="18" fill="#006064">Zero-Shot Audit</text>
+  <text x="810" y="100" text-anchor="middle" font-size="14" fill="#00838f">External Reporting</text>
+
+  <!-- Chevrons -->
+  <!-- Helper function to draw chevron: M x,y L x+140,y L x+170,y+50 L x+140,y+100 L x,y+100 L x+30,y+50 Z -->
+  <!-- 1. Genesis -->
+  <g transform="translate(160, 130)">
+    <polygon points="0,0 130,0 160,50 130,100 0,100 30,50" fill="url(#chevronGradLight)" />
+    <text x="90" y="35" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">REA (Resources,</text>
+    <text x="90" y="55" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Events,</text>
+    <text x="90" y="75" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Agents)</text>
+  </g>
+
+  <!-- 2. TerminusDB -->
+  <g transform="translate(300, 130)">
+    <polygon points="0,0 130,0 160,50 130,100 0,100 30,50" fill="url(#chevronGrad)" />
+    <text x="90" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Graph Knowledge</text>
+    <text x="90" y="65" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Engine</text>
+  </g>
+
+  <!-- 3. MapForce -->
+  <g transform="translate(440, 130)">
+    <polygon points="0,0 130,0 160,50 130,100 0,100 30,50" fill="url(#chevronGradLight)" />
+    <text x="90" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Semantic</text>
+    <text x="90" y="65" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Transmutation</text>
+  </g>
+
+  <!-- 4. DataBook -->
+  <g transform="translate(580, 130)">
+    <polygon points="0,0 130,0 160,50 130,100 0,100 30,50" fill="url(#chevronGrad)" />
+    <text x="90" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Living Knowledge</text>
+    <text x="90" y="65" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Wrapper</text>
+  </g>
+
+  <!-- 5. Autonomous Audit -->
+  <g transform="translate(720, 130)">
+    <polygon points="0,0 150,0 180,50 150,100 0,100 30,50" fill="url(#chevronGradDark)" />
+    <text x="100" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Continuous</text>
+    <text x="100" y="65" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Autonomous Audit</text>
+  </g>
+
+
+  <!-- PARTICIPANTS SECTION (3D BLOCKS) -->
+  
+  <!-- Block 1: Companies / Origins (Wide) -->
+  <g transform="translate(180, 360)">
+    <polygon points="20,-20 420,-20 400,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="400,0 420,-20 420,50 400,70" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="400" height="70" fill="url(#blockFront)"/>
+    <text x="200" y="40" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">Enterprise &amp; IoT Sources</text>
+  </g>
+
+  <!-- Block 2: Data Aggregators / DFRNT -->
+  <g transform="translate(610, 360)">
+    <polygon points="20,-20 180,-20 160,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="160,0 180,-20 180,50 160,70" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="160" height="70" fill="url(#blockFront)"/>
+    <text x="80" y="30" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Semantic Graph</text>
+    <text x="80" y="50" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Engines</text>
+  </g>
+
+  <!-- Block 3: Investors / Auditors -->
+  <g transform="translate(800, 360)">
+    <polygon points="20,-20 140,-20 120,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="120,0 140,-20 140,50 120,70" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="120" height="70" fill="url(#blockFront)"/>
+    <text x="60" y="30" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Investors &amp;</text>
+    <text x="60" y="50" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Stakeholders</text>
+  </g>
+
+  <!-- Block 4: Trading Partners / Smart Contracts -->
+  <g transform="translate(180, 470)">
+    <polygon points="15,-15 150,-15 135,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="135,0 150,-15 150,40 135,55" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="135" height="55" fill="url(#blockFront)"/>
+    <text x="67" y="25" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Smart Contracts</text>
+    <text x="67" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">&amp; Oracles</text>
+  </g>
+
+  <!-- Block 5: Mgt Accountants / Data Stewards -->
+  <g transform="translate(340, 470)">
+    <polygon points="15,-15 180,-15 165,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="165,0 180,-15 180,40 165,55" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="165" height="55" fill="url(#blockFront)"/>
+    <text x="82" y="25" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Data Stewards &amp;</text>
+    <text x="82" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Taxonomy Architects</text>
+  </g>
+
+  <!-- Block 6: Auditors / AI Agents -->
+  <g transform="translate(530, 470)">
+    <polygon points="15,-15 140,-15 125,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="125,0 140,-15 140,40 125,55" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="125" height="55" fill="url(#blockFront)"/>
+    <text x="62" y="25" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Autonomous</text>
+    <text x="62" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">AI Auditors</text>
+  </g>
+
+  <!-- Block 7: Regulators -->
+  <g transform="translate(680, 470)">
+    <polygon points="15,-15 260,-15 245,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="245,0 260,-15 260,40 245,55" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="245" height="55" fill="url(#blockFront)"/>
+    <text x="122" y="32" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Human Regulators &amp; Oversight</text>
+  </g>
+
+  <!-- Block 8: Software Vendors / DFRNT & Altova -->
+  <g transform="translate(180, 560)">
+    <polygon points="15,-15 760,-15 745,0 0,0" fill="url(#blockTop)"/>
+    <polygon points="745,0 760,-15 760,30 745,45" fill="url(#blockRight)"/>
+    <rect x="0" y="0" width="745" height="45" fill="url(#blockFront)"/>
+    <text x="372" y="28" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">Semantic Infrastructure (GraphDB, Integrators, DataBooks)</text>
+  </g>
+
+  <!-- Footer Link -->
+  <a href="https://www.w3.org/2009/03/xbrl/old-report.html" target="_blank">
+    <text x="500" y="635" text-anchor="middle" font-size="12" fill="#0277bd" text-decoration="underline" font-style="italic">Based on W3C XBRL Business Reporting Chain (2009): https://www.w3.org/2009/03/xbrl/old-report.html</text>
+  </a>
+</svg>

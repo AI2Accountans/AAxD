@@ -1,0 +1,29 @@
+In their book, Semantic Web for the Working Ontologist, Dean Allemang and Jim Hendler point out:
+
+“Without the model, there is an undifferentiated mass of data; there is no way to tell which data can or should be extracted with other data. The model itself has no significance without data to describe it. Put the two together, however, and you have a dynamic web of information, where data flow from one point to another in a principled, systematic fashion.”
+
+The deeper and deeper I get into this, the more I understand the specifics of how problematic it is to use 800 electronic spreadsheets to represent an external compliance report. WHAT IF you could replace 20% of those electronic spreadsheets with something that has to sorts of characteristics that you see here in this PDF:
+
+https://xbrlsite.azurewebsites.net/2026/library/DigitalInformationOrganism.pdf
+
+XBRL Cloud built the first XBRL-based “pivot table” in about 2010 or so. Unfortunately, XBRL Cloud used Adobe Flex to build the GUI which had significant security issues. XBRL Cloud’s tool was only a viewer. Separate tools were available for validation and they could do about 80% of Seattle Method validation. Hamed Mousavi, a software developer in Iran built the second working pivot table that I have seen. But that application, Pesseract, was a desktop application (i.e. not cloud based) and also read only. Pesseract did about 95% of the Seattle Method verification. Miguel Calejo built the next semi-working pivot table in Auditchain’s Pacioli. That application did 100% of the Seattle Method verification; but again it was read only. What that PDF shows you is PIVOT working as I would expect it to work in an application that is cloud based and where 100% of the Seattle Method verification is supported; PLUS the pivot is READ and WRITE. Fuad Begic, an enterprise architect from Auditchain created that.
+
+Another interesting take on pivoting which is still in its early stages but has some interesting characteristics is the Robosystems “Holon viewer”; see, https://github.com/RoboFinSystems/robosystems-holon-viewer.
+
+But probably the most interesting take on all this is Lodgeit’s take (Andrew Noble); the manifold. See, https://lodgeit.org/blog/2026-07-01-what-we-are-building/. Robosystems also has something similar, the RoboLedger; see, https://roboledger.ai/ RoboLedger refers to this as “The end of spreadsheet hell.” I agree. Why?
+
+The higher the models go “up the stack”; the more functional the “stack” will be to business professionals; like accountants, auditors, and analysists. Patterns, patterns, patterns. The more patterns you figure out; the more models you can build. The models and the data “collaborating” will bring magical functionality. Electronic spreadsheets have a model: workbooks, sheets, columns, rows, and cells. Extremely flexible. And that is both a strength and a weakness. If you need control; it is not just a weakness, it is a dead end. Spreadsheets simply cannot be scaled.
+
+But digital information organisms can be scaled.
+
+Digital Information Organism: https://seattlemethod.blogspot.com/2026/05/digital-information-organism.html
+
+The Accounting Manifold: https://seattlemethod.blogspot.com/2026/07/the-accounting-manifold.html
+
+Accounting & Audit by Design Framework: https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html
+
+Principled, systematic.
+
+Cheers,
+
+Charlie

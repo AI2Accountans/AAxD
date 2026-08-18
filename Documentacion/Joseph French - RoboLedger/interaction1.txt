@@ -1,0 +1,19 @@
+RoboLedger's month-end close can refuse to close.
+
+Not warn. Not flag. Refuse.
+
+If the balance equation does not hold, the period does not close. If the accounting system has not synced recently enough that we know we are looking at current data, it does not close, and it tells you how many days stale. If there are draft entries whose debits do not equal their credits, it does not close.
+
+I know exactly how that sounds to anyone who has closed books against a deadline. There are nights you want the system to let you through and sort it out in the morning.
+
+But consider what a close checklist actually is in most organizations. A list. A human confirms each line, usually the same human, usually tired, and the confirmation is a checkbox rather than a test. The checklist verifies nothing. It records that somebody said they verified it.
+
+The difference between a checklist and a gate is whether the system can tell "checked" from "true."
+
+There is an override for the stale-data case, because sometimes you genuinely have verified it another way. But the override is explicit, it is named, and it is logged. You cannot take it by accident.
+
+It is occasionally annoying. It has never let a broken period through.
+
+The whole thing is open source, so "it refuses" is something you can go read for yourself rather than take from me.
+
+Is your close a checklist or a gate?

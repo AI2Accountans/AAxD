@@ -1,0 +1,15 @@
+Modeling is the process of organizing information for community use in the form of a model. The model provides a framework for human communication about the subject domain, a mechanism for explaining conclusions about the subject domain, an a mechanism for managing varying viewpoints within the subject domain.
+
+These days, to create a good model you have to be a master craftsman with a trifecta of skills and experience: domain skills and experience, knowledge engineering skills and experience, and technical skills and experience to use a specific piece of software that was built for technical professionals. But that WILL NOT WORK. Full stop. The so called “semantic web” will never work the way it needs to work until tools are approachable and usable by business professionals who are the subject matter experts of their domain.
+
+So what, business subject matter experts need to call the IT department every time they need to tweak a model. Really?
+
+The right answer is to get software developers to build better software. This is very, very possible if you apply design techniques such as the Atomic Design Methodology. Just because business professionals are ignorant of the possibility of the fact that software can be better; that ignorance will only last until the first software developer/vendor gets this right. An example of this in action is the iPhone. Apple figured it out
+
+LLMs and transformers can assist and make things easier for business professionals; but it is going to take modeling by skilled experienced subject matter experts of the modeled domain to get the subtleties and nuances dialed in appropriately. Sure, there are other clever techniques and tricks which can be used; but fundamentally subject matter experts need to control their subject matters. Modeling will provide that control.
+
+Business rules in code is a thing of the past.
+
+https://seattlemethod.blogspot.com/2026/08/essence-of-modeling.html
+
+image1.png

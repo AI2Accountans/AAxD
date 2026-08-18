@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrll="http://www.xbrl.org/2003/linkbase" xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25" xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25" xmlns:gl-gen="http://www.xbrl.org/int/gl/gen/2015-03-25" xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25" xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25" xmlns:gl-srcd="http://www.xbrl.org/int/gl/srcd/2015-03-25" xmlns:gl-taf="http://www.xbrl.org/int/gl/taf/2015-03-25" xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<xbrll:schemaRef xlink:type="simple" xlink:href="C:/Users/IPHIX/Documents/Projects/DFRNT/Momento0/Taxonomy/gl/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.CompanyName.com">SOCIEDAD_GENESIS_LTDA</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2005-06-01</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:documentInfo>
+			<gl-cor:entriesType contextRef="ctx1">other</gl-cor:entriesType>
+			<gl-cor:uniqueID contextRef="ctx1">GENESIS-001</gl-cor:uniqueID>
+			<gl-cor:language contextRef="ctx1">iso639:es</gl-cor:language>
+			<gl-cor:creationDate contextRef="ctx1">2005-06-01</gl-cor:creationDate>
+			<gl-bus:creator contextRef="ctx1">Notaria Veinticinco de Medellin</gl-bus:creator>
+			<gl-cor:entriesComment contextRef="ctx1">Constitucion de Sociedad de Responsabilidad Limitada</gl-cor:entriesComment>
+			<gl-cor:periodCoveredStart contextRef="ctx1">2005-06-01</gl-cor:periodCoveredStart>
+			<gl-cor:periodCoveredEnd contextRef="ctx1">2005-06-01</gl-cor:periodCoveredEnd>
+			<gl-muc:defaultCurrency contextRef="ctx1">iso4217:COP</gl-muc:defaultCurrency>
+		</gl-cor:documentInfo>
+		<gl-cor:entityInformation>
+			<gl-bus:organizationIdentifiers>
+				<gl-bus:organizationIdentifier contextRef="ctx1">SOCIEDAD_GENESIS_LTDA</gl-bus:organizationIdentifier>
+			</gl-bus:organizationIdentifiers>
+		</gl-cor:entityInformation>
+		<gl-cor:entryHeader>
+			<gl-cor:enteredBy contextRef="ctx1">Notario Jorge Ivan Carvajal Sepulveda</gl-cor:enteredBy>
+			<gl-bus:enteredByModified contextRef="ctx1">2005-06-01</gl-bus:enteredByModified>
+			<gl-cor:sourceJournalID contextRef="ctx1">gj</gl-cor:sourceJournalID>
+			<gl-bus:sourceJournalDescription contextRef="ctx1">Diario General - Asiento de Apertura</gl-bus:sourceJournalDescription>
+			<gl-cor:entryDetail>
+				<gl-cor:lineNumber contextRef="ctx1">1</gl-cor:lineNumber>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">110505</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Caja General / Efectivo</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">10000000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2005-06-01</gl-cor:postingDate>
+				<gl-cor:identifierReference/>
+				<gl-cor:documentTypeDescription contextRef="ctx1">Escritura Publica de Constitucion</gl-cor:documentTypeDescription>
+				<gl-cor:documentNumber contextRef="ctx1">Notaria 25 - 2005</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2005-06-01</gl-cor:documentDate>
+				<gl-bus:measurable/>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:lineNumber contextRef="ctx1">2</gl-cor:lineNumber>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">311505</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Capital Social - Cuotas</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2500000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2005-06-01</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierCode contextRef="ctx1">Socio_A</gl-cor:identifierCode>
+					<gl-cor:identifierDescription contextRef="ctx1">Socio Fundador A</gl-cor:identifierDescription>
+					<gl-cor:identifierType contextRef="ctx1">O</gl-cor:identifierType>
+				</gl-cor:identifierReference>
+				<gl-cor:documentTypeDescription contextRef="ctx1">Escritura Publica de Constitucion</gl-cor:documentTypeDescription>
+				<gl-cor:documentNumber contextRef="ctx1">Notaria 25 - 2005</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2005-06-01</gl-cor:documentDate>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx1">SP</gl-bus:measurableCode>
+					<gl-bus:measurableCodeDescription contextRef="ctx1">Cuotas de interes social ordinarias</gl-bus:measurableCodeDescription>
+					<gl-bus:measurableID contextRef="ctx1">Acciones Ordinarias</gl-bus:measurableID>
+					<gl-bus:measurableQuantity contextRef="ctx1" unitRef="Shares" decimals="0">2500</gl-bus:measurableQuantity>
+					<gl-bus:measurableQualifier contextRef="ctx1">Cuotas</gl-bus:measurableQualifier>
+					<gl-bus:measurableCostPerUnit contextRef="ctx1" unitRef="COP" decimals="0">1000</gl-bus:measurableCostPerUnit>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:lineNumber contextRef="ctx1">3</gl-cor:lineNumber>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">311505</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Capital Social - Cuotas</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2500000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2005-06-01</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierCode contextRef="ctx1">Socio_B</gl-cor:identifierCode>
+					<gl-cor:identifierDescription contextRef="ctx1">Socio Fundador B</gl-cor:identifierDescription>
+					<gl-cor:identifierType contextRef="ctx1">O</gl-cor:identifierType>
+				</gl-cor:identifierReference>
+				<gl-cor:documentTypeDescription contextRef="ctx1">Escritura Publica de Constitucion</gl-cor:documentTypeDescription>
+				<gl-cor:documentNumber contextRef="ctx1">Notaria 25 - 2005</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2005-06-01</gl-cor:documentDate>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx1">SP</gl-bus:measurableCode>
+					<gl-bus:measurableCodeDescription contextRef="ctx1">Cuotas de interes social ordinarias</gl-bus:measurableCodeDescription>
+					<gl-bus:measurableID contextRef="ctx1">Acciones Ordinarias</gl-bus:measurableID>
+					<gl-bus:measurableQuantity contextRef="ctx1" unitRef="Shares" decimals="0">2500</gl-bus:measurableQuantity>
+					<gl-bus:measurableQualifier contextRef="ctx1">Cuotas</gl-bus:measurableQualifier>
+					<gl-bus:measurableCostPerUnit contextRef="ctx1" unitRef="COP" decimals="0">1000</gl-bus:measurableCostPerUnit>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:lineNumber contextRef="ctx1">4</gl-cor:lineNumber>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">311505</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Capital Social - Cuotas</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2500000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2005-06-01</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierCode contextRef="ctx1">Socio_C</gl-cor:identifierCode>
+					<gl-cor:identifierDescription contextRef="ctx1">Socio Fundador C</gl-cor:identifierDescription>
+					<gl-cor:identifierType contextRef="ctx1">O</gl-cor:identifierType>
+				</gl-cor:identifierReference>
+				<gl-cor:documentTypeDescription contextRef="ctx1">Escritura Publica de Constitucion</gl-cor:documentTypeDescription>
+				<gl-cor:documentNumber contextRef="ctx1">Notaria 25 - 2005</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2005-06-01</gl-cor:documentDate>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx1">SP</gl-bus:measurableCode>
+					<gl-bus:measurableCodeDescription contextRef="ctx1">Cuotas de interes social ordinarias</gl-bus:measurableCodeDescription>
+					<gl-bus:measurableID contextRef="ctx1">Acciones Ordinarias</gl-bus:measurableID>
+					<gl-bus:measurableQuantity contextRef="ctx1" unitRef="Shares" decimals="0">2500</gl-bus:measurableQuantity>
+					<gl-bus:measurableQualifier contextRef="ctx1">Cuotas</gl-bus:measurableQualifier>
+					<gl-bus:measurableCostPerUnit contextRef="ctx1" unitRef="COP" decimals="0">1000</gl-bus:measurableCostPerUnit>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+			<gl-cor:entryDetail>
+				<gl-cor:lineNumber contextRef="ctx1">5</gl-cor:lineNumber>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">311505</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">Capital Social - Cuotas</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="COP" decimals="0">2500000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2005-06-01</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierCode contextRef="ctx1">Socio_D</gl-cor:identifierCode>
+					<gl-cor:identifierDescription contextRef="ctx1">Socio Fundador D</gl-cor:identifierDescription>
+					<gl-cor:identifierType contextRef="ctx1">O</gl-cor:identifierType>
+				</gl-cor:identifierReference>
+				<gl-cor:documentTypeDescription contextRef="ctx1">Escritura Publica de Constitucion</gl-cor:documentTypeDescription>
+				<gl-cor:documentNumber contextRef="ctx1">Notaria 25 - 2005</gl-cor:documentNumber>
+				<gl-cor:documentDate contextRef="ctx1">2005-06-01</gl-cor:documentDate>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx1">SP</gl-bus:measurableCode>
+					<gl-bus:measurableCodeDescription contextRef="ctx1">Cuotas de interes social ordinarias</gl-bus:measurableCodeDescription>
+					<gl-bus:measurableID contextRef="ctx1">Acciones Ordinarias</gl-bus:measurableID>
+					<gl-bus:measurableQuantity contextRef="ctx1" unitRef="Shares" decimals="0">2500</gl-bus:measurableQuantity>
+					<gl-bus:measurableQualifier contextRef="ctx1">Cuotas</gl-bus:measurableQualifier>
+					<gl-bus:measurableCostPerUnit contextRef="ctx1" unitRef="COP" decimals="0">1000</gl-bus:measurableCostPerUnit>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:unit id="COP">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:COP</xbrli:measure>
+	</xbrli:unit>
+	<xbrli:unit id="Shares">
+		<xbrli:measure>xbrli:shares</xbrli:measure>
+	</xbrli:unit>
+</xbrli:xbrl>

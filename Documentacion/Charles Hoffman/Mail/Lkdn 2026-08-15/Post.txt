@@ -1,0 +1,7 @@
+Two things.  First, standards tend to be underappreciated.  Second, while perhaps not perfect, standards do provide leverage; consider using them when possible.
+
+Jessica Talisman is right; this is a pipeline. Roy Roebuck is right; enterprises are not as unique as you might think (e.g. lots of leverageable patterns). Kurt Cagle is right; holons are quite useful models. Tony Seale is right; knowledge graphs are important and need to be done right. Nicolas Figay is right; interoperability is harder than you might believe. Dave McComb (DCA) is right; software wasteland describes the status quo well. William McCarthy (REA) is right; business events is a thing. Willi Brammertz (ACTUS) is right; algorithms can be used to project business events into the future.
+
+The past 45 years have been quite the journey.  But things are coming together nicely.  Slowly...but nicely.
+
+https://digitalfinancialreporting.blogspot.com/2026/08/often-underappreciated-role-of-standards.html

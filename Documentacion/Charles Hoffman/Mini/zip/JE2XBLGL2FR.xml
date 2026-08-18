@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns="http://www.xbrl.org/2009/arcrole/accounting" xmlns:negated="http://www.xbrl.org/2009/role/negated" xmlns:reference="http://www.xbrl.org/2009/role/reference" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:generic="http://xbrl.org/2008/generic" xmlns:mini="https://xbrlsite.azurewebsites.net/mini" xmlns:mini-entry="https://xbrlsite.azurewebsites.net/mini-entry" xmlns:mini-roles="https://xbrlsite.azurewebsites.net/mini-roles" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef xlink:type="simple" xlink:href="https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/base-taxonomy/mini-entryPoint.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.mini.com">Mini</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2024-12-31</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<mini:CashAndCashEquivalents contextRef="ctx1" unitRef="USD" decimals="0">9850</mini:CashAndCashEquivalents>
+	<mini:PropertyPlantAndEquipment contextRef="ctx1" unitRef="USD" decimals="0">1900</mini:PropertyPlantAndEquipment>
+	<mini:AccountsPayable contextRef="ctx1" unitRef="USD" decimals="0">1000</mini:AccountsPayable>
+	<mini:LongtermDebt contextRef="ctx1" unitRef="USD" decimals="0">1000</mini:LongtermDebt>
+	<mini:PaidInCapital contextRef="ctx1" unitRef="USD" decimals="0">10000</mini:PaidInCapital>
+	<mini:Receivables contextRef="ctx1" unitRef="USD" decimals="0">8000</mini:Receivables>
+	<mini:NoncurrentAssets contextRef="ctx1" unitRef="USD" decimals="0">1900</mini:NoncurrentAssets>
+	<mini:AccruedExpenses contextRef="ctx1" unitRef="USD" decimals="0">400</mini:AccruedExpenses>
+	<mini:NoncurrentLiabilities contextRef="ctx1" unitRef="USD" decimals="0">1000</mini:NoncurrentLiabilities>
+	<mini:RetainedEarnings contextRef="ctx1" unitRef="USD" decimals="0">8050</mini:RetainedEarnings>
+	<mini:Inventories contextRef="ctx1" unitRef="USD" decimals="0">700</mini:Inventories>
+	<mini:Assets contextRef="ctx1" unitRef="USD" decimals="0">20450</mini:Assets>
+	<mini:Liabilities contextRef="ctx1" unitRef="USD" decimals="0">2400</mini:Liabilities>
+	<mini:Equity contextRef="ctx1" unitRef="USD" decimals="0">18050</mini:Equity>
+	<mini:LiabilitiesAndEquity contextRef="ctx1" unitRef="USD" decimals="0">20450</mini:LiabilitiesAndEquity>
+	<mini:CurrentAssets contextRef="ctx1" unitRef="USD" decimals="0">18550</mini:CurrentAssets>
+	<mini:CurrentLiabilities contextRef="ctx1" unitRef="USD" decimals="0">1400</mini:CurrentLiabilities>
+	<xbrli:context id="ctx2">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.mini.com">Mini</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2024-01-01</xbrli:startDate>
+			<xbrli:endDate>2024-12-31</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<mini:ProceedsFromCollectionOfReceivables contextRef="ctx2" unitRef="USD" decimals="0">8000</mini:ProceedsFromCollectionOfReceivables>
+	<mini:ProceedsFromAdditionalLongtermBorrowings contextRef="ctx2" unitRef="USD" decimals="0">2000</mini:ProceedsFromAdditionalLongtermBorrowings>
+	<mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment contextRef="ctx2" unitRef="USD" decimals="0">-2000</mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment>
+	<mini:PaymentOfAccountsPayable contextRef="ctx2" unitRef="USD" decimals="0">-7000</mini:PaymentOfAccountsPayable>
+	<mini:PaymentForReductionOfLongtermBorrowings contextRef="ctx2" unitRef="USD" decimals="0">-1000</mini:PaymentForReductionOfLongtermBorrowings>
+	<mini:PaymentInterest contextRef="ctx2" unitRef="USD" decimals="0">-150</mini:PaymentInterest>
+	<mini:ProceedsFromInvestmentsByOwner contextRef="ctx2" unitRef="USD" decimals="0">10000</mini:ProceedsFromInvestmentsByOwner>
+	<xbrli:context id="ctx3">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.mini.com">Mini</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2024-01-01</xbrli:startDate>
+			<xbrli:endDate>2024-12-31</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<mini:Sales contextRef="ctx3" unitRef="USD" decimals="0">16000</mini:Sales>
+	<mini:InterestExpense contextRef="ctx3" unitRef="USD" decimals="0">150</mini:InterestExpense>
+	<mini:CostsOfSales contextRef="ctx3" unitRef="USD" decimals="0">7300</mini:CostsOfSales>
+	<mini:DepreciationAndAmortization contextRef="ctx3" unitRef="USD" decimals="0">100</mini:DepreciationAndAmortization>
+	<mini:IncomeTaxExpenseBenefit contextRef="ctx3" unitRef="USD" decimals="0">400</mini:IncomeTaxExpenseBenefit>
+	<xbrli:unit id="USD">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:USD</xbrli:measure>
+	</xbrli:unit>
+</xbrli:xbrl>

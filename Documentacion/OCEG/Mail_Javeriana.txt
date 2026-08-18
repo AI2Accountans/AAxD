@@ -1,0 +1,13 @@
+AI is moving deeper into business processes, and expectations for transparency are rising with it. Stakeholders, regulators, and auditors want to understand how AI is used, what data supports AI systems, how AI-influenced decisions are reviewed, and where people can raise concerns. 
+
+
+The AI transparency policy template gives GRC, risk, compliance, legal, and data teams a structured starting point for turning responsible AI expectations into documented action. It covers AI use, data collection, rights to explanation, appeal, and opt-out, CCPA/GDPR considerations, incident reporting, ethical AI oversight, policy updates, and contact paths. 
+
+
+Use the template to set enforceable expectations for visibility, disclosure protocols, stakeholder communication, human review, and accountability. It is designed to help teams align with ISO 42001, NIST AI RMF, and the EU AI Act, and to create a policy your organization can adapt before audits, certifications, or stakeholder reviews. 
+
+
+Download the template to move AI transparency from good intent to a clear, usable policy — giving your team a clearer way to manage AI risk, communicate with stakeholders, and maintain accountability as AI scales across products, services, and internal workflows.
+
+
+Optro-EB-AI-transparency-policy-template.pdf

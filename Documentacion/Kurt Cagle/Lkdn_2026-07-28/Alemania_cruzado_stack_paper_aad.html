@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeo Cruzado & Rutas de Datos: Stack A&AD vs. Neuro-Symbolic AI</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #070a13;
+            --card-bg: rgba(15, 23, 42, 0.8);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover: rgba(56, 189, 248, 0.3);
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --cyan: #38bdf8;
+            --purple: #c084fc;
+            --gold: #fbbf24;
+            --green: #34d399;
+            --red: #f87171;
+            --font-head: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.12) 0%, transparent 40%);
+            color: var(--text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1150px; margin: 0 auto; }
+
+        /* HERO ESBELTO */
+        .hero {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--cyan), var(--purple), var(--gold));
+        }
+
+        .badge-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .badge {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50px;
+            padding: 0.25rem 0.85rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .badge-cyan { border-color: rgba(56, 189, 248, 0.3); color: var(--cyan); background: rgba(56, 189, 248, 0.08); }
+        .badge-purple { border-color: rgba(192, 132, 252, 0.3); color: var(--purple); background: rgba(192, 132, 252, 0.08); }
+        .badge-gold { border-color: rgba(251, 191, 36, 0.3); color: var(--gold); background: rgba(251, 191, 36, 0.08); }
+        .badge-green { border-color: rgba(52, 211, 153, 0.3); color: var(--green); background: rgba(52, 211, 153, 0.08); }
+
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 60%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p { font-size: 1rem; color: var(--text-muted); }
+
+        /* SECTION HEADER */
+        .sec-head {
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .sec-head h2 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; }
+        .sec-head .line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent); }
+
+        /* DATA ROUTES DUAL BANNER */
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .route-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            padding: 1.75rem;
+            position: relative;
+        }
+
+        .route-red { border-color: rgba(248, 113, 113, 0.3); }
+        .route-green { border-color: rgba(52, 211, 153, 0.4); background: rgba(15, 23, 42, 0.9); }
+
+        .route-card h3 {
+            font-family: var(--font-head);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .route-step {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.88rem;
+        }
+
+        .route-step strong { display: block; font-size: 0.82rem; font-family: var(--font-code); margin-bottom: 0.15rem; }
+        .route-red .route-step strong { color: var(--red); }
+        .route-green .route-step strong { color: var(--green); }
+
+        /* TABLE ESBELTA */
+        .table-wrap {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+
+        th {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1rem 1.25rem;
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--cyan);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        tr:hover td { background: rgba(255, 255, 255, 0.02); }
+
+        .tag-layer {
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gold);
+            background: rgba(251, 191, 36, 0.1);
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.3rem;
+        }
+
+        .paper-col { color: #38bdf8; font-weight: 600; }
+        .cagle-col { color: #c084fc; font-weight: 600; }
+
+        /* CARDS GRID ESBELTO */
+        .grid-esbelto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card-esbelto {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 1.35rem;
+            transition: all 0.25 ease;
+        }
+
+        .card-esbelto:hover {
+            border-color: var(--card-hover);
+            transform: translateY(-3px);
+        }
+
+        .card-esbelto h3 {
+            font-family: var(--font-head);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-esbelto p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+        .pill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.78rem;
+            color: #cbd5e1;
+            font-family: var(--font-code);
+        }
+
+        /* LINKS FOOTER */
+        .links-bar {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .links-bar a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .links-bar a:hover { color: #7dd3fc; text-decoration: underline; }
+
+        footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; padding: 1.5rem 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO ESBELTO -->
+    <header class="hero">
+        <div class="badge-bar">
+            <span class="badge badge-cyan">📄 AA_D_en.pdf (Paper Richard Gasca)</span>
+            <span class="badge badge-purple">📦 Holones & Cagle Recipe</span>
+            <span class="badge badge-gold">🧠 Neuro-Symbolic Substrate</span>
+            <span class="badge badge-green">🔄 Rutas XML (XBRL GL) vs. JSON-LD</span>
+        </div>
+        <h1>Mapeo Cruzado & Rutas de Datos Transaccionales</h1>
+        <p>Análisis de alta densidad que contrasta la <strong>ruta tradicional estática XML (XBRL GL)</strong> con la <strong>nueva ruta semántica activa JSON-LD (Web Semántica W3C)</strong> dentro del stack A&AD y el marco Neuro-Simbólico de Cagle & Pooni.</p>
+    </header>
+
+    <!-- RUTA DE DATOS COMPARATIVA (ESCENARIO ACTUAL VS NUEVO) -->
+    <div class="sec-head">
+        <h2>Rutas de Datos Transaccionales: Tradicional vs. Nuevo Escenario A&AD</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="routes-grid">
+        <!-- RUTA ACTUAL XML -->
+        <div class="route-card route-red">
+            <h3 style="color: var(--red);">🔴 Ruta Actual: Flujo Estático hacia XML (XBRL GL)</h3>
+            <div class="route-step">
+                <strong>01. ORIGEN TRANSACCIONAL</strong>
+                Archivos planos CSV, tablas ERP relacionales o facturas UBL desconectadas.
+            </div>
+            <div class="route-step">
+                <strong>02. MAPEO ETL TRADICIONAL</strong>
+                Transformación en Altova MapForce hacia esquemas XML planos (<code>gl-cor</code>, <code>gl-bus</code>).
+            </div>
+            <div class="route-step">
+                <strong>03. ARTEFACTO MONOLÍTICO (.xml)</strong>
+                Generación de un archivo XML estático orientado a reportes finales (<em>Data at Rest</em>).
+            </div>
+            <div class="route-step">
+                <strong>04. CONTROL REACTIVO (POST-FACTO)</strong>
+                Validación por XBRL Formula Linkbase o revisión manual al cierre de mes. Errores corregidos tarde.
+            </div>
+        </div>
+
+        <!-- RUTA NUEVA JSON-LD -->
+        <div class="route-card route-green">
+            <h3 style="color: var(--green);">🟢 Ruta Nueva A&AD: Flujo Semántico hacia JSON-LD (Linked Data)</h3>
+            <div class="route-step">
+                <strong>01. GENESIS EN MOMENTO 0</strong>
+                Captura del hecho económico en origen (contratos, escrituras de constitución o documentos UBL).
+            </div>
+            <div class="route-step">
+                <strong>02. TRANSMUTACIÓN A JSON-LD</strong>
+                MapForce transmuta datos a un payload <strong>JSON-LD W3C</strong> vinculando XBRL GL con ISO REA, ACTUS y FIBO.
+            </div>
+            <div class="route-step">
+                <strong>03. INGESTIÓN EN GRAFO VIVO (DFRNT + TerminusDB)</strong>
+                Almacenamiento en TerminusDB bajo Asunción de Mundo Cerrado (CWA Datalog: ausencia = falso).
+            </div>
+            <div class="route-step">
+                <strong>04. SHIFT-LEFT CONTROL & POKA-YOKE (PREVENTIVO)</strong>
+                Validación en ingestión con formas SHACL y WOQL. Rechazo inmediato de transacciones incoherentes.
+            </div>
+            <div class="route-step">
+                <strong>05. WRAPPER DATABOOK & MCP IA BRIDGE</strong>
+                Empaquetado en DataBooks (Markdown + JSON-LD) y exposición vía QOWL/MCP para auditoría Zero-Shot.
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLA MATRIZ ESBELTA -->
+    <div class="sec-head">
+        <h2>Matriz de Cruzamiento por Capas: Paper A&AD vs. Cagle & Pooni</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Capa del Stack</th>
+                    <th style="width: 38%;">Pilar en Paper A&AD (AA_D_en.pdf)</th>
+                    <th style="width: 42%;">Elemento Kurt Cagle / S. Pooni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tag-layer">CAPA 1</span><br><strong>Gobernanza & Marco</strong></td>
+                    <td class="paper-col">Zachman Reference Atlas + Data-Centric Architecture (McComb / Dunn)</td>
+                    <td class="cagle-col">Context Plane + Closed Systems (<code>#closed_systems</code> / Holones)</td>
+                </tr>
+                <tr>
+                    <td><span class="tag-layer">CAPA 2</span><br><strong>Génesis & Eventos</strong></td>
+                    <td class="paper-col">Sunder Nexus + Sorter Events + ISO REA / ACTUS / FIBO</td>
+                    <td class="cagle-col"><code>#fluent_variables</code> (Event Ledger) + Causal/Policy Graph</td>
+                </tr>
+                <tr>
+                    <td><span class="tag-layer">CAPA 3</span><br><strong>Transmutación</strong></td>
+                    <td class="paper-col">Altova XMLSpy + MapForce + XBRL GL (<code>accountingPurposeCode</code>)</td>
+                    <td class="cagle-col"><code>#named_queries</code>, <code>#named_constraints</code>, <code>#named_graphs</code></td>
+                </tr>
+                <tr>
+                    <td><span class="tag-layer">CAPA 4</span><br><strong>Grafo Determínico</strong></td>
+                    <td class="paper-col">TerminusDB CWA Datalog (Ausencia = Falso) + DFRNT QOWL/WOQL</td>
+                    <td class="cagle-col">Deterministic & Persistent Grounding (Pooni Verifier)</td>
+                </tr>
+                <tr>
+                    <td><span class="tag-layer">CAPA 5</span><br><strong>Wrapper & IA Agéntica</strong></td>
+                    <td class="paper-col">DataBooks (Markdown + JSON-LD) + SKOS + SPARQL Zero-Shot</td>
+                    <td class="cagle-col"><code>#compaction</code> + Projection Layer + Verification Substrate (MCP)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TARJETAS ESBELTAS DE SÍNTESIS -->
+    <div class="sec-head">
+        <h2>Desglose de Convergencia Directa</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="grid-esbelto">
+
+        <div class="card-esbelto">
+            <h3>🏛️ 1. Arquitectura Centrada en Datos</h3>
+            <p>Tu paper establece que la data debe sobrevivir a las aplicaciones (McComb). Cagle coincide en que los datos deben operar dentro de sistemas cerrados semipermeables (Holones).</p>
+            <div class="pill-list">
+                <span class="pill">Zachman Atlas</span>
+                <span class="pill">#closed_systems</span>
+                <span class="pill">Data-Centric</span>
+            </div>
+        </div>
+
+        <div class="card-esbelto">
+            <h3>⚡ 2. Momento 0 & Event Ledgers</h3>
+            <p>El origen del acuerdo (escritura contable) amarra sus propiedades dinámicas a un libro de eventos inmutable. ACTUS y REA definen la física contable.</p>
+            <div class="pill-list">
+                <span class="pill">Moment 0</span>
+                <span class="pill">#fluent_variables</span>
+                <span class="pill">ACTUS / REA</span>
+            </div>
+        </div>
+
+        <div class="card-esbelto">
+            <h3>🔄 3. Interfaz & Transmutación</h3>
+            <p>Altova MapForce transmuta payloads heterogéneos a XBRL GL y JSON-LD; XMLSpy aplica esquemas SHACL e interfaces nombradas sobre el grafo.</p>
+            <div class="pill-list">
+                <span class="pill">MapForce</span>
+                <span class="pill">#named_constraints</span>
+                <span class="pill">XBRL GL</span>
+            </div>
+        </div>
+
+        <div class="card-esbelto">
+            <h3>🗄️ 4. Base de Datos Determínica</h3>
+            <p>TerminusDB opera bajo CWA (la ausencia de un hecho equivale a falso), ofreciendo la fundamentación persistente y bitemporal que Cagle y Pooni exigen.</p>
+            <div class="pill-list">
+                <span class="pill">TerminusDB CWA</span>
+                <span class="pill">WOQL / QOWL</span>
+                <span class="pill">Bitemporal</span>
+            </div>
+        </div>
+
+        <div class="card-esbelto">
+            <h3>📦 5. DataBooks, MCP & Auditoría IA</h3>
+            <p>Los DataBooks compactan holones activos en archivos inmutables. El LLM interpreta la intención vía MCP, y la capa simbólica ejecuta la auditoría zero-shot.</p>
+            <div class="pill-list">
+                <span class="pill">DataBooks</span>
+                <span class="pill">MCP Bridge</span>
+                <span class="pill">Zero-Shot SPARQL</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LINKS FOOTER BAR -->
+    <div class="links-bar">
+        <span>📂 <strong>Archivos del Análisis:</strong></span>
+        <a href="file:///C:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Paper/AA_D_en.pdf" target="_blank">📄 AA_D_en.pdf (Paper A&AD)</a>
+        <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Kurt%20Cagle/Lkdn_2026-07-28/cruzado_stack_paper_aad.md" target="_blank">📝 cruzado_stack_paper_aad.md</a>
+        <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Kurt%20Cagle/Lkdn_2026-07-28/Post.txt" target="_blank">📄 Post.txt (Kurt Cagle)</a>
+    </div>
+
+    <footer>
+        <p>Documentación A&AD Framework • DFRNT • 2026</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

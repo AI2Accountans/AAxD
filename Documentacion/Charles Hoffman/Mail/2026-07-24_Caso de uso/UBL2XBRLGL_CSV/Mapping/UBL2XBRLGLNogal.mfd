@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="6" kind="2">
+					<targets>
+						<datapoint pos="0" key="23"/>
+					</targets>
+					<view ltx="402" lty="50" rbx="470" rby="67"/>
+					<data>
+						<constant value="acme" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="327" lty="80" rbx="482" rby="97"/>
+					<data>
+						<constant value="http://www.acme.com" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="8" kind="2">
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="375" lty="97" rbx="473" rby="114"/>
+					<data>
+						<constant value="2024-01-01" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="9" kind="2">
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="374" lty="127" rbx="475" rby="144"/>
+					<data>
+						<constant value="2024-12-.31" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="279" lty="420" rbx="343" rby="437"/>
+					<data>
+						<constant value="COP" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="xbrl-measure-currency" library="xbrl" uid="10" kind="5">
+					<sources>
+						<datapoint pos="0" key="28"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="29"/>
+					</targets>
+					<view ltx="353" lty="447" rbx="493" rby="485"/>
+				</component>
+				<component name="constant" library="core" uid="13" kind="2">
+					<targets>
+						<datapoint pos="0" key="40"/>
+					</targets>
+					<view ltx="402" lty="263" rbx="498" rby="280"/>
+					<data>
+						<constant value="163035112" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="16" kind="2">
+					<targets>
+						<datapoint pos="0" key="41"/>
+					</targets>
+					<view ltx="271" lty="541" rbx="326" rby="558"/>
+					<data>
+						<constant value="0.15" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="15" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="44"/>
+						<datapoint pos="1" key="45"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="46"/>
+					</targets>
+					<view ltx="384" lty="504" rbx="466" rby="560"/>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<targets>
+						<datapoint pos="0" key="57"/>
+					</targets>
+					<view ltx="402" lty="393" rbx="490" rby="410"/>
+					<data>
+						<constant value="250205010" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<targets>
+						<datapoint pos="0" key="30"/>
+					</targets>
+					<view ltx="236" lty="164" rbx="276" rby="181"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<targets>
+						<datapoint pos="0" key="42"/>
+					</targets>
+					<view ltx="402" lty="311" rbx="490" rby="328"/>
+					<data>
+						<constant value="251905052" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="18" kind="2">
+					<targets>
+						<datapoint pos="0" key="43"/>
+					</targets>
+					<view ltx="433" lty="349" rbx="482" rby="366"/>
+					<data>
+						<constant value="C" datatype="string"/>
+					</data>
+				</component>
+				<component name="subtract" library="core" uid="20" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="47"/>
+						<datapoint pos="1" key="48"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="49"/>
+					</targets>
+					<view ltx="236" lty="363" rbx="318" rby="419"/>
+				</component>
+				<component name="add" library="core" uid="23" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="70"/>
+						<datapoint pos="1" key="71"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="72"/>
+					</targets>
+					<view ltx="237" lty="225" rbx="319" rby="281"/>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="421" lty="198" rbx="471" rby="215"/>
+					<data>
+						<constant value="D" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="30" kind="2">
+					<targets>
+						<datapoint pos="0" key="92"/>
+					</targets>
+					<view ltx="1029" lty="740" rbx="1078" rby="757"/>
+					<data>
+						<constant value="C" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="31" kind="2">
+					<targets>
+						<datapoint pos="0" key="87"/>
+					</targets>
+					<view ltx="970" lty="587" rbx="1010" rby="604"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="33" kind="5">
+					<sources>
+						<datapoint pos="0" key="86"/>
+						<datapoint pos="1" key="93"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="89"/>
+					</targets>
+					<view ltx="1111" lty="703" rbx="1167" rby="757"/>
+				</component>
+				<component name="if-else" library="core" uid="32" kind="4">
+					<sources>
+						<datapoint pos="0" key="94"/>
+						<datapoint pos="1" key="90"/>
+						<datapoint pos="2" key="88"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="91"/>
+					</targets>
+					<view ltx="1063" lty="510" rbx="1167" rby="583"/>
+				</component>
+				<component name="constant" library="core" uid="4" kind="2">
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="367" lty="164" rbx="463" rby="181"/>
+					<data>
+						<constant value="513095011" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="29" kind="2">
+					<targets>
+						<datapoint pos="0" key="75"/>
+					</targets>
+					<view ltx="970" lty="434" rbx="1010" rby="451"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="26" kind="2">
+					<targets>
+						<datapoint pos="0" key="74"/>
+					</targets>
+					<view ltx="960" lty="504" rbx="1010" rby="521"/>
+					<data>
+						<constant value="D" datatype="string"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="28" kind="5">
+					<sources>
+						<datapoint pos="0" key="80"/>
+						<datapoint pos="1" key="81"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="82"/>
+					</targets>
+					<view ltx="1040" lty="434" rbx="1096" rby="488"/>
+				</component>
+				<component name="if-else" library="core" uid="25" kind="4">
+					<sources>
+						<datapoint pos="0" key="76"/>
+						<datapoint pos="1" key="77"/>
+						<datapoint pos="2" key="104"/>
+						<datapoint/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="79"/>
+					</targets>
+					<view ltx="1073" lty="293" rbx="1180" rby="400"/>
+				</component>
+				<component name="Total_Contabilidad - JE" library="text" uid="34" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="1251" lty="80" rbx="1512" rby="334"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" inpkey="100" expanded="1">
+										<entry name="MO_NUMERO" inpkey="101"/>
+										<entry name="MO_DEBITO" inpkey="102"/>
+										<entry name="MO_CREDITO" inpkey="103"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\Entregable\Total_Contabilidad - JE.csv" outputinstance="Total_Contabilidad - JE_.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Total_Contabilidad - JE" block="Rows">
+									<field0 name="MO_TIPO" type="string"/>
+									<field1 name="MO_NUMERO" type="string"/>
+									<field2 name="MO_ITEM" type="string"/>
+									<field3 name="MO_FECHA" type="string"/>
+									<field4 name="MO_CUENTA" type="string"/>
+									<field5 name="MO_NIT" type="string"/>
+									<field6 name="MO_CHEQUE" type="string"/>
+									<field7 name="MO_DEBITO" type="string"/>
+									<field8 name="MO_CREDITO" type="string"/>
+									<field9 name="MO_CONCEPT" type="string"/>
+									<field10 name="MO_BASE" type="string"/>
+									<field11 name="MO_CENTRO" type="string"/>
+									<field12 name="MO_LIBRO" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="2" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" PassThrough="1"/>
+					<view ltx="607" lty="50" rbx="916" rby="560"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25"/>
+									<namespace uid="view"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="2" expanded="1" showdefaultsnode="1">
+										<entry name="//www.xbrl.org/2003/role/link" ns="4" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1" showdefaultsnode="1">
+												<dimensions>
+													<qname name="identifier" ns="2"/>
+													<qname name="period" ns="2"/>
+												</dimensions>
+												<entry name="identifier" ns="2" expanded="1" showdefaultsnode="1">
+													<entry name="defaults" ns="1" expanded="1">
+														<entry name="monetaryItemType" ns="1" expanded="1">
+															<entry name="unitRef" type="attribute" inpkey="31"/>
+															<entry name="decimals" type="attribute" inpkey="32"/>
+														</entry>
+													</entry>
+													<entry name="identifier" ns="2" inpkey="18" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="19"/>
+													</entry>
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" inpkey="20" expanded="1">
+															<entry name="startDate" ns="2" inpkey="21"/>
+															<entry name="endDate" ns="2" inpkey="22"/>
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="3" inpkey="7" outkey="98" expanded="1">
+																<entry name="entryHeader" ns="3" expanded="1">
+																	<entry name="entryDetail" ns="3" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="13" outkey="99"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="14" outkey="85"/>
+																		<entry name="debitCreditCode" ns="3" inpkey="15" outkey="83"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierExternalReference" ns="3" expanded="1">
+																				<entry name="identifierAuthorityCode" ns="3" inpkey="16"/>
+																			</entry>
+																			<entry name="identifierDescription" ns="3" inpkey="5"/>
+																		</entry>
+																		<entry name="documentNumber" ns="3" inpkey="1"/>
+																		<entry name="documentDate" ns="3" inpkey="3"/>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="accountingEntries" ns="3" inpkey="36" clone="1">
+																<entry name="entryHeader" ns="3" expanded="1">
+																	<entry name="entryDetail" ns="3" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="37"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="38"/>
+																		<entry name="debitCreditCode" ns="3" inpkey="39"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierExternalReference" ns="3" expanded="1">
+																				<entry name="identifierAuthorityCode" ns="3" inpkey="58"/>
+																			</entry>
+																			<entry name="identifierDescription" ns="3" inpkey="59"/>
+																		</entry>
+																		<entry name="documentNumber" ns="3" inpkey="60"/>
+																		<entry name="documentDate" ns="3" inpkey="61"/>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="accountingEntries" ns="3" inpkey="50" clone="1">
+																<entry name="entryHeader" ns="3" expanded="1">
+																	<entry name="entryDetail" ns="3" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="51"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="52"/>
+																		<entry name="debitCreditCode" ns="3" inpkey="53"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierExternalReference" ns="3" expanded="1">
+																				<entry name="identifierAuthorityCode" ns="3" inpkey="62"/>
+																			</entry>
+																			<entry name="identifierDescription" ns="3" inpkey="63"/>
+																		</entry>
+																		<entry name="documentNumber" ns="3" inpkey="64"/>
+																		<entry name="documentDate" ns="3" inpkey="65"/>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="accountingEntries" ns="3" inpkey="54" clone="1">
+																<entry name="entryHeader" ns="3" expanded="1">
+																	<entry name="entryDetail" ns="3" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="55"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="56"/>
+																		<entry name="debitCreditCode" ns="3" inpkey="73"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierExternalReference" ns="3" expanded="1">
+																				<entry name="identifierAuthorityCode" ns="3" inpkey="66"/>
+																			</entry>
+																			<entry name="identifierDescription" ns="3" inpkey="67"/>
+																		</entry>
+																		<entry name="documentNumber" ns="3" inpkey="68"/>
+																		<entry name="documentDate" ns="3" inpkey="69"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="unit" ns="2" expanded="1">
+											<entry name="id" type="attribute" inpkey="33"/>
+											<entry name="measure" ns="2" inpkey="34"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="..\..\..\..\..\..\..\..\Capacitacion XBRL\UBL2XBRLGL\Taxonomia\XBRL-GL-REC-2015-03-25\gl\plt\case-c-b-m-u-t-s\gl-plt-all-2015-03-25.xsd" outputinstance="..\Entregable\JE.xml"/>
+					</data>
+				</component>
+				<component name="data" library="text" uid="3" kind="16">
+					<properties/>
+					<view ltx="1" lty="80" rbx="171" rby="560"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="8" expanded="1">
+										<entry name="Fecha Factura" outkey="4"/>
+										<entry name="Número Factura" outkey="2"/>
+										<entry name="ASP_Proveedor" outkey="6"/>
+										<entry name="ASP_NIT" outkey="9"/>
+										<entry name="Impuesto IVA" outkey="35"/>
+										<entry name="Precio_Total" outkey="17"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\..\..\..\..\..\..\..\Capacitacion XBRL\UBL2XBRLGL\Entregable\data.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="data" block="Rows">
+									<field0 name="QRCode" type="string"/>
+									<field1 name="Fecha Factura" type="string"/>
+									<field2 name="Número Factura" type="string"/>
+									<field3 name="ASP_Proveedor" type="string"/>
+									<field4 name="ASP_Dirección" type="string"/>
+									<field5 name="ASP_Ciudad" type="string"/>
+									<field6 name="ASP_Departamento" type="string"/>
+									<field7 name="ASP_País" type="string"/>
+									<field8 name="ASP_NIT" type="string"/>
+									<field9 name="ACP_Cliente" type="string"/>
+									<field10 name="ACP_Dirección" type="string"/>
+									<field11 name="ACP_Ciudad" type="string"/>
+									<field12 name="ACP_Departamento" type="string"/>
+									<field13 name="ACP_País" type="string"/>
+									<field14 name="ACP_NIT" type="string"/>
+									<field15 name="Base Impuesto" type="string"/>
+									<field16 name="Impuesto IVA" type="string"/>
+									<field17 name="Vr.Total" type="string"/>
+									<field18 name="Código" type="string"/>
+									<field19 name="Descripción" type="string"/>
+									<field20 name="Cantidad_Ítems" type="string"/>
+									<field21 name="Precio_Total" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1"/>
+							<edge vertexkey="60"/>
+							<edge vertexkey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="3"/>
+							<edge vertexkey="61"/>
+							<edge vertexkey="65"/>
+							<edge vertexkey="68"/>
+							<edge vertexkey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="5"/>
+							<edge vertexkey="59"/>
+							<edge vertexkey="63"/>
+							<edge vertexkey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="7"/>
+							<edge vertexkey="36"/>
+							<edge vertexkey="50"/>
+							<edge vertexkey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="14"/>
+							<edge vertexkey="44"/>
+							<edge vertexkey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="15"/>
+							<edge vertexkey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="16"/>
+							<edge vertexkey="58"/>
+							<edge vertexkey="62"/>
+							<edge vertexkey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="20"/>
+							<edge vertexkey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="28"/>
+							<edge vertexkey="31"/>
+							<edge vertexkey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="38"/>
+							<edge vertexkey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72">
+						<edges>
+							<edge vertexkey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="48"/>
+							<edge vertexkey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="53"/>
+							<edge vertexkey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="77"/>
+							<edge vertexkey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83">
+						<edges>
+							<edge vertexkey="80"/>
+							<edge vertexkey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="74">
+						<edges>
+							<edge vertexkey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="87">
+						<edges>
+							<edge vertexkey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="92">
+						<edges>
+							<edge vertexkey="93"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="89">
+						<edges>
+							<edge vertexkey="94"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="100"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99">
+						<edges>
+							<edge vertexkey="101"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="102"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="91">
+						<edges>
+							<edge vertexkey="103"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="75">
+						<edges>
+							<edge vertexkey="104"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

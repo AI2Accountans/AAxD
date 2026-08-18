@@ -1,0 +1,47 @@
+Richard;
+
+I believe we need TWO PROTOTYPES.  One is the prototype you are creating, with all the messy “reality” that exists in real systems today.
+
+The SECOND PROTOTYPE should be an IDEAL system that we have 100% control over.
+
+First, we create an imaginary company, I used a lemonade stand.  Any company will do.  Then, we synthesize some business events.  Here are those (a draft):
+
+https://github.com/seattlemethod/prototypes/blob/main/system/sources-of-events/README.MD
+
+Next, we create actual DOCUMENTS for each business event, two forms a GRAPH (machine readable) and a DOCUMENT (not machine readable) both in ONE FILE, a DATABOOK.  Here is an example: (not complete)
+
+https://github.com/seattlemethod/prototypes/blob/main/system/sources-of-events/source-0001.md
+
+Each of the source documents goes to an EVENT:
+
+https://github.com/seattlemethod/prototypes/blob/main/system/events/event-0001.md
+
+The SET of events is the EVENT JOURNAL:
+
+https://github.com/seattlemethod/prototypes/blob/main/system/events/events-journal.md
+
+The EVENT JOURNAL spawns (projects) a GENERAL JOURNAL: (this is VARIOUS FORMS, maybe this should be a DATABOOK also)
+
+https://github.com/seattlemethod/prototypes/tree/main/system/general-journal
+
+All the entries into the general ledger might use an account from the chart of accounts, or directly use the line items specified by a REPORTING FRAMEWORK:
+
+https://github.com/seattlemethod/prototypes/tree/main/system/reporting-framework
+
+The GENERAL LEDGER TRIAL BALANCE is a PROJECTION of the general journal.  We use a LEAD SCHEDULE to map the chart of accounts account to the reporting framework standard line item.  We GENERATE a digital financial statement, here is an example:
+
+https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/ref-lemonade/index2.html (this is ALL THE FILES)
+
+https://luca.pacioli.ai/luca/view/0f24fd35e961e167a727b663c75a4c5ec9fb7eb86730d6292f46e6e180fc201843c277da/index  (Digital financial statement viewer)
+
+We do THREE prototypes:
+
+1.  One synthesized business event.
+2.  The 15 synthesized business events.
+3.  Set of about 3,000 transactions from  Microsoft Dynamics demo company, The World Online, where business event information was synthesized, https://github.com/seattlemethod/prototypes/tree/main/the-world-online-demo-data
+
+Something like that. What are your thoughts?  I can make up the documents for #1 and #3 under your supervision to make sure they are perfect.
+
+Cheers,
+
+Charlie

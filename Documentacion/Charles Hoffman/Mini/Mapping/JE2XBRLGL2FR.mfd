@@ -1,0 +1,4344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources />
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin" />
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="10" kind="2">
+					<targets>
+						<datapoint pos="0" key="19" />
+					</targets>
+					<view ltx="298" lty="402" rbx="348" rby="419" />
+					<data>
+						<constant value="D" datatype="string" />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="420" lty="400" rbx="466" rby="417" />
+					<data>
+						<constant value="-" datatype="string" />
+					</data>
+				</component>
+				<component name="greater" library="core" uid="13" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="8" />
+						<datapoint pos="1" key="18" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="11" />
+					</targets>
+					<view ltx="298" lty="329" rbx="362" rby="383" />
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<targets>
+						<datapoint pos="0" key="9" />
+					</targets>
+					<view ltx="313" lty="498" rbx="362" rby="515" />
+					<data>
+						<constant value="C" datatype="string" />
+					</data>
+				</component>
+				<component name="equal-or-less" library="core" uid="16" kind="5">
+					<sources>
+						<datapoint pos="0" key="7" />
+						<datapoint pos="1" key="16" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13" />
+					</targets>
+					<view ltx="268" lty="431" rbx="362" rby="485" />
+				</component>
+				<component name="if-else" library="core" uid="14" kind="4">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="12" />
+						<datapoint pos="1" key="20" />
+						<datapoint pos="2" key="14" />
+						<datapoint pos="3" key="10" />
+						<datapoint />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="17" />
+					</targets>
+					<view ltx="417" lty="329" rbx="524" rby="436" />
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<targets>
+						<datapoint pos="0" key="15" />
+					</targets>
+					<view ltx="203" lty="343" rbx="243" rby="360" />
+					<data>
+						<constant value="0" datatype="decimal" />
+					</data>
+				</component>
+				<component name="xbrl-measure-currency" library="xbrl" uid="18" kind="5">
+					<sources>
+						<datapoint pos="0" key="56" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="57" />
+					</targets>
+					<view ltx="482" lty="724" rbx="622" rby="762" />
+				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="55" />
+					</targets>
+					<view ltx="543" lty="773" rbx="607" rby="790" />
+					<data>
+						<constant value="USD" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="42" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="134" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="130" />
+					</targets>
+					<view ltx="1137" lty="447" rbx="1250" rby="485" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="46" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="154" />
+						<datapoint pos="1" key="147" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="148" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="498" rbx="1527" rby="552" />
+				</component>
+				<component name="equal" library="core" uid="47" kind="5" prioritycontext="145">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="145" />
+						<datapoint pos="1" key="153" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="146" />
+					</targets>
+					<view ltx="1311" lty="514" rbx="1367" rby="568" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="48" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="151" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="152" />
+					</targets>
+					<view ltx="1149" lty="514" rbx="1262" rby="552" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="51" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="165" />
+						<datapoint pos="1" key="158" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="159" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="564" rbx="1527" rby="618" />
+				</component>
+				<component name="equal" library="core" uid="52" kind="5" prioritycontext="156">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="156" />
+						<datapoint pos="1" key="164" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="157" />
+					</targets>
+					<view ltx="1311" lty="580" rbx="1367" rby="634" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="53" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="162" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="163" />
+					</targets>
+					<view ltx="1149" lty="580" rbx="1262" rby="618" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="56" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="176" />
+						<datapoint pos="1" key="169" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="170" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="638" rbx="1527" rby="692" />
+				</component>
+				<component name="equal" library="core" uid="57" kind="5" prioritycontext="167">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="167" />
+						<datapoint pos="1" key="175" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="168" />
+					</targets>
+					<view ltx="1311" lty="654" rbx="1367" rby="708" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="58" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="173" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="174" />
+					</targets>
+					<view ltx="1149" lty="654" rbx="1262" rby="692" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="61" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="187" />
+						<datapoint pos="1" key="180" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="181" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="708" rbx="1527" rby="762" />
+				</component>
+				<component name="equal" library="core" uid="62" kind="5" prioritycontext="178">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="178" />
+						<datapoint pos="1" key="186" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="179" />
+					</targets>
+					<view ltx="1311" lty="724" rbx="1367" rby="778" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="63" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="184" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="185" />
+					</targets>
+					<view ltx="1149" lty="724" rbx="1262" rby="762" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="66" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="198" />
+						<datapoint pos="1" key="191" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="192" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="773" rbx="1527" rby="827" />
+				</component>
+				<component name="equal" library="core" uid="67" kind="5" prioritycontext="189">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="189" />
+						<datapoint pos="1" key="197" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="190" />
+					</targets>
+					<view ltx="1311" lty="789" rbx="1367" rby="843" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="68" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="195" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="196" />
+					</targets>
+					<view ltx="1149" lty="789" rbx="1262" rby="827" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="71" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="209" />
+						<datapoint pos="1" key="202" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="203" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="851" rbx="1527" rby="905" />
+				</component>
+				<component name="equal" library="core" uid="72" kind="5" prioritycontext="200">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="200" />
+						<datapoint pos="1" key="208" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="201" />
+					</targets>
+					<view ltx="1311" lty="867" rbx="1367" rby="921" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="73" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="206" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="207" />
+					</targets>
+					<view ltx="1149" lty="867" rbx="1262" rby="905" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="76" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="220" />
+						<datapoint pos="1" key="213" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="214" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="921" rbx="1527" rby="975" />
+				</component>
+				<component name="equal" library="core" uid="77" kind="5" prioritycontext="211">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="211" />
+						<datapoint pos="1" key="219" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="212" />
+					</targets>
+					<view ltx="1311" lty="937" rbx="1367" rby="991" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="78" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="217" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="218" />
+					</targets>
+					<view ltx="1149" lty="937" rbx="1262" rby="975" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="81" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="231" />
+						<datapoint pos="1" key="224" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="225" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="994" rbx="1527" rby="1048" />
+				</component>
+				<component name="equal" library="core" uid="82" kind="5" prioritycontext="222">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="222" />
+						<datapoint pos="1" key="230" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="223" />
+					</targets>
+					<view ltx="1311" lty="1010" rbx="1367" rby="1064" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="83" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="228" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="229" />
+					</targets>
+					<view ltx="1149" lty="1010" rbx="1262" rby="1048" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="86" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="242" />
+						<datapoint pos="1" key="235" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="236" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1066" rbx="1527" rby="1120" />
+				</component>
+				<component name="equal" library="core" uid="87" kind="5" prioritycontext="233">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="233" />
+						<datapoint pos="1" key="241" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="234" />
+					</targets>
+					<view ltx="1311" lty="1082" rbx="1367" rby="1136" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="88" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="239" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="240" />
+					</targets>
+					<view ltx="1149" lty="1082" rbx="1262" rby="1120" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="91" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="253" />
+						<datapoint pos="1" key="246" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="247" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1134" rbx="1527" rby="1188" />
+				</component>
+				<component name="equal" library="core" uid="92" kind="5" prioritycontext="244">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="244" />
+						<datapoint pos="1" key="252" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="245" />
+					</targets>
+					<view ltx="1311" lty="1150" rbx="1367" rby="1204" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="93" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="250" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="251" />
+					</targets>
+					<view ltx="1149" lty="1150" rbx="1262" rby="1188" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="96" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="264" />
+						<datapoint pos="1" key="257" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="258" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1203" rbx="1527" rby="1257" />
+				</component>
+				<component name="equal" library="core" uid="97" kind="5" prioritycontext="255">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="255" />
+						<datapoint pos="1" key="263" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="256" />
+					</targets>
+					<view ltx="1311" lty="1219" rbx="1367" rby="1273" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="98" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="261" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="262" />
+					</targets>
+					<view ltx="1149" lty="1219" rbx="1262" rby="1257" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="101" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="275" />
+						<datapoint pos="1" key="268" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="269" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1268" rbx="1527" rby="1322" />
+				</component>
+				<component name="equal" library="core" uid="102" kind="5" prioritycontext="266">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="266" />
+						<datapoint pos="1" key="274" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="267" />
+					</targets>
+					<view ltx="1311" lty="1284" rbx="1367" rby="1338" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="103" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="272" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="273" />
+					</targets>
+					<view ltx="1149" lty="1284" rbx="1262" rby="1322" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="106" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="286" />
+						<datapoint pos="1" key="279" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="280" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1341" rbx="1527" rby="1395" />
+				</component>
+				<component name="equal" library="core" uid="107" kind="5" prioritycontext="277">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="277" />
+						<datapoint pos="1" key="285" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="278" />
+					</targets>
+					<view ltx="1311" lty="1357" rbx="1367" rby="1411" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="108" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="283" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="284" />
+					</targets>
+					<view ltx="1149" lty="1357" rbx="1262" rby="1395" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="111" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="297" />
+						<datapoint pos="1" key="290" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="291" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1415" rbx="1527" rby="1469" />
+				</component>
+				<component name="equal" library="core" uid="112" kind="5" prioritycontext="288">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="288" />
+						<datapoint pos="1" key="296" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289" />
+					</targets>
+					<view ltx="1311" lty="1431" rbx="1367" rby="1485" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="113" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="294" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="295" />
+					</targets>
+					<view ltx="1149" lty="1431" rbx="1262" rby="1469" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="116" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="308" />
+						<datapoint pos="1" key="301" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="302" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1482" rbx="1527" rby="1536" />
+				</component>
+				<component name="equal" library="core" uid="117" kind="5" prioritycontext="299">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="299" />
+						<datapoint pos="1" key="307" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="300" />
+					</targets>
+					<view ltx="1311" lty="1498" rbx="1367" rby="1552" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="118" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="305" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="306" />
+					</targets>
+					<view ltx="1149" lty="1498" rbx="1262" rby="1536" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="121" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="319" />
+						<datapoint pos="1" key="312" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="313" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1548" rbx="1527" rby="1602" />
+				</component>
+				<component name="equal" library="core" uid="122" kind="5" prioritycontext="310">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="310" />
+						<datapoint pos="1" key="318" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="311" />
+					</targets>
+					<view ltx="1311" lty="1564" rbx="1367" rby="1618" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="123" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="316" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="317" />
+					</targets>
+					<view ltx="1149" lty="1564" rbx="1262" rby="1602" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="128" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="327" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="328" />
+					</targets>
+					<view ltx="1149" lty="1636" rbx="1262" rby="1674" />
+				</component>
+				<component name="constant" library="core" uid="129" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="326" />
+					</targets>
+					<view ltx="919" lty="1657" rbx="1070" rby="1674" />
+					<data>
+						<constant value="mini:LiabilitiesAndEquity" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="41" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="133" />
+					</targets>
+					<view ltx="919" lty="468" rbx="1089" rby="485" />
+					<data>
+						<constant value="mini:CashAndCashEquivalents" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="49" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="150" />
+					</targets>
+					<view ltx="919" lty="535" rbx="1043" rby="552" />
+					<data>
+						<constant value="mini:Inventories" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="54" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="161" />
+					</targets>
+					<view ltx="919" lty="601" rbx="1045" rby="618" />
+					<data>
+						<constant value="mini:Receivables" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="59" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="172" />
+					</targets>
+					<view ltx="919" lty="675" rbx="1057" rby="692" />
+					<data>
+						<constant value="mini:CurrentAssets" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="64" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="183" />
+					</targets>
+					<view ltx="919" lty="745" rbx="1078" rby="762" />
+					<data>
+						<constant value="mini:PropertyPlantAndEquipment" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="69" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="194" />
+					</targets>
+					<view ltx="919" lty="810" rbx="1081" rby="827" />
+					<data>
+						<constant value="mini:NoncurrentAssets" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="74" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="205" />
+					</targets>
+					<view ltx="919" lty="888" rbx="1018" rby="905" />
+					<data>
+						<constant value="mini:Assets" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="124" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="315" />
+					</targets>
+					<view ltx="919" lty="1585" rbx="1018" rby="1602" />
+					<data>
+						<constant value="mini:Equity" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="119" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="304" />
+					</targets>
+					<view ltx="919" lty="1519" rbx="1081" rby="1536" />
+					<data>
+						<constant value="mini:RetainedEarnings" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="84" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="227" />
+					</targets>
+					<view ltx="919" lty="1031" rbx="1072" rby="1048" />
+					<data>
+						<constant value="mini:AccountsPayable" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="equal" library="core" uid="43" kind="5" prioritycontext="140">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="140" />
+						<datapoint pos="1" key="131" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="137" />
+					</targets>
+					<view ltx="1299" lty="447" rbx="1355" rby="501" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="44" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="139" />
+						<datapoint pos="1" key="138" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="135" />
+						<datapoint />
+					</targets>
+					<view ltx="1402" lty="431" rbx="1515" rby="485" />
+				</component>
+				<component name="constant" library="core" uid="79" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="216" />
+					</targets>
+					<view ltx="956" lty="958" rbx="998" rby="975" />
+					<data>
+						<constant datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="equal" library="core" uid="133" kind="5" prioritycontext="358">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="358" />
+						<datapoint pos="1" key="352" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="355" />
+					</targets>
+					<view ltx="1304" lty="1857" rbx="1360" rby="1911" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="134" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="354" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="351" />
+					</targets>
+					<view ltx="1142" lty="1857" rbx="1255" rby="1895" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="131" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="357" />
+						<datapoint pos="1" key="356" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="349" />
+						<datapoint />
+					</targets>
+					<view ltx="1407" lty="1841" rbx="1520" rby="1895" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="136" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="368" />
+						<datapoint pos="1" key="367" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="360" />
+						<datapoint />
+					</targets>
+					<view ltx="1418" lty="1920" rbx="1531" rby="1974" />
+				</component>
+				<component name="equal" library="core" uid="138" kind="5" prioritycontext="369">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="369" />
+						<datapoint pos="1" key="363" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="366" />
+					</targets>
+					<view ltx="1315" lty="1936" rbx="1371" rby="1990" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="139" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="365" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="362" />
+					</targets>
+					<view ltx="1153" lty="1936" rbx="1266" rby="1974" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="141" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="379" />
+						<datapoint pos="1" key="378" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="371" />
+						<datapoint />
+					</targets>
+					<view ltx="1418" lty="1992" rbx="1531" rby="2046" />
+				</component>
+				<component name="equal" library="core" uid="143" kind="5" prioritycontext="380">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="380" />
+						<datapoint pos="1" key="374" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="377" />
+					</targets>
+					<view ltx="1315" lty="2008" rbx="1371" rby="2062" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="144" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="376" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="373" />
+					</targets>
+					<view ltx="1153" lty="2008" rbx="1266" rby="2046" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="146" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="390" />
+						<datapoint pos="1" key="389" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="382" />
+						<datapoint />
+					</targets>
+					<view ltx="1418" lty="2060" rbx="1531" rby="2114" />
+				</component>
+				<component name="equal" library="core" uid="148" kind="5" prioritycontext="391">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="391" />
+						<datapoint pos="1" key="385" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="388" />
+					</targets>
+					<view ltx="1315" lty="2076" rbx="1371" rby="2130" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="149" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="387" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="384" />
+					</targets>
+					<view ltx="1153" lty="2076" rbx="1266" rby="2114" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="151" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="401" />
+						<datapoint pos="1" key="400" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="393" />
+						<datapoint />
+					</targets>
+					<view ltx="1418" lty="2132" rbx="1531" rby="2186" />
+				</component>
+				<component name="equal" library="core" uid="153" kind="5" prioritycontext="402">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="402" />
+						<datapoint pos="1" key="396" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="399" />
+					</targets>
+					<view ltx="1315" lty="2148" rbx="1371" rby="2202" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="154" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="398" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="395" />
+					</targets>
+					<view ltx="1153" lty="2148" rbx="1266" rby="2186" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="156" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="412" />
+						<datapoint pos="1" key="411" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="404" />
+						<datapoint />
+					</targets>
+					<view ltx="1418" lty="2205" rbx="1531" rby="2259" />
+				</component>
+				<component name="equal" library="core" uid="158" kind="5" prioritycontext="413">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="413" />
+						<datapoint pos="1" key="407" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="410" />
+					</targets>
+					<view ltx="1315" lty="2221" rbx="1371" rby="2275" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="159" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="409" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="406" />
+					</targets>
+					<view ltx="1153" lty="2221" rbx="1266" rby="2259" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="161" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="423" />
+						<datapoint pos="1" key="422" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="415" />
+						<datapoint />
+					</targets>
+					<view ltx="1418" lty="2278" rbx="1531" rby="2332" />
+				</component>
+				<component name="equal" library="core" uid="163" kind="5" prioritycontext="424">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="424" />
+						<datapoint pos="1" key="418" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="421" />
+					</targets>
+					<view ltx="1315" lty="2294" rbx="1371" rby="2348" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="164" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="420" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="417" />
+					</targets>
+					<view ltx="1153" lty="2294" rbx="1266" rby="2332" />
+				</component>
+				<component name="constant" library="core" uid="165" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="419" />
+					</targets>
+					<view ltx="969" lty="2315" rbx="1134" rby="2332" />
+					<data>
+						<constant value="mini:IncomeTaxExpenseBenefit" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="155" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="397" />
+					</targets>
+					<view ltx="969" lty="2169" rbx="1132" rby="2186" />
+					<data>
+						<constant value="mini:DepreciationAndAmortization" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="160" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="408" />
+					</targets>
+					<view ltx="923" lty="2242" rbx="968" rby="2259" />
+					<data>
+						<constant value=" " datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="150" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="386" />
+					</targets>
+					<view ltx="969" lty="2097" rbx="1103" rby="2114" />
+					<data>
+						<constant value="mini:CostsOfSales" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="145" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="375" />
+					</targets>
+					<view ltx="969" lty="2029" rbx="1117" rby="2046" />
+					<data>
+						<constant value="mini:InterestExpense" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="140" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="364" />
+					</targets>
+					<view ltx="923" lty="1957" rbx="968" rby="1974" />
+					<data>
+						<constant value=" " datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="135" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="353" />
+					</targets>
+					<view ltx="977" lty="1878" rbx="1070" rby="1895" />
+					<data>
+						<constant value="mini:Sales" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="equal" library="core" uid="127" kind="5" prioritycontext="321">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="321" />
+						<datapoint pos="1" key="329" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="322" />
+					</targets>
+					<view ltx="1311" lty="1636" rbx="1367" rby="1690" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="126" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="330" />
+						<datapoint pos="1" key="323" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="324" />
+						<datapoint />
+					</targets>
+					<view ltx="1414" lty="1620" rbx="1527" rby="1674" />
+				</component>
+				<component name="sum" library="core" uid="80" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="215" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="1557" lty="921" rbx="1682" rby="975" />
+				</component>
+				<component name="sum" library="core" uid="45" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="136" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="132" />
+					</targets>
+					<view ltx="1545" lty="431" rbx="1670" rby="485" />
+				</component>
+				<component name="sum" library="core" uid="50" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="149" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="144" />
+					</targets>
+					<view ltx="1557" lty="498" rbx="1682" rby="552" />
+				</component>
+				<component name="sum" library="core" uid="55" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="160" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="155" />
+					</targets>
+					<view ltx="1557" lty="564" rbx="1682" rby="618" />
+				</component>
+				<component name="sum" library="core" uid="60" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="171" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="166" />
+					</targets>
+					<view ltx="1557" lty="638" rbx="1682" rby="692" />
+				</component>
+				<component name="sum" library="core" uid="65" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="182" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="177" />
+					</targets>
+					<view ltx="1557" lty="708" rbx="1682" rby="762" />
+				</component>
+				<component name="sum" library="core" uid="70" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="193" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="188" />
+					</targets>
+					<view ltx="1557" lty="773" rbx="1682" rby="827" />
+				</component>
+				<component name="sum" library="core" uid="75" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="204" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="199" />
+					</targets>
+					<view ltx="1557" lty="851" rbx="1682" rby="905" />
+				</component>
+				<component name="constant" library="core" uid="89" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="238" />
+					</targets>
+					<view ltx="926" lty="1082" rbx="1081" rby="1099" />
+					<data>
+						<constant value="mini:AccruedExpenses" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="94" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="249" />
+					</targets>
+					<view ltx="914" lty="1171" rbx="1063" rby="1188" />
+					<data>
+						<constant value="mini:CurrentLiabilities" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="99" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="260" />
+					</targets>
+					<view ltx="922" lty="1240" rbx="1063" rby="1257" />
+					<data>
+						<constant value="mini:LongtermDebt" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="104" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="271" />
+					</targets>
+					<view ltx="922" lty="1305" rbx="1081" rby="1322" />
+					<data>
+						<constant value="mini:NoncurrentLiabilities" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="109" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="282" />
+					</targets>
+					<view ltx="919" lty="1378" rbx="1034" rby="1395" />
+					<data>
+						<constant value="mini:Liabilities" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="114" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="293" />
+					</targets>
+					<view ltx="919" lty="1452" rbx="1054" rby="1469" />
+					<data>
+						<constant value="mini:PaidInCapital" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="sum" library="core" uid="130" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="325" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="320" />
+					</targets>
+					<view ltx="1557" lty="1620" rbx="1682" rby="1674" />
+				</component>
+				<component name="multiply" library="core" uid="177" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="458" />
+						<datapoint pos="1" key="456" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="457" />
+					</targets>
+					<view ltx="1763" lty="1466" rbx="1845" rby="1522" />
+				</component>
+				<component name="multiply" library="core" uid="179" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="464" />
+						<datapoint pos="1" key="462" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="463" />
+					</targets>
+					<view ltx="1763" lty="1327" rbx="1845" rby="1383" />
+				</component>
+				<component name="multiply" library="core" uid="180" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="467" />
+						<datapoint pos="1" key="465" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="466" />
+					</targets>
+					<view ltx="1763" lty="1254" rbx="1845" rby="1310" />
+				</component>
+				<component name="sum" library="core" uid="90" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="237" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="232" />
+					</targets>
+					<view ltx="1557" lty="1066" rbx="1682" rby="1120" />
+				</component>
+				<component name="sum" library="core" uid="95" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="248" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="243" />
+					</targets>
+					<view ltx="1557" lty="1134" rbx="1682" rby="1188" />
+				</component>
+				<component name="multiply" library="core" uid="181" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="470" />
+						<datapoint pos="1" key="468" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="469" />
+					</targets>
+					<view ltx="1763" lty="1189" rbx="1845" rby="1245" />
+				</component>
+				<component name="sum" library="core" uid="100" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="259" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="254" />
+					</targets>
+					<view ltx="1557" lty="1203" rbx="1682" rby="1257" />
+				</component>
+				<component name="sum" library="core" uid="105" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="270" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="265" />
+					</targets>
+					<view ltx="1557" lty="1268" rbx="1682" rby="1322" />
+				</component>
+				<component name="sum" library="core" uid="110" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="281" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="276" />
+					</targets>
+					<view ltx="1557" lty="1341" rbx="1682" rby="1395" />
+				</component>
+				<component name="sum" library="core" uid="115" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="292" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="287" />
+					</targets>
+					<view ltx="1557" lty="1415" rbx="1682" rby="1469" />
+				</component>
+				<component name="sum" library="core" uid="120" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="303" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="298" />
+					</targets>
+					<view ltx="1557" lty="1482" rbx="1682" rby="1536" />
+				</component>
+				<component name="sum" library="core" uid="125" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="314" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="309" />
+					</targets>
+					<view ltx="1557" lty="1548" rbx="1682" rby="1602" />
+				</component>
+				<component name="multiply" library="core" uid="178" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="461" />
+						<datapoint pos="1" key="488" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="460" />
+					</targets>
+					<view ltx="1763" lty="1397" rbx="1845" rby="1453" />
+				</component>
+				<component name="multiply" library="core" uid="183" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="476" />
+						<datapoint pos="1" key="474" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="475" />
+					</targets>
+					<view ltx="1763" lty="1054" rbx="1845" rby="1110" />
+				</component>
+				<component name="multiply" library="core" uid="184" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="477" />
+						<datapoint pos="1" key="479" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="478" />
+					</targets>
+					<view ltx="1763" lty="980" rbx="1845" rby="1036" />
+				</component>
+				<component name="sum" library="core" uid="85" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="226" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="221" />
+					</targets>
+					<view ltx="1557" lty="994" rbx="1682" rby="1048" />
+				</component>
+				<component name="multiply" library="core" uid="174" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="449" />
+						<datapoint pos="1" key="450" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="451" />
+					</targets>
+					<view ltx="1763" lty="1618" rbx="1845" rby="1674" />
+				</component>
+				<component name="sum" library="core" uid="132" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="350" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="348" />
+					</targets>
+					<view ltx="1550" lty="1841" rbx="1675" rby="1895" />
+				</component>
+				<component name="multiply" library="core" uid="186" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint />
+						<datapoint />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="1532" lty="2231" rbx="1614" rby="2287" />
+				</component>
+				<component name="constant" library="core" uid="175" kind="2">
+					<targets>
+						<datapoint pos="0" key="452" />
+					</targets>
+					<view ltx="1638" lty="1800" rbx="1682" rby="1817" />
+					<data>
+						<constant value="-1" datatype="decimal" />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="170" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="430" />
+					</targets>
+					<view ltx="990" lty="2389" rbx="1134" rby="2406" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="169" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="431" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="428" />
+					</targets>
+					<view ltx="1153" lty="2368" rbx="1266" rby="2406" />
+				</component>
+				<component name="sum" library="core" uid="167" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="427" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="425" />
+					</targets>
+					<view ltx="1561" lty="2352" rbx="1686" rby="2406" />
+				</component>
+				<component name="equal" library="core" uid="190" kind="5" prioritycontext="496">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="496" />
+						<datapoint pos="1" key="504" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="497" />
+					</targets>
+					<view ltx="3390" lty="809" rbx="3446" rby="863" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="191" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="495" />
+						<datapoint pos="1" key="498" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="501" />
+						<datapoint />
+					</targets>
+					<view ltx="3495" lty="809" rbx="3608" rby="863" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="194" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="511" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="514" />
+					</targets>
+					<view ltx="3228" lty="886" rbx="3341" rby="924" />
+				</component>
+				<component name="equal" library="core" uid="195" kind="5" prioritycontext="507">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="507" />
+						<datapoint pos="1" key="515" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="508" />
+					</targets>
+					<view ltx="3390" lty="886" rbx="3446" rby="940" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="196" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="506" />
+						<datapoint pos="1" key="509" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="512" />
+						<datapoint />
+					</targets>
+					<view ltx="3495" lty="886" rbx="3608" rby="940" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="199" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="522" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="525" />
+					</targets>
+					<view ltx="3226" lty="957" rbx="3339" rby="995" />
+				</component>
+				<component name="equal" library="core" uid="200" kind="5" prioritycontext="518">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="518" />
+						<datapoint pos="1" key="526" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="519" />
+					</targets>
+					<view ltx="3388" lty="957" rbx="3444" rby="1011" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="201" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="517" />
+						<datapoint pos="1" key="520" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="523" />
+						<datapoint />
+					</targets>
+					<view ltx="3493" lty="957" rbx="3606" rby="1011" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="204" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="533" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="536" />
+					</targets>
+					<view ltx="3228" lty="1022" rbx="3341" rby="1060" />
+				</component>
+				<component name="equal" library="core" uid="205" kind="5" prioritycontext="529">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="529" />
+						<datapoint pos="1" key="537" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="530" />
+					</targets>
+					<view ltx="3390" lty="1022" rbx="3446" rby="1076" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="206" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="528" />
+						<datapoint pos="1" key="531" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="534" />
+						<datapoint />
+					</targets>
+					<view ltx="3495" lty="1022" rbx="3608" rby="1076" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="209" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="544" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="547" />
+					</targets>
+					<view ltx="3228" lty="1096" rbx="3341" rby="1134" />
+				</component>
+				<component name="equal" library="core" uid="210" kind="5" prioritycontext="540">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="540" />
+						<datapoint pos="1" key="548" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="541" />
+					</targets>
+					<view ltx="3390" lty="1096" rbx="3446" rby="1150" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="211" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="539" />
+						<datapoint pos="1" key="542" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="545" />
+						<datapoint />
+					</targets>
+					<view ltx="3495" lty="1096" rbx="3608" rby="1150" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="214" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="555" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="558" />
+					</targets>
+					<view ltx="3230" lty="1188" rbx="3343" rby="1226" />
+				</component>
+				<component name="equal" library="core" uid="215" kind="5" prioritycontext="551">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="551" />
+						<datapoint pos="1" key="559" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="552" />
+					</targets>
+					<view ltx="3392" lty="1188" rbx="3448" rby="1242" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="216" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="550" />
+						<datapoint pos="1" key="553" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="556" />
+						<datapoint />
+					</targets>
+					<view ltx="3497" lty="1188" rbx="3610" rby="1242" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="219" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="566" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="569" />
+					</targets>
+					<view ltx="3228" lty="1266" rbx="3341" rby="1304" />
+				</component>
+				<component name="equal" library="core" uid="168" kind="5" prioritycontext="435">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="435" />
+						<datapoint pos="1" key="429" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="432" />
+					</targets>
+					<view ltx="1315" lty="2368" rbx="1371" rby="2422" />
+				</component>
+				<component name="constant" library="core" uid="19" kind="2">
+					<targets>
+						<datapoint pos="0" key="62" />
+					</targets>
+					<view ltx="1021" lty="-354" rbx="1069" rby="-337" />
+					<data>
+						<constant value="0" datatype="string" />
+					</data>
+				</component>
+				<component name="gl-cor:amount " library="core" uid="166" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="434" />
+						<datapoint pos="1" key="433" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="426" />
+						<datapoint />
+					</targets>
+					<view ltx="1420" lty="2368" rbx="1533" rby="2422" />
+				</component>
+				<component name="constant" library="core" uid="7" kind="2">
+					<targets>
+						<datapoint pos="0" key="22" />
+					</targets>
+					<view ltx="1557" lty="174" rbx="1655" rby="191" />
+					<data>
+						<constant value="2024-12-31" datatype="string" />
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="182" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="473" />
+						<datapoint pos="1" key="471" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="472" />
+					</targets>
+					<view ltx="1763" lty="1120" rbx="1845" rby="1176" />
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<targets>
+						<datapoint pos="0" key="6" />
+					</targets>
+					<view ltx="1504" lty="112" rbx="1655" rby="129" />
+					<data>
+						<constant value="http://www.mini.com" datatype="string" />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="223" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="576" />
+					</targets>
+					<view ltx="1978" lty="1356" rbx="2122" rby="1373" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="224" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="577" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="580" />
+					</targets>
+					<view ltx="2141" lty="1335" rbx="2254" rby="1373" />
+				</component>
+				<component name="equal" library="core" uid="225" kind="5" prioritycontext="572">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="572" />
+						<datapoint pos="1" key="581" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="574" />
+					</targets>
+					<view ltx="2301" lty="1335" rbx="2357" rby="1389" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="226" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="573" />
+						<datapoint pos="1" key="575" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="578" />
+						<datapoint />
+					</targets>
+					<view ltx="2406" lty="1335" rbx="2519" rby="1389" />
+				</component>
+				<component name="sum" library="core" uid="227" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="579" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="2551" lty="1319" rbx="2676" rby="1373" />
+				</component>
+				<component name="constant" library="core" uid="228" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="586" />
+					</targets>
+					<view ltx="1978" lty="1429" rbx="2122" rby="1446" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="229" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="587" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="590" />
+					</targets>
+					<view ltx="2141" lty="1408" rbx="2254" rby="1446" />
+				</component>
+				<component name="equal" library="core" uid="230" kind="5" prioritycontext="582">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="582" />
+						<datapoint pos="1" key="591" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="584" />
+					</targets>
+					<view ltx="2301" lty="1408" rbx="2357" rby="1462" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="231" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="583" />
+						<datapoint pos="1" key="585" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="588" />
+						<datapoint />
+					</targets>
+					<view ltx="2406" lty="1408" rbx="2519" rby="1462" />
+				</component>
+				<component name="sum" library="core" uid="232" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="589" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="2551" lty="1392" rbx="2676" rby="1446" />
+				</component>
+				<component name="constant" library="core" uid="233" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="596" />
+					</targets>
+					<view ltx="1978" lty="1503" rbx="2122" rby="1520" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="234" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="597" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="600" />
+					</targets>
+					<view ltx="2141" lty="1482" rbx="2254" rby="1520" />
+				</component>
+				<component name="equal" library="core" uid="235" kind="5" prioritycontext="592">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="592" />
+						<datapoint pos="1" key="601" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="594" />
+					</targets>
+					<view ltx="2301" lty="1482" rbx="2357" rby="1536" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="236" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="593" />
+						<datapoint pos="1" key="595" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="598" />
+						<datapoint />
+					</targets>
+					<view ltx="2406" lty="1482" rbx="2519" rby="1536" />
+				</component>
+				<component name="sum" library="core" uid="237" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="599" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="2551" lty="1466" rbx="2676" rby="1520" />
+				</component>
+				<component name="constant" library="core" uid="238" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="606" />
+					</targets>
+					<view ltx="1978" lty="1588" rbx="2122" rby="1605" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="239" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="607" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="610" />
+					</targets>
+					<view ltx="2141" lty="1567" rbx="2254" rby="1605" />
+				</component>
+				<component name="equal" library="core" uid="240" kind="5" prioritycontext="602">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="602" />
+						<datapoint pos="1" key="611" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="604" />
+					</targets>
+					<view ltx="2301" lty="1567" rbx="2357" rby="1621" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="241" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="603" />
+						<datapoint pos="1" key="605" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="608" />
+						<datapoint />
+					</targets>
+					<view ltx="2406" lty="1567" rbx="2519" rby="1621" />
+				</component>
+				<component name="sum" library="core" uid="242" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="609" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="2551" lty="1551" rbx="2676" rby="1605" />
+				</component>
+				<component name="constant" library="core" uid="243" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="616" />
+					</targets>
+					<view ltx="1978" lty="1656" rbx="2122" rby="1673" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="244" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="617" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="620" />
+					</targets>
+					<view ltx="2141" lty="1635" rbx="2254" rby="1673" />
+				</component>
+				<component name="equal" library="core" uid="245" kind="5" prioritycontext="612">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="612" />
+						<datapoint pos="1" key="621" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="614" />
+					</targets>
+					<view ltx="2301" lty="1635" rbx="2357" rby="1689" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="246" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="613" />
+						<datapoint pos="1" key="615" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="618" />
+						<datapoint />
+					</targets>
+					<view ltx="2406" lty="1635" rbx="2519" rby="1689" />
+				</component>
+				<component name="sum" library="core" uid="247" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="619" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="2551" lty="1619" rbx="2676" rby="1673" />
+				</component>
+				<component name="constant" library="core" uid="248" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="626" />
+					</targets>
+					<view ltx="1978" lty="1730" rbx="2122" rby="1747" />
+					<data>
+						<constant value="mini:NetIncomeLoss" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="string-as-QName" library="lang" uid="249" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="627" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="630" />
+					</targets>
+					<view ltx="2141" lty="1709" rbx="2254" rby="1747" />
+				</component>
+				<component name="sum" library="core" uid="252" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="629" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="2551" lty="1693" rbx="2676" rby="1747" />
+				</component>
+				<component name="equal" library="core" uid="250" kind="5" prioritycontext="622">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="622" />
+						<datapoint pos="1" key="631" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="624" />
+					</targets>
+					<view ltx="2301" lty="1709" rbx="2357" rby="1763" />
+				</component>
+				<component name="equal" library="core" uid="220" kind="5" prioritycontext="562">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="562" />
+						<datapoint pos="1" key="570" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="563" />
+					</targets>
+					<view ltx="3388" lty="1266" rbx="3444" rby="1320" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="221" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="561" />
+						<datapoint pos="1" key="564" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="567" />
+						<datapoint />
+					</targets>
+					<view ltx="3493" lty="1266" rbx="3606" rby="1320" />
+				</component>
+				<component name="gl-cor:amount " library="core" uid="251" kind="3">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="623" />
+						<datapoint pos="1" key="625" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="628" />
+						<datapoint />
+					</targets>
+					<view ltx="2406" lty="1709" rbx="2519" rby="1763" />
+				</component>
+				<component name="constant" library="core" uid="188" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="499" />
+					</targets>
+					<view ltx="2979" lty="830" rbx="3144" rby="847" />
+					<data>
+						<constant value="mini:ProceedsFromCollectionOfReceivables" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="sum" library="core" uid="192" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="502" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="505" />
+					</targets>
+					<view ltx="3636" lty="793" rbx="3761" rby="847" />
+				</component>
+				<component name="sum" library="core" uid="197" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="513" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="516" />
+					</targets>
+					<view ltx="3636" lty="870" rbx="3761" rby="924" />
+				</component>
+				<component name="constant" library="core" uid="193" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="510" />
+					</targets>
+					<view ltx="2979" lty="907" rbx="3148" rby="924" />
+					<data>
+						<constant value="mini:ProceedsFromAdditionalLongtermBorrowings" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="198" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="521" />
+					</targets>
+					<view ltx="2981" lty="969" rbx="3144" rby="986" />
+					<data>
+						<constant value="mini:PaymentForCapitalAdditionsOfPropertyPlantEquipment" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="sum" library="core" uid="202" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="524" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="527" />
+					</targets>
+					<view ltx="3634" lty="941" rbx="3759" rby="995" />
+				</component>
+				<component name="constant" library="core" uid="203" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="532" />
+					</targets>
+					<view ltx="2981" lty="1043" rbx="3151" rby="1060" />
+					<data>
+						<constant value="mini:PaymentOfAccountsPayable" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="sum" library="core" uid="207" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="535" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="538" />
+					</targets>
+					<view ltx="3636" lty="1006" rbx="3761" rby="1060" />
+				</component>
+				<component name="constant" library="core" uid="208" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="543" />
+					</targets>
+					<view ltx="2998" lty="1096" rbx="3166" rby="1113" />
+					<data>
+						<constant value="mini:PaymentForReductionOfLongtermBorrowings" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="sum" library="core" uid="212" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="546" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="549" />
+					</targets>
+					<view ltx="3636" lty="1080" rbx="3761" rby="1134" />
+				</component>
+				<component name="string-as-QName" library="lang" uid="189" kind="5">
+					<properties />
+					<sources>
+						<datapoint pos="0" key="500" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="503" />
+					</targets>
+					<view ltx="3228" lty="809" rbx="3341" rby="847" />
+				</component>
+				<component name="constant" library="core" uid="213" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="554" />
+					</targets>
+					<view ltx="3014" lty="1209" rbx="3176" rby="1226" />
+					<data>
+						<constant value="mini:PaymentOfInterest" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="218" kind="2">
+					<properties />
+					<targets>
+						<datapoint pos="0" key="565" />
+					</targets>
+					<view ltx="3014" lty="1287" rbx="3177" rby="1304" />
+					<data>
+						<constant value="mini:ProceedsFromInvestmentsByOwner" datatype="string" />
+						<wsdl />
+					</data>
+				</component>
+				<component name="sum" library="core" uid="222" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="568" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="571" />
+					</targets>
+					<view ltx="3638" lty="1250" rbx="3763" rby="1304" />
+				</component>
+				<component name="sum" library="core" uid="217" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="557" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="560" />
+					</targets>
+					<view ltx="3638" lty="1172" rbx="3763" rby="1226" />
+				</component>
+				<component name="multiply" library="core" uid="176" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="455" />
+						<datapoint pos="1" key="453" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="454" />
+					</targets>
+					<view ltx="1763" lty="1546" rbx="1845" rby="1602" />
+				</component>
+				<component name="constant" library="core" uid="4" kind="2">
+					<targets>
+						<datapoint pos="0" key="5" />
+					</targets>
+					<view ltx="1590" lty="83" rbx="1655" rby="100" />
+					<data>
+						<constant value="Mini" datatype="string" />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6" kind="2">
+					<targets>
+						<datapoint pos="0" key="21" />
+					</targets>
+					<view ltx="1557" lty="145" rbx="1655" rby="162" />
+					<data>
+						<constant value="2024-01-01" datatype="string" />
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="185" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="482" />
+						<datapoint pos="1" key="480" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="481" />
+					</targets>
+					<view ltx="1741" lty="1841" rbx="1823" rby="1897" />
+				</component>
+				<component name="sum" library="core" uid="137" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="361" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="1561" lty="1920" rbx="1686" rby="1974" />
+				</component>
+				<component name="sum" library="core" uid="142" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="372" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="370" />
+					</targets>
+					<view ltx="1561" lty="1992" rbx="1686" rby="2046" />
+				</component>
+				<component name="sum" library="core" uid="147" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="383" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="381" />
+					</targets>
+					<view ltx="1561" lty="2060" rbx="1686" rby="2114" />
+				</component>
+				<component name="sum" library="core" uid="152" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="394" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="392" />
+					</targets>
+					<view ltx="1561" lty="2132" rbx="1686" rby="2186" />
+				</component>
+				<component name="sum" library="core" uid="157" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="405" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="1561" lty="2205" rbx="1686" rby="2259" />
+				</component>
+				<component name="sum" library="core" uid="162" kind="5">
+					<properties />
+					<sources>
+						<datapoint />
+						<datapoint pos="1" key="416" />
+					</sources>
+					<targets>
+						<datapoint pos="0" key="414" />
+					</targets>
+					<view ltx="1561" lty="2278" rbx="1686" rby="2332" />
+				</component>
+				<component name="multiply" library="core" uid="187" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="487" />
+						<datapoint pos="1" key="489" />
+					</sources>
+					<targets>
+						<datapoint />
+					</targets>
+					<view ltx="1763" lty="2294" rbx="1845" rby="2350" />
+				</component>
+				<component name="mini-entryPoint" library="xbrl" uid="40" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" XBRLShowAllConcepts="1" />
+					<view ltx="1925" lty="-266" rbx="2522" rby="1111" />
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace />
+									<namespace uid="http://www.altova.com/mapforce" />
+									<namespace uid="https://xbrlsite.azurewebsites.net/mini" />
+									<namespace uid="http://www.xbrl.org/2003/instance" />
+									<namespace uid="view" />
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="3" expanded="1" showdefaultsnode="1">
+										<entry name="defaults" ns="1" expanded="1">
+											<entry name="monetaryItemType" ns="1" expanded="1">
+												<entry name="unitRef" type="attribute" inpkey="122" />
+												<entry name="decimals" type="attribute" inpkey="123" />
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/AccountsPayable" ns="4">
+											<entry name="AccountsPayableRollForwardHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/AccountsPayableDetail" ns="4">
+											<entry name="AccountsPayableSubclassificationsHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/BalanceSheet" ns="4">
+											<entry name="BalanceSheetHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" inpkey="124" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="125" />
+													</entry>
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" inpkey="126" expanded="1">
+															<entry name="instant" ns="3" inpkey="127" />
+														</entry>
+														<entry name="context" ns="3" expanded="1">
+															<entry name="BalanceSheetLineItems" ns="2" expanded="1">
+																<entry name="CashAndCashEquivalents" ns="2" inpkey="141" />
+																<entry name="PropertyPlantAndEquipment" ns="2" inpkey="331" />
+																<entry name="AccountsPayable" ns="2" inpkey="332" />
+																<entry name="LongtermDebt" ns="2" inpkey="333" />
+																<entry name="PaidInCapital" ns="2" inpkey="334" />
+																<entry name="Receivables" ns="2" inpkey="335" />
+																<entry name="NoncurrentAssets" ns="2" inpkey="336" />
+																<entry name="AccruedExpenses" ns="2" inpkey="337" />
+																<entry name="NoncurrentLiabilities" ns="2" inpkey="338" />
+																<entry name="RetainedEarnings" ns="2" inpkey="339" />
+																<entry name="Inventories" ns="2" inpkey="340" />
+																<entry name="Assets" ns="2" inpkey="341" />
+																<entry name="Liabilities" ns="2" inpkey="343" />
+																<entry name="Equity" ns="2" inpkey="344" />
+																<entry name="LiabilitiesAndEquity" ns="2" inpkey="345" />
+																<entry name="CurrentAssets" ns="2" inpkey="346" />
+																<entry name="CurrentLiabilities" ns="2" inpkey="347" />
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/BasisOfReporting" ns="4">
+											<entry name="BasisReportingHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="BasisReportingLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/CashAndCashEquivalents" ns="4">
+											<entry name="CashAndCashEquivalentsRollForwardHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3">
+															<entry name="CashAndCashEquivalentsRollForwardLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/CashAndCashEquivalentsDetail" ns="4">
+											<entry name="CashAndCashEquivalentsSubclassificationsHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="CashAndCashEquivalentsSubclassificationsLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/CashFlowStatement" ns="4">
+											<entry name="CashFlowStatementHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" inpkey="634" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="635" />
+													</entry>
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" inpkey="636" expanded="1">
+															<entry name="startDate" ns="3" inpkey="637" />
+															<entry name="endDate" ns="3" inpkey="638" />
+														</entry>
+														<entry name="context" ns="3" expanded="1">
+															<entry name="CashFlowStatementLineItems" ns="2" expanded="1">
+																<entry name="ProceedsFromCollectionOfReceivables" ns="2" inpkey="639" />
+																<entry name="ProceedsFromAdditionalLongtermBorrowings" ns="2" inpkey="640" />
+																<entry name="PaymentForCapitalAdditionsOfPropertyPlantEquipment" ns="2" inpkey="641" />
+																<entry name="PaymentOfAccountsPayable" ns="2" inpkey="642" />
+																<entry name="PaymentForReductionOfLongtermBorrowings" ns="2" inpkey="643" />
+																<entry name="PaymentInterest" ns="2" inpkey="644" />
+																<entry name="ProceedsFromInvestmentsByOwner" ns="2" inpkey="645" />
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/ChangesInEquity" ns="4">
+											<entry name="StatementOfChangesInEquityHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="StatementOfChangesInEquityLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/CurrentPortionOfLongtermDebtRollForward" ns="4">
+											<entry name="CurrentPortionOfLongTermDebtRollForwardHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/IncomeStatement" ns="4" expanded="1">
+											<entry name="IncomeStatementHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" inpkey="646" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="647" />
+													</entry>
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" inpkey="648" expanded="1">
+															<entry name="startDate" ns="3" inpkey="649" />
+															<entry name="endDate" ns="3" inpkey="650" />
+														</entry>
+														<entry name="context" ns="3" expanded="1">
+															<entry name="IncomeStatementLineItems" ns="2" expanded="1">
+																<entry name="Sales" ns="2" inpkey="651" />
+																<entry name="InterestExpense" ns="2" inpkey="652" />
+																<entry name="CostsOfSales" ns="2" inpkey="653" />
+																<entry name="DepreciationAndAmortization" ns="2" inpkey="654" />
+																<entry name="IncomeTaxExpenseBenefit" ns="2" inpkey="655" />
+																<entry name="NetIncomeLoss" ns="2" expanded="1" />
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/IncomeSummary" ns="4">
+											<entry name="IncomeSummary" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="IncomeSummaryLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/Inventories" ns="4">
+											<entry name="InventoriesRollForwardHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/InventoriesDetail" ns="4">
+											<entry name="InventoriesSubclassificationsHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/LongTermDebt" ns="4">
+											<entry name="LongtermDebtRollForwardHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="LongtermDebtRollForwardLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/LongTermDebtDetail" ns="4">
+											<entry name="LongtermDebtSubclassificationsHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/LongTermDebtMaturities" ns="4">
+											<entry name="LongtermDebtMaturitiesHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/NatureOfBusiness" ns="4">
+											<entry name="NatureBusinessHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/PaidInCapital" ns="4">
+											<entry name="PaidInCapitalRollForwardHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/PropertyPlantAndEquipment" ns="4">
+											<entry name="PropertyPlantAndEquipmentRollForwardHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/PropertyPlantAndEquipmentDetail" ns="4">
+											<entry name="PropertyPlantAndEquipmentSubclassificationsHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/Receivables" ns="4">
+											<entry name="ReceivablesRollForwardHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/ReceivablesDetail" ns="4">
+											<entry name="ReceivablesSubclassificationsHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/RetainedEarnings" ns="4">
+											<entry name="RetainedEarningsRollForwardHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="RetainedEarningsRollForwardLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/RetainedEarnings2" ns="4">
+											<entry name="RetainedEarningsRollForwardHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="RetainedEarningsRollForwardLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/Transactions" ns="4">
+											<entry name="TransactionsGroupingsHypercube" ns="2" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1">
+															<entry name="TransactionsGroupingsLineItems" ns="2" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrlsite.azurewebsites.net/mini/role/TrialBalance" ns="4">
+											<entry name="TrialBalanceHypercube" ns="2">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="viewallconcepts" ns="4">
+											<entry name="Dimensionless" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="3" />
+													<qname name="period" ns="3" />
+												</dimensions>
+												<entry name="identifier" ns="3" expanded="1">
+													<entry name="identifier" ns="3" expanded="1" />
+													<entry name="period" ns="3" expanded="1">
+														<entry name="period" ns="3" expanded="1" />
+														<entry name="context" ns="3" expanded="1" />
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="unit" ns="3" expanded="1">
+											<entry name="id" type="attribute" inpkey="128" />
+											<entry name="measure" ns="3" inpkey="129" />
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/base-taxonomy/mini-entryPoint.xsd" outputinstance="..\Output\JE2XBLGL2FR.xml" />
+					</data>
+				</component>
+				<component name="JE_v18" library="text" uid="2" kind="16">
+					<properties />
+					<view ltx="-114" lty="-132" rbx="66" rby="360" />
+					<data>
+						<root scrollposition="36">
+							<header>
+								<namespaces>
+									<namespace />
+									<namespace uid="http://www.altova.com/mapforce" />
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="4" expanded="1">
+										<entry name="entryNumber" outkey="64" />
+										<entry name="postingDate" outkey="33" />
+										<entry name="accountPurposeCode" outkey="659" />
+										<entry name="accountMainID" outkey="34" />
+										<entry name="accountMainDescription" outkey="35" />
+										<entry name="Neto" outkey="36" />
+										<entry name="Tag1" outkey="37" />
+										<entry name="Tag2" outkey="38" />
+										<entry name="Tag3" outkey="39" />
+										<entry name="Tag4" outkey="40" />
+										<entry name="Tag5" outkey="41" />
+										<entry name="Tag6" outkey="42" />
+										<entry name="Tag7" outkey="43" />
+										<entry name="Tag8" outkey="44" />
+										<entry name="Tag9" outkey="45" />
+										<entry name="Tag10" outkey="632" />
+										<entry name="entryComment" outkey="121" />
+										<entry name="enteredBy" outkey="660" />
+										<entry name="enteredDate" outkey="661" />
+										<entry name="sourceJournalID" outkey="662" />
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\Source\JE_v18.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="JE_v18" block="Rows">
+									<field0 name="entryNumber" type="string" />
+									<field1 name="postingDate" type="string" />
+									<field2 name="accountPurposeCode" type="string" />
+									<field3 name="lineNumber" type="string" />
+									<field4 name="accountMainID" type="string" />
+									<field5 name="accountMainDescription" type="string" />
+									<field6 name="srcd_mapToStructure" type="string" />
+									<field7 name="srcd_taxonomyPrefix" type="string" />
+									<field8 name="srcd_mapToConcept" type="string" />
+									<field9 name="srcd_cashFlowConcept" type="string" />
+									<field10 name="debitCreditCode" type="string" />
+									<field11 name="amount" type="string" />
+									<field12 name="debitAmount" type="string" />
+									<field13 name="creditAmount" type="string" />
+									<field14 name="Neto" type="string" />
+									<field15 name="Tag1" type="string" />
+									<field16 name="Tag2" type="string" />
+									<field17 name="Tag3" type="string" />
+									<field18 name="Tag4" type="string" />
+									<field19 name="Tag5" type="string" />
+									<field20 name="Tag6" type="string" />
+									<field21 name="Tag7" type="string" />
+									<field22 name="Tag8" type="string" />
+									<field23 name="Tag9" type="string" />
+									<field24 name="Tag10" type="string" />
+									<field25 name="entryComment" type="string" />
+									<field26 name="enteredBy" type="string" />
+									<field27 name="enteredDate" type="string" />
+									<field28 name="sourceJournalID" type="string" />
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="3" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XBRLShowAllConcepts="1" PassThrough="1" />
+					<view ltx="578" lty="-111" rbx="865" rby="2060" />
+					<data>
+						<root scrollposition="324">
+							<header>
+								<namespaces>
+									<namespace />
+									<namespace uid="http://www.altova.com/mapforce" />
+									<namespace uid="http://www.xbrl.org/2003/instance" />
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25" />
+									<namespace uid="http://www.xbrl.org/int/gl/srcd/2015-03-25" />
+									<namespace uid="view" />
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="2" expanded="1" showdefaultsnode="1">
+										<entry name="defaults" ns="1" expanded="1">
+											<entry name="monetaryItemType" ns="1" expanded="1">
+												<entry name="unitRef" type="attribute" inpkey="58" />
+												<entry name="decimals" type="attribute" inpkey="59" />
+											</entry>
+											<entry name="unit" ns="2" expanded="1" />
+										</entry>
+										<entry name="//www.xbrl.org/2003/role/link" ns="5" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="2" />
+													<qname name="period" ns="2" />
+												</dimensions>
+												<entry name="identifier" ns="2" expanded="1">
+													<entry name="identifier" ns="2" inpkey="1" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="2" />
+													</entry>
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" inpkey="25" expanded="1">
+															<entry name="instant" ns="2" inpkey="27" />
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="3" expanded="1">
+																<entry name="documentInfo" ns="3" expanded="1">
+																	<entry name="entriesType" ns="3" inpkey="9902" />
+																</entry>
+																<entry name="entryHeader" ns="3" inpkey="663" expanded="1">
+																	<entry name="enteredBy" ns="3" inpkey="664" />
+																	<entry name="enteredDate" ns="3" inpkey="665" />
+																	<entry name="sourceJournalID" ns="3" inpkey="666" />
+																	<entry name="entryNumber" ns="3" inpkey="63" />
+																	<entry name="entryComment" ns="3" inpkey="120" />
+																	<entry name="entryDetail" ns="3" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="28" />
+																			<entry name="accountMainDescription" ns="3" inpkey="29" />
+																			<entry name="accountPurposeCode" ns="3" inpkey="657" />
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="30" outkey="142" />
+																		<entry name="debitCreditCode" ns="3" inpkey="31" />
+																		<entry name="postingDate" ns="3" inpkey="32" />
+																		<entry name="xbrlInfo" ns="3" expanded="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="46" outkey="143" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="47" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="48" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="49" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="50" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="51" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="52" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="53" expanded="1" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="54" />
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="633" />
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="viewallconcepts" ns="5" expanded="1">
+											<entry name="Dimensionless" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="2" />
+													<qname name="period" ns="2" />
+												</dimensions>
+												<entry name="identifier" ns="2" expanded="1">
+													<entry name="identifier" ns="2" expanded="1" />
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" expanded="1" />
+														<entry name="context" ns="2" expanded="1">
+															<entry name="account" ns="3" expanded="1" />
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="unit" ns="2" expanded="1">
+											<entry name="id" type="attribute" inpkey="60" />
+											<entry name="measure" ns="2" inpkey="61" />
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="..\Taxonomy\gl\plt\case-c-b-m-u-t-s\gl-plt-all-2015-03-25.xsd" outputinstance="..\Output\JE2XBLGL.xml" />
+					</data>
+				</component>
+				<component name="constant" library="core" uid="990" kind="2">
+					<targets>
+						<datapoint pos="0" key="9901" />
+					</targets>
+					<view ltx="250" lty="550" rbx="330" rby="570" />
+					<data>
+						<constant value="entries" datatype="string" />
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges />
+				<vertices>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="1" />
+							<edge vertexkey="124" />
+							<edge vertexkey="634" />
+							<edge vertexkey="646" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="2" />
+							<edge vertexkey="125" />
+							<edge vertexkey="635" />
+							<edge vertexkey="647" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="7" />
+							<edge vertexkey="8" />
+							<edge vertexkey="30" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="10" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="12" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="16" />
+							<edge vertexkey="18" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="25" />
+							<edge vertexkey="26" />
+							<edge vertexkey="636" />
+							<edge vertexkey="637" />
+							<edge vertexkey="648" />
+							<edge vertexkey="649" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="27" />
+							<edge vertexkey="126" />
+							<edge vertexkey="127" />
+							<edge vertexkey="638" />
+							<edge vertexkey="650" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="28" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="29" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="31" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="32" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="46" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="47" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="48" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="49" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="50" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="51" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="52" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="53" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="54" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="56" />
+							<edge vertexkey="58" />
+							<edge vertexkey="60" />
+							<edge vertexkey="122" />
+							<edge vertexkey="128" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="59" />
+							<edge vertexkey="123" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="61" />
+							<edge vertexkey="129" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="63" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="121">
+						<edges>
+							<edge vertexkey="120" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="130">
+						<edges>
+							<edge vertexkey="131" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="133">
+						<edges>
+							<edge vertexkey="134" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="135">
+						<edges>
+							<edge vertexkey="136" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="137">
+						<edges>
+							<edge vertexkey="138" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="142">
+						<edges>
+							<edge vertexkey="139" />
+							<edge vertexkey="154" />
+							<edge vertexkey="165" />
+							<edge vertexkey="176" />
+							<edge vertexkey="187" />
+							<edge vertexkey="198" />
+							<edge vertexkey="209" />
+							<edge vertexkey="220" />
+							<edge vertexkey="231" />
+							<edge vertexkey="242" />
+							<edge vertexkey="253" />
+							<edge vertexkey="264" />
+							<edge vertexkey="275" />
+							<edge vertexkey="286" />
+							<edge vertexkey="297" />
+							<edge vertexkey="308" />
+							<edge vertexkey="319" />
+							<edge vertexkey="330" />
+							<edge vertexkey="357" />
+							<edge vertexkey="368" />
+							<edge vertexkey="379" />
+							<edge vertexkey="390" />
+							<edge vertexkey="401" />
+							<edge vertexkey="412" />
+							<edge vertexkey="423" />
+							<edge vertexkey="434" />
+							<edge vertexkey="495" />
+							<edge vertexkey="506" />
+							<edge vertexkey="517" />
+							<edge vertexkey="528" />
+							<edge vertexkey="539" />
+							<edge vertexkey="550" />
+							<edge vertexkey="561" />
+							<edge vertexkey="573" />
+							<edge vertexkey="583" />
+							<edge vertexkey="593" />
+							<edge vertexkey="603" />
+							<edge vertexkey="613" />
+							<edge vertexkey="623" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="143">
+						<edges>
+							<edge vertexkey="140" />
+							<edge vertexkey="145" />
+							<edge vertexkey="156" />
+							<edge vertexkey="167" />
+							<edge vertexkey="178" />
+							<edge vertexkey="189" />
+							<edge vertexkey="200" />
+							<edge vertexkey="211" />
+							<edge vertexkey="222" />
+							<edge vertexkey="233" />
+							<edge vertexkey="244" />
+							<edge vertexkey="255" />
+							<edge vertexkey="266" />
+							<edge vertexkey="277" />
+							<edge vertexkey="288" />
+							<edge vertexkey="299" />
+							<edge vertexkey="310" />
+							<edge vertexkey="321" />
+							<edge vertexkey="358" />
+							<edge vertexkey="369" />
+							<edge vertexkey="380" />
+							<edge vertexkey="391" />
+							<edge vertexkey="402" />
+							<edge vertexkey="413" />
+							<edge vertexkey="424" />
+							<edge vertexkey="435" />
+							<edge vertexkey="496" />
+							<edge vertexkey="507" />
+							<edge vertexkey="518" />
+							<edge vertexkey="529" />
+							<edge vertexkey="540" />
+							<edge vertexkey="551" />
+							<edge vertexkey="562" />
+							<edge vertexkey="572" />
+							<edge vertexkey="582" />
+							<edge vertexkey="592" />
+							<edge vertexkey="602" />
+							<edge vertexkey="612" />
+							<edge vertexkey="622" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="132">
+						<edges>
+							<edge vertexkey="141" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="146">
+						<edges>
+							<edge vertexkey="147" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="148">
+						<edges>
+							<edge vertexkey="149" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="150">
+						<edges>
+							<edge vertexkey="151" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="152">
+						<edges>
+							<edge vertexkey="153" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="157">
+						<edges>
+							<edge vertexkey="158" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="159">
+						<edges>
+							<edge vertexkey="160" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="161">
+						<edges>
+							<edge vertexkey="162" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="163">
+						<edges>
+							<edge vertexkey="164" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="168">
+						<edges>
+							<edge vertexkey="169" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="170">
+						<edges>
+							<edge vertexkey="171" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="172">
+						<edges>
+							<edge vertexkey="173" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="174">
+						<edges>
+							<edge vertexkey="175" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="179">
+						<edges>
+							<edge vertexkey="180" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="181">
+						<edges>
+							<edge vertexkey="182" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="183">
+						<edges>
+							<edge vertexkey="184" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="185">
+						<edges>
+							<edge vertexkey="186" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="190">
+						<edges>
+							<edge vertexkey="191" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="192">
+						<edges>
+							<edge vertexkey="193" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="194">
+						<edges>
+							<edge vertexkey="195" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="196">
+						<edges>
+							<edge vertexkey="197" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="201">
+						<edges>
+							<edge vertexkey="202" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="203">
+						<edges>
+							<edge vertexkey="204" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="205">
+						<edges>
+							<edge vertexkey="206" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="207">
+						<edges>
+							<edge vertexkey="208" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="212">
+						<edges>
+							<edge vertexkey="213" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="214">
+						<edges>
+							<edge vertexkey="215" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="216">
+						<edges>
+							<edge vertexkey="217" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="218">
+						<edges>
+							<edge vertexkey="219" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="223">
+						<edges>
+							<edge vertexkey="224" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="225">
+						<edges>
+							<edge vertexkey="226" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="227">
+						<edges>
+							<edge vertexkey="228" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="229">
+						<edges>
+							<edge vertexkey="230" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="234">
+						<edges>
+							<edge vertexkey="235" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="236">
+						<edges>
+							<edge vertexkey="237" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="238">
+						<edges>
+							<edge vertexkey="239" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="240">
+						<edges>
+							<edge vertexkey="241" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="245">
+						<edges>
+							<edge vertexkey="246" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="247">
+						<edges>
+							<edge vertexkey="248" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="249">
+						<edges>
+							<edge vertexkey="250" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="251">
+						<edges>
+							<edge vertexkey="252" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="256">
+						<edges>
+							<edge vertexkey="257" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="258">
+						<edges>
+							<edge vertexkey="259" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="260">
+						<edges>
+							<edge vertexkey="261" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="262">
+						<edges>
+							<edge vertexkey="263" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="267">
+						<edges>
+							<edge vertexkey="268" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="269">
+						<edges>
+							<edge vertexkey="270" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="271">
+						<edges>
+							<edge vertexkey="272" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="273">
+						<edges>
+							<edge vertexkey="274" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="278">
+						<edges>
+							<edge vertexkey="279" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="280">
+						<edges>
+							<edge vertexkey="281" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="282">
+						<edges>
+							<edge vertexkey="283" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="284">
+						<edges>
+							<edge vertexkey="285" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="289">
+						<edges>
+							<edge vertexkey="290" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="291">
+						<edges>
+							<edge vertexkey="292" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="293">
+						<edges>
+							<edge vertexkey="294" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="295">
+						<edges>
+							<edge vertexkey="296" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="300">
+						<edges>
+							<edge vertexkey="301" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="302">
+						<edges>
+							<edge vertexkey="303" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="304">
+						<edges>
+							<edge vertexkey="305" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="306">
+						<edges>
+							<edge vertexkey="307" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="311">
+						<edges>
+							<edge vertexkey="312" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="313">
+						<edges>
+							<edge vertexkey="314" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="315">
+						<edges>
+							<edge vertexkey="316" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="317">
+						<edges>
+							<edge vertexkey="318" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="322">
+						<edges>
+							<edge vertexkey="323" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="324">
+						<edges>
+							<edge vertexkey="325" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="326">
+						<edges>
+							<edge vertexkey="327" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="328">
+						<edges>
+							<edge vertexkey="329" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="177">
+						<edges>
+							<edge vertexkey="331" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="478">
+						<edges>
+							<edge vertexkey="332" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="469">
+						<edges>
+							<edge vertexkey="333" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="460">
+						<edges>
+							<edge vertexkey="334" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="155">
+						<edges>
+							<edge vertexkey="335" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="188">
+						<edges>
+							<edge vertexkey="336" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="475">
+						<edges>
+							<edge vertexkey="337" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="466">
+						<edges>
+							<edge vertexkey="338" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="457">
+						<edges>
+							<edge vertexkey="339" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="144">
+						<edges>
+							<edge vertexkey="340" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="199">
+						<edges>
+							<edge vertexkey="341" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="463">
+						<edges>
+							<edge vertexkey="343" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="454">
+						<edges>
+							<edge vertexkey="344" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="451">
+						<edges>
+							<edge vertexkey="345" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="166">
+						<edges>
+							<edge vertexkey="346" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="472">
+						<edges>
+							<edge vertexkey="347" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="349">
+						<edges>
+							<edge vertexkey="350" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="351">
+						<edges>
+							<edge vertexkey="352" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="353">
+						<edges>
+							<edge vertexkey="354" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="355">
+						<edges>
+							<edge vertexkey="356" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="360">
+						<edges>
+							<edge vertexkey="361" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="362">
+						<edges>
+							<edge vertexkey="363" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="364">
+						<edges>
+							<edge vertexkey="365" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="366">
+						<edges>
+							<edge vertexkey="367" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="371">
+						<edges>
+							<edge vertexkey="372" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="373">
+						<edges>
+							<edge vertexkey="374" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="375">
+						<edges>
+							<edge vertexkey="376" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="377">
+						<edges>
+							<edge vertexkey="378" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="382">
+						<edges>
+							<edge vertexkey="383" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="384">
+						<edges>
+							<edge vertexkey="385" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="386">
+						<edges>
+							<edge vertexkey="387" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="388">
+						<edges>
+							<edge vertexkey="389" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="393">
+						<edges>
+							<edge vertexkey="394" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="395">
+						<edges>
+							<edge vertexkey="396" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="397">
+						<edges>
+							<edge vertexkey="398" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="399">
+						<edges>
+							<edge vertexkey="400" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="404">
+						<edges>
+							<edge vertexkey="405" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="406">
+						<edges>
+							<edge vertexkey="407" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="408">
+						<edges>
+							<edge vertexkey="409" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="410">
+						<edges>
+							<edge vertexkey="411" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="415">
+						<edges>
+							<edge vertexkey="416" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="417">
+						<edges>
+							<edge vertexkey="418" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="419">
+						<edges>
+							<edge vertexkey="420" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="421">
+						<edges>
+							<edge vertexkey="422" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="426">
+						<edges>
+							<edge vertexkey="427" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="428">
+						<edges>
+							<edge vertexkey="429" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="430">
+						<edges>
+							<edge vertexkey="431" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="432">
+						<edges>
+							<edge vertexkey="433" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="320">
+						<edges>
+							<edge vertexkey="449" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="452">
+						<edges>
+							<edge vertexkey="450" />
+							<edge vertexkey="453" />
+							<edge vertexkey="456" />
+							<edge vertexkey="462" />
+							<edge vertexkey="465" />
+							<edge vertexkey="468" />
+							<edge vertexkey="471" />
+							<edge vertexkey="474" />
+							<edge vertexkey="479" />
+							<edge vertexkey="480" />
+							<edge vertexkey="488" />
+							<edge vertexkey="489" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="309">
+						<edges>
+							<edge vertexkey="455" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="298">
+						<edges>
+							<edge vertexkey="458" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="287">
+						<edges>
+							<edge vertexkey="461" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="276">
+						<edges>
+							<edge vertexkey="464" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="265">
+						<edges>
+							<edge vertexkey="467" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="254">
+						<edges>
+							<edge vertexkey="470" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="243">
+						<edges>
+							<edge vertexkey="473" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="232">
+						<edges>
+							<edge vertexkey="476" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="221">
+						<edges>
+							<edge vertexkey="477" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="348">
+						<edges>
+							<edge vertexkey="482" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="425">
+						<edges>
+							<edge vertexkey="487" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="497">
+						<edges>
+							<edge vertexkey="498" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="499">
+						<edges>
+							<edge vertexkey="500" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="501">
+						<edges>
+							<edge vertexkey="502" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="503">
+						<edges>
+							<edge vertexkey="504" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="508">
+						<edges>
+							<edge vertexkey="509" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="510">
+						<edges>
+							<edge vertexkey="511" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="512">
+						<edges>
+							<edge vertexkey="513" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="514">
+						<edges>
+							<edge vertexkey="515" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="519">
+						<edges>
+							<edge vertexkey="520" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="521">
+						<edges>
+							<edge vertexkey="522" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="523">
+						<edges>
+							<edge vertexkey="524" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="525">
+						<edges>
+							<edge vertexkey="526" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="530">
+						<edges>
+							<edge vertexkey="531" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="532">
+						<edges>
+							<edge vertexkey="533" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="534">
+						<edges>
+							<edge vertexkey="535" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="536">
+						<edges>
+							<edge vertexkey="537" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="541">
+						<edges>
+							<edge vertexkey="542" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="543">
+						<edges>
+							<edge vertexkey="544" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="545">
+						<edges>
+							<edge vertexkey="546" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="547">
+						<edges>
+							<edge vertexkey="548" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="552">
+						<edges>
+							<edge vertexkey="553" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="554">
+						<edges>
+							<edge vertexkey="555" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="556">
+						<edges>
+							<edge vertexkey="557" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="558">
+						<edges>
+							<edge vertexkey="559" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="563">
+						<edges>
+							<edge vertexkey="564" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="565">
+						<edges>
+							<edge vertexkey="566" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="567">
+						<edges>
+							<edge vertexkey="568" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="569">
+						<edges>
+							<edge vertexkey="570" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="574">
+						<edges>
+							<edge vertexkey="575" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="576">
+						<edges>
+							<edge vertexkey="577" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="578">
+						<edges>
+							<edge vertexkey="579" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="580">
+						<edges>
+							<edge vertexkey="581" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="584">
+						<edges>
+							<edge vertexkey="585" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="586">
+						<edges>
+							<edge vertexkey="587" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="588">
+						<edges>
+							<edge vertexkey="589" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="590">
+						<edges>
+							<edge vertexkey="591" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="594">
+						<edges>
+							<edge vertexkey="595" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="596">
+						<edges>
+							<edge vertexkey="597" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="598">
+						<edges>
+							<edge vertexkey="599" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="600">
+						<edges>
+							<edge vertexkey="601" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="604">
+						<edges>
+							<edge vertexkey="605" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="606">
+						<edges>
+							<edge vertexkey="607" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="608">
+						<edges>
+							<edge vertexkey="609" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="610">
+						<edges>
+							<edge vertexkey="611" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="614">
+						<edges>
+							<edge vertexkey="615" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="616">
+						<edges>
+							<edge vertexkey="617" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="618">
+						<edges>
+							<edge vertexkey="619" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="620">
+						<edges>
+							<edge vertexkey="621" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="624">
+						<edges>
+							<edge vertexkey="625" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="626">
+						<edges>
+							<edge vertexkey="627" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="628">
+						<edges>
+							<edge vertexkey="629" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="630">
+						<edges>
+							<edge vertexkey="631" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="632">
+						<edges>
+							<edge vertexkey="633" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="505">
+						<edges>
+							<edge vertexkey="639" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="516">
+						<edges>
+							<edge vertexkey="640" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="527">
+						<edges>
+							<edge vertexkey="641" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="538">
+						<edges>
+							<edge vertexkey="642" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="549">
+						<edges>
+							<edge vertexkey="643" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="560">
+						<edges>
+							<edge vertexkey="644" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="571">
+						<edges>
+							<edge vertexkey="645" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="481">
+						<edges>
+							<edge vertexkey="651" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="370">
+						<edges>
+							<edge vertexkey="652" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="381">
+						<edges>
+							<edge vertexkey="653" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="392">
+						<edges>
+							<edge vertexkey="654" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="414">
+						<edges>
+							<edge vertexkey="655" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="659">
+						<edges>
+							<edge vertexkey="657" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="663" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="660">
+						<edges>
+							<edge vertexkey="664" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="661">
+						<edges>
+							<edge vertexkey="665" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="662">
+						<edges>
+							<edge vertexkey="666" />
+						</edges>
+					</vertex>
+					<vertex vertexkey="9901">
+						<edges>
+							<edge vertexkey="9902" />
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

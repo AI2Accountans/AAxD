@@ -1,0 +1,15 @@
+So, Richard described Accounting & Audit by Design (A&AD) Framework in more “technical” terms in his paper. And his examples of showing it relate to “reality”. I am trying to describe Accounting & Audit by Design (A&AD) Framework in more “practical” terms. The best that I have currently is this blog post, Accounting & Audit by Design (A&AD) Framework, https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html
+
+I am also trying to “bridge the gap” a bit. What I have done in the following blog post, Standards for Interconnecting the Enterprise Stack, is to try and describe the “moving puzzle pieces” of standards and frameworks including UBL, REA, XBRL, SBVR, BPMN, ACTUS and help people grasp that (a) connecting all this stuff is very, very possible and (b) point out how utterly absurd it is to have a bunch of siloed standards that don’t talk to each other well. Yes, you can “map” between all these standards as Richard has done; but another way is to put the pieces together properly.
+
+https://digitalfinancialreporting.blogspot.com/2026/07/standards-for-interconnecting.html
+
+In reading these standards, in particular SBVR, I am realizing that what I have been trying to do for 25 years is SPOT ON. There are two “parties” here. Or maybe better called “tribes”. You have the BUSINESS PEOPLE and you have the TECHNICAL PEOPLE. The communication between the two is poor. It will very likely always be poor. However, the communication is “reconcilable”. Business modeling and Information Systems Modeling are NOT THE SAME THING!
+
+https://www.brcommunity.com/articles.php?id=b933
+svr.png
+Business professionals need to control the business modeling.
+busniness.png
+Cheers,
+
+Charlie

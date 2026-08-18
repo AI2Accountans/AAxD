@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns="http://www.xbrl.org/2009/arcrole/accounting" xmlns:negated="http://www.xbrl.org/2009/role/negated" xmlns:reference="http://www.xbrl.org/2009/role/reference" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:generic="http://xbrl.org/2008/generic" xmlns:mini="https://xbrlsite.azurewebsites.net/mini" xmlns:mini-entry="https://xbrlsite.azurewebsites.net/mini-entry" xmlns:mini-roles="https://xbrlsite.azurewebsites.net/mini-roles" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef xlink:type="simple" xlink:href="https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/base-taxonomy/mini-entryPoint.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.mini.com">Mini</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2024-12-31</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<xbrli:context id="ctx2">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.mini.com">Mini</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2024-01-01</xbrli:startDate>
+			<xbrli:endDate>2024-12-31</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<xbrli:unit id="USD">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:USD</xbrli:measure>
+	</xbrli:unit>
+
+	<!-- Balance Sheet Items (Instant: 2024-12-31) -->
+	<mini:CashAndCashEquivalents contextRef="ctx1" unitRef="USD" decimals="0">9850</mini:CashAndCashEquivalents>
+	<mini:Receivables contextRef="ctx1" unitRef="USD" decimals="0">8000</mini:Receivables>
+	<mini:Inventories contextRef="ctx1" unitRef="USD" decimals="0">700</mini:Inventories>
+	<mini:CurrentAssets contextRef="ctx1" unitRef="USD" decimals="0">18550</mini:CurrentAssets>
+
+	<mini:PropertyPlantAndEquipment contextRef="ctx1" unitRef="USD" decimals="0">1900</mini:PropertyPlantAndEquipment>
+	<mini:NoncurrentAssets contextRef="ctx1" unitRef="USD" decimals="0">1900</mini:NoncurrentAssets>
+	<mini:Assets contextRef="ctx1" unitRef="USD" decimals="0">20450</mini:Assets>
+
+	<mini:AccountsPayable contextRef="ctx1" unitRef="USD" decimals="0">1000</mini:AccountsPayable>
+	<mini:AccruedExpenses contextRef="ctx1" unitRef="USD" decimals="0">400</mini:AccruedExpenses>
+	<mini:CurrentLiabilities contextRef="ctx1" unitRef="USD" decimals="0">1400</mini:CurrentLiabilities>
+
+	<mini:LongtermDebt contextRef="ctx1" unitRef="USD" decimals="0">1000</mini:LongtermDebt>
+	<mini:NoncurrentLiabilities contextRef="ctx1" unitRef="USD" decimals="0">1000</mini:NoncurrentLiabilities>
+	<mini:Liabilities contextRef="ctx1" unitRef="USD" decimals="0">2400</mini:Liabilities>
+
+	<mini:PaidInCapital contextRef="ctx1" unitRef="USD" decimals="0">10000</mini:PaidInCapital>
+	<mini:RetainedEarnings contextRef="ctx1" unitRef="USD" decimals="0">8050</mini:RetainedEarnings>
+	<mini:Equity contextRef="ctx1" unitRef="USD" decimals="0">18050</mini:Equity>
+	<mini:LiabilitiesAndEquity contextRef="ctx1" unitRef="USD" decimals="0">20450</mini:LiabilitiesAndEquity>
+
+	<!-- Income Statement Items (Duration: 2024-01-01 to 2024-12-31) -->
+	<mini:Sales contextRef="ctx2" unitRef="USD" decimals="0">16000</mini:Sales>
+	<mini:CostsOfSales contextRef="ctx2" unitRef="USD" decimals="0">7300</mini:CostsOfSales>
+	<mini:GrossProfitLoss contextRef="ctx2" unitRef="USD" decimals="0">8700</mini:GrossProfitLoss>
+
+	<mini:DepreciationAndAmortization contextRef="ctx2" unitRef="USD" decimals="0">100</mini:DepreciationAndAmortization>
+	<mini:OperatingExpenses contextRef="ctx2" unitRef="USD" decimals="0">100</mini:OperatingExpenses>
+	<mini:OperatingIncomeLoss contextRef="ctx2" unitRef="USD" decimals="0">8600</mini:OperatingIncomeLoss>
+
+	<mini:InterestExpense contextRef="ctx2" unitRef="USD" decimals="0">150</mini:InterestExpense>
+	<mini:NonoperatingIncomeExpenses contextRef="ctx2" unitRef="USD" decimals="0">-150</mini:NonoperatingIncomeExpenses>
+	<mini:IncomeLossFromContinuingOperationsBeforeTax contextRef="ctx2" unitRef="USD" decimals="0">8450</mini:IncomeLossFromContinuingOperationsBeforeTax>
+
+	<mini:IncomeTaxExpenseBenefit contextRef="ctx2" unitRef="USD" decimals="0">400</mini:IncomeTaxExpenseBenefit>
+	<mini:NetIncomeLoss contextRef="ctx2" unitRef="USD" decimals="0">8050</mini:NetIncomeLoss>
+</xbrli:xbrl>

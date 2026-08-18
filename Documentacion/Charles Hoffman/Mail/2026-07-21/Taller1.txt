@@ -1,0 +1,39 @@
+Guys;
+
+I need your help creating the actual physical “business events ledger” and/or “business events journal”.  I am doing this in XBRL.  Really should be done in RDF and/or JSON-LD.  But this is NOT ABOUT THE SYNTAX; it  is 100% about the LOGIC of the business events ledger/journal.  I want to tie this to REA (ISO/IEC Accounting and Economic Ontology) and Data Centric Accounting.  What I think should happen is that the LOGIC should get dialed in,  every term in this conceptualization should be instantiated as an MD file in GitHub, here:
+
+REA and ISO/IEC Accounting and Economic Ontology: https://xbrlsite.azurewebsites.net/2026/prototypes/isoiec15955/isoiec15944_ModelStructure.html  (make sure you see this https://xbrlsite.azurewebsites.net/2026/prototypes/isoiec15955/ixbrl-report-viewer.html and these figures https://photos.app.goo.gl/mQbK3yKminoz3pfYA)
+
+Data Centric Accounting Core Events: https://xbrlsite.azurewebsites.net/seattlemethod/dca/dca_ModelStructure.html
+
+Local General Journal and XBRL Global Ledger: https://xbrlsite.azurewebsites.net/seattlemethod/platinum/transactions/gl_ModelStructure.html
+
+Local Chart of Accounts: https://xbrlsite.azurewebsites.net/seattlemethod/platinum/coa/base-taxonomy/coa_ModelStructure.html
+
+XBRL Global Ledger: https://specifications.xbrl.org/work-product-index-xbrl-gl-xbrl-gl-2015.html
+
+MINI Reporting Framework: https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/base-taxonomy/mini_ModelStructure.html
+
+I want to do this first for the MINI reporting framework.  I have not figured out if a BUSINESS EVENT is ONE entry or MULTIPLE entries; I think it is ONE ENTRY.  The intent is to make this 100% machine readable and traversable from the entry into the business event journal all the way to the line item of the report; or from any report line item to the business events that spawned the financial transactions.  This JOURNAL and or LEDGER should be a HOLON.  Each ENTRY into the ledger/journal is a HOLON.  All we really have to do is put the pieces together.  I am not sure how far down this path Richard already is.
+
+Thoughts? 
+
+The objective as I see it is to create the MINIMAL amount of information that makes it possible to NAVIGATE from EVENT >> Standard Report Line Item and each step in between.  Other enterprises can EXTEND that minimum as they see fit. This needs to be a “manifold” and “holon” and standard.
+
+SEE THIS:
+
+https://github.com/seattlemethod/events-ledger
+
+https://luca.pacioli.ai/luca/view/0f24fd35e961e167a727b663c75a4c5ec9fb7eb86730d6292f46e6e180fc20185278f796/index
+
+C:\Users\IPHIX\Documents\Projects\DFRNT\Documentacion\Charles Hoffman\Mail\2026-07-21\Taller1.jpg
+
+
+Added a lot more information.
+
+https://github.com/seattlemethod/events-ledger
+
+The thought is to define an MD file for each term (but I don’t know how to create a DataBook yet), use definitions from ISO, REA, Wikidata, DCA, ACTUS, SBVR; reconcile those terms and perhaps create an A&AD framework definition.
+Cheers,
+
+Charlie

@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="12" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="400" lty="55" rbx="458" rby="72"/>
+					<data>
+						<constant value="NIT" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="13" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="400" lty="80" rbx="505" rby="97"/>
+					<data>
+						<constant value="EntryHeader" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="527" lty="103" rbx="697" rby="120"/>
+					<data>
+						<constant value="ISO15944_EconomicEvent" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="400" lty="130" rbx="497" rby="147"/>
+					<data>
+						<constant value="GistPerson" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="16" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="400" lty="155" rbx="484" rby="172"/>
+					<data>
+						<constant value="Account" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="400" lty="180" rbx="498" rby="197"/>
+					<data>
+						<constant value="EntryDetail" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="18" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="527" lty="203" rbx="679" rby="220"/>
+					<data>
+						<constant value="Taller1 Business Events Ledger" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="527" lty="28" rbx="692" rby="45"/>
+					<data>
+						<constant value="FIBO_StockCorporation" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="19" kind="2">
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="558" lty="416" rbx="723" rby="433"/>
+					<data>
+						<constant value="FIBO_StockCorporation" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="20" kind="2">
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="621" lty="465" rbx="679" rby="482"/>
+					<data>
+						<constant value="NIT" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="558" lty="380" rbx="710" rby="397"/>
+					<data>
+						<constant value="Taller1 Business Events Ledger" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="22" kind="2">
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="574" lty="684" rbx="679" rby="701"/>
+					<data>
+						<constant value="EntryHeader" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="23" kind="2">
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="510" lty="284" rbx="680" rby="301"/>
+					<data>
+						<constant value="ISO15944_EconomicEvent" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="24" kind="2">
+					<targets>
+						<datapoint pos="0" key="39"/>
+					</targets>
+					<view ltx="558" lty="237" rbx="655" rby="254"/>
+					<data>
+						<constant value="GistPerson" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="25" kind="2">
+					<targets>
+						<datapoint pos="0" key="40"/>
+					</targets>
+					<view ltx="558" lty="-29" rbx="642" rby="-12"/>
+					<data>
+						<constant value="Account" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="26" kind="2">
+					<targets>
+						<datapoint pos="0" key="41"/>
+					</targets>
+					<view ltx="574" lty="336" rbx="672" rby="353"/>
+					<data>
+						<constant value="EntryDetail" datatype="string"/>
+					</data>
+				</component>
+				<component name="OntologiaXBRLGL2JSONLD" library="json" uid="2" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="741" lty="-331" rbx="1191" rby="656"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="array" expanded="1">
+											<entry name="item" type="json-item" inpkey="72">
+												<entry name="object" expanded="1">
+													<entry name="anyOf0" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="1"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="2"/>
+														</entry>
+														<entry name="artifact_name" type="json-property" expanded="1">
+															<entry name="string" inpkey="3"/>
+														</entry>
+														<entry name="identifierCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="4"/>
+														</entry>
+														<entry name="identifierDescription" type="json-property" expanded="1">
+															<entry name="string" inpkey="5"/>
+														</entry>
+														<entry name="identifierType" type="json-property" expanded="1">
+															<entry name="string" inpkey="6"/>
+														</entry>
+														<entry name="nexus" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="73" expanded="1" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf11" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="12"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="13"/>
+														</entry>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="posting_date" type="json-property" expanded="1">
+															<entry name="string" inpkey="14"/>
+														</entry>
+														<entry name="source_document" type="json-property" expanded="1"/>
+														<entry name="economic_event" type="json-property" expanded="1">
+															<entry name="string" inpkey="15"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="20" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf3" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="21"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="22"/>
+														</entry>
+														<entry name="eventDescription" type="json-property" expanded="1">
+															<entry name="string" inpkey="23"/>
+														</entry>
+														<entry name="eventDate" type="json-property" expanded="1">
+															<entry name="string" inpkey="24"/>
+														</entry>
+														<entry name="dca_EventType" type="json-property" expanded="1"/>
+														<entry name="dca_Party" type="json-property" expanded="1"/>
+														<entry name="dca_Counterparty" type="json-property" expanded="1"/>
+														<entry name="dca_Involves" type="json-property" expanded="1"/>
+														<entry name="dca_RightOrObligation" type="json-property" expanded="1"/>
+														<entry name="mini_BusinessEventCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="25"/>
+														</entry>
+														<entry name="source_document" type="json-property" expanded="1"/>
+														<entry name="entry_header" type="json-property" expanded="1">
+															<entry name="string" inpkey="26"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="74" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf2" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="27"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="28"/>
+														</entry>
+														<entry name="identifierCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="29"/>
+														</entry>
+														<entry name="identifierDescription" type="json-property" expanded="1">
+															<entry name="string" inpkey="30"/>
+														</entry>
+														<entry name="identifierType" type="json-property" expanded="1">
+															<entry name="string" inpkey="31"/>
+														</entry>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="75" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf10" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="42"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="43"/>
+														</entry>
+														<entry name="accountMainID" type="json-property" expanded="1">
+															<entry name="string" inpkey="44"/>
+														</entry>
+														<entry name="accountMainDescription" type="json-property" expanded="1">
+															<entry name="string" inpkey="45"/>
+														</entry>
+														<entry name="mainAccountType" type="json-property" expanded="1"/>
+														<entry name="mini_lineItem" type="json-property" expanded="1">
+															<entry name="string" inpkey="46"/>
+														</entry>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="76" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf0" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="identifierCode" type="json-property" expanded="1"/>
+														<entry name="identifierDescription" type="json-property" expanded="1"/>
+														<entry name="identifierType" type="json-property" expanded="1"/>
+														<entry name="nexus" type="json-property" expanded="1"/>
+													</entry>
+													<entry name="anyOf12" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="47"/>
+															<entry name="array" expanded="1"/>
+														</entry>
+														<entry name="@context" type="json-property" expanded="1">
+															<entry name="object">
+																<entry name="prov" type="json-property" expanded="1"/>
+																<entry name="xbrl" type="json-property" expanded="1"/>
+																<entry name="dca" type="json-property" expanded="1"/>
+																<entry name="mini" type="json-property" expanded="1"/>
+																<entry name="actus" type="json-property" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="header" type="json-property" expanded="1">
+															<entry name="string" inpkey="48"/>
+														</entry>
+														<entry name="lineNumberCounter" type="json-property" expanded="1"/>
+														<entry name="account" type="json-property" expanded="1">
+															<entry name="string" inpkey="49"/>
+														</entry>
+														<entry name="amount" type="json-property" expanded="1">
+															<entry name="number" inpkey="50"/>
+														</entry>
+														<entry name="debitCreditCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="51"/>
+														</entry>
+														<entry name="postingDate" type="json-property" expanded="1">
+															<entry name="string" inpkey="52"/>
+														</entry>
+														<entry name="accountingPurposeCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="53"/>
+														</entry>
+														<entry name="prov:generatedAtTime" type="json-property" expanded="1"/>
+														<entry name="prov:wasAttributedTo" type="json-property" expanded="1"/>
+														<entry name="resource" type="json-property" expanded="1"/>
+														<entry name="agent" type="json-property" expanded="1"/>
+														<entry name="agent_identifier" type="json-property" expanded="1">
+															<entry name="string" inpkey="54"/>
+														</entry>
+														<entry name="duality" type="json-property" expanded="1"/>
+														<entry name="mini_lineItem" type="json-property" expanded="1">
+															<entry name="string" inpkey="55"/>
+														</entry>
+														<entry name="xbrlInfo" type="json-property" expanded="1"/>
+														<entry name="measurable" type="json-property" expanded="1">
+															<entry name="object" expanded="1">
+																<entry name="measurableCode" type="json-property" expanded="1">
+																	<entry name="string" inpkey="56"/>
+																</entry>
+																<entry name="measurableID" type="json-property" expanded="1">
+																	<entry name="string" inpkey="57"/>
+																</entry>
+																<entry name="measurableDescription" type="json-property" expanded="1">
+																	<entry name="string" inpkey="58"/>
+																</entry>
+																<entry name="measurableQuantity" type="json-property" expanded="1">
+																	<entry name="number" inpkey="59"/>
+																</entry>
+																<entry name="measurableUnitOfMeasure" type="json-property" expanded="1">
+																	<entry name="string" inpkey="60"/>
+																</entry>
+																<entry name="measurableCostPerUnit" type="json-property" expanded="1">
+																	<entry name="number" inpkey="61"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<json schema="..\SchemaJsonLD\OntologiaXBRLGL2JSONLD.json" outputinstance="..\POC_Data_Example\BusinessEventLedger_JSONLD.jsonld"/>
+					</data>
+				</component>
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="10" kind="27">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="24" lty="-331" rbx="474" rby="606"/>
+					<data>
+						<root scrollposition="638">
+							<header>
+								<namespaces>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.xbrl.org/int/gl/bus/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/srcd/2015-03-25"/>
+									<namespace/>
+									<namespace uid="view"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="6" expanded="1">
+								<entry name="document" ns="6" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" expanded="1">
+										<entry name="//www.xbrl.org/2003/role/link" ns="5" expanded="1">
+											<entry name="Dimensionless (presentation)" ns="4" expanded="1">
+												<dimensions/>
+												<entry name="context" expanded="1">
+													<entry name="entity" expanded="1">
+														<entry name="identifier" expanded="1">
+															<entry name="identifier" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="period" expanded="1">
+														<entry name="period" expanded="1"/>
+													</entry>
+													<entry name="accountingEntries" ns="2" expanded="1">
+														<entry name="entityInformation" ns="2" outkey="77" expanded="1">
+															<entry name="organizationIdentifiers" ns="1" expanded="1">
+																<entry name="organizationIdentifier" ns="1" outkey="7" expanded="1"/>
+																<entry name="organizationDescription" ns="1" outkey="8"/>
+															</entry>
+															<entry name="organizationAddress" ns="1" expanded="1"/>
+														</entry>
+														<entry name="entryHeader" ns="2" outkey="78" expanded="1">
+															<entry name="entryNumber" ns="2" outkey="16"/>
+															<entry name="entryComment" ns="2" outkey="32"/>
+															<entry name="entryDetail" ns="2" outkey="33">
+																<entry name="account" ns="2" expanded="1">
+																	<entry name="accountMainID" ns="2" outkey="62"/>
+																	<entry name="accountMainDescription" ns="2" outkey="63"/>
+																	<entry name="accountPurposeCode" ns="2" outkey="64"/>
+																</entry>
+																<entry name="amount" ns="2" outkey="65"/>
+																<entry name="debitCreditCode" ns="2" outkey="66"/>
+																<entry name="postingDate" ns="2" outkey="17"/>
+																<entry name="identifierReference" ns="2" expanded="1">
+																	<entry name="identifierCode" ns="2" outkey="34"/>
+																	<entry name="identifierDescription" ns="2" outkey="35"/>
+																	<entry name="identifierType" ns="2" outkey="36"/>
+																	<entry name="identifierAddress" ns="1" expanded="1"/>
+																</entry>
+																<entry name="xbrlInfo" ns="2" expanded="1">
+																	<entry name="detailedContentFilter" ns="3" outkey="37"/>
+																</entry>
+																<entry name="measurable" ns="1" expanded="1">
+																	<entry name="measurableCode" ns="1" outkey="67"/>
+																	<entry name="measurableID" ns="1" outkey="38"/>
+																	<entry name="measurableDescription" ns="1" outkey="68"/>
+																	<entry name="measurableQuantity" ns="1" outkey="69"/>
+																	<entry name="measurableUnitOfMeasure" ns="1" outkey="70"/>
+																	<entry name="measurableCostPerUnit" ns="1" outkey="71"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd" inputinstance="..\POC_Data_Example\BusinessEventLedger_XBRLGL.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="2"/>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="13"/>
+							<edge vertexkey="15"/>
+							<edge vertexkey="26"/>
+							<edge vertexkey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="14"/>
+							<edge vertexkey="24"/>
+							<edge vertexkey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="20"/>
+							<edge vertexkey="74"/>
+							<edge vertexkey="75"/>
+							<edge vertexkey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="22"/>
+							<edge vertexkey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="25"/>
+							<edge vertexkey="46"/>
+							<edge vertexkey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="28"/>
+							<edge vertexkey="29"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="30"/>
+							<edge vertexkey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="43"/>
+							<edge vertexkey="44"/>
+							<edge vertexkey="49"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="50"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="68">
+						<edges>
+							<edge vertexkey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="69">
+						<edges>
+							<edge vertexkey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="70">
+						<edges>
+							<edge vertexkey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71">
+						<edges>
+							<edge vertexkey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77">
+						<edges>
+							<edge vertexkey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="73"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

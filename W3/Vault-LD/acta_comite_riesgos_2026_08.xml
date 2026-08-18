@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RiskCommitteeMinuteInput xmlns="http://dfrnt.io/schema/v2/minute">
+    <minuteID>urn:dfrnt:minute:risk-2026-08</minuteID>
+    <artifactName>Acta del Comité de Evaluación de Riesgos - Sesión Ordinaria N° 08-2026</artifactName>
+    <documentNumber>ACTA-CER-2026-08</documentNumber>
+    <documentDate>2026-08-10</documentDate>
+    <documentType>risk_minute</documentType>
+    <nexusDocument>SourceDocument/Notaria 25 - 2005</nexusDocument>
+    <governedByRule>urn:dfrnt:rule:sbvr:const-01</governedByRule>
+    <riskCategory>operating-financial</riskCategory>
+    <evaluationStatus>approved_with_constraints</evaluationStatus>
+    <engagedAgents>
+        <agentID>GistPerson/Socio_A</agentID>
+        <agentID>GistPerson/Auditor_Principal</agentID>
+        <agentID>GistPerson/Oficial_Cumplimiento</agentID>
+    </engagedAgents>
+    <minuteProseContent>
+        El Comité de Evaluación de Riesgos revisó el proceso de constitución de Sociedad Génesis Ltda. 
+        Se ratifica la obligación deóntica de pago del 100% de los aportes en caja (Cuenta 110505) y se prohíbe el uso de cuentas por cobrar a socios (Cuenta 130505). 
+        Se solicita a la arquitectura de TI la activación del escudo SHACL 1.2 en TerminusDB para ejecutar un Rollback Inmediato en el evento de cualquier intento de impago.
+    </minuteProseContent>
+</RiskCommitteeMinuteInput>

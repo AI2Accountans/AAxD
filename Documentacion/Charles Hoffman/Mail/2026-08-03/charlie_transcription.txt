@@ -1,0 +1,10 @@
+Hola Charlie, si cabe es que revisó la literatura, encuentro más significado en la necesidad de estandarizar los datos desde el contrato mismo, he estado explorando la estructura de URL 2.1 para ir más allá y involucrar la orden de compra y el contrato para la Provenance y encuentro bastantes, vasos comunicantes en esa indagación. Estoy en la tarea de prototipar más hacia la izquierda ese despliegue de etiqueta dentro de URL para poder conectar tanto con contratos financieros como con contratos no financieros de actos y de la ontología de fivo. Te estaré contando como vas con este sentido.
+
+
+Hi Charlie,
+
+As I go deeper into the literature, I find even greater importance in standardizing data directly at the contract level. I’ve been analyzing the UBL 2.1 framework to extend beyond invoices by integrating Purchase Orders and Contracts for complete data Provenance, uncovering strong semantic alignment along the way.
+
+I’m now prototyping a 'Shift Left' approach to UBL semantic tagging to bridge financial and non-financial contracts.
+
+I’ll keep you updated on how this develops!

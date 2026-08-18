@@ -1,0 +1,26 @@
+FYI.
+
+https://digitalfinancialreporting.blogspot.com/2026/08/theory-of-documentation.html
+
+So, to get the necessary traceability, trackability, and provenance; there are some IDs that need to be added to some things.
+
+Again,  I am focused on an IDEAL “document” or ideal “documentation”.  Connecting the ideal documentation to the business events ledger which flows to the general journal as a projection.
+
+Cheers,
+
+Charlie
+
+
+******
+
+
+Richard;
+
+So how would you characterize how UBL and how XBRL Global Ledger are used?  It seems to me that OMG’s Semantics of Business Vocabulary and Business Rules (SBVR) should be used at ALL STEPS or PHASES.  Seems like workflow is a separate system.
+
+Flow.jpg
+
+
+What are your thoughts?
+
+Cheers,

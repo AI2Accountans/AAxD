@@ -1,0 +1,16 @@
+This is what I am trying to do.
+
+First, every financial statement provides a standard set of line items from a financial reporting framework that is used to represent “state” (balance sheet) and “changes in state” (income statement, cash flow statement, statement of changes in equity). Business events are the SOURCE of changes in state. Resources (a.k.a. assets), Obligations to third parties (a.k.a. liabilities), and Obligations to owners (a.k.a. equity) are the “state” that is changed. Resources = Obligations. (a.k.a. Assets = Liabilities + Equity).
+
+Each “StandardReportingFrameworkChangeLineItem” is described by Dave McComb’s Data Centric Accounting “Core event facets”. Each StandardReportingFrameworkChangeLineItem is the SOURCE OF CHANGE of a “StandardReportingFrameworkLineItem”. A RESOURCE, an AGENT, an EVENT (e.g. REA). There are TWO ROLES of the Core Event Facets. (a) they provide a unique set which describes a StandardReportingFrameworkChangeLineItem. (b) they can be used to set the business event to the ChangeLineItem of the LineItem of a report (e.g. they help bookkeepers pick the right categorization of the business event.
+
+PLEASE DO NOT MAKE THIS MISTAKE. Historically, a chart of accounts was used INTERNALLY within an enterprise to “post” “transactions”. Then, a “lead schedule” was created to “map” the “account” to the “line item” the account appeared in. Historically, information about changes DID NOTE HAVE FORMAL METADATA IN THE ACCOUNTING SYSTEM. I am CHOOSING TO BYPASS THAT OLD PARADIGM. Yes, I recognize that to make old paradigm accounting systems work with this new paradigm; you have to take “steps”. But that is NOT NEVESSARY FOR WHAT I AM DOING. That is STEP 2, will be done later. STEP 1 is to create a PURE version of the future paradigm. If an enterprise wants to use this new paradigm, they should be able to do it without being burdened by the OLD PARADIGM.
+
+(I am not saying all these are right at the moment. The objective is to get them right. I think Dave McComb is missing some things. For example, there should be “dca:Management” which is a TYPE OF dca:Employee; a related party. Also, there should be a “dca:Bank” or “dca:Lender” which is a TYPE OF “dca:Vendor”.)
+
+Tabla.jpg
+
+
+This is sort of what I see. Not sure if you need a separate “general journal”. Can obviously do a projection from the business event journal. ACTUS type projections into the future are a SUPPLEMENT, not required. Not sure how to connect ACTUS to this; probably to the business event journal, maybe a separate journal. Any thoughts?
+
+Tabla1.png

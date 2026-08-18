@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataBook_Inline_Target",
+  "type": "object",
+  "properties": {
+    "yaml_frontmatter": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string", "default": "DataBook" },
+        "title": { "type": "string" },
+        "version": { "type": "string" },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "source": { "type": "string" },
+            "method": { "type": "string" }
+          }
+        }
+      }
+    },
+    "inline_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "narrative_markdown": { 
+            "type": "string",
+            "description": "Texto humano legal asociado al socio"
+          },
+          "json_ld_data": {
+            "type": "object",
+            "properties": {
+              "@context": {
+                "type": "object",
+                "properties": {
+                  "terminus": { "type": "string", "default": "terminusdb:///" },
+                  "gl-cor": { "type": "string", "default": "http://www.xbrl.org/int/gl/cor/2015-03-25#" }
+                }
+              },
+              "@type": { "type": "string", "default": "gl-cor:EntryDetail" },
+              "gl-cor:amount": { "type": "number" },
+              "gl-cor:agent_identifier": {
+                "type": "object",
+                "properties": { "@id": { "type": "string" } }
+              },
+              "gl-cor:measurable": {
+                "type": "object",
+                "properties": {
+                  "gl-cor:measurableQuantity": { "type": "number" },
+                  "gl-cor:measurableUnitOfMeasure": { "type": "string" }
+                }
+              },
+              "gl-cor:account": {
+                "type": "object",
+                "properties": {
+                  "gl-cor:accountMainID": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2668 @@
+[
+	{
+		"account": "122505",
+		"amount": 10000000,
+		"debitCreditCode": "D",
+		"prov:generatedAtTime": "2026-07-05T08:00:00Z",
+		"prov:wasAttributedTo": {
+			"@id": "Agent/Banco Santander"
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-06T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-07T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-08T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-09T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-10T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-11T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-12T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-13T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-14T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-15T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-16T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-17T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-18T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-19T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-20T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-21T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-22T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-23T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-24T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-25T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-26T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-27T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-28T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-29T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-30T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 0,
+		"prov:generatedAtTime": "2026-07-31T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-01T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-02T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-03T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-04T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-06T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-07T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-08T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-09T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-10T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-11T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-12T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-13T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-14T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-15T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-16T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-17T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-18T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-19T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-20T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-21T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-22T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-23T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-24T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-25T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-26T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-27T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-28T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-29T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-30T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 0,
+		"prov:generatedAtTime": "2026-08-31T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-01T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-02T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-03T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-04T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-06T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-07T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-08T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-09T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-10T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-11T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-12T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-13T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-14T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-15T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-16T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-17T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-18T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-19T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-20T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-21T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-22T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-23T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-24T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-25T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-26T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-27T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-28T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-29T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-30T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-01T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-02T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-03T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-04T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 10000000,
+		"prov:generatedAtTime": "2026-10-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"account": "111005",
+		"amount": 10000000,
+		"debitCreditCode": "C",
+		"prov:generatedAtTime": "2026-07-05T08:00:00Z",
+		"prov:wasAttributedTo": {
+			"@id": "Agent/Banco Santander"
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-06T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-07T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-08T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-09T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-10T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-11T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-12T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-13T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-14T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-15T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-16T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-17T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-18T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-19T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-20T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-21T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-22T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-23T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-24T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-25T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-26T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-27T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-28T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-29T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-07-30T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 0,
+		"prov:generatedAtTime": "2026-07-31T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-01T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-02T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-03T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-04T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-06T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-07T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-08T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-09T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-10T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-11T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-12T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-13T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-14T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-15T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-16T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-17T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-18T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-19T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-20T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-21T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-22T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-23T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-24T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-25T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-26T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-27T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-28T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-29T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-08-30T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 0,
+		"prov:generatedAtTime": "2026-08-31T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-01T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-02T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-03T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-04T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-06T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-07T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-08T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-09T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-10T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-11T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-12T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-13T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-14T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-15T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-16T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-17T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-18T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-19T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-20T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-21T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-22T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-23T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-24T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-25T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-26T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-27T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-28T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-29T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-09-30T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-01T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-02T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-03T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-04T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 3055.5556,
+		"prov:generatedAtTime": "2026-10-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"amount": 10000000,
+		"prov:generatedAtTime": "2026-10-05T00:00T08:00:00Z",
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"accountMainID": "122505",
+		"accountMainDescription": "Inversiones CDT Santander"
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+		"accountMainID": "111005",
+		"accountMainDescription": "Bancos Moneda Nacional"
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+	},
+	{
+		"@type": "ACTUS_Contract",
+		"@id": "CDT-SANT-001",
+		"actus_ContractType": "PAM",
+		"actus_NotionalPrincipal": 10000000,
+		"actus_NominalInterestRate": 0.11,
+		"actus_InitialExchangeDate": "2026-07-05",
+		"actus_MaturityDate": "2026-10-05"
+	},
+	{
+		"@type": "ACTUS_Contract"
+	},
+	{
+		"@type": "ACTUS_Contract"
+	},
+	{
+		"@type": "ACTUS_Contract",
+		"@id": "CDT-SANT-001",
+		"actus_ContractType": "PAM",
+		"actus_NotionalPrincipal": 10000000,
+		"actus_NominalInterestRate": 0.11,
+		"actus_InitialExchangeDate": "2026-07-05",
+		"actus_MaturityDate": "2026-10-05"
+	}
+]

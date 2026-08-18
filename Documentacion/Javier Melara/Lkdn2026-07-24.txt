@@ -1,0 +1,11 @@
+
+
+Maybe we should talk about an article in AI Infused to get some of these ideas simplified, if you're interested to start with that. 
+
+Check this article out to see if it strikes a chord with you:
+https://www.get-ai-infused.com/p/the-prototype-trap
+
+I think what you are writing and have been thinking about in developing your solution, is directly in line with thinking through the dangers of faulty governance and control functions in organization. There's a bunch of silent failures and miscommunication that happens when these things are not done well or transparently enough, and I am interested to understand your opinion about this in black-box systems. 
+
+And more importantly, how this can be done right and well from a healthy starting point.
+

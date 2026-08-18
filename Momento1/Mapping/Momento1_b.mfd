@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="xbrl-measure-currency" library="xbrl" uid="5" kind="5">
+					<sources>
+						<datapoint pos="0" key="27"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="334" lty="1108" rbx="474" rby="1146"/>
+				</component>
+				<component name="xbrl-measure-pure" library="xbrl" uid="13" kind="5">
+					<targets>
+						<datapoint pos="0" key="67"/>
+					</targets>
+					<view ltx="286" lty="829" rbx="407" rby="867"/>
+				</component>
+				<component name="constant" library="core" uid="4" kind="2">
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="381" lty="235" rbx="445" rby="252"/>
+					<data>
+						<constant value="COP" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="6" kind="2">
+					<targets>
+						<datapoint pos="0" key="33"/>
+					</targets>
+					<view ltx="405" lty="272" rbx="445" rby="289"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<targets>
+						<datapoint pos="0" key="71"/>
+					</targets>
+					<view ltx="347" lty="-85" rbx="508" rby="-68"/>
+					<data>
+						<constant value="http://www.genesis.com" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<targets>
+						<datapoint pos="0" key="66"/>
+					</targets>
+					<view ltx="367" lty="679" rbx="407" rby="696"/>
+					<data>
+						<constant value="2" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="21" kind="2">
+					<targets>
+						<datapoint pos="0" key="82"/>
+					</targets>
+					<view ltx="879" lty="504" rbx="956" rby="521"/>
+					<data>
+						<constant value="Agent/" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="15" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="907" lty="392" rbx="1073" rby="409"/>
+					<data>
+						<constant value="http://www.w3.org/ns/prov#" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="18" kind="2">
+					<targets>
+						<datapoint pos="0" key="75"/>
+					</targets>
+					<view ltx="861" lty="470" rbx="956" rby="487"/>
+					<data>
+						<constant value="T08:00:00Z" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="17" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="77"/>
+						<datapoint pos="1" key="78"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="79"/>
+					</targets>
+					<view ltx="991" lty="417" rbx="1073" rby="473"/>
+				</component>
+				<component name="concat" library="core" uid="20" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="83"/>
+						<datapoint pos="1" key="84"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="85"/>
+					</targets>
+					<view ltx="991" lty="504" rbx="1073" rby="560"/>
+				</component>
+				<component name="constant" library="core" uid="10" kind="2">
+					<targets>
+						<datapoint pos="0" key="63"/>
+					</targets>
+					<view ltx="967" lty="669" rbx="1091" rby="686"/>
+					<data>
+						<constant value="ACTUS_Contract" datatype="string"/>
+					</data>
+				</component>
+				<component name="DataCDT" library="text" uid="2" kind="16">
+					<properties/>
+					<view ltx="20" lty="-85" rbx="324" rby="266"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="15" expanded="1">
+										<entry name="enteredDate" outkey="16"/>
+										<entry name="accountNumber" outkey="17"/>
+										<entry name="accountName" outkey="18"/>
+										<entry name="amount" outkey="19"/>
+										<entry name="sign" outkey="20"/>
+										<entry name="actus_ContractID" outkey="21"/>
+										<entry name="actus_ContractType" outkey="48"/>
+										<entry name="actus_NotionalPrincipal" outkey="22"/>
+										<entry name="actus_NominalInterestRate" outkey="23"/>
+										<entry name="actus_InitialExchangeDate" outkey="59"/>
+										<entry name="actus_MaturityDate" outkey="24"/>
+										<entry name="rea_Agent" outkey="25"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="https://docs.google.com/spreadsheets/d/e/2PACX-1vT1Ve9XVb3kTQz40TcM7bR_Gj3AmDB4a9JVyiIAWnDDTsB0h96k3dUCO4pgEq0Ip2q9iriwweQpedAA/pub?gid=0&amp;single=true&amp;output=csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="DataCDT" block="Rows">
+									<field0 name="entryNumber" type="string"/>
+									<field1 name="enteredDate" type="string"/>
+									<field2 name="accountNumber" type="string"/>
+									<field3 name="accountName" type="string"/>
+									<field4 name="amount" type="decimal"/>
+									<field5 name="sign" type="string"/>
+									<field6 name="currency" type="string"/>
+									<field7 name="actus_ContractID" type="string"/>
+									<field8 name="actus_ContractType" type="string"/>
+									<field9 name="actus_NotionalPrincipal" type="decimal"/>
+									<field10 name="actus_NominalInterestRate" type="string"/>
+									<field11 name="actus_InitialExchangeDate" type="string"/>
+									<field12 name="actus_MaturityDate" type="string"/>
+									<field13 name="rea_Agent" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="sunder_zachman_dfrnt_instances_m1" library="json" uid="7" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="1295" lty="46" rbx="1603" rby="1012"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="array" expanded="1">
+											<entry name="item" type="json-item" inpkey="87" expanded="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf5" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@context" type="json-property" expanded="1">
+															<entry name="object" expanded="1">
+																<entry name="prov" type="json-property" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="header" type="json-property" expanded="1"/>
+														<entry name="lineNumberCounter" type="json-property" expanded="1"/>
+														<entry name="account" type="json-property" expanded="1">
+															<entry name="string" inpkey="106"/>
+														</entry>
+														<entry name="amount" type="json-property" expanded="1">
+															<entry name="number" inpkey="88"/>
+														</entry>
+														<entry name="debitCreditCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="89"/>
+														</entry>
+														<entry name="postingDate" type="json-property" expanded="1"/>
+														<entry name="prov:generatedAtTime" type="json-property" expanded="1">
+															<entry name="string" inpkey="73"/>
+														</entry>
+														<entry name="resource" type="json-property" expanded="1"/>
+														<entry name="agent_identifier" type="json-property" expanded="1"/>
+														<entry name="prov:wasAttributedTo" type="json-property" expanded="1">
+															<entry name="object" expanded="1">
+																<entry name="@id" type="json-property" expanded="1">
+																	<entry name="string" inpkey="86"/>
+																</entry>
+																<entry name="@type" type="json-property" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="agent" type="json-property" expanded="1"/>
+														<entry name="duality" type="json-property" expanded="1"/>
+														<entry name="measurable" type="json-property" expanded="1"/>
+													</entry>
+													<entry name="anyOf6" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="actus_ContractType" type="json-property" expanded="1"/>
+														<entry name="actus_ContractRole" type="json-property" expanded="1"/>
+														<entry name="actus_Currency" type="json-property" expanded="1"/>
+														<entry name="actus_NotionalPrincipal" type="json-property" expanded="1"/>
+														<entry name="actus_NominalInterestRate" type="json-property" expanded="1"/>
+														<entry name="actus_DayCountConvention" type="json-property" expanded="1"/>
+														<entry name="actus_StatusDate" type="json-property" expanded="1"/>
+														<entry name="actus_InitialExchangeDate" type="json-property" expanded="1"/>
+														<entry name="actus_MaturityDate" type="json-property" expanded="1"/>
+														<entry name="actus_CycleAnchorDateOfInterestPayment" type="json-property" expanded="1"/>
+														<entry name="actus_CycleOfInterestPayment" type="json-property" expanded="1"/>
+														<entry name="actus_ExpectedEvents" type="json-property" expanded="1"/>
+														<entry name="prov:wasGeneratedBy" type="json-property" expanded="1"/>
+													</entry>
+													<entry name="anyOf7" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@context" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="actus_EventType" type="json-property" expanded="1"/>
+														<entry name="actus_EventTypeName" type="json-property" expanded="1"/>
+														<entry name="actus_EventDate" type="json-property" expanded="1"/>
+														<entry name="actus_Payoff" type="json-property" expanded="1"/>
+														<entry name="actus_Currency" type="json-property" expanded="1"/>
+														<entry name="actus_NominalValue" type="json-property" expanded="1"/>
+														<entry name="actus_NominalRate" type="json-property" expanded="1"/>
+														<entry name="actus_NominalAccrued" type="json-property" expanded="1"/>
+														<entry name="actus_DaysAccrued" type="json-property" expanded="1"/>
+														<entry name="actus_TotalInterestCollected" type="json-property" expanded="1"/>
+														<entry name="actus_ContractID" type="json-property" expanded="1"/>
+														<entry name="prov:wasDerivedFrom" type="json-property" expanded="1"/>
+														<entry name="prov:wasGeneratedBy" type="json-property" expanded="1"/>
+														<entry name="xbrl_interpretation" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="90" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf3" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="accountMainID" type="json-property" expanded="1">
+															<entry name="string" inpkey="91"/>
+														</entry>
+														<entry name="accountMainDescription" type="json-property" expanded="1">
+															<entry name="string" inpkey="92"/>
+														</entry>
+														<entry name="mainAccountType" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="item" type="json-item" inpkey="93" clone="1">
+												<entry name="object" expanded="1">
+													<entry name="anyOf6" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="94"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="95"/>
+														</entry>
+														<entry name="actus_ContractType" type="json-property" expanded="1">
+															<entry name="string" inpkey="96"/>
+														</entry>
+														<entry name="actus_ContractRole" type="json-property" expanded="1"/>
+														<entry name="actus_Currency" type="json-property" expanded="1"/>
+														<entry name="actus_NotionalPrincipal" type="json-property" expanded="1">
+															<entry name="number" inpkey="97"/>
+														</entry>
+														<entry name="actus_NominalInterestRate" type="json-property" expanded="1">
+															<entry name="number" inpkey="98"/>
+														</entry>
+														<entry name="actus_DayCountConvention" type="json-property" expanded="1"/>
+														<entry name="actus_StatusDate" type="json-property" expanded="1"/>
+														<entry name="actus_InitialExchangeDate" type="json-property" expanded="1">
+															<entry name="string" inpkey="99"/>
+														</entry>
+														<entry name="actus_MaturityDate" type="json-property" expanded="1">
+															<entry name="string" inpkey="100"/>
+														</entry>
+														<entry name="actus_CycleAnchorDateOfInterestPayment" type="json-property" expanded="1"/>
+														<entry name="actus_CycleOfInterestPayment" type="json-property" expanded="1"/>
+														<entry name="actus_ExpectedEvents" type="json-property" expanded="1"/>
+														<entry name="prov:wasGeneratedBy" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<json schema="..\Taxonomy_Schema\sunder_zachman_dfrnt_instances_m1.schema.json" outputinstance="..\Output\CDT2XBRLGL2JSOLLD_b.jsonld"/>
+					</data>
+				</component>
+				<component name="flujos_proyectados" library="json" uid="22" kind="31">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="20" lty="337" rbx="324" rby="692"/>
+					<data>
+						<root scrollposition="190">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" expanded="1">
+											<entry name="pipeline" type="json-property" expanded="1"/>
+											<entry name="projectionMode" type="json-property" expanded="1"/>
+											<entry name="generatedAt" type="json-property" expanded="1"/>
+											<entry name="actusServer" type="json-property" expanded="1"/>
+											<entry name="csvSource" type="json-property" expanded="1"/>
+											<entry name="dayCountConvention" type="json-property" expanded="1"/>
+											<entry name="cycleOfInterest" type="json-property" expanded="1"/>
+											<entry name="contractCount" type="json-property" expanded="1"/>
+											<entry name="contracts" type="json-property" expanded="1">
+												<entry name="array" expanded="1">
+													<entry name="item" type="json-item" expanded="1">
+														<entry name="object" expanded="1">
+															<entry name="actus_ContractID" type="json-property" expanded="1"/>
+															<entry name="actus_ContractType" type="json-property" expanded="1"/>
+															<entry name="agent" type="json-property" expanded="1"/>
+															<entry name="inputContract" type="json-property" expanded="1"/>
+															<entry name="summary" type="json-property" expanded="1"/>
+															<entry name="events" type="json-property" expanded="1">
+																<entry name="array" expanded="1">
+																	<entry name="item" type="json-item" expanded="1">
+																		<entry name="object" outkey="113" expanded="1">
+																			<entry name="type" type="json-property" expanded="1"/>
+																			<entry name="time" type="json-property" expanded="1">
+																				<entry name="string" outkey="108"/>
+																			</entry>
+																			<entry name="payoff" type="json-property" expanded="1">
+																				<entry name="number" outkey="109"/>
+																			</entry>
+																			<entry name="currency" type="json-property" expanded="1"/>
+																			<entry name="nominalValue" type="json-property" expanded="1"/>
+																			<entry name="nominalRate" type="json-property" expanded="1"/>
+																			<entry name="nominalAccrued" type="json-property" expanded="1"/>
+																			<entry name="event_id" type="json-property" expanded="1"/>
+																			<entry name="actus_ContractID" type="json-property" expanded="1"/>
+																			<entry name="interestCumulative" type="json-property" expanded="1"/>
+																			<entry name="negotiableValue" type="json-property" expanded="1"/>
+																			<entry name="dayNumber" type="json-property" expanded="1"/>
+																			<entry name="isZeroDay" type="json-property" expanded="1"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<json schema="..\Source\flujos_proyectados.schema.json" inputinstance="..\Source\flujos_proyectados.json" outputinstance="..\Source\flujos_proyectados.json"/>
+					</data>
+				</component>
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="3" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XBRLShowAllConceptsRaw="1" PassThrough="1"/>
+					<view ltx="552" lty="-314" rbx="869" rby="750"/>
+					<data>
+						<root scrollposition="2267">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/bus/2015-03-25"/>
+									<namespace uid="view"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="2" expanded="1" showdefaultsnode="1">
+										<entry name="//www.xbrl.org/2003/role/link" ns="5" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1" showdefaultsnode="1">
+												<dimensions>
+													<qname name="identifier" ns="2"/>
+													<qname name="period" ns="2"/>
+												</dimensions>
+												<entry name="defaults" ns="1" expanded="1">
+													<entry name="numericItemType" ns="1" expanded="1">
+														<entry name="unitRef" type="attribute" inpkey="29"/>
+														<entry name="decimals" type="attribute" inpkey="30"/>
+													</entry>
+												</entry>
+												<entry name="identifier" ns="2" expanded="1">
+													<entry name="identifier" ns="2" inpkey="1" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="70"/>
+													</entry>
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" inpkey="2" expanded="1">
+															<entry name="instant" ns="2" inpkey="3"/>
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="3" expanded="1">
+																<entry name="entryHeader" ns="3" expanded="1">
+																	<entry name="entryDetail" ns="3" inpkey="4" outkey="34" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="5" outkey="101"/>
+																			<entry name="accountMainDescription" ns="3" inpkey="6" outkey="102"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="7" outkey="103">
+																			<entry name="unitRef" type="attribute" inpkey="68"/>
+																			<entry name="decimals" type="attribute" inpkey="69"/>
+																		</entry>
+																		<entry name="debitCreditCode" ns="3" inpkey="8" outkey="104"/>
+																		<entry name="postingDate" ns="3" inpkey="9" outkey="76"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierDescription" ns="3" inpkey="10" outkey="81"/>
+																		</entry>
+																		<entry name="measurable" ns="4" outkey="105" expanded="1">
+																			<entry name="measurableCode" ns="4" inpkey="11" outkey="45"/>
+																			<entry name="measurableCodeDescription" ns="4" inpkey="12" outkey="54"/>
+																			<entry name="measurableID" ns="4" inpkey="46" outkey="47"/>
+																			<entry name="measurableDescription" ns="4" inpkey="58" outkey="55"/>
+																			<entry name="measurableQuantity" ns="4" inpkey="13" outkey="56"/>
+																			<entry name="measurableCostPerUnit" ns="4" inpkey="14" outkey="57" expanded="1">
+																				<entry name="unitRef" type="attribute" inpkey="64"/>
+																				<entry name="decimals" type="attribute" inpkey="65"/>
+																			</entry>
+																		</entry>
+																	</entry>
+																	<entry name="entryDetail" ns="3" inpkey="110" expanded="1" clone="1">
+																		<entry name="amount" ns="3" inpkey="111"/>
+																		<entry name="postingDate" ns="3" inpkey="112"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="viewallconceptsraw" ns="5">
+											<entry name="entryDetail" ns="3" expanded="1"/>
+											<entry name="entryHeader" ns="3" expanded="1"/>
+											<entry name="measurable" ns="4" expanded="1"/>
+										</entry>
+										<entry name="unit" ns="2" expanded="1">
+											<entry name="id" type="attribute" inpkey="31"/>
+											<entry name="measure" ns="2" inpkey="32"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="..\..\Momento0\Taxonomy\gl\plt\case-c-b-m-u-t-s\gl-plt-all-2015-03-25.xsd" outputinstance="..\Output\CDT2XBRLGL2JSOLLD_b.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="1"/>
+							<edge vertexkey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="2"/>
+							<edge vertexkey="3"/>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="27"/>
+							<edge vertexkey="29"/>
+							<edge vertexkey="31"/>
+							<edge vertexkey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="30"/>
+							<edge vertexkey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71">
+						<edges>
+							<edge vertexkey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76">
+						<edges>
+							<edge vertexkey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="75">
+						<edges>
+							<edge vertexkey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81">
+						<edges>
+							<edge vertexkey="84"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="85">
+						<edges>
+							<edge vertexkey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="87"/>
+							<edge vertexkey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="103">
+						<edges>
+							<edge vertexkey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="91"/>
+							<edge vertexkey="106"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="102">
+						<edges>
+							<edge vertexkey="92"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="93"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="94"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="95"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="96"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="56">
+						<edges>
+							<edge vertexkey="97"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="98"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="99"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="54">
+						<edges>
+							<edge vertexkey="100"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113">
+						<edges>
+							<edge vertexkey="110"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108">
+						<edges>
+							<edge vertexkey="112"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

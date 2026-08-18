@@ -1,0 +1,9 @@
+Richard;
+
+I forgot to send you something significant.  Attached is a PDF of what NAIC calls a “blank”.  A BLANK is basically a “template” or “form”.  It is supposed to be semantic metadata, but in their EDI system it was just strings of text in a form.  They are going to try and fix that in their XBRL version.  They understand the problem, but the solution might end up being incremental.  The point is, they either will have the correct detailed semantics or they will have something close which we could convert to the proper semantics.
+
+Cheers,
+
+Charlie
+
+Atached: BS_2023 ASB Property-1.pdf

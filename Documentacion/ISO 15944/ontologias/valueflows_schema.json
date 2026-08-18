@@ -1,0 +1,762 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Valueflows JSON Schema (Derived from TTL)",
+  "description": "JSON Schema representation of Valueflows ontology for Altova XMLSpy / MapForce",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": [
+        "object",
+        "string"
+      ]
+    },
+    "@id": {
+      "type": "string"
+    },
+    "@type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "definitions": {
+    "AccountableEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:AccountableEffect"
+        }
+      }
+    },
+    "AccountingEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:AccountingEffect"
+        }
+      }
+    },
+    "Action": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Action"
+        }
+      }
+    },
+    "ActionDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ActionDomain"
+        }
+      }
+    },
+    "Agent": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Agent"
+        }
+      }
+    },
+    "Agreement": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Agreement"
+        }
+      }
+    },
+    "AgreementBundle": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:AgreementBundle"
+        }
+      }
+    },
+    "BatchLotRecord": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:BatchLotRecord"
+        }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Claim"
+        }
+      }
+    },
+    "ClassifiedAsDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ClassifiedAsDomain"
+        }
+      }
+    },
+    "Commitment": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Commitment"
+        }
+      }
+    },
+    "ContainedEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ContainedEffect"
+        }
+      }
+    },
+    "CreateResource": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:CreateResource"
+        }
+      }
+    },
+    "CreatedDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:CreatedDomain"
+        }
+      }
+    },
+    "DueDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:DueDomain"
+        }
+      }
+    },
+    "EcologicalAgent": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:EcologicalAgent"
+        }
+      }
+    },
+    "EconomicEvent": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:EconomicEvent"
+        }
+      }
+    },
+    "EconomicResource": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:EconomicResource"
+        }
+      }
+    },
+    "EffortQuantityDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:EffortQuantityDomain"
+        }
+      }
+    },
+    "EventQuantity": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:EventQuantity"
+        }
+      }
+    },
+    "FinishedDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:FinishedDomain"
+        }
+      }
+    },
+    "HasBeginningDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:HasBeginningDomain"
+        }
+      }
+    },
+    "HasEndDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:HasEndDomain"
+        }
+      }
+    },
+    "HasInputRange": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:HasInputRange"
+        }
+      }
+    },
+    "HasOutputRange": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:HasOutputRange"
+        }
+      }
+    },
+    "HasPointInTimeDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:HasPointInTimeDomain"
+        }
+      }
+    },
+    "ImageDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ImageDomain"
+        }
+      }
+    },
+    "ImageListDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ImageListDomain"
+        }
+      }
+    },
+    "InputOfDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:InputOfDomain"
+        }
+      }
+    },
+    "InputOutput": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:InputOutput"
+        }
+      }
+    },
+    "Intent": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Intent"
+        }
+      }
+    },
+    "LabelDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:LabelDomain"
+        }
+      }
+    },
+    "LocationEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:LocationEffect"
+        }
+      }
+    },
+    "Measure": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Measure"
+        }
+      }
+    },
+    "NameDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:NameDomain"
+        }
+      }
+    },
+    "NoteDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:NoteDomain"
+        }
+      }
+    },
+    "OnhandEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:OnhandEffect"
+        }
+      }
+    },
+    "Organization": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Organization"
+        }
+      }
+    },
+    "OutputOfDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:OutputOfDomain"
+        }
+      }
+    },
+    "Person": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Person"
+        }
+      }
+    },
+    "Plan": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Plan"
+        }
+      }
+    },
+    "PlanIncludesRange": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:PlanIncludesRange"
+        }
+      }
+    },
+    "PlannedWithinDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:PlannedWithinDomain"
+        }
+      }
+    },
+    "Process": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Process"
+        }
+      }
+    },
+    "ProcessSpecification": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ProcessSpecification"
+        }
+      }
+    },
+    "Proposal": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Proposal"
+        }
+      }
+    },
+    "ProposalList": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ProposalList"
+        }
+      }
+    },
+    "ProposalPurpose": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ProposalPurpose"
+        }
+      }
+    },
+    "ProposedToDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ProposedToDomain"
+        }
+      }
+    },
+    "ProviderDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ProviderDomain"
+        }
+      }
+    },
+    "ReceiverDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ReceiverDomain"
+        }
+      }
+    },
+    "Recipe": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Recipe"
+        }
+      }
+    },
+    "RecipeExchange": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:RecipeExchange"
+        }
+      }
+    },
+    "RecipeFlow": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:RecipeFlow"
+        }
+      }
+    },
+    "RecipeProcess": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:RecipeProcess"
+        }
+      }
+    },
+    "ResourceClassifiedAsDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ResourceClassifiedAsDomain"
+        }
+      }
+    },
+    "ResourceConformsToDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ResourceConformsToDomain"
+        }
+      }
+    },
+    "ResourceInventoriedAsDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ResourceInventoriedAsDomain"
+        }
+      }
+    },
+    "ResourceQuantityDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ResourceQuantityDomain"
+        }
+      }
+    },
+    "ResourceSpecification": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:ResourceSpecification"
+        }
+      }
+    },
+    "SatisfiesDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:SatisfiesDomain"
+        }
+      }
+    },
+    "SpatialThing": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:SpatialThing"
+        }
+      }
+    },
+    "StageDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:StageDomain"
+        }
+      }
+    },
+    "StageEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:StageEffect"
+        }
+      }
+    },
+    "StateDomain": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:StateDomain"
+        }
+      }
+    },
+    "StateEffect": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:StateEffect"
+        }
+      }
+    },
+    "Unit": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "@type": {
+          "const": "vf:Unit"
+        }
+      }
+    }
+  }
+}

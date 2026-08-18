@@ -1,0 +1,64 @@
+[
+	{
+		"account": "122505",
+		"amount": 10000000,
+		"debitCreditCode": "D",
+		"prov:generatedAtTime": "2026-07-05T08:00:00Z",
+		"prov:wasAttributedTo": {
+			"@id": "Agent/Banco Santander"
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"prov:wasAttributedTo": {
+		}
+	},
+	{
+		"account": "111005",
+		"amount": 10000000,
+		"debitCreditCode": "C",
+		"prov:generatedAtTime": "2026-07-05T08:00:00Z",
+		"prov:wasAttributedTo": {
+			"@id": "Agent/Banco Santander"
+		}
+	},
+	{
+		"accountMainID": "122505",
+		"accountMainDescription": "Inversiones CDT Santander"
+	},
+	{
+	},
+	{
+	},
+	{
+		"accountMainID": "111005",
+		"accountMainDescription": "Bancos Moneda Nacional"
+	},
+	{
+		"@type": "ACTUS_Contract",
+		"@id": "CDT-SANT-001",
+		"actus_ContractType": "PAM",
+		"actus_NotionalPrincipal": 10000000,
+		"actus_NominalInterestRate": 0.11,
+		"actus_InitialExchangeDate": "2026-07-05",
+		"actus_MaturityDate": "2026-10-05"
+	},
+	{
+		"@type": "ACTUS_Contract"
+	},
+	{
+		"@type": "ACTUS_Contract"
+	},
+	{
+		"@type": "ACTUS_Contract",
+		"@id": "CDT-SANT-001",
+		"actus_ContractType": "PAM",
+		"actus_NotionalPrincipal": 10000000,
+		"actus_NominalInterestRate": 0.11,
+		"actus_InitialExchangeDate": "2026-07-05",
+		"actus_MaturityDate": "2026-10-05"
+	}
+]

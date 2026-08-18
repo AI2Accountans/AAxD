@@ -1,0 +1,187 @@
+This is a lot of information, but if you want to GET THIS RIGHT; this is very important information.  To understand the notion of “digital twin” correctly, you MUST understand what both of these articles are saying PLUS you need to factor in governance properly:
+
+The Half-life of an Assumption: https://www.linkedin.com/pulse/half-life-assumption-matt-wood-6xirc/
+******
+ A nautical chart is as authoritative as an official document gets: surveyed, compiled, checked, and issued under a national hydrographic office. It is also out of date almost as soon as it is printed. A buoy drags out of position. A wreck settles onto a shoal. A dredged channel silts in. The sea starts disagreeing with the chart almost immediately, and navigation, as a discipline, is built around that fact.
+
+The British Admiralty began issuing Notices to Mariners in 1834, at first sent individually to the ships and squadrons that needed them; by 1890 they had become a regular weekly publication, and hydrographic offices around the world now issue their own. Navigators marked each change onto the paper chart by hand and logged the notice number in the bottom-left corner of the sheet. A chart's reliability was understood to depend on two things: the quality of the original survey, and whether its corrections were up to date. Small changes were penned in. When enough of them accumulated, or when a change was too large for a pen, the office issued a new edition.
+
+Nothing in the original chart had to be wrong. The surveyors did their work; the cartographers drew what was true. The world changed after publication. Being authoritative and being current are different properties, and the notice system exists because the difference can put a ship on the rocks.
+
+Organizations produce decisions with the care of charts and preserve them like monuments. The analysis is researched, reviewed, approved, and embedded in roadmaps, budgets, and controls. What changes afterward is rarely attached to it. Somewhere in your organization there is a document that says AI cannot do something it can now do, and no notice has ever been issued against it.
+
+That is not carelessness. Organizations could not function if every decision remained permanently open; converting judgment into structure is how anything gets built. The practice fails only when the world changes faster than the structure that recorded it.
+
+Every consequential decision has a half-life. Not a number anyone can calculate, but a decay rate all the same: the conditions that made it reliable erode, and some erode far faster than others. Some of an organization's charts stay true for years. Others now go stale between planning cycles. AI is increasing the rate at which the territory changes, and the problem is not that organizations make bad maps. It is that they have no Notice to Mariners for their assumptions.
+
+For the past few years, AI improved quickly but at a relatively regular cadence, with each model generation raising familiar benchmarks and different providers trading the lead. Over the past few months, gains in coding, reasoning, computer use, tool use, and long-running work have arrived together and reinforced one another, moving models into work that was previously beyond their reach. The rate itself is rising, and the past few months look like just the start.
+
+The organizational impact does not rise smoothly with capability. A modest improvement can move an entire workload from impractical to routine. A process that once needed constant attention may now run with a few checkpoints; automation that cost more than it saved may suddenly pay for itself; a product experience that could not be built may become the natural place to begin.
+
+Any one of these shifts is manageable. The difficulty comes when several land at once across engineering, operations, customer service, and product development. Organizations that discover each change only when it interrupts an existing plan will experience the period as a succession of surprises. Those that expect their assumptions to expire will still need to adapt, but they will have made room for adaptation before knowing exactly what would change.
+
+These threshold crossings invalidate decisions that were entirely reasonable when they were made. The human review step remains after the failure mode it was designed to catch has faded. The model selected for its reasoning stays in place after a cheaper one catches up. The workflow rejected on economic grounds is not reconsidered after its cost falls by an order of magnitude.
+
+None of these decisions became foolish. Their useful life just ended.
+Why sound decisions outlive their evidence
+
+An assumption that customers will continue to care about reliability, price, and ease of use can hold for years, while an assumption about what the technology can do is now among the fastest-decaying beliefs an organization holds: a view about which model is best for a workload can go stale in weeks, and the right agent configuration in days.
+
+Most organizations, though, record the answer without recording its shelf life. The more work that went into a decision, the more authority it acquires. Then the artifact built from it begins to reinforce it: a system with years of investment looks appropriate because it exists, a large team appears to prove that the problem requires a large team, a detailed roadmap makes the destination look understood. The artifact becomes evidence for the decision that produced it.
+
+People feel this personally. A leader sponsored the roadmap. An architect defended the design. A team spent months making it work. Reopening the premise can feel like diminishing all of that, and committing fully to a decision without making loyalty to it part of your identity is easy to endorse in principle and hard to practice after budgets and reputations have accumulated.
+
+The instinct is to forecast better. It helps a little, but capabilities emerge unevenly, and several modest improvements can combine to cross a threshold that no single benchmark captures. Prediction cannot carry the weight that planning wants it to.
+A notice system for assumptions
+
+The practical response is the mariners': make correction a normal part of operating the system, not an exception to it.
+
+That starts with recording why a decision was made, not only what was decided. A workflow excluded from automation was rarely judged inherently unsuitable; it was excluded because computer use failed too often, supervision erased the economic benefit, or the remaining errors carried too much risk. Those are testable conditions, and the decision can carry its own triggers for reconsideration. When computer use materially improves, or the cost falls below the threshold in the original business case, the evaluation runs again.
+
+Keeping the original test cases makes that retest cheap, and AI can stand the watch itself: agents can track new models against the old evaluation, attempt the same requests and the same exceptions, and return the question to its owner with evidence attached rather than a general stream of AI news. The organization never has to debate computer use in the abstract. It learns whether the result on its own work has crossed the threshold that made the original decision fail.
+
+The point is not to keep every decision open; permanent uncertainty would make coordinated action impossible. The point is to know which decisions deserve to be reopened, and when. The cadence should follow the decay rate: model selection becomes continuous rather than ceremonial, workflow design moves more slowly on operational data, customer needs are read through sustained contact with customers, and purpose barely moves at all.
+Corrections and new editions
+
+Not every expired assumption calls for the same response. Some are handwritten corrections: a review point moves, a model assignment changes, a threshold gets updated. Others call for a new edition, whether because small corrections have accumulated until the structure no longer fits the territory, or because a single change is large enough to invalidate the design on its own.
+
+Starting over was historically the expensive part. Architectures represented years of engineering, roadmaps carried commitments across teams, governance encoded hard-won agreements, and even when the evidence called for a rebuild, patching could be the least bad economic choice. AI is changing that calculation. Prototyping a replacement, testing an alternative architecture, migrating a system: each is becoming cheap enough to change the choice between continued patching and replacement, and the same capability jump that invalidates an implementation also reduces the cost of replacing it. A team revisiting an expired exclusion can sketch several versions of a workflow, from fully automated to human-approved at the riskiest step, and build enough of each to learn which deserves the commitment.
+
+None of this makes starting over free, and it should never mean starting ignorant. Production systems still carry customer commitments, data, security requirements, and accumulated complexity. But if what the organization learned lives in reusable test cases, decision records, and observed customer outcomes rather than only inside the artifact, a replacement begins with everything the previous attempt discovered. Knowledge that exists only inside the system dies with it, which is one more reason the artifact is hard to release.
+
+This is where stability belongs. Purpose, customer promises, accountability, security boundaries, and the evidence required to trust a result should be durable. Models, configurations, workflow designs, and implementation plans can be held more lightly, and a change of route should not be read as a retreat from the objective or a repudiation of the people who pursued it. The quality of their work may be the reason the organization knows enough to choose differently now.
+
+AI is reducing the useful life of many assumptions while lowering the cost of testing and replacing them. Organizations now have better tools for noticing change, determining whether it matters, and rebuilding around what they learn. The outcome will depend on whether a decision that was once correct is allowed to become a question again.
+
+******
+The Chart Is Not the Company:  https://billcrichmond.medium.com/the-chart-is-not-the-company-c21c14108453
+
+Every organization runs on two structures. Only one of them is written down.
+
+The house was built in 1962, and the county had a file on it. Permits, drawings, approvals, a stack of paper going back decades. I stood in the basement with an inspector, holding that file, while he pointed his flashlight at a steel post holding up the center beam.
+
+The post wasn’t in the drawings. Neither was the second furnace, or the wall someone had moved to widen the kitchen, or the wiring that fed the addition. The file described a house. The flashlight kept finding a different one.
+
+I asked him if that was a problem. He shrugged. “The file tells you what was approved,” he said. “It doesn’t tell you what was built.”
+
+What stayed with me is that nobody in that basement thought the county records were wrong. It was doing exactly what a permit file does: recording what was authorized, by whom, and when. It just wasn’t doing the thing I’d assumed it was doing, which was describing the house.
+
+The house had two structures. One on paper, one in the walls. And both of them, it turns out, were holding something up.
+The Chart
+
+Every organization keeps a permit file.
+
+It’s the org chart. The process documentation. The approval matrix that says who signs off on what. The onboarding deck that explains how decisions get made here. It’s clean, current, and official. Someone maintains it. When something changes, someone updates it.
+
+And every organization also has the other structure. The one in the walls. Who actually gets consulted before a decision is real. Which two people’s agreement quietly ends a debate. Which relationship carries the load between two departments that formally have no connection at all. Where bad news actually travels, and where it goes to die.
+
+Everyone knows this. Ask anyone who’s worked anywhere for more than a month and they can tell you who really needs to say yes. This isn’t a secret, and it isn’t news.
+
+What’s strange is what we do with that knowledge. We treat the second structure as a shadow, a workaround, a temporary deviation from the real thing. And we keep handing the first structure to new hires as if it were a map.
+
+But here’s the thing, the org chart isn’t a map. It’s a testimony. A sworn statement about who answers for what, so that when something goes wrong, or gets audited, or needs a signature, there’s a name. Testimony has to be stable to be useful. Reality doesn’t hold still. So the two were never going to match, and they were never supposed to.
+The Routing
+
+Watch where work actually travels and the two structures come into focus.
+
+Routine work travels the formal structure, and may even travel it well. Expense reports. Access requests. The quarterly review. Anything the organization expected when it designed itself flows through the boxes exactly as drawn. This is the formal structure doing its job, and it does that job every day, invisibly, at scale.
+
+The informal structure carries everything else. The novel. The urgent. The cross-cutting. The problem nobody’s box quite contains. When a question comes up that the process didn’t anticipate, it doesn’t wait for the process to be redesigned. It routes around the process. It finds the person who knows, the person who decides, the pair of people who trust each other across a boundary listed nowhere on the chart.
+
+I’ve watched a decision that formally belonged to a steering committee get settled in a twenty-minute conversation between two people, weeks before the meeting. The committee reviewed the decision and approved it. Everyone did their job. But if you’d traced the decision’s actual path, the meeting was the last stop, not the first. The formal structure ratified. The informal structure decided.
+Get Bill Richmond’s stories in your inbox
+
+Join Medium for free to get updates from this writer.
+
+Remember me for faster sign in
+
+And notice the pattern in what each structure carries. The more routine the work, the better the chart describes its path. The more consequential the work, the less it does. Transformation, by definition, is work the current structure didn’t anticipate. Which means the hardest work an organization attempts travels almost entirely on the structure nobody writes down, while being planned, funded, and measured entirely on the documented structure.
+The Reorg
+
+I’ve watched the same cycle many times, in many places.
+
+An organization is struggling. Leadership concludes the structure is wrong, which is half true. A reorg is announced. Boxes move. Lines redraw. New names go in new rectangles. There’s a town hall and a transition plan. And six months later, the same problems are back.
+
+Nothing changed because nothing was going to. The reorg edited the testimony. The map. The terrain, the actual pattern of trust and consultation and load-bearing relationships, wasn’t touched, because it can’t be edited from above. It rebuilt itself around the new boxes within weeks, the way water finds its old path through new landscaping.
+
+The same mechanism explains the hire who arrives with the title but no traction. They were given a place in the story, but nobody could give them a place in the building, because places in the building aren’t assigned. They’re accumulated, conversation by conversation, kept promise by kept promise. The title grants the formal structure’s full authority, which is to say: authority over the routine. The residual, the part that matters, keeps routing through the people it already trusted.
+
+The people navigating by the chart are doing what they were told; the chart is the only thing anyone handed them. The confusion is what happens when you hand someone a map (how things should work) and call it the terrain (how things actually work).
+The Ledger
+
+So why keep the fiction? If the formal structure doesn’t describe how the organization really works, why does every organization maintain one, defend it, and reorganize it with such ceremony?
+
+Because the formal structure was never for navigation.
+It’s for accountability.
+
+Somebody has to be nameable. When the audit comes, when the budget is allocated, when the thing breaks and a regulator asks who was responsible, the organization needs a stable, legible answer. Accountability can’t run on “well, it depends who you ask.” It needs boxes and lines and names that hold still long enough to be pointed at. The deed to a property doesn’t tell you where the creek floods. It isn’t supposed to. It tells you who owns the flood.
+
+This is why the gap between the two structures never closes, and why closing it’s the wrong ambition. Both structures are load-bearing. The formal structure holds up accountability: pay, authority, audit, consequence. The informal structure holds up the work: judgment, trust, speed, everything the design didn’t anticipate. An organization missing the first is unaccountable. An organization missing the second is motionless.
+
+The dysfunction isn’t that there are two structures or the gap between them. The dysfunction is asking each structure to do the other’s job.
+
+One direction of that mistake is familiar by now: navigating by the chart. The reorg that changes nothing. The hire with no traction. The process followed perfectly toward a failed outcome.
+
+The other direction is quieter and, I think, more costly. It’s the attempt to formalize the terrain. Leadership discovers that some relationship or workaround is where the real work happens, and does the natural thing: names it, documents it, staffs it, gives it a box. And the capacity evaporates. The fixer gets promoted into a role called Fixing, and stops being consulted. The workaround becomes a process, and a new workaround forms around it. The informal structure works precisely because it doesn’t have to be defensible. It runs on judgment applied to the specific case, and judgment is the one thing that can’t survive being turned into a procedure. Write it down and you haven’t captured it. You’ve relocated it. It’s already somewhere else, unwritten again.
+The Walk-Through
+
+The house passed inspection, by the way. The file stayed in its drawer at the county, still describing a house that doesn’t quite exist, still doing its job. The steel post in the basement is still holding up the center beam, still absent from every drawing, still doing its job too.
+
+Your organization has both. A file and a building. You’ve known it since your first month, when someone leaned over and told you who really needed to say yes. The uncomfortable part is noticing that everything official you’ve ever been given, every chart and process and plan, describes the file. While nearly everything you’ve ever gotten done, you got done in the building.
+
+The next time a decision that matters actually gets made, trace its real path. Not the path it will report. The path it actually traveled. Then ask yourself which structure you’ve been maintaining all these years.
+
+And which one has been maintaining you.
+
+******
+Governance: https://seattlemethod.blogspot.com/2026/01/governance.html
+
+
+
+January 06, 2026
+
+Governance is about the framework for decision making and collaborative action which formally specifies how a group of stakeholders organizes themselves and makes decisions and otherwise collaborates within some specific system or context to get things done and/or to achieve some common goal or objective. Governance is the system of rules, roles, processes, and relationships that guide how the group of stakeholders operate. Governance is the meta‑layer that, at it's core, ensures:
+
+    Accountability: Who is responsible. It establishes who decides what. Performance.
+    Procedures: How are decisions made. It establishes protocols. Controls. Process.
+    Authority: Who is allowed. It ensures people are following the rules. Permissions.
+    Alignment: Are we following our defined purpose. It checks to determine whether the group is on track. Predictability. Safety. Transparency. Openness. Integrity. Effectiveness. Collaboration.
+    Assurance: Are we doing what we said we would do. Auditability. Traceability.
+
+Governance is the control framework that keeps a system coherent. Governance is how a group makes sure things are done properly.
+
+Governance refers to the system of rules, practices, and processes by which an ecosystem is directed and controlled. Governance involves decision-making, accountability, and the distribution of power within the ecosystem.
+
+In the most simple terms, governance is about deciding who defines the rules, deciding how those rules are defined, and deciding what to do when rule conflict. Governance is the collective responsibility of all stakeholders within an area of knowledge.
+
+Management is about doing the work.  Governance is about making sure the right work is being done in the right way. Governance prevents "wild behavior", "anarchy", and "chaos" by defining who can do what and under what conditions.
+
+Meaning emerges through interpretation, negotiation, agreement, shared practices, institutionalization, and governance.  Meaning is not generated.
+
+Here is a tangible example.  Think of a homeowners association of a condominium.  Governance is the bylaws, voting rules, committees, and enforcement mechanisms of the homeowners association.  Management relates to the landscapers, maintenance crews, and administrators who carry out the work that needs to be performed to keep the condominium functioning.  Governance says “Here’s how we decide what the landscaping should be.”  Management says “Here’s how we mow the lawn.”
+
+
+C:\Users\IPHIX\Documents\Projects\DFRNT\Documentacion\Charles Hoffman\Mail\2026-07-15/Governance.png
+
+****
+
+
+If you do not understand these ideas, then you will build the wrong software which we do not want.  Also, you really should use the term “digital twin” very, very carefully.
+
+So the FIRST ARTICLE; I used to be a boatswain’s mate in the United States Coast Guard.  We issued “Notice to Mariners”.  A notice to mariners is like a “change in state”.  A nautical chart is like a “stock”; it is correct as of a point in time.  And  so: Nautical chart >> Notice to mariners >> New nautical chart  (and this process repeats every day as wind blows buoys out of place; new shipwrecks appear; tides move sand)
+
+In the SECOND ARTICLE it points out the “formal” organization chart of an enterprise and the “informal” organization chart and how the “formal” system of building permits is different than the actual “building” that exists.  Both of these ideas need to be factored into how you think a “digital twin” actually works. What I was calling the “business events ledger” which I will now refer to as the “semantic ricordance plane” (SRP) is the FORMAL “one version of the truth” of the enterprise that all other systems MUST reconcile to.  Note that “reconcile to” and “agree with” are two very different things.  That business events ledger/semantic recordance plane DOES NOT CURRENTLY EXIST.  It is important, Luca Pacioli pointed this out in 1494.  But the “computers” at the time (i.e. humans) could not implement it; to complicated of a computational substrate, basically a manifold, very important to READ THIS, https://seattlemethod.blogspot.com/2026/07/the-accounting-manifold.html   BUT TODAY’S COMPUTERS have no problem with that.  The thing is, in the 1950s when accounting systems were implemented in computer systems; the IT people did not understand what accountants were actually doing and, frankly, neither did accountants as they explained this to the business analysts creating the requirements which were to be implemented.  And so, only the mechanical aspects of “keeping the books” was implemented, and it was also implemented literally as a “book” (i.e. document), not a set of deterministic mathematical structures which it REALLY IS.
+
+IT IS A PROBLEM when in, what should be a deterministic system, different people in the SAME ORGANZATION can get different answers to exactly the same question.  Ask any CFO how problematic that is.  Think about compliance.  Try and explain to a regulator why that happens, or specifically why that happened in a specific case the regulator is asking about.  Or, explain to an auditor WHY THAT HAPPENS.  Ask a CFO how valuable a system is which (a) never let this happen and (b) where traceability/trackability and provenance was 100% intact.  And then, to point out the “gravy” on top of all of this.  Imagine how good artificial intelligence can be, what excellent information it can provide IF AND ONLY IF all this is, in fact, intact rather than fragmented.  And then, at that  specific point in the conversation; tell the story of the Fortune 1000 companies that use 800 electronic spreadsheets, 94% of which have some sort of critical error, which are NOT INTERLINKED.
+
+The accounting information systems of an enterprise are NOT a digital twin of that enterprise; they are a “skeleton” or the “keystones/cornerstones” or a “computational substrate” (I don’t have the right word yet; perhaps someone can suggest the word…I will know it when I see it) that MUST be reconcilable to some external reporting framework (e.g. US GAAP, IFRS), a compliance framework, to a regulator or set of regulators or a financial institution which provides assets based lending (i.e. capital) to that enterprise.  A BANK IS A REGUATOR of sorts.  And now, add to that SOCIAL RESPONSIBILITY regulation via ESG.  Forty years ago they called this “triple bottom line”.  What is MORE IMPORTANT is that this is all going to pull the world away from the focus on the “shareholders” to a more balanced perspective by adding “society” to the equation.  Important stuff.
+
+This shows the value of the business events ledger/semantic ricordance plane and how it truly related to the enterprise and how it works and what it can be used for.  Luca Pacioli got all this right in 1494, but just did not have the technology to make it work at scale.  Rumor has it that Leonardo da Vinci was the guy that actually came up with this idea (I just made that up):
+
+Pacioli in the Computer Age: Back to the Future of Accounting and Risk: https://www.garp.org/risk-intelligence/technology/pacioli-in-the-computer-age-250131
+
+
+C:\Users\IPHIX\Documents\Projects\DFRNT\Documentacion\Charles Hoffman\Mail\2026-07-15/illustrative.png
+Cheers,
+
+Charlie

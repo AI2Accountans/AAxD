@@ -1,0 +1,29 @@
+Andrew;
+
+This is extremely helpful information you provided. Some things you have said and that Joey have said and that Richard have said are making a bunch of things fall into place.
+
+Peppol seems to be a framework, principles, rules what have been assembled into a network for exchanging UBL documents.
+
+https://e-invoice.be/blog/ubl-format-guide
+
+What is becoming increasingly clear here is that we seem to have three different “planes” or “levels”.
+
+1.  Granular plane/level (Business event journal, Peppol, UBL, XBRL GL, REA, ACTUS)
+2.  Mezzanine plane/level (accounting working papers, audit working papers, “report” or other projection; intermediate plane/level where there are aspects of both and a transition between the two)
+3.  Aggregated plane/level (Financial statement, analysis model, tax return, compliance report; US GAAP and IFRS Taxonomy)
+
+Key to getting all this to work effectively is to understand that it is a platform and an ecosystem: https://digitalfinancialreporting.blogspot.com/2026/07/platforms-and-ecosystems.html
+
+Part of the business aspect of this is breaking down the silos that impede Accounting & Audit by Design (A&AD).
+
+Cheers,
+
+Charlie
+
+I put this explanation of the Universal Business Language here:
+
+https://digitalfinancialreporting.blogspot.com/2026/07/universal-business-language.html
+
+There are a lot of very helpful links on that page. Also, there is a link to another blog post about HL7 and FHIR.
+
+Cheers,

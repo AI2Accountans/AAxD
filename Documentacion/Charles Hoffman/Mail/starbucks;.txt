@@ -1,0 +1,15 @@
+Richard;
+
+FYI. This is the sort of thing you can enable with your framework.  If we can get your “Legos” and “algorithms” infrastructure working well it makes putting pieces together reliably (e.g. industrial strength) much easier.  It is not really about “AI building software” as AI cannot build industrial strength software; but (a) AI gets people thinking and (b) AI can assist in creating software and (c) you cannot leverage AI of you don’t have good data/information.
+
+This is the problem:
+
+“The historical logic of enterprise software was lock-in.”
+
+https://www.thestateofai.com/news/starbucks-builds-ai-tools-microsoft-ibm
+
+C:\Users\IPHIX\Documents\Projects\DFRNT\Documentacion\Charles Hoffman\Mail/Starbucks.png
+
+https://www.linkedin.com/posts/melissarosenthal5_starbucks-just-told-microsoft-and-ibm-it-share-7482289841334833152-OpVc/
+
+Cheers,

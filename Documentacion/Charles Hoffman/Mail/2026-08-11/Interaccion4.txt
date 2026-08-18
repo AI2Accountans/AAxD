@@ -1,0 +1,13 @@
+Richard;
+
+So there is one final piece of the puzzle which is “structures”. This Digital Information Organize is the mechanism for defining structures:
+
+https://seattlemethod.blogspot.com/2026/05/digital-information-organism.html
+
+This is key to generating anything in XBRL and knowing that what you have generated is correct. You don’t generate a report model in your system; even only the four primary financial statements requires this digital information organism to make sure you generated the model correctly. For all the other pieces of the report, you absolutely need this.
+
+You cannot simple output something and not “control” it. That digital information organism is both the TARGET and the CONTROL MECHANISM (e.g. proves you hit the target).
+
+Cheers,
+
+Charlie

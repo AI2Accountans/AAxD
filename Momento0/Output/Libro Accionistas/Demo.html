@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Accionistas en Tiempo Real</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --success-color: #10b981;
+            --accent-glow: rgba(59, 130, 246, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-image: radial-gradient(circle at top right, rgba(30, 41, 59, 1), var(--bg-color) 40%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .dashboard {
+            width: 100%;
+            max-width: 1000px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            flex: 1;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .stat-title {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--surface-color);
+        }
+
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.6);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+
+        .agent-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .agent-id {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            background: rgba(15, 23, 42, 0.5);
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-family: monospace;
+        }
+
+        .amount {
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--success-color);
+        }
+
+        .pulse {
+            width: 10px;
+            height: 10px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .query-toggle {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .query-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        }
+
+        pre {
+            background: #0f172a;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            color: #e2e8f0;
+            font-family: monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        pre.visible {
+            display: block;
+            animation: fadeInUp 0.3s ease-out;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Libro de Accionistas</h1>
+        <p class="subtitle">Proyección en tiempo real desde TerminusDB / DFRNT</p>
+    </header>
+
+    <div class="dashboard">
+        <div class="status-indicator">
+            <div class="pulse"></div>
+            Sincronizado con Grafo Semántico (GraphQL Node)
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-title">Capital Total (Cuenta 311505)</div>
+                <div class="stat-value" id="totalCapital">$0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Total Cuotas Emitidas</div>
+                <div class="stat-value" id="totalShares">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Total Socios Fundadores</div>
+                <div class="stat-value" id="totalPartners">0</div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="ledgerTable">
+                <thead>
+                    <tr>
+                        <th>Accionista (GistPerson)</th>
+                        <th>Cuotas (Participación)</th>
+                        <th>Aporte ($)</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <button class="query-toggle" onclick="toggleQuery()">Ver GraphQL de Origen</button>
+        <pre id="querySource">
+{
+  "data": {
+    "EntryDetail": [
+      {
+        "amount": 2500000,
+        "agent_identifier": {
+          "_id": "terminusdb:///data/GistPerson/Socio_A",
+          "identifierDescription": "Socio Fundador A"
+        },
+        "measurable": {
+          "measurableQuantity": 2500,
+          "measurableUnitOfMeasure": "Cuotas"
+        }
+      },
+      ...
+    ]
+  }
+}
+        </pre>
+    </div>
+
+    <script>
+        // Simulando la respuesta GraphQL exacta de tu captura
+        const graphQLResponse = {
+            "data": {
+                "EntryDetail": [
+                    {
+                        "lineNumberCounter": 2,
+                        "amount": 2500000,
+                        "agent_identifier": {
+                            "_id": "terminusdb:///data/GistPerson/Socio_A",
+                            "identifierDescription": "Socio Fundador A"
+                        },
+                        "measurable": {
+                            "measurableQuantity": 2500,
+                            "measurableUnitOfMeasure": "Cuotas"
+                        }
+                    },
+                    {
+                        "lineNumberCounter": 3,
+                        "amount": 2500000,
+                        "agent_identifier": {
+                            "_id": "terminusdb:///data/GistPerson/Socio_B",
+                            "identifierDescription": "Socio Fundador B"
+                        },
+                        "measurable": {
+                            "measurableQuantity": 2500,
+                            "measurableUnitOfMeasure": "Cuotas"
+                        }
+                    },
+                    {
+                        "lineNumberCounter": 4,
+                        "amount": 2500000,
+                        "agent_identifier": {
+                            "_id": "terminusdb:///data/GistPerson/Socio_C",
+                            "identifierDescription": "Socio Fundador C"
+                        },
+                        "measurable": {
+                            "measurableQuantity": 2500,
+                            "measurableUnitOfMeasure": "Cuotas"
+                        }
+                    }
+                ]
+            }
+        };
+
+        // Procesar y renderizar datos
+        function renderLedger() {
+            const entries = graphQLResponse.data.EntryDetail;
+            const tbody = document.querySelector('#ledgerTable tbody');
+            
+            let totalCapital = 0;
+            let totalShares = 0;
+
+            entries.forEach((entry, index) => {
+                // Calcular totales
+                totalCapital += entry.amount;
+                totalShares += entry.measurable.measurableQuantity;
+
+                // Extraer nombre corto del ID (ej: Socio_A)
+                const shortId = entry.agent_identifier._id.split('/').pop();
+
+                // Crear fila con animación de retraso en cascada
+                const tr = document.createElement('tr');
+                tr.style.animation = `fadeInUp 0.5s ease-out ${index * 0.15}s both`;
+                
+                tr.innerHTML = `
+                    <td>
+                        <div class="agent-name">
+                            ${entry.agent_identifier.identifierDescription}
+                        </div>
+                        <div class="agent-id">${shortId}</div>
+                    </td>
+                    <td>
+                        <strong>${entry.measurable.measurableQuantity.toLocaleString()}</strong> <span style="color:var(--text-muted);font-size:0.8rem">${entry.measurable.measurableUnitOfMeasure}</span>
+                    </td>
+                    <td class="amount">$${entry.amount.toLocaleString()}</td>
+                    <td><span class="badge">Suscrito & Pagado</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Actualizar tarjetas de resumen
+            document.getElementById('totalCapital').textContent = '$' + totalCapital.toLocaleString();
+            document.getElementById('totalShares').textContent = totalShares.toLocaleString();
+            document.getElementById('totalPartners').textContent = entries.length;
+        }
+
+        function toggleQuery() {
+            const pre = document.getElementById('querySource');
+            if(pre.classList.contains('visible')) {
+                pre.classList.remove('visible');
+            } else {
+                pre.classList.add('visible');
+            }
+        }
+
+        // Simular un pequeño tiempo de carga de red para efecto realista
+        setTimeout(renderLedger, 500);
+    </script>
+</body>
+</html>

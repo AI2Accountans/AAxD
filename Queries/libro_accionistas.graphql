@@ -1,0 +1,55 @@
+{
+  "data": {
+    "EntryDetail": [
+      {
+        "amount": 10000000,
+        "agent_identifier": null,
+        "measurable": null
+      },
+      {
+        "amount": 2500000,
+        "agent_identifier": {
+          "_id": "terminusdb:///data/GistPerson/Socio_A",
+          "identifierDescription": "Socio Fundador A"
+        },
+        "measurable": {
+          "measurableQuantity": 2500,
+          "measurableUnitOfMeasure": "Cuotas"
+        }
+      },
+      {
+        "amount": 2500000,
+        "agent_identifier": {
+          "_id": "terminusdb:///data/GistPerson/Socio_B",
+          "identifierDescription": "Socio Fundador B"
+        },
+        "measurable": {
+          "measurableQuantity": 2500,
+          "measurableUnitOfMeasure": "Cuotas"
+        }
+      },
+      {
+        "amount": 2500000,
+        "agent_identifier": {
+          "_id": "terminusdb:///data/GistPerson/Socio_C",
+          "identifierDescription": "Socio Fundador C"
+        },
+        "measurable": {
+          "measurableQuantity": 2500,
+          "measurableUnitOfMeasure": "Cuotas"
+        }
+      },
+      {
+        "amount": 2500000,
+        "agent_identifier": {
+          "_id": "terminusdb:///data/GistPerson/Socio_D",
+          "identifierDescription": "Socio Fundador D"
+        },
+        "measurable": {
+          "measurableQuantity": 2500,
+          "measurableUnitOfMeasure": "Cuotas"
+        }
+      }
+    ]
+  }
+}

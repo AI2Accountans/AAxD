@@ -1,0 +1,13 @@
+Richard;
+
+So I would suggest to you that your demonstration is not complete. Why? Because you cannot generate a complete set of primary financial statements per any financial reporting framework (i.e. balance sheet, income statement, cash flow statement, and statement of changes in equity) that proves your GL information is correct. And, you cannot do that unless you can process business event information with a full set of business events for a financial reporting framework.
+
+Would you agree with my observation? Or, do you believe the actual capability to generate a provably correct set of primary financial statements is somehow note in scope?
+
+If you do not believe generating a provably correct set of primary financial statements is not in scope; I would suggest that an audit is of a set of financial statements. The financial statement MUST be in scope?
+
+Thoughts? Joey French and Dudley Gould both have processes for turning general ledger transactions into financial statements. Joey says his process works well, Dudley has made this work to a degree but he is refactoring some things. Part of what needs to be better tested is the discovery of the nature of the business event (as opposed to having an accountant assign the information). This involves what Dave McComb is doing with Data Centric Accounting.
+
+Cheers,
+
+Charlie

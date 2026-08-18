@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Sunder Zachman DFRNT Instances Schema - Momento 1 (ACTUS)",
+  "$ref": "#/definitions/instancesArray",
+  "definitions": {
+    "FIBO_StockCorporation": {
+      "type": "object",
+      "required": ["@type", "@id", "artifact_name", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "identifierCode": { "type": "string" },
+        "identifierDescription": { "type": "string" },
+        "identifierType": { "type": "string" },
+        "nexus": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "SourceDocument": {
+      "type": "object",
+      "required": ["@type", "@id", "artifact_name", "documentType"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "documentType": { "type": "string" },
+        "documentNumber": { "type": "string" },
+        "documentDate": { "type": "string" },
+        "engaged_agents": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "GistPerson": {
+      "type": "object",
+      "required": ["@type", "@id", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "identifierCode": { "type": "string" },
+        "identifierDescription": { "type": "string" },
+        "identifierType": { "type": "string" },
+        "artifact_name": { "type": "string" }
+      }
+    },
+    "Account": {
+      "type": "object",
+      "required": ["@type", "@id", "accountMainID", "accountMainDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "accountMainID": { "type": "string" },
+        "accountMainDescription": { "type": "string" },
+        "mainAccountType": { "type": "string" },
+        "artifact_name": { "type": "string" }
+      }
+    },
+    "EntryHeader": {
+      "type": "object",
+      "required": ["@type", "@id", "posting_date"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "posting_date": { "type": "string" },
+        "source_document": { "type": "string" },
+        "entriesType": { "type": "string" }
+      }
+    },
+    "EntryDetail": {
+      "type": "object",
+      "required": ["@type", "@id"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { 
+          "type": ["string", "array"],
+          "items": { "type": "string" }
+        },
+        "@context": {
+          "type": "object",
+          "properties": {
+            "prov": { "type": "string" }
+          }
+        },
+        "@id": { "type": "string" },
+        "artifact_name": { "type": "string" },
+        "header": { "type": "string" },
+        "lineNumberCounter": { "type": "integer" },
+        "account": { "type": "string" },
+        "amount": { "type": "number" },
+        "debitCreditCode": { "type": "string" },
+        "postingDate": { "type": "string" },
+        "prov:generatedAtTime": { "type": "string" },
+        "resource": { "type": "string" },
+        "agent_identifier": { "type": "string" },
+        "prov:wasAttributedTo": {
+          "type": "object",
+          "properties": {
+            "@id": { "type": "string" },
+            "@type": { "type": "string" }
+          }
+        },
+        "agent": { "type": "string" },
+        "duality": { "type": "string" },
+        "gl-srcd:detailedContentFilter": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Etiquetas de taxonomía contable enriquecidas del módulo SRCD de XBRL GL"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Arreglo alternativo de etiquetas contables"
+        },
+        "measurable": {
+          "type": "object",
+          "required": ["measurableCode", "measurableID", "measurableDescription", "measurableQuantity", "measurableUnitOfMeasure", "measurableCostPerUnit"],
+          "properties": {
+            "measurableCode": { "type": "string" },
+            "measurableID": { "type": "string" },
+            "measurableDescription": { "type": "string" },
+            "measurableQuantity": { "type": "number" },
+            "measurableUnitOfMeasure": { "type": "string" },
+            "measurableCostPerUnit": { "type": "number" }
+          }
+        }
+      }
+    },
+    "ACTUS_Contract": {
+      "type": "object",
+      "required": ["@type", "@id", "actus_ContractType", "actus_NotionalPrincipal", "actus_NominalInterestRate", "actus_InitialExchangeDate", "actus_MaturityDate"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { "type": "string" },
+        "@id": { "type": "string" },
+        "actus_ContractType": { "type": "string" },
+        "actus_ContractRole": { "type": "string" },
+        "actus_Currency": { "type": "string" },
+        "actus_NotionalPrincipal": { "type": "number" },
+        "actus_NominalInterestRate": { "type": "number" },
+        "actus_DayCountConvention": { "type": "string" },
+        "actus_StatusDate": { "type": "string" },
+        "actus_InitialExchangeDate": { "type": "string" },
+        "actus_MaturityDate": { "type": "string" },
+        "actus_CycleAnchorDateOfInterestPayment": { "type": "string" },
+        "actus_CycleOfInterestPayment": { "type": "string" },
+        "actus_ExpectedEvents": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "prov:wasGeneratedBy": {
+          "type": "object",
+          "properties": {
+            "@id": { "type": "string" },
+            "@type": { "type": "string" },
+            "prov:used": { "type": "string" },
+            "actus_EngineVersion": { "type": "string" },
+            "actus_QueryParams": { "type": "string" }
+          }
+        }
+      }
+    },
+    "ACTUS_Event": {
+      "type": "object",
+      "required": ["@type", "@id", "actus_EventType", "actus_EventDate", "actus_Payoff", "actus_Currency"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": { 
+          "type": ["string", "array"],
+          "items": { "type": "string" }
+        },
+        "@context": {
+          "type": "object",
+          "properties": {
+            "prov": { "type": "string" }
+          }
+        },
+        "@id": { "type": "string" },
+        "actus_EventType": { "type": "string" },
+        "actus_EventTypeName": { "type": "string" },
+        "actus_EventDate": { "type": "string" },
+        "actus_Payoff": { "type": "number" },
+        "actus_Currency": { "type": "string" },
+        "actus_NominalValue": { "type": "number" },
+        "actus_NominalRate": { "type": "number" },
+        "actus_NominalAccrued": { "type": "number" },
+        "actus_DaysAccrued": { "type": "integer" },
+        "actus_TotalInterestCollected": { "type": "number" },
+        "actus_ContractID": { "type": "string" },
+        "prov:wasDerivedFrom": { "type": "string" },
+        "prov:wasGeneratedBy": {
+          "type": "object",
+          "properties": {
+            "@id": { "type": "string" },
+            "@type": { "type": "string" }
+          }
+        },
+        "xbrl_interpretation": { "type": "string" }
+      }
+    },
+    "instancesArray": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "$ref": "#/definitions/FIBO_StockCorporation" },
+          { "$ref": "#/definitions/SourceDocument" },
+          { "$ref": "#/definitions/GistPerson" },
+          { "$ref": "#/definitions/Account" },
+          { "$ref": "#/definitions/EntryHeader" },
+          { "$ref": "#/definitions/EntryDetail" },
+          { "$ref": "#/definitions/ACTUS_Contract" },
+          { "$ref": "#/definitions/ACTUS_Event" }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+John
+John’s Substack
+5h
+
+Thanks Kurt. I do enjoy a good accounting example.
+
+The immutable, write-forward ledger traces back to the original double-entry bookkeeping method. Contemporaneous documentation is a foundation of maintaining truth, even when it makes correcting errors challenging.
+
+Maintaining historical values of accounts, based on posted dates, is foundational to accounting and periodic reporting. A company is still reporting and refining revenue for last month, while continuing to record more revenue this month. Imbedding historical account balances in the event log does not seem like the right model, and often would not even give the right answer to a relevant question. In this example, revenue to-date as of June 30th never shows up as a value in the event graph.
+
+It also raises the question as to how often do you even need a current balance? You need to know the current bank balance, how many widgets you have in supply and the amount you owe supplier ABC. But many accounts balances you need only know when you report them. Employee costs last month is a query and never shows up as a current account value. Depreciation expense is a query that is dependent on the reporting purpose (book or tax.)
+
+An alternative approach may be to periodically "close the books" and record an historical value of a fluent at a point in time, and then calculate the current value of a fluent based on a query of the event log and the last posted value. You could close the books monthly, or even daily, but you would not need to save the current and prior revenue account balance every time you made a sale.
+
+Thanks again. Testing the holon architecture against these real-life accounting problems is sure be insightful.

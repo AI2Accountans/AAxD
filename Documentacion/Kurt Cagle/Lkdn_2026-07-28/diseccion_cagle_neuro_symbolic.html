@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disección Metodológica: Neuro-Symbolic AI, Holones & Stack DFRNT</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #080d1a;
+            --card-bg: rgba(15, 23, 42, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(56, 189, 248, 0.4);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-cyan: #38bdf8;
+            --accent-blue: #6366f1;
+            --accent-purple: #a855f7;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 60%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* HERO HEADER */
+        .hero {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple), var(--accent-gold));
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 0.35rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .badge-cyan { border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1); color: #7dd3fc; }
+        .badge-purple { border-color: rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.1); color: #c084fc; }
+        .badge-gold { border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.1); color: #fbbf24; }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 900px; }
+
+        /* SECTION HEADER */
+        .section-header {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-header .line {
+            flex: 1; height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        /* CAGLE RECIPE GRID */
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .recipe-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            border-color: var(--card-hover-border);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .recipe-num {
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .recipe-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 0.5rem;
+        }
+
+        .recipe-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* MAPPING TABLE */
+        .table-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1.25rem 1.5rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-cyan);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 1.1rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+        }
+
+        tr:hover td { background: rgba(255, 255, 255, 0.02); }
+
+        .highlight-td {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        /* DUAL ARCHITECTURE CARDS */
+        .dual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .dual-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 1.75rem;
+        }
+
+        .dual-card-purple { border-color: rgba(168, 85, 247, 0.3); }
+        .dual-card-cyan { border-color: rgba(56, 189, 248, 0.3); }
+
+        .dual-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dual-card ul { list-style: none; padding: 0; }
+        .dual-card ul li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .dual-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        /* LINKS SECTION */
+        .links-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .links-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--accent-cyan);
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            transform: translateX(4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+        <div class="badge-container">
+            <span class="badge badge-cyan">🧬 Neuro-Symbolic AI</span>
+            <span class="badge badge-purple">📦 Holon Architecture</span>
+            <span class="badge badge-gold">⚡ Stack DFRNT / A&AD</span>
+            <span class="badge"><strong>Fecha:</strong> 28 de Julio de 2026</span>
+        </div>
+        <h1>Disección Metodológica: Kurt Cagle & Subramaniyam Pooni</h1>
+        <p>Extracción sistemática de los componentes de arquitectura neuro-simbólica, grafos de conocimiento y holones semipermeables que contribuyen directamente al <strong>Stack Tecnológico de DFRNT / A&AD</strong>.</p>
+    </header>
+
+    <!-- CAGLE 7 RECIPE SECTION -->
+    <div class="section-header">
+        <h2>La Receta de 7 Elementos de Kurt Cagle para la Capa Semántica</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="recipe-grid">
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 01</div>
+            <h3>Closed Systems (#holons)</h3>
+            <p>Sistemas semipermeables donde los datos internos se ocultan y el acceso se gestiona estrictamente mediante métodos de entrada/salida (Holones).</p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 02</div>
+            <h3>Interface Layer</h3>
+            <p>Uso de <code>#named_queries</code>, <code>#named_constraints</code> y <code>#named_updates</code> como la capa de interfaz declarativa alrededor del grafo.</p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 03</div>
+            <h3>Holding Pens (#named_graphs)</h3>
+            <p>Grafos nombrados que funcionan como corrales o contenedores temporales para productos y estados intermedios de procesamiento.</p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 04</div>
+            <h3>Fluent Variables</h3>
+            <p>Propiedades dinámicas de una entidad ligadas y amarradas directamente a un libro de eventos (<em>Event Ledger</em>).</p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 05</div>
+            <h3>Observables</h3>
+            <p>Funciones que calculan derivadas a partir de variables constantes y fluentes, poblando libros fluentes de manera determinista.</p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 06</div>
+            <h3>Compaction & Archiving</h3>
+            <p>Abstracción y compactación de holones activos en holones inviolables e inmutables que persisten como histórico de auditoría.</p>
+        </div>
+
+        <div class="recipe-card">
+            <div class="recipe-num">STEP 07</div>
+            <h3>Projection Layer</h3>
+            <p>Capa de proyección para describir el mapa de estado del holón a otros sistemas sin exponer los diarios transaccionales internos.</p>
+        </div>
+    </div>
+
+    <!-- MAPPING TABLE TO USER'S STACK -->
+    <div class="section-header">
+        <h2>Mapeo Directo y Contribución al Stack DFRNT / A&AD</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Concepto Cagle / Pooni</th>
+                    <th>Mapeo en el Stack DFRNT / A&AD</th>
+                    <th>Impacto y Valor Agregado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Holón Semipermeable</strong></td>
+                    <td class="highlight-td">El Contrato / Entidad como Holón (el_contrato_como_holon.md)</td>
+                    <td>Encapsulamiento contable con fronteras cerradas (<em>fenced boundary</em>).</td>
+                </tr>
+                <tr>
+                    <td><strong>Variables Fluentes & Event Ledger</strong></td>
+                    <td class="highlight-td">XBRL GL + Economic Event Journal (UBL ➔ REA)</td>
+                    <td>Propiedades dinámicas amarradas a libros de eventos inmutables.</td>
+                </tr>
+                <tr>
+                    <td><strong>Observables & Named Constraints</strong></td>
+                    <td class="highlight-td">Reglas SHACL + Reglas de Imputación (Accounting Manifold)</td>
+                    <td>Cálculo determinista de agregados (<em>Activo = Pasivo + Patrimonio</em>) sin alucinaciones.</td>
+                </tr>
+                <tr>
+                    <td><strong>Abstracción & Compactación</strong></td>
+                    <td class="highlight-td">Cierre Contable e Histórico Inviolable (Fail Loudly)</td>
+                    <td>Sellado inmutable de transacciones activas en registros auditables.</td>
+                </tr>
+                <tr>
+                    <td><strong>Capa de Proyección</strong></td>
+                    <td class="highlight-td">SBRM Concept Arrangement Patterns (CAP)</td>
+                    <td>Exposición de mapas de estado financiero sin revelar transacciones crudas.</td>
+                </tr>
+                <tr>
+                    <td><strong>Habilitador MCP (Model Context Protocol)</strong></td>
+                    <td class="highlight-td">DFRNT MCP Agentic Bridge</td>
+                    <td>Interconexión estandarizada entre LLMs y el Grafo Simbólico.</td>
+                </tr>
+                <tr>
+                    <td><strong>Verificación Continua (S. Pooni)</strong></td>
+                    <td class="highlight-td">Sustrato de Auditoría Determinista (PoC Alemania)</td>
+                    <td>Validación pre y post ejecución de invariantes contables.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- DUAL ARCHITECTURE: LLM VS SYMBOLIC -->
+    <div class="section-header">
+        <h2>Arquitectura Neuro-Simbólica: División de Funciones (Subramaniyam Pooni)</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="dual-grid">
+        <div class="dual-card dual-card-purple">
+            <h3 style="color: #c084fc;">🧠 Capa Estadística (LLMs / Agentes)</h3>
+            <ul>
+                <li>Captura de la intención del operador en lenguaje natural.</li>
+                <li>Interpretación y descomposición de requerimientos.</li>
+                <li>Reconocimiento de patrones y generación de hipótesis.</li>
+                <li>Propuesta de configuraciones o transacciones.</li>
+                <li>Construcción de planes de remediación.</li>
+            </ul>
+        </div>
+
+        <div class="dual-card dual-card-cyan">
+            <h3 style="color: #7dd3fc;">⚖️ Capa Simbólica (DFRNT Knowledge Graph / SHACL)</h3>
+            <ul>
+                <li>Representación estricta de hechos y relaciones.</li>
+                <li>Imposición determinista de restricciones contables.</li>
+                <li>Preservación de la proveniencia y cadena de custodia.</li>
+                <li>Verificación de invariantes antes y después de ejecutar.</li>
+                <li>Respuestas deterministas a consultas estructuradas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LINKS SECTION -->
+    <section class="links-card">
+        <h3>🔗 Archivos y Recursos de esta Análisis</h3>
+        <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Kurt%20Cagle/Lkdn_2026-07-28/Post.txt" class="link-item" target="_blank">
+            📄 <strong>Post.txt</strong> — Publicación original de Kurt Cagle en LinkedIn
+        </a>
+        <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Kurt%20Cagle/Lkdn_2026-07-28/Neuro-Symbolic%20AI%20May%20Finally%20Deliver%20the%20Promise%20of%20Autonomous%20Networking%20_%20LinkedIn.pdf" class="link-item" target="_blank">
+            📑 <strong>Neuro-Symbolic AI Article.pdf</strong> — Artículo completo de Subramaniyam Pooni
+        </a>
+        <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Kurt%20Cagle/Lkdn_2026-07-28/diseccion_cagle_neuro_symbolic.md" class="link-item" target="_blank">
+            📝 <strong>diseccion_cagle_neuro_symbolic.md</strong> — Resumen ejecutivo en Markdown
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Documentación del Proyecto DFRNT • Accounting & Audit by Design (A&AD) Framework • 2026</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

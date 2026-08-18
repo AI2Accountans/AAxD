@@ -1,0 +1,109 @@
+Richard;
+
+This is where I have gotten to thus far on my minimal ideal system:
+
+https://digitalfinancialreporting.blogspot.com/2026/08/brainstorming-ideal-minimally-viable.html
+
+The objective as I see it is to get all the details on my blog post correct and your prototype implementation fully working.
+
+What thoughts do you have thus far?
+
+I can do 100% of this prototype in XBRL.  I cannot make the prototype actually work because I am not a good enough programmer; but it could work.  The primary point here is to reduce all the complexity that can be reduced and still be able to create a MINIMAL financial statement from source documentation.
+
+Complexity can be added back incrementally.
+
+Cheers,
+
+Charlie
+
+
+ Brainstorming Ideal Minimally Viable Accounting Information System
+August 11, 2026
+
+The purpose of this blog post is to brainstorm the ideal minimally viable accounting information system which will eventually be reconciled to reality.  But initially we (a) minimize complexity and (b) using an approach of idealized design.  The system being constructed is an accounting information system.
+
+Fundamentally, the system works as follows:
+
+    A reporting framework is specified.  It may seem odd to start with a reporting framework.  However, as The 7 Habits of Highly Effective People points out, "Begin with the end in mind."  The reporting framework must be complied with; that is one fundamental purpose of the system; compliance with regulation. This specifies the reporting requirements.
+    A source documentation containing information is received which is effectively a business contract.
+    The source documentation receipt spawns a business event. That business event is entered into an immutable ledger.
+    The business event spawns a financial transaction. That financial transaction is entered into an immutable ledger.
+    Information about the business events and the financial transactions those events have spawned is aggregated per the reporting framework and provided to a regulator who has specified that reporting framework in the form of a financial statement.  A financial statement is created which aggregates information about the "state" and "changes in state" as prescribed per the reporting framework into a set of interrelated primary financial statements which articulate that state (e.g. balance sheet) and changes in state (e.g. income statement, cash flow statement, statement of changes in equity).
+    Additional information is provided which details and amplifies the primary financial statements in the form of additional quantitative and qualitative disclosures required by the reporting framework.
+
+There are byproducts of the system.  The system provides somewhat of a "skeleton" or set of "keystones" which can be expanded/enhanced in order to provide additional information related to managing the enterprise regulated per some reporting framework.
+Reporting Framework
+My MINI reporting framework provides a complete and comprehensive reporting framework (e.g. correct) in both human interpretable and machine interpretable form. The human interpretable form can be generated entirely from the machine interpretable form which is compliant to the Seattle Method of creating a reporting framework which prescribes what "complete" and "comprehensive" and "correct" mean.
+
+
+1.jpg
+
+Note that business events (a.k.a. the changes in state of an enterprise) are explicitly defined within a reporting framework (prototype). This matrix below and this model helps one understand information related to business events. This draft related to Data Centric Accounting also helps one understand business events.  REA (Resources, Events, Agents) also helps one understand business events.
+
+2.jpg
+
+
+Source Documentation
+Traditionally, source documentation information was provided in the form of a document. An alternative approach is that source documentation information can be provided in the form of a machine interpretable graph of information from which a projection can be created which also generates a human interpretable way for a human to interact with that same graph based information (e.g. not a copy of the information, literally the same machine interpretable graph; see the notion of the digital information organism). For more information see the Theory of Documentation.
+
+The minimum information required for source documentation includes the following: (prototype)
+
+    Identifier in the form of a Merkle hash which shows the document has not been tampered with.
+    Date and time the source documentation was received
+    Date and  time of the business event occurred which is being documented by the source documentation
+    Type of source documentation (e.g. invoice, order, memorandum, contract, or other defined type)
+    Information payload provided by the source documentation structured graph (e.g. format is specified by the  type of source documentation)
+
+A list of all source documents is maintained within an immutable ledger maintained by the enterprise (prototype).
+
+Universal Business Language (UBL) which is an ISO/IEC standard is used to define source documentation types and their payloads.
+Business Event
+Source documentation can spawn one or many business events.  Every business event is entered into a business event journal (prototype).  Traditionally, a business events journal/ledger has not been maintained by an enterprise. But under this new paradigm, the business event journal will be the ultimate version of truth.
+
+The spawning of a business event can be a completely automated workflow, a monitored workflow, or a workflow which a human must approve the creation of a business event.  There is a mechanism for canceling a business event but business events are never deleted (e.g. they are recorded into an immutable journal).  A business event ledger which is a manifold can be automatically generated from a business event journal.  Financial transactions are a projection of the business events information.
+
+The minimum information required for a business event includes the following information: (prototype1 | prototype2)
+
+    Event type
+    Event UUID (universal unique identifier)
+    Event occurrence date and type (e.g. event actually occurred)
+    Event minted date and type (e.g. event is entered into the system)
+    Entity identifier of enterprise
+    Event source link (e.g. navigable link to source documentation of event)
+    Event standard reporting framework change line item
+    Event core facet type
+    Event party
+    Event counterparty
+    Event resource type
+    Event right or obligation
+    Event local comment literal
+    Event fact amount
+
+Financial Transaction
+The financial transaction of every business event is automatically spawned from and is a projection of the business event information. At a minimum a financial transaction would flow through the general journal to the general ledger. (Meaning, this system contemplates expanding the complexity to include subsidiary ledgers.)
+
+The minimum information required for a financial transaction includes the following information: (prototype1 | protytype2)
+
+    Economic entity identifier (required by XBRL to uniquely identify reporting economic entity)
+    Entry date (required by XBRL to identify the reporting period or point)
+    Entry standard reporting framework state line item or change line item (required by XBRL to identify report line item concept)
+    Entry standard reporting framework change line item (required by XBRL to identify report change line item concept)
+    Entry fact amount (required by XBRL)
+    Entry fact amount currency type (required by XBRL to identify reporting currency units)
+    Entry local literal description (human readable description, optional)
+    Entry event UUID link (foreign key which enables backward link from entry to business event)
+
+The general ledger and general ledger trial balance are a projection of the financial transactions.
+Financial Statement
+The financial statement (meaning the primary financial statements) is a projection of the reporting framework and the set of financial transactions from the general ledger trial balance projection.  A lead schedule which reconciles a chart of accounts to a financial statement is not necessary because a chart of accounts, in this minimally viable system, is not used because the actual concept of the reporting framework is used to categorize financial transactions.
+
+The minimum information required to generate a complete set of primary financial statements is shown in this prototype: (full set of files | human readable report rendering | verification/validation) 
+
+3.jpg
+
+
+A full general purpose financial statement is more than the primary financial statements.  While some of the rest of the full financial statement (e.g. policies, disclosure notes) can be automated, other components of the full report must be manually created.
+
+* * * 
+
+Again, keep in mind that this exercise is not about ignoring complexity or reality. Quite the contrary is true.  This exercise is about understanding precisely what complexity is unavoidable, what is self inflicted or accidental, and otherwise understanding complexity better.

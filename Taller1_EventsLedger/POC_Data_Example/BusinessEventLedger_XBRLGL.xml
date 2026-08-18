@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:gl-bus="http://www.xbrl.org/int/gl/bus/2015-03-25" xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25" xmlns:gl-gen="http://www.xbrl.org/int/gl/gen/2015-03-25" xmlns:gl-muc="http://www.xbrl.org/int/gl/muc/2015-03-25" xmlns:gl-plt="http://www.xbrl.org/int/gl/plt/2015-03-25" xmlns:gl-srcd="http://www.xbrl.org/int/gl/srcd/2015-03-25" xmlns:gl-taf="http://www.xbrl.org/int/gl/taf/2015-03-25" xmlns:gl-usk="http://www.xbrl.org/int/gl/usk/2015-03-25" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef xlink:type="simple" xlink:href="http://www.xbrl.org/taxonomy/int/gl/2015-03-25/plt/case-c-b-m-u-t-s/gl-plt-all-2015-03-25.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="https://example.gov/id#30810137d58f76b84afd">Example</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2024-01-01T10:00:09Z</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:entityInformation>
+			<gl-bus:organizationIdentifiers>
+				<gl-bus:organizationIdentifier contextRef="ctx1">https://example.gov/id#30810137d58f76b84afd</gl-bus:organizationIdentifier>
+				<gl-bus:organizationDescription contextRef="ctx1">https://example.gov/id#30810137d58f76b84afd</gl-bus:organizationDescription>
+			</gl-bus:organizationIdentifiers>
+		</gl-cor:entityInformation>
+		<gl-cor:entryHeader>
+			<gl-cor:entryNumber contextRef="ctx1">JE-201</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx1">Ties to ledger of paid in capital</gl-cor:entryComment>
+			<gl-cor:qualifierEntry contextRef="ctx1">dca:Medium</gl-cor:qualifierEntry>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx1">000-3100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx1">mini:PaidInCapital</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx1" unitRef="iso4217:USD" decimals="2 2">10000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx1">C</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx1">2024-01-01T10:00:09Z</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierCode contextRef="ctx1">dca:Owner</gl-cor:identifierCode>
+					<gl-cor:identifierDescription contextRef="ctx1">John Doe</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentType contextRef="ctx1">mini:InvestmentsByOwner</gl-cor:documentType>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx1">mini:PaidInCapital</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:detailComment contextRef="ctx1">Ties to ledger of paid in capital</gl-cor:detailComment>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx1">000-3100-00</gl-bus:measurableCode>
+					<gl-bus:measurableID contextRef="ctx1">3f8c2a41-9b77-4e3e-8c1d-2f6a9d4c12e8</gl-bus:measurableID>
+					<gl-bus:measurableDescription contextRef="ctx1">Investment by owner to open a lemonade stand.</gl-bus:measurableDescription>
+					<gl-bus:measurableQuantity contextRef="ctx1">10000</gl-bus:measurableQuantity>
+					<gl-bus:measurableUnitOfMeasure contextRef="ctx1">iso4217:USD</gl-bus:measurableUnitOfMeasure>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:context id="ctx2">
+		<xbrli:entity>
+			<xbrli:identifier scheme="https://example.gov/id#30810137d58f76b84afd">Example</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2024-01-01T23:59:59Z</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<gl-cor:accountingEntries>
+		<gl-cor:entityInformation>
+			<gl-bus:organizationIdentifiers>
+				<gl-bus:organizationIdentifier contextRef="ctx2">https://example.gov/id#30810137d58f76b84afd</gl-bus:organizationIdentifier>
+				<gl-bus:organizationDescription contextRef="ctx2">https://example.gov/id#30810137d58f76b84afd</gl-bus:organizationDescription>
+			</gl-bus:organizationIdentifiers>
+		</gl-cor:entityInformation>
+		<gl-cor:entryHeader>
+			<gl-cor:entryNumber contextRef="ctx2">JE-201</gl-cor:entryNumber>
+			<gl-cor:entryComment contextRef="ctx2">Ties to spreadsheet of owner equity.</gl-cor:entryComment>
+			<gl-cor:qualifierEntry contextRef="ctx2">dca:Medium</gl-cor:qualifierEntry>
+			<gl-cor:entryDetail>
+				<gl-cor:account>
+					<gl-cor:accountMainID contextRef="ctx2">000-1100-00</gl-cor:accountMainID>
+					<gl-cor:accountMainDescription contextRef="ctx2">mini:CashAndCashEquivalents</gl-cor:accountMainDescription>
+				</gl-cor:account>
+				<gl-cor:amount contextRef="ctx2" unitRef="iso4217:USD" decimals="2 2">10000</gl-cor:amount>
+				<gl-cor:debitCreditCode contextRef="ctx2">D</gl-cor:debitCreditCode>
+				<gl-cor:postingDate contextRef="ctx2">2024-01-01T23:59:59Z</gl-cor:postingDate>
+				<gl-cor:identifierReference>
+					<gl-cor:identifierCode contextRef="ctx2">dca:Owner</gl-cor:identifierCode>
+					<gl-cor:identifierDescription contextRef="ctx2">John Doe</gl-cor:identifierDescription>
+				</gl-cor:identifierReference>
+				<gl-cor:documentType contextRef="ctx2">mini:ProceedsFromInvestmentsByOwner</gl-cor:documentType>
+				<gl-cor:xbrlInfo>
+					<gl-srcd:detailedContentFilter contextRef="ctx2">mini:CashAndCashEquivalents</gl-srcd:detailedContentFilter>
+				</gl-cor:xbrlInfo>
+				<gl-cor:detailComment contextRef="ctx2">Ties to spreadsheet of owner equity.</gl-cor:detailComment>
+				<gl-bus:measurable>
+					<gl-bus:measurableCode contextRef="ctx2">000-1100-00</gl-bus:measurableCode>
+					<gl-bus:measurableID contextRef="ctx2">f0c3b9e2-7d11-46a8-9f0a-52c4e9d8b7aa</gl-bus:measurableID>
+					<gl-bus:measurableDescription contextRef="ctx2">Investment by owner to open a lemonade stand.</gl-bus:measurableDescription>
+					<gl-bus:measurableQuantity contextRef="ctx2">10000</gl-bus:measurableQuantity>
+					<gl-bus:measurableUnitOfMeasure contextRef="ctx2">iso4217:USD</gl-bus:measurableUnitOfMeasure>
+				</gl-bus:measurable>
+			</gl-cor:entryDetail>
+		</gl-cor:entryHeader>
+	</gl-cor:accountingEntries>
+	<xbrli:unit>
+		<xbrli:divide/>
+	</xbrli:unit>
+</xbrli:xbrl>

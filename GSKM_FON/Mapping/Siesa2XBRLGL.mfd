@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2024 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="16" kind="2">
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="203" lty="547" rbx="253" rby="564"/>
+					<data>
+						<constant value="D" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="17" kind="2">
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="108" lty="488" rbx="148" rby="505"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="35" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="325" lty="545" rbx="371" rby="562"/>
+					<data>
+						<constant value="-" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="20" kind="2">
+					<targets>
+						<datapoint pos="0" key="34"/>
+					</targets>
+					<view ltx="218" lty="643" rbx="267" rby="660"/>
+					<data>
+						<constant value="C" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="73" kind="2">
+					<targets>
+						<datapoint pos="0" key="147"/>
+					</targets>
+					<view ltx="203" lty="764" rbx="253" rby="781"/>
+					<data>
+						<constant value="D" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="74" kind="2">
+					<targets>
+						<datapoint pos="0" key="141"/>
+					</targets>
+					<view ltx="108" lty="705" rbx="148" rby="722"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="75" kind="2">
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="325" lty="762" rbx="371" rby="779"/>
+					<data>
+						<constant value="-" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="76" kind="2">
+					<targets>
+						<datapoint pos="0" key="139"/>
+					</targets>
+					<view ltx="218" lty="860" rbx="267" rby="877"/>
+					<data>
+						<constant value="C" datatype="string"/>
+					</data>
+				</component>
+				<component name="equal-or-less" library="core" uid="19" kind="5">
+					<sources>
+						<datapoint pos="0" key="31"/>
+						<datapoint pos="1" key="32"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="33"/>
+					</targets>
+					<view ltx="173" lty="576" rbx="267" rby="630"/>
+				</component>
+				<component name="greater" library="core" uid="13" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="203" lty="474" rbx="267" rby="528"/>
+				</component>
+				<component name="constant" library="core" uid="103" kind="2">
+					<targets>
+						<datapoint pos="0" key="213"/>
+					</targets>
+					<view ltx="-1225" lty="681" rbx="-1183" rby="698"/>
+					<data>
+						<constant datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="114" kind="2">
+					<targets>
+						<datapoint pos="0" key="254"/>
+					</targets>
+					<view ltx="-1108" lty="503" rbx="-1058" rby="520"/>
+					<data>
+						<constant value="+" datatype="string"/>
+					</data>
+				</component>
+				<component name="translate" library="core" uid="130" kind="5">
+					<sources>
+						<datapoint pos="0" key="289"/>
+						<datapoint pos="1" key="290"/>
+						<datapoint pos="2" key="291"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="288"/>
+					</targets>
+					<view ltx="-849" lty="672" rbx="-764" rby="742"/>
+				</component>
+				<component name="translate" library="core" uid="129" kind="5">
+					<sources>
+						<datapoint pos="0" key="285"/>
+						<datapoint pos="1" key="286"/>
+						<datapoint pos="2" key="287"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="284"/>
+					</targets>
+					<view ltx="-849" lty="741" rbx="-764" rby="811"/>
+				</component>
+				<component name="translate" library="core" uid="116" kind="5">
+					<sources>
+						<datapoint pos="0" key="255"/>
+						<datapoint pos="1" key="256"/>
+						<datapoint pos="2" key="257"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="258"/>
+					</targets>
+					<view ltx="-849" lty="815" rbx="-764" rby="885"/>
+				</component>
+				<component name="translate" library="core" uid="124" kind="5">
+					<sources>
+						<datapoint pos="0" key="265"/>
+						<datapoint pos="1" key="266"/>
+						<datapoint pos="2" key="267"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="264"/>
+					</targets>
+					<view ltx="-849" lty="887" rbx="-764" rby="957"/>
+				</component>
+				<component name="translate" library="core" uid="125" kind="5">
+					<sources>
+						<datapoint pos="0" key="269"/>
+						<datapoint pos="1" key="270"/>
+						<datapoint pos="2" key="271"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="268"/>
+					</targets>
+					<view ltx="-849" lty="956" rbx="-764" rby="1026"/>
+				</component>
+				<component name="translate" library="core" uid="126" kind="5">
+					<sources>
+						<datapoint pos="0" key="273"/>
+						<datapoint pos="1" key="274"/>
+						<datapoint pos="2" key="275"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="272"/>
+					</targets>
+					<view ltx="-849" lty="1025" rbx="-764" rby="1095"/>
+				</component>
+				<component name="translate" library="core" uid="127" kind="5">
+					<sources>
+						<datapoint pos="0" key="277"/>
+						<datapoint pos="1" key="278"/>
+						<datapoint pos="2" key="279"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="276"/>
+					</targets>
+					<view ltx="-849" lty="1094" rbx="-764" rby="1164"/>
+				</component>
+				<component name="translate" library="core" uid="128" kind="5">
+					<sources>
+						<datapoint pos="0" key="281"/>
+						<datapoint pos="1" key="282"/>
+						<datapoint pos="2" key="283"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="280"/>
+					</targets>
+					<view ltx="-849" lty="1163" rbx="-764" rby="1233"/>
+				</component>
+				<component name="concat" library="core" uid="141" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="328"/>
+						<datapoint pos="1" key="330"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="329"/>
+					</targets>
+					<view ltx="-695" lty="1163" rbx="-613" rby="1219"/>
+				</component>
+				<component name="concat" library="core" uid="140" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="325"/>
+						<datapoint pos="1" key="327"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="326"/>
+					</targets>
+					<view ltx="-695" lty="1094" rbx="-613" rby="1150"/>
+				</component>
+				<component name="concat" library="core" uid="139" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="322"/>
+						<datapoint pos="1" key="324"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="323"/>
+					</targets>
+					<view ltx="-695" lty="1025" rbx="-613" rby="1081"/>
+				</component>
+				<component name="concat" library="core" uid="138" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="319"/>
+						<datapoint pos="1" key="321"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="320"/>
+					</targets>
+					<view ltx="-695" lty="956" rbx="-613" rby="1012"/>
+				</component>
+				<component name="concat" library="core" uid="137" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="316"/>
+						<datapoint pos="1" key="318"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="317"/>
+					</targets>
+					<view ltx="-695" lty="888" rbx="-613" rby="944"/>
+				</component>
+				<component name="concat" library="core" uid="135" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="310"/>
+						<datapoint pos="1" key="312"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="311"/>
+					</targets>
+					<view ltx="-695" lty="741" rbx="-613" rby="797"/>
+				</component>
+				<component name="concat" library="core" uid="134" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="307"/>
+						<datapoint pos="1" key="309"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="308"/>
+					</targets>
+					<view ltx="-695" lty="672" rbx="-613" rby="728"/>
+				</component>
+				<component name="concat" library="core" uid="136" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="313"/>
+						<datapoint pos="1" key="315"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="314"/>
+					</targets>
+					<view ltx="-695" lty="813" rbx="-613" rby="869"/>
+				</component>
+				<component name="if-else" library="core" uid="15" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="3"/>
+						<datapoint pos="1" key="9"/>
+						<datapoint pos="2" key="6"/>
+						<datapoint pos="3" key="7"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="322" lty="474" rbx="429" rby="581"/>
+				</component>
+				<component name="replace" library="lang" uid="65" kind="5">
+					<sources>
+						<datapoint pos="0" key="107"/>
+						<datapoint pos="1" key="108"/>
+						<datapoint pos="2" key="124"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="125"/>
+					</targets>
+					<view ltx="-164" lty="230" rbx="-63" rby="300"/>
+				</component>
+				<component name="replace" library="lang" uid="101" kind="5">
+					<sources>
+						<datapoint pos="0" key="208"/>
+						<datapoint pos="1" key="209"/>
+						<datapoint pos="2" key="210"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="211"/>
+					</targets>
+					<view ltx="-1031" lty="685" rbx="-930" rby="755"/>
+				</component>
+				<component name="replace" library="lang" uid="106" kind="5">
+					<sources>
+						<datapoint pos="0" key="225"/>
+						<datapoint pos="1" key="223"/>
+						<datapoint pos="2" key="224"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="222"/>
+					</targets>
+					<view ltx="-1031" lty="755" rbx="-930" rby="825"/>
+				</component>
+				<component name="replace" library="lang" uid="107" kind="5">
+					<sources>
+						<datapoint pos="0" key="229"/>
+						<datapoint pos="1" key="227"/>
+						<datapoint pos="2" key="228"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="226"/>
+					</targets>
+					<view ltx="-1031" lty="824" rbx="-930" rby="894"/>
+				</component>
+				<component name="replace" library="lang" uid="108" kind="5">
+					<sources>
+						<datapoint pos="0" key="233"/>
+						<datapoint pos="1" key="231"/>
+						<datapoint pos="2" key="232"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="230"/>
+					</targets>
+					<view ltx="-1031" lty="900" rbx="-930" rby="970"/>
+				</component>
+				<component name="replace" library="lang" uid="109" kind="5">
+					<sources>
+						<datapoint pos="0" key="237"/>
+						<datapoint pos="1" key="235"/>
+						<datapoint pos="2" key="236"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="234"/>
+					</targets>
+					<view ltx="-1031" lty="969" rbx="-930" rby="1039"/>
+				</component>
+				<component name="replace" library="lang" uid="110" kind="5">
+					<sources>
+						<datapoint pos="0" key="241"/>
+						<datapoint pos="1" key="239"/>
+						<datapoint pos="2" key="240"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="238"/>
+					</targets>
+					<view ltx="-1031" lty="1038" rbx="-930" rby="1108"/>
+				</component>
+				<component name="replace" library="lang" uid="111" kind="5">
+					<sources>
+						<datapoint pos="0" key="245"/>
+						<datapoint pos="1" key="243"/>
+						<datapoint pos="2" key="244"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="242"/>
+					</targets>
+					<view ltx="-1031" lty="1107" rbx="-930" rby="1177"/>
+				</component>
+				<component name="replace" library="lang" uid="112" kind="5">
+					<sources>
+						<datapoint pos="0" key="249"/>
+						<datapoint pos="1" key="247"/>
+						<datapoint pos="2" key="248"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="246"/>
+					</targets>
+					<view ltx="-1031" lty="1176" rbx="-930" rby="1246"/>
+				</component>
+				<component name="constant" library="core" uid="123" kind="2">
+					<targets>
+						<datapoint pos="0" key="303"/>
+					</targets>
+					<view ltx="-757" lty="442" rbx="-694" rby="459"/>
+					<data>
+						<constant value="gsk:" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="82" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="144"/>
+						<datapoint pos="1" key="148"/>
+						<datapoint pos="2" key="146"/>
+						<datapoint pos="3" key="140"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="154"/>
+					</targets>
+					<view ltx="322" lty="721" rbx="429" rby="828"/>
+				</component>
+				<component name="constant" library="core" uid="66" kind="2">
+					<targets>
+						<datapoint pos="0" key="109"/>
+					</targets>
+					<view ltx="-310" lty="383" rbx="-262" rby="400"/>
+					<data>
+						<constant value="$" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="71" kind="2">
+					<targets>
+						<datapoint pos="0" key="118"/>
+					</targets>
+					<view ltx="-301" lty="491" rbx="-259" rby="508"/>
+					<data>
+						<constant datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="68" kind="2">
+					<targets>
+						<datapoint pos="0" key="114"/>
+					</targets>
+					<view ltx="-304" lty="442" rbx="-259" rby="459"/>
+					<data>
+						<constant value="," datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="70" kind="2">
+					<targets>
+						<datapoint pos="0" key="117"/>
+					</targets>
+					<view ltx="-304" lty="541" rbx="-259" rby="558"/>
+					<data>
+						<constant value="." datatype="string"/>
+					</data>
+				</component>
+				<component name="equal-or-less" library="core" uid="84" kind="5">
+					<sources>
+						<datapoint pos="0" key="131"/>
+						<datapoint pos="1" key="142"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="145"/>
+					</targets>
+					<view ltx="186" lty="807" rbx="280" rby="861"/>
+				</component>
+				<component name="constant" library="core" uid="117" kind="2">
+					<targets>
+						<datapoint pos="0" key="259"/>
+					</targets>
+					<view ltx="-901" lty="442" rbx="-782" rby="459"/>
+					<data>
+						<constant value="áéíóúÁÉÍÓÚñÑ" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="118" kind="2">
+					<targets>
+						<datapoint pos="0" key="260"/>
+					</targets>
+					<view ltx="-901" lty="474" rbx="-782" rby="491"/>
+					<data>
+						<constant value="aeiouAEIOUnN" datatype="string"/>
+					</data>
+				</component>
+				<component name="xbrl-measure-currency" library="xbrl" uid="47" kind="5">
+					<sources>
+						<datapoint pos="0" key="73"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="72"/>
+					</targets>
+					<view ltx="254" lty="1017" rbx="394" rby="1055"/>
+				</component>
+				<component name="constant" library="core" uid="102" kind="2">
+					<targets>
+						<datapoint pos="0" key="212"/>
+					</targets>
+					<view ltx="-1228" lty="637" rbx="-1183" rby="654"/>
+					<data>
+						<constant value=" " datatype="string"/>
+					</data>
+				</component>
+				<component name="replace" library="lang" uid="83" kind="5">
+					<sources>
+						<datapoint pos="0" key="135"/>
+						<datapoint pos="1" key="136"/>
+						<datapoint pos="2" key="157"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="137"/>
+					</targets>
+					<view ltx="-118" lty="421" rbx="-17" rby="491"/>
+				</component>
+				<component name="greater" library="core" uid="78" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="128"/>
+						<datapoint pos="1" key="149"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="143"/>
+					</targets>
+					<view ltx="203" lty="691" rbx="267" rby="745"/>
+				</component>
+				<component name="replace" library="lang" uid="77" kind="5">
+					<sources>
+						<datapoint pos="0" key="138"/>
+						<datapoint pos="1" key="129"/>
+						<datapoint pos="2" key="156"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="132"/>
+					</targets>
+					<view ltx="-46" lty="526" rbx="55" rby="596"/>
+				</component>
+				<component name="replace" library="lang" uid="67" kind="5">
+					<sources>
+						<datapoint pos="0" key="110"/>
+						<datapoint pos="1" key="111"/>
+						<datapoint pos="2" key="115"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="116"/>
+					</targets>
+					<view ltx="-24" lty="230" rbx="77" rby="300"/>
+				</component>
+				<component name="constant" library="core" uid="1654" kind="2">
+					<targets>
+						<datapoint pos="0" key="4365"/>
+					</targets>
+					<view ltx="155" lty="40" rbx="253" rby="57"/>
+					<data>
+						<constant value="2025-12-31" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="133" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="304"/>
+						<datapoint pos="1" key="306"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="305"/>
+					</targets>
+					<view ltx="-695" lty="598" rbx="-613" rby="654"/>
+				</component>
+				<component name="translate" library="core" uid="131" kind="5">
+					<sources>
+						<datapoint pos="0" key="293"/>
+						<datapoint pos="1" key="294"/>
+						<datapoint pos="2" key="295"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="292"/>
+					</targets>
+					<view ltx="-849" lty="603" rbx="-764" rby="673"/>
+				</component>
+				<component name="replace" library="lang" uid="105" kind="5">
+					<sources>
+						<datapoint pos="0" key="221"/>
+						<datapoint pos="1" key="219"/>
+						<datapoint pos="2" key="220"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="218"/>
+					</targets>
+					<view ltx="-1031" lty="616" rbx="-930" rby="686"/>
+				</component>
+				<component name="replace" library="lang" uid="104" kind="5">
+					<sources>
+						<datapoint pos="0" key="217"/>
+						<datapoint pos="1" key="215"/>
+						<datapoint pos="2" key="216"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="214"/>
+					</targets>
+					<view ltx="-1159" lty="541" rbx="-1058" rby="611"/>
+				</component>
+				<component name="replace" library="lang" uid="113" kind="5">
+					<sources>
+						<datapoint pos="0" key="250"/>
+						<datapoint pos="1" key="251"/>
+						<datapoint pos="2" key="253"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="252"/>
+					</targets>
+					<view ltx="-1031" lty="541" rbx="-930" rby="611"/>
+				</component>
+				<component name="translate" library="core" uid="132" kind="5">
+					<sources>
+						<datapoint pos="0" key="297"/>
+						<datapoint pos="1" key="298"/>
+						<datapoint pos="2" key="299"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="296"/>
+					</targets>
+					<view ltx="-849" lty="526" rbx="-764" rby="596"/>
+				</component>
+				<component name="concat" library="core" uid="122" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="300"/>
+						<datapoint pos="1" key="301"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="302"/>
+					</targets>
+					<view ltx="-695" lty="525" rbx="-613" rby="581"/>
+				</component>
+				<component name="constant" library="core" uid="1655" kind="2">
+					<targets>
+						<datapoint pos="0" key="4366"/>
+					</targets>
+					<view ltx="218" lty="-18" rbx="379" rby="-1"/>
+					<data>
+						<constant value="Corredores Davivienda" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1656" kind="2">
+					<targets>
+						<datapoint pos="0" key="4367"/>
+					</targets>
+					<view ltx="218" lty="9" rbx="381" rby="26"/>
+					<data>
+						<constant value="https://www.corredores.com" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="49" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="71"/>
+					</targets>
+					<view ltx="254" lty="1144" rbx="318" rby="1161"/>
+					<data>
+						<constant value="COP" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="50" kind="2">
+					<targets>
+						<datapoint pos="0" key="78"/>
+					</targets>
+					<view ltx="380" lty="173" rbx="420" rby="190"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1665" kind="2">
+					<targets>
+						<datapoint pos="0" key="4445"/>
+					</targets>
+					<view ltx="879" lty="66" rbx="1035" rby="83"/>
+					<data>
+						<constant value="Balance de Prueba - Siesa" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1666" kind="2">
+					<targets>
+						<datapoint pos="0" key="4446"/>
+					</targets>
+					<view ltx="866" lty="97" rbx="1035" rby="114"/>
+					<data>
+						<constant value="SourceDocument/Siesa_TrialBalance" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1667" kind="2">
+					<targets>
+						<datapoint pos="0" key="4448"/>
+					</targets>
+					<view ltx="933" lty="127" rbx="1035" rby="144"/>
+					<data>
+						<constant value="trialbalance" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120" kind="2">
+					<targets>
+						<datapoint pos="0" key="263"/>
+					</targets>
+					<view ltx="254" lty="303" rbx="356" rby="320"/>
+					<data>
+						<constant value="trialbalance" datatype="string"/>
+					</data>
+				</component>
+				<component name="Data_Enriquecida" library="text" uid="1653" kind="16">
+					<properties/>
+					<view ltx="-2086" lty="497" rbx="-1854" rby="853"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="4345" expanded="1">
+										<entry name="Compañia" outkey="4346"/>
+										<entry name="Desc, compañia" outkey="4347"/>
+										<entry name="Auxiliar" outkey="4348"/>
+										<entry name="Desc, auxiliar" outkey="4349"/>
+										<entry name="Saldo inicial" outkey="4350"/>
+										<entry name="Saldo final" outkey="4351"/>
+										<entry name="Tag 1" outkey="4352"/>
+										<entry name="Tag 2" outkey="4353"/>
+										<entry name="Tag 3" outkey="4354"/>
+										<entry name="Tag 4" outkey="4355"/>
+										<entry name="Tag 5" outkey="4356"/>
+										<entry name="Tag 6" outkey="4357"/>
+										<entry name="Tag 7" outkey="4358"/>
+										<entry name="Tag 8" outkey="4359"/>
+										<entry name="Tag 9" outkey="4360"/>
+										<entry name="Tag 10" outkey="4361"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\Target\Data_Enriquecida.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Data_Enriquecida" block="Rows">
+									<field0 name="Compañia" type="string"/>
+									<field1 name="Desc, compañia" type="string"/>
+									<field2 name="Auxiliar" type="string"/>
+									<field3 name="Cuenta 6" type="string"/>
+									<field4 name="Desc, auxiliar" type="string"/>
+									<field5 name="Saldo inicial" type="string"/>
+									<field6 name="Saldo final" type="string"/>
+									<field7 name="Tag 1" type="string"/>
+									<field8 name="Tag 2" type="string"/>
+									<field9 name="Tag 3" type="string"/>
+									<field10 name="Tag 4" type="string"/>
+									<field11 name="Tag 5" type="string"/>
+									<field12 name="Tag 6" type="string"/>
+									<field13 name="Tag 7" type="string"/>
+									<field14 name="Tag 8" type="string"/>
+									<field15 name="Tag 9" type="string"/>
+									<field16 name="Tag 10" type="string"/>
+									<field17 name="Tag 11" type="string"/>
+									<field18 name="Tag 12" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1669" kind="2">
+					<targets>
+						<datapoint pos="0" key="4453"/>
+					</targets>
+					<view ltx="878" lty="50" rbx="1035" rby="67"/>
+					<data>
+						<constant value="EntryHeader/Header_1" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1664" kind="2">
+					<targets>
+						<datapoint pos="0" key="4444"/>
+					</targets>
+					<view ltx="930" lty="21" rbx="1035" rby="38"/>
+					<data>
+						<constant value="EntryHeader" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="1663" kind="2">
+					<targets>
+						<datapoint pos="0" key="4437"/>
+					</targets>
+					<view ltx="814" lty="315" rbx="860" rby="332"/>
+					<data>
+						<constant value="-" datatype="string"/>
+					</data>
+				</component>
+				<component name="first-items" library="core" uid="1671" kind="5">
+					<sources>
+						<datapoint pos="0" key="4454"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4455"/>
+					</targets>
+					<view ltx="920" lty="215" rbx="1035" rby="269"/>
+				</component>
+				<component name="constant" library="core" uid="1668" kind="2">
+					<targets>
+						<datapoint pos="0" key="4451"/>
+					</targets>
+					<view ltx="937" lty="173" rbx="1035" rby="190"/>
+					<data>
+						<constant value="EntryDetail" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="1662" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="4433"/>
+						<datapoint pos="1" key="4436"/>
+						<datapoint pos="2" key="4434"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4435"/>
+					</targets>
+					<view ltx="920" lty="315" rbx="1012" rby="388"/>
+				</component>
+				<component name="gl-plt-all-2015-03-25" library="xbrl" uid="3" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" PassThrough="1"/>
+					<view ltx="480" lty="21" rbx="793" rby="1377"/>
+					<data>
+						<root scrollposition="3625">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://www.xbrl.org/int/gl/cor/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/srcd/2015-03-25"/>
+									<namespace uid="http://www.xbrl.org/int/gl/bus/2015-03-25"/>
+									<namespace uid="view"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="2" expanded="1" showdefaultsnode="1">
+										<entry name="//www.xbrl.org/2003/role/link" ns="6" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1" showdefaultsnode="1">
+												<dimensions>
+													<qname name="identifier" ns="2"/>
+													<qname name="period" ns="2"/>
+												</dimensions>
+												<entry name="defaults" ns="1" expanded="1">
+													<entry name="monetaryItemType" ns="1">
+														<entry name="unitRef" type="attribute" inpkey="88"/>
+														<entry name="decimals" type="attribute" inpkey="89"/>
+													</entry>
+												</entry>
+												<entry name="identifier" ns="2" expanded="1">
+													<entry name="identifier" ns="2" inpkey="4368" expanded="1">
+														<entry name="scheme" type="attribute" inpkey="4369"/>
+													</entry>
+													<entry name="period" ns="2" expanded="1">
+														<entry name="period" ns="2" inpkey="4362" expanded="1">
+															<entry name="instant" ns="2" inpkey="4363"/>
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="3" inpkey="12" expanded="1">
+																<entry name="documentInfo" ns="3" expanded="1">
+																	<entry name="entriesType" ns="3" inpkey="261" outkey="4412"/>
+																</entry>
+																<entry name="entityInformation" ns="3" expanded="1"/>
+																<entry name="entryHeader" ns="3" outkey="4447" expanded="1">
+																	<entry name="entryDetail" ns="3" outkey="4416" expanded="1">
+																		<entry name="lineNumberCounter" ns="3" outkey="4417"/>
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="13" outkey="4397"/>
+																			<entry name="accountMainDescription" ns="3" inpkey="14"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="15" outkey="4398"/>
+																		<entry name="debitCreditCode" ns="3" inpkey="16" outkey="4399"/>
+																		<entry name="postingDate" ns="3" inpkey="4364" outkey="4400"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierCode" ns="3" inpkey="62" outkey="4393"/>
+																			<entry name="identifierDescription" ns="3" inpkey="63" outkey="4394"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="392" outkey="4401"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="393"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="394"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="395"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="396"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="397"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="398"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="399"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="400"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="401"/>
+																		</entry>
+																		<entry name="measurable" ns="5" expanded="1"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="period" ns="2" expanded="1" clone="1">
+														<entry name="period" ns="2" inpkey="4370" expanded="1">
+															<entry name="instant" ns="2" inpkey="4371"/>
+														</entry>
+														<entry name="context" ns="2" expanded="1">
+															<entry name="accountingEntries" ns="3" inpkey="4372" expanded="1">
+																<entry name="documentInfo" ns="3">
+																	<entry name="entriesType" ns="3" inpkey="4373"/>
+																</entry>
+																<entry name="entryHeader" ns="3" expanded="1">
+																	<entry name="entryDetail" ns="3" expanded="1">
+																		<entry name="account" ns="3" expanded="1">
+																			<entry name="accountMainID" ns="3" inpkey="4374"/>
+																			<entry name="accountMainDescription" ns="3" inpkey="4375"/>
+																		</entry>
+																		<entry name="amount" ns="3" inpkey="4376"/>
+																		<entry name="debitCreditCode" ns="3" inpkey="4377"/>
+																		<entry name="postingDate" ns="3" inpkey="4378"/>
+																		<entry name="identifierReference" ns="3" expanded="1">
+																			<entry name="identifierCode" ns="3" inpkey="4379"/>
+																			<entry name="identifierDescription" ns="3" inpkey="4380"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4381"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4382"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4383"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4384"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4385"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4386"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4387"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4388"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4389"/>
+																		</entry>
+																		<entry name="xbrlInfo" ns="3" expanded="1" clone="1">
+																			<entry name="detailedContentFilter" ns="4" inpkey="4390"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="unit" ns="2" expanded="1">
+											<entry name="id" type="attribute" inpkey="76"/>
+											<entry name="measure" ns="2" inpkey="77"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<xbrl schema="..\Taxonomy\gl\plt\case-c-b-m-u-t-s\gl-plt-all-2015-03-25.xsd" outputinstance="..\Output\Qx_SaldoInicialQxSiesa2XBRLGL.xml"/>
+					</data>
+				</component>
+				<component name="sunder_zachman_dfrnt_instances_v2" library="json" uid="1657" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="1152" lty="18" rbx="1657" rby="1566"/>
+					<data>
+						<root scrollposition="169">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="array" expanded="1">
+											<entry name="item" type="json-item" expanded="1">
+												<entry name="object" inpkey="4456" expanded="1">
+													<entry name="anyOf0" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="identifierCode" type="json-property" expanded="1"/>
+														<entry name="identifierDescription" type="json-property" expanded="1"/>
+														<entry name="identifierType" type="json-property" expanded="1"/>
+														<entry name="nexus" type="json-property" expanded="1"/>
+													</entry>
+													<entry name="anyOf3" type="json-subtype">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="accountMainID" type="json-property" expanded="1"/>
+														<entry name="accountMainDescription" type="json-property" expanded="1"/>
+														<entry name="mainAccountType" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+													</entry>
+													<entry name="anyOf4" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="4439"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="4452"/>
+														</entry>
+														<entry name="artifact_name" type="json-property" expanded="1">
+															<entry name="string" inpkey="4440"/>
+														</entry>
+														<entry name="posting_date" type="json-property" expanded="1">
+															<entry name="string" inpkey="4441"/>
+														</entry>
+														<entry name="source_document" type="json-property" expanded="1">
+															<entry name="string" inpkey="4442"/>
+														</entry>
+														<entry name="entriesType" type="json-property" expanded="1">
+															<entry name="string" inpkey="4443"/>
+														</entry>
+													</entry>
+													<entry name="anyOf5" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="entriesType" type="json-property" expanded="1"/>
+														<entry name="header" type="json-property" expanded="1"/>
+														<entry name="lineNumberCounter" type="json-property" expanded="1"/>
+														<entry name="account" type="json-property" expanded="1"/>
+														<entry name="amount" type="json-property" expanded="1"/>
+														<entry name="debitCreditCode" type="json-property" expanded="1"/>
+														<entry name="postingDate" type="json-property" expanded="1"/>
+														<entry name="resource" type="json-property" expanded="1"/>
+														<entry name="agent_identifier" type="json-property" expanded="1"/>
+														<entry name="agent" type="json-property" expanded="1"/>
+														<entry name="duality" type="json-property" expanded="1"/>
+														<entry name="sbvrRuleID" type="json-property" expanded="1"/>
+														<entry name="sbvrRuleStatement" type="json-property" expanded="1"/>
+														<entry name="sbvrDeonticModality" type="json-property" expanded="1"/>
+														<entry name="sbvrRuleCategory" type="json-property" expanded="1"/>
+														<entry name="reconciliationEquivalentClass" type="json-property" expanded="1"/>
+														<entry name="gl-srcd:detailedContentFilter" type="json-property" expanded="1">
+															<entry name="array" expanded="1">
+																<entry name="item" type="json-item" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="tags" type="json-property" expanded="1">
+															<entry name="array" expanded="1">
+																<entry name="item" type="json-item" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="measurable" type="json-property" expanded="1">
+															<entry name="object" expanded="1">
+																<entry name="measurableCode" type="json-property" expanded="1"/>
+																<entry name="measurableID" type="json-property" expanded="1"/>
+																<entry name="measurableDescription" type="json-property" expanded="1"/>
+																<entry name="measurableQuantity" type="json-property" expanded="1"/>
+																<entry name="measurableUnitOfMeasure" type="json-property" expanded="1"/>
+																<entry name="measurableCostPerUnit" type="json-property" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="anyOf6" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1"/>
+														<entry name="@id" type="json-property" expanded="1"/>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="ruleStatement" type="json-property" expanded="1"/>
+														<entry name="deonticModality" type="json-property" expanded="1"/>
+														<entry name="ruleCategory" type="json-property" expanded="1"/>
+														<entry name="targetXBRLGLEntry" type="json-property" expanded="1"/>
+													</entry>
+												</entry>
+												<entry name="object" inpkey="4457" expanded="1" clone="1">
+													<entry name="anyOf5" type="json-subtype" expanded="1">
+														<entry name="@type" type="json-property" expanded="1">
+															<entry name="string" inpkey="4458"/>
+														</entry>
+														<entry name="@id" type="json-property" expanded="1">
+															<entry name="string" inpkey="4459"/>
+														</entry>
+														<entry name="artifact_name" type="json-property" expanded="1"/>
+														<entry name="entriesType" type="json-property" expanded="1">
+															<entry name="string" inpkey="4460"/>
+														</entry>
+														<entry name="header" type="json-property" expanded="1"/>
+														<entry name="lineNumberCounter" type="json-property" expanded="1">
+															<entry name="number" inpkey="4461"/>
+														</entry>
+														<entry name="account" type="json-property" expanded="1">
+															<entry name="string" inpkey="4462"/>
+														</entry>
+														<entry name="amount" type="json-property" expanded="1">
+															<entry name="number" inpkey="4463"/>
+														</entry>
+														<entry name="debitCreditCode" type="json-property" expanded="1">
+															<entry name="string" inpkey="4464"/>
+														</entry>
+														<entry name="postingDate" type="json-property" expanded="1">
+															<entry name="string" inpkey="4465"/>
+														</entry>
+														<entry name="resource" type="json-property" expanded="1"/>
+														<entry name="agent_identifier" type="json-property" expanded="1">
+															<entry name="string" inpkey="4466"/>
+														</entry>
+														<entry name="agent" type="json-property" expanded="1">
+															<entry name="string" inpkey="4467"/>
+														</entry>
+														<entry name="duality" type="json-property" expanded="1"/>
+														<entry name="sbvrRuleID" type="json-property" expanded="1"/>
+														<entry name="sbvrRuleStatement" type="json-property" expanded="1"/>
+														<entry name="sbvrDeonticModality" type="json-property" expanded="1"/>
+														<entry name="sbvrRuleCategory" type="json-property" expanded="1"/>
+														<entry name="reconciliationEquivalentClass" type="json-property" expanded="1"/>
+														<entry name="gl-srcd:detailedContentFilter" type="json-property" expanded="1">
+															<entry name="array" expanded="1">
+																<entry name="item" type="json-item" expanded="1">
+																	<entry name="string" inpkey="4468"/>
+																</entry>
+															</entry>
+														</entry>
+														<entry name="tags" type="json-property" expanded="1"/>
+														<entry name="measurable" type="json-property" expanded="1">
+															<entry name="object" expanded="1">
+																<entry name="measurableCode" type="json-property" expanded="1"/>
+																<entry name="measurableID" type="json-property" expanded="1"/>
+																<entry name="measurableDescription" type="json-property" expanded="1"/>
+																<entry name="measurableQuantity" type="json-property" expanded="1"/>
+																<entry name="measurableUnitOfMeasure" type="json-property" expanded="1"/>
+																<entry name="measurableCostPerUnit" type="json-property" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<json schema="..\Taxonomy\JsonSchema\sunder_zachman_dfrnt_instances_v2.schema.json" outputinstance="..\Output\CSV2XBRLGL2JSONLD.json"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="54" kind="2">
+					<targets>
+						<datapoint pos="0" key="80"/>
+					</targets>
+					<view ltx="-21" lty="21" rbx="77" rby="38"/>
+					<data>
+						<constant value="2026-07-31" datatype="string"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="12">
+						<data>
+							<dataconnection name="Conectar Data a XBRL GL"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="116">
+						<edges>
+							<edge vertexkey="1"/>
+							<edge vertexkey="15"/>
+							<edge vertexkey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="10"/>
+							<edge vertexkey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4345">
+						<edges>
+							<edge vertexkey="12" edgekey="12"/>
+							<edge vertexkey="4372"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4348">
+						<edges>
+							<edge vertexkey="13"/>
+							<edge vertexkey="4374"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4349">
+						<edges>
+							<edge vertexkey="14"/>
+							<edge vertexkey="4375"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4346">
+						<edges>
+							<edge vertexkey="62"/>
+							<edge vertexkey="4379"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4347">
+						<edges>
+							<edge vertexkey="63"/>
+							<edge vertexkey="4380"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71">
+						<edges>
+							<edge vertexkey="73"/>
+							<edge vertexkey="76"/>
+							<edge vertexkey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72">
+						<edges>
+							<edge vertexkey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4350">
+						<edges>
+							<edge vertexkey="107"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="108"/>
+							<edge vertexkey="136"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="125">
+						<edges>
+							<edge vertexkey="110"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="111"/>
+							<edge vertexkey="129"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="117">
+						<edges>
+							<edge vertexkey="115"/>
+							<edge vertexkey="156"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118">
+						<edges>
+							<edge vertexkey="124"/>
+							<edge vertexkey="157"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="132">
+						<edges>
+							<edge vertexkey="128"/>
+							<edge vertexkey="131"/>
+							<edge vertexkey="4376"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4351">
+						<edges>
+							<edge vertexkey="135"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="137">
+						<edges>
+							<edge vertexkey="138"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="139">
+						<edges>
+							<edge vertexkey="140"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="141">
+						<edges>
+							<edge vertexkey="142"/>
+							<edge vertexkey="149"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="143">
+						<edges>
+							<edge vertexkey="144"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="145">
+						<edges>
+							<edge vertexkey="146"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="147">
+						<edges>
+							<edge vertexkey="148"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4354">
+						<edges>
+							<edge vertexkey="208"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="212">
+						<edges>
+							<edge vertexkey="209"/>
+							<edge vertexkey="215"/>
+							<edge vertexkey="219"/>
+							<edge vertexkey="223"/>
+							<edge vertexkey="227"/>
+							<edge vertexkey="231"/>
+							<edge vertexkey="235"/>
+							<edge vertexkey="239"/>
+							<edge vertexkey="243"/>
+							<edge vertexkey="247"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="213">
+						<edges>
+							<edge vertexkey="210"/>
+							<edge vertexkey="216"/>
+							<edge vertexkey="220"/>
+							<edge vertexkey="224"/>
+							<edge vertexkey="228"/>
+							<edge vertexkey="232"/>
+							<edge vertexkey="236"/>
+							<edge vertexkey="240"/>
+							<edge vertexkey="244"/>
+							<edge vertexkey="248"/>
+							<edge vertexkey="253"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4352">
+						<edges>
+							<edge vertexkey="217"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4353">
+						<edges>
+							<edge vertexkey="221"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4355">
+						<edges>
+							<edge vertexkey="225"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4356">
+						<edges>
+							<edge vertexkey="229"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4357">
+						<edges>
+							<edge vertexkey="233"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4358">
+						<edges>
+							<edge vertexkey="237"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4359">
+						<edges>
+							<edge vertexkey="241"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4360">
+						<edges>
+							<edge vertexkey="245"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4361">
+						<edges>
+							<edge vertexkey="249"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="214">
+						<edges>
+							<edge vertexkey="250"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="254">
+						<edges>
+							<edge vertexkey="251"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="226">
+						<edges>
+							<edge vertexkey="255"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="259">
+						<edges>
+							<edge vertexkey="256"/>
+							<edge vertexkey="266"/>
+							<edge vertexkey="270"/>
+							<edge vertexkey="274"/>
+							<edge vertexkey="278"/>
+							<edge vertexkey="282"/>
+							<edge vertexkey="286"/>
+							<edge vertexkey="290"/>
+							<edge vertexkey="294"/>
+							<edge vertexkey="298"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="260">
+						<edges>
+							<edge vertexkey="257"/>
+							<edge vertexkey="267"/>
+							<edge vertexkey="271"/>
+							<edge vertexkey="275"/>
+							<edge vertexkey="279"/>
+							<edge vertexkey="283"/>
+							<edge vertexkey="287"/>
+							<edge vertexkey="291"/>
+							<edge vertexkey="295"/>
+							<edge vertexkey="299"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="263">
+						<edges>
+							<edge vertexkey="261"/>
+							<edge vertexkey="4373"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="230">
+						<edges>
+							<edge vertexkey="265"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="234">
+						<edges>
+							<edge vertexkey="269"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="238">
+						<edges>
+							<edge vertexkey="273"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="242">
+						<edges>
+							<edge vertexkey="277"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="246">
+						<edges>
+							<edge vertexkey="281"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="222">
+						<edges>
+							<edge vertexkey="285"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="211">
+						<edges>
+							<edge vertexkey="289"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="218">
+						<edges>
+							<edge vertexkey="293"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="252">
+						<edges>
+							<edge vertexkey="297"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="303">
+						<edges>
+							<edge vertexkey="300"/>
+							<edge vertexkey="304"/>
+							<edge vertexkey="307"/>
+							<edge vertexkey="310"/>
+							<edge vertexkey="313"/>
+							<edge vertexkey="316"/>
+							<edge vertexkey="319"/>
+							<edge vertexkey="322"/>
+							<edge vertexkey="325"/>
+							<edge vertexkey="328"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="296">
+						<edges>
+							<edge vertexkey="301"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="292">
+						<edges>
+							<edge vertexkey="306"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="288">
+						<edges>
+							<edge vertexkey="309"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="284">
+						<edges>
+							<edge vertexkey="312"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="258">
+						<edges>
+							<edge vertexkey="315"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="264">
+						<edges>
+							<edge vertexkey="318"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="268">
+						<edges>
+							<edge vertexkey="321"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="272">
+						<edges>
+							<edge vertexkey="324"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="276">
+						<edges>
+							<edge vertexkey="327"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="280">
+						<edges>
+							<edge vertexkey="330"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="302">
+						<edges>
+							<edge vertexkey="392"/>
+							<edge vertexkey="4381"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="305">
+						<edges>
+							<edge vertexkey="393"/>
+							<edge vertexkey="4382"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="308">
+						<edges>
+							<edge vertexkey="394"/>
+							<edge vertexkey="4383"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="311">
+						<edges>
+							<edge vertexkey="395"/>
+							<edge vertexkey="4384"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="314">
+						<edges>
+							<edge vertexkey="396"/>
+							<edge vertexkey="4385"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="317">
+						<edges>
+							<edge vertexkey="397"/>
+							<edge vertexkey="4386"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="320">
+						<edges>
+							<edge vertexkey="398"/>
+							<edge vertexkey="4387"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="323">
+						<edges>
+							<edge vertexkey="399"/>
+							<edge vertexkey="4388"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="326">
+						<edges>
+							<edge vertexkey="400"/>
+							<edge vertexkey="4389"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="329">
+						<edges>
+							<edge vertexkey="401"/>
+							<edge vertexkey="4390"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4365">
+						<edges>
+							<edge vertexkey="4362"/>
+							<edge vertexkey="4363"/>
+							<edge vertexkey="4364"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4366">
+						<edges>
+							<edge vertexkey="4368"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4367">
+						<edges>
+							<edge vertexkey="4369"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="80">
+						<edges>
+							<edge vertexkey="4370"/>
+							<edge vertexkey="4371"/>
+							<edge vertexkey="4378"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="154">
+						<edges>
+							<edge vertexkey="4377"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4393">
+						<edges>
+							<edge vertexkey="4433"/>
+							<edge vertexkey="4466"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4397">
+						<edges>
+							<edge vertexkey="4434"/>
+							<edge vertexkey="4462"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4437">
+						<edges>
+							<edge vertexkey="4436"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4444">
+						<edges>
+							<edge vertexkey="4439"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4445">
+						<edges>
+							<edge vertexkey="4440"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4400">
+						<edges>
+							<edge vertexkey="4441"/>
+							<edge vertexkey="4465"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4446">
+						<edges>
+							<edge vertexkey="4442"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4448">
+						<edges>
+							<edge vertexkey="4443"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4453">
+						<edges>
+							<edge vertexkey="4452"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4447">
+						<edges>
+							<edge vertexkey="4454"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4455">
+						<edges>
+							<edge vertexkey="4456"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4416">
+						<edges>
+							<edge vertexkey="4457"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4451">
+						<edges>
+							<edge vertexkey="4458"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4435">
+						<edges>
+							<edge vertexkey="4459"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4412">
+						<edges>
+							<edge vertexkey="4460"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4417">
+						<edges>
+							<edge vertexkey="4461"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4398">
+						<edges>
+							<edge vertexkey="4463"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4399">
+						<edges>
+							<edge vertexkey="4464"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4394">
+						<edges>
+							<edge vertexkey="4467"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4401">
+						<edges>
+							<edge vertexkey="4468"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

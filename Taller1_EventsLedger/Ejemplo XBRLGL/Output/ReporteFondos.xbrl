@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:co-sfc_ias-10_2013-03-28_role-815000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-10_2013-03-28_role-815000" xmlns:co-sfc_ias-12_2013-03-28_role-835110="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-12_2013-03-28_role-835110" xmlns:co-sfc_ias-16_2013-03-28_role-822100="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-16_2013-03-28_role-822100" xmlns:co-sfc_ias-17_2013-03-28_role-832600="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-17_2013-03-28_role-832600" xmlns:co-sfc_ias-18_2013-03-28_role-831110="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-18_2013-03-28_role-831110" xmlns:co-sfc_ias-19_2013-03-28_role-834480="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-19_2013-03-28_role-834480" xmlns:co-sfc_ias-1_2013-03-28_role-110000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-110000" xmlns:co-sfc_ias-1_2013-03-28_role-220000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-220000" xmlns:co-sfc_ias-1_2013-03-28_role-320000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-320000" xmlns:co-sfc_ias-1_2013-03-28_role-410000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-410000" xmlns:co-sfc_ias-1_2013-03-28_role-420000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-420000" xmlns:co-sfc_ias-1_2013-03-28_role-610000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-610000" xmlns:co-sfc_ias-1_2013-03-28_role-800100="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-800100" xmlns:co-sfc_ias-1_2013-03-28_role-800200="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-800200" xmlns:co-sfc_ias-1_2013-03-28_role-800400="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-800400" xmlns:co-sfc_ias-1_2013-03-28_role-800500="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-800500" xmlns:co-sfc_ias-1_2013-03-28_role-800600="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-800600" xmlns:co-sfc_ias-1_2013-03-28_role-810000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-810000" xmlns:co-sfc_ias-1_2013-03-28_role-861000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-861000" xmlns:co-sfc_ias-1_2013-03-28_role-861200="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-861200" xmlns:co-sfc_ias-1_2013-03-28_role-880000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-1_2013-03-28_role-880000" xmlns:co-sfc_ias-21_2013-03-28_role-842000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-21_2013-03-28_role-842000" xmlns:co-sfc_ias-23_2013-03-28_role-836200="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-23_2013-03-28_role-836200" xmlns:co-sfc_ias-24_2013-03-28_role-818000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-24_2013-03-28_role-818000" xmlns:co-sfc_ias-27_2013-03-28_role-825480="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-27_2013-03-28_role-825480" xmlns:co-sfc_ias-28_2012-03-29_role-825600="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-28_2012-03-29_role-825600" xmlns:co-sfc_ias-31_2012-03-29_role-825500="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-31_2012-03-29_role-825500" xmlns:co-sfc_ias-33_2013-03-28_role-838000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-33_2013-03-28_role-838000" xmlns:co-sfc_ias-34_2013-03-28_role-813000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-34_2013-03-28_role-813000" xmlns:co-sfc_ias-36_2013-03-28_role-832410="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-36_2013-03-28_role-832410" xmlns:co-sfc_ias-37_2013-03-28_role-827570="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-37_2013-03-28_role-827570" xmlns:co-sfc_ias-38_2013-03-28_role-823180="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-38_2013-03-28_role-823180" xmlns:co-sfc_ias-7_2013-03-28_role-510000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-7_2013-03-28_role-510000" xmlns:co-sfc_ias-7_2013-03-28_role-520000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-7_2013-03-28_role-520000" xmlns:co-sfc_ias-7_2013-03-28_role-800300="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-7_2013-03-28_role-800300" xmlns:co-sfc_ias-7_2013-03-28_role-851100="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-7_2013-03-28_role-851100" xmlns:co-sfc_ias-8_2013-03-28_role-811000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ias-8_2013-03-28_role-811000" xmlns:co-sfc_ifrs-12_2013-03-28_role-825700="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-12_2013-03-28_role-825700" xmlns:co-sfc_ifrs-13_2013-03-28_role-823000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-13_2013-03-28_role-823000" xmlns:co-sfc_ifrs-1_2013-03-28_role-819100="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-1_2013-03-28_role-819100" xmlns:co-sfc_ifrs-2_2013-03-28_role-834120="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-2_2013-03-28_role-834120" xmlns:co-sfc_ifrs-3_2013-03-28_role-817000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-3_2013-03-28_role-817000" xmlns:co-sfc_ifrs-5_2013-03-28_role-825900="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-5_2013-03-28_role-825900" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-1="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-1" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-10" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-12="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-12" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223900="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-15" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223901="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-16" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223902="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-17" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223903="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-18" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-2="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-2" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223904="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-23" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-24="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-24" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-3="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-3" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-5="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-5" xmlns:co-sfc_ifrs-7_2013-03-28_role-822390-6="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-6" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223905="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-7" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223906="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-8" xmlns:co-sfc_ifrs-7_2013-03-28_role-8223907="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-7_2013-03-28_role-822390-9" xmlns:co-sfc_ifrs-8_2013-03-28_role-871100="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ifrs-8_2013-03-28_role-871100" xmlns:co-sfc_ps-mc_2013-03-28_role-105000="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/co-sfc_ps-mc_2013-03-28_role-105000" xmlns:co-sfc-2016-04-01_iv-85-scbv-ind-cie="http://www.superfinanciera.gov.co/xbrl/ifrs/2016-04-01/iv-85-scbv-ind-cie" xmlns:co-sfc-core="http://www.superfinanciera.gov.co/xbrl/ifrs/core/2016-04-01" xmlns:co-sfc-types="http://www.superfinanciera.gov.co/xbrl/ifrs/types/2016-04-01" xmlns:n13="http://www.tns.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2004/ref" xmlns:negated="http://www.xbrl.org/2009/role/negated" xmlns:net="http://www.xbrl.org/2009/role/net" xmlns:reference="http://www.xbrl.org/2009/role/reference" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:rol_ias_10_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_10_2013-03-28" xmlns:rol_ias_12_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_12_2013-03-28" xmlns:rol_ias_16_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_16_2013-03-28" xmlns:rol_ias_17_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_17_2013-03-28" xmlns:rol_ias_18_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_18_2013-03-28" xmlns:rol_ias_19_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_19_2013-03-28" xmlns:rol_ias_1_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_1_2013-03-28" xmlns:rol_ias_21_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_21_2013-03-28" xmlns:rol_ias_23_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_23_2013-03-28" xmlns:rol_ias_24_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_24_2013-03-28" xmlns:rol_ias_27_2012-03-29="http://xbrl.ifrs.org/role/ifrs/rol_ias_27_2012-03-29" xmlns:rol_ias_27_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_27_2013-03-28" xmlns:rol_ias_28_2012-03-29="http://xbrl.ifrs.org/role/ifrs/rol_ias_28_2012-03-29" xmlns:rol_ias_31_2012-03-29="http://xbrl.ifrs.org/role/ifrs/rol_ias_31_2012-03-29" xmlns:rol_ias_33_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_33_2013-03-28" xmlns:rol_ias_34_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_34_2013-03-28" xmlns:rol_ias_36_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_36_2013-03-28" xmlns:rol_ias_37_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_37_2013-03-28" xmlns:rol_ias_38_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_38_2013-03-28" xmlns:rol_ias_7_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_7_2013-03-28" xmlns:rol_ias_8_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ias_8_2013-03-28" xmlns:rol_ifrs_12_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_12_2013-03-28" xmlns:rol_ifrs_13_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_13_2013-03-28" xmlns:rol_ifrs_1_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_1_2013-03-28" xmlns:rol_ifrs_2_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_2_2013-03-28" xmlns:rol_ifrs_3_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_3_2013-03-28" xmlns:rol_ifrs_5_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_5_2013-03-28" xmlns:rol_ifrs_7_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_7_2013-03-28" xmlns:rol_ifrs_8_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ifrs_8_2013-03-28" xmlns:rol_ps_mc_2013-03-28="http://xbrl.ifrs.org/role/ifrs/rol_ps_mc_2013-03-28" xmlns:ifrs="http://xbrl.ifrs.org/taxonomy/2012-03-29/ifrs" xmlns:ifrs0="http://xbrl.ifrs.org/taxonomy/2013-03-28/ifrs" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:ca="http://xbrl.org/2008/assertion/consistency" xmlns:ea="http://xbrl.org/2008/assertion/existence" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:bf="http://xbrl.org/2008/filter/boolean" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:df="http://xbrl.org/2008/filter/dimension" xmlns:ef="http://xbrl.org/2008/filter/entity" xmlns:gf="http://xbrl.org/2008/filter/general" xmlns:mf="http://xbrl.org/2008/filter/match" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:rf="http://xbrl.org/2008/filter/relative" xmlns:ssf="http://xbrl.org/2008/filter/segment-scenario" xmlns:tf="http://xbrl.org/2008/filter/tuple" xmlns:uf="http://xbrl.org/2008/filter/unit" xmlns:vf="http://xbrl.org/2008/filter/value" xmlns:formula="http://xbrl.org/2008/formula" xmlns:gen="http://xbrl.org/2008/generic" xmlns:label="http://xbrl.org/2008/label" xmlns:reference0="http://xbrl.org/2008/reference" xmlns:validation="http://xbrl.org/2008/validation" xmlns:variable="http://xbrl.org/2008/variable" xmlns:msg="http://xbrl.org/2010/message" xmlns:valm="http://xbrl.org/2010/message/validation" xmlns:table="http://xbrl.org/2014/table" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:schemaRef xlink:type="simple" xlink:href="C:/Users/RGGASCA/Documents/GSKM_PERIODIC/Taxonomia/ExtensionTaxonomiaSuperfinanciera/Extension_Fondos_Entry_Point.xsd"/>
+	<xbrli:context id="ctx1">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.davivienda.com">Davivienda</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2025-12-31</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<ifrs0:CashAndCashEquivalents contextRef="ctx1" unitRef="COP" decimals="2">15471725660.06</ifrs0:CashAndCashEquivalents>
+	<n13:BancosNacionales contextRef="ctx1" unitRef="COP" decimals="2">12458964385.6</n13:BancosNacionales>
+	<n13:BancosDelExterior contextRef="ctx1" unitRef="COP" decimals="2">3012761274.46</n13:BancosDelExterior>
+	<co-sfc-core:Inversiones contextRef="ctx1" unitRef="COP" decimals="2">229697451687.42</co-sfc-core:Inversiones>
+	<n13:InstrumentosDeDeuda contextRef="ctx1" unitRef="COP" decimals="2">6799534133.32</n13:InstrumentosDeDeuda>
+	<n13:InstrumentosDePatrimonio contextRef="ctx1" unitRef="COP" decimals="2">66658662456.1</n13:InstrumentosDePatrimonio>
+	<n13:InversionesDerechosFiduciarios contextRef="ctx1" unitRef="COP" decimals="2">156239255098</n13:InversionesDerechosFiduciarios>
+	<n13:DeterioroInversiones contextRef="ctx1" unitRef="COP" decimals="2">0</n13:DeterioroInversiones>
+	<ifrs0:TradeAndOtherReceivables contextRef="ctx1" unitRef="COP" decimals="2">1893120327.03</ifrs0:TradeAndOtherReceivables>
+	<n13:Deudores contextRef="ctx1" unitRef="COP" decimals="2">1893120327.03</n13:Deudores>
+	<ifrs0:OtherNonfinancialAssets contextRef="ctx1" unitRef="COP" decimals="2">0</ifrs0:OtherNonfinancialAssets>
+	<n13:Comisiondegestion contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Comisiondegestion>
+	<n13:Comisiondeadministracion contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Comisiondeadministracion>
+	<n13:AmortizacionComisiondeAdministracion contextRef="ctx1" unitRef="COP" decimals="2">0</n13:AmortizacionComisiondeAdministracion>
+	<n13:Gatospagadosporanticipados contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Gatospagadosporanticipados>
+	<n13:Impuestopredial. contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Impuestopredial.>
+	<n13:Activosnocorrientesmantenidosparalaventa contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Activosnocorrientesmantenidosparalaventa>
+	<ifrs0:InvestmentProperty contextRef="ctx1" unitRef="COP" decimals="2">11823890000</ifrs0:InvestmentProperty>
+	<n13:PropiedadDeInversion contextRef="ctx1" unitRef="COP" decimals="2">11823890000</n13:PropiedadDeInversion>
+	<n13:ValoracionPropiedadDeInversion contextRef="ctx1" unitRef="COP" decimals="2">0</n13:ValoracionPropiedadDeInversion>
+	<ifrs0:Assets contextRef="ctx1" unitRef="COP" decimals="2">258886187674.51</ifrs0:Assets>
+	<co-sfc-core:DepositosExigibilidades contextRef="ctx1" unitRef="COP" decimals="2">0</co-sfc-core:DepositosExigibilidades>
+	<n13:OtrasObligacionesFinancieras contextRef="ctx1" unitRef="COP" decimals="2">0</n13:OtrasObligacionesFinancieras>
+	<ifrs0:TradeAndOtherPayables contextRef="ctx1" unitRef="COP" decimals="2">7892913826.18</ifrs0:TradeAndOtherPayables>
+	<n13:AcreedoresVarios contextRef="ctx1" unitRef="COP" decimals="2">7892913826.18</n13:AcreedoresVarios>
+	<n13:ComisionDeAdministracion. contextRef="ctx1" unitRef="COP" decimals="2">0</n13:ComisionDeAdministracion.>
+	<n13:ComisionDeGestion. contextRef="ctx1" unitRef="COP" decimals="2">0</n13:ComisionDeGestion.>
+	<n13:Servicios contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Servicios>
+	<n13:Impuestos contextRef="ctx1" unitRef="COP" decimals="2">0</n13:Impuestos>
+	<ifrs0:Liabilities contextRef="ctx1" unitRef="COP" decimals="2">7892913826.18</ifrs0:Liabilities>
+	<ifrs0:Equity contextRef="ctx1" unitRef="COP" decimals="2">250993273848.33</ifrs0:Equity>
+	<n13:PatrimoniosEspeciales contextRef="ctx1" unitRef="COP" decimals="2">250993273848.33</n13:PatrimoniosEspeciales>
+	<n13:ParticipacionesEnFondosDeInversionColectiva contextRef="ctx1" unitRef="COP" decimals="2">250993273848.33</n13:ParticipacionesEnFondosDeInversionColectiva>
+	<ifrs0:EquityAndLiabilities contextRef="ctx1" unitRef="COP" decimals="2">258886187674.51</ifrs0:EquityAndLiabilities>
+	<xbrli:context id="ctx2">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.davivienda.com">Davivienda</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2026-06-30</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+	<ifrs0:CashAndCashEquivalents contextRef="ctx2" unitRef="COP" decimals="2">10073271072.83</ifrs0:CashAndCashEquivalents>
+	<n13:BancosNacionales contextRef="ctx2" unitRef="COP" decimals="2">7765608618.8</n13:BancosNacionales>
+	<n13:BancosDelExterior contextRef="ctx2" unitRef="COP" decimals="2">2307662454.03</n13:BancosDelExterior>
+	<co-sfc-core:Inversiones contextRef="ctx2" unitRef="COP" decimals="2">183583253743.5</co-sfc-core:Inversiones>
+	<n13:InstrumentosDeDeuda contextRef="ctx2" unitRef="COP" decimals="2">1886690391.29</n13:InstrumentosDeDeuda>
+	<n13:InstrumentosDePatrimonio contextRef="ctx2" unitRef="COP" decimals="2">44395512054.21</n13:InstrumentosDePatrimonio>
+	<n13:InversionesDerechosFiduciarios contextRef="ctx2" unitRef="COP" decimals="2">137301051298</n13:InversionesDerechosFiduciarios>
+	<n13:DeterioroInversiones contextRef="ctx2" unitRef="COP" decimals="2">0</n13:DeterioroInversiones>
+	<ifrs0:TradeAndOtherReceivables contextRef="ctx2" unitRef="COP" decimals="2">15098913974.62</ifrs0:TradeAndOtherReceivables>
+	<n13:Deudores contextRef="ctx2" unitRef="COP" decimals="2">15098913974.62</n13:Deudores>
+	<ifrs0:OtherNonfinancialAssets contextRef="ctx2" unitRef="COP" decimals="2">0</ifrs0:OtherNonfinancialAssets>
+	<n13:Comisiondegestion contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Comisiondegestion>
+	<n13:Comisiondeadministracion contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Comisiondeadministracion>
+	<n13:AmortizacionComisiondeAdministracion contextRef="ctx2" unitRef="COP" decimals="2">0</n13:AmortizacionComisiondeAdministracion>
+	<n13:Gatospagadosporanticipados contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Gatospagadosporanticipados>
+	<n13:Impuestopredial. contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Impuestopredial.>
+	<n13:Activosnocorrientesmantenidosparalaventa contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Activosnocorrientesmantenidosparalaventa>
+	<ifrs0:InvestmentProperty contextRef="ctx2" unitRef="COP" decimals="2">11823890000</ifrs0:InvestmentProperty>
+	<n13:PropiedadDeInversion contextRef="ctx2" unitRef="COP" decimals="2">11823890000</n13:PropiedadDeInversion>
+	<n13:ValoracionPropiedadDeInversion contextRef="ctx2" unitRef="COP" decimals="2">0</n13:ValoracionPropiedadDeInversion>
+	<ifrs0:Assets contextRef="ctx2" unitRef="COP" decimals="2">220579328790.95</ifrs0:Assets>
+	<co-sfc-core:DepositosExigibilidades contextRef="ctx2" unitRef="COP" decimals="2">0</co-sfc-core:DepositosExigibilidades>
+	<n13:OtrasObligacionesFinancieras contextRef="ctx2" unitRef="COP" decimals="2">0</n13:OtrasObligacionesFinancieras>
+	<ifrs0:TradeAndOtherPayables contextRef="ctx2" unitRef="COP" decimals="2">23033006013.36</ifrs0:TradeAndOtherPayables>
+	<n13:AcreedoresVarios contextRef="ctx2" unitRef="COP" decimals="2">23033006013.36</n13:AcreedoresVarios>
+	<n13:ComisionDeAdministracion. contextRef="ctx2" unitRef="COP" decimals="2">0</n13:ComisionDeAdministracion.>
+	<n13:ComisionDeGestion. contextRef="ctx2" unitRef="COP" decimals="2">0</n13:ComisionDeGestion.>
+	<n13:Servicios contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Servicios>
+	<n13:Impuestos contextRef="ctx2" unitRef="COP" decimals="2">0</n13:Impuestos>
+	<ifrs0:Liabilities contextRef="ctx2" unitRef="COP" decimals="2">23033006013.36</ifrs0:Liabilities>
+	<ifrs0:Equity contextRef="ctx2" unitRef="COP" decimals="2">197546322777.59</ifrs0:Equity>
+	<n13:PatrimoniosEspeciales contextRef="ctx2" unitRef="COP" decimals="2">197546322777.59</n13:PatrimoniosEspeciales>
+	<n13:ParticipacionesEnFondosDeInversionColectiva contextRef="ctx2" unitRef="COP" decimals="2">197546322777.59</n13:ParticipacionesEnFondosDeInversionColectiva>
+	<ifrs0:EquityAndLiabilities contextRef="ctx2" unitRef="COP" decimals="2">220579328790.95</ifrs0:EquityAndLiabilities>
+	<xbrli:context id="ctx3">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.davivienda.com">Davivienda</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2026-01-01</xbrli:startDate>
+			<xbrli:endDate>2026-06-30</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<ifrs0:Revenue contextRef="ctx3" unitRef="COP" decimals="2">1587214299.94</ifrs0:Revenue>
+	<n13:Otros_intereses contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Otros_intereses>
+	<n13:ValoracionIntrumentosdeDeuda contextRef="ctx3" unitRef="COP" decimals="2">242099989.73</n13:ValoracionIntrumentosdeDeuda>
+	<n13:IngresoporoperacionesRepo contextRef="ctx3" unitRef="COP" decimals="2">0</n13:IngresoporoperacionesRepo>
+	<n13:Otrosrendimientosfinancieros contextRef="ctx3" unitRef="COP" decimals="2">500815429.53</n13:Otrosrendimientosfinancieros>
+	<n13:Ingresosfinancierosinversiones contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Ingresosfinancierosinversiones>
+	<n13:AvalorRazonableInstrumentosdeDeuda. contextRef="ctx3" unitRef="COP" decimals="2">0</n13:AvalorRazonableInstrumentosdeDeuda.>
+	<n13:AvalorRazonableInstrumentosdePat. contextRef="ctx3" unitRef="COP" decimals="2">0</n13:AvalorRazonableInstrumentosdePat.>
+	<n13:PoraumentoenelvalordemercadoInst.dePat. contextRef="ctx3" unitRef="COP" decimals="2">0</n13:PoraumentoenelvalordemercadoInst.dePat.>
+	<n13:Diferenciaencambio contextRef="ctx3" unitRef="COP" decimals="2">651356089.69</n13:Diferenciaencambio>
+	<n13:Porreexpresiondeotrospasivos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Porreexpresiondeotrospasivos>
+	<n13:Diversos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Diversos>
+	<n13:Dividendos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Dividendos>
+	<n13:Arrendamientos contextRef="ctx3" unitRef="COP" decimals="2">192942790.99</n13:Arrendamientos>
+	<n13:Reintegroprovisiones contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Reintegroprovisiones>
+	<n13:Indemnizaciones contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Indemnizaciones>
+	<n13:Utilidadventapropiedadesdeinversion contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Utilidadventapropiedadesdeinversion>
+	<n13:OtrosIngresosOperacionales contextRef="ctx3" unitRef="COP" decimals="2">0</n13:OtrosIngresosOperacionales>
+	<ifrs0:OtherExpenseByNature contextRef="ctx3" unitRef="COP" decimals="2">34410393340.18</ifrs0:OtherExpenseByNature>
+	<n13:Gastosdeoperaciones contextRef="ctx3" unitRef="COP" decimals="2">34410393340.18</n13:Gastosdeoperaciones>
+	<n13:Otroscreditos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Otroscreditos>
+	<n13:OtrosIntereses contextRef="ctx3" unitRef="COP" decimals="2">0</n13:OtrosIntereses>
+	<n13:PordisminucionenelValorRazonablesinst.deDeuda contextRef="ctx3" unitRef="COP" decimals="2">0</n13:PordisminucionenelValorRazonablesinst.deDeuda>
+	<n13:PordisminucionenelvalordemercadoInst.dePat. contextRef="ctx3" unitRef="COP" decimals="2">0</n13:PordisminucionenelvalordemercadoInst.dePat.>
+	<n13:Porventaavalorrazonable contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Porventaavalorrazonable>
+	<n13:Creditobancos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Creditobancos>
+	<n13:Comisioncustodiafija contextRef="ctx3" unitRef="COP" decimals="2">20356050</n13:Comisioncustodiafija>
+	<n13:Gastosbancarios contextRef="ctx3" unitRef="COP" decimals="2">4470994.53</n13:Gastosbancarios>
+	<n13:Comisionadministracion contextRef="ctx3" unitRef="COP" decimals="2">194111672.54</n13:Comisionadministracion>
+	<n13:OtrasComisiones contextRef="ctx3" unitRef="COP" decimals="2">0</n13:OtrasComisiones>
+	<n13:OtrasEmisoresNacionales contextRef="ctx3" unitRef="COP" decimals="2">24727597.39</n13:OtrasEmisoresNacionales>
+	<n13:ComisionBursatil contextRef="ctx3" unitRef="COP" decimals="2">400377098.03</n13:ComisionBursatil>
+	<n13:ComisionGestorprofesional contextRef="ctx3" unitRef="COP" decimals="2">0</n13:ComisionGestorprofesional>
+	<n13:RevisoriaFiscal contextRef="ctx3" unitRef="COP" decimals="2">27225752.99</n13:RevisoriaFiscal>
+	<n13:Gastoslegales contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Gastoslegales>
+	<n13:Otroshonorarios contextRef="ctx3" unitRef="COP" decimals="2">35369480.01</n13:Otroshonorarios>
+	<n13:PorreexpresiondeActivos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:PorreexpresiondeActivos>
+	<n13:AsesoriaLegaloJuridica contextRef="ctx3" unitRef="COP" decimals="2">0</n13:AsesoriaLegaloJuridica>
+	<n13:Gravamenalosmovimientosfinancieros contextRef="ctx3" unitRef="COP" decimals="2">98245489.21</n13:Gravamenalosmovimientosfinancieros>
+	<n13:Impuestosobrelasventas contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Impuestosobrelasventas>
+	<n13:Ivacomisiongestorprofesional contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Ivacomisiongestorprofesional>
+	<n13:SancioneseinteresesdeMora contextRef="ctx3" unitRef="COP" decimals="2">0</n13:SancioneseinteresesdeMora>
+	<n13:Otrosgastosdeoperacion contextRef="ctx3" unitRef="COP" decimals="2">505329691.74</n13:Otrosgastosdeoperacion>
+	<n13:ImpuestoPredial contextRef="ctx3" unitRef="COP" decimals="2">0</n13:ImpuestoPredial>
+	<n13:Seguros contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Seguros>
+	<n13:Indemnizaciones_ contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Indemnizaciones_>
+	<n13:Mantenimientopropiedadesdeinversion contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Mantenimientopropiedadesdeinversion>
+	<n13:Deteriorodeudores contextRef="ctx3" unitRef="COP" decimals="2">408714100.22</n13:Deteriorodeudores>
+	<n13:DisminucionenelvalordemercadoInst.dePat. contextRef="ctx3" unitRef="COP" decimals="2">31816456303.77</n13:DisminucionenelvalordemercadoInst.dePat.>
+	<n13:DisminucionenelValorRazonablesinst.deDeuda contextRef="ctx3" unitRef="COP" decimals="2">0</n13:DisminucionenelValorRazonablesinst.deDeuda>
+	<n13:ReexpresiondeActivos contextRef="ctx3" unitRef="COP" decimals="2">875009109.75</n13:ReexpresiondeActivos>
+	<n13:Impuestosasumidos contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Impuestosasumidos>
+	<n13:MantenimientoyReparaciones contextRef="ctx3" unitRef="COP" decimals="2">0</n13:MantenimientoyReparaciones>
+	<n13:Perdidaenventaactivosnocorrientesmantenidosparalaventa contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Perdidaenventaactivosnocorrientesmantenidosparalaventa>
+	<n13:ImpuestosYTasas contextRef="ctx3" unitRef="COP" decimals="2">98245489.21</n13:ImpuestosYTasas>
+	<n13:Arrendamientos_ contextRef="ctx3" unitRef="COP" decimals="2">0</n13:Arrendamientos_>
+	<ifrs0:ProfitLossBeforeTax contextRef="ctx3" unitRef="COP" decimals="2">32823179040.24</ifrs0:ProfitLossBeforeTax>
+	<ifrs0:ProfitLossFromContinuingOperations contextRef="ctx3" unitRef="COP" decimals="2">32823179040.24</ifrs0:ProfitLossFromContinuingOperations>
+	<ifrs0:ProfitLoss contextRef="ctx3" unitRef="COP" decimals="2">32823179040.24</ifrs0:ProfitLoss>
+	<xbrli:context id="ctx4">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.davivienda.com">Davivienda</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2025-01-01</xbrli:startDate>
+			<xbrli:endDate>2025-06-30</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<ifrs0:Revenue contextRef="ctx4" unitRef="COP" decimals="2">37357580799.31</ifrs0:Revenue>
+	<n13:Otros_intereses contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Otros_intereses>
+	<n13:ValoracionIntrumentosdeDeuda contextRef="ctx4" unitRef="COP" decimals="2">295003074.17</n13:ValoracionIntrumentosdeDeuda>
+	<n13:IngresoporoperacionesRepo contextRef="ctx4" unitRef="COP" decimals="2">0</n13:IngresoporoperacionesRepo>
+	<n13:Otrosrendimientosfinancieros contextRef="ctx4" unitRef="COP" decimals="2">137354706.35</n13:Otrosrendimientosfinancieros>
+	<n13:Ingresosfinancierosinversiones contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Ingresosfinancierosinversiones>
+	<n13:AvalorRazonableInstrumentosdeDeuda. contextRef="ctx4" unitRef="COP" decimals="2">0</n13:AvalorRazonableInstrumentosdeDeuda.>
+	<n13:AvalorRazonableInstrumentosdePat. contextRef="ctx4" unitRef="COP" decimals="2">0</n13:AvalorRazonableInstrumentosdePat.>
+	<n13:PoraumentoenelvalordemercadoInst.dePat. contextRef="ctx4" unitRef="COP" decimals="2">34716366674.37</n13:PoraumentoenelvalordemercadoInst.dePat.>
+	<n13:Diferenciaencambio contextRef="ctx4" unitRef="COP" decimals="2">1689063611.64</n13:Diferenciaencambio>
+	<n13:Porreexpresiondeotrospasivos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Porreexpresiondeotrospasivos>
+	<n13:Diversos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Diversos>
+	<n13:Dividendos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Dividendos>
+	<n13:Arrendamientos contextRef="ctx4" unitRef="COP" decimals="2">193523771.78</n13:Arrendamientos>
+	<n13:Reintegroprovisiones contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Reintegroprovisiones>
+	<n13:Indemnizaciones contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Indemnizaciones>
+	<n13:Utilidadventapropiedadesdeinversion contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Utilidadventapropiedadesdeinversion>
+	<n13:OtrosIngresosOperacionales contextRef="ctx4" unitRef="COP" decimals="2">0</n13:OtrosIngresosOperacionales>
+	<ifrs0:OtherExpenseByNature contextRef="ctx4" unitRef="COP" decimals="2">17768246034.8</ifrs0:OtherExpenseByNature>
+	<n13:Gastosdeoperaciones contextRef="ctx4" unitRef="COP" decimals="2">17768246034.8</n13:Gastosdeoperaciones>
+	<n13:Otroscreditos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Otroscreditos>
+	<n13:OtrosIntereses contextRef="ctx4" unitRef="COP" decimals="2">0</n13:OtrosIntereses>
+	<n13:PordisminucionenelValorRazonablesinst.deDeuda contextRef="ctx4" unitRef="COP" decimals="2">0</n13:PordisminucionenelValorRazonablesinst.deDeuda>
+	<n13:PordisminucionenelvalordemercadoInst.dePat. contextRef="ctx4" unitRef="COP" decimals="2">0</n13:PordisminucionenelvalordemercadoInst.dePat.>
+	<n13:Porventaavalorrazonable contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Porventaavalorrazonable>
+	<n13:Creditobancos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Creditobancos>
+	<n13:Comisioncustodiafija contextRef="ctx4" unitRef="COP" decimals="2">16834999.99</n13:Comisioncustodiafija>
+	<n13:Gastosbancarios contextRef="ctx4" unitRef="COP" decimals="2">3918188.64</n13:Gastosbancarios>
+	<n13:Comisionadministracion contextRef="ctx4" unitRef="COP" decimals="2">298109272.74</n13:Comisionadministracion>
+	<n13:OtrasComisiones contextRef="ctx4" unitRef="COP" decimals="2">0</n13:OtrasComisiones>
+	<n13:OtrasEmisoresNacionales contextRef="ctx4" unitRef="COP" decimals="2">114092917.59</n13:OtrasEmisoresNacionales>
+	<n13:ComisionBursatil contextRef="ctx4" unitRef="COP" decimals="2">539725099.83</n13:ComisionBursatil>
+	<n13:ComisionGestorprofesional contextRef="ctx4" unitRef="COP" decimals="2">0</n13:ComisionGestorprofesional>
+	<n13:RevisoriaFiscal contextRef="ctx4" unitRef="COP" decimals="2">25657015.01</n13:RevisoriaFiscal>
+	<n13:Gastoslegales contextRef="ctx4" unitRef="COP" decimals="2">170061803</n13:Gastoslegales>
+	<n13:Otroshonorarios contextRef="ctx4" unitRef="COP" decimals="2">860135042.29</n13:Otroshonorarios>
+	<n13:PorreexpresiondeActivos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:PorreexpresiondeActivos>
+	<n13:AsesoriaLegaloJuridica contextRef="ctx4" unitRef="COP" decimals="2">116622538</n13:AsesoriaLegaloJuridica>
+	<n13:Gravamenalosmovimientosfinancieros contextRef="ctx4" unitRef="COP" decimals="2">149343894.27</n13:Gravamenalosmovimientosfinancieros>
+	<n13:Impuestosobrelasventas contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Impuestosobrelasventas>
+	<n13:Ivacomisiongestorprofesional contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Ivacomisiongestorprofesional>
+	<n13:SancioneseinteresesdeMora contextRef="ctx4" unitRef="COP" decimals="2">0</n13:SancioneseinteresesdeMora>
+	<n13:Otrosgastosdeoperacion contextRef="ctx4" unitRef="COP" decimals="2">476759088.11</n13:Otrosgastosdeoperacion>
+	<n13:ImpuestoPredial contextRef="ctx4" unitRef="COP" decimals="2">0</n13:ImpuestoPredial>
+	<n13:Seguros contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Seguros>
+	<n13:Indemnizaciones_ contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Indemnizaciones_>
+	<n13:Mantenimientopropiedadesdeinversion contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Mantenimientopropiedadesdeinversion>
+	<n13:Deteriorodeudores contextRef="ctx4" unitRef="COP" decimals="2">2094020984</n13:Deteriorodeudores>
+	<n13:DisminucionenelvalordemercadoInst.dePat. contextRef="ctx4" unitRef="COP" decimals="2">9828308831.03</n13:DisminucionenelvalordemercadoInst.dePat.>
+	<n13:DisminucionenelValorRazonablesinst.deDeuda contextRef="ctx4" unitRef="COP" decimals="2">744217131.18</n13:DisminucionenelValorRazonablesinst.deDeuda>
+	<n13:ReexpresiondeActivos contextRef="ctx4" unitRef="COP" decimals="2">2292439229.22</n13:ReexpresiondeActivos>
+	<n13:Impuestosasumidos contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Impuestosasumidos>
+	<n13:MantenimientoyReparaciones contextRef="ctx4" unitRef="COP" decimals="2">37999999.9</n13:MantenimientoyReparaciones>
+	<n13:Perdidaenventaactivosnocorrientesmantenidosparalaventa contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Perdidaenventaactivosnocorrientesmantenidosparalaventa>
+	<n13:ImpuestosYTasas contextRef="ctx4" unitRef="COP" decimals="2">149343894.27</n13:ImpuestosYTasas>
+	<n13:Arrendamientos_ contextRef="ctx4" unitRef="COP" decimals="2">0</n13:Arrendamientos_>
+	<ifrs0:ProfitLossBeforeTax contextRef="ctx4" unitRef="COP" decimals="2">-19589334764.51</ifrs0:ProfitLossBeforeTax>
+	<ifrs0:ProfitLossFromContinuingOperations contextRef="ctx4" unitRef="COP" decimals="2">-19589334764.51</ifrs0:ProfitLossFromContinuingOperations>
+	<ifrs0:ProfitLoss contextRef="ctx4" unitRef="COP" decimals="2">-19589334764.51</ifrs0:ProfitLoss>
+	<xbrli:context id="ctx5">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://www.davivienda.com">Davivienda</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:startDate>2025-05-31</xbrli:startDate>
+			<xbrli:endDate>2025-05-31</xbrli:endDate>
+		</xbrli:period>
+	</xbrli:context>
+	<ifrs0:NameOfReportingEntityOrOtherMeansOfIdentification contextRef="ctx5">FONDO DE CAPITAL PRIVADO TC LATAM</ifrs0:NameOfReportingEntityOrOtherMeansOfIdentification>
+	<xbrli:unit id="COP">
+		<xbrli:measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:COP</xbrli:measure>
+	</xbrli:unit>
+</xbrli:xbrl>

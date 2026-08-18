@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disección Estratégica: Memorando Team.txt de Charles Hoffman | DFRNT</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(18, 24, 40, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(56, 189, 248, 0.4);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-cyan: #38bdf8;
+            --accent-blue: #6366f1;
+            --accent-purple: #a855f7;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(56, 189, 248, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 60%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header & Hero */
+        .hero {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple), var(--accent-gold));
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 0.35rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge strong {
+            color: var(--text-main);
+        }
+
+        .badge-gold {
+            border-color: rgba(245, 158, 11, 0.4);
+            background: rgba(245, 158, 11, 0.1);
+            color: #fbbf24;
+        }
+
+        .badge-cyan {
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(56, 189, 248, 0.1);
+            color: #7dd3fc;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 900px;
+        }
+
+        /* Highlight Strategy Box */
+        .strategy-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+            border: 2px solid rgba(245, 158, 11, 0.5);
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+            position: relative;
+        }
+
+        .strategy-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .strategy-icon {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        }
+
+        .strategy-title h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #fef08a;
+        }
+
+        .strategy-title p {
+            font-size: 0.95rem;
+            color: #fde68a;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .strategy-item {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 14px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .strategy-item:hover {
+            transform: translateY(-3px);
+            border-color: rgba(245, 158, 11, 0.7);
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        .strategy-item-num {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .strategy-item p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        /* Section Titles */
+        .section-header {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-header .line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        /* 5 Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            padding: 1.75rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: var(--card-hover-border);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+
+        .tag-blue { background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .tag-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+        .tag-gold { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .tag-cyan { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+        .tag-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        .card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #f1f5f9;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        /* Quotes Block */
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .quote-card {
+            background: rgba(15, 23, 42, 0.9);
+            border-left: 4px solid var(--accent-cyan);
+            border-radius: 12px;
+            padding: 1.5rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .quote-card::before {
+            content: "“";
+            font-family: serif;
+            font-size: 4rem;
+            color: rgba(56, 189, 248, 0.15);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            line-height: 1;
+        }
+
+        .quote-card p {
+            position: relative;
+            z-index: 1;
+            font-size: 1rem;
+            color: #e2e8f0;
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-author {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            text-align: right;
+        }
+
+        /* Pipeline Visual Table */
+        .table-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 1.25rem 1.5rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-cyan);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 1.1rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .highlight-row {
+            background: rgba(56, 189, 248, 0.08) !important;
+            font-weight: 600;
+        }
+
+        .highlight-row td {
+            color: #7dd3fc;
+        }
+
+        /* Links & Footer */
+        .links-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .links-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--accent-cyan);
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .link-item:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            transform: translateX(4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 1.75rem 1.25rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .strategy-banner { padding: 1.5rem 1.25rem; }
+            th, td { padding: 0.85rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="badge-container">
+            <span class="badge badge-gold">💡 Memorando Estratégico</span>
+            <span class="badge badge-cyan">📁 Team.txt</span>
+            <span class="badge"><strong>Remitente:</strong> Charles Hoffman (Charlie)</span>
+            <span class="badge"><strong>Destinatario:</strong> Equipo DFRNT / Dean / Richard Gasca</span>
+            <span class="badge"><strong>Fecha:</strong> 27 de Julio de 2026</span>
+        </div>
+        <h1>Disección Estratégica: Memorando "Team.txt"</h1>
+        <p>Análisis exhaustivo del memorando interno de Charles Hoffman donde valida el <strong>Accounting & Audit by Design (A&AD) Framework</strong> desarrollado por Richard Gasca como el estado objetivo definitivo para la transformación digital e IA de las empresas y la hoja de ruta de producto para <strong>DFRNT</strong>.</p>
+    </header>
+
+    <!-- HIGHLIGHT STRATEGY BANNER -->
+    <section class="strategy-banner">
+        <div class="strategy-header">
+            <div class="strategy-icon">🎯</div>
+            <div class="strategy-title">
+                <h2>LA ESTRATEGIA PLANTEADA POR CHARLES AL EQUIPO DE DFRNT</h2>
+                <p>Cuatro mandatos ejecutivos para posicionar a DFRNT como líder del mercado</p>
+            </div>
+        </div>
+        <div class="strategy-grid">
+            <div class="strategy-item">
+                <div class="strategy-item-num">01. CONSTRUIR EL PRODUCTO CORRECTO</div>
+                <p>DFRNT debe enfocarse en ser la plataforma de <strong>Orquestación Semántica</strong> que conecta los estándares (UBL, REA, ACTUS, XBRL, SBRM). Ese es el producto que el mercado realmente necesita.</p>
+            </div>
+            <div class="strategy-item">
+                <div class="strategy-item-num">02. VENDER LA TRANSFORMACIÓN REAL</div>
+                <p>Responder a la consultoría de las Big 4 (PwC/Anthropic) desafiando su "Land-and-Expand": <strong>A&AD de Richard Gasca es el estado objetivo (Target Architecture)</strong> que define la transformación contable con IA.</p>
+            </div>
+            <div class="strategy-item">
+                <div class="strategy-item-num">03. SOCIALIZACIÓN E INFLUENCIA DE LÍDERES</div>
+                <p>Dean debe entregar formalmente esta visión a <strong>John Clements</strong>. Charles confirma que ya socializó este enfoque con él y conoce su reacción positiva.</p>
+            </div>
+            <div class="strategy-item">
+                <div class="strategy-item-num">04. VITRINA INTERNACIONAL DE VALIDACIÓN</div>
+                <p>Aprovechar la presentación del Proof of Concept (PoC) en la <strong>Conferencia Internacional sobre Auditoría e Inteligencia Artificial (Alemania, Sept. 2026)</strong> como el hito de validación global.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 PILLARS -->
+    <div class="section-header">
+        <h2>Los 5 Pilares Analíticos de Team.txt</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="pillars-grid">
+
+        <!-- Pillar 1 -->
+        <div class="card">
+            <div>
+                <span class="card-tag tag-blue">Pilar 1 • Validación</span>
+                <h3>Reconocimiento Total a A&AD (Richard Gasca)</h3>
+                <p>Charles manifiesta un aprecio creciente por el marco A&AD creado por Richard Gasca, destacando su capacidad de ejecución práctica.</p>
+                <ul>
+                    <li>Demuestra que la información fluye determinísticamente desde la transacción hasta el dictamen final.</li>
+                    <li>Supera la teoría mediante un <strong>Proof of Concept (PoC) funcional</strong> que resuelve la auditoría determinista (incluyendo <em>zero-shot audit</em>).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="card">
+            <div>
+                <span class="card-tag tag-gold">Pilar 2 • Diagnóstico</span>
+                <h3>El "KLUDGE" de los Estándares & Oportunidad</h3>
+                <p>Todos los estándares (UBL, REA, ACTUS, XBRL, SBRM, SBVR) fueron creados aisladamente por "guerras de territorio" o desconocimiento.</p>
+                <ul>
+                    <li>La pila contable actual es un remiendo frágil (<em>KLUDGE</em>) lleno de fragmentación física y semántica.</li>
+                    <li><strong>La Oportunidad de Negocio:</strong> Interconectar y hacer encajar estos estándares es la gran oportunidad comercial para DFRNT.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="card">
+            <div>
+                <span class="card-tag tag-purple">Pilar 3 • Debate Consultoría</span>
+                <h3>Respuesta a Big 4: "¿Transformación Hacia Qué?"</h3>
+                <p>Analiza el modelo de consultoría "Land-and-Expand" (ej. PwC / Anthropic) que vende transformación digital sin rumbo claro.</p>
+                <ul>
+                    <li>Si la empresa invierte millones en transformarse con IA: <em>¿Transformación hacia qué?</em></li>
+                    <li><strong>Respuesta de Charles:</strong> El marco A&AD de Richard Gasca es exactamente la arquitectura objetivo hacia donde deben ir.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="card">
+            <div>
+                <span class="card-tag tag-cyan">Pilar 4 • Filosofía</span>
+                <h3>La IA es el "Y2K" Contable (Industrialización)</h3>
+                <p>Compara el pánico actual de la IA con el año 2000. No habrá Armagedón, pero sí serios problemas al usar IA sobre datos incoherentes.</p>
+                <ul>
+                    <li><strong>Artesanía Antigua:</strong> Contadores como "cazadores de transacciones" y remediadores manuales a posteriori (regla 1-10-100 / <em>plugs</em>).</li>
+                    <li><strong>Industrialización A&AD:</strong> Sistema auto-consistente, <em>Poka-Yoke</em> (prevención en origen) con frontera protegida por reglas interpretables por máquina.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="card">
+            <div>
+                <span class="card-tag tag-green">Pilar 5 • Hoja de Ruta</span>
+                <h3>Directriz Directa de Producto para DFRNT</h3>
+                <p>Charles envía una instrucción estratégica directa a la dirección de DFRNT sobre lo que deben construir.</p>
+                <ul>
+                    <li><strong>"Esto es lo que creo que DFRNT debería estar construyendo."</strong></li>
+                    <li>La propuesta de valor es innegable para contadores, auditores y analistas.</li>
+                    <li>Ruta de socialización con John Clements y validación académica en Alemania.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CITAS TEXTUALES CLAVE -->
+    <div class="section-header">
+        <h2>Citas Textuales Clave de Charles Hoffman en Team.txt</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="quotes-grid">
+        <div class="quote-card">
+            <p>"Second, what a freaking KLUDGE. Pretty much all those things were created in isolation without knowledge of each other. BUT EVERY PROBLEM IS AN OPPORTUNITY!!!"</p>
+            <div class="quote-author">— Charles Hoffman CPA</div>
+        </div>
+        <div class="quote-card">
+            <p>"If someone came to me and said they wanted to do a 'transformation'; my first question would be, 'Transformation into what?' Richard’s Accounting & Audit by Design Framework answers that question. That is the 'that' the transformation SHOULD BE."</p>
+            <div class="quote-author">— Charles Hoffman CPA</div>
+        </div>
+        <div class="quote-card">
+            <p>"As I told Dean months ago, artificial intelligence is the 'Y2K' of our era... There is no real way an accountant, auditor, or analyst would object with the value that is conveyed."</p>
+            <div class="quote-author">— Charles Hoffman CPA</div>
+        </div>
+        <div class="quote-card">
+            <p>"This is incredibly important information; it will help make sure the right product(s) are built. And, personally, this is what I believe DFRNT should be building."</p>
+            <div class="quote-author">— Charles Hoffman CPA</div>
+        </div>
+    </div>
+
+    <!-- PIPELINE MATRIX -->
+    <div class="section-header">
+        <h2>Matriz de Orquestación del Pipeline Semántico (A&AD)</h2>
+        <div class="line"></div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Capa del Pipeline</th>
+                    <th>Estándar / Marco</th>
+                    <th>Función en la Pila Empresarial</th>
+                    <th>Rol en A&AD Framework</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gobernanza / Reglas</strong></td>
+                    <td>SBVR (OMG) / BPMN</td>
+                    <td>Vocabulario de negocio, reglas sintácticas y flujos.</td>
+                    <td>Curaduría de reglas de frontera (<em>fenced boundary</em>).</td>
+                </tr>
+                <tr>
+                    <td><strong>Transacción Operativa</strong></td>
+                    <td>UBL (ISO/IEC)</td>
+                    <td>Facturas, órdenes de compra y documentos de negocio.</td>
+                    <td>Captura de hechos comerciales en origen.</td>
+                </tr>
+                <tr>
+                    <td><strong>Contrato Financiero</strong></td>
+                    <td>ACTUS (ISO/IEC) / REA</td>
+                    <td>Algoritmos de contratos y proyecciones de caja.</td>
+                    <td>Modelado determinista de flujos y eventos futuros.</td>
+                </tr>
+                <tr>
+                    <td><strong>Diario de Auditoría</strong></td>
+                    <td>XBRL GL (XBRL Int.)</td>
+                    <td>Libro diario, transacciones y pista de auditoría.</td>
+                    <td>Trazabilidad y proveniencia ininterrumpida.</td>
+                </tr>
+                <tr>
+                    <td><strong>Reportes y Taxonomía</strong></td>
+                    <td>SBRM (OMG) / GAAP / IFRS</td>
+                    <td>Estructura de reporte, hipercubos y patrones CAP.</td>
+                    <td>Presentación y estados financieros agregados.</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td><strong>Orquestador Determinista</strong></td>
+                    <td><strong>A&AD Framework (DFRNT)</strong></td>
+                    <td><strong>Integración determinista de toda la pila.</strong></td>
+                    <td><strong>Validación agéntica por diseño / Cero alucinación IA.</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- LINKS CARD -->
+    <section class="links-card">
+        <h3>🔗 Documentos y Publicaciones Referenciadas</h3>
+        <div class="links-list">
+            <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Charles%20Hoffman/Mail/2026-07-27/DFRNT/Team.txt" class="link-item" target="_blank">
+                📄 <strong>Team.txt</strong> — Mensaje original de Charles Hoffman (2026-07-27)
+            </a>
+            <a href="file:///c:/Users/IPHIX/Documents/Projects/DFRNT/Documentacion/Charles%20Hoffman/Mail/2026-07-27/DFRNT/diseccion_team_hoffman.md" class="link-item" target="_blank">
+                📝 <strong>diseccion_team_hoffman.md</strong> — Análisis en formato Markdown
+            </a>
+            <a href="https://digitalfinancialreporting.blogspot.com/2026/07/standards-for-interconnecting.html" class="link-item" target="_blank">
+                🌐 <strong>Standards for Interconnecting the Enterprise Stack</strong> (Blog Post Charles Hoffman)
+            </a>
+            <a href="https://seattlemethod.blogspot.com/2026/07/coming-transformation-of-accounting.html" class="link-item" target="_blank">
+                🌐 <strong>Coming Transformation of Accounting Information Systems</strong> (Blog Post Charles Hoffman)
+            </a>
+            <a href="https://seattlemethod.blogspot.com/2026/07/coming-transformation-of-accounting_0858910251.html" class="link-item" target="_blank">
+                🌐 <strong>Coming Transformation of Accounting Information Systems (Alternative)</strong> (Blog Post Charles Hoffman)
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Documentación del Proyecto DFRNT • Accounting & Audit by Design (A&AD) Framework • 2026</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

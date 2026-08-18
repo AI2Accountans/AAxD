@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/object_03",
+  "definitions": {
+    "object_01": {
+      "type": "object",
+      "required": [
+        "lineNumberCounter",
+        "amount",
+        "agent_identifier",
+        "measurable"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lineNumberCounter": {
+          "type": "number"
+        },
+        "amount": {
+          "type": "number"
+        },
+        "agent_identifier": {
+          "title": "agent_identifier",
+          "type": "object",
+          "required": [
+            "_id",
+            "identifierDescription"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "_id": {
+              "type": "string",
+              "format": "uri"
+            },
+            "identifierDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "measurable": {
+          "title": "measurable",
+          "type": "object",
+          "required": [
+            "measurableQuantity",
+            "measurableUnitOfMeasure"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "measurableQuantity": {
+              "type": "number"
+            },
+            "measurableUnitOfMeasure": {
+              "type": "string"
+            }
+          }
+        },
+        "account": {
+          "title": "account",
+          "type": "object",
+          "required": [
+            "accountMainID"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "accountMainID": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "object_02": {
+      "title": "data",
+      "type": "object",
+      "required": [
+        "EntryDetail"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "EntryDetail": {
+          "type": "array",
+          "title": "EntryDetail",
+          "items": {
+            "$ref": "#/definitions/object_01"
+          }
+        }
+      }
+    },
+    "object_03": {
+      "type": "object",
+      "required": [
+        "data"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/object_02"
+        }
+      }
+    }
+  }
+}

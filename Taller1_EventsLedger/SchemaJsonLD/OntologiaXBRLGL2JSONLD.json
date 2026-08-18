@@ -1,0 +1,355 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "A&AD Business Events Ledger Schema",
+  "description": "Schema JSON-LD para el Business Events Ledger (Taller 1). Implementa los requerimientos de Hoffman (2026-07-21): traversal bidireccional EVENT >> Standard Report Line Item, cada entrada como un HOLON unico, vocabulario minimo de ISO 15944-4 / REA / DCA / ACTUS / MINI Framework. Eleva el schema Taller1 con trazabilidad PROV-O de Momento1.",
+  "$ref": "#/definitions/instancesArray",
+  "definitions": {
+
+    "FIBO_StockCorporation": {
+      "description": "Entidad legal reportante. La empresa como 'nexo de contratos' (Sunder). Anclaje del Instantive Grounding.",
+      "type": "object",
+      "required": ["@type", "@id", "artifact_name", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":                { "type": "string", "const": "FIBO_StockCorporation" },
+        "@id":                  { "type": "string", "description": "URI unica. Patron: FIBO_StockCorporation/{NIT}" },
+        "artifact_name":        { "type": "string" },
+        "identifierCode":       { "type": "string", "description": "NIT o identificador fiscal" },
+        "identifierDescription":{ "type": "string", "description": "Nombre legal de la entidad" },
+        "identifierType":       { "type": "string", "enum": ["NIT", "EIN", "VAT", "CIF"] },
+        "nexus": {
+          "description": "Referencias a contratos que conforman el nexo (Sunder). Array de @id.",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "SourceDocument": {
+      "description": "Documento fuente que origina el evento. El 'Momento 0': la realidad antes de la contabilidad.",
+      "type": "object",
+      "required": ["@type", "@id", "artifact_name", "documentType", "documentDate"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":          { "type": "string", "const": "SourceDocument" },
+        "@id":            { "type": "string", "description": "URI unica. Patron: SourceDocument/{tipo}-{numero}" },
+        "artifact_name":  { "type": "string" },
+        "documentType":   { "type": "string", "description": "Tipo de documento. Ej: Invoice, Contract, PublicDeed, Receipt" },
+        "documentNumber": { "type": "string" },
+        "documentDate":   { "type": "string", "format": "date-time" },
+        "engaged_agents": {
+          "description": "Agentes que participaron en el documento fuente. Array de @id de GistPerson o FIBO_StockCorporation.",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "GistPerson": {
+      "description": "Agente economico individual (EconomicAgent segun REA / ISO 15944-4). Persona natural o juridica.",
+      "type": "object",
+      "required": ["@type", "@id", "identifierCode", "identifierDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":                { "type": "string", "const": "GistPerson" },
+        "@id":                  { "type": "string", "description": "URI unica. Patron: Agent/{identificador}" },
+        "identifierCode":       { "type": "string" },
+        "identifierDescription":{ "type": "string" },
+        "identifierType":       { "type": "string", "enum": ["c", "v", "e", "o"], "description": "c=customer, v=vendor, e=employee, o=other (XBRL GL identifierType)" },
+        "artifact_name":        { "type": "string" }
+      }
+    },
+
+    "Account": {
+      "description": "Cuenta del Plan de Cuentas (Local Chart of Accounts). Nodo terminal del traversal hacia reporting.",
+      "type": "object",
+      "required": ["@type", "@id", "accountMainID", "accountMainDescription"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":                 { "type": "string", "const": "Account" },
+        "@id":                   { "type": "string", "description": "URI unica. Patron: Account/{codigo}" },
+        "accountMainID":         { "type": "string", "description": "Codigo de cuenta del plan local" },
+        "accountMainDescription":{ "type": "string" },
+        "mainAccountType":       { "type": "string", "enum": ["Asset", "Liability", "Equity", "Revenue", "Expense"] },
+        "mini_lineItem":         { "type": "string", "description": "URI del Standard Report Line Item MINI Framework al que mapea esta cuenta. Habilita el traversal Account >> ReportLine." },
+        "artifact_name":         { "type": "string" }
+      }
+    },
+
+    "EntryHeader": {
+      "description": "Cabecera del asiento contable. Agrupa los EntryDetail de un mismo EconomicEvent. El contenedor del HOLON.",
+      "type": "object",
+      "required": ["@type", "@id", "posting_date", "economic_event"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":           { "type": "string", "const": "EntryHeader" },
+        "@id":             { "type": "string", "description": "URI unica. Patron: EntryHeader/{JE-XXX}" },
+        "artifact_name":   { "type": "string" },
+        "posting_date":    { "type": "string", "format": "date-time" },
+        "source_document": { "type": "string", "description": "@id del SourceDocument que origina este asiento" },
+        "economic_event":  { "type": "string", "description": "@id del ISO15944_EconomicEvent raiz de este asiento. CLAVE para traversal." }
+      }
+    },
+
+    "EntryDetail": {
+      "description": "Linea del asiento contable (XBRL GL entryDetail). Implementa el traversal bidireccional de Hoffman: EVENT >> EntryDetail >> Account >> MINI Line Item. Elevado con PROV-O de Momento1.",
+      "type": "object",
+      "required": ["@type", "@id", "header", "lineNumberCounter", "account", "amount", "debitCreditCode"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "description": "Permite multi-tipado semantico. Ej: ['EntryDetail','prov:Entity']",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "@context": {
+          "description": "Contexto JSON-LD para namespaces de vocabularios externos.",
+          "type": "object",
+          "properties": {
+            "prov":  { "type": "string", "const": "http://www.w3.org/ns/prov#" },
+            "xbrl":  { "type": "string", "const": "http://xbrl.org/2006/xbrldi" },
+            "dca":   { "type": "string", "const": "https://xbrlsite.azurewebsites.net/seattlemethod/dca/" },
+            "mini":  { "type": "string", "const": "https://xbrlsite.azurewebsites.net/2026/reporting-framework/mini/" },
+            "actus": { "type": "string", "const": "https://www.actusfrf.org/techspecs" }
+          }
+        },
+        "@id":              { "type": "string", "description": "URI unica. Patron: EntryDetail/{JE-XXX}-{lineNumber}" },
+        "artifact_name":    { "type": "string" },
+        "header":           { "type": "string", "description": "@id del EntryHeader padre" },
+        "lineNumberCounter":{ "type": "integer" },
+        "account":          { "type": "string", "description": "@id de la cuenta (Account). Via Account.mini_lineItem se llega al reporte." },
+        "amount":           { "type": "number" },
+        "debitCreditCode":  { "type": "string", "enum": ["D", "C"] },
+        "postingDate":      { "type": "string", "format": "date-time" },
+        "accountingPurposeCode": {
+          "type": "string",
+          "description": "XBRL GL: proposito contable. Permite clasificar el mismo evento para IFRS, GAAP, o impuestos desde el origen. CONSERVADO de Taller1.",
+          "enum": ["IFRS", "US-GAAP", "TAX", "MGMT", "STAT"]
+        },
+        "prov:generatedAtTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "W3C PROV-O: momento exacto de creacion del registro. Temporal Grounding (Cap. 10). ELEVADO de Momento1."
+        },
+        "prov:wasAttributedTo": {
+          "description": "W3C PROV-O: agente responsable de este registro. Temporal Grounding.",
+          "type": "object",
+          "properties": {
+            "@id":   { "type": "string" },
+            "@type": { "type": "string" }
+          }
+        },
+        "resource":         { "type": "string", "description": "@id del ISO15944_EconomicResource involucrado" },
+        "agent":            { "type": "string", "description": "@id del GistPerson o FIBO_StockCorporation agente" },
+        "agent_identifier": { "type": "string", "description": "Descripcion literal del agente (XBRL GL identifierDescription)" },
+        "duality":          { "type": "string", "description": "@id del ISO15944_Duality que enlaza el evento reciproco" },
+        "mini_lineItem":    { "type": "string", "description": "URI directa al Standard Report Line Item MINI. Habilita traversal directo EntryDetail >> ReportLine sin pasar por Account." },
+        "xbrlInfo": {
+          "description": "Informacion XBRL para enlace con taxonomias de reporte. CONSERVADO de Taller1.",
+          "type": "object",
+          "properties": {
+            "detailedContentFilter": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "measurable": {
+          "description": "Cantidad fisica del recurso economico (XBRL GL measurable). Captura la realidad no monetaria.",
+          "type": "object",
+          "required": ["measurableCode", "measurableID", "measurableDescription", "measurableQuantity", "measurableUnitOfMeasure", "measurableCostPerUnit"],
+          "properties": {
+            "measurableCode":         { "type": "string" },
+            "measurableID":           { "type": "string" },
+            "measurableDescription":  { "type": "string" },
+            "measurableQuantity":     { "type": "number" },
+            "measurableUnitOfMeasure":{ "type": "string" },
+            "measurableCostPerUnit":  { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "ISO15944_EconomicEvent": {
+      "description": "Evento Economico REA (ISO 15944-4). El HOLON raiz segun Hoffman. UNA entrada que representa la realidad. Origen del traversal EVENT >> ... >> Report Line Item.",
+      "type": "object",
+      "required": ["@type", "@id", "eventDescription", "eventDate", "dca_EventType", "dca_Party", "dca_Counterparty"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":            { "type": "string", "const": "ISO15944_EconomicEvent" },
+        "@id":              { "type": "string", "description": "URI unica. Patron: EconomicEvent/{UUID}" },
+        "eventDescription": { "type": "string" },
+        "eventDate":        { "type": "string", "format": "date-time" },
+        "dca_EventType":    { "type": "string", "description": "DCA Core Events: tipo de evento. Ej: dca:Remittance, dca:Fulfillment, dca:EconomicContract" },
+        "dca_Party":        { "type": "string", "description": "@id del agente principal (dca:Self o GistPerson/@id)" },
+        "dca_Counterparty": { "type": "string", "description": "@id del agente contraparte" },
+        "dca_Involves":     { "type": "string", "description": "dca:Money, dca:Property, dca:Service, dca:Information" },
+        "dca_RightOrObligation": { "type": "string", "enum": ["dca:Right", "dca:Obligation"] },
+        "mini_BusinessEventCode": { "type": "string", "description": "Codigo del evento en el MINI Framework. Clave para traversal EVENT >> Report. Ej: mini:InvestmentsByOwner" },
+        "source_document":  { "type": "string", "description": "@id del SourceDocument que evidencia este evento" },
+        "entry_header":     { "type": "string", "description": "@id del EntryHeader contable derivado de este evento" }
+      }
+    },
+
+    "ISO15944_EconomicResource": {
+      "description": "Recurso Economico REA (ISO 15944-4). El objeto de valor que cambia de manos en el evento.",
+      "type": "object",
+      "required": ["@type", "@id", "resourceType", "resourceIdentifier"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":              { "type": "string", "const": "ISO15944_EconomicResource" },
+        "@id":                { "type": "string" },
+        "resourceType":       { "type": "string", "description": "Ej: Money, Property, Service, FinancialInstrument" },
+        "resourceIdentifier": { "type": "string" },
+        "resourceDescription":{ "type": "string" }
+      }
+    },
+
+    "ISO15944_EconomicAgent": {
+      "description": "Agente Economico REA (ISO 15944-4). Quien participa en el evento. Complementa GistPerson con el rol REA.",
+      "type": "object",
+      "required": ["@type", "@id", "agentRole"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":     { "type": "string", "const": "ISO15944_EconomicAgent" },
+        "@id":       { "type": "string" },
+        "agentRole": { "type": "string", "enum": ["Provider", "Receiver", "CustodialAgent", "InternalAgent", "ExternalAgent"] },
+        "agent_ref": { "type": "string", "description": "@id del GistPerson o FIBO_StockCorporation correspondiente" }
+      }
+    },
+
+    "ISO15944_Duality": {
+      "description": "Dualidad REA: el vinculo logico entre el evento trigger y el evento resultado. Garantiza que cada intercambio economico es bidireccional y equilibrado.",
+      "type": "object",
+      "required": ["@type", "@id", "triggerEvent", "resultingEvent"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":         { "type": "string", "const": "ISO15944_Duality" },
+        "@id":           { "type": "string" },
+        "triggerEvent":  { "type": "string", "description": "@id del ISO15944_EconomicEvent que inicia el intercambio" },
+        "resultingEvent":{ "type": "string", "description": "@id del ISO15944_EconomicEvent que es la contraprestacion" }
+      }
+    },
+
+    "ISO15944_StockFlow": {
+      "description": "Stock-Flow REA: la direccion del impacto del evento sobre el recurso (inflow/outflow).",
+      "type": "object",
+      "required": ["@type", "@id", "flowDirection", "resource", "event"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":         { "type": "string", "const": "ISO15944_StockFlow" },
+        "@id":           { "type": "string" },
+        "flowDirection": { "type": "string", "enum": ["inflow", "outflow"] },
+        "resource":      { "type": "string", "description": "@id del ISO15944_EconomicResource afectado" },
+        "event":         { "type": "string", "description": "@id del ISO15944_EconomicEvent que causa el flujo" }
+      }
+    },
+
+    "ACTUS_Contract": {
+      "description": "Contrato financiero algoritmico (ACTUS FRF). El holon que 'sabe' su futuro: genera sus propios flujos de caja proyectados. Elevado de Momento1.",
+      "type": "object",
+      "required": ["@type", "@id", "actus_ContractType", "actus_NotionalPrincipal", "actus_NominalInterestRate", "actus_InitialExchangeDate", "actus_MaturityDate"],
+      "additionalProperties": false,
+      "properties": {
+        "@type":                             { "type": "string", "const": "ACTUS_Contract" },
+        "@id":                               { "type": "string", "description": "URI unica. Patron: ACTUS_Contract/{ID}" },
+        "actus_ContractType":                { "type": "string", "description": "PAM, ANN, LAM, NAM, CLM, etc." },
+        "actus_ContractRole":                { "type": "string", "enum": ["RPA", "RPL"] },
+        "actus_Currency":                    { "type": "string" },
+        "actus_NotionalPrincipal":           { "type": "number" },
+        "actus_NominalInterestRate":         { "type": "number" },
+        "actus_DayCountConvention":          { "type": "string" },
+        "actus_StatusDate":                  { "type": "string", "format": "date-time" },
+        "actus_InitialExchangeDate":         { "type": "string", "format": "date-time" },
+        "actus_MaturityDate":                { "type": "string", "format": "date-time" },
+        "actus_CycleAnchorDateOfInterestPayment": { "type": "string", "format": "date-time" },
+        "actus_CycleOfInterestPayment":      { "type": "string" },
+        "actus_ExpectedEvents": {
+          "description": "Array de @id de ACTUS_Event generados por este contrato.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "economic_event_ref": { "type": "string", "description": "@id del ISO15944_EconomicEvent que origino este contrato. Enlace REA-ACTUS." },
+        "prov:wasGeneratedBy": {
+          "type": "object",
+          "properties": {
+            "@id":                { "type": "string" },
+            "@type":              { "type": "string" },
+            "prov:used":          { "type": "string" },
+            "actus_EngineVersion":{ "type": "string" },
+            "actus_QueryParams":  { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "ACTUS_Event": {
+      "description": "Evento derivado de un contrato ACTUS (flujo de caja proyectado). Se enlaza a ISO15944_EconomicEvent para el traversal completo. Elevado de Momento1.",
+      "type": "object",
+      "required": ["@type", "@id", "actus_EventType", "actus_EventDate", "actus_Payoff", "actus_Currency"],
+      "additionalProperties": false,
+      "properties": {
+        "@type": {
+          "description": "Multi-tipo: ['ACTUS_Event','prov:Entity'] o ['ACTUS_Event','ISO15944_EconomicEvent']",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "@context": {
+          "type": "object",
+          "properties": {
+            "prov":  { "type": "string", "const": "http://www.w3.org/ns/prov#" }
+          }
+        },
+        "@id":                       { "type": "string" },
+        "actus_EventType":           { "type": "string", "description": "IP=Interest Payment, MD=Maturity, PR=Principal Repayment, etc." },
+        "actus_EventTypeName":       { "type": "string" },
+        "actus_EventDate":           { "type": "string", "format": "date-time" },
+        "actus_Payoff":              { "type": "number" },
+        "actus_Currency":            { "type": "string" },
+        "actus_NominalValue":        { "type": "number" },
+        "actus_NominalRate":         { "type": "number" },
+        "actus_NominalAccrued":      { "type": "number" },
+        "actus_DaysAccrued":         { "type": "integer" },
+        "actus_TotalInterestCollected":{ "type": "number" },
+        "actus_ContractID":          { "type": "string", "description": "@id del ACTUS_Contract padre" },
+        "prov:wasDerivedFrom":       { "type": "string", "description": "@id del ACTUS_Contract que genero este evento" },
+        "prov:wasGeneratedBy": {
+          "type": "object",
+          "properties": {
+            "@id":   { "type": "string" },
+            "@type": { "type": "string" }
+          }
+        },
+        "xbrl_interpretation": { "type": "string", "description": "Texto legible que conecta el evento ACTUS con su interpretacion en XBRL GL / MINI Framework" },
+        "mini_lineItem":        { "type": "string", "description": "URI del Standard Report Line Item MINI al que mapea este evento ACTUS. Traversal ACTUS_Event >> Report." }
+      }
+    },
+
+    "instancesArray": {
+      "description": "Array de instancias del Business Events Ledger. Cada elemento es un nodo del grafo semantico.",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "$ref": "#/definitions/FIBO_StockCorporation",       "description": "Capa 0: Entidad reportante" },
+          { "$ref": "#/definitions/SourceDocument",              "description": "Capa 0: Documento fuente (Momento 0)" },
+          { "$ref": "#/definitions/GistPerson",                  "description": "Capa 0: Agente (persona/org)" },
+          { "$ref": "#/definitions/ISO15944_EconomicEvent",      "description": "Capa 1: Evento REA — RAIZ DEL HOLON" },
+          { "$ref": "#/definitions/ISO15944_EconomicResource",   "description": "Capa 1: Recurso REA" },
+          { "$ref": "#/definitions/ISO15944_EconomicAgent",      "description": "Capa 1: Agente REA (con rol)" },
+          { "$ref": "#/definitions/ISO15944_Duality",            "description": "Capa 1: Dualidad REA" },
+          { "$ref": "#/definitions/ISO15944_StockFlow",          "description": "Capa 1: Stock-Flow REA" },
+          { "$ref": "#/definitions/ACTUS_Contract",              "description": "Capa 2: Contrato algoritmico ACTUS" },
+          { "$ref": "#/definitions/ACTUS_Event",                 "description": "Capa 2: Evento proyectado ACTUS" },
+          { "$ref": "#/definitions/Account",                     "description": "Capa 3: Cuenta CoA → MINI" },
+          { "$ref": "#/definitions/EntryHeader",                 "description": "Capa 3: Cabecera asiento XBRL GL" },
+          { "$ref": "#/definitions/EntryDetail",                 "description": "Capa 3: Linea asiento XBRL GL + PROV-O" }
+        ]
+      }
+    }
+
+  }
+}
