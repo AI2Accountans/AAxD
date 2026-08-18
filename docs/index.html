@@ -1,891 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-First Accounting Operating System | WEF 2026 vs A&AD Benchmark</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>A&AD Going Concern Pipeline v1.4 — Gobernanza SBVR & Symbio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#0f766e',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#0d9488',
+                lineColor: '#38bdf8',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#8b5cf6'
+            }
+        });
+    </script>
     <style>
-        :root {
-            --bg-dark: #090d16;
-            --bg-card: rgba(18, 26, 43, 0.7);
-            --bg-card-hover: rgba(26, 38, 64, 0.85);
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-glow: rgba(99, 102, 241, 0.3);
-            
-            --primary: #6366f1;
-            --primary-light: #818cf8;
-            --secondary: #06b6d4;
-            --accent: #10b981;
-            --warning: #f59e0b;
-            --purple: #a855f7;
-            
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --text-dim: #6b7280;
-            
-            --font-title: 'Outfit', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --font-code: 'Fira Code', monospace;
+        body { background-color: #0b1329; color: #e2e8f0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1rem;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 60%);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header & Hero */
-        header {
-            padding: 48px 0 32px 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 40px;
-        }
-
-        .badge-bar {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-        }
-
-        .badge {
-            background: rgba(99, 102, 241, 0.15);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: var(--primary-light);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .badge.cyan {
-            background: rgba(6, 182, 212, 0.15);
-            border-color: rgba(6, 182, 212, 0.3);
-            color: var(--secondary);
-        }
-
-        .badge.emerald {
-            background: rgba(16, 185, 129, 0.15);
-            border-color: rgba(16, 185, 129, 0.3);
-            color: var(--accent);
-        }
-
-        h1 {
-            font-family: var(--font-title);
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.15;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+        .step-number {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 16px;
         }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 900px;
-            font-weight: 300;
+        .badge-sbvr {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(234, 88, 12, 0.2));
+            border: 1px solid rgba(245, 158, 11, 0.5);
+            color: #fbbf24;
         }
-
-        /* Executive Briefing Card */
-        .dedication-card {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            border-left: 4px solid var(--primary-light);
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 48px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .dedication-card::before {
-            content: "\f0e0";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            right: -10px;
-            bottom: -20px;
-            font-size: 140px;
-            color: rgba(255, 255, 255, 0.02);
-            pointer-events: none;
-        }
-
-        .dedication-title {
-            font-family: var(--font-title);
-            font-size: 1.4rem;
-            color: var(--primary-light);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .dedication-body p {
-            margin-bottom: 14px;
-            color: #d1d5db;
-            font-size: 1.02rem;
-        }
-
-        .dedication-signature {
-            margin-top: 20px;
-            font-weight: 600;
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Navigation Tabs */
-        .tabs-header {
-            display: flex;
-            gap: 8px;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 32px;
-            overflow-x: auto;
-            padding-bottom: 4px;
-        }
-
-        .tab-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            font-family: var(--font-title);
-            font-size: 1.05rem;
-            font-weight: 600;
-            padding: 12px 20px;
-            cursor: pointer;
-            border-radius: 8px 8px 0 0;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .tab-btn:hover {
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .tab-btn.active {
-            color: var(--primary-light);
-            border-bottom: 3px solid var(--primary-light);
-            background: rgba(99, 102, 241, 0.08);
-        }
-
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Section Headings */
-        .section-heading {
-            font-family: var(--font-title);
-            font-size: 1.8rem;
-            margin-bottom: 24px;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-heading i {
-            color: var(--primary);
-        }
-
-        /* Cards Grid */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-
-        @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; }
-        }
-
-        .block-card {
-            background: var(--bg-card);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 28px;
-            transition: all 0.3s ease;
-        }
-
-        .block-card:hover {
-            border-color: var(--border-glow);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 16px;
-        }
-
-        .block-title {
-            font-family: var(--font-title);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .block-tag {
-            font-size: 0.75rem;
-            font-family: var(--font-code);
-            padding: 4px 10px;
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--secondary);
-            border: 1px solid rgba(6, 182, 212, 0.2);
-        }
-
-        .comparison-subgrid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        @media (max-width: 600px) {
-            .comparison-subgrid { grid-template-columns: 1fr; }
-        }
-
-        .subbox {
-            background: rgba(10, 15, 26, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 16px;
-        }
-
-        .subbox-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .subbox-title.wef { color: var(--warning); }
-        .subbox-title.aad { color: var(--accent); }
-
-        .subbox ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .subbox li {
-            font-size: 0.9rem;
-            color: #cbd5e1;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 16px;
-        }
-
-        .subbox li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--primary-light);
-        }
-
-        /* Scorecard Table */
-        .table-responsive {
-            overflow-x: auto;
-            margin-bottom: 32px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-        }
-
-        table.scorecard {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--bg-card);
-            text-align: left;
-            font-size: 0.95rem;
-        }
-
-        table.scorecard th {
-            background: rgba(15, 23, 42, 0.9);
-            color: var(--primary-light);
-            font-family: var(--font-title);
-            font-weight: 700;
-            padding: 16px 20px;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        table.scorecard td {
-            padding: 16px 20px;
-            border-bottom: 1px solid var(--border-color);
-            color: #d1d5db;
-            vertical-align: top;
-        }
-
-        table.scorecard tr:hover {
-            background: var(--bg-card-hover);
-        }
-
-        .verdict-tag {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .verdict-tag.complementary { background: rgba(99, 102, 241, 0.15); color: var(--primary-light); }
-        .verdict-tag.advantage { background: rgba(16, 185, 129, 0.15); color: var(--accent); }
-
-        /* Canvas Grid */
-        .canvas-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        @media (max-width: 900px) {
-            .canvas-grid { grid-template-columns: 1fr; }
-        }
-
-        .canvas-box {
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-        }
-
-        .canvas-box-header {
-            font-family: var(--font-title);
-            font-weight: 700;
-            color: var(--secondary);
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 6px;
-        }
-
-        .canvas-box ul {
-            list-style: none;
-        }
-
-        .canvas-box li {
-            font-size: 0.88rem;
-            color: #cbd5e1;
-            margin-bottom: 6px;
-            padding-left: 14px;
-            position: absolute-like;
-        }
-
-        .canvas-box li::before {
-            content: "➔";
-            color: var(--primary);
-            margin-right: 6px;
-        }
-
-        /* Code & Formula Showcase */
-        .code-box {
-            background: #0d1117;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            font-family: var(--font-code);
-            font-size: 0.88rem;
-            color: #e6edf3;
-            overflow-x: auto;
-            margin-bottom: 20px;
-        }
-
-        .formula-highlight {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-            border: 1px solid var(--border-glow);
-            border-radius: 12px;
-            padding: 24px;
-            text-align: center;
-            font-size: 1.2rem;
-            font-family: var(--font-title);
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 32px;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 0.9rem;
+        .badge-symbio {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2));
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            color: #c084fc;
         }
     </style>
 </head>
-<body>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="badge-bar">
-                <span class="badge"><i class="fa-solid fa-brain"></i> WEF White Paper June 2026</span>
-                <span class="badge cyan"><i class="fa-solid fa-diagram-project"></i> A&AD Methodology</span>
-                <span class="badge emerald"><i class="fa-solid fa-scale-balanced"></i> Financial Knowledge Graph</span>
-            </div>
-            <h1>The AI-First Enterprise Operating System for Accounting & Auditing</h1>
-            <p class="hero-subtitle">
-                Operationalizing the World Economic Forum (WEF June 2026) "AI-First Blueprint" through Accounting & Audit by Design (A&AD), ISO 15944-4 REA Ontology, XBRL GL, and Bitemporal Knowledge Graphs (DFRNT / TerminusDB).
-            </p>
-        </header>
-
-        <!-- Executive Briefing & Context -->
-        <div class="dedication-card">
-            <div class="dedication-title">
-                <i class="fa-solid fa-paper-plane"></i> Executive Briefing & Strategic Overview
-            </div>
-            <div class="dedication-body">
-                <p><strong>To Financial Leaders, System Architects, and Modern Auditors:</strong></p>
-                <p>
-                    The World Economic Forum (WEF), in collaboration with Kearney, recently released their flagship June 2026 white paper: <em>"The AI-First Operating System: A Blueprint for Operating and Business Model Innovation"</em>. The paper makes a compelling case: legacy enterprises fail when they merely "enable" AI by tacking LLMs onto outdated processes; true transformation occurs when the enterprise is redesigned from the ground up around an <strong>Intelligence Engine</strong> and a machine-legible <strong>Ontology</strong>.
-                </p>
-                <p>
-                    This benchmark report demonstrates how foundational work in <strong>XBRL GL, REA Ontology (ISO/IEC 15944-4), Standard Business Reporting (SBR), and the Logical Theory of Accounting</strong> provides the precise domain-level foundation required to turn the WEF’s macro-level vision into an unyielding, mathematically verifiable reality.
-                </p>
-                <p>
-                    Below is the comparative synthesis mapping the 5 WEF Building Blocks directly onto the <strong>Accounting & Audit by Design (A&AD)</strong> framework powered by DFRNT and TerminusDB.
-                </p>
-            </div>
-            <div class="dedication-signature">
-                <i class="fa-solid fa-signature"></i> Prepared for the Global Accounting, Financial Systems & XBRL Community
-            </div>
+    <header class="text-center mb-10 w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 via-sky-400 to-indigo-400">
+            A&AD: Going Concern Onboarding Pipeline
+        </h1>
+        <div class="flex flex-wrap justify-center gap-3 mb-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-sm">
+                Version 1.4 — SBVR Deontic Governance & Symbio Paradigm
+            </span>
+            <span class="inline-block px-4 py-1.5 rounded-full badge-sbvr font-mono text-sm">
+                OMG SBVR 1.5 + REA Bridge
+            </span>
+            <span class="inline-block px-4 py-1.5 rounded-full badge-symbio font-mono text-sm">
+                SHACL 1.2 Poka-Yoke + David Wood Symbio
+            </span>
         </div>
-
-        <!-- Navigation Tabs -->
-        <div class="tabs-header">
-            <button class="tab-btn active" onclick="switchTab('tab-blocks')"><i class="fa-solid fa-cubes"></i> 5 WEF Blocks vs A&AD</button>
-            <button class="tab-btn" onclick="switchTab('tab-scorecard')"><i class="fa-solid fa-table-list"></i> Comparative Scorecard</button>
-            <button class="tab-btn" onclick="switchTab('tab-theory')"><i class="fa-solid fa-book-bookmark"></i> Theoretical Triad (Sorter, Ijiri, McCarthy)</button>
-            <button class="tab-btn" onclick="switchTab('tab-canvas')"><i class="fa-solid fa-border-all"></i> AI-First Business Model Canvas</button>
-        </div>
-
-        <!-- TAB 1: 5 BLOCKS COMPARISON -->
-        <div id="tab-blocks" class="tab-content active">
-            <h2 class="section-heading"><i class="fa-solid fa-layer-group"></i> Mapping WEF 2026 Building Blocks to A&AD</h2>
-
-            <div class="grid-2">
-                <!-- Block 1 -->
-                <div class="block-card">
-                    <div class="block-header">
-                        <div class="block-title">Block 1: Intelligence Engine</div>
-                        <span class="block-tag">Flywheel & GraphRAG</span>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        WEF proposes an Intelligence Engine at the core, compounding speed, scale, and scope through autonomous inference loops.
-                    </p>
-                    <div class="comparison-subgrid">
-                        <div class="subbox">
-                            <div class="subbox-title wef"><i class="fa-solid fa-globe"></i> WEF 2026 Concept</div>
-                            <ul>
-                                <li>Speed Loop: Rapid experimentation & autonomous inference.</li>
-                                <li>Scale Loop: Multi-use platforms linked to P&L metrics.</li>
-                                <li>Scope Loop: Recombining capabilities across domains.</li>
-                            </ul>
-                        </div>
-                        <div class="subbox">
-                            <div class="subbox-title aad"><i class="fa-solid fa-microchip"></i> A&AD Realization</div>
-                            <ul>
-                                <li><strong>Sorter's (1969) Events Approach:</strong> Raw unaggregated data-as-context.</li>
-                                <li><strong>GraphRAG:</strong> LLMs traverse explicit graph paths (no SQL join overhead).</li>
-                                <li><strong>XBRL GL:</strong> Standardized multi-jurisdictional transport payload.</li>
-                            </ul>
-                        </div>
-                    </div>
+        
+        <p class="text-base md:text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed">
+            Arquitectura visual completa para el encuadre e inmunización algorítmica de entidades en marcha. Integra la captura Shift-Left (ISO 15944), el Gobernador Deóntico Transversal (OMG SBVR), el transporte canónico XBRL GL (SRCD), los vasos comunicantes REA, y la validación SHACL 1.2 en el Grafo Bitemporal de TerminusDB con colaboración simbiótica IA-Humano (Symbio).
+        </p>
+        
+        <!-- Architectural Highlights v1.4 -->
+        <div class="glass-card p-6 mx-auto max-w-5xl text-left border-l-4 border-l-sky-400 shadow-2xl mb-4">
+            <h4 class="text-sky-300 font-bold text-lg mb-3 flex items-center gap-2">
+                <span>🚀</span> Novedades Principales de la Versión 1.4:
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-slate-300">
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-amber-400 block mb-1">1. Gobernador Deóntico SBVR (OMG 1.5)</strong>
+                    Captura en origen de reglas de negocio (<code class="text-amber-300">obligation</code>, <code class="text-amber-300">prohibition</code>) transmutadas mediante tuplas <code class="text-slate-200">gl-cor:qualifierEntry</code> y <code class="text-slate-200">gl-cor:detailComment</code> hacia el nodo <code class="text-slate-200">sbvr:BusinessRule</code> en JSON-LD V2.
                 </div>
-
-                <!-- Block 2 -->
-                <div class="block-card">
-                    <div class="block-header">
-                        <div class="block-title">Block 2: Adaptive AI Technology Stack</div>
-                        <span class="block-tag">Ontology + JSON-LD</span>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        WEF defines a 6-layer modular stack (Data, Context, Models, Orchestration, UI, Infra) that absorbs model shifts without workflow rewrites.
-                    </p>
-                    <div class="comparison-subgrid">
-                        <div class="subbox">
-                            <div class="subbox-title wef"><i class="fa-solid fa-globe"></i> WEF 2026 Concept</div>
-                            <ul>
-                                <li>Context Layer: Registries, MCP, Ontologies, APIs.</li>
-                                <li>Model Agnostic Portfolio: SLMs for routing, Frontier LLMs for reasoning.</li>
-                                <li>Control Layers: Own orchestration & connectors.</li>
-                            </ul>
-                        </div>
-                        <div class="subbox">
-                            <div class="subbox-title aad"><i class="fa-solid fa-microchip"></i> A&AD Realization</div>
-                            <ul>
-                                <li><strong>Formal Ontologies:</strong> ISO 21838 (BFO) + ISO 15944-4 (REA).</li>
-                                <li><strong>DFRNT / TerminusDB:</strong> Bitemporal Git-like revision control graph.</li>
-                                <li><strong>Idempotent JSON-LD:</strong> Deterministic <code>@id</code> URIs for exact re-ingest.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-sky-400 block mb-1">2. Vasos Comunicantes Canónicos REA</strong>
+                    Mapeo sin colisión de <code class="text-sky-300">reconciliationEquivalentClass</code> a <code class="text-slate-200">gl-cor:identifierCategory</code>, unificando Agentes y Recursos de ISO 15944-4 / UBL para evitar la reconciliación N-a-N al final del tubo.
                 </div>
-
-                <!-- Block 3 -->
-                <div class="block-card">
-                    <div class="block-header">
-                        <div class="block-title">Block 3: Operations Redesign & Legibility</div>
-                        <span class="block-tag">Control by Design</span>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        WEF emphasizes making the business "legible" to AI via ontologies (e.g. Palantir Ontology) and allocating tasks by Human Agency Scale (H1-H5).
-                    </p>
-                    <div class="comparison-subgrid">
-                        <div class="subbox">
-                            <div class="subbox-title wef"><i class="fa-solid fa-globe"></i> WEF 2026 Concept</div>
-                            <ul>
-                                <li>Business Legibility: Codifying workflows, rules, data.</li>
-                                <li>Human Agency Scale: Automation (H1-H2) vs Augmentation (H3-H5).</li>
-                                <li>Operational Leverage: Intelligence as capital.</li>
-                            </ul>
-                        </div>
-                        <div class="subbox">
-                            <div class="subbox-title aad"><i class="fa-solid fa-microchip"></i> A&AD Realization</div>
-                            <ul>
-                                <li><strong>ISO 15944-4 OeBTO:</strong> Standardized 3-layer legibility (Data, Logic, Action).</li>
-                                <li><strong>Shift-Left Control:</strong> SHACL 1.2 shape validation at ingestion point ($1 vs $100 post-facto audit).</li>
-                                <li><strong>Deterministic Rules:</strong> Invariant accounting duality enforcement.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-indigo-400 block mb-1">3. Inmunización Poka-Yoke con SHACL 1.2</strong>
+                    Ejecución determinista en **TerminusDB**. El motor compila la regla SBVR en un escudo SHACL 1.2 que hace **Rollback automático** si se intenta registrar una cuenta por cobrar (PUC 1305) violando una obligación de pago efectivo en la constitución.
                 </div>
-
-                <!-- Block 4 -->
-                <div class="block-card">
-                    <div class="block-header">
-                        <div class="block-title">Block 4: Human-AI Teaming</div>
-                        <span class="block-tag">Closed World Agents</span>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        WEF highlights T-shaped talent trees, federated organizational models (CAIO & BU CAIOs), and human oversight for quality assurance.
-                    </p>
-                    <div class="comparison-subgrid">
-                        <div class="subbox">
-                            <div class="subbox-title wef"><i class="fa-solid fa-globe"></i> WEF 2026 Concept</div>
-                            <ul>
-                                <li>Federated Organization: Central standards + BU execution.</li>
-                                <li>T-shaped Talent: Deep domain knowledge + AI fluency.</li>
-                                <li>Trust & Guardrails: Predefined evaluation benchmarks.</li>
-                            </ul>
-                        </div>
-                        <div class="subbox">
-                            <div class="subbox-title aad"><i class="fa-solid fa-microchip"></i> A&AD Realization</div>
-                            <ul>
-                                <li><strong>Accountant-Centric UX:</strong> Semantic Bridge mapping debit/credit to REA nodes.</li>
-                                <li><strong>Closed World Assumption (CWA):</strong> AI Agents restricted from hallucinating facts.</li>
-                                <li><strong>Vault-LD:</strong> Living working papers in Markdown with YAML-LD headers.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Block 5 Full Width -->
-            <div class="block-card" style="margin-bottom: 0;">
-                <div class="block-header">
-                    <div class="block-title">Block 5: New Value Creation & Agentic Commerce</div>
-                    <span class="block-tag">Triple Entry & Momentum Accounting</span>
-                </div>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">
-                    WEF outlines how AI reshapes value propositions, positioning AI from "feature" to "invisible infrastructure", and driving 5 levels of agentic commerce maturity.
-                </p>
-                <div class="comparison-subgrid">
-                    <div class="subbox">
-                        <div class="subbox-title wef"><i class="fa-solid fa-globe"></i> WEF 2026 Concept</div>
-                        <ul>
-                            <li>AI Positioning: Feature $\rightarrow$ Product $\rightarrow$ Platform $\rightarrow$ Infrastructure $\rightarrow$ Invisible.</li>
-                            <li>Agentic Commerce: Agents acting autonomously on behalf of users (Level 1 to 5).</li>
-                            <li>Continuous Value: Systems that compound intelligence with every customer transaction.</li>
-                        </ul>
-                    </div>
-                    <div class="subbox">
-                        <div class="subbox-title aad"><i class="fa-solid fa-microchip"></i> A&AD Realization (Ijiri Momentum Accounting)</div>
-                        <ul>
-                            <li><strong>Triple Entry & Force:</strong> Measuring Stock (Resource), Flow (Event), and Impulse/Acceleration (ACTUS Future Contracts & Commitments).</li>
-                            <li><strong>Continuous Assurance:</strong> Auditing transformed into invisible, real-time trust infrastructure.</li>
-                            <li><strong>Verifiable Evidence:</strong> Legal accountability & court-admissible evidence trails via Git-like bitemporal graphs.</li>
-                        </ul>
-                    </div>
+                <div class="bg-slate-900/60 p-3.5 rounded-lg border border-slate-800">
+                    <strong class="text-purple-400 block mb-1">4. Paradigma Symbio (David A. Wood - BYU / AICPA) & GRC (COSO / OCEG)</strong>
+                    Coordinación simbiótica entre auditores humanos y Agentes de IA sobre Vault-LD (Markdown/YAML-LD). Volcado completo del marco COSO y el modelo de capacidad GRC de OCEG (Learn, Align, Perform, Review).
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- TAB 2: SCORECARD -->
-        <div id="tab-scorecard" class="tab-content">
-            <h2 class="section-heading"><i class="fa-solid fa-table-list"></i> Comparative Scorecard: WEF 2026 vs A&AD Methodology</h2>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">
-                Direct evaluation contrasting the general macroeconomic enterprise framework (WEF) against the specialized financial/audit operating system (A&AD).
-            </p>
-
-            <div class="table-responsive">
-                <table class="scorecard">
-                    <thead>
-                        <tr>
-                            <th>Dimension</th>
-                            <th>WEF 2026 Blueprint</th>
-                            <th>A&AD / DFRNT Framework</th>
-                            <th>Synergy & Verdict</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Scope & Focus</strong></td>
-                            <td>Macro-enterprise transformation across all industries (Tech, Pharma, Logistics).</td>
-                            <td>Deep domain specialization for Accounting, Financial Audit, and GRC.</td>
-                            <td><span class="verdict-tag complementary">Complementary</span><br><small>WEF provides macro vision; A&AD delivers domain engine.</small></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ontological Foundation</strong></td>
-                            <td>Custom or proprietary ontologies (e.g., Palantir Foundry, custom enterprise graphs).</td>
-                            <td>International open standards: ISO 15944-4 (REA), ISO 21838 (BFO), OMG SBVR.</td>
-                            <td><span class="verdict-tag advantage">A&AD Advantage</span><br><small>Prevents vendor lock-in; guarantees international regulatory alignment.</small></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Data Normalization</strong></td>
-                            <td>Generic data flywheels, telemetry, synthetic edge case generation.</td>
-                            <td>XBRL GL (gl-cor/gl-bus), UBL 2.1, ISO 21378 ADCS normalization.</td>
-                            <td><span class="verdict-tag advantage">A&AD Advantage</span><br><small>1:1 mapping with global GAAP/IFRS tax schemas.</small></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Internal Control Paradigm</strong></td>
-                            <td>Quantitative evaluation benchmarks and guardrail scoring (e.g., ServiceNow).</td>
-                            <td><strong>Control by Design:</strong> SHACL 1.2 shape validation at ingestion ($1 Shift-Left).</td>
-                            <td><span class="verdict-tag advantage">A&AD Advantage</span><br><small>Deterministic prevention instead of probabilistic post-facto scoring.</small></td>
-                        </tr>
-                        <tr>
-                            <td><strong>AI Trust & Verification</strong></td>
-                            <td>Traceability, visibility dashboards, and human intervention checkpoints.</td>
-                            <td><strong>GraphRAG under Closed World Assumption (CWA):</strong> Zero financial hallucination.</td>
-                            <td><span class="verdict-tag advantage">A&AD Advantage</span><br><small>Mathematical impossibility of AI inventing non-existent ledger entries.</small></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Auditing & Accountability</strong></td>
-                            <td>Focus on operational efficiency, ARR scaling, and cycle-time compression.</td>
-                            <td><strong>Ijiri's Accountability Theory:</strong> Inviolable court-admissible evidence trails in TerminusDB.</td>
-                            <td><span class="verdict-tag advantage">A&AD Advantage</span><br><small>Bitemporal Git-like commits guarantee forensic auditability.</small></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Step Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-7xl mb-12">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">1</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Momento 0</h3>
+            <p class="text-sm text-slate-300">Balance de Apertura estructurado en XBRL GL como el holón inmutable fundacional.</p>
         </div>
 
-        <!-- TAB 3: THEORETICAL TRIAD -->
-        <div id="tab-theory" class="tab-content">
-            <h2 class="section-heading"><i class="fa-solid fa-graduation-cap"></i> The Scientific Triad Underlying A&AD</h2>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">
-                A&AD is not merely a modern technology stack; it is the computational realization of 50+ years of Accounting Control Theory.
-            </p>
-
-            <div class="formula-highlight">
-                Zachman Framework + W3C Semantic Stack (SHACL 1.2 / JSON-LD) + Accounting Control Theory (Sorter / Ijiri / McCarthy) = Algorithmic Financial Certainty
-            </div>
-
-            <div class="grid-2">
-                <div class="block-card">
-                    <div class="block-header">
-                        <div class="block-title" style="color: var(--primary-light);">1. George H. Sorter (1969)</div>
-                        <span class="block-tag">An Events Approach</span>
-                    </div>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 12px;">
-                        <strong>The Critique:</strong> Traditional accounting uses "Value-Weighted Aggregations" that destroy context by collapsing thousands of transactions into a single summary line item.
-                    </p>
-                    <p style="color: #cbd5e1; font-size: 0.95rem;">
-                        <strong>A&AD Solution:</strong> <em>Data-as-Context</em>. Raw economic events are ingested at atomic granularity (via XForms / ISO 21378 ADCS). Aggregations occur dynamically on demand over the Knowledge Graph without destroying source context.
-                    </p>
-                </div>
-
-                <div class="block-card">
-                    <div class="block-header">
-                        <div class="block-title" style="color: var(--secondary);">2. Yuji Ijiri (1975)</div>
-                        <span class="block-tag">Accountability & Momentum</span>
-                    </div>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 12px;">
-                        <strong>The Philosophy:</strong> Accounting's primary purpose is not just decision-usefulness, but <em>Accountability</em> and legal force of contracts.
-                    </p>
-                    <p style="color: #cbd5e1; font-size: 0.95rem;">
-                        <strong>A&AD Solution:</strong> Bitemporal Git-like graphs in TerminusDB ensure immutability. Ijiri's <strong>Triple Entry (Momentum Accounting)</strong> tracks Stock (Assets), Flow (Events), and Acceleration (ACTUS Future Contract Commitments).
-                    </p>
-                </div>
-            </div>
-
-            <div class="block-card">
-                <div class="block-header">
-                    <div class="block-title" style="color: var(--accent);">3. William E. McCarthy (1982) & ISO/IEC 15944-4</div>
-                    <span class="block-tag">REA Ontology</span>
-                </div>
-                <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 12px;">
-                    <strong>The Breakthrough:</strong> Freeing accounting from 15th-century paper double-entry ledgers (Pacioli) by structuring economic exchanges as <strong>Resources, Events, and Agents</strong>.
-                </p>
-                <p style="color: #cbd5e1; font-size: 0.95rem;">
-                    <strong>A&AD Solution:</strong> REA serves as the core schema in DFRNT. Financial accounting and ESG sustainability metrics reside in the exact same Knowledge Graph without duplication, governed by formal W3C SHACL 1.2 constraints.
-                </p>
-            </div>
+        <!-- Step 2 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-amber-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #f59e0b, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Shift Left & SBVR</h3>
+            <p class="text-sm text-slate-300">Captura XForms con ontología <strong>ISO 15944 (REA)</strong> y reglas deónticas <strong>OMG SBVR</strong> en la capa contractual.</p>
         </div>
 
-        <!-- TAB 4: CANVAS -->
-        <div id="tab-canvas" class="tab-content">
-            <h2 class="section-heading"><i class="fa-solid fa-border-all"></i> AI-First Business Model Canvas for Accounting & Auditing</h2>
-            <p style="color: var(--text-muted); margin-bottom: 24px;">
-                WEF's extension of Osterwalder's Business Model Canvas populated with A&AD's financial knowledge graph building blocks.
-            </p>
-
-            <div class="canvas-grid">
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Key Partners</div>
-                    <ul>
-                        <li>DFRNT & TerminusDB Graph Infrastructure</li>
-                        <li>XBRL International & Regulatory Tax Bodies</li>
-                        <li>ACTUS Financial Contract Standards Consortium</li>
-                        <li>W3C Semantic Web Community</li>
-                    </ul>
-                </div>
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Key Activities</div>
-                    <ul>
-                        <li>Idempotent JSON-LD URI-deterministic Ingestion</li>
-                        <li>SHACL 1.2 Control-by-Design Validation</li>
-                        <li>GraphRAG Automated Forensic Inspections</li>
-                        <li>Continuous Bitemporal Revision Auditing</li>
-                    </ul>
-                </div>
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Value Proposition</div>
-                    <ul>
-                        <li>24/7 Continuous Assurance & Invisible Audit</li>
-                        <li>Zero AI Hallucination in Financial Statements</li>
-                        <li>Real-Time Triple Entry Momentum Accounting</li>
-                        <li>Court-Admissible Evidence Graphs</li>
-                    </ul>
-                </div>
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Key Resources</div>
-                    <ul>
-                        <li>ISO 15944-4 (REA) & ISO 21838 (BFO) Ontologies</li>
-                        <li>DFRNT GraphQL & WOQL Schema Registry</li>
-                        <li>SHACL 1.2 Duality & Governance Rules</li>
-                        <li>Vault-LD (.md with YAML-LD) Working Papers</li>
-                    </ul>
-                </div>
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Customer Relationships</div>
-                    <ul>
-                        <li>Accountant-Centric UX (Semantic Bridge)</li>
-                        <li>Interactive Portable HTML5 Audit Portals</li>
-                        <li>Real-Time Executive Risk Dashboards</li>
-                        <li>Closed-World AI Audit Copilots</li>
-                    </ul>
-                </div>
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Channels</div>
-                    <ul>
-                        <li>Model Context Protocol (MCP) Agent Endpoints</li>
-                        <li>DFRNT GraphQL / REST API Gateways</li>
-                        <li>Direct ERP Connectors (XBRL GL / ISO 21378)</li>
-                        <li>Self-contained HTML5 Interactive Reports</li>
-                    </ul>
-                </div>
-                <div class="canvas-box">
-                    <div class="canvas-box-header">Cost Structure</div>
-                    <ul>
-                        <li>Shift-Left Prevention ($1 at Ingestion vs $100 Post-Audit)</li>
-                        <li>Optimized GraphRAG Compute (Precise Traversal)</li>
-                        <li>Reduced Manual Mappings via XBRL GL Parity</li>
-                    </ul>
-                </div>
-                <div class="canvas-box" style="grid-column: span 2;">
-                    <div class="canvas-box-header">Revenue Streams & Business Economics</div>
-                    <ul>
-                        <li>Continuous Assurance-as-a-Service Subscription Models</li>
-                        <li>High-Margin Fraud Detection & Risk Assessment APIs</li>
-                        <li>Instant Capital Markets Credibility (Reduced Borrowing Risk Premium)</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Step 3 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-sky-400">
+            <span class="text-5xl font-bold step-number mb-4">3</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Transmutación Canónica</h3>
+            <p class="text-sm text-slate-300">Mapeo en <strong>Altova MapForce</strong> hacia XBRL GL (SRCD) y serialización a <strong>JSON-LD V2</strong> con vasos comunicantes REA.</p>
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>Operationalizing the WEF 2026 AI-First Operating System via A&AD (Accounting & Audit by Design).</p>
-            <p style="margin-top: 6px; font-size: 0.8rem;">Document generated for the Global Accounting, Financial Systems & XBRL Community • August 2026</p>
-        </footer>
+        <!-- Step 4 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-indigo-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #818cf8, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Escudo SHACL 1.2</h3>
+            <p class="text-sm text-slate-300">Inmunización Poka-Yoke en <strong>TerminusDB</strong>. Validación estricta del CWA (Mundo Cerrado) y Rollback si viola reglas SBVR.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-purple-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #c084fc, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Auditoría Symbio</h3>
+            <p class="text-sm text-slate-300">Colaboración Humano-Agente (David Wood) con papeles de trabajo en <strong>Vault-LD</strong> y consultas bitemporales DFRNT.</p>
+        </div>
+
     </div>
 
-    <!-- JavaScript for Tabs -->
-    <script>
-        function switchTab(tabId) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+    <!-- Mermaid Flow Card -->
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center mb-12 border border-slate-700">
+        <h2 class="text-2xl font-bold mb-8 text-sky-300 border-b border-sky-800 pb-3 w-full text-center">
+            A&AD Going Concern Pipeline Architecture v1.4
+        </h2>
+        <div class="mermaid w-full flex justify-center">
+            graph TD
+                %% Shift Left Flow & SBVR Governance
+                B1[Captura Upstream XForms<br>ISO 15944 REA] -->|HTTP POST XML| B2[Base de Datos NoSQL<br>Instancia XML]
+                SBVR1[Gobernador SBVR 1.5<br>Structured English & Rules] -->|Reglas Deónticas| B1
+                
+                B2 -->|Encuadra Captura| B[Contratos Activos<br>ACTUS Framework]
+                B2 -->|Proyección Documental| B3[Plano Ricordanze<br>HTML5 / PDF Legado]
+                
+                %% Nodos de Origen (Génesis / Momento 0)
+                A[Balance de Apertura] -->|XBRL GL| E
+                B -->|Metadata Financiera y Operacional| E
+                C[Políticas Contables & SKOS] -->|Ontología| E
+                D[Reporte del Auditor] -->|Firma Criptográfica| E
+                
+                %% Nodo Central: El Momento 0
+                E((Establecimiento del<br>Nuevo Momento 0))
+                
+                %% Transmutación Semántica MapForce
+                F[Sistemas ERP Legados] -->|Asientos CSV / Google Sheets| G[Altova MapForce v2<br>Transmutación XBRL GL + SBVR]
+                G -->|JSON-LD V2 Payload<br>FIBO + REA + SBVR| H{Escudo Poka-Yoke<br>SHACL 1.2}
+                
+                %% Inmunización y Grafo TerminusDB
+                E --> H
+                H -->|Aprobado CWA| I[(TerminusDB / DFRNT<br>Semantic Knowledge Graph)]
+                H -.->|Rechazado Violación SBVR| ROLLBACK[Rollback Inmediato<br>$1 Shift-Left]
+                
+                %% Paradigma Symbio & Salidas
+                I -->|Vault-LD / PROV-O| K[Agentes IA Symbio<br>David Wood Paradigm]
+                I -->|QOWL Queries| J[Reportes Multidimensionales<br>COSO / OCEG / NIIF / ESG]
+                
+                %% Estilos
+                classDef genesis fill:#0d9488,stroke:#0f766e,stroke-width:2px,color:white;
+                classDef process_legacy fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:white;
+                classDef process_aad fill:#10b981,stroke:#047857,stroke-width:2px,color:white;
+                classDef database fill:#2563eb,stroke:#1d4ed8,stroke-width:2px,color:white;
+                classDef output fill:#7c3aed,stroke:#5b21b6,stroke-width:2px,color:white;
+                classDef shiftleft fill:#0ea5e9,stroke:#0284c7,stroke-width:2px,color:white;
+                classDef ricordanze fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:white;
+                classDef sbvr fill:#d97706,stroke:#b45309,stroke-width:2px,color:white;
+                classDef shacl fill:#dc2626,stroke:#991b1b,stroke-width:2px,color:white;
+                
+                class A,B,C,D,E genesis;
+                class F,G process_legacy;
+                class H process_aad;
+                class I database;
+                class J,K output;
+                class B1 shiftleft;
+                class B2 process_legacy;
+                class B3 ricordanze;
+                class SBVR1 sbvr;
+                class ROLLBACK shacl;
+        </div>
+    </div>
 
-            // Deactivate all tab buttons
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(button => button.classList.remove('active'));
+    <!-- Navigation / Links Footer -->
+    <footer class="text-center text-xs text-slate-400 py-6 border-t border-slate-800 w-full max-w-6xl">
+        <p class="mb-2">A&AD (Accounting & Audit by Design) — DFRNT Methodology Stack v1.4</p>
+        <p class="text-slate-500">Diseñado por Richard Gasca | Integrando ISO 15944, OMG SBVR 1.5, XBRL GL, TerminusDB, COSO, GRC OCEG y David A. Wood Symbio Framework.</p>
+    </footer>
 
-            // Activate selected tab content
-            document.getElementById(tabId).classList.add('active');
-
-            // Activate clicked button
-            const clickedBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(tabId));
-            if (clickedBtn) {
-                clickedBtn.classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>

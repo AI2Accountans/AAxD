@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Accionistas - Enterprise Knowledge Graph</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --success-color: #10b981;
+            --accent-glow: rgba(59, 130, 246, 0.5);
+            --header-bg: rgba(15, 23, 42, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-image: radial-gradient(circle at top right, rgba(30, 41, 59, 1), var(--bg-color) 40%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .dashboard {
+            width: 100%;
+            max-width: 1100px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--accent-glow);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--success-color);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .stat-title {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: var(--surface-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: var(--header-bg);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--border-color);
+            position: sticky;
+            top: 0;
+        }
+
+        tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+
+        .agent-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .agent-id {
+            font-size: 0.7rem;
+            color: var(--primary-color);
+            font-family: monospace;
+            margin-top: 2px;
+        }
+
+        .amount {
+            font-family: monospace;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .participation-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+
+        .participation-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 3px;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Libro de Accionistas</h1>
+        <p class="subtitle">Libro Auxiliar proyectado desde TerminusDB / GraphQL</p>
+    </header>
+
+    <div class="dashboard">
+        <div class="status-header">
+            <div>
+                <strong>Cuenta Mayor:</strong> <span style="color:var(--primary-color)">311505 (Capital Suscrito)</span>
+            </div>
+            <div class="status-indicator">
+                <div class="pulse"></div>
+                Sincronizado (Audit-by-Design)
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-title">Capital Total Pagado</div>
+                <div class="stat-value" id="totalCapital">...</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Cuotas Emitidas</div>
+                <div class="stat-value" id="totalShares">...</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Valor Nominal por Cuota</div>
+                <div class="stat-value" id="valuePerShare">...</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Total Accionistas</div>
+                <div class="stat-value" id="totalPartners">...</div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="ledgerTable">
+                <thead>
+                    <tr>
+                        <th>Nº Línea</th>
+                        <th>Identificación del Accionista</th>
+                        <th>Aporte Capital ($)</th>
+                        <th>Número de Cuotas</th>
+                        <th>% Participación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer-note">
+            Este reporte es un holón derivado dinámicamente de los <strong>Contratos de Constitución</strong> y eventos económicos registrados en el EKG.
+        </div>
+    </div>
+
+    <script>
+        // Exact JSON result provided by the user
+        const graphQLResponse = {
+          "data": {
+            "EntryDetail": [
+              {
+                "lineNumberCounter": 2,
+                "amount": 2500000,
+                "agent_identifier": {
+                  "_id": "terminusdb:///data/GistPerson/Socio_A",
+                  "identifierDescription": "Socio Fundador A"
+                },
+                "measurable": {
+                  "measurableQuantity": 2500,
+                  "measurableUnitOfMeasure": "Cuotas"
+                }
+              },
+              {
+                "lineNumberCounter": 3,
+                "amount": 2500000,
+                "agent_identifier": {
+                  "_id": "terminusdb:///data/GistPerson/Socio_B",
+                  "identifierDescription": "Socio Fundador B"
+                },
+                "measurable": {
+                  "measurableQuantity": 2500,
+                  "measurableUnitOfMeasure": "Cuotas"
+                }
+              },
+              {
+                "lineNumberCounter": 4,
+                "amount": 2500000,
+                "agent_identifier": {
+                  "_id": "terminusdb:///data/GistPerson/Socio_C",
+                  "identifierDescription": "Socio Fundador C"
+                },
+                "measurable": {
+                  "measurableQuantity": 2500,
+                  "measurableUnitOfMeasure": "Cuotas"
+                }
+              },
+              {
+                "lineNumberCounter": 5,
+                "amount": 2500000,
+                "agent_identifier": {
+                  "_id": "terminusdb:///data/GistPerson/Socio_D",
+                  "identifierDescription": "Socio Fundador D"
+                },
+                "measurable": {
+                  "measurableQuantity": 2500,
+                  "measurableUnitOfMeasure": "Cuotas"
+                }
+              }
+            ]
+          }
+        };
+
+        function renderLedger() {
+            const entries = graphQLResponse.data.EntryDetail;
+            const tbody = document.querySelector('#ledgerTable tbody');
+            
+            let totalCapital = 0;
+            let totalShares = 0;
+
+            // Calcular totales
+            entries.forEach(entry => {
+                totalCapital += entry.amount;
+                totalShares += entry.measurable.measurableQuantity;
+            });
+
+            const valuePerShare = totalShares > 0 ? (totalCapital / totalShares) : 0;
+
+            // Renderizar filas
+            entries.forEach((entry, index) => {
+                const shortId = entry.agent_identifier._id.split('/').pop();
+                const participationPercent = ((entry.measurable.measurableQuantity / totalShares) * 100).toFixed(2);
+                
+                const tr = document.createElement('tr');
+                tr.style.animation = `fadeInUp 0.4s ease-out ${index * 0.1}s both`;
+                
+                tr.innerHTML = `
+                    <td style="color:var(--text-muted)">#${entry.lineNumberCounter}</td>
+                    <td>
+                        <div class="agent-name">${entry.agent_identifier.identifierDescription}</div>
+                        <div class="agent-id">${shortId}</div>
+                    </td>
+                    <td class="amount">$${entry.amount.toLocaleString()}</td>
+                    <td>
+                        <strong>${entry.measurable.measurableQuantity.toLocaleString()}</strong> 
+                        <span style="font-size:0.75rem;color:var(--text-muted)">${entry.measurable.measurableUnitOfMeasure}</span>
+                    </td>
+                    <td>
+                        <div style="font-weight:600">${participationPercent}%</div>
+                        <div class="participation-bar-bg">
+                            <div class="participation-bar-fill" style="width: ${participationPercent}%"></div>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Actualizar KPIs
+            document.getElementById('totalCapital').textContent = '$' + totalCapital.toLocaleString();
+            document.getElementById('totalShares').textContent = totalShares.toLocaleString();
+            document.getElementById('valuePerShare').textContent = '$' + valuePerShare.toLocaleString();
+            document.getElementById('totalPartners').textContent = entries.length;
+        }
+
+        // Simular latencia de red
+        setTimeout(renderLedger, 300);
+    </script>
+</body>
+</html>

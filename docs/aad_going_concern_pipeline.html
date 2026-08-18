@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&AD Going Concern Pipeline v1.3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#0f766e',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#0d9488',
+                lineColor: '#9ca3af',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#2563eb'
+            }
+        });
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1rem;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <header class="text-center mb-10 w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-sky-400 to-blue-500">
+            A&AD: Going Concern Onboarding Pipeline
+        </h1>
+        <div class="inline-block px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-sm mb-4">
+            Version 1.3 — Shift Left (ISO 15944 + XForms + Base de Datos NoSQL + Plano Ricordanze)
+        </div>
+        <p class="text-base md:text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed">
+            Metodología visual para inicializar un Gemelo Digital Semántico en una entidad en marcha, anclando la confianza desde el Momento 0 hasta el Grafo Operativo con captura Shift Left (ISO 15944) en la capa contractual.
+        </p>
+        
+        <!-- Version Tracker & Architectural Notes -->
+        <div class="glass-card p-5 mx-auto max-w-5xl text-left border-l-4 border-l-teal-400 shadow-lg">
+            <h4 class="text-teal-400 font-bold mb-2 flex items-center gap-2">
+                <span>📋</span> Evolución del Modelo v1.3:
+            </h4>
+            <ul class="text-xs md:text-sm text-slate-300 space-y-2 list-disc list-inside">
+                <li>
+                    <strong>CH (Charlie):</strong> Aclaración sobre la dualidad de ACTUS (metadatos de contratos financieros vs. operacionales) y el rol de REA (flujo de eventos de negocio).
+                </li>
+                <li>
+                    <strong>Shift Left Contractual (ISO 15944 & XForms):</strong> Captura en origen mediante <strong>XForms</strong> enviada a la <strong>Base de Datos NoSQL (Instancia XML)</strong> que alimenta la caja de <em>Contratos Activos (ACTUS Framework)</em>.
+                </li>
+                <li>
+                    <strong>Base de Datos NoSQL & Plano Ricordanze:</strong> La instancia XML en la Base de Datos NoSQL proyecta vistas <strong>HTML5 / PDF</strong> hacia el <em>Semantic Ricordanze Plane</em> (conservación del sistema legado).
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Step Cards (Mantiene las 5 etapas principales de v1.2) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-7xl mb-12">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">1</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Momento 0</h3>
+            <p class="text-sm text-slate-300">Balance de Apertura estructurado en XBRL GL como el holón inmutable fundacional.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-sky-400">
+            <span class="text-5xl font-bold step-number mb-4">2</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Contratos Activos & Shift Left</h3>
+            <p class="text-sm text-slate-300">Uso de <strong>ACTUS & ISO 15944</strong> con captura <strong>XForms</strong>, almacenamiento en <strong>Base de Datos NoSQL</strong> y proyección al <strong>Plano Ricordanze (HTML/PDF)</strong>.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400">
+            <span class="text-5xl font-bold step-number mb-4">3</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Anclaje de Confianza</h3>
+            <p class="text-sm text-slate-300">El Dictamen del Auditor sella criptográficamente el balance de apertura, evitando revisiones pasadas.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-orange-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #f59e0b, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Hidratación Histórica</h3>
+            <p class="text-sm text-slate-300">Ingesta del ERP legado a un framework <strong>REA</strong> (Eventos de Negocio), expandiendo para validación SHACL.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-blue-400">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-xl font-semibold text-white mb-2">Estado Destino</h3>
+            <p class="text-sm text-slate-300">TerminusDB/DFRNT instanciado, listo para QOWL Queries multidimensionales y AI Zero-shot audits.</p>
+        </div>
+
+    </div>
+
+    <!-- Mermaid Flow Card -->
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center mb-12">
+        <h2 class="text-2xl font-bold mb-8 text-teal-300 border-b border-teal-800 pb-2 w-full text-center">Architecture Flow</h2>
+        <div class="mermaid w-full flex justify-center">
+            graph TD
+                %% Shift Left Flow: XForms -> NoSQL DB -> Contratos Activos
+                B1[Captura Upstream XForms<br>ISO 15944 REA] -->|HTTP POST XML| B2[Base de Datos NoSQL<br>Instancia XML]
+                B2 -->|Encuadra Captura| B[Contratos Activos<br>ACTUS Framework]
+                
+                %% Plano Ricordanze (Proyección Documental)
+                B2 -->|Proyección Documental| B3[Plano Ricordanze<br>HTML5 / PDF Legado]
+                
+                %% Nodos de Origen (Génesis / Momento 0)
+                A[Balance de Apertura] -->|XBRL GL| E
+                B -->|Metadata Financiera y Operacional| E
+                C[Políticas Contables] -->|Ontología / SKOS| E
+                D[Reporte del Auditor] -->|Firma de Confianza| E
+                
+                %% Nodo Central: El Momento 0
+                E((Establecimiento del<br>Nuevo Momento 0))
+                
+                %% Ingesta Histórica Legada
+                F[Sistemas ERP Legados] -->|Asientos de Diario CSV| G[Altova MapForce<br>Transmutación Semántica]
+                G -->|Eventos de Negocio REA<br>JSON-LD| H{Validación SHACL}
+                
+                %% Flujo al Grafo
+                E --> H
+                H -->|Aprobado| I[(TerminusDB / DFRNT<br>Semantic Knowledge Graph)]
+                
+                %% Salidas
+                I -->|QOWL Queries| J[Reportes Multidimensionales<br>NIIF / Fiscal / ESG]
+                I -->|Zero-shot Audit| K[Agentes Autónomos IA]
+                
+                %% Estilos
+                classDef genesis fill:#0d9488,stroke:#0f766e,stroke-width:2px,color:white;
+                classDef process_legacy fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:white;
+                classDef process_aad fill:#10b981,stroke:#047857,stroke-width:2px,color:white;
+                classDef database fill:#2563eb,stroke:#1d4ed8,stroke-width:2px,color:white;
+                classDef output fill:#7c3aed,stroke:#5b21b6,stroke-width:2px,color:white;
+                classDef shiftleft fill:#0ea5e9,stroke:#0284c7,stroke-width:2px,color:white;
+                classDef ricordanze fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:white;
+                
+                class A,B,C,D,E genesis;
+                class F,G process_legacy;
+                class H process_aad;
+                class I database;
+                class J,K output;
+                class B1 shiftleft;
+                class B2 process_legacy;
+                class B3 ricordanze;
+        </div>
+    </div>
+
+    <!-- Navigation / Links Footer -->
+    <footer class="text-center text-xs text-slate-400 py-4">
+        <p>A&AD (Accounting & Audit by Design) — DFRNT Methodology Stack v1.3</p>
+    </footer>
+
+</body>
+</html>
