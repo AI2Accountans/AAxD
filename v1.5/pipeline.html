@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&AD Pipeline v1.5 — The Accounting Manifold & Provenance by Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#0d9488',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#14b8a6',
+                lineColor: '#38bdf8',
+                secondaryColor: '#f59e0b',
+                tertiaryColor: '#8b5cf6',
+                fontFamily: 'Inter, system-ui, sans-serif'
+            }
+        });
+    </script>
+    <style>
+        body { 
+            background-color: #070d1e; 
+            color: #e2e8f0; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge-manifold {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(99, 102, 241, 0.2));
+            border: 1px solid rgba(14, 165, 233, 0.4);
+            color: #38bdf8;
+        }
+        .badge-provenance {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #34d399;
+        }
+        .badge-prolog {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: #fbbf24;
+        }
+        .badge-altova {
+            background: linear-gradient(135deg, rgba(217, 70, 239, 0.2), rgba(168, 85, 247, 0.2));
+            border: 1px solid rgba(217, 70, 239, 0.4);
+            color: #e879f9;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-10 flex flex-col items-center">
+
+    <!-- Header Section -->
+    <header class="text-center mb-10 w-full max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 via-sky-400 to-indigo-400 tracking-tight">
+            A&AD: The Accounting Manifold & Provenance by Design
+        </h1>
+        
+        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-6">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs md:text-sm">
+                Version 1.5 — The Hoffman Manifold & 7 Habits of W3C Provenance
+            </span>
+            <span class="inline-block px-3.5 py-1 rounded-full badge-manifold font-mono text-xs md:text-sm">
+                flow.png Architecture
+            </span>
+            <span class="inline-block px-3.5 py-1 rounded-full badge-provenance font-mono text-xs md:text-sm">
+                W3C PROV-O & RDF 1.2
+            </span>
+            <span class="inline-block px-3.5 py-1 rounded-full badge-prolog font-mono text-xs md:text-sm">
+                Prolog / LPS Rules Engine
+            </span>
+            <span class="inline-block px-3.5 py-1 rounded-full badge-altova font-mono text-xs md:text-sm">
+                Altova Suite & W3C XForms
+            </span>
+        </div>
+        
+        <p class="text-base md:text-lg text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Evolución integral del pipeline contable hacia un <strong>Manifold Bidireccional</strong> de certeza matemática. Consolida la captura en origen (<em>Shift-Left</em>) mediante curaduría humana asistida (W3C XForms + BaseX), la inferencia legalista libre de alucinaciones (SWI-Prolog / LPS sobre PUC 2650 y PCGE 2026), y el blindaje inmutable de procedencia W3C PROV-O / RDF 1.2 sobre TerminusDB y Algorand.
+        </p>
+        
+        <!-- Architectural Highlights v1.5 -->
+        <div class="glass-card p-6 mx-auto max-w-5xl text-left border-l-4 border-l-teal-400 shadow-2xl mb-8">
+            <h4 class="text-teal-300 font-bold text-lg mb-4 flex items-center gap-2">
+                <span>⚡</span> Novedades Arquitectónicas Principales de la Versión 1.5:
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-slate-300">
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <strong class="text-sky-300 block mb-1">1. Cristalización de <code>flow.png</code> de Charles Hoffman</strong>
+                    Resolución epistemológica del "GAP": convergencia de documentos heterogéneos (UBL, CSV, contratos JPEG/PDF) en un único <em>Standard Structured Business Events Journal</em>. A partir de allí, libros diarios, mayores, balance de comprobación y estados financieros son proyecciones deterministas.
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <strong class="text-emerald-300 block mb-1">2. Los 7 Hábitos de la Procedencia por Diseño (22-Oct-2026)</strong>
+                    Implementación de las directrices de <em>The Inference Engineer</em> validadas por Hoffman: registro del evento en el momento del acto, bitemporalidad (Valid Time vs. Transaction Time), reificación con IRIs explícitos RDF 1.2, inmutabilidad append-only en TerminusDB (<em>never overwrite; supersede</em>) y rechazo en frontera (<em>SHACL Fail Loudly</em>).
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <strong class="text-amber-300 block mb-1">3. Deducción Multijurisdiccional con SWI-Prolog / LPS</strong>
+                    El hecho económico REA (ISO 15944-4) actúa como invariante universal. El motor Prolog infiere las dinámicas contables tanto de Colombia (Decreto 2650 de 1993) como de Perú (PCGE 2026 / NIIF 18: doble imputación de Naturaleza y Destino analítico), garantizando partida doble estricta ($\sum D = \sum C$).
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <strong class="text-fuchsia-300 block mb-1">4. Sinergia Altova Suite & Estación HITL XForms</strong>
+                    Articulación de la tríada Altova: <strong>XMLSpy</strong> (Esquema canónico <code>BusinessEvent_XBRLGL_REA.xsd</code>), <strong>Altova StyleVision</strong> (Diseño visual y compilación XSLT de papeles de trabajo) y <strong>Altova MapForce</strong> (<code>JE2XBRLG2JSONLDV4.mfd</code> generando 70 instancias canónicas JSON-LD sin colisiones de ID).
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 5 Pipeline Stage Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-7xl mb-12">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400 shadow-xl">
+            <span class="text-5xl font-bold step-number mb-4">1</span>
+            <h3 class="text-lg font-bold text-white mb-2">Ingesta & Evidencia</h3>
+            <span class="text-xs font-mono text-teal-400 bg-teal-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-teal-800">Momento 0 & Hash</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Captura de documentos heterogéneos (UBL, CSV, JPEGs, PDFs). Sellado de evidencia con hash criptográfico SHA-256 y anclaje bitemporal $T_0$ en Algorand.
+            </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-sky-400 shadow-xl">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #38bdf8, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2</span>
+            <h3 class="text-lg font-bold text-white mb-2">Curaduría HITL</h3>
+            <span class="text-xs font-mono text-sky-400 bg-sky-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-sky-800">W3C XForms / BaseX</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Pre-poblado semántico por IA/OCR de recursos, eventos y agentes (REA). El auditor humano curador valida en split-screen y firma antes de iniciar mutaciones.
+            </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-amber-400 shadow-xl">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3</span>
+            <h3 class="text-lg font-bold text-white mb-2">Deducción Lógica</h3>
+            <span class="text-xs font-mono text-amber-400 bg-amber-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-amber-800">Prolog / LPS Rules</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Inferencia determinista de cuentas y asientos (PUC D.2650 o PCGE 2026 NIIF 18). Verificación matemática de partida doble ($\sum D = \sum C$) y prueba formal.
+            </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-fuchsia-400 shadow-xl">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #e879f9, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-lg font-bold text-white mb-2">Transmutación</h3>
+            <span class="text-xs font-mono text-fuchsia-400 bg-fuchsia-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-fuchsia-800">MapForce / StyleVision</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Transformación canónica a XBRL GL y serialización a 70 instancias JSON-LD sin colisiones de `@id`. Generación de papeles de trabajo con XSLT compilado.
+            </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-indigo-400 shadow-xl">
+            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #818cf8, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-lg font-bold text-white mb-2">Grafo Bitemporal</h3>
+            <span class="text-xs font-mono text-indigo-400 bg-indigo-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-indigo-800">TerminusDB / DFRNT</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Inyección al grafo inmutable con W3C PROV-O y RDF 1.2. Reconciliación continua, aduana SHACL Fail-Loudly y auditoría zero-shot con agentes de IA.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Main Architecture Diagram (Mermaid) -->
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center mb-16">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full border-b border-slate-700 pb-4 mb-6">
+            <h2 class="text-2xl font-bold text-teal-300">
+                Topología del Manifold Contable & Pipeline de Procedencia
+            </h2>
+            <span class="text-xs font-mono text-slate-400 mt-2 md:mt-0">
+                Modelo Isomórfico a Charles Hoffman (flow.png) + W3C PROV-O
+            </span>
+        </div>
+        
+        <div class="mermaid w-full flex justify-center py-4 overflow-x-auto">
+            graph LR
+                %% SUBGRAPH: INGESTA HETEROGÉNEA (SHIFT LEFT)
+                subgraph ENTRADA["1. Ingesta Heterogénea (Shift-Left)"]
+                    D1[Documento Estructurado<br>UBL Factura Electrónica]
+                    D2[Documento No Estructurado<br>CSV / JSON ERP]
+                    D3[Documento Presentación<br>Cheque / Pagaré JPG/PDF]
+                end
+
+                %% SUBGRAPH: CAPTURA & HITL
+                subgraph HITL["2. Curaduría HITL (BaseX / XForms)"]
+                    EXT[Extractor Multimodal<br>BaseX XQuery + OCR]
+                    HASH[Cálculo SHA-256<br>& Anclaje Algorand T0]
+                    XF[Estación de Curaduría<br>W3C XForms Puro]
+                    CURATOR((Auditor Humano<br>Curador))
+                end
+
+                %% SUBGRAPH: REGLAS DEDUCTIVAS
+                subgraph LOGIC["3. Deducción Lógica Formal"]
+                    SBVR[Vocabulario & Reglas<br>OMG SBVR 1.5]
+                    PL[Motor SWI-Prolog / LPS<br>PUC 2650 / PCGE 2026]
+                    POKA{Aduana Kirchhoff<br>∑ Débitos = ∑ Créditos}
+                end
+
+                %% SUBGRAPH: HOFFMAN MANIFOLD PROYECCIONES
+                subgraph MANIFOLD["4. El Manifold Contable (flow.png)"]
+                    BEJ[(Standard Structured<br>Business Events Journal)]
+                    GJ[General Journal<br>Libro Diario]
+                    GL[General Ledger<br>Libro Mayor]
+                    TB[Trial Balance<br>Balance de Comprobación]
+                    LS[Lead Schedule<br>Papeles de Trabajo]
+                    FS[Financial Statements<br>Estados Financieros]
+                end
+
+                %% SUBGRAPH: GRAFO INMUTABLE & PROVENANCE
+                subgraph GRAFO["5. Grafo de Conocimiento Inmutable"]
+                    MF[Altova MapForce<br>JE2XBRLG2JSONLDV4]
+                    SV[Altova StyleVision<br>Reporte Audit XSLT]
+                    TDB[(TerminusDB / DFRNT<br>Knowledge Graph)]
+                    PROVO[Audit Evidence Graph<br>W3C PROV-O & RDF 1.2]
+                    SHACL{Aduana SHACL 1.2<br>Fail Loudly}
+                end
+
+                %% CONEXIONES DE FLUJO
+                D1 --> EXT
+                D2 --> EXT
+                D3 --> EXT
+                EXT --> HASH
+                HASH --> XF
+                XF <--> CURATOR
+                CURATOR -->|Aprobación de Evento REA| SBVR
+                SBVR --> PL
+                PL --> POKA
+                POKA -->|Aprobado| BEJ
+                POKA -.->|Descuadre: Rechazo Inmediato| XF
+
+                %% Proyecciones de Hoffman
+                BEJ --> GJ
+                GJ --> GL
+                GL --> TB
+                TB --> LS
+                LS --> FS
+
+                %% Proyecciones al Grafo y Procedencia
+                BEJ --> MF
+                MF --> SHACL
+                SHACL -->|Compuerta Válida| TDB
+                TDB --- PROVO
+                PROVO -.->|Hiper-vínculo de Linaje| HASH
+                LS --> SV
+
+                %% ESTILOS VISUALES
+                classDef input fill:#1e293b,stroke:#475569,stroke-width:2px,color:#f8fafc;
+                classDef hitl fill:#0369a1,stroke:#38bdf8,stroke-width:2px,color:#ffffff;
+                classDef logic fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#ffffff;
+                classDef manifold fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#ffffff;
+                classDef graph fill:#4338ca,stroke:#818cf8,stroke-width:2px,color:#ffffff;
+                classDef validator fill:#be123c,stroke:#f43f5e,stroke-width:2px,color:#ffffff;
+
+                class D1,D2,D3 input;
+                class EXT,HASH,XF,CURATOR hitl;
+                class SBVR,PL logic;
+                class POKA,SHACL validator;
+                class BEJ,GJ,GL,TB,LS,FS manifold;
+                class MF,SV,TDB,PROVO graph;
+        </div>
+    </div>
+
+    <!-- Comparative Table: The 7 Habits of Provenance in our Stack -->
+    <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl mb-16">
+        <h3 class="text-xl font-bold text-sky-300 mb-6 flex items-center gap-2">
+            <span>🛡️</span> Implementación Técnica de los 7 Hábitos de la Procedencia por Diseño
+        </h3>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs md:text-sm text-slate-300 border-collapse">
+                <thead>
+                    <tr class="border-b border-slate-700 bg-slate-900/80 text-teal-300 font-mono">
+                        <th class="p-3">#</th>
+                        <th class="p-3">Hábito de Procedencia</th>
+                        <th class="p-3">Estándar W3C / OMG</th>
+                        <th class="p-3">Implementación Concreta en el Stack DFRNT</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800">
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">1</td>
+                        <td class="p-3 font-semibold text-white">Registro en el Momento del Acto</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">W3C PROV-O (prov:Activity)</td>
+                        <td class="p-3">Captura instantánea de la evidencia en BaseX con cálculo de SHA-256 pre-transformación.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">2</td>
+                        <td class="p-3 font-semibold text-white">Bitemporalidad (Dos Relojes) + Actor</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">W3C OWL-Time / Bitemporal</td>
+                        <td class="p-3">Segregación entre <em>Valid Time</em> (fecha jurídica) y <em>Transaction Time</em> (commit inmutable TerminusDB).</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">3</td>
+                        <td class="p-3 font-semibold text-white">Enlace por Referencia con IRIs</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">W3C RDF 1.2 (Reifiers ~IRI)</td>
+                        <td class="p-3">Reificación formal sin campos de texto ciego; cada <code>EntryDetail</code> porta un `@id` canónico unívoco.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">4</td>
+                        <td class="p-3 font-semibold text-white">Mensaje Porta su Propio Linaje</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">W3C JSON-LD / PROV-O</td>
+                        <td class="p-3">La carga útil viaja con <code>prov:wasDerivedFrom</code> apuntando al hash y al origen de la transacción.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">5</td>
+                        <td class="p-3 font-semibold text-white">Fuentes como Entidades & Trust Score</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">LPS Fluents / Bayesian Score</td>
+                        <td class="p-3">Registro de fuentes externas con monitoreo de fiabilidad continua en Prolog; alerta si el score decae.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">6</td>
+                        <td class="p-3 font-semibold text-white">Nunca Sobrescribir; Superseder</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">TerminusDB Git Architecture</td>
+                        <td class="p-3">Grafo inmutable append-only: los ajustes usan <code>prov:wasRevisionOf</code> preservando el historial completo.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                        <td class="p-3 font-bold text-teal-400 font-mono">7</td>
+                        <td class="p-3 font-semibold text-white">Rechazo en Frontera (Fail Loudly)</td>
+                        <td class="p-3 font-mono text-xs text-sky-400">W3C SHACL 1.2 / Poka-Yoke</td>
+                        <td class="p-3">La aduana SHACL y Prolog bloquean de forma determinista cualquier dato huérfano de evento o descuadrado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="w-full bg-slate-900/90 backdrop-blur-md border-t border-slate-800 p-6 flex justify-center mt-auto">
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl py-4 px-8 text-center w-full max-w-4xl shadow-2xl">
+            <p class="text-xs md:text-sm text-slate-400">
+                <span class="text-teal-400 font-semibold text-xs uppercase tracking-wider block mb-1">
+                    Metodología A&AD — Accounting & Audit by Design
+                </span>
+                Basado en el marco de trabajo de <strong>Charles Hoffman, CPA</strong> (Seattle Method) y la arquitectura de:
+                <br>
+                <i class="text-white">"The End of Reactive Control: Algorithmic Certainty through Accounting and Audit by Design (A&AD)"</i>
+                — por <strong>Richard G. Gasca Buelvas</strong> (DFRNT / AI2Accountants)
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
