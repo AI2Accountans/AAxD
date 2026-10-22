@@ -184,52 +184,46 @@
         
         <div class="mermaid w-full flex justify-center py-4 overflow-x-auto">
             graph TD
-                %% 1. Ingesta Heterogenea (Shift-Left)
-                D1["Documento Estructurado (Facturas UBL)"] -->|Extraccion Directa| EXT["Extractor Multimodal (BaseX XQuery + OCR)"]
-                D2["Documento No Estructurado (CSV / ERP)"] -->|Transmutacion| EXT
-                D3["Documento Presentacion (Cheques / Pagares)"] -->|Vision Semantica| EXT
+                D1["Documento Estructurado - Facturas UBL"] -->|Extraccion Directa| EXT["Extractor Multimodal - BaseX XQuery + OCR"]
+                D2["Documento No Estructurado - CSV / ERP"] -->|Transmutacion| EXT
+                D3["Documento Presentacion - Cheques / Pagares"] -->|Vision Semantica| EXT
 
-                %% 2. Curaduria HITL
-                EXT -->|Calculo de Huella| HASH["Evidencia Criptografica (SHA-256 + Algorand T0)"]
-                HASH -->|Pre-poblado| XF["Estacion de Curaduria (W3C XForms)"]
-                XF -->|Validacion y Firma| CURATOR["Auditor Humano Curador (HITL)"]
+                EXT -->|Calculo de Huella| HASH["Evidencia Criptografica - SHA-256 + Algorand T0"]
+                HASH -->|Pre-poblado| XF["Estacion de Curaduria - W3C XForms"]
+                XF -->|Validacion y Firma| CURATOR["Auditor Humano Curador - HITL"]
 
-                %% 3. Deduccion Logica Formal
-                CURATOR -->|Evento Economico REA Aprobado| SBVR["Vocabulario y Reglas (OMG SBVR 1.5)"]
-                SBVR -->|Clausulas de Horn| PL["Motor SWI-Prolog / LPS (PUC 2650 / PCGE 2026)"]
-                PL -->|Verificacion| POKA{"Aduana Kirchhoff (Partida Doble)"}
+                CURATOR -->|Evento Economico REA Aprobado| SBVR["Vocabulario y Reglas - OMG SBVR 1.5"]
+                SBVR -->|Clausulas de Horn| PL["Motor SWI-Prolog / LPS - PUC 2650 / PCGE 2026"]
+                PL -->|Verificacion| POKA{"Aduana Kirchhoff - Partida Doble"}
 
-                %% 4. El Manifold Contable (flow.png)
-                POKA -->|Asiento Aprobado| BEJ[("Standard Structured Business Events Journal")]
+                POKA -->|Asiento Aprobado| BEJ["Standard Structured Business Events Journal"]
                 POKA -.->|Descuadre o Regla Invalida| REJ["Rechazo y Alerta Inmediata"]
-                
-                BEJ -->|Proyeccion 1| GJ["General Journal (Libro Diario)"]
-                GJ -->|Mayorizacion| GL["General Ledger (Libro Mayor)"]
-                GL -->|Agrupacion| TB["Trial Balance (Balance de Comprobacion)"]
-                TB -->|Papeles de Trabajo| LS["Lead Schedule (Hojas de Trabajo)"]
-                LS -->|Estados Formales| FS["Financial Statements (Estados Financieros)"]
 
-                %% 5. Grafo de Conocimiento y Procedencia W3C
-                BEJ -->|Mapeo Canonico| MF["Altova MapForce (JE2XBRLG2JSONLDV4)"]
-                LS -->|Diseno Visual Editorial| SV["Altova StyleVision (Reportes XSLT)"]
-                MF -->|Compuerta SHACL 1.2| TDB[("TerminusDB / DFRNT Knowledge Graph")]
-                TDB --- PROVO["Audit Evidence Graph (W3C PROV-O y RDF 1.2)"]
-                PROVO -->|Linaje de Auditoria Completo| HASH
+                BEJ -->|Proyeccion 1| GJ["General Journal - Libro Diario"]
+                GJ -->|Mayorizacion| GL["General Ledger - Libro Mayor"]
+                GL -->|Agrupacion| TB["Trial Balance - Balance de Comprobacion"]
+                TB -->|Papeles de Trabajo| LS["Lead Schedule - Hojas de Trabajo"]
+                LS -->|Estados Formales| FS["Financial Statements - Estados Financieros"]
 
-                %% Estilos Visuales
-                classDef input fill:#1e293b,stroke:#475569,stroke-width:2px,color:#f8fafc;
-                classDef hitl fill:#0369a1,stroke:#38bdf8,stroke-width:2px,color:#ffffff;
-                classDef logic fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#ffffff;
-                classDef manifold fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#ffffff;
-                classDef graph fill:#4338ca,stroke:#818cf8,stroke-width:2px,color:#ffffff;
-                classDef alert fill:#be123c,stroke:#f43f5e,stroke-width:2px,color:#ffffff;
+                BEJ -->|Mapeo Canonico| MF["Altova MapForce - JE2XBRLG2JSONLDV4"]
+                LS -->|Diseno Visual Editorial| SV["Altova StyleVision - Reportes XSLT"]
+                MF -->|Compuerta SHACL 1.2| TDB["TerminusDB / DFRNT Knowledge Graph"]
+                TDB -->|Vinculacion Ontologica| PROVO["Audit Evidence Graph - W3C PROV-O y RDF 1.2"]
+                PROVO -.->|Linaje Completo de Procedencia| HASH
 
-                class D1,D2,D3 input;
-                class EXT,HASH,XF,CURATOR hitl;
-                class SBVR,PL,POKA logic;
-                class BEJ,GJ,GL,TB,LS,FS manifold;
-                class MF,SV,TDB,PROVO graph;
-                class REJ alert;
+                classDef cInput fill:#1e293b,stroke:#475569,stroke-width:2px,color:#f8fafc
+                classDef cHitl fill:#0369a1,stroke:#38bdf8,stroke-width:2px,color:#ffffff
+                classDef cLogic fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#ffffff
+                classDef cManifold fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#ffffff
+                classDef cGraph fill:#4338ca,stroke:#818cf8,stroke-width:2px,color:#ffffff
+                classDef cAlert fill:#be123c,stroke:#f43f5e,stroke-width:2px,color:#ffffff
+
+                class D1,D2,D3 cInput
+                class EXT,HASH,XF,CURATOR cHitl
+                class SBVR,PL,POKA cLogic
+                class BEJ,GJ,GL,TB,LS,FS cManifold
+                class MF,SV,TDB,PROVO cGraph
+                class REJ cAlert
         </div>
     </div>
 
