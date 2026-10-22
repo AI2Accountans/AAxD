@@ -184,45 +184,45 @@
         
         <div class="mermaid w-full flex justify-center py-4 overflow-x-auto">
             graph LR
-                %% SUBGRAPH: INGESTA HETEROGÉNEA (SHIFT LEFT)
-                subgraph ENTRADA["1. Ingesta Heterogénea (Shift-Left)"]
-                    D1[Documento Estructurado<br>UBL Factura Electrónica]
-                    D2[Documento No Estructurado<br>CSV / JSON ERP]
-                    D3[Documento Presentación<br>Cheque / Pagaré JPG/PDF]
+                %% SUBGRAPH: INGESTA HETEROGENEA (SHIFT LEFT)
+                subgraph ENTRADA["1. Ingesta Heterogenea (Shift-Left)"]
+                    D1["Documento Estructurado<br/>UBL Factura Electronica"]
+                    D2["Documento No Estructurado<br/>CSV / JSON ERP"]
+                    D3["Documento Presentacion<br/>Cheque / Pagare JPG/PDF"]
                 end
 
                 %% SUBGRAPH: CAPTURA & HITL
-                subgraph HITL["2. Curaduría HITL (BaseX / XForms)"]
-                    EXT[Extractor Multimodal<br>BaseX XQuery + OCR]
-                    HASH[Cálculo SHA-256<br>& Anclaje Algorand T0]
-                    XF[Estación de Curaduría<br>W3C XForms Puro]
-                    CURATOR((Auditor Humano<br>Curador))
+                subgraph HITL["2. Curaduria HITL (BaseX / XForms)"]
+                    EXT["Extractor Multimodal<br/>BaseX XQuery + OCR"]
+                    HASH["Calculo SHA-256<br/>& Anclaje Algorand T0"]
+                    XF["Estacion de Curaduria<br/>W3C XForms Puro"]
+                    CURATOR(("Auditor Humano<br/>Curador"))
                 end
 
                 %% SUBGRAPH: REGLAS DEDUCTIVAS
-                subgraph LOGIC["3. Deducción Lógica Formal"]
-                    SBVR[Vocabulario & Reglas<br>OMG SBVR 1.5]
-                    PL[Motor SWI-Prolog / LPS<br>PUC 2650 / PCGE 2026]
-                    POKA{Aduana Kirchhoff<br>∑ Débitos = ∑ Créditos}
+                subgraph LOGIC["3. Deduccion Logica Formal"]
+                    SBVR["Vocabulario & Reglas<br/>OMG SBVR 1.5"]
+                    PL["Motor SWI-Prolog / LPS<br/>PUC 2650 / PCGE 2026"]
+                    POKA{"Aduana Kirchhoff<br/>Debitos = Creditos"}
                 end
 
                 %% SUBGRAPH: HOFFMAN MANIFOLD PROYECCIONES
                 subgraph MANIFOLD["4. El Manifold Contable (flow.png)"]
-                    BEJ[(Standard Structured<br>Business Events Journal)]
-                    GJ[General Journal<br>Libro Diario]
-                    GL[General Ledger<br>Libro Mayor]
-                    TB[Trial Balance<br>Balance de Comprobación]
-                    LS[Lead Schedule<br>Papeles de Trabajo]
-                    FS[Financial Statements<br>Estados Financieros]
+                    BEJ[("Standard Structured<br/>Business Events Journal")]
+                    GJ["General Journal<br/>Libro Diario"]
+                    GL["General Ledger<br/>Libro Mayor"]
+                    TB["Trial Balance<br/>Balance Comprobacion"]
+                    LS["Lead Schedule<br/>Papeles de Trabajo"]
+                    FS["Financial Statements<br/>Estados Financieros"]
                 end
 
                 %% SUBGRAPH: GRAFO INMUTABLE & PROVENANCE
                 subgraph GRAFO["5. Grafo de Conocimiento Inmutable"]
-                    MF[Altova MapForce<br>JE2XBRLG2JSONLDV4]
-                    SV[Altova StyleVision<br>Reporte Audit XSLT]
-                    TDB[(TerminusDB / DFRNT<br>Knowledge Graph)]
-                    PROVO[Audit Evidence Graph<br>W3C PROV-O & RDF 1.2]
-                    SHACL{Aduana SHACL 1.2<br>Fail Loudly}
+                    MF["Altova MapForce<br/>JE2XBRLG2JSONLDV4"]
+                    SV["Altova StyleVision<br/>Reporte Audit XSLT"]
+                    TDB[("TerminusDB / DFRNT<br/>Knowledge Graph")]
+                    PROVO["Audit Evidence Graph<br/>W3C PROV-O & RDF 1.2"]
+                    SHACL{"Aduana SHACL 1.2<br/>Fail Loudly"}
                 end
 
                 %% CONEXIONES DE FLUJO
@@ -231,12 +231,12 @@
                 D3 --> EXT
                 EXT --> HASH
                 HASH --> XF
-                XF <--> CURATOR
-                CURATOR -->|Aprobación de Evento REA| SBVR
+                XF --- CURATOR
+                CURATOR -->|"Aprobacion de Evento REA"| SBVR
                 SBVR --> PL
                 PL --> POKA
-                POKA -->|Aprobado| BEJ
-                POKA -.->|Descuadre: Rechazo Inmediato| XF
+                POKA -->|"Aprobado"| BEJ
+                POKA -.->|"Descuadre: Rechazo"| XF
 
                 %% Proyecciones de Hoffman
                 BEJ --> GJ
@@ -248,9 +248,9 @@
                 %% Proyecciones al Grafo y Procedencia
                 BEJ --> MF
                 MF --> SHACL
-                SHACL -->|Compuerta Válida| TDB
+                SHACL -->|"Compuerta Valida"| TDB
                 TDB --- PROVO
-                PROVO -.->|Hiper-vínculo de Linaje| HASH
+                PROVO -.->|"Linaje de Auditoria"| HASH
                 LS --> SV
 
                 %% ESTILOS VISUALES
