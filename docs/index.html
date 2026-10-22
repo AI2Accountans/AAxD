@@ -145,7 +145,7 @@
             <h3 class="text-lg font-bold text-white mb-2">Deducción Lógica</h3>
             <span class="text-xs font-mono text-amber-400 bg-amber-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-amber-800">Prolog / LPS Rules</span>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Inferencia determinista de cuentas y asientos (PUC D.2650 o PCGE 2026 NIIF 18). Verificación matemática de partida doble ($\sum D = \sum C$) y prueba formal.
+                Inferencia determinista de cuentas y asientos (PUC D.2650 o PCGE 2026 NIIF 18). Verificación matemática de partida doble (&sum; Débitos = &sum; Créditos) y prueba formal.
             </p>
         </div>
 
@@ -183,90 +183,53 @@
         </div>
         
         <div class="mermaid w-full flex justify-center py-4 overflow-x-auto">
-            graph LR
-                %% SUBGRAPH: INGESTA HETEROGENEA (SHIFT LEFT)
-                subgraph ENTRADA["1. Ingesta Heterogenea (Shift-Left)"]
-                    D1["Documento Estructurado<br/>UBL Factura Electronica"]
-                    D2["Documento No Estructurado<br/>CSV / JSON ERP"]
-                    D3["Documento Presentacion<br/>Cheque / Pagare JPG/PDF"]
-                end
+            graph TD
+                %% 1. Ingesta Heterogenea (Shift-Left)
+                D1["Documento Estructurado (Facturas UBL)"] -->|Extraccion Directa| EXT["Extractor Multimodal (BaseX XQuery + OCR)"]
+                D2["Documento No Estructurado (CSV / ERP)"] -->|Transmutacion| EXT
+                D3["Documento Presentacion (Cheques / Pagares)"] -->|Vision Semantica| EXT
 
-                %% SUBGRAPH: CAPTURA & HITL
-                subgraph HITL["2. Curaduria HITL (BaseX / XForms)"]
-                    EXT["Extractor Multimodal<br/>BaseX XQuery + OCR"]
-                    HASH["Calculo SHA-256<br/>& Anclaje Algorand T0"]
-                    XF["Estacion de Curaduria<br/>W3C XForms Puro"]
-                    CURATOR(("Auditor Humano<br/>Curador"))
-                end
+                %% 2. Curaduria HITL
+                EXT -->|Calculo de Huella| HASH["Evidencia Criptografica (SHA-256 + Algorand T0)"]
+                HASH -->|Pre-poblado| XF["Estacion de Curaduria (W3C XForms)"]
+                XF -->|Validacion y Firma| CURATOR["Auditor Humano Curador (HITL)"]
 
-                %% SUBGRAPH: REGLAS DEDUCTIVAS
-                subgraph LOGIC["3. Deduccion Logica Formal"]
-                    SBVR["Vocabulario & Reglas<br/>OMG SBVR 1.5"]
-                    PL["Motor SWI-Prolog / LPS<br/>PUC 2650 / PCGE 2026"]
-                    POKA{"Aduana Kirchhoff<br/>Debitos = Creditos"}
-                end
+                %% 3. Deduccion Logica Formal
+                CURATOR -->|Evento Economico REA Aprobado| SBVR["Vocabulario y Reglas (OMG SBVR 1.5)"]
+                SBVR -->|Clausulas de Horn| PL["Motor SWI-Prolog / LPS (PUC 2650 / PCGE 2026)"]
+                PL -->|Verificacion| POKA{"Aduana Kirchhoff (Partida Doble)"}
 
-                %% SUBGRAPH: HOFFMAN MANIFOLD PROYECCIONES
-                subgraph MANIFOLD["4. El Manifold Contable (flow.png)"]
-                    BEJ[("Standard Structured<br/>Business Events Journal")]
-                    GJ["General Journal<br/>Libro Diario"]
-                    GL["General Ledger<br/>Libro Mayor"]
-                    TB["Trial Balance<br/>Balance Comprobacion"]
-                    LS["Lead Schedule<br/>Papeles de Trabajo"]
-                    FS["Financial Statements<br/>Estados Financieros"]
-                end
+                %% 4. El Manifold Contable (flow.png)
+                POKA -->|Asiento Aprobado| BEJ[("Standard Structured Business Events Journal")]
+                POKA -.->|Descuadre o Regla Invalida| REJ["Rechazo y Alerta Inmediata"]
+                
+                BEJ -->|Proyeccion 1| GJ["General Journal (Libro Diario)"]
+                GJ -->|Mayorizacion| GL["General Ledger (Libro Mayor)"]
+                GL -->|Agrupacion| TB["Trial Balance (Balance de Comprobacion)"]
+                TB -->|Papeles de Trabajo| LS["Lead Schedule (Hojas de Trabajo)"]
+                LS -->|Estados Formales| FS["Financial Statements (Estados Financieros)"]
 
-                %% SUBGRAPH: GRAFO INMUTABLE & PROVENANCE
-                subgraph GRAFO["5. Grafo de Conocimiento Inmutable"]
-                    MF["Altova MapForce<br/>JE2XBRLG2JSONLDV4"]
-                    SV["Altova StyleVision<br/>Reporte Audit XSLT"]
-                    TDB[("TerminusDB / DFRNT<br/>Knowledge Graph")]
-                    PROVO["Audit Evidence Graph<br/>W3C PROV-O & RDF 1.2"]
-                    SHACL{"Aduana SHACL 1.2<br/>Fail Loudly"}
-                end
+                %% 5. Grafo de Conocimiento y Procedencia W3C
+                BEJ -->|Mapeo Canonico| MF["Altova MapForce (JE2XBRLG2JSONLDV4)"]
+                LS -->|Diseno Visual Editorial| SV["Altova StyleVision (Reportes XSLT)"]
+                MF -->|Compuerta SHACL 1.2| TDB[("TerminusDB / DFRNT Knowledge Graph")]
+                TDB --- PROVO["Audit Evidence Graph (W3C PROV-O y RDF 1.2)"]
+                PROVO -->|Linaje de Auditoria Completo| HASH
 
-                %% CONEXIONES DE FLUJO
-                D1 --> EXT
-                D2 --> EXT
-                D3 --> EXT
-                EXT --> HASH
-                HASH --> XF
-                XF --- CURATOR
-                CURATOR -->|"Aprobacion de Evento REA"| SBVR
-                SBVR --> PL
-                PL --> POKA
-                POKA -->|"Aprobado"| BEJ
-                POKA -.->|"Descuadre: Rechazo"| XF
-
-                %% Proyecciones de Hoffman
-                BEJ --> GJ
-                GJ --> GL
-                GL --> TB
-                TB --> LS
-                LS --> FS
-
-                %% Proyecciones al Grafo y Procedencia
-                BEJ --> MF
-                MF --> SHACL
-                SHACL -->|"Compuerta Valida"| TDB
-                TDB --- PROVO
-                PROVO -.->|"Linaje de Auditoria"| HASH
-                LS --> SV
-
-                %% ESTILOS VISUALES
+                %% Estilos Visuales
                 classDef input fill:#1e293b,stroke:#475569,stroke-width:2px,color:#f8fafc;
                 classDef hitl fill:#0369a1,stroke:#38bdf8,stroke-width:2px,color:#ffffff;
                 classDef logic fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#ffffff;
                 classDef manifold fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#ffffff;
                 classDef graph fill:#4338ca,stroke:#818cf8,stroke-width:2px,color:#ffffff;
-                classDef validator fill:#be123c,stroke:#f43f5e,stroke-width:2px,color:#ffffff;
+                classDef alert fill:#be123c,stroke:#f43f5e,stroke-width:2px,color:#ffffff;
 
                 class D1,D2,D3 input;
                 class EXT,HASH,XF,CURATOR hitl;
-                class SBVR,PL logic;
-                class POKA,SHACL validator;
+                class SBVR,PL,POKA logic;
                 class BEJ,GJ,GL,TB,LS,FS manifold;
                 class MF,SV,TDB,PROVO graph;
+                class REJ alert;
         </div>
     </div>
 
