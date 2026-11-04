@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A&AD Pipeline v1.5 — The Accounting Manifold & Provenance by Design</title>
+    <title>A&AD Pipeline v1.6 — The Sovereign Evidence Ledger & Algorithmic Audit Trail</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -16,7 +16,7 @@
                 primaryBorderColor: '#14b8a6',
                 lineColor: '#38bdf8',
                 secondaryColor: '#f59e0b',
-                tertiaryColor: '#8b5cf6',
+                tertiaryColor: '#9333ea',
                 fontFamily: 'Inter, system-ui, sans-serif'
             }
         });
@@ -28,7 +28,7 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif; 
         }
         .glass-card {
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(15, 23, 42, 0.78);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1rem;
@@ -44,19 +44,24 @@
             color: #38bdf8;
         }
         .badge-provenance {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(126, 34, 206, 0.2));
+            border: 1px solid rgba(192, 132, 252, 0.45);
+            color: #d8b4fe;
+        }
+        .badge-solid {
+            background: linear-gradient(135deg, rgba(8, 145, 178, 0.2), rgba(6, 182, 212, 0.2));
+            border: 1px solid rgba(34, 211, 238, 0.45);
+            color: #67e8f9;
+        }
+        .badge-algorand {
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.2), rgba(190, 18, 60, 0.2));
+            border: 1px solid rgba(251, 113, 133, 0.45);
+            color: #fda4af;
+        }
+        .badge-gaiax {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
-            border: 1px solid rgba(16, 185, 129, 0.4);
-            color: #34d399;
-        }
-        .badge-prolog {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
-            border: 1px solid rgba(245, 158, 11, 0.4);
-            color: #fbbf24;
-        }
-        .badge-altova {
-            background: linear-gradient(135deg, rgba(217, 70, 239, 0.2), rgba(168, 85, 247, 0.2));
-            border: 1px solid rgba(217, 70, 239, 0.4);
-            color: #e879f9;
+            border: 1px solid rgba(52, 211, 153, 0.45);
+            color: #6ee7b7;
         }
     </style>
 </head>
@@ -65,7 +70,7 @@
     <!-- Top Navigation / Language Switcher -->
     <nav class="w-full max-w-6xl flex justify-between items-center mb-6 text-xs md:text-sm">
         <a href="../index.html" class="text-slate-400 hover:text-teal-300 transition flex items-center gap-1.5 font-mono">
-            <span>←</span> Volver al Índice
+            <span>←</span> Volver al Índice Principal
         </a>
         <div class="flex items-center gap-2 bg-slate-900/80 border border-slate-700 px-3 py-1.5 rounded-full font-mono text-xs">
             <span class="text-slate-400">🌐 Idioma:</span>
@@ -78,107 +83,136 @@
     <!-- Header Section -->
     <header class="text-center mb-10 w-full max-w-6xl">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-teal-300 via-sky-400 to-indigo-400 tracking-tight">
-            A&AD: The Accounting Manifold & Provenance by Design
+            A&AD: The Sovereign Evidence Ledger & Full Provenance Graph
         </h1>
         
         <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-6">
             <span class="inline-block px-3.5 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs md:text-sm">
-                Version 1.5 — The Hoffman Manifold & 7 Habits of W3C Provenance
+                Version 1.6 — TerminusDB v12.0.2 • W3C PROV-O • Solid Pod • Algorand MainNet • Gaia-X
             </span>
             <span class="inline-block px-3.5 py-1 rounded-full badge-manifold font-mono text-xs md:text-sm">
-                flow.png Architecture
+                Audited Sales Projection ($16,000)
             </span>
             <span class="inline-block px-3.5 py-1 rounded-full badge-provenance font-mono text-xs md:text-sm">
-                W3C PROV-O & RDF 1.2
+                W3C PROV-O 7-Hop Traversal
             </span>
-            <span class="inline-block px-3.5 py-1 rounded-full badge-prolog font-mono text-xs md:text-sm">
-                Prolog / LPS Rules Engine
+            <span class="inline-block px-3.5 py-1 rounded-full badge-solid font-mono text-xs md:text-sm">
+                W3C Solid Sovereign Pod (:3000)
             </span>
-            <span class="inline-block px-3.5 py-1 rounded-full badge-altova font-mono text-xs md:text-sm">
-                Altova Suite & W3C XForms
+            <span class="inline-block px-3.5 py-1 rounded-full badge-algorand font-mono text-xs md:text-sm">
+                Algorand Pure PoS Seal
+            </span>
+            <span class="inline-block px-3.5 py-1 rounded-full badge-gaiax font-mono text-xs md:text-sm">
+                Gaia-X Sovereign Data Space
             </span>
         </div>
         
         <p class="text-base md:text-lg text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Evolución integral del pipeline contable hacia un <strong>Manifold Bidireccional</strong> de certeza matemática. Consolida la captura en origen (<em>Shift-Left</em>) mediante curaduría humana asistida (W3C XForms + BaseX), la inferencia legalista libre de alucinaciones (SWI-Prolog / LPS sobre PUC 2650 y PCGE 2026), y el blindaje inmutable de procedencia W3C PROV-O / RDF 1.2 sobre TerminusDB y Algorand.
+            Consolidación integral de la cadena de certeza contable y forense: <strong>Certeza Algorítmica</strong> (SWI-Prolog + Altova MapForce + XBRL GL) &rarr; <strong>Certeza Causal y Explicativa</strong> (TerminusDB HDT + W3C PROV-O) &rarr; <strong>Certeza Fáctica y Soberana</strong> (W3C Solid Pod + Gaia-X) &rarr; <strong>Certeza Temporal Irrevocable</strong> (Algorand MainNet).
         </p>
+
+        <!-- Live Explorer Banner -->
+        <div class="glass-card p-5 mx-auto max-w-5xl mb-8 border border-sky-500/40 bg-gradient-to-r from-sky-950/40 via-indigo-950/30 to-purple-950/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4 text-left">
+            <div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">Explorador en Vivo Desplegado</span>
+                </div>
+                <h4 class="text-white font-bold text-base md:text-lg">Explorador Visual de Grafos TerminusDB v6 & Desreferenciación Solid</h4>
+                <p class="text-xs text-slate-300">Consulta los 122 nodos y 209 aristas en vivo con recorrido nativo WOQL, inspección de Cuentas T y verificación SHA-256 en tiempo real.</p>
+            </div>
+            <a href="http://165.245.137.44:8085/graph" target="_blank" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-bold text-xs md:text-sm transition shadow-lg shadow-sky-500/25 flex items-center gap-2 whitespace-nowrap">
+                <span>🌐 Abrir Visualizador :8085</span>
+                <span>↗</span>
+            </a>
+        </div>
         
-        <!-- Architectural Highlights v1.5 -->
+        <!-- Architectural Highlights v1.6 -->
         <div class="glass-card p-6 mx-auto max-w-5xl text-left border-l-4 border-l-teal-400 shadow-2xl mb-8">
             <h4 class="text-teal-300 font-bold text-lg mb-4 flex items-center gap-2">
-                <span>⚡</span> Novedades Arquitectónicas Principales de la Versión 1.5:
+                <span>⚡</span> Hitos y Novedades Arquitectónicas de la Versión 1.6:
             </h4>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm text-slate-300">
                 <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
-                    <strong class="text-sky-300 block mb-1">1. Cristalización de <code>flow.png</code> de Charles Hoffman</strong>
-                    Resolución epistemológica del "GAP": convergencia de documentos heterogéneos (UBL, CSV, contratos JPEG/PDF) en un único <em>Standard Structured Business Events Journal</em>. A partir de allí, libros diarios, mayores, balance de comprobación y estados financieros son proyecciones deterministas.
+                    <strong class="text-sky-300 block mb-1">1. Auditoría de Ingresos y Proyección de Ventas ($16,000)</strong>
+                    Resolución causal de la barrera de inventario: identificación del activo fijo no transado ($2,000) y separación estricta en dos ventas holónicas de $8,000 c/u (<code>HLN-2024-006</code> / <code>JE-206</code> y <code>HLN-2024-006B</code> / <code>JE-206B</code>). Balance cuadrado al centavo con Utilidad Neta de $8,050 y Activos Totales de $20,450.
                 </div>
                 <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
-                    <strong class="text-emerald-300 block mb-1">2. Los 7 Hábitos de la Procedencia por Diseño (22-Oct-2026)</strong>
-                    Implementación de las directrices de <em>The Inference Engineer</em> validadas por Hoffman: registro del evento en el momento del acto, bitemporalidad (Valid Time vs. Transaction Time), reificación con IRIs explícitos RDF 1.2, inmutabilidad append-only en TerminusDB (<em>never overwrite; supersede</em>) y rechazo en frontera (<em>SHACL Fail Loudly</em>).
+                    <strong class="text-purple-300 block mb-1">2. Inyección en TerminusDB v12.0.2 (122 Nodos & Consulta WOQL)</strong>
+                    Despliegue del Schema JSON-LD v6 con 12 clases tipadas (<code>GistPerson</code>, <code>GX_DataResource</code>, <code>PROV_Activity</code>, <code>ALGO_TimestampProof</code>, etc.) en el Droplet (<code>admin/mini_audit_trail</code>). Travesía sin copia (<em>Zero-Copy</em>) resolviendo los 35 caminos de diario con WOQL nativo.
                 </div>
                 <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
-                    <strong class="text-amber-300 block mb-1">3. Deducción Multijurisdiccional con SWI-Prolog / LPS</strong>
-                    El hecho económico REA (ISO 15944-4) actúa como invariante universal. El motor Prolog infiere las dinámicas contables tanto de Colombia (Decreto 2650 de 1993) como de Perú (PCGE 2026 / NIIF 18: doble imputación de Naturaleza y Destino analítico), garantizando partida doble estricta ($\sum D = \sum C$).
+                    <strong class="text-cyan-300 block mb-1">3. Bóveda Soberana W3C Solid Pod & WebIDs Descentralizados</strong>
+                    Implementación de Community Solid Server v7.2.0 en <code>http://165.245.137.44:3000/aad-framework/</code>. Bóvedas de evidencias, identidades WebID (<code>richard-gasca#me</code>, <code>charlie-hoffman#me</code>) y listas de control de acceso WAC (<code>.acl</code>). Desreferenciación HTTP 200 OK con verificación SHA-256 en vivo.
                 </div>
                 <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 hover:border-slate-700 transition">
-                    <strong class="text-fuchsia-300 block mb-1">4. Sinergia Altova Suite & Estación HITL XForms</strong>
-                    Articulación de la tríada Altova: <strong>XMLSpy</strong> (Esquema canónico <code>BusinessEvent_XBRLGL_REA.xsd</code>), <strong>Altova StyleVision</strong> (Diseño visual y compilación XSLT de papeles de trabajo) y <strong>Altova MapForce</strong> (<code>JE2XBRLG2JSONLDV4.mfd</code> generando 70 instancias canónicas JSON-LD sin colisiones de ID).
+                    <strong class="text-rose-300 block mb-1">4. Notario Algorand MainNet & Espacio de Datos Gaia-X</strong>
+                    Sellado criptográfico irrevocable (*anti-backdating*) en Algorand Pure PoS MainNet anclando el SHA-256 en el campo <code>note</code> JSON de la transacción. Gobernanza con Gaia-X (<code>GX_DataResource</code> y política ODRL <code>gx:policy</code>) que faculta al auditor externo sin perder la soberanía de la evidencia.
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 5 Pipeline Stage Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-7xl mb-12">
+    <!-- 6 Pipeline Stage Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 w-full max-w-7xl mb-12">
         
         <!-- Step 1 -->
-        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400 shadow-xl">
-            <span class="text-5xl font-bold step-number mb-4">1</span>
-            <h3 class="text-lg font-bold text-white mb-2">Ingesta & Evidencia</h3>
-            <span class="text-xs font-mono text-teal-400 bg-teal-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-teal-800">Momento 0 & Hash</span>
+        <div class="glass-card p-5 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-teal-400 shadow-xl">
+            <span class="text-4xl font-bold step-number mb-3">1</span>
+            <h3 class="text-base font-bold text-white mb-1.5">Ingesta & Hash</h3>
+            <span class="text-[11px] font-mono text-teal-400 bg-teal-950/60 px-2 py-0.5 rounded-full mb-2 border border-teal-800">Momento 0</span>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Captura de documentos heterogéneos (UBL, CSV, JPEGs, PDFs). Sellado de evidencia con hash criptográfico SHA-256 y anclaje bitemporal $T_0$ en Algorand.
+                Captura de documentos fuente (cheques, facturas, contratos). Cálculo determinista de la huella digital SHA-256 previa a cualquier mutación contable.
             </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-sky-400 shadow-xl">
-            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #38bdf8, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2</span>
-            <h3 class="text-lg font-bold text-white mb-2">Curaduría HITL</h3>
-            <span class="text-xs font-mono text-sky-400 bg-sky-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-sky-800">W3C XForms / BaseX</span>
+        <div class="glass-card p-5 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-sky-400 shadow-xl">
+            <span class="text-4xl font-bold step-number mb-3" style="background: linear-gradient(135deg, #38bdf8, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2</span>
+            <h3 class="text-base font-bold text-white mb-1.5">Curaduría HITL</h3>
+            <span class="text-[11px] font-mono text-sky-400 bg-sky-950/60 px-2 py-0.5 rounded-full mb-2 border border-sky-800">W3C Solid WebID</span>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Pre-poblado semántico por IA/OCR de recursos, eventos y agentes (REA). El auditor humano curador valida en split-screen y firma antes de iniciar mutaciones.
+                Pre-poblado REA por IA/OCR. El auditor curador (<code>CUR-001</code>) valida en pantalla dividida y firma con su identidad WebID soberana.
             </p>
         </div>
 
         <!-- Step 3 -->
-        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-amber-400 shadow-xl">
-            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3</span>
-            <h3 class="text-lg font-bold text-white mb-2">Deducción Lógica</h3>
-            <span class="text-xs font-mono text-amber-400 bg-amber-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-amber-800">Prolog / LPS Rules</span>
+        <div class="glass-card p-5 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-amber-400 shadow-xl">
+            <span class="text-4xl font-bold step-number mb-3" style="background: linear-gradient(135deg, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3</span>
+            <h3 class="text-base font-bold text-white mb-1.5">Deducción Lógica</h3>
+            <span class="text-[11px] font-mono text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded-full mb-2 border border-amber-800">SWI-Prolog / LPS</span>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Inferencia determinista de cuentas y asientos (PUC D.2650 o PCGE 2026 NIIF 18). Verificación matemática de partida doble (&sum; Débitos = &sum; Créditos) y prueba formal.
+                Inferencia determinista de cuentas y asientos (PUC 2650 / SCoA Hoffman). Validación matemática estricta de partida doble (&sum; Débitos = &sum; Créditos).
             </p>
         </div>
 
         <!-- Step 4 -->
-        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-fuchsia-400 shadow-xl">
-            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #e879f9, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
-            <h3 class="text-lg font-bold text-white mb-2">Transmutación</h3>
-            <span class="text-xs font-mono text-fuchsia-400 bg-fuchsia-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-fuchsia-800">MapForce / StyleVision</span>
+        <div class="glass-card p-5 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-fuchsia-400 shadow-xl">
+            <span class="text-4xl font-bold step-number mb-3" style="background: linear-gradient(135deg, #e879f9, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">4</span>
+            <h3 class="text-base font-bold text-white mb-1.5">Transmutación</h3>
+            <span class="text-[11px] font-mono text-fuchsia-400 bg-fuchsia-950/60 px-2 py-0.5 rounded-full mb-2 border border-fuchsia-800">Altova MapForce</span>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Transformación canónica a XBRL GL y serialización a 70 instancias JSON-LD sin colisiones de `@id`. Generación de papeles de trabajo con XSLT compilado.
+                Mapeo canónico a XBRL GL y serialización a 122 nodos JSON-LD enriquecidos con ontologías W3C PROV-O, Solid, Algorand y Gaia-X sin colisión de IDs.
             </p>
         </div>
 
         <!-- Step 5 -->
-        <div class="glass-card p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-indigo-400 shadow-xl">
-            <span class="text-5xl font-bold step-number mb-4" style="background: linear-gradient(135deg, #818cf8, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
-            <h3 class="text-lg font-bold text-white mb-2">Grafo Bitemporal</h3>
-            <span class="text-xs font-mono text-indigo-400 bg-indigo-950/60 px-2.5 py-0.5 rounded-full mb-3 border border-indigo-800">TerminusDB / DFRNT</span>
+        <div class="glass-card p-5 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-purple-400 shadow-xl">
+            <span class="text-4xl font-bold step-number mb-3" style="background: linear-gradient(135deg, #c084fc, #7e22ce); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</span>
+            <h3 class="text-base font-bold text-white mb-1.5">TerminusDB HDT</h3>
+            <span class="text-[11px] font-mono text-purple-400 bg-purple-950/60 px-2 py-0.5 rounded-full mb-2 border border-purple-800">122 Nodos en Vivo</span>
             <p class="text-xs text-slate-300 leading-relaxed">
-                Inyección al grafo inmutable con W3C PROV-O y RDF 1.2. Reconciliación continua, aduana SHACL Fail-Loudly y auditoría zero-shot con agentes de IA.
+                Inyección al grafo inmutable append-only en el Droplet (:6363). Enlace tipado de aristas <code>prov:*</code>, <code>solid:*</code> y <code>algo:*</code> en memoria HDT.
+            </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="glass-card p-5 flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:border-rose-400 shadow-xl">
+            <span class="text-4xl font-bold step-number mb-3" style="background: linear-gradient(135deg, #fb7185, #be123c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">6</span>
+            <h3 class="text-base font-bold text-white mb-1.5">Soberanía & Fe</h3>
+            <span class="text-[11px] font-mono text-rose-400 bg-rose-950/60 px-2 py-0.5 rounded-full mb-2 border border-rose-800">Solid + Algorand</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                Desreferenciación HTTP 200 OK en el W3C Solid Pod (:3000), verificación de gobernanza Gaia-X y atestación temporal irrevocable en Algorand MainNet.
             </p>
         </div>
 
@@ -188,62 +222,78 @@
     <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl overflow-hidden flex flex-col items-center mb-16">
         <div class="flex flex-col md:flex-row justify-between items-center w-full border-b border-slate-700 pb-4 mb-6">
             <h2 class="text-2xl font-bold text-teal-300">
-                Topología del Manifold Contable & Pipeline de Procedencia
+                Topología del Manifold Contable v1.6 & Cadena de Soberanía Criptográfica
             </h2>
             <span class="text-xs font-mono text-slate-400 mt-2 md:mt-0">
-                Modelo Isomórfico a Charles Hoffman (flow.png) + W3C PROV-O
+                Integración Completa: flow.png &rarr; TerminusDB &rarr; W3C PROV-O &rarr; Solid Pod &rarr; Algorand &rarr; Gaia-X
             </span>
         </div>
         
         <div class="mermaid w-full flex justify-center py-4 overflow-x-auto">
             graph TD
-                D1["Documento Estructurado - Facturas UBL"] -->|Extraccion Directa| EXT["Extractor Multimodal - BaseX XQuery + OCR"]
-                D2["Documento No Estructurado - CSV / ERP"] -->|Transmutacion| EXT
-                D3["Documento Presentacion - Cheques / Pagares"] -->|Vision Semantica| EXT
+                subgraph ORIGEN["1. Evidencia en Origen & Curaduría Soberana"]
+                    D1["Facturas UBL / Contratos / Cheques"] -->|Ingesta Multimodal| EXT["Extractor Semántico - BaseX + OCR"]
+                    EXT -->|Cálculo Huella| HASH["Evidencia Criptográfica - SHA-256"]
+                    HASH -->|Pre-poblado| XF["Estación de Curaduría - W3C XForms"]
+                    XF -->|Firma con WebID| CUR["Curador HITL - richard-gasca#me"]
+                end
 
-                EXT -->|Calculo de Huella| HASH["Evidencia Criptografica - SHA-256 + Algorand T0"]
-                HASH -->|Pre-poblado| XF["Estacion de Curaduria - W3C XForms"]
-                XF -->|Validacion y Firma| CURATOR["Auditor Humano Curador - HITL"]
+                subgraph LOGICA["2. Deducción Lógica & Manifold de Proyecciones"]
+                    CUR -->|Evento Económico REA| SBVR["Vocabulario y Reglas - SBVR 1.5"]
+                    SBVR -->|Cláusulas Horn| PL["Motor SWI-Prolog / LPS - PUC 2650 / SCoA"]
+                    PL -->|Verificación &sum;D=&sum;C| POKA{"Aduana Kirchhoff"}
+                    POKA -->|Asiento Aprobado| BEJ["Standard Business Events Journal (MINI 66)"]
+                    BEJ -->|Proyección| FS["Estados Financieros Auditados - Ventas $16,000"]
+                end
 
-                CURATOR -->|Evento Economico REA Aprobado| SBVR["Vocabulario y Reglas - OMG SBVR 1.5"]
-                SBVR -->|Clausulas de Horn| PL["Motor SWI-Prolog / LPS - PUC 2650 / PCGE 2026"]
-                PL -->|Verificacion| POKA{"Aduana Kirchhoff - Partida Doble"}
+                subgraph GRAFO["3. Grafo de Conocimiento TerminusDB (Droplet :6363)"]
+                    BEJ -->|Mapeo Canónico| MF["Altova MapForce - JSON-LD v6"]
+                    MF -->|Inyección HDT| TDB["TerminusDB v12.0.2 - admin/mini_audit_trail"]
+                    TDB --- ACC["Account (19 Cuentas PUC + SCoA)"]
+                    TDB --- DET["EntryDetail (35 Líneas D/C)"]
+                    TDB --- HDR["EntryHeader (15 Holones / JE-201..JE-206B..JE-226)"]
+                end
 
-                POKA -->|Asiento Aprobado| BEJ["Standard Structured Business Events Journal"]
-                POKA -.->|Descuadre o Regla Invalida| REJ["Rechazo y Alerta Inmediata"]
+                subgraph PROVO["4. Trazabilidad Causal W3C PROV-O & Algorand MainNet"]
+                    HDR -->|prov:wasGeneratedBy| ACT["PROV_Activity (Inspección HITL)"]
+                    ACT -->|prov:wasAssociatedWith| AGT["GistPerson (WebID Curador CUR-001)"]
+                    HDR -->|algo:sealedBy| SEAL["ALGO_TimestampProof (Algorand MainNet)"]
+                    SEAL -.->|Round / TxID Inmutable| ALGO_NET["Blockchain Algorand Pure PoS"]
+                    ACT -->|prov:used| DATA_RES["GX_DataResource (Evidencia en TerminusDB)"]
+                end
 
-                BEJ -->|Proyeccion 1| GJ["General Journal - Libro Diario"]
-                GJ -->|Mayorizacion| GL["General Ledger - Libro Mayor"]
-                GL -->|Agrupacion| TB["Trial Balance - Balance de Comprobacion"]
-                TB -->|Papeles de Trabajo| LS["Lead Schedule - Hojas de Trabajo"]
-                LS -->|Estados Formales| FS["Financial Statements - Estados Financieros"]
-
-                BEJ -->|Mapeo Canonico| MF["Altova MapForce - JE2XBRLG2JSONLDV4"]
-                LS -->|Diseno Visual Editorial| SV["Altova StyleVision - Reportes XSLT"]
-                MF -->|Compuerta SHACL 1.2| TDB["TerminusDB / DFRNT Knowledge Graph"]
-                TDB -->|Vinculacion Ontologica| PROVO["Audit Evidence Graph - W3C PROV-O y RDF 1.2"]
-                PROVO -.->|Linaje Completo de Procedencia| HASH
+                subgraph SOLID_POD["5. Bóveda Soberana W3C Solid Pod (Droplet :3000) & Gaia-X"]
+                    DATA_RES -->|solid:resourceURI HTTP GET| SOLID["W3C Solid Pod - /aad-framework/evidence/*"]
+                    DATA_RES -->|gx:policy| GAIA["Gaia-X Sovereign Audit Policy (ODRL)"]
+                    DATA_RES -->|gx:producedBy| CORP["FIBO_StockCorporation / Mini"]
+                    SOLID -->|Desreferenciación 200 OK| VERIF{"Verificación SHA-256 Bit-a-Bit"}
+                    VERIF -->|Hash Coincidente 100%| AUDIT_OK["Dictamen Forense Irrevocable"]
+                end
 
                 classDef cInput fill:#1e293b,stroke:#475569,stroke-width:2px,color:#f8fafc
                 classDef cHitl fill:#0369a1,stroke:#38bdf8,stroke-width:2px,color:#ffffff
                 classDef cLogic fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#ffffff
                 classDef cManifold fill:#0f766e,stroke:#14b8a6,stroke-width:2px,color:#ffffff
                 classDef cGraph fill:#4338ca,stroke:#818cf8,stroke-width:2px,color:#ffffff
-                classDef cAlert fill:#be123c,stroke:#f43f5e,stroke-width:2px,color:#ffffff
+                classDef cProvo fill:#7e22ce,stroke:#c084fc,stroke-width:2px,color:#ffffff
+                classDef cSolid fill:#0891b2,stroke:#67e8f9,stroke-width:2px,color:#ffffff
+                classDef cAlgo fill:#be123c,stroke:#fda4af,stroke-width:2px,color:#ffffff
 
-                class D1,D2,D3 cInput
-                class EXT,HASH,XF,CURATOR cHitl
+                class D1,EXT,HASH cInput
+                class XF,CUR cHitl
                 class SBVR,PL,POKA cLogic
-                class BEJ,GJ,GL,TB,LS,FS cManifold
-                class MF,SV,TDB,PROVO cGraph
-                class REJ cAlert
+                class BEJ,FS cManifold
+                class MF,TDB,ACC,DET,HDR cGraph
+                class ACT,AGT,DATA_RES cProvo
+                class SOLID,GAIA,CORP,VERIF,AUDIT_OK cSolid
+                class SEAL,ALGO_NET cAlgo
         </div>
     </div>
 
-    <!-- Comparative Table: The 7 Habits of Provenance in our Stack -->
+    <!-- Comparative Table: The 7 Habits of Provenance in our Stack v1.6 -->
     <div class="glass-card w-full max-w-6xl p-8 rounded-2xl shadow-2xl mb-16">
         <h3 class="text-xl font-bold text-sky-300 mb-6 flex items-center gap-2">
-            <span>🛡️</span> Implementación Técnica de los 7 Hábitos de la Procedencia por Diseño
+            <span>🛡️</span> Implementación Técnica de los 7 Hábitos de la Procedencia + Soberanía Gaia-X / Solid
         </h3>
         
         <div class="overflow-x-auto">
@@ -252,52 +302,52 @@
                     <tr class="border-b border-slate-700 bg-slate-900/80 text-teal-300 font-mono">
                         <th class="p-3">#</th>
                         <th class="p-3">Hábito de Procedencia</th>
-                        <th class="p-3">Estándar W3C / OMG</th>
-                        <th class="p-3">Implementación Concreta en el Stack DFRNT</th>
+                        <th class="p-3">Estándar W3C / OMG / Gaia-X</th>
+                        <th class="p-3">Implementación Concreta en el Stack v1.6 (A&AD)</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-800">
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">1</td>
                         <td class="p-3 font-semibold text-white">Registro en el Momento del Acto</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">W3C PROV-O (prov:Activity)</td>
-                        <td class="p-3">Captura instantánea de la evidencia en BaseX con cálculo de SHA-256 pre-transformación.</td>
+                        <td class="p-3 font-mono text-xs text-purple-300">W3C PROV-O (prov:Activity)</td>
+                        <td class="p-3">Captura instantánea de la evidencia con cálculo SHA-256 pre-transformación en BaseX y depósito en el Solid Pod.</td>
                     </tr>
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">2</td>
                         <td class="p-3 font-semibold text-white">Bitemporalidad (Dos Relojes) + Actor</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">W3C OWL-Time / Bitemporal</td>
-                        <td class="p-3">Segregación entre <em>Valid Time</em> (fecha jurídica) y <em>Transaction Time</em> (commit inmutable TerminusDB).</td>
+                        <td class="p-3 font-mono text-xs text-purple-300">W3C OWL-Time / Algorand Pure PoS</td>
+                        <td class="p-3">Segregación estricta entre <em>Valid Time</em> (fecha económica) y <em>Transaction Time</em> (commit inmutable TerminusDB y ronda Algorand).</td>
                     </tr>
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">3</td>
                         <td class="p-3 font-semibold text-white">Enlace por Referencia con IRIs</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">W3C RDF 1.2 (Reifiers ~IRI)</td>
-                        <td class="p-3">Reificación formal sin campos de texto ciego; cada <code>EntryDetail</code> porta un `@id` canónico unívoco.</td>
+                        <td class="p-3 font-mono text-xs text-purple-300">W3C RDF 1.2 / Solid WebID</td>
+                        <td class="p-3">Reificación formal sin campos ciegos; cada partida, cabecera, curador y evidencia porta un `@id` canónico e IRI navegable.</td>
                     </tr>
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">4</td>
                         <td class="p-3 font-semibold text-white">Mensaje Porta su Propio Linaje</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">W3C JSON-LD / PROV-O</td>
-                        <td class="p-3">La carga útil viaja con <code>prov:wasDerivedFrom</code> apuntando al hash y al origen de la transacción.</td>
+                        <td class="p-3 font-mono text-xs text-purple-300">W3C JSON-LD / PROV-O / Solid</td>
+                        <td class="p-3">La carga útil viaja con <code>prov:wasDerivedFrom</code> y <code>solid:resourceURI</code> apuntando directamente a la bóveda física en el Pod.</td>
                     </tr>
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">5</td>
-                        <td class="p-3 font-semibold text-white">Fuentes como Entidades & Trust Score</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">LPS Fluents / Bayesian Score</td>
-                        <td class="p-3">Registro de fuentes externas con monitoreo de fiabilidad continua en Prolog; alerta si el score decae.</td>
+                        <td class="p-3 font-semibold text-white">Fuentes como Entidades & Soberanía</td>
+                        <td class="p-3 font-mono text-xs text-cyan-300">Gaia-X Trust Framework / ODRL</td>
+                        <td class="p-3">Las fuentes son <code>GX_DataResource</code> regidas por <code>gx:policy</code> de uso soberano y participantes legales verificables (<code>GX_LegalPerson</code>).</td>
                     </tr>
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">6</td>
                         <td class="p-3 font-semibold text-white">Nunca Sobrescribir; Superseder</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">TerminusDB Git Architecture</td>
-                        <td class="p-3">Grafo inmutable append-only: los ajustes usan <code>prov:wasRevisionOf</code> preservando el historial completo.</td>
+                        <td class="p-3 font-mono text-xs text-purple-300">TerminusDB Git Graph Architecture</td>
+                        <td class="p-3">Grafo inmutable append-only: los ajustes usan <code>prov:wasRevisionOf</code> preservando el árbol completo de cambios y auditoría.</td>
                     </tr>
                     <tr class="hover:bg-slate-900/40">
                         <td class="p-3 font-bold text-teal-400 font-mono">7</td>
                         <td class="p-3 font-semibold text-white">Rechazo en Frontera (Fail Loudly)</td>
-                        <td class="p-3 font-mono text-xs text-sky-400">W3C SHACL 1.2 / Poka-Yoke</td>
-                        <td class="p-3">La aduana SHACL y Prolog bloquean de forma determinista cualquier dato huérfano de evento o descuadrado.</td>
+                        <td class="p-3 font-mono text-xs text-purple-300">W3C SHACL 1.2 / Poka-Yoke Deóntico</td>
+                        <td class="p-3">La aduana SHACL y SWI-Prolog bloquean en frontera cualquier dato descuadrado o huérfano antes de ingresar al libro mayor.</td>
                     </tr>
                 </tbody>
             </table>
@@ -309,7 +359,7 @@
         <div class="bg-slate-800/80 border border-slate-700 rounded-xl py-4 px-8 text-center w-full max-w-4xl shadow-2xl">
             <p class="text-xs md:text-sm text-slate-400">
                 <span class="text-teal-400 font-semibold text-xs uppercase tracking-wider block mb-1">
-                    Metodología A&AD — Accounting & Audit by Design
+                    Metodología A&AD — Accounting & Audit by Design (v1.6)
                 </span>
                 Basado en el marco de trabajo de <strong>Charles Hoffman, CPA</strong> (Seattle Method) y la arquitectura de:
                 <br>
