@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&AD Framework · Reproductor de Arquitectura Interactiva (v1.7 - Español)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070d18;
+      --card-bg: rgba(13, 24, 43, 0.7);
+      --card-border: rgba(56, 96, 150, 0.35);
+      --card-border-glow: rgba(56, 189, 248, 0.5);
+      --accent-cyan: #38bdf8;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: #030712;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    /* Outer Stage / Player Frame */
+    .player-container {
+      width: 100%;
+      max-width: 1240px;
+      background: radial-gradient(circle at 50% 20%, #0d1b30 0%, #050b14 100%);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.08);
+      border-radius: 20px;
+      padding: 24px 28px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top Bar */
+    .player-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      margin-bottom: 22px;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.08rem;
+    }
+
+    .brand-badge {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.25s ease;
+    }
+
+    .brand-badge:hover {
+      transform: translateY(-1px);
+      filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.65));
+    }
+
+    .brand-badge .link-hint {
+      font-size: 0.72rem;
+      color: #38bdf8;
+      opacity: 0.65;
+      -webkit-text-fill-color: initial;
+      transition: opacity 0.2s ease;
+    }
+
+    .brand-badge:hover .link-hint {
+      opacity: 1;
+    }
+
+    .brand-subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-subtitle span.dot {
+      width: 4px;
+      height: 4px;
+      background: #475569;
+      border-radius: 50%;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-switch-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: rgba(30, 41, 59, 0.75);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 20px;
+      padding: 3px 6px;
+      margin-right: 4px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+    }
+
+    .lang-btn.active {
+      background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-circle:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    /* 3-Column Grid */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: 290px 1fr 290px;
+      gap: 22px;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 24px;
+    }
+
+    .column-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 18px 16px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .column-header {
+      text-align: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .column-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f8fafc;
+      letter-spacing: -0.2px;
+    }
+
+    .column-subtitle {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Node Cards */
+    .node-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .node-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 96, 150, 0.3);
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .node-card:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(15, 23, 42, 0.95);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+
+    .node-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .node-info {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .node-name {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: #f8fafc;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .node-detail {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    /* Center Column & Stack */
+    .center-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(8, 16, 32, 0.85);
+      border-radius: 16px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 18px 20px;
+      position: relative;
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.08);
+    }
+
+    .stack-badges-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .badge-pill {
+      font-size: 0.68rem;
+      padding: 3px 9px;
+      border-radius: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      border: 1px solid;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .badge-pill.cyan {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+    }
+
+    .badge-pill.emerald {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+
+    .badge-pill.purple {
+      background: rgba(168, 85, 247, 0.12);
+      border-color: rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+    }
+
+    /* Stack Layers */
+    .stack-layer {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(71, 85, 105, 0.45);
+      border-radius: 12px;
+      padding: 12px 16px;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .stack-layer:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+
+    .layer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .layer-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .layer-number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.15);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .layer-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .layer-desc {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      line-height: 1.38;
+      padding-left: 28px;
+    }
+
+    .layer-subtags {
+      display: flex;
+      gap: 6px;
+      padding-left: 28px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .layer-subtag {
+      font-size: 0.65rem;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .stack-footer-line {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #64748b;
+      margin-top: auto;
+      padding-top: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Hyperlink inside texts */
+    .ext-link {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: all 0.2s ease;
+      font-weight: 600;
+    }
+
+    .ext-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+    }
+
+    /* Right column status check badge */
+    .status-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #10b981;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+
+    /* Bottom Pitch */
+    .bottom-pitch {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 8px;
+    }
+
+    .pitch-headline {
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: #f8fafc;
+      letter-spacing: -0.3px;
+    }
+
+    .pitch-subline {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Video Player Scrubber & Timeline */
+    .player-timeline-wrap {
+      background: rgba(10, 18, 32, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .legend-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.72rem;
+      color: #94a3b8;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .timer-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .scrubber-track {
+      width: 100%;
+      height: 6px;
+      background: #1e293b;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .scrubber-progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 48%;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      border-radius: 3px;
+      transition: width 0.1s linear;
+    }
+
+    .scrubber-thumb {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 10px #38bdf8;
+      cursor: grab;
+      left: 48%;
+      transition: left 0.1s linear;
+    }
+
+    /* Interactive mode triggers */
+    .interactive-modes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .mode-btn {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      color: #cbd5e1;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.73rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    .mode-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-cyan);
+      color: #ffffff;
+    }
+
+    .mode-btn.active {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: var(--accent-cyan);
+      color: #38bdf8;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    /* Canvas for animated particle streams */
+    #flowCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Background 3D Isometric Lego Metaphor Layer */
+    .lego-bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .lego-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* Floating animations for loose pieces */
+    @keyframes floatBrick1 {
+      0%, 100% { transform: translateY(0px) rotate(-15deg); }
+      50% { transform: translateY(-12px) rotate(-9deg); }
+    }
+    @keyframes floatBrick2 {
+      0%, 100% { transform: translateY(0px) rotate(22deg); }
+      50% { transform: translateY(-16px) rotate(28deg); }
+    }
+    @keyframes floatBrick3 {
+      0%, 100% { transform: translateY(0px) rotate(-28deg); }
+      50% { transform: translateY(12px) rotate(-22deg); }
+    }
+    @keyframes floatBrick4 {
+      0%, 100% { transform: translateY(0px) rotate(14deg); }
+      50% { transform: translateY(15px) rotate(8deg); }
+    }
+
+    .brick-float-1 { animation: floatBrick1 6.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .brick-float-2 { animation: floatBrick2 8.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .brick-float-3 { animation: floatBrick3 7.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .brick-float-4 { animation: floatBrick4 9.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+    .lego-wall-glow {
+      filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.4));
+    }
+
+    @media (max-width: 960px) {
+      .arch-grid {
+        grid-template-columns: 1fr;
+      }
+      #flowCanvas, .lego-bg-layer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-container">
+    
+    <!-- Background Lego Metaphor: Loose bricks on left, Interlocked architecture on right -->
+    <svg class="lego-bg-layer" id="legoLayer" viewBox="0 0 1200 650" preserveAspectRatio="none">
+      <defs>
+        <!-- Reusable 2x2 Isometric Lego Brick with 3D Studs -->
+        <g id="brick2x2">
+          <!-- Left Isometric Face (Shadow) -->
+          <path d="M -36,18 L -36,48 L 0,70 L 0,40 Z" fill="currentColor" filter="brightness(0.65)" stroke="rgba(255,255,255,0.4)" stroke-width="1.4" />
+          <!-- Right Isometric Face (Medium Shadow) -->
+          <path d="M 0,40 L 0,70 L 36,48 L 36,18 Z" fill="currentColor" filter="brightness(0.8)" stroke="rgba(255,255,255,0.4)" stroke-width="1.4" />
+          <!-- Top Isometric Face (Bright) -->
+          <path d="M 0,-4 L 36,18 L 0,40 L -36,18 Z" fill="currentColor" filter="brightness(1.15)" stroke="rgba(255,255,255,0.6)" stroke-width="1.4" />
+          
+          <!-- 4 3D Raised Studs -->
+          <!-- Stud 1 (Top) -->
+          <path d="M -7,8 L -7,1 A 7,4 0 0,1 7,1 L 7,8 A 7,4 0 0,1 -7,8 Z" fill="currentColor" filter="brightness(0.9)" />
+          <ellipse cx="0" cy="1" rx="7" ry="4" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          
+          <!-- Stud 2 (Left) -->
+          <path d="M -25,18 L -25,11 A 7,4 0 0,1 -11,11 L -11,18 A 7,4 0 0,1 -25,18 Z" fill="currentColor" filter="brightness(0.9)" />
+          <ellipse cx="-18" cy="11" rx="7" ry="4" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+
+          <!-- Stud 3 (Right) -->
+          <path d="M 11,18 L 11,11 A 7,4 0 0,1 25,11 L 25,18 A 7,4 0 0,1 11,18 Z" fill="currentColor" filter="brightness(0.9)" />
+          <ellipse cx="18" cy="11" rx="7" ry="4" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+
+          <!-- Stud 4 (Bottom) -->
+          <path d="M -7,28 L -7,21 A 7,4 0 0,1 7,21 L 7,28 A 7,4 0 0,1 -7,28 Z" fill="currentColor" filter="brightness(0.9)" />
+          <ellipse cx="0" cy="21" rx="7" ry="4" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+        </g>
+
+        <!-- Reusable 2x4 Isometric Lego Brick with 8 3D Studs -->
+        <g id="brick2x4">
+          <!-- Left Isometric Face (Shadow) -->
+          <path d="M -72,18 L -72,48 L 0,92 L 0,62 Z" fill="currentColor" filter="brightness(0.65)" stroke="rgba(255,255,255,0.4)" stroke-width="1.4" />
+          <!-- Right Isometric Face (Medium Shadow) -->
+          <path d="M 0,62 L 0,92 L 36,70 L 36,40 Z" fill="currentColor" filter="brightness(0.8)" stroke="rgba(255,255,255,0.4)" stroke-width="1.4" />
+          <!-- Top Isometric Face (Bright) -->
+          <path d="M -36,-4 L 36,40 L 0,62 L -72,18 Z" fill="currentColor" filter="brightness(1.15)" stroke="rgba(255,255,255,0.6)" stroke-width="1.4" />
+
+          <!-- 8 Raised Studs -->
+          <ellipse cx="-54" cy="9" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="-36" cy="-1" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="-36" cy="20" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="-18" cy="10" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="-18" cy="31" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="0" cy="21" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="0" cy="42" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+          <ellipse cx="18" cy="32" rx="6.5" ry="3.8" fill="currentColor" filter="brightness(1.35)" stroke="#ffffff" stroke-width="1.2" />
+        </g>
+      </defs>
+
+      <!-- LEFT SIDE: Piezas de lego sueltas, flotando y dispersas (Estándares preexistentes) -->
+      <g opacity="0.95">
+        <!-- Brick Cyan (UBL / XBRL) -->
+        <g transform="translate(65, 80)" class="brick-float-1" color="#0284c7">
+          <use href="#brick2x4" />
+        </g>
+        <!-- Brick Purple (Prolog / KROG) -->
+        <g transform="translate(190, 140)" class="brick-float-2" color="#7c3aed">
+          <use href="#brick2x2" />
+        </g>
+        <!-- Brick Amber (BaseX / XML) -->
+        <g transform="translate(45, 230)" class="brick-float-3" color="#d97706">
+          <use href="#brick2x2" />
+        </g>
+        <!-- Brick Emerald (SHACL / SBVR) -->
+        <g transform="translate(170, 310)" class="brick-float-4" color="#059669">
+          <use href="#brick2x4" />
+        </g>
+        <!-- Brick Indigo (Solid Pods / WebID) -->
+        <g transform="translate(35, 410)" class="brick-float-1" color="#4f46e5">
+          <use href="#brick2x4" />
+        </g>
+        <!-- Brick Rose (Algorand / DLT) -->
+        <g transform="translate(180, 480)" class="brick-float-3" color="#e11d48">
+          <use href="#brick2x2" />
+        </g>
+
+        <!-- Sutiles estelas de dispersión -->
+        <path d="M 140,110 Q 240,80 320,100" stroke="#38bdf8" stroke-dasharray="4,6" stroke-width="1.5" fill="none" opacity="0.6" />
+        <path d="M 230,170 Q 280,200 330,180" stroke="#c084fc" stroke-dasharray="4,6" stroke-width="1.5" fill="none" opacity="0.6" />
+        <path d="M 110,260 Q 220,270 310,250" stroke="#fbbf24" stroke-dasharray="4,6" stroke-width="1.5" fill="none" opacity="0.6" />
+        <path d="M 230,350 Q 280,370 330,330" stroke="#34d399" stroke-dasharray="4,6" stroke-width="1.5" fill="none" opacity="0.6" />
+
+        <text x="35" y="580" id="legoLabelLeft" class="lego-label" fill="#94a3b8" opacity="0.75">🧱 PIEZAS Y ESTÁNDARES SUELTOS</text>
+      </g>
+
+      <!-- RIGHT SIDE: Piezas de lego perfectamente ensambladas y armadas (Estructura sólida A&AD) -->
+      <g transform="translate(940, 40)" class="lego-wall-glow" opacity="0.95">
+        <!-- Nivel 1 (Base interlocked) -->
+        <g transform="translate(0, 390)" color="#0369a1">
+          <use href="#brick2x4" />
+        </g>
+        <g transform="translate(72, 434)" color="#1e3a8a">
+          <use href="#brick2x4" />
+        </g>
+        <g transform="translate(144, 478)" color="#312e81">
+          <use href="#brick2x2" />
+        </g>
+
+        <!-- Nivel 2 (Interlocked trabando juntas perfectamente) -->
+        <g transform="translate(36, 346)" color="#0284c7">
+          <use href="#brick2x4" />
+        </g>
+        <g transform="translate(108, 390)" color="#4f46e5">
+          <use href="#brick2x4" />
+        </g>
+
+        <!-- Nivel 3 (Piso interlocked) -->
+        <g transform="translate(72, 302)" color="#059669">
+          <use href="#brick2x4" />
+        </g>
+        <g transform="translate(144, 346)" color="#7c3aed">
+          <use href="#brick2x2" />
+        </g>
+
+        <!-- Nivel 4 (Cúspide de precisión A&AD) -->
+        <g transform="translate(108, 258)" color="#38bdf8">
+          <use href="#brick2x4" />
+        </g>
+
+        <text x="20" y="540" id="legoLabelRight" class="lego-label" fill="#38bdf8" opacity="0.9">🧱 ARQUITECTURA MODULAR ENSAMBLADA</text>
+      </g>
+    </svg>
+    
+    <!-- Top Bar -->
+    <header class="player-header">
+      <div class="brand-title">
+        <!-- Hipervínculo solicitado a Seattle Method sobre A&AD -->
+        <a href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" target="_blank" rel="noopener noreferrer" class="brand-badge" id="brandLink" title="Leer sobre Accounting & Audit by Design (A&AD) Framework en Seattle Method">
+          <span>A&AD</span>
+          <span class="link-hint">↗</span>
+        </a>
+        <div class="brand-subtitle" id="brandSubtitle">
+          <span id="subItem1">datos financieros</span>
+          <span class="dot"></span>
+          <span id="subItem2">grafos de conocimiento deterministas</span>
+          <span class="dot"></span>
+          <span id="subItem3">aseguramiento continuo de IA</span>
+        </div>
+      </div>
+      <div class="header-controls">
+        <div class="lang-switch-wrap">
+          <button class="lang-btn active" id="btnLangES" title="Español">ES</button>
+          <span style="color: rgba(255,255,255,0.2); font-size: 0.7rem;">|</span>
+          <button class="lang-btn" id="btnLangEN" title="English">EN</button>
+        </div>
+        <button class="btn-circle" id="toggleLegoBtn" title="Alternar visibilidad de Legos (Fuerte / Suave / Oculto)" style="font-size: 1.05rem;">🧱</button>
+        <button class="btn-circle" id="playPauseBtn" title="Play / Pausa">
+          <svg id="playIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg id="pauseIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+        <button class="btn-circle" id="fullscreenBtn" title="Pantalla Completa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Canvas for Particle Stream Animation -->
+    <canvas id="flowCanvas"></canvas>
+
+    <!-- Architecture Grid -->
+    <div class="arch-grid">
+      
+      <!-- Left Column: Upstream REA Ingestion, XForms, HITL & BaseX -->
+      <section class="column-panel" id="colLeft">
+        <div class="column-header">
+          <div style="display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 4px; margin-bottom: 4px;">
+            <span class="badge-pill" id="badgeEvidence" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 0.62rem;">
+              Soportes: MD · PDF · JPG
+            </span>
+            <span class="badge-pill" id="badgeXForms" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #c084fc; font-size: 0.62rem;">
+              W3C XForms + HITL
+            </span>
+            <span class="badge-pill" id="badgeBaseX" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399; font-size: 0.62rem;">
+              BaseX Trigger
+            </span>
+          </div>
+          <h2 class="column-title" id="colLeftTitle">Ingesta REA (Momento 0)</h2>
+          <p class="column-subtitle" id="colLeftSubtitle">soporte ➔ IA ➔ XForms ➔ curador ➔ BaseX</p>
+        </div>
+
+        <div class="node-list">
+          <!-- 1. Raw Soportes -->
+          <div class="node-card" id="cardSoportes" data-source="soportes" style="border-left: 3px solid #94a3b8;">
+            <div class="node-icon" style="background: rgba(148, 163, 184, 0.15); color: #cbd5e1;">📄</div>
+            <div class="node-info">
+              <div class="node-name" id="cardSoportesTitle">Soportes Documentales</div>
+              <div class="node-detail" id="cardSoportesDetail">Facturas PDF · Recibos JPG · Actas MD</div>
+            </div>
+          </div>
+
+          <!-- 2. AI Extraction Agent -->
+          <div class="node-card" id="cardAiAgent" data-source="ai-extract" style="border-left: 3px solid var(--accent-cyan);">
+            <div class="node-icon" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan);">🤖</div>
+            <div class="node-info">
+              <div class="node-name" id="cardAiAgentTitle">Agente IA Extractor REA</div>
+              <div class="node-detail" id="cardAiAgentDetail">Extrae Recursos, Eventos y Agentes</div>
+            </div>
+          </div>
+
+          <!-- 3. W3C XForms & HITL Curation -->
+          <div class="node-card" id="cardXForms" data-source="xforms" style="border-left: 3px solid var(--accent-purple);">
+            <div class="node-icon" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">✍️</div>
+            <div class="node-info">
+              <div class="node-name" style="display:flex; justify-content:space-between; align-items:center;">
+                <span id="cardXFormsTitle">W3C XForms & HITL</span>
+                <span id="cardXFormsBadge" style="font-size: 0.6rem; color: #c084fc; background: rgba(168, 85, 247, 0.2); padding: 1px 5px; border-radius: 4px; font-weight:700;">CURADO</span>
+              </div>
+              <div class="node-detail" id="cardXFormsDetail">Pre-poblado por IA + Aprobación Humana</div>
+            </div>
+          </div>
+
+          <!-- 4. BaseX XML Store & Pipeline Trigger -->
+          <div class="node-card" id="cardBaseX" data-source="basex" style="border-left: 3px solid var(--accent-emerald); background: rgba(6, 78, 59, 0.35);">
+            <div class="node-icon" style="background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald);">⚡</div>
+            <div class="node-info">
+              <div class="node-name" style="display:flex; justify-content:space-between; align-items:center;">
+                <span id="cardBaseXTitle">BaseX XML Store</span>
+                <span id="cardBaseXBadge" style="font-size: 0.6rem; color: #34d399; background: rgba(16, 185, 129, 0.25); padding: 1px 5px; border-radius: 4px; font-weight:700;">TRIGGER ➔</span>
+              </div>
+              <div class="node-detail" id="cardBaseXDetail">Holón persistido ➔ Dispara Droplet DigitalOcean</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Center Column: DigitalOcean Runner & The A&AD Stack (ShiftLeft_V3.mfd) -->
+      <section class="column-panel center-stack" id="colCenter" style="border-color: rgba(56, 189, 248, 0.4);">
+        <div class="column-header">
+          <div style="display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 4px; margin-bottom: 4px;">
+            <span class="badge-pill cyan" style="font-size: 0.62rem;">
+              Droplet: 165.245.137.44
+            </span>
+            <span class="badge-pill purple" style="font-size: 0.62rem;">
+              ShiftLeft_V3.mfd Runner
+            </span>
+            <span class="badge-pill emerald" style="font-size: 0.62rem;">
+              W3C Solid Pod (Port 3000)
+            </span>
+          </div>
+          <h2 class="column-title" id="colCenterTitle">DigitalOcean Droplet & A&AD Stack</h2>
+          <p class="column-subtitle" id="colCenterSubtitle">SWI-Prolog ➔ XBRL GL ➔ Transmutación a Grafo JSON-LD ➔ Solid ➔ Algorand</p>
+        </div>
+
+        <div class="stack-badges-bar">
+          <span class="badge-pill emerald">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            KROG: (K ∩ R ∩ O) ⊆ G
+          </span>
+          <span class="badge-pill cyan">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Gaia-X Trust Framework
+          </span>
+          <span class="badge-pill purple">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            W3C PROV-O + Solid Pod
+          </span>
+        </div>
+
+        <!-- Layer 03: Continuous Audit, WOQL/QOWL & 13 Solid Pods -->
+        <div class="stack-layer" id="layer03" style="border-left: 3px solid var(--accent-purple);">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1.1rem;">⚡</span>
+              <span class="layer-title" id="layer03Title">Auditoría Continua, WOQL/QOWL & 13 Solid Pods</span>
+            </div>
+            <span class="layer-number">03</span>
+          </div>
+          <div class="layer-desc" id="layer03Desc">
+            Topología de 13 Solid Pods (<a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Caso Taquería / Kurt Cagle ↗</a>). Solicitudes LDN (requests, not writes) y políticas de soberanía W3C ODRL.
+          </div>
+          <div class="layer-subtags">
+            <span class="layer-subtag">13 Solid Pods</span>
+            <span class="layer-subtag">WOQL / QOWL</span>
+            <span class="layer-subtag">W3C PROV-O</span>
+            <span class="layer-subtag">W3C ODRL Policies</span>
+          </div>
+        </div>
+
+        <!-- Layer 02: Inyección JSON-LD en TerminusDB & Gaia-X Core -->
+        <div class="stack-layer" id="layer02" style="border-left: 3px solid var(--accent-cyan); background: rgba(14, 30, 56, 0.65);">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1.1rem;">🌐</span>
+              <span class="layer-title" id="layer02Title">Inyección JSON-LD en TerminusDB & Gaia-X Core</span>
+            </div>
+            <span class="layer-number">02</span>
+          </div>
+          <div class="layer-desc" id="layer02Desc">ShiftLeft_V3.mfd transmuta XBRL GL a Grafo JSON-LD con holarquía Tag1..Tag10 (Hoffman), entidades Gaia-X (gx:LegalPerson, LEI, VAT), FIBO y TerminusDB.</div>
+          <div class="layer-subtags">
+            <span class="layer-subtag">ShiftLeft_V3.mfd</span>
+            <span class="layer-subtag">TerminusDB (Git-Graph)</span>
+            <span class="layer-subtag">Gaia-X (gx:LegalPerson)</span>
+            <span class="layer-subtag">FIBO + REA</span>
+          </div>
+        </div>
+
+        <!-- Layer 01: Epistemic SWI-Prolog Engine & SBVR -->
+        <div class="stack-layer" id="layer01" style="border-left: 3px solid var(--accent-emerald);">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1.1rem;">🛡️</span>
+              <span class="layer-title" id="layer01Title">Motor Epistémico SWI-Prolog & SBVR Gate</span>
+            </div>
+            <span class="layer-number">01</span>
+          </div>
+          <div class="layer-desc" id="layer01Desc">decreto_2650_server.pl valida la ecuación (K ∩ R ∩ O) ⊆ G, PUC Decreto 2650, NIIF y sumas iguales SBVR ($48,100.00).</div>
+          <div class="layer-subtags">
+            <span class="layer-subtag">SWI-Prolog REST</span>
+            <span class="layer-subtag">PUC Dec. 2650</span>
+            <span class="layer-subtag">SBVR $48,100.00</span>
+            <span class="layer-subtag">W3C SHACL</span>
+          </div>
+        </div>
+
+        <!-- Layer Base: Algorand Mainnet Anchor & Cryptographic Seal -->
+        <div class="stack-layer" style="border-left: 3px solid #e2e8f0; padding: 9px 16px;">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1rem;">🔒</span>
+              <span class="layer-title" id="layerBaseTitle" style="font-size: 0.82rem;">Algorand Mainnet Anchor & Notarización</span>
+            </div>
+            <span class="layer-subtag" style="color: #cbd5e1; border-color: rgba(255,255,255,0.2);">Round 66608988 · Allo.info</span>
+          </div>
+          <div class="layer-desc" id="layerBaseDesc" style="font-size: 0.7rem;">Sellado inmutable de cada holón en Algorand Blockchain con TxID criptográfico verificable públicamente.</div>
+        </div>
+
+        <div class="stack-footer-line" id="stackFooterLine">
+          automatizado en DigitalOcean · TerminusDB + Solid Pods resuelven el <a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Problema de la Taquería (Kurt Cagle) ↗</a>
+        </div>
+      </section>
+
+      <!-- Right Column: Your Assurance, Projections & Viewers (Caso Taquería) -->
+      <section class="column-panel" id="colRight">
+        <div class="column-header">
+          <div style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+            <span class="badge-pill" id="badgeViewers" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #fbbf24; font-size: 0.64rem;">
+              4 Viewers / 1 Record
+            </span>
+            <span class="badge-pill" id="badgeWoql" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399; font-size: 0.64rem;">
+              WOQL Projections
+            </span>
+          </div>
+          <h2 class="column-title" id="colRightTitle">Proyecciones & Viewers</h2>
+          <p class="column-subtitle" id="colRightSubtitle">1 solo registro ➔ 4 visores sin fuga de datos</p>
+        </div>
+
+        <div class="node-list">
+          <!-- 1. Legacy ERPs updated via QOWL Projection -->
+          <div class="node-card" id="cardLegacyERP" data-source="legacy-erp" style="border-left: 3px solid var(--accent-amber); background: rgba(30, 41, 59, 0.8);">
+            <div class="node-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">🔄</div>
+            <div class="node-info">
+              <div class="node-name" style="display:flex; justify-content:space-between; align-items:center;">
+                <span id="cardLegacyERPTitle">Legacy ERPs (Sync)</span>
+                <span id="cardLegacyERPBadge" style="font-size: 0.6rem; color: #fbbf24; background: rgba(245, 158, 11, 0.2); padding: 1px 5px; border-radius: 4px; font-weight:700;">QOWL WRITE-BACK</span>
+              </div>
+              <div class="node-detail" id="cardLegacyERPDetail">SAP · Oracle · Asientos sincronizados</div>
+            </div>
+            <div class="status-check" style="background: rgba(245, 158, 11, 0.2); border-color: #fbbf24; color: #fbbf24;">✓</div>
+          </div>
+
+          <!-- 2. Head Office (Tidewater Brand) -->
+          <div class="node-card" id="cardHeadOffice" style="border-left: 3px solid var(--accent-cyan);">
+            <div class="node-icon" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan);">🏢</div>
+            <div class="node-info">
+              <div class="node-name" id="cardHeadOfficeTitle">Head Office (Brand)</div>
+              <div class="node-detail" id="cardHeadOfficeDetail">Regalías y Cierre (Sin ver nómina ni libros)</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <!-- 3. Health Department (County Inspector) -->
+          <div class="node-card" id="cardCountyHealth" style="border-left: 3px solid var(--accent-rose);">
+            <div class="node-icon" style="background: rgba(244, 63, 94, 0.15); color: var(--accent-rose);">🩺</div>
+            <div class="node-info">
+              <div class="node-name" id="cardCountyHealthTitle">County Health Inspector</div>
+              <div class="node-detail" id="cardCountyHealthDetail">Temperaturas & Cierre (Sin ver ventas)</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <!-- 4. Lender / Bank -->
+          <div class="node-card" id="cardLender" style="border-left: 3px solid #818cf8;">
+            <div class="node-icon" style="background: rgba(129, 140, 248, 0.15); color: #818cf8;">🏦</div>
+            <div class="node-info">
+              <div class="node-name" id="cardLenderTitle">Lender (Banco Financista)</div>
+              <div class="node-detail" id="cardLenderDetail">Covenants de crédito (Sin ver recetas)</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <!-- 5. AI Auditors & BI -->
+          <div class="node-card" id="cardAuditorAI">
+            <div class="node-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">🤖</div>
+            <div class="node-info">
+              <div class="node-name" id="cardAuditorAITitle">Claude & GPT (Audit Agents)</div>
+              <div class="node-detail" id="cardAuditorAIDetail">Auditoría ontológica continua en TerminusDB</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Pitch -->
+    <div class="bottom-pitch">
+      <h3 class="pitch-headline" id="pitchHeadline">Arquitectura Sunder-Zachman: FIBO + Gaia-X (gx:LegalPerson) + W3C Solid + PROV-O + Algorand</h3>
+      <p class="pitch-subline" id="pitchSubline">
+        BaseX dispara ➔ Droplet DigitalOcean transmuta a Grafo JSON-LD ➔ Inyección en TerminusDB ➔ 1 Registro Central produce 4 Proyecciones Seguras (<a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Caso Taquería / Kurt Cagle ↗</a>)
+      </p>
+    </div>
+
+    <!-- Video Timeline & Scrubber -->
+    <div class="player-timeline-wrap">
+      <div class="timeline-top">
+        <div class="legend-group">
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #38bdf8; box-shadow: 0 0 6px #38bdf8;"></span>
+            <span id="leg1">Evento BaseX & Droplet</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+            <span id="leg2">TerminusDB & Prolog</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #fbbf24; box-shadow: 0 0 6px #fbbf24;"></span>
+            <span id="leg3">Proyección ERP Legado</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #f43f5e; box-shadow: 0 0 6px #f43f5e;"></span>
+            <span id="leg4">County Health Inspector</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #818cf8; box-shadow: 0 0 6px #818cf8;"></span>
+            <span id="leg5">Lender / Banco Proyección</span>
+          </div>
+        </div>
+        <div class="timer-display" id="timeCounter">0:14.2 / 0:28.0</div>
+      </div>
+
+      <div class="scrubber-track" id="scrubberTrack">
+        <div class="scrubber-progress" id="scrubberProgress"></div>
+        <div class="scrubber-thumb" id="scrubberThumb"></div>
+      </div>
+    </div>
+
+    <!-- Interactive Simulation Mode Controls -->
+    <div class="interactive-modes">
+      <button class="mode-btn active" id="btnModeTaqueria">🌮 Simular Caso Taquería (Inyección TerminusDB ➔ 4 Proyecciones Seguras)</button>
+      <a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="mode-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; border-color: rgba(245, 158, 11, 0.4); color: #fbbf24; background: rgba(245, 158, 11, 0.1);" title="The Holonic Web - A Tuesday at Tidewater Taqueria (Kurt Cagle)">
+        <span>📖 Substack Taquería</span>
+        <span style="font-size: 0.72rem;">↗</span>
+      </a>
+      <button class="mode-btn" id="btnModeNormal">⚡ Flujo Estándar: Soporte ➔ BaseX ➔ Droplet ➔ Grafo</button>
+      <button class="mode-btn" id="btnModeProjection">🔄 Simular Proyección QOWL a ERP Legado (Write-Back)</button>
+      <button class="mode-btn" id="btnModeBlocked">🛡️ Simular Bloqueo de Regla (SBVR / Prolog)</button>
+    </div>
+
+  </div>
+
+  <script>
+    // Bilingual i18n Dictionary
+    const i18n = {
+      es: {
+        docTitle: 'A&AD Framework · Reproductor de Arquitectura Interactiva (v1.7)',
+        brandTitle: 'Leer sobre Accounting & Audit by Design (A&AD) Framework en Seattle Method',
+        brandSubtitle: ['datos financieros', 'grafos de conocimiento deterministas', 'aseguramiento continuo de IA'],
+        legoLeft: '🧱 PIEZAS Y ESTÁNDARES SUELTOS',
+        legoRight: '🧱 ARQUITECTURA MODULAR ENSAMBLADA',
+        toggleLegoTitle: 'Alternar visibilidad de Legos (Fuerte / Suave / Oculto)',
+        playPauseTitle: 'Play / Pausa',
+        fullscreenTitle: 'Pantalla Completa',
+        colLeft: {
+          badgeEvidence: 'Soportes: MD · PDF · JPG',
+          badgeXForms: 'W3C XForms + HITL',
+          badgeBaseX: 'BaseX Trigger',
+          title: 'Ingesta REA (Momento 0)',
+          subtitle: 'soporte ➔ IA ➔ XForms ➔ curador ➔ BaseX',
+          cardSoportesTitle: 'Soportes Documentales',
+          cardSoportesDetail: 'Facturas PDF · Recibos JPG · Actas MD',
+          cardAiAgentTitle: 'Agente IA Extractor REA',
+          cardAiAgentDetail: 'Extrae Recursos, Eventos y Agentes',
+          cardXFormsTitle: 'W3C XForms & HITL',
+          cardXFormsBadge: 'CURADO',
+          cardXFormsDetail: 'Pre-poblado por IA + Aprobación Humana',
+          cardBaseXTitle: 'BaseX XML Store',
+          cardBaseXBadge: 'TRIGGER ➔',
+          cardBaseXDetail: 'Holón persistido ➔ Dispara Droplet DigitalOcean'
+        },
+        colCenter: {
+          title: 'DigitalOcean Droplet & A&AD Stack',
+          subtitle: 'SWI-Prolog ➔ XBRL GL ➔ Transmutación a Grafo JSON-LD ➔ Solid ➔ Algorand',
+          layer03Title: 'Auditoría Continua, WOQL/QOWL & 13 Solid Pods',
+          layer03Desc: 'Topología de 13 Solid Pods (<a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Caso Taquería / Kurt Cagle ↗</a>). Solicitudes LDN (requests, not writes) y políticas de soberanía W3C ODRL.',
+          layer02Title: 'Inyección JSON-LD en TerminusDB & Gaia-X Core',
+          layer02Desc: 'ShiftLeft_V3.mfd transmuta XBRL GL a Grafo JSON-LD con holarquía Tag1..Tag10 (Hoffman), entidades Gaia-X (gx:LegalPerson, LEI, VAT), FIBO y TerminusDB.',
+          layer01Title: 'Motor Epistémico SWI-Prolog & SBVR Gate',
+          layer01Desc: 'decreto_2650_server.pl valida la ecuación (K ∩ R ∩ O) ⊆ G, PUC Decreto 2650, NIIF y sumas iguales SBVR ($48,100.00).',
+          layerBaseTitle: 'Algorand Mainnet Anchor & Notarización',
+          layerBaseDesc: 'Sellado inmutable de cada holón en Algorand Blockchain con TxID criptográfico verificable públicamente.',
+          footerLine: 'automatizado en DigitalOcean · TerminusDB + Solid Pods resuelven el <a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Problema de la Taquería (Kurt Cagle) ↗</a>'
+        },
+        colRight: {
+          badgeViewers: '4 Viewers / 1 Record',
+          badgeWoql: 'WOQL Projections',
+          title: 'Proyecciones & Viewers',
+          subtitle: '1 solo registro ➔ 4 visores sin fuga de datos',
+          cardLegacyERPTitle: 'Legacy ERPs (Sync)',
+          cardLegacyERPBadge: 'QOWL WRITE-BACK',
+          cardLegacyERPDetail: 'SAP · Oracle · Asientos sincronizados',
+          cardHeadOfficeTitle: 'Head Office (Brand)',
+          cardHeadOfficeDetail: 'Regalías y Cierre (Sin ver nómina ni libros)',
+          cardCountyHealthTitle: 'County Health Inspector',
+          cardCountyHealthDetail: 'Temperaturas & Cierre (Sin ver ventas)',
+          cardLenderTitle: 'Lender (Banco Financista)',
+          cardLenderDetail: 'Covenants de crédito (Sin ver recetas)',
+          cardAuditorAITitle: 'Claude & GPT (Audit Agents)',
+          cardAuditorAIDetail: 'Auditoría ontológica continua en TerminusDB'
+        },
+        pitch: {
+          headline: 'Arquitectura Sunder-Zachman: FIBO + Gaia-X (gx:LegalPerson) + W3C Solid + PROV-O + Algorand',
+          subline: 'BaseX dispara ➔ Droplet DigitalOcean transmuta a Grafo JSON-LD ➔ Inyección en TerminusDB ➔ 1 Registro Central produce 4 Proyecciones Seguras (<a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Caso Taquería / Kurt Cagle ↗</a>)'
+        },
+        legend: {
+          leg1: 'Evento BaseX & Droplet',
+          leg2: 'TerminusDB & Prolog',
+          leg3: 'Proyección ERP Legado',
+          leg4: 'County Health Inspector',
+          leg5: 'Lender / Banco Proyección'
+        },
+        modes: {
+          taqueria: '🌮 Simular Caso Taquería (Inyección TerminusDB ➔ 4 Proyecciones Seguras)',
+          normal: '⚡ Flujo Estándar: Soporte ➔ BaseX ➔ Droplet ➔ Grafo',
+          projection: '🔄 Simular Proyección QOWL a ERP Legado (Write-Back)',
+          blocked: '🛡️ Simular Bloqueo de Regla (SBVR / Prolog)'
+        }
+      },
+      en: {
+        docTitle: 'A&AD Framework · Interactive Architecture Player (v1.7)',
+        brandTitle: 'Read about Accounting & Audit by Design (A&AD) Framework on Seattle Method',
+        brandSubtitle: ['financial data', 'deterministic knowledge graphs', 'continuous AI assurance'],
+        legoLeft: '🧱 LOOSE BRICKS & DISCONNECTED STANDARDS',
+        legoRight: '🧱 ASSEMBLED MODULAR ARCHITECTURE',
+        toggleLegoTitle: 'Toggle Lego Bricks Visibility (Strong / Soft / Hidden)',
+        playPauseTitle: 'Play / Pause',
+        fullscreenTitle: 'Fullscreen',
+        colLeft: {
+          badgeEvidence: 'Evidence: MD · PDF · JPG',
+          badgeXForms: 'W3C XForms + HITL',
+          badgeBaseX: 'BaseX Trigger',
+          title: 'REA Ingestion (Moment 0)',
+          subtitle: 'evidence ➔ AI ➔ XForms ➔ curator ➔ BaseX',
+          cardSoportesTitle: 'Documentary Evidence',
+          cardSoportesDetail: 'PDF Invoices · JPG Receipts · MD Minutes',
+          cardAiAgentTitle: 'REA Extraction AI Agent',
+          cardAiAgentDetail: 'Extracts Resources, Events & Agents',
+          cardXFormsTitle: 'W3C XForms & HITL',
+          cardXFormsBadge: 'CURATED',
+          cardXFormsDetail: 'AI Pre-population + Human-in-the-Loop Approval',
+          cardBaseXTitle: 'BaseX XML Store',
+          cardBaseXBadge: 'TRIGGER ➔',
+          cardBaseXDetail: 'Persisted Holon ➔ Triggers DigitalOcean Droplet'
+        },
+        colCenter: {
+          title: 'DigitalOcean Droplet & A&AD Stack',
+          subtitle: 'SWI-Prolog ➔ XBRL GL ➔ Semantic Transmutation to JSON-LD Graph ➔ Solid ➔ Algorand',
+          layer03Title: 'Continuous Audit, WOQL/QOWL & 13 Solid Pods',
+          layer03Desc: 'Topology of 13 Solid Pods (<a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Taqueria Case / Kurt Cagle ↗</a>). Linked Data Notifications (requests, not writes) & W3C ODRL sovereignty policies.',
+          layer02Title: 'JSON-LD Injection into TerminusDB & Gaia-X Core',
+          layer02Desc: 'ShiftLeft_V3.mfd transmutates XBRL GL into JSON-LD Graph with Tag1..Tag10 holarchy (Hoffman), Gaia-X entities (gx:LegalPerson, LEI, VAT), FIBO & TerminusDB.',
+          layer01Title: 'SWI-Prolog Epistemic Engine & SBVR Gate',
+          layer01Desc: 'decreto_2650_server.pl enforces (K ∩ R ∩ O) ⊆ G, Colombia PUC Dec. 2650, IFRS, and SBVR balanced trial balance ($48,100.00).',
+          layerBaseTitle: 'Algorand Mainnet Anchor & Notarization',
+          layerBaseDesc: 'Immutable cryptographic sealing of each holon on Algorand Blockchain with publicly verifiable TxID.',
+          footerLine: 'automated on DigitalOcean · TerminusDB + Solid Pods solve the <a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Tidewater Taqueria Problem (Kurt Cagle) ↗</a>'
+        },
+        colRight: {
+          badgeViewers: '4 Viewers / 1 Record',
+          badgeWoql: 'WOQL Projections',
+          title: 'Projections & Viewers',
+          subtitle: '1 single record ➔ 4 viewers without data leakage',
+          cardLegacyERPTitle: 'Legacy ERPs (Sync)',
+          cardLegacyERPBadge: 'QOWL WRITE-BACK',
+          cardLegacyERPDetail: 'SAP · Oracle · Synchronized journal entries',
+          cardHeadOfficeTitle: 'Head Office (Brand)',
+          cardHeadOfficeDetail: 'Royalties & Close (Zero access to store payroll or private ledger)',
+          cardCountyHealthTitle: 'County Health Inspector',
+          cardCountyHealthDetail: 'Temperatures & Sanitary Orders (Zero access to financial sales)',
+          cardLenderTitle: 'Lender (Financing Bank)',
+          cardLenderDetail: 'Debt covenants & liquidity ratios (Zero access to secret recipes)',
+          cardAuditorAITitle: 'Claude & GPT (Audit Agents)',
+          cardAuditorAIDetail: 'Continuous ontological audit over TerminusDB'
+        },
+        pitch: {
+          headline: 'Sunder-Zachman Architecture: FIBO + Gaia-X (gx:LegalPerson) + W3C Solid + PROV-O + Algorand',
+          subline: 'BaseX triggers ➔ DigitalOcean Droplet transmutates to JSON-LD Graph ➔ Injection into TerminusDB ➔ 1 Core Record yields 4 Secure Projections (<a href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="ext-link">Taqueria Case / Kurt Cagle ↗</a>)'
+        },
+        legend: {
+          leg1: 'BaseX Event & Droplet',
+          leg2: 'TerminusDB & Prolog',
+          leg3: 'Legacy ERP Projection',
+          leg4: 'County Health Inspector',
+          leg5: 'Lender / Bank Projection'
+        },
+        modes: {
+          taqueria: '🌮 Simulate Taqueria Case (TerminusDB Injection ➔ 4 Secure Projections)',
+          normal: '⚡ Standard Pipeline: Evidence ➔ BaseX ➔ Droplet ➔ Graph',
+          projection: '🔄 Simulate QOWL Projection to Legacy ERP (Write-Back)',
+          blocked: '🛡️ Simulate Rule Rejection (SBVR / Prolog Gate)'
+        }
+      }
+    };
+
+    let currentLang = 'es';
+
+    function setLanguage(lang) {
+      if (!i18n[lang]) return;
+      currentLang = lang;
+      const dict = i18n[lang];
+
+      document.documentElement.lang = lang;
+      document.title = dict.docTitle;
+
+      // Brand link title
+      const brandLink = document.getElementById('brandLink');
+      if (brandLink) brandLink.title = dict.brandTitle;
+
+      // Brand subtitle
+      document.getElementById('subItem1').textContent = dict.brandSubtitle[0];
+      document.getElementById('subItem2').textContent = dict.brandSubtitle[1];
+      document.getElementById('subItem3').textContent = dict.brandSubtitle[2];
+
+      // Lego labels
+      document.getElementById('legoLabelLeft').textContent = dict.legoLeft;
+      document.getElementById('legoLabelRight').textContent = dict.legoRight;
+
+      // Controls tooltips
+      document.getElementById('toggleLegoBtn').title = dict.toggleLegoTitle;
+      document.getElementById('playPauseBtn').title = dict.playPauseTitle;
+      document.getElementById('fullscreenBtn').title = dict.fullscreenTitle;
+
+      // Col Left
+      document.getElementById('badgeEvidence').textContent = dict.colLeft.badgeEvidence;
+      document.getElementById('badgeXForms').textContent = dict.colLeft.badgeXForms;
+      document.getElementById('badgeBaseX').textContent = dict.colLeft.badgeBaseX;
+      document.getElementById('colLeftTitle').textContent = dict.colLeft.title;
+      document.getElementById('colLeftSubtitle').textContent = dict.colLeft.subtitle;
+      document.getElementById('cardSoportesTitle').textContent = dict.colLeft.cardSoportesTitle;
+      document.getElementById('cardSoportesDetail').textContent = dict.colLeft.cardSoportesDetail;
+      document.getElementById('cardAiAgentTitle').textContent = dict.colLeft.cardAiAgentTitle;
+      document.getElementById('cardAiAgentDetail').textContent = dict.colLeft.cardAiAgentDetail;
+      document.getElementById('cardXFormsTitle').textContent = dict.colLeft.cardXFormsTitle;
+      document.getElementById('cardXFormsBadge').textContent = dict.colLeft.cardXFormsBadge;
+      document.getElementById('cardXFormsDetail').textContent = dict.colLeft.cardXFormsDetail;
+      document.getElementById('cardBaseXTitle').textContent = dict.colLeft.cardBaseXTitle;
+      document.getElementById('cardBaseXBadge').textContent = dict.colLeft.cardBaseXBadge;
+      document.getElementById('cardBaseXDetail').textContent = dict.colLeft.cardBaseXDetail;
+
+      // Col Center
+      document.getElementById('colCenterTitle').textContent = dict.colCenter.title;
+      document.getElementById('colCenterSubtitle').textContent = dict.colCenter.subtitle;
+      document.getElementById('layer03Title').textContent = dict.colCenter.layer03Title;
+      document.getElementById('layer03Desc').innerHTML = dict.colCenter.layer03Desc;
+      document.getElementById('layer02Title').textContent = dict.colCenter.layer02Title;
+      document.getElementById('layer02Desc').textContent = dict.colCenter.layer02Desc;
+      document.getElementById('layer01Title').textContent = dict.colCenter.layer01Title;
+      document.getElementById('layer01Desc').textContent = dict.colCenter.layer01Desc;
+      document.getElementById('layerBaseTitle').textContent = dict.colCenter.layerBaseTitle;
+      document.getElementById('layerBaseDesc').textContent = dict.colCenter.layerBaseDesc;
+      document.getElementById('stackFooterLine').innerHTML = dict.colCenter.footerLine;
+
+      // Col Right
+      document.getElementById('badgeViewers').textContent = dict.colRight.badgeViewers;
+      document.getElementById('badgeWoql').textContent = dict.colRight.badgeWoql;
+      document.getElementById('colRightTitle').textContent = dict.colRight.title;
+      document.getElementById('colRightSubtitle').textContent = dict.colRight.subtitle;
+      document.getElementById('cardLegacyERPTitle').textContent = dict.colRight.cardLegacyERPTitle;
+      document.getElementById('cardLegacyERPBadge').textContent = dict.colRight.cardLegacyERPBadge;
+      document.getElementById('cardLegacyERPDetail').textContent = dict.colRight.cardLegacyERPDetail;
+      document.getElementById('cardHeadOfficeTitle').textContent = dict.colRight.cardHeadOfficeTitle;
+      document.getElementById('cardHeadOfficeDetail').textContent = dict.colRight.cardHeadOfficeDetail;
+      document.getElementById('cardCountyHealthTitle').textContent = dict.colRight.cardCountyHealthTitle;
+      document.getElementById('cardCountyHealthDetail').textContent = dict.colRight.cardCountyHealthDetail;
+      document.getElementById('cardLenderTitle').textContent = dict.colRight.cardLenderTitle;
+      document.getElementById('cardLenderDetail').textContent = dict.colRight.cardLenderDetail;
+      document.getElementById('cardAuditorAITitle').textContent = dict.colRight.cardAuditorAITitle;
+      document.getElementById('cardAuditorAIDetail').textContent = dict.colRight.cardAuditorAIDetail;
+
+      // Pitch
+      document.getElementById('pitchHeadline').textContent = dict.pitch.headline;
+      document.getElementById('pitchSubline').innerHTML = dict.pitch.subline;
+
+      // Legend
+      document.getElementById('leg1').textContent = dict.legend.leg1;
+      document.getElementById('leg2').textContent = dict.legend.leg2;
+      document.getElementById('leg3').textContent = dict.legend.leg3;
+      document.getElementById('leg4').textContent = dict.legend.leg4;
+      document.getElementById('leg5').textContent = dict.legend.leg5;
+
+      // Modes
+      document.getElementById('btnModeTaqueria').textContent = dict.modes.taqueria;
+      document.getElementById('btnModeNormal').textContent = dict.modes.normal;
+      document.getElementById('btnModeProjection').textContent = dict.modes.projection;
+      document.getElementById('btnModeBlocked').textContent = dict.modes.blocked;
+
+      // Buttons UI State
+      const btnES = document.getElementById('btnLangES');
+      const btnEN = document.getElementById('btnLangEN');
+      if (lang === 'es') {
+        btnES.classList.add('active');
+        btnEN.classList.remove('active');
+      } else {
+        btnEN.classList.add('active');
+        btnES.classList.remove('active');
+      }
+    }
+
+    document.getElementById('btnLangES').addEventListener('click', () => setLanguage('es'));
+    document.getElementById('btnLangEN').addEventListener('click', () => setLanguage('en'));
+
+    // Particle Animation & Canvas Engine
+    const canvas = document.getElementById('flowCanvas');
+    const ctx = canvas.getContext('2d');
+    const container = document.querySelector('.player-container');
+    const colLeft = document.getElementById('colLeft');
+    const colCenter = document.getElementById('colCenter');
+    const colRight = document.getElementById('colRight');
+
+    let isPlaying = true;
+    let currentTime = 14.2;
+    const totalDuration = 28.0;
+    let simulationMode = 'taqueria'; // Default mode: Caso Taquería
+
+    function resizeCanvas() {
+      const rect = container.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Particle class
+    class Particle {
+      constructor(type) {
+        this.reset(type);
+      }
+
+      reset(type) {
+        this.type = type || simulationMode;
+        const leftRect = colLeft.getBoundingClientRect();
+        const centerRect = colCenter.getBoundingClientRect();
+        const rightRect = colRight.getBoundingClientRect();
+        const cRect = container.getBoundingClientRect();
+
+        const cardSoportes = document.getElementById('cardSoportes')?.getBoundingClientRect();
+        const cardBaseX = document.getElementById('cardBaseX')?.getBoundingClientRect();
+        const layer01 = document.getElementById('layer01')?.getBoundingClientRect();
+        const layer02 = document.getElementById('layer02')?.getBoundingClientRect();
+
+        if (this.type === 'audit') {
+          // Flows from Right (Claude/GPT) to Center Stack
+          this.startX = rightRect.left - cRect.left + 20;
+          this.startY = rightRect.top - cRect.top + 60 + Math.random() * (rightRect.height - 120);
+          this.targetX = centerRect.right - cRect.left - 20;
+          this.targetY = centerRect.top - cRect.top + 80 + Math.random() * (centerRect.height - 160);
+          this.color = '#a855f7';
+        } else if (this.type === 'taqueria') {
+          // Caso Taquería: BaseX -> Inyección en TerminusDB (layer02) -> Dispersión a los 4 Visores
+          const srcRect = cardBaseX || leftRect;
+          this.startX = srcRect.right - cRect.left - 10;
+          this.startY = srcRect.top - cRect.top + (srcRect.height / 2) + (Math.random() * 12 - 6);
+          const tgtRect = layer02 || centerRect;
+          this.targetX = tgtRect.left - cRect.left + 25;
+          this.targetY = tgtRect.top - cRect.top + (tgtRect.height / 2) + (Math.random() * 16 - 8);
+          this.color = '#38bdf8';
+          this.viewerIndex = Math.floor(Math.random() * 4);
+        } else if (this.type === 'projection') {
+          // Trigger from BaseX -> into Droplet (layer02 MapForce) -> then curves to Legacy ERP on right!
+          const srcRect = cardBaseX || leftRect;
+          this.startX = srcRect.right - cRect.left - 10;
+          this.startY = srcRect.top - cRect.top + (srcRect.height / 2) + (Math.random() * 12 - 6);
+          const tgtRect = layer02 || centerRect;
+          this.targetX = tgtRect.left - cRect.left + 25;
+          this.targetY = tgtRect.top - cRect.top + (tgtRect.height / 2) + (Math.random() * 16 - 8);
+          this.color = '#38bdf8';
+        } else {
+          // Normal: flows from Soportes or BaseX into Droplet Center
+          const useSoporte = Math.random() > 0.4;
+          const srcRect = (useSoporte && cardSoportes) ? cardSoportes : (cardBaseX || leftRect);
+          this.startX = srcRect.right - cRect.left - 10;
+          this.startY = srcRect.top - cRect.top + (srcRect.height / 2) + (Math.random() * 14 - 7);
+
+          const tgtRect = layer01 || centerRect;
+          this.targetX = tgtRect.left - cRect.left + 20;
+          this.targetY = tgtRect.top - cRect.top + (tgtRect.height / 2) + (Math.random() * 40 - 20);
+          this.color = this.type === 'blocked' ? '#f43f5e' : '#38bdf8';
+        }
+
+        this.x = this.startX;
+        this.y = this.startY;
+        this.progress = 0;
+        this.speed = 0.007 + Math.random() * 0.008;
+        this.size = 3.5 + Math.random() * 2;
+        this.tail = [];
+        this.phase = 1; // 1: left->center, 2: center->target
+      }
+
+      update() {
+        if (!isPlaying) return;
+
+        this.tail.push({ x: this.x, y: this.y });
+        if (this.tail.length > 8) this.tail.shift();
+
+        this.progress += this.speed;
+
+        if (this.phase === 1) {
+          // Quadratic bezier curve into Center Stack Droplet
+          const midX = (this.startX + this.targetX) / 2;
+          const cpY = this.startY + (this.targetY - this.startY) * 0.1;
+          const t = this.progress;
+          this.x = (1 - t) * (1 - t) * this.startX + 2 * (1 - t) * t * midX + t * t * this.targetX;
+          this.y = (1 - t) * (1 - t) * this.startY + 2 * (1 - t) * t * cpY + t * t * this.targetY;
+
+          if (this.progress >= 1) {
+            if (this.type === 'blocked') {
+              // Particle rejected by SWI-Prolog SBVR at Layer 01!
+              flashElement('layer01', '#f43f5e');
+              this.reset('blocked');
+            } else if (this.type === 'audit') {
+              flashElement('layer03', '#a855f7');
+              this.reset('audit');
+            } else if (this.type === 'taqueria') {
+              // Inyectado en TerminusDB & Solid Pods: Emite proyección específica a uno de los 4 visores
+              flashElement('layer02', '#38bdf8');
+              flashElement('layer03', '#a855f7');
+              this.phase = 2;
+              this.progress = 0;
+              this.startX = this.x;
+              this.startY = this.y;
+              const cRect = container.getBoundingClientRect();
+
+              const viewers = [
+                { id: 'cardHeadOffice', color: '#38bdf8' },
+                { id: 'cardCountyHealth', color: '#f43f5e' },
+                { id: 'cardLender', color: '#818cf8' },
+                { id: 'cardLegacyERP', color: '#fbbf24' }
+              ];
+              const targetViewer = viewers[this.viewerIndex !== undefined ? this.viewerIndex : Math.floor(Math.random() * 4)];
+              const vRect = document.getElementById(targetViewer.id)?.getBoundingClientRect();
+
+              if (vRect) {
+                this.targetX = vRect.left - cRect.left + 20;
+                this.targetY = vRect.top - cRect.top + (vRect.height / 2);
+              } else {
+                this.targetX = this.startX + 220;
+                this.targetY = this.startY;
+              }
+              this.color = targetViewer.color;
+              this.currentTargetId = targetViewer.id;
+            } else if (this.type === 'projection') {
+              // Validated in Droplet MapForce/Prolog, emits QOWL projection to Legacy ERP on right!
+              flashElement('layer02', '#38bdf8');
+              flashElement('layer03', '#fbbf24');
+              this.phase = 2;
+              this.progress = 0;
+              const cardLegacyERP = document.getElementById('cardLegacyERP')?.getBoundingClientRect();
+              const cRect = container.getBoundingClientRect();
+
+              this.startX = this.x;
+              this.startY = this.y;
+              if (cardLegacyERP) {
+                this.targetX = cardLegacyERP.left - cRect.left + 20;
+                this.targetY = cardLegacyERP.top - cRect.top + (cardLegacyERP.height / 2);
+              } else {
+                this.targetX = this.startX + 200;
+                this.targetY = this.startY;
+              }
+              this.color = '#fbbf24'; // Gold write-back projection color
+            } else {
+              // Normal Valid! Triggered from BaseX -> Droplet -> Advances to Right Column
+              flashElement('cardBaseX', '#10b981');
+              flashElement('layer02', '#38bdf8');
+              flashElement('layer01', '#10b981');
+              this.phase = 2;
+              this.progress = 0;
+              const rightRect = colRight.getBoundingClientRect();
+              const cRect = container.getBoundingClientRect();
+
+              this.startX = this.x;
+              this.startY = this.y;
+              this.targetX = rightRect.left - cRect.left + 20;
+              this.targetY = rightRect.top - cRect.top + 40 + Math.random() * (rightRect.height - 80);
+              this.color = '#10b981';
+            }
+          }
+        } else if (this.phase === 2) {
+          const midX = (this.startX + this.targetX) / 2;
+          const t = this.progress;
+          this.x = (1 - t) * (1 - t) * this.startX + 2 * (1 - t) * t * midX + t * t * this.targetX;
+          this.y = (1 - t) * this.startY + t * this.targetY;
+
+          if (this.progress >= 1) {
+            if (this.type === 'taqueria' && this.currentTargetId) {
+              flashElement(this.currentTargetId, this.color);
+            } else if (this.type === 'projection') {
+              flashElement('cardLegacyERP', '#fbbf24');
+            }
+            this.reset();
+          }
+        }
+      }
+
+      draw() {
+        // Draw glow trail
+        ctx.beginPath();
+        for (let i = 0; i < this.tail.length; i++) {
+          const pt = this.tail[i];
+          const alpha = (i / this.tail.length) * 0.4;
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = alpha;
+          ctx.fillRect(pt.x - 1.5, pt.y - 1.5, 3, 3);
+        }
+        ctx.globalAlpha = 1;
+
+        // Draw particle head
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    // Flash animation on elements (layers or cards)
+    function flashElement(id, color) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.borderColor = color;
+      el.style.boxShadow = `0 0 25px ${color}`;
+      setTimeout(() => {
+        el.style.borderColor = '';
+        el.style.boxShadow = '';
+      }, 400);
+    }
+    const flashLayer = flashElement;
+
+    const particles = [];
+    for (let i = 0; i < 22; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      // Update timer & scrubber
+      if (isPlaying) {
+        currentTime += 0.016;
+        if (currentTime >= totalDuration) {
+          currentTime = 0;
+        }
+        updateScrubberUI();
+      }
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // Scrubber & Play UI
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const playIcon = document.getElementById('playIcon');
+    const pauseIcon = document.getElementById('pauseIcon');
+    const timeCounter = document.getElementById('timeCounter');
+    const scrubberProgress = document.getElementById('scrubberProgress');
+    const scrubberThumb = document.getElementById('scrubberThumb');
+    const scrubberTrack = document.getElementById('scrubberTrack');
+
+    function updateScrubberUI() {
+      const pct = (currentTime / totalDuration) * 100;
+      scrubberProgress.style.width = pct + '%';
+      scrubberThumb.style.left = pct + '%';
+
+      const sec = currentTime.toFixed(1);
+      timeCounter.textContent = `0:${sec.padStart(4, '0')} / 0:${totalDuration.toFixed(1)}`;
+    }
+
+    playPauseBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      playIcon.style.display = isPlaying ? 'none' : 'block';
+      pauseIcon.style.display = isPlaying ? 'block' : 'none';
+    });
+
+    scrubberTrack.addEventListener('click', (e) => {
+      const rect = scrubberTrack.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const pct = Math.max(0, Math.min(1, clickX / rect.width));
+      currentTime = pct * totalDuration;
+      updateScrubberUI();
+    });
+
+    // Fullscreen Toggle
+    document.getElementById('fullscreenBtn').addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        container.requestFullscreen?.() || container.webkitRequestFullscreen?.();
+      } else {
+        document.exitFullscreen?.() || document.webkitExitFullscreen?.();
+      }
+    });
+
+    // Lego Background Visibility Toggle
+    const toggleLegoBtn = document.getElementById('toggleLegoBtn');
+    const legoLayer = document.getElementById('legoLayer');
+    const legoOpacities = [0.85, 0.45, 0.18, 0];
+    let legoIdx = 0; // Starts in High Visibility (0.85)
+    if (legoLayer) legoLayer.style.opacity = legoOpacities[legoIdx];
+
+    toggleLegoBtn.addEventListener('click', () => {
+      legoIdx = (legoIdx + 1) % legoOpacities.length;
+      legoLayer.style.opacity = legoOpacities[legoIdx];
+      toggleLegoBtn.style.borderColor = legoOpacities[legoIdx] > 0 ? '#38bdf8' : 'rgba(148, 163, 184, 0.2)';
+    });
+
+    // Mode Selector Buttons
+    const btnModeTaqueria = document.getElementById('btnModeTaqueria');
+    const btnModeNormal = document.getElementById('btnModeNormal');
+    const btnModeProjection = document.getElementById('btnModeProjection');
+    const btnModeBlocked = document.getElementById('btnModeBlocked');
+
+    function setMode(mode, activeBtn) {
+      simulationMode = mode;
+      document.querySelectorAll('.mode-btn').forEach(b => {
+        if (b.id.startsWith('btnMode')) b.classList.remove('active');
+      });
+      activeBtn.classList.add('active');
+      particles.forEach(p => p.reset(mode));
+    }
+
+    btnModeTaqueria.addEventListener('click', () => setMode('taqueria', btnModeTaqueria));
+    btnModeNormal.addEventListener('click', () => setMode('normal', btnModeNormal));
+    btnModeProjection.addEventListener('click', () => setMode('projection', btnModeProjection));
+    btnModeBlocked.addEventListener('click', () => setMode('blocked', btnModeBlocked));
+
+    // Initialize with default Spanish
+    setLanguage('es');
+  </script>
+</body>
+</html>
+
