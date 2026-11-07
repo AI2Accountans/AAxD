@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1440 980" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Fonts -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
+      text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+      .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ebf4fc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="platformGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+    <linearGradient id="blueCapsuleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    <linearGradient id="emeraldCapsuleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="purpleCapsuleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="amberCapsuleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="pillarGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadowBox" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+    <filter id="shadowPill" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0284c7" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="1440" height="980" fill="#ffffff" />
+
+  <!-- Soft Azure Top Sky Atmosphere -->
+  <rect x="0" y="0" width="1440" height="320" fill="url(#skyGrad)" />
+
+  <!-- ========================================================================= -->
+  <!-- TOP TIER: HUMAN + AGENT TEAMS (CONTINUOUS AUDIT & GOVERNANCE) -->
+  <!-- ========================================================================= -->
+
+  <!-- Overarching Bracket -->
+  <path d="M 120,40 L 640,40 M 800,40 L 1320,40" stroke="#0f172a" stroke-width="1.2" fill="none" />
+  <path d="M 120,40 L 120,50 M 1320,40 L 1320,50" stroke="#0f172a" stroke-width="1.2" fill="none" />
+  <text x="720" y="44" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a" letter-spacing="1.5">
+    HUMAN + AGENT TEAMS (CONTINUOUS AUDIT &amp; GOVERNANCE)
+  </text>
+
+  <!-- Left Console: 4 Viewers & Regulators (Taquería) -->
+  <g transform="translate(130, 70)">
+    <!-- Wireframe Monitor Graphic -->
+    <rect x="0" y="0" width="280" height="130" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadowBox)" />
+    <rect x="0" y="0" width="280" height="24" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <!-- Window Dots -->
+    <circle cx="14" cy="12" r="3" fill="#cbd5e1" />
+    <circle cx="24" cy="12" r="3" fill="#cbd5e1" />
+    <circle cx="34" cy="12" r="3" fill="#cbd5e1" />
+    <text x="140" y="16" text-anchor="middle" font-size="9" class="mono" fill="#64748b" font-weight="600">4 VIEWERS &amp; REGULATORS</text>
+    
+    <!-- Content Mockup (Taquería Views) -->
+    <rect x="15" y="36" width="115" height="40" rx="5" fill="#f0f9ff" stroke="#bae6fd" stroke-width="0.8" />
+    <text x="22" y="49" font-size="8.5" font-weight="700" fill="#0369a1">Head Office (Brand)</text>
+    <text x="22" y="61" font-size="7.5" fill="#0284c7">Royalties &amp; Close (0 Payroll)</text>
+    <path d="M 22,68 L 110,68" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="2,2" />
+
+    <rect x="145" y="36" width="120" height="40" rx="5" fill="#fff1f2" stroke="#fecdd3" stroke-width="0.8" />
+    <text x="152" y="49" font-size="8.5" font-weight="700" fill="#be123c">County Health Inspector</text>
+    <text x="152" y="61" font-size="7.5" fill="#e11d48">HACCP Temps (0 Financials)</text>
+    <circle cx="245" cy="58" r="6" fill="#f43f5e" opacity="0.2" />
+    <circle cx="245" cy="58" r="2.5" fill="#f43f5e" />
+
+    <rect x="15" y="84" width="250" height="34" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+    <text x="24" y="97" font-size="8.5" font-weight="700" fill="#475569">Lender Bank · Debt Covenants &amp; Ratios</text>
+    <text x="24" y="109" font-size="7.5" fill="#64748b">Audited continuously over TerminusDB (Zero secret recipes)</text>
+
+    <!-- Label Box Below -->
+    <rect x="25" y="142" width="230" height="28" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="1.2" />
+    <text x="140" y="160" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a" letter-spacing="0.5">
+      CONTINUOUS AUDIT &amp; 4 VIEWERS
+    </text>
+  </g>
+
+  <!-- Center Console: Agent Building & HITL Curation -->
+  <g transform="translate(515, 60)">
+    <rect x="0" y="0" width="410" height="142" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadowBox)" />
+    <rect x="0" y="0" width="410" height="24" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <circle cx="16" cy="12" r="3" fill="#cbd5e1" />
+    <circle cx="26" cy="12" r="3" fill="#cbd5e1" />
+    <circle cx="36" cy="12" r="3" fill="#cbd5e1" />
+    <text x="205" y="16" text-anchor="middle" font-size="9" class="mono" fill="#64748b" font-weight="600">HITL REA CURATION CANVAS (W3C XFORMS)</text>
+
+    <!-- Node flowchart inside agent builder -->
+    <rect x="20" y="40" width="105" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" />
+    <text x="72" y="55" text-anchor="middle" font-size="8" font-weight="700" fill="#1e293b">Evidence Ingest</text>
+    <text x="72" y="67" text-anchor="middle" font-size="7" fill="#64748b">PDF · JPG · MD</text>
+
+    <path d="M 125,58 L 155,58" stroke="#64748b" stroke-width="1.2" />
+
+    <rect x="155" y="40" width="115" height="36" rx="6" fill="#f5f3ff" stroke="#a855f7" stroke-width="1.2" />
+    <text x="212" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#7c3aed">🤖 AI REA Extractor</text>
+    <text x="212" y="67" text-anchor="middle" font-size="7" fill="#9333ea">Resource · Event · Agent</text>
+
+    <path d="M 270,58 L 300,58" stroke="#64748b" stroke-width="1.2" />
+
+    <rect x="300" y="40" width="95" height="36" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.2" />
+    <text x="347" y="55" text-anchor="middle" font-size="8.5" font-weight="700" fill="#047857">✍️ Human Curator</text>
+    <text x="347" y="67" text-anchor="middle" font-size="7" fill="#059669">W3C XForms Approval</text>
+
+    <!-- Lower Sub-Bar -->
+    <rect x="20" y="88" width="375" height="38" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="0.8" />
+    <text x="35" y="103" font-size="8.5" font-weight="700" fill="#166534">⚡ BaseX XML Store &amp; Pipeline Trigger</text>
+    <text x="35" y="116" font-size="7.5" fill="#15803d">Persisted Holon ➔ Dispara ejecución automática en Droplet DigitalOcean</text>
+
+    <!-- Label Box Below -->
+    <rect x="90" y="152" width="230" height="28" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="1.2" />
+    <text x="205" y="170" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a" letter-spacing="0.5">
+      AGENT BUILDING &amp; HITL CURATION
+    </text>
+  </g>
+
+  <!-- Right Console: Products, SDKs & Legacy ERP Write-Back -->
+  <g transform="translate(1010, 70)">
+    <rect x="0" y="0" width="290" height="130" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#shadowBox)" />
+    <rect x="0" y="0" width="290" height="24" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+    <circle cx="14" cy="12" r="3" fill="#cbd5e1" />
+    <circle cx="24" cy="12" r="3" fill="#cbd5e1" />
+    <circle cx="34" cy="12" r="3" fill="#cbd5e1" />
+    <text x="145" y="16" text-anchor="middle" font-size="9" class="mono" fill="#64748b" font-weight="600">OPERATIONS &amp; ERP WRITE-BACK</text>
+
+    <!-- Graphic content -->
+    <rect x="18" y="38" width="120" height="40" rx="5" fill="#fffbeb" stroke="#fde68a" stroke-width="0.8" />
+    <text x="26" y="52" font-size="8.5" font-weight="700" fill="#b45309">Legacy ERPs (SAP/Oracle)</text>
+    <text x="26" y="64" font-size="7.5" fill="#d97706">🔄 QOWL Write-Back Sync</text>
+
+    <rect x="150" y="38" width="122" height="40" rx="5" fill="#faf5ff" stroke="#e9d5ff" stroke-width="0.8" />
+    <text x="158" y="52" font-size="8.5" font-weight="700" fill="#6b21a8">W3C Solid Apps &amp; Pods</text>
+    <text x="158" y="64" font-size="7.5" fill="#9333ea">Port 3000 · LDN Inbox</text>
+
+    <rect x="18" y="86" width="254" height="32" rx="5" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+    <text x="28" y="100" font-size="8.5" font-weight="700" fill="#334155">Decentralized Trust (Algorand Anchor)</text>
+    <text x="28" y="111" font-size="7.5" fill="#64748b">Publicly verifiable TxID &amp; cryptographic notarization</text>
+
+    <!-- Label Box Below -->
+    <rect x="30" y="142" width="230" height="28" rx="6" fill="#ffffff" stroke="#0f172a" stroke-width="1.2" />
+    <text x="145" y="160" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a" letter-spacing="0.5">
+      PRODUCTS &amp; ERP WRITE-BACK
+    </text>
+  </g>
+
+  <!-- Connectors from top tier to ontology -->
+  <path d="M 245,170 C 245,210 540,200 540,240" stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-dasharray="3,3" />
+  <text x="245" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#64748b">⇅ READS + WRITES</text>
+
+  <g transform="translate(540, 240)">
+    <rect x="0" y="0" width="48" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="24" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">MCP</text>
+  </g>
+  <g transform="translate(605, 240)">
+    <rect x="0" y="0" width="55" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="27" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">SPARQL</text>
+  </g>
+  <g transform="translate(675, 240)">
+    <rect x="0" y="0" width="50" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="25" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">REST</text>
+  </g>
+  <g transform="translate(740, 240)">
+    <rect x="0" y="0" width="48" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="24" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">LDN</text>
+  </g>
+
+  <path d="M 720,180 L 564,240" stroke="#cbd5e1" stroke-width="1" />
+  <path d="M 720,180 L 632,240" stroke="#cbd5e1" stroke-width="1" />
+  <path d="M 720,180 L 700,240" stroke="#cbd5e1" stroke-width="1" />
+  <path d="M 720,180 L 764,240" stroke="#cbd5e1" stroke-width="1" />
+
+  <g transform="translate(970, 240)">
+    <rect x="0" y="0" width="50" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="25" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">QOWL</text>
+  </g>
+  <g transform="translate(1035, 240)">
+    <rect x="0" y="0" width="50" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="25" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">WOQL</text>
+  </g>
+  <g transform="translate(1100, 240)">
+    <rect x="0" y="0" width="48" height="22" rx="11" fill="#ffffff" stroke="#64748b" stroke-width="1" />
+    <text x="24" y="15" text-anchor="middle" class="mono" font-size="9" font-weight="700" fill="#334155">SDK</text>
+  </g>
+
+  <path d="M 1155,170 C 1155,200 995,210 995,240" stroke="#cbd5e1" stroke-width="1" />
+  <path d="M 1155,170 C 1155,200 1060,210 1060,240" stroke="#cbd5e1" stroke-width="1" />
+  <path d="M 1155,170 C 1155,200 1124,210 1124,240" stroke="#cbd5e1" stroke-width="1" />
+  <text x="1155" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#64748b">⇅ READS + WRITES</text>
+
+
+  <!-- ========================================================================= -->
+  <!-- CENTER TIER: THE A&AD SOVEREIGN ONTOLOGY SYSTEM (ISOMETRIC DIGITAL TWIN) -->
+  <!-- ========================================================================= -->
+
+  <g transform="translate(100, 280)">
+    
+    <!-- Platform Ground Polygon -->
+    <polygon points="620,0 1200,140 620,380 40,240" fill="url(#platformGrad)" stroke="#38bdf8" stroke-width="1.8" filter="url(#shadowBox)" />
+    <polygon points="40,240 620,380 620,405 40,265" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1" />
+    <polygon points="620,380 1200,140 1200,165 620,405" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1" />
+
+    <!-- Perspective Grid Wireframes -->
+    <line x1="160" y1="210" x2="740" y2="35" stroke="#bae6fd" stroke-width="0.8" opacity="0.6" />
+    <line x1="280" y1="180" x2="860" y2="70" stroke="#bae6fd" stroke-width="0.8" opacity="0.6" />
+    <line x1="400" y1="150" x2="980" y2="105" stroke="#bae6fd" stroke-width="0.8" opacity="0.6" />
+    <line x1="510" y1="265" x2="1080" y2="140" stroke="#bae6fd" stroke-width="0.8" opacity="0.6" />
+
+    <!-- 1. BaseX Ingest Node -->
+    <g transform="translate(180, 160)">
+      <ellipse cx="40" cy="40" rx="36" ry="18" fill="#10b981" opacity="0.2" />
+      <polygon points="40,10 65,22 40,34 15,22" fill="#34d399" stroke="#059669" stroke-width="1" />
+      <polygon points="15,22 40,34 40,60 15,48" fill="#059669" />
+      <polygon points="40,34 65,22 65,48 40,60" fill="#10b981" />
+      <rect x="-10" y="66" width="100" height="22" rx="11" fill="url(#blueCapsuleGrad)" filter="url(#shadowPill)" />
+      <text x="40" y="81" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">BaseX XML</text>
+      <rect x="0" y="-8" width="80" height="16" rx="8" fill="#065f46" stroke="#34d399" stroke-width="0.8" />
+      <text x="40" y="3" text-anchor="middle" font-size="8" font-weight="700" fill="#a7f3d0">⚡ Event Trigger</text>
+    </g>
+
+    <!-- 2. ShiftLeft_V3.mfd MapForce Droplet -->
+    <g transform="translate(380, 80)">
+      <ellipse cx="40" cy="40" rx="38" ry="19" fill="#0284c7" opacity="0.2" />
+      <polygon points="40,10 65,22 40,34 15,22" fill="#38bdf8" stroke="#0284c7" stroke-width="1" />
+      <polygon points="15,22 40,34 40,60 15,48" fill="#0284c7" />
+      <polygon points="40,34 65,22 65,48 40,60" fill="#0ea5e9" />
+      <rect x="-15" y="66" width="110" height="22" rx="11" fill="url(#blueCapsuleGrad)" filter="url(#shadowPill)" />
+      <text x="40" y="81" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">ShiftLeft_V3.mfd</text>
+      <rect x="-8" y="-8" width="96" height="16" rx="8" fill="#0369a1" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="40" y="3" text-anchor="middle" font-size="7.5" font-weight="700" fill="#e0f2fe">⚙️ Transmute JSON-LD</text>
+    </g>
+
+    <!-- 3. SWI-Prolog Epistemic Gate -->
+    <g transform="translate(600, 45)">
+      <ellipse cx="40" cy="40" rx="42" ry="21" fill="#7c3aed" opacity="0.2" />
+      <polygon points="40,5 70,18 40,32 10,18" fill="#c084fc" stroke="#7c3aed" stroke-width="1" />
+      <polygon points="10,18 40,32 40,62 10,48" fill="#7c3aed" />
+      <polygon points="40,32 70,18 70,48 40,62" fill="#a855f7" />
+      <rect x="-15" y="68" width="110" height="22" rx="11" fill="url(#purpleCapsuleGrad)" filter="url(#shadowPill)" />
+      <text x="40" y="83" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">SWI-Prolog REST</text>
+      <rect x="-20" y="-10" width="120" height="16" rx="8" fill="#4c1d95" stroke="#c084fc" stroke-width="0.8" />
+      <text x="40" y="1" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ede9fe">🛡️ (K ∩ R ∩ O) ⊆ G</text>
+    </g>
+
+    <!-- 4. TerminusDB Core Graph (Center of Gravity) -->
+    <g transform="translate(580, 160)">
+      <ellipse cx="50" cy="50" rx="56" ry="28" fill="#0ea5e9" opacity="0.3" />
+      <polygon points="50,15 85,32 50,49 15,32" fill="#38bdf8" stroke="#0284c7" stroke-width="1.5" />
+      <polygon points="15,32 50,49 50,85 15,68" fill="#0284c7" />
+      <polygon points="50,49 85,32 85,68 50,85" fill="#0ea5e9" />
+      <circle cx="50" cy="50" r="65" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" fill="none" opacity="0.7" />
+      <rect x="-20" y="94" width="140" height="24" rx="12" fill="url(#blueCapsuleGrad)" filter="url(#shadowPill)" />
+      <text x="50" y="110" text-anchor="middle" font-size="10.5" font-weight="800" fill="#ffffff">TerminusDB (Git-Graph)</text>
+      <rect x="-10" y="-8" width="120" height="18" rx="9" fill="#0369a1" stroke="#38bdf8" stroke-width="1" />
+      <text x="50" y="4" text-anchor="middle" font-size="8" font-weight="800" fill="#ffffff">✨ Taquería Master Holon</text>
+    </g>
+
+    <!-- 5. 13 Solid Pods Topology -->
+    <g transform="translate(380, 220)">
+      <ellipse cx="40" cy="40" rx="38" ry="19" fill="#a855f7" opacity="0.2" />
+      <polygon points="40,10 65,22 40,34 15,22" fill="#c084fc" stroke="#7c3aed" stroke-width="1" />
+      <polygon points="15,22 40,34 40,60 15,48" fill="#7c3aed" />
+      <polygon points="40,34 65,22 65,48 40,60" fill="#a855f7" />
+      <rect x="-15" y="66" width="110" height="22" rx="11" fill="url(#purpleCapsuleGrad)" filter="url(#shadowPill)" />
+      <text x="40" y="81" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">13 Solid Pods</text>
+      <rect x="-12" y="-8" width="104" height="16" rx="8" fill="#581c87" stroke="#c084fc" stroke-width="0.8" />
+      <text x="40" y="3" text-anchor="middle" font-size="7.5" font-weight="700" fill="#f3e8ff">🔒 W3C ODRL Policies</text>
+    </g>
+
+    <!-- 6. Algorand Blockchain Mainnet Anchor -->
+    <g transform="translate(800, 180)">
+      <ellipse cx="40" cy="40" rx="38" ry="19" fill="#e11d48" opacity="0.2" />
+      <polygon points="40,10 65,22 40,34 15,22" fill="#fb7185" stroke="#e11d48" stroke-width="1" />
+      <polygon points="15,22 40,34 40,60 15,48" fill="#e11d48" />
+      <polygon points="40,34 65,22 65,48 40,60" fill="#f43f5e" />
+      <rect x="-18" y="66" width="116" height="22" rx="11" fill="#e11d48" filter="url(#shadowPill)" />
+      <text x="40" y="81" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">Algorand Mainnet</text>
+      <rect x="-15" y="-8" width="110" height="16" rx="8" fill="#881337" stroke="#fda4af" stroke-width="0.8" />
+      <text x="40" y="3" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ffe4e6">🔒 Round 66608988</text>
+    </g>
+
+    <!-- 7. Gaia-X / FIBO Entities -->
+    <g transform="translate(970, 90)">
+      <ellipse cx="40" cy="40" rx="36" ry="18" fill="#d97706" opacity="0.2" />
+      <polygon points="40,10 65,22 40,34 15,22" fill="#fbbf24" stroke="#d97706" stroke-width="1" />
+      <polygon points="15,22 40,34 40,60 15,48" fill="#d97706" />
+      <polygon points="40,34 65,22 65,48 40,60" fill="#f59e0b" />
+      <rect x="-15" y="66" width="110" height="22" rx="11" fill="url(#amberCapsuleGrad)" filter="url(#shadowPill)" />
+      <text x="40" y="81" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">Gaia-X &amp; FIBO</text>
+      <rect x="-10" y="-8" width="100" height="16" rx="8" fill="#78350f" stroke="#fcd34d" stroke-width="0.8" />
+      <text x="40" y="3" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fef3c7">🏛️ gx:LegalPerson</text>
+    </g>
+
+    <!-- Vector Connection Streams inside Ontology Island -->
+    <path d="M 270,185 Q 330,140 380,120" stroke="#0ea5e9" stroke-width="2" fill="none" />
+    <rect x="295" y="142" width="60" height="15" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="325" y="153" text-anchor="middle" font-size="7" font-weight="700" fill="#64748b">Ingests REA</text>
+
+    <path d="M 480,105 Q 540,75 600,65" stroke="#7c3aed" stroke-width="2" fill="none" />
+    <rect x="515" y="78" width="65" height="15" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="547" y="89" text-anchor="middle" font-size="7" font-weight="700" fill="#64748b">Queries Rules</text>
+
+    <path d="M 640,110 L 630,160" stroke="#10b981" stroke-width="2" fill="none" />
+    <rect x="635" y="125" width="60" height="15" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="665" y="136" text-anchor="middle" font-size="7" font-weight="700" fill="#047857">Validates</text>
+
+    <path d="M 590,230 Q 520,250 480,245" stroke="#a855f7" stroke-width="2" fill="none" />
+    <rect x="505" y="242" width="65" height="15" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="537" y="253" text-anchor="middle" font-size="7" font-weight="700" fill="#64748b">Sovereign Pods</text>
+
+    <path d="M 690,210 Q 750,225 800,215" stroke="#f43f5e" stroke-width="2" fill="none" />
+    <rect x="715" y="222" width="60" height="15" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="745" y="233" text-anchor="middle" font-size="7" font-weight="700" fill="#be123c">Notarizes</text>
+
+    <path d="M 695,180 Q 840,140 970,125" stroke="#f59e0b" stroke-width="2" fill="none" />
+    <rect x="805" y="145" width="70" height="15" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="840" y="156" text-anchor="middle" font-size="7" font-weight="700" fill="#b45309">Trust Framework</text>
+
+    <!-- LEFT CALLOUT CARD: Taquería Economic Event -->
+    <g transform="translate(10, 50)" filter="url(#shadowBox)">
+      <rect x="0" y="0" width="220" height="155" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="220" height="24" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+      <text x="12" y="16" class="mono" font-size="9" font-weight="700" fill="#0f172a">TAQUERIA TUESDAY</text>
+      <rect x="135" y="4" width="75" height="16" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="172" y="15" text-anchor="middle" font-size="8" font-weight="700" fill="#0369a1">Holon #1042</text>
+
+      <g transform="translate(12, 38)" font-size="8.5">
+        <text x="0" y="0" fill="#64748b">Status</text>
+        <text x="195" y="0" text-anchor="end" font-weight="700" fill="#059669">● Deterministic</text>
+
+        <text x="0" y="18" fill="#64748b">PUC Dec. 2650</text>
+        <text x="195" y="18" text-anchor="end" font-weight="700" fill="#0f172a">110505 (Caja Gral)</text>
+
+        <text x="0" y="36" fill="#64748b">Balanced Trial</text>
+        <text x="195" y="36" text-anchor="end" font-weight="700" fill="#0284c7">$48,100.00 = $48,100</text>
+
+        <text x="0" y="54" fill="#64748b">Epistemic Gate</text>
+        <text x="195" y="54" text-anchor="end" font-weight="700" fill="#7c3aed">Passed (Prolog REST)</text>
+
+        <text x="0" y="72" fill="#64748b">Algorand Round</text>
+        <text x="195" y="72" text-anchor="end" font-weight="700" fill="#e11d48">66608988 (Allo.info)</text>
+
+        <text x="0" y="90" fill="#64748b">Gettier Assurance</text>
+        <text x="195" y="90" text-anchor="end" font-weight="800" fill="#10b981">100% (K ∩ R ∩ O) ⊆ G</text>
+      </g>
+      <path d="M 220,70 L 260,110" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="2,2" />
+    </g>
+
+    <!-- RIGHT CALLOUT CARD: Granular Access Controls -->
+    <g transform="translate(930, 180)" filter="url(#shadowBox)">
+      <rect x="0" y="0" width="280" height="135" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2" />
+      <rect x="0" y="0" width="280" height="24" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.8" />
+      <text x="14" y="16" class="mono" font-size="9" font-weight="700" fill="#0f172a">GRANULAR ACCESS CONTROLS (W3C ODRL)</text>
+      
+      <g transform="translate(14, 38)" font-size="8">
+        <text x="0" y="0" font-weight="700" fill="#475569">ACTOR</text>
+        <text x="80" y="0" font-weight="700" fill="#475569">ACCESS</text>
+        <text x="135" y="0" font-weight="700" fill="#475569">POLICY &amp; SCOPE</text>
+        <line x1="0" y1="6" x2="252" y2="6" stroke="#cbd5e1" stroke-width="0.8" />
+
+        <text x="0" y="20" font-weight="600" fill="#0f172a">Head Office</text>
+        <rect x="75" y="11" width="36" height="14" rx="4" fill="#e0f2fe" />
+        <text x="93" y="21" text-anchor="middle" font-weight="700" fill="#0369a1" font-size="7">View</text>
+        <text x="135" y="20" fill="#0284c7">Royalties (0 Payroll)</text>
+
+        <text x="0" y="38" font-weight="600" fill="#0f172a">Health Dept</text>
+        <rect x="75" y="29" width="36" height="14" rx="4" fill="#ffe4e6" />
+        <text x="93" y="39" text-anchor="middle" font-weight="700" fill="#be123c" font-size="7">View</text>
+        <text x="135" y="38" fill="#e11d48">HACCP (0 Financials)</text>
+
+        <text x="0" y="56" font-weight="600" fill="#0f172a">Lender Bank</text>
+        <rect x="75" y="47" width="36" height="14" rx="4" fill="#f1f5f9" />
+        <text x="93" y="57" text-anchor="middle" font-weight="700" fill="#475569" font-size="7">Query</text>
+        <text x="135" y="56" fill="#64748b">Covenants (0 Recipes)</text>
+
+        <text x="0" y="74" font-weight="600" fill="#0f172a">AI Auditor</text>
+        <rect x="75" y="65" width="36" height="14" rx="4" fill="#dcfce7" />
+        <text x="93" y="75" text-anchor="middle" font-weight="700" fill="#15803d" font-size="7">Audit</text>
+        <text x="135" y="74" fill="#059669">Continuous PROV-O</text>
+      </g>
+      <path d="M 0,50 L -40,30" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="2,2" />
+    </g>
+
+    <!-- Ontology Central Label Banner -->
+    <rect x="470" y="315" width="300" height="34" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5" filter="url(#shadowPill)" />
+    <text x="620" y="337" text-anchor="middle" font-size="15" font-weight="800" fill="#0284c7" letter-spacing="1">
+      A&amp;AD ONTOLOGY SYSTEM
+    </text>
+
+  </g>
+
+  <!-- Horizontal Foundation Shelf Bars -->
+  <g transform="translate(200, 700)">
+    <rect x="0" y="0" width="510" height="26" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="255" y="17" text-anchor="middle" font-size="9" font-weight="600" fill="#475569">
+      Objects · Properties · Links (FIBO / REA / Gaia-X gx:LegalPerson)
+    </text>
+
+    <rect x="530" y="0" width="510" height="26" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="785" y="17" text-anchor="middle" font-size="9" font-weight="600" fill="#475569">
+      Proposals · Branches · Audit Trails · Time-Travel (TerminusDB Git-Graph)
+    </text>
+
+    <rect x="0" y="30" width="510" height="26" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="255" y="47" text-anchor="middle" font-size="9" font-weight="600" fill="#475569">
+      Function-backed Rules · Webhooks · SWI-Prolog REST Service
+    </text>
+
+    <rect x="530" y="30" width="510" height="26" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <text x="785" y="47" text-anchor="middle" font-size="9" font-weight="600" fill="#475569">
+      W3C ODRL Policies · PROV-O Lineage · Algorand Blockchain Sealing
+    </text>
+
+    <rect x="180" y="60" width="680" height="22" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
+    <text x="520" y="75" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#0f172a">
+      DIGITALOCEAN DROPLET RUNNER · SWI-PROLOG · MAPFORCE · SOLID PODS CLUSTER
+    </text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- BOTTOM TIER: 4 ARCHITECTURAL PILLARS (DATA - LOGIC - MODELS - ACTIONS) -->
+  <!-- ========================================================================= -->
+
+  <!-- Pillar 1: DATA -->
+  <g transform="translate(100, 800)">
+    <rect x="0" y="0" width="280" height="110" rx="8" fill="url(#pillarGrad)" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadowBox)" />
+    <line x1="0" y1="18" x2="280" y2="18" stroke="#cbd5e1" stroke-width="0.8" />
+    
+    <g transform="translate(15, 26)">
+      <rect x="0" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="11" r="3.5" fill="#0284c7" />
+      <text x="20" y="15" font-size="7.5" font-weight="700" fill="#334155">PDF / JPG / MD</text>
+
+      <rect x="132" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="11" r="3.5" fill="#0284c7" />
+      <text x="152" y="15" font-size="7.5" font-weight="700" fill="#334155">XBRL GL LEDGER</text>
+
+      <rect x="0" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="37" r="3.5" fill="#0284c7" />
+      <text x="20" y="41" font-size="7.5" font-weight="700" fill="#334155">W3C XFORMS XML</text>
+
+      <rect x="132" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="37" r="3.5" fill="#0284c7" />
+      <text x="152" y="41" font-size="7.5" font-weight="700" fill="#334155">BASEX XML STORE</text>
+
+      <rect x="0" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="63" r="3.5" fill="#0284c7" />
+      <text x="20" y="67" font-size="7.5" font-weight="700" fill="#334155">SOLID PODS (3000)</text>
+
+      <rect x="132" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="63" r="3.5" fill="#0284c7" />
+      <text x="152" y="67" font-size="7.5" font-weight="700" fill="#334155">MORE...</text>
+    </g>
+    <text x="140" y="132" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a" letter-spacing="1">DATA</text>
+  </g>
+
+  <!-- Pillar 2: LOGIC -->
+  <g transform="translate(410, 800)">
+    <rect x="0" y="0" width="280" height="110" rx="8" fill="url(#pillarGrad)" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadowBox)" />
+    <line x1="0" y1="18" x2="280" y2="18" stroke="#cbd5e1" stroke-width="0.8" />
+
+    <g transform="translate(15, 26)">
+      <rect x="0" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="11" r="3.5" fill="#7c3aed" />
+      <text x="20" y="15" font-size="7.5" font-weight="700" fill="#334155">SWI-PROLOG REST</text>
+
+      <rect x="132" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="11" r="3.5" fill="#7c3aed" />
+      <text x="152" y="15" font-size="7.5" font-weight="700" fill="#334155">(K ∩ R ∩ O) ⊆ G</text>
+
+      <rect x="0" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="37" r="3.5" fill="#7c3aed" />
+      <text x="20" y="41" font-size="7.5" font-weight="700" fill="#334155">PUC DEC. 2650</text>
+
+      <rect x="132" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="37" r="3.5" fill="#7c3aed" />
+      <text x="152" y="41" font-size="7.5" font-weight="700" fill="#334155">SBVR EQUALITY</text>
+
+      <rect x="0" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="63" r="3.5" fill="#7c3aed" />
+      <text x="20" y="67" font-size="7.5" font-weight="700" fill="#334155">MAPFORCE MFD</text>
+
+      <rect x="132" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="63" r="3.5" fill="#7c3aed" />
+      <text x="152" y="67" font-size="7.5" font-weight="700" fill="#334155">SHACL SHAPES</text>
+    </g>
+    <text x="140" y="132" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a" letter-spacing="1">LOGIC</text>
+  </g>
+
+  <!-- Pillar 3: MODELS -->
+  <g transform="translate(730, 800)">
+    <rect x="0" y="0" width="280" height="110" rx="8" fill="url(#pillarGrad)" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadowBox)" />
+    <line x1="0" y1="18" x2="280" y2="18" stroke="#cbd5e1" stroke-width="0.8" />
+
+    <g transform="translate(15, 26)">
+      <rect x="0" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="11" r="3.5" fill="#0ea5e9" />
+      <text x="20" y="15" font-size="7.5" font-weight="700" fill="#334155">JSON-LD GRAPHS</text>
+
+      <rect x="132" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="11" r="3.5" fill="#0ea5e9" />
+      <text x="152" y="15" font-size="7.5" font-weight="700" fill="#334155">FIBO ONTOLOGY</text>
+
+      <rect x="0" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="37" r="3.5" fill="#0ea5e9" />
+      <text x="20" y="41" font-size="7.5" font-weight="700" fill="#334155">GAIA-X TRUST</text>
+
+      <rect x="132" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="37" r="3.5" fill="#0ea5e9" />
+      <text x="152" y="41" font-size="7.5" font-weight="700" fill="#334155">W3C PROV-O</text>
+
+      <rect x="0" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="63" r="3.5" fill="#0ea5e9" />
+      <text x="20" y="67" font-size="7.5" font-weight="700" fill="#334155">TAG1..TAG10 HOFF</text>
+
+      <rect x="132" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="63" r="3.5" fill="#0ea5e9" />
+      <text x="152" y="67" font-size="7.5" font-weight="700" fill="#334155">W3C ODRL</text>
+    </g>
+    <text x="140" y="132" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a" letter-spacing="1">MODELS</text>
+  </g>
+
+  <!-- Pillar 4: ACTIONS -->
+  <g transform="translate(1050, 800)">
+    <rect x="0" y="0" width="280" height="110" rx="8" fill="url(#pillarGrad)" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadowBox)" />
+    <line x1="0" y1="18" x2="280" y2="18" stroke="#cbd5e1" stroke-width="0.8" />
+
+    <g transform="translate(15, 26)">
+      <rect x="0" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="11" r="3.5" fill="#059669" />
+      <text x="20" y="15" font-size="7.5" font-weight="700" fill="#334155">ALGORAND SEAL</text>
+
+      <rect x="132" y="0" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="11" r="3.5" fill="#059669" />
+      <text x="152" y="15" font-size="7.5" font-weight="700" fill="#334155">ERP WRITE-BACK</text>
+
+      <rect x="0" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="37" r="3.5" fill="#059669" />
+      <text x="20" y="41" font-size="7.5" font-weight="700" fill="#334155">TERMINUSDB INJ</text>
+
+      <rect x="132" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="37" r="3.5" fill="#059669" />
+      <text x="152" y="41" font-size="7.5" font-weight="700" fill="#334155">4 TAQUERIA PROJ</text>
+
+      <rect x="0" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="10" cy="63" r="3.5" fill="#059669" />
+      <text x="20" y="67" font-size="7.5" font-weight="700" fill="#334155">AI AUDIT ASSUR</text>
+
+      <rect x="132" y="52" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
+      <circle cx="142" cy="63" r="3.5" fill="#059669" />
+      <text x="152" y="67" font-size="7.5" font-weight="700" fill="#334155">CLOSED-LOOP</text>
+    </g>
+    <text x="140" y="132" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a" letter-spacing="1">ACTIONS</text>
+  </g>
+
+  <!-- Connectors between Bottom Pillars and Ontology -->
+  <path d="M 240,795 L 340,710" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
+  <path d="M 550,795 L 550,710" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
+  <path d="M 870,795 L 870,710" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
+  <path d="M 1190,795 L 1090,710" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
+
+</svg>
