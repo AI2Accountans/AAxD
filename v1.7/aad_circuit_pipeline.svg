@@ -11,16 +11,13 @@
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
     </filter>
     <filter id="roadShadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.18" />
-    </filter>
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#0ea5e9" flood-opacity="0.5" />
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0284c7" flood-opacity="0.15" />
     </filter>
 
     <linearGradient id="roadGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#1e293b" />
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="50%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
     </linearGradient>
 
     <linearGradient id="bannerGrad" x1="0" y1="0" x2="1" y2="0">
@@ -114,7 +111,7 @@
     A 180,180 0 0,1 100, 580
     L 100, 380
     Z"
-    fill="url(#roadGrad)" stroke="#38bdf8" stroke-width="3.5" filter="url(#roadShadow)" />
+    fill="url(#roadGrad)" stroke="#0284c7" stroke-width="2.5" filter="url(#roadShadow)" />
 
   <path d="
     M 240, 360
@@ -127,19 +124,7 @@
     L 240, 440
     A 80,80 0 0,1 320, 360
     Z"
-    fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5" />
-
-  <path d="
-    M 108, 248
-    L 982, 248
-    A 172,172 0 0,1 1154,420
-    L 1154, 580
-    A 172,172 0 0,1 982, 752
-    L 288, 752
-    A 172,172 0 0,1 116, 580
-    L 116, 380
-    Z"
-    fill="none" stroke="#0284c7" stroke-width="1.2" opacity="0.6" />
+    fill="#ffffff" stroke="#0284c7" stroke-width="2" />
 
   <path d="
     M 170, 300
@@ -151,21 +136,21 @@
     A 130,130 0 0,1 170, 570
     L 170, 360
     Z"
-    fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="14,10" opacity="0.85" filter="url(#neonGlow)" />
+    fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="12,8" opacity="0.6" />
 
-  <g stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.8">
-    <path d="M 360,285 L 375,300 L 360,315" />
-    <path d="M 375,285 L 390,300 L 375,315" />
-    <path d="M 680,285 L 695,300 L 680,315" />
-    <path d="M 695,285 L 710,300 L 695,315" />
-    <path d="M 1055,470 L 1070,485 L 1085,470" />
-    <path d="M 1055,485 L 1070,500 L 1085,485" />
-    <path d="M 720,715 L 705,700 L 720,685" />
-    <path d="M 705,715 L 690,700 L 705,685" />
-    <path d="M 440,715 L 425,700 L 440,685" />
-    <path d="M 425,715 L 410,700 L 425,685" />
-    <path d="M 185,510 L 170,495 L 155,510" />
-    <path d="M 185,495 L 170,480 L 155,495" />
+  <g stroke="#0284c7" stroke-width="2.5" fill="none" opacity="0.6">
+    <path d="M 360,288 L 375,300 L 360,312" />
+    <path d="M 375,288 L 390,300 L 375,312" />
+    <path d="M 680,288 L 695,300 L 680,312" />
+    <path d="M 695,288 L 710,300 L 695,312" />
+    <path d="M 1058,470 L 1070,485 L 1082,470" />
+    <path d="M 1058,485 L 1070,500 L 1082,485" />
+    <path d="M 720,712 L 705,700 L 720,688" />
+    <path d="M 705,712 L 690,700 L 705,688" />
+    <path d="M 440,712 L 425,700 L 440,688" />
+    <path d="M 425,712 L 410,700 L 425,688" />
+    <path d="M 182,510 L 170,495 L 158,510" />
+    <path d="M 182,495 L 170,480 L 158,495" />
   </g>
 
   <!-- FEEDER BRIDGES & RAMPS -->
@@ -273,7 +258,8 @@
   <g transform="translate(390, 150)">
     <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#10b981" stroke-width="2" />
     <text x="20" y="26" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">2</text>
-    <text x="46" y="26" font-size="13" font-weight="900" fill="#0f172a">
+    <rect x="46" y="6" width="200" height="28" rx="6" fill="#059669" filter="url(#boxShadow)" />
+    <text x="146" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
       CURACIÓN HITL &amp; BASEX
     </text>
 
@@ -297,7 +283,8 @@
   <g transform="translate(740, 150)">
     <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#7c3aed" stroke-width="2" />
     <text x="20" y="26" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">3</text>
-    <text x="46" y="26" font-size="13" font-weight="900" fill="#0f172a">
+    <rect x="46" y="6" width="220" height="28" rx="6" fill="#7c3aed" filter="url(#boxShadow)" />
+    <text x="156" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
       PUERTA EPISTÉMICA PROLOG
     </text>
 
@@ -318,7 +305,8 @@
   <g transform="translate(1040, 310)">
     <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#0ea5e9" stroke-width="2" />
     <text x="20" y="26" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">4</text>
-    <text x="46" y="26" font-size="13" font-weight="900" fill="#0f172a">
+    <rect x="46" y="6" width="215" height="28" rx="6" fill="#0284c7" filter="url(#boxShadow)" />
+    <text x="153" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
       TRANSMUTACIÓN A GRAFO
     </text>
 
@@ -339,7 +327,8 @@
   <g transform="translate(1010, 580)">
     <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#e11d48" stroke-width="2" />
     <text x="20" y="26" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">5</text>
-    <text x="46" y="26" font-size="13" font-weight="900" fill="#0f172a">
+    <rect x="46" y="6" width="220" height="28" rx="6" fill="#e11d48" filter="url(#boxShadow)" />
+    <text x="156" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
       ANCLAJE CRIPTOGRÁFICO
     </text>
 
@@ -360,7 +349,8 @@
   <g transform="translate(560, 710)">
     <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2" />
     <text x="20" y="26" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">6</text>
-    <text x="46" y="26" font-size="13" font-weight="900" fill="#0f172a">
+    <rect x="46" y="6" width="230" height="28" rx="6" fill="#d97706" filter="url(#boxShadow)" />
+    <text x="161" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
       MONITOR &amp; 4 PROYECCIONES
     </text>
 
@@ -381,7 +371,8 @@
   <g transform="translate(110, 680)">
     <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#10b981" stroke-width="2" />
     <text x="20" y="26" text-anchor="middle" font-size="15" font-weight="900" fill="#ffffff">7</text>
-    <text x="46" y="26" font-size="13" font-weight="900" fill="#0f172a">
+    <rect x="46" y="6" width="220" height="28" rx="6" fill="#059669" filter="url(#boxShadow)" />
+    <text x="156" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
       ERP WRITE-BACK &amp; CIERRE
     </text>
 
