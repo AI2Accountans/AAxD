@@ -349,7 +349,7 @@
         <text x="0" y="0" fill="#64748b">Status</text>
         <text x="195" y="0" text-anchor="end" font-weight="700" fill="#059669">● Deterministic</text>
 
-        <text x="0" y="18" fill="#64748b">PUC Dec. 2650</text>
+        <text x="0" y="18" fill="#64748b">SCoA + Dinámica</text>
         <text x="195" y="18" text-anchor="end" font-weight="700" fill="#0f172a">110505 (Caja Gral)</text>
 
         <text x="0" y="36" fill="#64748b">Balanced Trial</text>
@@ -491,7 +491,7 @@
 
       <rect x="0" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
       <circle cx="10" cy="37" r="3.5" fill="#7c3aed" />
-      <text x="20" y="41" font-size="7.5" font-weight="700" fill="#334155">PUC DEC. 2650</text>
+      <text x="20" y="41" font-size="7.5" font-weight="700" fill="#334155">SCoA + DINÁMICA</text>
 
       <rect x="132" y="26" width="118" height="22" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.8" />
       <circle cx="142" cy="37" r="3.5" fill="#7c3aed" />
@@ -581,3 +581,4 @@
   <path d="M 1190,795 L 1090,710" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3,3" />
 
 </svg>
+

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&AD Framework · Interactive Architecture Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070d18;
+      --card-bg: rgba(13, 24, 43, 0.7);
+      --card-border: rgba(56, 96, 150, 0.35);
+      --card-border-glow: rgba(56, 189, 248, 0.5);
+      --accent-cyan: #38bdf8;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: #030712;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    /* Outer Stage / Player Frame */
+    .player-container {
+      width: 100%;
+      max-width: 1240px;
+      background: radial-gradient(circle at 50% 20%, #0d1b30 0%, #050b14 100%);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.08);
+      border-radius: 20px;
+      padding: 24px 28px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top Bar */
+    .player-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      margin-bottom: 22px;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.08rem;
+    }
+
+    .brand-badge {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-subtitle span.dot {
+      width: 4px;
+      height: 4px;
+      background: #475569;
+      border-radius: 50%;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-circle:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent-cyan);
+      transform: scale(1.05);
+    }
+
+    /* Architecture Grid */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 260px;
+      gap: 20px;
+      position: relative;
+      margin-bottom: 22px;
+      min-height: 490px;
+    }
+
+    /* Canvas overlay for particle animations */
+    #flowCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Columns */
+    .column-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      backdrop-filter: blur(12px);
+      z-index: 2;
+    }
+
+    .column-header {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .column-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #f8fafc;
+      letter-spacing: -0.2px;
+    }
+
+    .column-subtitle {
+      font-size: 0.73rem;
+      color: #64748b;
+      margin-top: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Node Cards (Left & Right) */
+    .node-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+      justify-content: space-around;
+    }
+
+    .node-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(71, 85, 105, 0.4);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .node-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.18);
+      transform: translateX(3px);
+    }
+
+    .node-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .node-info {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .node-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .node-detail {
+      font-size: 0.7rem;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Center Stack Panel */
+    .center-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stack-badges-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .badge-pill {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid;
+    }
+
+    .badge-pill.emerald {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+
+    .badge-pill.cyan {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.4);
+      color: #7dd3fc;
+    }
+
+    .badge-pill.purple {
+      background: rgba(168, 85, 247, 0.12);
+      border-color: rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+    }
+
+    /* Stack Layers */
+    .stack-layer {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(71, 85, 105, 0.45);
+      border-radius: 12px;
+      padding: 12px 16px;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .stack-layer:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+
+    .layer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .layer-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .layer-number {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.15);
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .layer-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .layer-desc {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      line-height: 1.35;
+      padding-left: 28px;
+    }
+
+    .layer-subtags {
+      display: flex;
+      gap: 6px;
+      padding-left: 28px;
+      margin-top: 6px;
+    }
+
+    .layer-subtag {
+      font-size: 0.65rem;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .stack-footer-line {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #64748b;
+      margin-top: auto;
+      padding-top: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Right column AI check badge */
+    .status-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #10b981;
+      font-size: 0.7rem;
+    }
+
+    /* Bottom Pitch */
+    .bottom-pitch {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 8px;
+    }
+
+    .pitch-headline {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #f8fafc;
+      letter-spacing: -0.3px;
+    }
+
+    .pitch-subline {
+      font-size: 0.86rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    /* Video Player Scrubber & Timeline */
+    .player-timeline-wrap {
+      background: rgba(10, 18, 32, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .legend-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.72rem;
+      color: #94a3b8;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .timer-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .scrubber-track {
+      width: 100%;
+      height: 6px;
+      background: #1e293b;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .scrubber-progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 48%;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      border-radius: 3px;
+      transition: width 0.1s linear;
+    }
+
+    .scrubber-thumb {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 10px #38bdf8;
+      cursor: grab;
+      left: 48%;
+      transition: left 0.1s linear;
+    }
+
+    /* Interactive mode triggers */
+    .interactive-modes {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .mode-btn {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(71, 85, 105, 0.4);
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn.active, .mode-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-cyan);
+      color: #38bdf8;
+    }
+
+    @media (max-width: 960px) {
+      .arch-grid {
+        grid-template-columns: 1fr;
+      }
+      #flowCanvas {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-container">
+    
+    <!-- Top Bar -->
+    <header class="player-header">
+      <div class="brand-title">
+        <span class="brand-badge">A&AD</span>
+        <div class="brand-subtitle">
+          <span>financial data</span>
+          <span class="dot"></span>
+          <span>deterministic knowledge graphs</span>
+          <span class="dot"></span>
+          <span>continuous AI assurance</span>
+        </div>
+      </div>
+      <div class="header-controls">
+        <button class="btn-circle" id="playPauseBtn" title="Play / Pausa">
+          <svg id="playIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <svg id="pauseIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        </button>
+        <button class="btn-circle" id="fullscreenBtn" title="Pantalla Completa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Canvas for Particle Stream Animation -->
+    <canvas id="flowCanvas"></canvas>
+
+    <!-- Architecture Grid -->
+    <div class="arch-grid">
+      
+      <!-- Left Column: Your Origin (Momento 0) -->
+      <section class="column-panel" id="colLeft">
+        <div class="column-header">
+          <h2 class="column-title">Your Origin (Momento 0)</h2>
+          <p class="column-subtitle">wherever economic events live</p>
+        </div>
+
+        <div class="node-list">
+          <div class="node-card" data-source="invoices" style="border-left: 3px solid var(--accent-cyan);">
+            <div class="node-icon" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan);">📄</div>
+            <div class="node-info">
+              <div class="node-name">Invoices & Deeds</div>
+              <div class="node-detail">UBL XML · JSON-LD · DIAN</div>
+            </div>
+          </div>
+
+          <div class="node-card" data-source="erp" style="border-left: 3px solid #818cf8;">
+            <div class="node-icon" style="background: rgba(129, 140, 248, 0.15); color: #818cf8;">🗄️</div>
+            <div class="node-info">
+              <div class="node-name">ERP & Core Banking</div>
+              <div class="node-detail">SQL Tables · Open Banking APIs</div>
+            </div>
+          </div>
+
+          <div class="node-card" data-source="governance" style="border-left: 3px solid var(--accent-amber);">
+            <div class="node-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">⚖️</div>
+            <div class="node-info">
+              <div class="node-name">Corporate Governance</div>
+              <div class="node-detail">Libro Accionistas · Actas</div>
+            </div>
+          </div>
+
+          <div class="node-card" data-source="contracts" style="border-left: 3px solid var(--accent-purple);">
+            <div class="node-icon" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">📜</div>
+            <div class="node-info">
+              <div class="node-name">Contracts & Assets</div>
+              <div class="node-detail">ACTUS Standards · Smart Contracts</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Center Column: The A&AD Stack -->
+      <section class="column-panel center-stack" id="colCenter" style="border-color: rgba(56, 189, 248, 0.4);">
+        <div class="column-header">
+          <h2 class="column-title">The A&AD Stack</h2>
+          <p class="column-subtitle">deterministic assurance engine · semantic core</p>
+        </div>
+
+        <div class="stack-badges-bar">
+          <span class="badge-pill emerald">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            SHACL Guardrails
+          </span>
+          <span class="badge-pill cyan">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Zero Recon Debt
+          </span>
+          <span class="badge-pill purple">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            PROV-O Lineage
+          </span>
+        </div>
+
+        <!-- Layer 03: Continuous Audit -->
+        <div class="stack-layer" id="layer03" style="border-left: 3px solid var(--accent-purple);">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1.1rem;">⚡</span>
+              <span class="layer-title">Continuous Audit & Agent Harness</span>
+            </div>
+            <span class="layer-number">03</span>
+          </div>
+          <div class="layer-desc">Motor declarativo para orquestación de agentes con SPARQL, GraphQL y Model Context Protocol (MCP).</div>
+          <div class="layer-subtags">
+            <span class="layer-subtag">MCP Server</span>
+            <span class="layer-subtag">Live SPARQL</span>
+            <span class="layer-subtag">Agent Harness</span>
+          </div>
+        </div>
+
+        <!-- Layer 02: Virtuoso Semantic Core -->
+        <div class="stack-layer" id="layer02" style="border-left: 3px solid var(--accent-cyan); background: rgba(14, 30, 56, 0.65);">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1.1rem;">🌐</span>
+              <span class="layer-title">Virtuoso Enterprise Knowledge Graph</span>
+            </div>
+            <span class="layer-number">02</span>
+          </div>
+          <div class="layer-desc">Universal Server para espacios de datos semánticos, multi-modelo RDBMS + RDF Triplestore de alto rendimiento.</div>
+          <div class="layer-subtags">
+            <span class="layer-subtag">ISO 21838 BFO</span>
+            <span class="layer-subtag">REA Ontology</span>
+            <span class="layer-subtag">FIBO</span>
+            <span class="layer-subtag">XBRL GL</span>
+          </div>
+        </div>
+
+        <!-- Layer 01: Deterministic SHACL Validator -->
+        <div class="stack-layer" id="layer01" style="border-left: 3px solid var(--accent-emerald);">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1.1rem;">🛡️</span>
+              <span class="layer-title">Deterministic SHACL Validator & UDA</span>
+            </div>
+            <span class="layer-number">01</span>
+          </div>
+          <div class="layer-desc">Filtro de integridad en origen. Rechaza escrituras con descuadre contable y garantiza linaje criptográfico PROV-O.</div>
+          <div class="layer-subtags">
+            <span class="layer-subtag">W3C SHACL</span>
+            <span class="layer-subtag">PROV-O</span>
+            <span class="layer-subtag">UDA Drivers</span>
+          </div>
+        </div>
+
+        <!-- Layer Base: Trust & Ledger -->
+        <div class="stack-layer" style="border-left: 3px solid #e2e8f0; padding: 9px 16px;">
+          <div class="layer-top">
+            <div class="layer-title-wrap">
+              <span style="font-size: 1rem;">🔒</span>
+              <span class="layer-title" style="font-size: 0.82rem;">Cryptographic Anchor & YouID</span>
+            </div>
+            <span class="layer-subtag" style="color: #cbd5e1; border-color: rgba(255,255,255,0.2);">Algorand Ledger</span>
+          </div>
+          <div class="layer-desc" style="font-size: 0.7rem;">Sellado inmutable de aportes de socios y actas de asamblea en DLT.</div>
+        </div>
+
+        <div class="stack-footer-line">
+          one framework · mathematically provable · no rip-and-replace
+        </div>
+      </section>
+
+      <!-- Right Column: Your Assurance & AI -->
+      <section class="column-panel" id="colRight">
+        <div class="column-header">
+          <h2 class="column-title">Your Assurance & AI</h2>
+          <p class="column-subtitle">any auditor · model · regulator</p>
+        </div>
+
+        <div class="node-list">
+          <div class="node-card">
+            <div class="node-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">🤖</div>
+            <div class="node-info">
+              <div class="node-name">Claude (Lead Auditor)</div>
+              <div class="node-detail">Ontology reasoning</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <div class="node-card">
+            <div class="node-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">🧠</div>
+            <div class="node-info">
+              <div class="node-name">GPT (Continuous Audit)</div>
+              <div class="node-detail">Double-entry verify</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <div class="node-card">
+            <div class="node-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">🏛️</div>
+            <div class="node-info">
+              <div class="node-name">Regulators (DIAN / SEC)</div>
+              <div class="node-detail">XBRL / Tax telemetry</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <div class="node-card">
+            <div class="node-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">📊</div>
+            <div class="node-info">
+              <div class="node-name">Executive Dashboards</div>
+              <div class="node-detail">Deterministic BI & Risk</div>
+            </div>
+            <div class="status-check">✓</div>
+          </div>
+
+          <div class="node-card" style="opacity: 0.7; border-style: dashed;">
+            <div class="node-icon" style="background: rgba(148, 163, 184, 0.1);">⚙️</div>
+            <div class="node-info">
+              <div class="node-name">others...</div>
+              <div class="node-detail">Any MCP / SPARQL client</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Pitch -->
+    <div class="bottom-pitch">
+      <h3 class="pitch-headline">Your transactions. Your rules. Deterministic financial integrity.</h3>
+      <p class="pitch-subline">Validated at economic origin (Moment 0). Zero reconciliation debt. Powered by OpenLink Virtuoso & A&AD.</p>
+    </div>
+
+    <!-- Video Timeline & Scrubber -->
+    <div class="player-timeline-wrap">
+      <div class="timeline-top">
+        <div class="legend-group">
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #38bdf8; box-shadow: 0 0 6px #38bdf8;"></span>
+            <span>Origin Data Stream</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+            <span>SHACL Validated Entry</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #a855f7; box-shadow: 0 0 6px #a855f7;"></span>
+            <span>Agent Query (MCP)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot" style="background: #f43f5e; box-shadow: 0 0 6px #f43f5e;"></span>
+            <span>Stopped by SHACL Policy</span>
+          </div>
+        </div>
+        <div class="timer-display" id="timeCounter">0:14.2 / 0:28.0</div>
+      </div>
+
+      <div class="scrubber-track" id="scrubberTrack">
+        <div class="scrubber-progress" id="scrubberProgress"></div>
+        <div class="scrubber-thumb" id="scrubberThumb"></div>
+      </div>
+    </div>
+
+    <!-- Interactive Simulation Mode Controls -->
+    <div class="interactive-modes">
+      <button class="mode-btn active" id="btnModeNormal">⚡ Flujo Normal: Facturación Válida</button>
+      <button class="mode-btn" id="btnModeBlocked">🛡️ Simular Intento de Descuadre (Bloqueado por SHACL)</button>
+      <button class="mode-btn" id="btnModeAudit">🤖 Simular Auditoría por Agente IA</button>
+    </div>
+
+  </div>
+
+  <script>
+    // Particle Animation & Canvas Engine
+    const canvas = document.getElementById('flowCanvas');
+    const ctx = canvas.getContext('2d');
+    const container = document.querySelector('.player-container');
+    const colLeft = document.getElementById('colLeft');
+    const colCenter = document.getElementById('colCenter');
+    const colRight = document.getElementById('colRight');
+
+    let isPlaying = true;
+    let currentTime = 14.2;
+    const totalDuration = 28.0;
+    let simulationMode = 'normal'; // 'normal', 'blocked', 'audit'
+
+    function resizeCanvas() {
+      const rect = container.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Particle class
+    class Particle {
+      constructor(type) {
+        this.reset(type);
+      }
+
+      reset(type) {
+        this.type = type || simulationMode;
+        const leftRect = colLeft.getBoundingClientRect();
+        const centerRect = colCenter.getBoundingClientRect();
+        const rightRect = colRight.getBoundingClientRect();
+        const cRect = container.getBoundingClientRect();
+
+        if (this.type === 'audit') {
+          // Flows from Right to Center, then back
+          this.startX = rightRect.left - cRect.left + 20;
+          this.startY = rightRect.top - cRect.top + 60 + Math.random() * (rightRect.height - 120);
+          this.targetX = centerRect.right - cRect.left - 20;
+          this.targetY = centerRect.top - cRect.top + 80 + Math.random() * (centerRect.height - 160);
+          this.color = '#a855f7';
+        } else {
+          // Flows from Left to Center
+          this.startX = leftRect.right - cRect.left - 10;
+          this.startY = leftRect.top - cRect.top + 40 + Math.random() * (leftRect.height - 80);
+          this.targetX = centerRect.left - cRect.left + 20;
+          this.targetY = centerRect.top - cRect.top + 60 + Math.random() * (centerRect.height - 120);
+          this.color = this.type === 'blocked' ? '#f43f5e' : '#38bdf8';
+        }
+
+        this.x = this.startX;
+        this.y = this.startY;
+        this.progress = 0;
+        this.speed = 0.008 + Math.random() * 0.008;
+        this.size = 3.5 + Math.random() * 2;
+        this.tail = [];
+        this.phase = 1; // 1: left->center, 2: center->right
+      }
+
+      update() {
+        if (!isPlaying) return;
+
+        this.tail.push({ x: this.x, y: this.y });
+        if (this.tail.length > 8) this.tail.shift();
+
+        this.progress += this.speed;
+
+        if (this.phase === 1) {
+          // Quadratic bezier curve to center
+          const midX = (this.startX + this.targetX) / 2;
+          const cpY = this.startY + (this.targetY - this.startY) * 0.1;
+          const t = this.progress;
+          this.x = (1 - t) * (1 - t) * this.startX + 2 * (1 - t) * t * midX + t * t * this.targetX;
+          this.y = (1 - t) * (1 - t) * this.startY + 2 * (1 - t) * t * cpY + t * t * this.targetY;
+
+          if (this.progress >= 1) {
+            if (this.type === 'blocked') {
+              // Particle is rejected at Layer 01 SHACL!
+              flashLayer('layer01', '#f43f5e');
+              this.reset('blocked');
+            } else if (this.type === 'audit') {
+              flashLayer('layer03', '#a855f7');
+              this.reset('audit');
+            } else {
+              // Valid! Advances through Virtuoso to Right Column
+              flashLayer('layer02', '#38bdf8');
+              this.phase = 2;
+              this.progress = 0;
+              const centerRect = colCenter.getBoundingClientRect();
+              const rightRect = colRight.getBoundingClientRect();
+              const cRect = container.getBoundingClientRect();
+
+              this.startX = this.x;
+              this.startY = this.y;
+              this.targetX = rightRect.left - cRect.left + 20;
+              this.targetY = rightRect.top - cRect.top + 40 + Math.random() * (rightRect.height - 80);
+              this.color = '#10b981';
+            }
+          }
+        } else if (this.phase === 2) {
+          const midX = (this.startX + this.targetX) / 2;
+          const t = this.progress;
+          this.x = (1 - t) * (1 - t) * this.startX + 2 * (1 - t) * t * midX + t * t * this.targetX;
+          this.y = (1 - t) * this.startY + t * this.targetY;
+
+          if (this.progress >= 1) {
+            this.reset();
+          }
+        }
+      }
+
+      draw() {
+        // Draw glow trail
+        ctx.beginPath();
+        for (let i = 0; i < this.tail.length; i++) {
+          const pt = this.tail[i];
+          const alpha = (i / this.tail.length) * 0.4;
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = alpha;
+          ctx.fillRect(pt.x - 1.5, pt.y - 1.5, 3, 3);
+        }
+        ctx.globalAlpha = 1;
+
+        // Draw particle head
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    // Flash animation on stack layers
+    function flashLayer(layerId, color) {
+      const el = document.getElementById(layerId);
+      if (!el) return;
+      el.style.borderColor = color;
+      el.style.boxShadow = `0 0 25px ${color}`;
+      setTimeout(() => {
+        el.style.borderColor = '';
+        el.style.boxShadow = '';
+      }, 350);
+    }
+
+    const particles = [];
+    for (let i = 0; i < 22; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      // Update timer & scrubber
+      if (isPlaying) {
+        currentTime += 0.016;
+        if (currentTime >= totalDuration) {
+          currentTime = 0;
+        }
+        updateScrubberUI();
+      }
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // Scrubber & Play UI
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const playIcon = document.getElementById('playIcon');
+    const pauseIcon = document.getElementById('pauseIcon');
+    const timeCounter = document.getElementById('timeCounter');
+    const scrubberProgress = document.getElementById('scrubberProgress');
+    const scrubberThumb = document.getElementById('scrubberThumb');
+    const scrubberTrack = document.getElementById('scrubberTrack');
+
+    function updateScrubberUI() {
+      const pct = (currentTime / totalDuration) * 100;
+      scrubberProgress.style.width = pct + '%';
+      scrubberThumb.style.left = pct + '%';
+
+      const sec = currentTime.toFixed(1);
+      timeCounter.textContent = `0:${sec.padStart(4, '0')} / 0:${totalDuration.toFixed(1)}`;
+    }
+
+    playPauseBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      playIcon.style.display = isPlaying ? 'none' : 'block';
+      pauseIcon.style.display = isPlaying ? 'block' : 'none';
+    });
+
+    scrubberTrack.addEventListener('click', (e) => {
+      const rect = scrubberTrack.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const pct = Math.max(0, Math.min(1, clickX / rect.width));
+      currentTime = pct * totalDuration;
+      updateScrubberUI();
+    });
+
+    // Fullscreen Toggle
+    document.getElementById('fullscreenBtn').addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        container.requestFullscreen?.() || container.webkitRequestFullscreen?.();
+      } else {
+        document.exitFullscreen?.() || document.webkitExitFullscreen?.();
+      }
+    });
+
+    // Mode Selector Buttons
+    const btnModeNormal = document.getElementById('btnModeNormal');
+    const btnModeBlocked = document.getElementById('btnModeBlocked');
+    const btnModeAudit = document.getElementById('btnModeAudit');
+
+    function setMode(mode, activeBtn) {
+      simulationMode = mode;
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      activeBtn.classList.add('active');
+      particles.forEach(p => p.reset(mode));
+    }
+
+    btnModeNormal.addEventListener('click', () => setMode('normal', btnModeNormal));
+    btnModeBlocked.addEventListener('click', () => setMode('blocked', btnModeBlocked));
+    btnModeAudit.addEventListener('click', () => setMode('audit', btnModeAudit));
+  </script>
+</body>
+</html>
+
