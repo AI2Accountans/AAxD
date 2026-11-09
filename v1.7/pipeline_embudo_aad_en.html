@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&AD Framework — The Semantic Assurance Funnel (English)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --panel-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --primary-blue: #0284c7;
+      --accent-warm: #f59e0b;
+      --accent-green: #059669;
+      --accent-purple: #7c3aed;
+      --accent-red: #e11d48;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+
+    /* Top Navigation Toolbar */
+    .toolbar {
+      width: 100%;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-title span {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 6px;
+      background: #1e293b;
+      padding: 4px;
+      border-radius: 8px;
+    }
+
+    .nav-tab {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-tab:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-tab.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .lang-toggle {
+      display: flex;
+      background: #1e293b;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #334155;
+    }
+
+    .lang-btn {
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .lang-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .btn {
+      padding: 6px 14px;
+      font-size: 11.5px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #cbd5e1;
+      border: 1px solid #475569;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
+    .btn-primary {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+    }
+
+    /* Container for the Vector Infographic */
+    .infographic-container {
+      width: 100%;
+      max-width: 1540px;
+      padding: 24px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      max-width: 1520px;
+      background: #ffffff;
+      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .interactive-node {
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+    }
+
+    .interactive-node:hover {
+      filter: drop-shadow(0 6px 16px rgba(2, 132, 199, 0.35));
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Toolbar -->
+  <div class="toolbar">
+    <div class="brand-group">
+      <a href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" title="Open Seattle Method — Accounting &amp; Audit by Design (A&amp;AD) Framework">
+        <div class="brand-title">A&amp;AD <span>SEMANTIC FUNNEL PIPELINE</span> <span style="font-size: 13px; color: #38bdf8;">↗</span></div>
+      </a>
+      <div class="brand-subtitle">The Semantic Assurance Funnel: Knowledge Graph ➔ Context Graph ➔ Procedural Graph ➔ AI Agents &amp; ERP Write-Back</div>
+    </div>
+
+    <div class="toolbar-actions">
+      <!-- Switcher across representations -->
+      <div class="nav-tabs">
+        <a href="pipeline_embudo_aad_en.html" class="nav-tab active">🌪️ Semantic Funnel</a>
+        <a href="pipeline_oceg_aad.html" class="nav-tab">🛣️ Circuit Loop</a>
+        <a href="pipeline_palantir_aad.html" class="nav-tab">🏢 Palantir Foundry</a>
+      </div>
+
+      <!-- Bilingual Language Toggle -->
+      <div class="lang-toggle">
+        <a href="pipeline_embudo_aad.html" class="lang-btn">ES</a>
+        <a href="pipeline_embudo_aad_en.html" class="lang-btn active">EN</a>
+      </div>
+
+      <button class="btn btn-outline" onclick="window.print()" title="Print or export to PDF">🖨️ PDF / Print</button>
+      <button class="btn btn-primary" id="btnDownloadSvg" title="Download Standalone Vector SVG">⬇️ Save SVG</button>
+    </div>
+  </div>
+
+  <!-- Infographic Container -->
+  <div class="infographic-container">
+    <svg id="embudoAadSvgEn" viewBox="0 0 1520 1360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;600;700;800&amp;display=swap');
+          text { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+          .mono { font-family: 'JetBrains Mono', monospace; }
+        </style>
+
+        <!-- Drop Shadows & Glow Filters -->
+        <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+        </filter>
+        <filter id="softGlowOrange" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#f97316" flood-opacity="0.22" />
+        </filter>
+        <filter id="softGlowBlue" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#0284c7" flood-opacity="0.22" />
+        </filter>
+        <filter id="softGlowGreen" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#059669" flood-opacity="0.22" />
+        </filter>
+
+        <!-- Funnel Contours & Meshes Gradients -->
+        <linearGradient id="kgMeshGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fffaf0" />
+          <stop offset="50%" stop-color="#ffedd5" stop-opacity="0.85" />
+          <stop offset="100%" stop-color="#fed7aa" stop-opacity="0.9" />
+        </linearGradient>
+
+        <linearGradient id="cgMeshGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f0f9ff" />
+          <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.85" />
+          <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.9" />
+        </linearGradient>
+
+        <linearGradient id="pgMeshGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f0fdf4" />
+          <stop offset="50%" stop-color="#dcfce7" stop-opacity="0.85" />
+          <stop offset="100%" stop-color="#bbf7d0" stop-opacity="0.9" />
+        </linearGradient>
+
+        <linearGradient id="agentMeshGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#faf5ff" />
+          <stop offset="50%" stop-color="#f3e8ff" stop-opacity="0.85" />
+          <stop offset="100%" stop-color="#e9d5ff" stop-opacity="0.9" />
+        </linearGradient>
+
+        <linearGradient id="bannerGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#0f172a" />
+          <stop offset="100%" stop-color="#1e293b" />
+        </linearGradient>
+
+        <linearGradient id="redPillarGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#b91c1c" />
+          <stop offset="100%" stop-color="#991b1b" />
+        </linearGradient>
+
+        <!-- Sleek Translucent Funnel Outer Body -->
+        <linearGradient id="sleekFunnelGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f97316" stop-opacity="0.12" />
+          <stop offset="35%" stop-color="#0284c7" stop-opacity="0.18" />
+          <stop offset="70%" stop-color="#059669" stop-opacity="0.22" />
+          <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.28" />
+        </linearGradient>
+
+        <linearGradient id="funnelEdgeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ea580c" stop-opacity="0.7" />
+          <stop offset="35%" stop-color="#0284c7" stop-opacity="0.75" />
+          <stop offset="70%" stop-color="#059669" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.85" />
+        </linearGradient>
+      </defs>
+
+      <!-- Background Canvas Sheet -->
+      <rect x="0" y="0" width="1520" height="1360" fill="#ffffff" />
+
+      <!-- Sleek Subtle Geometric Grid -->
+      <g stroke="#f1f5f9" stroke-width="1">
+        <line x1="0" y1="110" x2="1520" y2="110" />
+        <line x1="0" y1="280" x2="1520" y2="280" />
+        <line x1="0" y1="520" x2="1520" y2="520" />
+        <line x1="0" y1="780" x2="1520" y2="780" />
+        <line x1="0" y1="1040" x2="1520" y2="1040" />
+        <line x1="0" y1="1230" x2="1520" y2="1230" />
+        <line x1="280" y1="0" x2="280" y2="1360" />
+        <line x1="940" y1="0" x2="940" y2="1360" />
+        <line x1="1230" y1="0" x2="1230" y2="1360" />
+      </g>
+
+      <!-- ========================================================================= -->
+      <!-- TOP HEADER: ARCHITECTURAL BANNER (OCEG GOVERNANCE INSPIRATION)            -->
+      <!-- ========================================================================= -->
+      <g transform="translate(40, 20)">
+        <text x="0" y="10" font-size="9" font-weight="900" fill="#0284c7" letter-spacing="1.5">
+          CONTINUOUS SOVEREIGN EVIDENCE &amp; AUDIT PIPELINE · SEATTLE METHOD ARCHITECTURE
+        </text>
+
+        <!-- Executive Banner Box with link to Seattle Method -->
+        <a xlink:href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Read about Accounting &amp; Audit by Design (A&amp;AD) Framework on Seattle Method">
+          <rect x="0" y="18" width="560" height="46" rx="6" fill="url(#bannerGrad)" filter="url(#boxShadow)" />
+          <rect x="12" y="25" width="32" height="32" rx="4" fill="#0284c7" />
+          <path d="M 28,32 Q 38,32 38,42 Q 38,51 28,54 Q 18,51 18,42 Q 18,32 28,32 Z" fill="#ffffff" />
+          <text x="28" y="46" text-anchor="middle" font-size="12" font-weight="900" fill="#0284c7">✓</text>
+          
+          <text x="56" y="48" font-size="19" font-weight="900" fill="#ffffff" letter-spacing="-0.3">
+            Accounting &amp; Audit by Design (A&amp;AD) ↗
+          </text>
+        </a>
+
+        <!-- Main Funnel Paradigm Header -->
+        <text x="640" y="32" font-size="17" font-weight="900" fill="#0f172a">
+          Knowledge Graph. Context Graph. Procedural Graph.
+        </text>
+        <text x="640" y="52" font-size="12" font-weight="800" fill="#ea580c">
+          What's true (Standards) ➔ What matters now (Moment 0) ➔ What do I do next (Logic)
+        </text>
+
+        <!-- Standards Badges on Top Right -->
+        <g transform="translate(1120, 15)">
+          <a xlink:href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Seattle Method A&amp;AD">
+            <rect x="0" y="0" width="70" height="26" rx="5" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" />
+            <text x="35" y="17" text-anchor="middle" font-size="9.5" font-weight="900" fill="#38bdf8">A&amp;AD ↗</text>
+          </a>
+          <g transform="translate(78, 0)">
+            <rect x="0" y="0" width="75" height="26" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            <text x="37" y="17" text-anchor="middle" font-size="8.5" font-weight="800" fill="#0f172a">W3C SOLID</text>
+          </g>
+          <g transform="translate(160, 0)">
+            <rect x="0" y="0" width="70" height="26" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            <text x="35" y="17" text-anchor="middle" font-size="8.5" font-weight="800" fill="#0284c7">XBRL GL</text>
+          </g>
+          <g transform="translate(237, 0)">
+            <rect x="0" y="0" width="70" height="26" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            <text x="35" y="17" text-anchor="middle" font-size="8.5" font-weight="800" fill="#0369a1">GAIA-X</text>
+          </g>
+          <g transform="translate(314, 0)">
+            <rect x="0" y="0" width="75" height="26" rx="5" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+            <text x="37" y="17" text-anchor="middle" font-size="8.5" font-weight="800" fill="#0f172a">ALGORAND</text>
+          </g>
+        </g>
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- SLEEK FUNNEL SILHOUETTE (CURVAS ESBELTAS Y REFINADAS)                     -->
+      <!-- ========================================================================= -->
+
+      <!-- Outer Sleek Glass Funnel Body with Bézier curves -->
+      <path d="
+        M 340, 110
+        C 430, 120 790, 120 880, 110
+        C 860, 290 730, 360 720, 410
+        C 710, 470 690, 560 685, 620
+        C 680, 680 660, 770 655, 840
+        C 650, 890 630, 930 630, 960
+        L 590, 960
+        C 590, 930 570, 890 565, 840
+        C 560, 770 540, 680 535, 620
+        C 530, 560 510, 470 500, 410
+        C 490, 360 360, 290 340, 110
+        Z"
+        fill="url(#sleekFunnelGrad)" stroke="url(#funnelEdgeGrad)" stroke-width="2" />
+
+      <!-- Optical Stream Guides Inside the Funnel Throat -->
+      <g stroke="#ffffff" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.65" fill="none">
+        <path d="M 440, 130 C 510, 260 570, 380 580, 550 C 590, 700 600, 840 600, 960" />
+        <path d="M 610, 130 L 610, 960" />
+        <path d="M 780, 130 C 710, 260 650, 380 640, 550 C 630, 700 620, 840 620, 960" />
+      </g>
+
+      <!-- Flow Chevrons indicating continuous descent -->
+      <g stroke="#0284c7" stroke-width="2" fill="none" opacity="0.5">
+        <path d="M 605, 330 L 610, 340 L 615, 330" />
+        <path d="M 605, 540 L 610, 550 L 615, 540" />
+        <path d="M 605, 760 L 610, 770 L 615, 760" />
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- ❶ TIER 1: THE KNOWLEDGE GRAPH (WHAT IS TRUE? - ENTERPRISE MEMORY)         -->
+      <!-- ========================================================================= -->
+
+      <!-- Left Label Column: Tier 1 -->
+      <g transform="translate(40, 110)">
+        <rect x="0" y="0" width="230" height="26" rx="6" fill="#ffedd5" stroke="#fed7aa" stroke-width="1.2" />
+        <text x="12" y="17" font-size="11" font-weight="900" fill="#c2410c">The Knowledge Graph</text>
+        <text x="175" y="17" font-size="9" font-weight="700" fill="#ea580c">What is true?</text>
+        
+        <text x="0" y="44" font-size="9.5" font-weight="700" fill="#0f172a">Universal Ontological Memory</text>
+        <text x="0" y="58" font-size="8.5" fill="#475569">Formal understanding of what exists.</text>
+        <text x="0" y="70" font-size="8.5" fill="#475569">Stable facts, international standards,</text>
+        <text x="0" y="82" font-size="8.5" fill="#475569">and global financial taxonomies.</text>
+
+        <g transform="translate(0, 100)" font-size="8" fill="#64748b">
+          <text x="0" y="0">• <tspan font-weight="700" fill="#ea580c">FIBO:</tspan> Financial Instrument Semantics</text>
+          <text x="0" y="14">• <tspan font-weight="700" fill="#ea580c">Gaia-X:</tspan> Trust Framework &amp; gx:LegalPerson</text>
+          <text x="0" y="28">• <tspan font-weight="700" fill="#ea580c">SCoA + Accounting Dynamic:</tspan> Master Rules</text>
+          <text x="0" y="42">• <tspan font-weight="700" fill="#ea580c">XBRL GL Taxonomy:</tspan> Universal Journaling</text>
+        </g>
+      </g>
+
+      <!-- Center Funnel: Tier 1 Knowledge Constellation (Sleek Organic Mesh) -->
+      <g transform="translate(320, 100)">
+        <!-- Elegant Cloud Polygon Boundary -->
+        <path d="M 40,75 C 20,20 100,-5 290,0 C 470,-5 560,20 560,75 C 560,130 500,195 430,215 C 330,240 240,240 170,215 C 100,195 40,130 40,75 Z" 
+              fill="url(#kgMeshGrad)" stroke="#f97316" stroke-width="1.8" filter="url(#softGlowOrange)" />
+
+        <!-- Delicate Constellation Network Lines -->
+        <g stroke="#f97316" stroke-width="1.2" opacity="0.45">
+          <line x1="135" y1="50" x2="285" y2="65" />
+          <line x1="285" y1="65" x2="435" y2="50" />
+          <line x1="135" y1="50" x2="95" y2="120" />
+          <line x1="285" y1="65" x2="215" y2="125" />
+          <line x1="285" y1="65" x2="355" y2="125" />
+          <line x1="435" y1="50" x2="475" y2="115" />
+          <line x1="95" y1="120" x2="215" y2="125" />
+          <line x1="215" y1="125" x2="285" y2="175" />
+          <line x1="355" y1="125" x2="285" y2="175" />
+          <line x1="355" y1="125" x2="475" y2="115" />
+        </g>
+
+        <!-- Sleek Knowledge Nodes (Pills with Crisp Icons) -->
+        <!-- Node 1: SCoA + Accounting Dynamics -->
+        <g transform="translate(65, 35)" class="interactive-node">
+          <rect x="0" y="0" width="145" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#ea580c" />
+          <text x="80" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">⚖️ SCoA + Dynamics</text>
+        </g>
+
+        <!-- Node 2: Charles Hoffman Tag1..Tag10 Holarchy -->
+        <g transform="translate(225, 50)" class="interactive-node">
+          <rect x="0" y="0" width="130" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#f97316" />
+          <text x="72" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">🏷️ Tag1..10 Holarchy</text>
+        </g>
+
+        <!-- Node 3: FIBO Financial Ontology -->
+        <g transform="translate(370, 35)" class="interactive-node">
+          <rect x="0" y="0" width="130" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#ea580c" />
+          <text x="72" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">🏛️ FIBO Ontology</text>
+        </g>
+
+        <!-- Node 4: Official XBRL GL Taxonomy -->
+        <g transform="translate(30, 105)" class="interactive-node">
+          <rect x="0" y="0" width="130" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#f97316" />
+          <text x="72" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">📑 XBRL GL Official</text>
+        </g>
+
+        <!-- Node 5: SBVR Balanced Trial Rules -->
+        <g transform="translate(160, 112)" class="interactive-node">
+          <rect x="0" y="0" width="135" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#ea580c" />
+          <text x="75" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">∑ SBVR: $48,100</text>
+        </g>
+
+        <!-- Node 6: Gaia-X Trust Framework -->
+        <g transform="translate(305, 112)" class="interactive-node">
+          <rect x="0" y="0" width="125" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#f97316" />
+          <text x="70" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">🌐 Gaia-X Person</text>
+        </g>
+
+        <!-- Node 7: W3C Solid Pods & ODRL -->
+        <g transform="translate(435, 105)" class="interactive-node">
+          <rect x="0" y="0" width="125" height="28" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="1.6" filter="url(#boxShadow)" />
+          <circle cx="15" cy="14" r="6" fill="#ea580c" />
+          <text x="70" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#9a3412">🔒 Solid &amp; ODRL</text>
+        </g>
+
+        <!-- Scoping Callout at Funnel Throat -->
+        <g transform="translate(290, 220)">
+          <path d="M -150, 0 L 150, 0" stroke="#ea580c" stroke-width="1.2" stroke-dasharray="4,3" />
+          <rect x="-140" y="6" width="280" height="24" rx="12" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" filter="url(#boxShadow)" />
+          <text x="0" y="22" text-anchor="middle" font-size="8.5" font-weight="800" fill="#c2410c">
+            🔍 "Don't retrieve everything. Scope the graph to this event."
+          </text>
+        </g>
+      </g>
+
+      <!-- Right Column: Step Indicator 1 -->
+      <g transform="translate(960, 140)">
+        <circle cx="20" cy="20" r="16" fill="#fff7ed" stroke="#ea580c" stroke-width="2" />
+        <text x="20" y="25" text-anchor="middle" font-size="12">🌐</text>
+        <text x="46" y="18" font-size="11" font-weight="900" fill="#0f172a">1. World Knowledge</text>
+        <text x="46" y="32" font-size="8.5" fill="#64748b">Ontologies, IFRS, XBRL GL, Gaia-X &amp; Standard CoA.</text>
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- ❷ TIER 2: THE CONTEXT GRAPH (WHAT MATTERS NOW? - MOMENT 0 & TAQUERIA)    -->
+      <!-- ========================================================================= -->
+
+      <!-- Left Label Column: Tier 2 -->
+      <g transform="translate(40, 380)">
+        <rect x="0" y="0" width="230" height="26" rx="6" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1.2" />
+        <text x="12" y="17" font-size="11" font-weight="900" fill="#0369a1">Context Graph</text>
+        <text x="145" y="17" font-size="9" font-weight="700" fill="#0284c7">What matters now?</text>
+        
+        <text x="0" y="44" font-size="9.5" font-weight="700" fill="#0f172a">Scoped Subgraph (Moment 0)</text>
+        <text x="0" y="58" font-size="8.5" fill="#475569">Small, highly relevant subgraph for this</text>
+        <text x="0" y="70" font-size="8.5" fill="#475569">economic event. Live state, raw evidence</text>
+        <text x="0" y="82" font-size="8.5" fill="#475569">lineage and organizational context.</text>
+
+        <g transform="translate(0, 100)" font-size="8" fill="#64748b">
+          <text x="0" y="0">• <tspan font-weight="700" fill="#0284c7">REA Ingestion:</tspan> Resources, Events, Agents</text>
+          <text x="0" y="14">• <tspan font-weight="700" fill="#0284c7">Raw Sourced Evidences:</tspan> PDF, Tickets, JPG</text>
+          <text x="0" y="28">• <tspan font-weight="700" fill="#0284c7">W3C XForms:</tspan> Pre-populated by AI Agent</text>
+          <text x="0" y="42">• <tspan font-weight="700" fill="#0284c7">HITL Curation:</tspan> Human-in-the-Loop in BaseX</text>
+        </g>
+      </g>
+
+      <!-- Center Funnel: Tier 2 Context Graph (Refined Cerulean Mesh) -->
+      <g transform="translate(390, 360)">
+        <!-- Elegant Scoped Subgraph Mesh -->
+        <path d="M 40,25 C 130,-5 320,-5 410,25 C 430,95 380,165 360,175 C 270,205 180,205 90,175 C 70,165 20,95 40,25 Z" 
+              fill="url(#cgMeshGrad)" stroke="#0284c7" stroke-width="1.8" filter="url(#softGlowBlue)" />
+
+        <!-- Crisp Connection Mesh -->
+        <g stroke="#0284c7" stroke-width="1.2" opacity="0.55">
+          <line x1="120" y1="40" x2="230" y2="70" />
+          <line x1="230" y1="70" x2="340" y2="40" />
+          <line x1="120" y1="40" x2="160" y2="120" />
+          <line x1="230" y1="70" x2="230" y2="135" />
+          <line x1="340" y1="40" x2="300" y2="120" />
+          <line x1="160" y1="120" x2="230" y2="135" />
+          <line x1="230" y1="135" x2="300" y2="120" />
+        </g>
+
+        <!-- Node 1: TAQUERÍA POS (Interactive Link to Substack) -->
+        <a xlink:href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Read Taqueria Case on The Holonic Web (Substack)">
+          <g transform="translate(55, 25)">
+            <rect x="0" y="0" width="130" height="30" rx="15" fill="#ffffff" stroke="#f59e0b" stroke-width="2" filter="url(#boxShadow)" />
+            <circle cx="16" cy="15" r="7" fill="#fef3c7" />
+            <text x="16" y="19" text-anchor="middle" font-size="10">🌮</text>
+            <text x="72" y="19" text-anchor="middle" font-size="8.5" font-weight="900" fill="#92400e">TAQUERÍA POS ↗</text>
+          </g>
+        </a>
+
+        <!-- Node 2: Central Holon Event (Tuesday Sale: $48,100.00) -->
+        <g transform="translate(160, 52)" class="interactive-node">
+          <rect x="0" y="0" width="145" height="34" rx="17" fill="#0284c7" filter="url(#boxShadow)" />
+          <circle cx="17" cy="17" r="9" fill="#ffffff" />
+          <text x="17" y="21" text-anchor="middle" font-size="11" font-weight="900" fill="#0284c7">⚡</text>
+          <text x="82" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="#ffffff">Holon #1042 Tuesday</text>
+          <text x="82" y="28" text-anchor="middle" font-size="8" font-weight="700" fill="#bae6fd">Sale: $48,100.00</text>
+        </g>
+
+        <!-- Node 3: W3C XForms + HITL Approval -->
+        <g transform="translate(285, 25)" class="interactive-node">
+          <rect x="0" y="0" width="125" height="30" rx="15" fill="#ffffff" stroke="#059669" stroke-width="1.8" filter="url(#boxShadow)" />
+          <circle cx="16" cy="15" r="7" fill="#ecfdf5" />
+          <text x="16" y="19" text-anchor="middle" font-size="10">✍️</text>
+          <text x="70" y="19" text-anchor="middle" font-size="8.5" font-weight="800" fill="#065f46">HITL XForms ✓</text>
+        </g>
+
+        <!-- Node 4: BaseX XML Store & Webhook -->
+        <g transform="translate(85, 112)" class="interactive-node">
+          <rect x="0" y="0" width="130" height="28" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#boxShadow)" />
+          <text x="65" y="18" text-anchor="middle" font-size="8" font-weight="800" fill="#0369a1">💾 BaseX XML Store</text>
+        </g>
+
+        <!-- Node 5: General Cash Account (110505) -->
+        <g transform="translate(165, 130)" class="interactive-node">
+          <rect x="0" y="0" width="135" height="28" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#boxShadow)" />
+          <text x="67" y="18" text-anchor="middle" font-size="8" font-weight="800" fill="#0369a1">🏦 Cash Acct (110505)</text>
+        </g>
+
+        <!-- Node 6: Raw Provenance Linaje -->
+        <g transform="translate(265, 112)" class="interactive-node">
+          <rect x="0" y="0" width="120" height="28" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#boxShadow)" />
+          <text x="60" y="18" text-anchor="middle" font-size="8" font-weight="800" fill="#0369a1">📜 Raw PROV-O</text>
+        </g>
+      </g>
+
+      <!-- Right Column: Step Indicator 2 -->
+      <g transform="translate(960, 410)">
+        <circle cx="20" cy="20" r="16" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" />
+        <text x="20" y="25" text-anchor="middle" font-size="12">🎯</text>
+        <text x="46" y="18" font-size="11" font-weight="900" fill="#0f172a">2. Decision Context</text>
+        <text x="46" y="32" font-size="8.5" fill="#64748b">Active transaction, live entity state &amp; HITL validation.</text>
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- ❸ TIER 3: PROCEDURAL GRAPH (WHAT TO DO NEXT? - SWI-PROLOG REST GATE)      -->
+      <!-- ========================================================================= -->
+
+      <!-- Left Label Column: Tier 3 -->
+      <g transform="translate(40, 630)">
+        <rect x="0" y="0" width="230" height="26" rx="6" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1.2" />
+        <text x="12" y="17" font-size="11" font-weight="900" fill="#15803d">Procedural Graph</text>
+        <text x="140" y="17" font-size="9" font-weight="700" fill="#059669">What do I do next?</text>
+        
+        <text x="0" y="44" font-size="9.5" font-weight="700" fill="#0f172a">Rule Graph &amp; Procedures</text>
+        <text x="0" y="58" font-size="8.5" fill="#475569">Graph of (rule, condition, action) triplets.</text>
+        <text x="0" y="70" font-size="8.5" fill="#475569">Guides the next transition without blindly</text>
+        <text x="0" y="82" font-size="8.5" fill="#475569">dictating. Enforces anti-Gettier logic.</text>
+
+        <g transform="translate(0, 100)" font-size="8" fill="#64748b">
+          <text x="0" y="0">• <tspan font-weight="700" fill="#059669">SWI-Prolog REST:</tspan> (K ∩ R ∩ O) ⊆ G</text>
+          <text x="0" y="14">• <tspan font-weight="700" fill="#059669">W3C SHACL:</tspan> Graph Schema Shapes Validator</text>
+          <text x="0" y="28">• <tspan font-weight="700" fill="#059669">Balanced Trial Check:</tspan> Debits = Credits</text>
+          <text x="0" y="42">• <tspan font-weight="700" fill="#059669">ShiftLeft_V3.mfd:</tspan> Transmutes XBRL to JSON-LD</text>
+        </g>
+      </g>
+
+      <!-- Center Funnel: Tier 3 Procedural Decision Tree (Sleek Flow Logic) -->
+      <g transform="translate(430, 590)">
+        <!-- Refined Mesh Boundary -->
+        <path d="M 40,10 C 120,-5 260,-5 320,10 C 335,80 280,160 260,170 C 180,190 120,185 80,165 C 40,120 25,60 40,10 Z" 
+              fill="url(#pgMeshGrad)" stroke="#10b981" stroke-width="1.8" filter="url(#softGlowGreen)" />
+
+        <!-- Decision Step 1: Prolog Epistemic Gate -->
+        <g transform="translate(60, 20)" class="interactive-node">
+          <rect x="0" y="0" width="240" height="30" rx="6" fill="#7c3aed" filter="url(#boxShadow)" />
+          <text x="120" y="19" text-anchor="middle" font-size="9" font-weight="900" fill="#ffffff">
+            🚪 Epistemic Gate SWI-Prolog REST
+          </text>
+        </g>
+
+        <!-- Condition: Anti-Gettier Equation Check -->
+        <path d="M 180,50 L 180,75" stroke="#7c3aed" stroke-width="2" />
+        <g transform="translate(70, 75)" class="interactive-node">
+          <rect x="0" y="0" width="220" height="26" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" />
+          <text x="110" y="17" text-anchor="middle" font-size="8.5" font-weight="800" fill="#581c87">
+            Is (K ∩ R ∩ O) ⊆ G Verified?
+          </text>
+        </g>
+
+        <!-- Decision Branches -->
+        <path d="M 90,101 L 40,125" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="3,2" />
+        <path d="M 270,101 L 320,125" stroke="#059669" stroke-width="2" />
+
+        <!-- Failure Branch: Escalate to Human -->
+        <g transform="translate(-15, 125)" class="interactive-node">
+          <rect x="0" y="0" width="130" height="28" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.2" />
+          <text x="65" y="18" text-anchor="middle" font-size="7.5" font-weight="800" fill="#9f1239">
+            ⚠️ If Unbalanced: HITL
+          </text>
+        </g>
+
+        <!-- Success Branch: Passed & Transmute -->
+        <g transform="translate(245, 125)" class="interactive-node">
+          <rect x="0" y="0" width="130" height="28" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" />
+          <text x="65" y="18" text-anchor="middle" font-size="7.5" font-weight="900" fill="#065f46">
+            ✓ Balanced: ShiftLeft
+          </text>
+        </g>
+
+        <!-- Convergence to Altova Runner -->
+        <path d="M 310,153 L 180,185" stroke="#059669" stroke-width="2" />
+        <path d="M 50,153 L 180,185" stroke="#64748b" stroke-width="1" stroke-dasharray="2,2" />
+      </g>
+
+      <!-- Right Column: Step Indicator 3 -->
+      <g transform="translate(960, 640)">
+        <circle cx="20" cy="20" r="16" fill="#f0fdf4" stroke="#059669" stroke-width="2" />
+        <text x="20" y="25" text-anchor="middle" font-size="12">⚖️</text>
+        <text x="46" y="18" font-size="11" font-weight="900" fill="#0f172a">3. Next-Step Guidance</text>
+        <text x="46" y="32" font-size="8.5" fill="#64748b">Declarative Prolog rules, SHACL shapes &amp; trial balance.</text>
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- ❹ TIER 4: AI AGENT, CRYPTO VAULT & 4 SECURE PROJECTIONS (REASON & ACT)    -->
+      <!-- ========================================================================= -->
+
+      <!-- Left Label Column: Tier 4 -->
+      <g transform="translate(40, 870)">
+        <rect x="0" y="0" width="230" height="26" rx="6" fill="#f3e8ff" stroke="#e9d5ff" stroke-width="1.2" />
+        <text x="12" y="17" font-size="11" font-weight="900" fill="#7c3aed">AI Agent &amp; Action</text>
+        <text x="155" y="17" font-size="9" font-weight="700" fill="#6b21a8">Reason ➔ Act</text>
+        
+        <text x="0" y="44" font-size="9.5" font-weight="700" fill="#0f172a">Autonomous Agent &amp; Anchoring</text>
+        <text x="0" y="58" font-size="8.5" fill="#475569">The AI agent reasons over the scoped graph,</text>
+        <text x="0" y="70" font-size="8.5" fill="#475569">notarizes state on Algorand Blockchain,</text>
+        <text x="0" y="82" font-size="8.5" fill="#475569">injects in TerminusDB and projects 4 views.</text>
+
+        <g transform="translate(0, 100)" font-size="8" fill="#64748b">
+          <text x="0" y="0">• <tspan font-weight="700" fill="#7c3aed">TerminusDB:</tspan> Single Source of Truth Git-Graph</text>
+          <text x="0" y="14">• <tspan font-weight="700" fill="#e11d48">Algorand Vault:</tspan> Notarized at Round 66608988</text>
+          <text x="0" y="28">• <tspan font-weight="700" fill="#f59e0b">Taquería Case:</tspan> 4 Isolated Views with zero leaks</text>
+          <text x="0" y="42">• <tspan font-weight="700" fill="#059669">ERP Write-Back:</tspan> Closed-loop sync to SAP/Oracle</text>
+        </g>
+      </g>
+
+      <!-- Center Funnel: Tier 4 AI Agent + Algorand Vault + 4 Viewers -->
+      <g transform="translate(450, 800)">
+        <!-- Elegant Agent Mesh Base -->
+        <path d="M 30,0 C 110,-5 220,-5 290,0 L 290,185 C 220,205 110,205 30,185 Z" 
+              fill="url(#agentMeshGrad)" stroke="#7c3aed" stroke-width="1.8" opacity="0.9" />
+
+        <!-- AI Agent Robot Core Badge -->
+        <g transform="translate(110, 15)" class="interactive-node">
+          <rect x="0" y="0" width="100" height="34" rx="17" fill="#0f172a" stroke="#a855f7" stroke-width="2" filter="url(#boxShadow)" />
+          <circle cx="18" cy="17" r="10" fill="#8b5cf6" />
+          <text x="18" y="21" text-anchor="middle" font-size="12">🤖</text>
+          <text x="58" y="21" text-anchor="middle" font-size="9" font-weight="900" fill="#ffffff">AI Agent</text>
+        </g>
+
+        <!-- TerminusDB & Algorand Dual Engine -->
+        <g transform="translate(30, 65)">
+          <!-- TerminusDB Git-Graph -->
+          <g transform="translate(0, 0)" class="interactive-node">
+            <rect x="0" y="0" width="125" height="36" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#boxShadow)" />
+            <text x="62" y="16" text-anchor="middle" font-size="8" font-weight="900" fill="#0369a1">TerminusDB</text>
+            <text x="62" y="28" text-anchor="middle" font-size="7.5" font-weight="700" fill="#64748b">1 Master Record</text>
+          </g>
+
+          <!-- Algorand Blockchain Notarization -->
+          <g transform="translate(135, 0)" class="interactive-node">
+            <rect x="0" y="0" width="125" height="36" rx="8" fill="#ffffff" stroke="#e11d48" stroke-width="1.5" filter="url(#boxShadow)" />
+            <text x="62" y="16" text-anchor="middle" font-size="8" font-weight="900" fill="#9f1239">Algorand Vault</text>
+            <text x="62" y="28" text-anchor="middle" font-size="7.5" font-weight="700" fill="#e11d48">Round 66608988</text>
+          </g>
+        </g>
+
+        <!-- The 4 Projected Views (Kurt Cagle Taquería Case) -->
+        <g transform="translate(10, 120)">
+          <a xlink:href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Read Taqueria Case on The Holonic Web (Substack)">
+            <rect x="0" y="0" width="300" height="74" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.8" filter="url(#boxShadow)" />
+            <rect x="0" y="0" width="300" height="20" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="0.8" />
+            <text x="12" y="14" font-size="8" font-weight="900" fill="#92400e">🌮 4 SECURE VIEWERS (TAQUERÍA CASE) ↗</text>
+
+            <g transform="translate(12, 33)" font-size="7.5" fill="#475569">
+              <text x="0" y="0">• <tspan font-weight="800" fill="#0284c7">Head Office:</tspan> Royalties &amp; Close (0 Payroll)</text>
+              <text x="150" y="0">• <tspan font-weight="800" fill="#e11d48">Health Dept:</tspan> HACCP (0 Sales)</text>
+              <text x="0" y="14">• <tspan font-weight="800" fill="#7c3aed">Lender Bank:</tspan> Liquidity Ratios (0 Recipes)</text>
+              <text x="150" y="14">• <tspan font-weight="800" fill="#059669">AI Auditors:</tspan> PROV-O Lineage</text>
+              <text x="0" y="28" font-weight="800" fill="#0f172a">↳ 1 single master record ➔ 4 zero-knowledge hermetic projections</text>
+            </g>
+          </a>
+        </g>
+      </g>
+
+      <!-- Right Column: Step Indicators 4 & 5 -->
+      <g transform="translate(960, 830)">
+        <circle cx="20" cy="20" r="16" fill="#faf5ff" stroke="#7c3aed" stroke-width="2" />
+        <text x="20" y="25" text-anchor="middle" font-size="12">⚡</text>
+        <text x="46" y="18" font-size="11" font-weight="900" fill="#0f172a">4. Takes Action</text>
+        <text x="46" y="32" font-size="8.5" fill="#64748b">Anchors on Algorand &amp; emits isolated views.</text>
+      </g>
+
+      <g transform="translate(960, 910)">
+        <circle cx="20" cy="20" r="16" fill="#f0fdf4" stroke="#10b981" stroke-width="2" />
+        <text x="20" y="25" text-anchor="middle" font-size="12">🔄</text>
+        <text x="46" y="18" font-size="11" font-weight="900" fill="#0f172a">5. Continuous Improvement</text>
+        <text x="46" y="32" font-size="8.5" fill="#64748b">ERP write-back loop and PROV-O learning traces.</text>
+      </g>
+
+      <!-- Sleek Vertical Step Line -->
+      <line x1="980" y1="165" x2="980" y2="900" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4,4" />
+
+      <!-- Feedback Loop to Top (Trace & Learn / W3C PROV-O) -->
+      <path d="M 450, 960 C 310, 960 300, 320 340, 200" stroke="#059669" stroke-width="2.5" fill="none" stroke-dasharray="6,4" />
+      <g transform="translate(290, 530)">
+        <rect x="0" y="0" width="85" height="34" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.2" />
+        <text x="42" y="14" text-anchor="middle" font-size="7" font-weight="900" fill="#065f46">TRACE &amp; LEARN</text>
+        <text x="42" y="26" text-anchor="middle" font-size="6.5" font-weight="700" fill="#059669">W3C PROV-O ⟲</text>
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- RIGHT COLUMN: OCEG STRATEGIC VALUE PILLARS (SAVED & HONORED)             -->
+      <!-- ========================================================================= -->
+      <g transform="translate(1240, 110)">
+        <!-- Header Box -->
+        <a xlink:href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Read Seattle Method article on A&amp;AD">
+          <rect x="0" y="0" width="240" height="54" rx="8" fill="url(#redPillarGrad)" filter="url(#boxShadow)" />
+          <text x="120" y="22" text-anchor="middle" font-size="10.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
+            WHY A&amp;AD TRANSFORMS
+          </text>
+          <text x="120" y="38" text-anchor="middle" font-size="10.5" font-weight="900" fill="#ffffff" letter-spacing="0.5">
+            BUSINESS VALUE ↗
+          </text>
+        </a>
+
+        <text x="5" y="74" font-size="8.5" fill="#475569" font-weight="500">
+          Replaces fragile backward retro-audits
+        </text>
+        <text x="5" y="87" font-size="8.5" fill="#475569" font-weight="500">
+          with a continuous semantic assurance funnel
+        </text>
+        <text x="5" y="100" font-size="8.5" fill="#475569" font-weight="500">
+          grounded in cryptography and zero hallucination.
+        </text>
+
+        <!-- CARD 1: Legal & Ontological Standards -->
+        <g transform="translate(0, 115)">
+          <rect x="0" y="0" width="240" height="235" rx="8" fill="#fff5f5" stroke="#fecaca" stroke-width="1.2" filter="url(#boxShadow)" />
+          
+          <rect x="12" y="12" width="34" height="34" rx="6" fill="#b91c1c" />
+          <text x="29" y="35" text-anchor="middle" font-size="18" fill="#ffffff">⚖️</text>
+
+          <text x="54" y="24" font-size="9" font-weight="900" fill="#991b1b">LEGAL &amp; ONTOLOGICAL</text>
+          <text x="54" y="37" font-size="9" font-weight="900" fill="#991b1b">STANDARDS (ZERO DRIFT)</text>
+
+          <g transform="translate(14, 60)" font-size="7.8" fill="#475569">
+            <text x="0" y="0" font-weight="800" fill="#0f172a">• SCoA + Accounting Dynamic &amp; IFRS</text>
+            <text x="0" y="14">• IFRS &amp; SBVR Balanced Trial ($48,100)</text>
+            <text x="0" y="28" font-weight="800" fill="#0284c7">• Full W3C Specification Suite:</text>
+            <text x="8" y="40">↳ Solid Pods, JSON-LD, PROV-O, ODRL</text>
+            <text x="0" y="54">• Gaia-X Sovereign Trust Framework</text>
+            <text x="0" y="68">• FIBO Financial Industry Ontology</text>
+            <text x="0" y="82">• Official XBRL GL Taxonomy</text>
+            <text x="0" y="96" font-weight="800" fill="#7c3aed">• Gettier Logic Proof: (K ∩ R ∩ O) ⊆ G</text>
+            <text x="0" y="110">• Notarization on Algorand Blockchain</text>
+            <text x="0" y="124">• Regulatory Ready (Tax Agencies &amp; Banks)</text>
+          </g>
+        </g>
+
+        <!-- CARD 2: Sovereignty & Zero Data Leakage -->
+        <g transform="translate(0, 365)">
+          <rect x="0" y="0" width="240" height="235" rx="8" fill="#fff5f5" stroke="#fecaca" stroke-width="1.2" filter="url(#boxShadow)" />
+          
+          <rect x="12" y="12" width="34" height="34" rx="6" fill="#b91c1c" />
+          <text x="29" y="35" text-anchor="middle" font-size="18" fill="#ffffff">🛡️</text>
+
+          <text x="54" y="24" font-size="9" font-weight="900" fill="#991b1b">SOVEREIGNTY &amp; ZERO</text>
+          <text x="54" y="37" font-size="9" font-weight="900" fill="#991b1b">DATA LEAKAGE</text>
+
+          <g transform="translate(14, 60)" font-size="7.8" fill="#475569">
+            <a xlink:href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" href="https://theholonicweb.substack.com/p/a-tuesday-at-tidewater-taqueria-holons" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Read Taqueria Case / Kurt Cagle">
+              <text x="0" y="0" font-weight="800" fill="#0284c7">• Solves Taquería Problem (Kurt Cagle) ↗</text>
+            </a>
+            <text x="0" y="14">• 1 Single Master Record in TerminusDB</text>
+            <text x="0" y="28">• 4 Zero-Knowledge Isolated WOQL Views</text>
+            <text x="0" y="42">• Zero Exposure of Secret Recipes</text>
+            <text x="0" y="56">• Zero Access to Franchise Payroll</text>
+            <text x="0" y="70">• Purpose-Based Access Control (PBAC)</text>
+            <text x="0" y="84">• W3C ODRL Sovereign Licensing Rules</text>
+            <text x="0" y="98">• Guaranteed Multi-Tenant Franchise Trust</text>
+            <text x="0" y="112">• Maximum Protection of Intangible Assets</text>
+          </g>
+        </g>
+
+        <!-- CARD 3: Bottom Line Assurance -->
+        <g transform="translate(0, 615)">
+          <rect x="0" y="0" width="240" height="235" rx="8" fill="#fff5f5" stroke="#fecaca" stroke-width="1.2" filter="url(#boxShadow)" />
+          
+          <rect x="12" y="12" width="34" height="34" rx="6" fill="#b91c1c" />
+          <text x="29" y="35" text-anchor="middle" font-size="18" fill="#ffffff">📈</text>
+
+          <text x="54" y="24" font-size="9" font-weight="900" fill="#991b1b">ASSURING THE</text>
+          <text x="54" y="37" font-size="9" font-weight="900" fill="#991b1b">BOTTOM LINE (ROI)</text>
+
+          <g transform="translate(14, 60)" font-size="7.8" fill="#475569">
+            <text x="0" y="0" font-weight="800" fill="#0f172a">• Eliminates Retro-Audit Legal Fees</text>
+            <text x="0" y="14">• Continuous Verification with Claude &amp; GPT</text>
+            <text x="0" y="28">• Automated Write-Back to SAP &amp; Oracle</text>
+            <text x="0" y="42">• Instant Solvency Certification to Lenders</text>
+            <text x="0" y="56">• Real-Time Anomaly &amp; Fraud Detection</text>
+            <text x="0" y="70">• Immutable Algorand Round 66608988</text>
+            <text x="0" y="84">• Zero Fines, Penalties, or Re-Stating</text>
+            <text x="0" y="98">• 24/7/365 Continuous Financial Closing</text>
+          </g>
+        </g>
+      </g>
+
+
+      <!-- ========================================================================= -->
+      <!-- BOTTOM BANNER: THE SEMANTIC SPINE (A&AD FIVE SEQUENTIAL STATIONS)         -->
+      <!-- ========================================================================= -->
+      <g transform="translate(40, 1070)">
+        <rect x="0" y="0" width="1440" height="150" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8" filter="url(#boxShadow)" />
+        <rect x="20" y="12" width="1400" height="26" rx="6" fill="#0f172a" />
+        <text x="720" y="29" text-anchor="middle" font-size="11" font-weight="900" fill="#ffffff" letter-spacing="1">
+          THE SEMANTIC SPINE: CONTINUOUS ASSURANCE &amp; GOVERNANCE LOOP
+        </text>
+
+        <!-- Block 1: Ontology -->
+        <g transform="translate(30, 52)">
+          <rect x="0" y="0" width="250" height="75" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" />
+          <text x="125" y="22" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c2410c">1. Ontology (Meaning)</text>
+          <text x="125" y="38" text-anchor="middle" font-size="9" font-weight="700" fill="#ea580c">What things are</text>
+          <text x="125" y="54" text-anchor="middle" font-size="8" fill="#475569">FIBO · Gaia-X · XBRL GL · SCoA</text>
+          <text x="125" y="66" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f172a">Formal enterprise definitions</text>
+        </g>
+
+        <!-- Arrow 1 -> 2 -->
+        <text x="302" y="84" text-anchor="middle" font-size="12" font-weight="900" fill="#0284c7">➔</text>
+
+        <!-- Block 2: Knowledge Graph -->
+        <g transform="translate(325, 52)">
+          <rect x="0" y="0" width="250" height="75" rx="8" fill="#ffffff" stroke="#f97316" stroke-width="1.5" />
+          <text x="125" y="22" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c2410c">2. Knowledge Graph (Facts)</text>
+          <text x="125" y="38" text-anchor="middle" font-size="9" font-weight="700" fill="#ea580c">What is true</text>
+          <text x="125" y="54" text-anchor="middle" font-size="8" fill="#475569">TerminusDB Git-Graph Master Store</text>
+          <text x="125" y="66" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f172a">Deterministic enterprise memory</text>
+        </g>
+
+        <!-- Arrow 2 -> 3 -->
+        <text x="590" y="84" text-anchor="middle" font-size="12" font-weight="900" fill="#0284c7">➔</text>
+
+        <!-- Block 3: Context Graph -->
+        <g transform="translate(610, 52)">
+          <rect x="0" y="0" width="250" height="75" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
+          <text x="125" y="22" text-anchor="middle" font-size="10.5" font-weight="900" fill="#0369a1">3. Context Graph (Context)</text>
+          <text x="125" y="38" text-anchor="middle" font-size="9" font-weight="700" fill="#0284c7">What matters now</text>
+          <text x="125" y="54" text-anchor="middle" font-size="8" fill="#475569">REA Ingestion · Moment 0 Lineage</text>
+          <text x="125" y="66" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f172a">Taquería Case / Scoped Event Subgraph</text>
+        </g>
+
+        <!-- Arrow 3 -> 4 -->
+        <text x="875" y="84" text-anchor="middle" font-size="12" font-weight="900" fill="#0284c7">➔</text>
+
+        <!-- Block 4: Procedural Graph -->
+        <g transform="translate(895, 52)">
+          <rect x="0" y="0" width="250" height="75" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5" />
+          <text x="125" y="22" text-anchor="middle" font-size="10.5" font-weight="900" fill="#065f46">4. Procedural Graph (Rules)</text>
+          <text x="125" y="38" text-anchor="middle" font-size="9" font-weight="700" fill="#059669">What to do next</text>
+          <text x="125" y="54" text-anchor="middle" font-size="8" fill="#475569">SWI-Prolog REST · W3C SHACL</text>
+          <text x="125" y="66" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f172a">ShiftLeft_V3.mfd (JSON-LD Transmutation)</text>
+        </g>
+
+        <!-- Arrow 4 -> 5 -->
+        <text x="1160" y="84" text-anchor="middle" font-size="12" font-weight="900" fill="#0284c7">➔</text>
+
+        <!-- Block 5: AI Agent & ERP Write-Back -->
+        <g transform="translate(1180, 52)">
+          <rect x="0" y="0" width="230" height="75" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" />
+          <text x="115" y="22" text-anchor="middle" font-size="10.5" font-weight="900" fill="#581c87">5. AI Agent &amp; Action</text>
+          <text x="115" y="38" text-anchor="middle" font-size="9" font-weight="700" fill="#7c3aed">Acting &amp; Writing Back</text>
+          <text x="115" y="54" text-anchor="middle" font-size="8" fill="#475569">Algorand Notarization · 4 Views</text>
+          <text x="115" y="66" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f172a">SAP / Oracle ERP Write-Back</text>
+        </g>
+      </g>
+
+      <!-- Footer Architectural Attribution -->
+      <g transform="translate(45, 1260)">
+        <a xlink:href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" href="https://seattlemethod.blogspot.com/2026/07/accounting-audit-by-design-framework.html?m=1" target="_blank" rel="noopener noreferrer" class="interactive-node" title="Seattle Method — Accounting &amp; Audit by Design (A&amp;AD)">
+          <text x="0" y="0" font-size="9" fill="#0284c7" font-weight="800">
+            A&amp;AD FRAMEWORK · SEATTLE METHOD · ACCOUNTING &amp; AUDIT BY DESIGN ↗ · THE SEMANTIC ASSURANCE FUNNEL · W3C SOLID, XBRL GL, GAIA-X &amp; ALGORAND STANDARDS
+          </text>
+        </a>
+        <text x="1430" y="0" text-anchor="end" font-size="9" font-weight="900" fill="#0284c7">
+          VERSION 1.7
+        </text>
+      </g>
+
+    </svg>
+  </div>
+
+  <script>
+    // SVG Export Functionality
+    document.getElementById('btnDownloadSvg').addEventListener('click', function() {
+      const svgEl = document.getElementById('embudoAadSvgEn');
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(svgEl);
+
+      if (!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)) {
+        source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+      }
+      if (!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)) {
+        source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+      }
+
+      source = '<?xml version="1.0" standalone="no"?>\r\n' + source;
+      const url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(source);
+
+      const downloadLink = document.createElement("a");
+      downloadLink.href = url;
+      downloadLink.download = "pipeline_embudo_aad_en.svg";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    });
+  </script>
+</body>
+</html>
