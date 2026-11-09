@@ -179,6 +179,34 @@
       opacity: 0.88;
       filter: drop-shadow(0 4px 12px rgba(2, 132, 199, 0.35));
     }
+
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      background: #1e293b;
+      padding: 4px;
+      border-radius: 8px;
+    }
+
+    .nav-tab {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-tab:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-tab.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
@@ -192,6 +220,12 @@
       <div class="brand-subtitle" id="toolSubtitle">Flujo Continuo de Gobernanza Algorítmica y Aseguramiento Determinista</div>
     </div>
     <div class="toolbar-actions">
+      <!-- Architecture Navigation Switcher -->
+      <div class="nav-tabs">
+        <a href="pipeline_embudo_aad.html" class="nav-tab">🌪️ Embudo Semántico</a>
+        <a href="pipeline_oceg_aad.html" class="nav-tab active">🛣️ Circuito Continuo</a>
+        <a href="pipeline_palantir_aad.html" class="nav-tab">🏢 Palantir Foundry</a>
+      </div>
       <div class="lang-toggle">
         <button class="lang-btn active" id="btnES">ES</button>
         <button class="lang-btn" id="btnEN">EN</button>
